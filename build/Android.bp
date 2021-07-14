@@ -1,0 +1,193 @@
+android_sdk_repo_host {
+    name: "build-tools",
+    // TODO: stop hardcoding this
+    base_dir: "android-Tiramisu",
+
+    srcs: [
+        ":build_tools_source_properties",
+        ":build_tools_runtime_properties",
+        ":build-tools_core-lambda-stubs",
+    ],
+
+    merge_zips: [
+        ":build-tools_renderscript_includes",
+        ":renderscript-clang-include",
+        ":renderscript_sdk_prebuilts",
+    ],
+    target: {
+        linux: {
+            merge_zips: [":build-tools-lld-linux"],
+            strip_files: [
+                "lib64/*.so",
+                "lld-bin/lld",
+                "lib64/libc++.so.1",
+            ],
+        },
+        darwin: {
+            merge_zips: [":build-tools-lld-darwin"],
+            strip_files: [
+                "lib64/*.dylib",
+                "lld-bin/lld",
+            ],
+        },
+        not_windows: {
+            deps: [
+                "aapt",
+                "aapt2",
+                "aidl",
+                "apksigner",
+                "bcc_compat",
+                "d8",
+                "dexdump",
+                "libaapt2_jni",
+                "llvm-rs-cc",
+                "split-select",
+                "zipalign",
+            ],
+            deps_remap: [
+                "bin/*:./",
+                "framework/*:./lib/",
+            ],
+            strip_files: [
+                "aapt",
+                "aapt2",
+                "aidl",
+                "bcc_compat",
+                "llvm-rs-cc",
+                "split-select",
+                "zipalign",
+            ],
+        },
+        windows: {
+            enabled: true,
+            merge_zips: [":build-tools-lld-windows"],
+
+            compile_multilib: "both",
+            multilib: {
+                lib32: {
+                    deps: [
+                        "aapt",
+                        "aapt2",
+                        "aidl",
+                        "apksigner",
+                        "bcc_compat",
+                        "d8",
+                        "dexdump",
+                        "libaapt2_jni",
+                        "libwinpthread-1",
+                        "lld",
+                        "llvm-rs-cc",
+                        "split-select",
+                        "zipalign",
+                    ],
+                },
+                lib64: {
+                    deps: [
+                        "libaapt2_jni",
+                        "libwinpthread-1",
+                    ],
+                },
+            },
+            deps_remap: [
+                "bin/*:./",
+                "lib/*:./",
+                "framework/*:./lib/",
+            ],
+            strip_files: [
+                "*.dll",
+                "aapt.exe",
+                "aapt2.exe",
+                "aidl.exe",
+                "bcc_compat.exe",
+                "dexdump.exe",
+                "lib64/*.dll",
+                "lld-bin/*.dll",
+                "lld-bin/*.exe",
+                "lld.exe",
+                "llvm-rs-cc.exe",
+                "split-select.exe",
+                "zipalign.exe",
+            ],
+        },
+    },
+}
+
+// Rename rs_script_api files to renderscript/include/...
+genrule {
+    name: "build-tools_renderscript_includes",
+    visibility: ["//visibility:private"],
+    tools: ["soong_zip"],
+    cmd: "echo $(in) >$(genDir)/list && " +
+        "$(location soong_zip) -o $(out) -P renderscript -C frameworks/rs/script_api -l $(genDir)/list",
+    srcs: [":rs_script_api"],
+    out: ["rs_script_api.zip"],
+}
+
+// This is a device library, so it can't be used by android_sdk_repo_host directly.
+java_genrule {
+    name: "build-tools_core-lambda-stubs",
+    visibility: ["//visibility:private"],
+    cmd: "cp $(in) $(out)",
+    srcs: [":core-lambda-stubs{.jar}"],
+    out: ["core-lambda-stubs.jar"],
+}
+
+android_sdk_repo_host {
+    name: "platform-tools",
+    base_dir: "platform-tools",
+
+    deps: [
+        "adb",
+        "dmtracedump",
+        "etc1tool",
+        "fastboot",
+        "hprof-conv",
+        "make_f2fs",
+        "make_f2fs_casefold",
+        "mke2fs",
+        "sqlite3",
+    ],
+    deps_remap: ["bin/*:./"],
+
+    srcs: [
+        ":mke2fs_conf",
+        ":platform_tools_properties",
+    ],
+
+    merge_zips: [":systrace-sdk-zip"],
+
+    target: {
+        not_windows: {
+            deps: [
+                "e2fsdroid",
+                "sload_f2fs",
+            ],
+            strip_files: [
+                "adb",
+                "dmtracedump",
+                "e2fsdroid",
+                "etc1tool",
+                "fastboot",
+                "hprof-conv",
+                "lib64/*.so",
+                "make_f2fs_casefold",
+                "make_f2fs",
+                "mke2fs",
+                "sload_f2fs",
+                "sqlite3",
+            ],
+        },
+        windows: {
+            enabled: true,
+            deps: [
+                "AdbWinUsbApi",
+                "AdbWinApi",
+                "libwinpthread-1",
+            ],
+            deps_remap: ["lib/*:./"],
+            strip_files: [
+                "*.exe",
+            ],
+        },
+    },
+}
