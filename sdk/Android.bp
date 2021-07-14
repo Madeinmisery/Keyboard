@@ -17,3 +17,10 @@ genrule {
     srcs: ["plat_tools_source.prop_template"],
     out: ["platform_tools_version.h"],
 }
+
+genrule {
+    name: "platform_tools_properties",
+    cmd: "cp $(in) $(out)",
+    srcs: ["plat_tools_source.prop_template"],
+    out: ["source.properties"],
+}

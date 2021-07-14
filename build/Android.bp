@@ -1,0 +1,42 @@
+android_sdk_repo_host {
+    name: "platform-tools",
+    base_dir: "platform-tools",
+
+    deps: [
+        "adb",
+        "dmtracedump",
+        "etc1tool",
+        "fastboot",
+        "hprof-conv",
+        "make_f2fs",
+        "make_f2fs_casefold",
+        "mke2fs",
+        "sqlite3",
+    ],
+    remap: ["bin/*:./"],
+
+    srcs: [
+        ":mke2fs_conf",
+        ":platform_tools_properties",
+    ],
+
+    merge_zips: [":systrace-sdk-zip"],
+
+    target: {
+        not_windows: {
+            deps: [
+                "e2fsdroid",
+                "sload_f2fs",
+            ],
+        },
+        windows: {
+            enabled: true,
+            deps: [
+                "AdbWinUsbApi",
+                "AdbWinApi",
+                "libwinpthread-1",
+            ],
+            remap: ["lib/*:./"],
+        },
+    },
+}
