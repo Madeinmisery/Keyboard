@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ef49a77_a04a7cda",
+        "filename": "tools/otagui/src/services/TableService.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-16T17:51:23Z",
+      "side": 1,
+      "message": "return -orderNumber ?",
+      "range": {
+        "startLine": 9,
+        "startChar": 21,
+        "endLine": 9,
+        "endChar": 42
+      },
+      "revId": "8c8f63dc0480d4a3d781fa07b72910c361b29408",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1f31cb5_e9095109",
+        "filename": "tools/otagui/src/services/TableService.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-16T17:51:23Z",
+      "side": 1,
+      "message": "return orderNumber?",
+      "range": {
+        "startLine": 10,
+        "startChar": 21,
+        "endLine": 10,
+        "endChar": 41
+      },
+      "revId": "8c8f63dc0480d4a3d781fa07b72910c361b29408",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
