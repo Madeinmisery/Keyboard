@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37f132fb_76fcc0e1",
+        "filename": "tools/otagui/ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T17:14:08Z",
+      "side": 1,
+      "message": "partialList \u003d \u0027 \u0027.join(args[\u0027partial\u0027])",
+      "range": {
+        "startLine": 189,
+        "startChar": 12,
+        "endLine": 189,
+        "endChar": 23
+      },
+      "revId": "64c44e8f99188383d1f1c6ecaddd50948de012b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
