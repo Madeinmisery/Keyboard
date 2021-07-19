@@ -22,6 +22,30 @@
       },
       "revId": "96e47dff7558e89002db51242c8548f4159a31bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6cb9d4e_1cef2364",
+        "filename": "tools/otagui/src/components/BuildTable.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-19T20:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "454e61b6_10153e78",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 37
+      },
+      "revId": "96e47dff7558e89002db51242c8548f4159a31bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
