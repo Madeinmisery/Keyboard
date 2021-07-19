@@ -186,15 +186,14 @@ class ProcessesManagement:
             command.append(args['incremental'])
         if args['isPartial']:
             command.append('--partial')
-            command.append(args['partial'])
+            command.append(' '.join(args['partial']))
         command.append(args['target'])
         command.append(args['output'])
         job_info = JobInfo(id,
                            target=args['target'],
                            incremental=args['incremental'] if args['isIncremental'] else '',
                            verbose=args['verbose'],
-                           partial=args['partial'].split(
-                               ' ') if args['isPartial'] else [],
+                           partial=args['partial'] if args['isPartial'] else [],
                            output=args['output'],
                            status='Running',
                            extra=args['extra'],

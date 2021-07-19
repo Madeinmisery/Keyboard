@@ -17,7 +17,7 @@ export class OTAConfiguration {
     this.output = 'output/' + String(this.id) + '.zip',
     this.incremental = '',
     this.isIncremental = false,
-    this.partial = '',
+    this.partial = [],
     this.isPartial = false,
     this.extra = '',
     this.id = uuid.v1()
