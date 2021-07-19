@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2414cfd7_66a1f919",
+        "filename": "tools/otagui/src/components/BuildLibrary.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "No need to make the parent pass them in? Make these part of this component\u0027s data, and use v-model/events to notify parent when these prop changes",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 6
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adf657ce_20761f50",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "It\u0027s not passed in from parents anyway, no need to have this as a prop?",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 5
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0f9875c_a6da16dc",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "Consider using `updatablePartitions` as name",
+      "range": {
+        "startLine": 111,
+        "startChar": 4,
+        "endLine": 111,
+        "endChar": 20
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53833eef_bd949f34",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "Consider making OTAInput.partial a list of string, now we can just use\n\n```\n\u003cPartialCheckbox\n        v-if\u003d\"input.isPartial\"\n        v-model\u003d\"this.input.partial\"\n        :labels\u003d\"updatePartitions\"\n      /\u003e\n```",
+      "range": {
+        "startLine": 136,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 6
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "818f09e4_24a5cfdf",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "Consider names like \"OTAConfiguration\" or \"OTASpec\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 13,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a75a49a5_6dc46c36",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "Don\u0027t store partial as a string. Store it as a list of partition names. Front-end should not handle how configurations are converted to CLI arguments.",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 20,
+        "endChar": 16
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bcddb84_477be168",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-19T15:03:27Z",
+      "side": 1,
+      "message": "L17 also initializes this.output, duplicate? Ideally this should be computed on the backend as well.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 43
+      },
+      "revId": "6fde5be5832c7701e26f6f17a899d6ed59993032",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
