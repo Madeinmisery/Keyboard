@@ -67,6 +67,15 @@ export default {
       total: 0
     }
   },
+  watch: {
+    builds: {
+      handler: function() {
+        this.rows = TableSort(this.builds, this.sortable.order, this.sortable.sort, 0, 10)
+        this.total = this.builds.length
+      },
+      deep: true
+    }
+  },
   created() {
     this.rows = TableSort(this.builds, this.sortable.order, this.sortable.sort, 0, 10)
     this.total = this.builds.length
