@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3282da3_7f0cfd25",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 670,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-07-19T19:21:13Z",
+      "side": 1,
+      "message": "I think this works because tests with defaults with a src can only have one src...",
+      "revId": "e4f5388cf32e18551d0710c35dff84c71a8031e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
