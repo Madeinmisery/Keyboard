@@ -66,6 +66,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "63ef8b00_5fafb910",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-20T23:54:43Z",
+      "side": 1,
+      "message": "The two generules were required because there was no way to select one of the two output files to use for srcs or resources.  A recent feature was added to Soong in aosp/1749113 that fixes that, so this could now be combined to a single genrule, referenced with \":RsHelloCompute-rscript{RsHelloCompute.srcjar}\" or \":RsHelloCompute-rscript{RsHelloCompute.rs.zip}\".\n\n$(genDir) is local to the genrule, it is not shared between genrules.",
+      "parentUuid": "ac8024c6_c7e84e9b",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 7
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f2ea3328_75440e61",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
@@ -100,6 +124,54 @@
       "writtenOn": "2021-07-20T23:47:18Z",
       "side": 1,
       "message": "Why do we need to copy the header files instead of using them from their original locations?",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c96eb70e_0fbbd66d",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-20T23:54:43Z",
+      "side": 1,
+      "message": "Whoops, this is missing documentation.  It\u0027s the same as bazel/blaze (see go/be), $(locations) returns multiple files, $(location) enforces a single file.\n\nThe \u003clabel\u003e is whatever is listed in srcs, so $(location src/**/*.rscript) returns the results of that glob that was already expanded in srcs.",
+      "parentUuid": "f2ea3328_75440e61",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 23
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0139518a_f9c0e379",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-20T23:54:43Z",
+      "side": 1,
+      "message": "It would be possible to include them from their directories, but you somehow need to get the appropriate dirnames from each list of files.  It seemed easier to just copy them.",
+      "parentUuid": "76d6c151_4cfb1f8c",
       "range": {
         "startLine": 47,
         "startChar": 9,
