@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d7fd2d4_11acc5a2",
+        "filename": "tools/ota_analysis/src/components/BasicInfo.vue",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-20T15:52:10Z",
+      "side": 1,
+      "message": "Note that even in an incremental OTA, some partitions might be missing oldPartitionInfo field. It\u0027s best to check if any of the partitions has oldPartitionInfo",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 18,
+        "endChar": 67
+      },
+      "revId": "85044ed57129fde44b19f1d9293dd38e1fe5e355",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
