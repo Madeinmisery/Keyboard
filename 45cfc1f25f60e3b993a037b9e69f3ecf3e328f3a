@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "718eddac_abeac26a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-20T23:47:18Z",
+      "side": 1,
+      "message": "-1 solely because of outstanding questions",
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9409c72b_2041c2e3",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-20T23:47:18Z",
+      "side": 1,
+      "message": "Is this \"14\" a magic number that should be kept in sync with the \"14\" on lines 49 and 69? If so, should we add comments to that effect, or (if supported) use a variable instead of two instances of the literal?",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac8024c6_c7e84e9b",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-20T23:47:18Z",
+      "side": 1,
+      "message": "All comments regarding this genrule also apply to the one on line 54.\n\nAm I correct that the two genrules are identical, except that they generate two different output files from two different subsets of files produced by their respective (and identical) \"for\" loops? If so:\n- Why do we need two different genrules? Because we need two different output files, and each genrule can only produce one output file?\n- Why do we need two different \"for\" loops? Because the contents of \"$(genDir)\" don\u0027t persist beyond the execution of the genrule?\n- Would it make sense to have three genrules so as to avoid duplication? The first genrule contains the \"for\" loop and produces both outputs (bundled into a single file, like a .a or .tar or .zip); the second and third genrules extract the two files of interest (the two different outputs of the two genrules in the current PS) from the output of the first genrule.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 7
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2ea3328_75440e61",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-20T23:47:18Z",
+      "side": 1,
+      "message": "The documentation for genrule mentions \"$(location \u003clabel\u003e)\" but not \"$(locations \u003clabel\u003e)\". Are these two different variables, the second of which is undocumented? Is one of the two a misspelling of the other?\n\nThe idiom on line 48 doesn\u0027t match the documentation for \"$(location \u003clabel\u003e)\" which specifies a name rather than what looks like a wildcard file path.",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 23
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76d6c151_4cfb1f8c",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-20T23:47:18Z",
+      "side": 1,
+      "message": "Why do we need to copy the header files instead of using them from their original locations?",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
