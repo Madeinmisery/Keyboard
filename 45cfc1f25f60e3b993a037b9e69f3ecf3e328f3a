@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4ce6fb57_619eec71",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T16:57:41Z",
+      "side": 1,
+      "message": "Please correct me if I am wrong: my understanding is that the inside a Soong module, re-assign variable is not allowed. In this case, we may need to a global variable, but this is not recommended in Soong. One of the design principles is to keep the bp file as clear as possible, leaving the logic to the `go` files.\n\nIn the conversion, I first run a build with the mk file, since I need this artifact built for comparison later; and for this part of conversion, I checked the build log as well, to see what value is used for --target-api option of the llvm-rs-cc command. I just used the same one in the command in the bp file. Then run the build with the bp file, check the build log again for this part, to make sure they are the same.",
+      "parentUuid": "9409c72b_2041c2e3",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac8024c6_c7e84e9b",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "\u003e The two generules were required because there was no way to select one of the two output files to use for srcs or resources.  A recent feature was added to Soong in aosp/1749113 that fixes that, so this could now be combined to a single genrule, referenced with \":RsHelloCompute-rscript{RsHelloCompute.srcjar}\" or \":RsHelloCompute-rscript{RsHelloCompute.rs.zip}\".\n\nIMO that\u0027s easier to understand than the two near-identical genrules in the current PS.",
       "parentUuid": "63ef8b00_5fafb910",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 7
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1c35ddd_39820472",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T16:57:41Z",
+      "side": 1,
+      "message": "Thanks Colin \u0026 David for this info, I will update this part using the new feature.",
+      "parentUuid": "6c72c7e3_49422fec",
       "range": {
         "startLine": 34,
         "startChar": 0,
@@ -249,6 +297,30 @@
         "startChar": 14,
         "endLine": 47,
         "endChar": 23
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92f49795_715455c5",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T16:57:41Z",
+      "side": 1,
+      "message": "Here is my understanding: we have used a filegroup module for rs_script_api (as well as rs_clang_headers), so the output is be a collection of files (paths), not a single one. The dirname would not work for a collection of files.",
+      "parentUuid": "f929d91e_f7f16baa",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
       },
       "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
