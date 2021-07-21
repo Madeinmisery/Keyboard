@@ -91,6 +91,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "043355d2_2cd7f89e",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T18:26:24Z",
+      "side": 1,
+      "message": "1. For the global variable part, yes, we can use it, but there are not many, if you check more bp files.(Based on what I observed, I reached a conclusion that \"this is not recommended\", which may be incorrect.)\n2. The `sdk_version` (and other kinds of versions) has some logics involved, to related to the `-target-api` level, maybe you can check this link first: https://docs.google.com/document/d/1YasV8C8shyu6dc1G2p2qjkzzbI6yh5dzaSLmf6gVS5w/edit?resourcekey\u003d0-FTEU06oOaRk3uWQGZkGJ5A#bookmark\u003did.cb4sffnikbwd\nFor conversion, I need to make sure before and after the conversion, no logic or field value is changed. That is why I said previously: I need to check this value in the build log before and after the conversion, to make sure they are the same.\n3. For this conversion, if we decide to use a global variable, it is Okay since they are the same; but there are cases that they are not the same. If we handle them inconsistently, which seems to cause more confusing.\n\nI do see the benefit to have a single variable for this, but the `skd_version` is not always the same as the `-target-api` level.",
+      "parentUuid": "18767b81_93035e98",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac8024c6_c7e84e9b",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
@@ -364,6 +388,30 @@
       "side": 1,
       "message": "I don\u0027t know whether there are \"functions\" in the .bp file that can do the necessary text processing, but this could be handled in shell:\n\n $$(dirname $$(echo $(locations \u003clabel\u003e) | awk \u0027{ print $$1 }\u0027)\n\nThis might not work if a filename contains whitespace, but I don\u0027t think we have that problem here.\n\nMore discussion: https://stackoverflow.com/questions/2440414/how-can-i-retrieve-the-first-word-of-the-output-of-a-command-in-bash",
       "parentUuid": "92f49795_715455c5",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d436f84_a270ed52",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T18:26:24Z",
+      "side": 1,
+      "message": "Thanks, I can have a try first.",
+      "parentUuid": "7e95bc13_2bc2fab8",
       "range": {
         "startLine": 47,
         "startChar": 9,
