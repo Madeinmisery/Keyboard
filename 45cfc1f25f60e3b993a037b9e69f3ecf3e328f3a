@@ -115,6 +115,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "03ef54b7_39e05c2e",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T19:00:47Z",
+      "side": 1,
+      "message": "\u003e 2. The `sdk_version` (and other kinds of versions) has some logics involved, to related to the `-target-api` level, maybe you can check this link first: https://docs.google.com/document/d/1YasV8C8shyu6dc1G2p2qjkzzbI6yh5dzaSLmf6gVS5w/edit?resourcekey\u003d0-FTEU06oOaRk3uWQGZkGJ5A#bookmark\u003did.cb4sffnikbwd\n\u003e For conversion, I need to make sure before and after the conversion, no logic or field value is changed. That is why I said previously: I need to check this value in the build log before and after the conversion, to make sure they are the same.\n\u003e 3. For this conversion, if we decide to use a global variable, it is Okay since they are the same; but there are cases that they are not the same. If we handle them inconsistently, which seems to cause more confusing.\n\u003e \n\u003e I do see the benefit to have a single variable for this, but the `skd_version` is not always the same as the `-target-api` level.\n\nAs you point out, there is some complicated logic that determines the -target-api option value. You\u0027ve decided that for the .mk to .bp conversions you\u0027re not going to (re)implement general RenderScript compilation logic from java_renderscript.mk and definitions.mk, Therefore, the question is how much of the relationships induced by the .mk file to capture in the .bp file. In the case of this Android.mk, I\u0027m assuming that setting\n\n LOCAL_SDK_VERSION :\u003d 14\n\nis responsible for every literal \"14\" in the Android.bp -- both the sdk_version on line 31 and the -target-api values. Therefore, it seems reasonable to me to have a corresponding setting in the Android.bp that shows this relationship, rather than removing the relationship entirely by using the literals everywhere. Neither choice is perfect (because you\u0027re not converting the old logic):\n- If we use a variable (by whatever name) it shows the existing relationship, and changing it to certain values (all the numeric values?) will preserve that relationship as it would have been under .mk; but changing it to certain other values (all of the non-numeric values?) will not reflect that relationship (and might break the build).\n- If we use a literal it does not show the existing relationship, and we\u0027ve separated the non-RenderScript \"the version of the sdk to compile against\" from the RenderScript target API. This does not reflect the existing relationship from the .mk; but allows more freedom for the two concepts to diverge in a future edit.\n\nI recommend using a variable (maybe call it \"local_sdk_version\" to match the .mk concept), maybe with a comment about which values it can assume without diverging from the logic it\u0027s trying to mimic.",
+      "parentUuid": "043355d2_2cd7f89e",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac8024c6_c7e84e9b",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
