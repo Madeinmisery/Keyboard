@@ -90,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c72c7e3_49422fec",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T00:11:37Z",
+      "side": 1,
+      "message": "\u003e The two generules were required because there was no way to select one of the two output files to use for srcs or resources.  A recent feature was added to Soong in aosp/1749113 that fixes that, so this could now be combined to a single genrule, referenced with \":RsHelloCompute-rscript{RsHelloCompute.srcjar}\" or \":RsHelloCompute-rscript{RsHelloCompute.rs.zip}\".\n\nIMO that\u0027s easier to understand than the two near-identical genrules in the current PS.",
+      "parentUuid": "63ef8b00_5fafb910",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 7
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f2ea3328_75440e61",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
@@ -177,6 +201,54 @@
         "startChar": 9,
         "endLine": 47,
         "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f929d91e_f7f16baa",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T00:11:37Z",
+      "side": 1,
+      "message": "Can something like\n\n $$(dirname $(location \u003clabel\u003e))\n \nbe used to get a dirname?",
+      "parentUuid": "0139518a_f9c0e379",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd9a7bbc_7c3e0e6c",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T00:11:37Z",
+      "side": 1,
+      "message": "Thanks, your explanation was helpful. (I don\u0027t see an explanation of $(location) on go/be).",
+      "parentUuid": "c96eb70e_0fbbd66d",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 23
       },
       "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
