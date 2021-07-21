@@ -67,6 +67,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "18767b81_93035e98",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T17:52:12Z",
+      "side": 1,
+      "message": "\u003e Please correct me if I am wrong: my understanding is that the inside a Soong module, re-assign variable is not allowed. In this case, we may need to a global variable, but this is not recommended in Soong. One of the design principles is to keep the bp file as clear as possible, leaving the logic to the `go` files.\n\nVariables in .bp files do seem to occur. A few minutes of looking at\n\n $ cd $ANDROID_BUILD_TOP\n $ find . -type f -name \u0027*.bp\u0027 -exec grep --color -nH --null -e \u0027[^\u003d]\u003d[^\u003d]\u0027 \\{\\} +\n\nturns up:\n- http://cs/android/packages/modules/Virtualization/tests/Android.bp?l\u003d19-22\u0026rcl\u003d8ea9c6bb124848e65a6b8bc63dc5ec1fd9bcd2fe\n- http://cs/android/packages/services/Car/service/Android.bp?l\u003d31-61\u0026rcl\u003d8ea9c6bb124848e65a6b8bc63dc5ec1fd9bcd2fe\n- http://cs/android/packages/apps/TV/Android.bp?l\u003d33-34\u0026rcl\u003d8ea9c6bb124848e65a6b8bc63dc5ec1fd9bcd2fe\n\nAnd the documentation I\u0027ve seen doesn\u0027t warn away from variables:\n- https://android.googlesource.com/platform/build/soong/+/master/README.md#variables\n\nWhat is the downside of declaring in this file a variable \"sdk_version \u003d 14\" and then replacing every existing literal \"14\" with a reference to this variable?\n\n\u003e In the conversion, I first run a build with the mk file, since I need this artifact built for comparison later; and for this part of conversion, I checked the build log as well, to see what value is used for --target-api option of the llvm-rs-cc command. I just used the same one in the command in the bp file. Then run the build with the bp file, check the build log again for this part, to make sure they are the same.\n\nMy suspicion is that every instance of \"14\" in this Android.bp comes from a single instance in the Android.mk, here: http://cs/android/development/samples/RenderScript/HelloCompute/Android.mk?l\u003d28\u0026rcl\u003d07d303a015e5ee5e26db36e07ba56f3b9c63b161\n\nOne way you could verify this is by changing the \"14\" in Android.mk to \"15\" and repeating the conversion process, and confirming that the difference is that all three \"14\" become \"15\". That would mean that the single instance of the literal \"14\" in Android.mk is replaced by three instances (or two, once you\u0027ve made the genrule change discussed on line 34) in \"Android.bp\", which is undesirable: They\u0027re coupled in the Android.mk but decoupled in the Android.bp.",
+      "parentUuid": "4ce6fb57_619eec71",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac8024c6_c7e84e9b",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
@@ -316,6 +340,30 @@
       "side": 1,
       "message": "Here is my understanding: we have used a filegroup module for rs_script_api (as well as rs_clang_headers), so the output is be a collection of files (paths), not a single one. The dirname would not work for a collection of files.",
       "parentUuid": "f929d91e_f7f16baa",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e95bc13_2bc2fab8",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-21T17:52:12Z",
+      "side": 1,
+      "message": "I don\u0027t know whether there are \"functions\" in the .bp file that can do the necessary text processing, but this could be handled in shell:\n\n $$(dirname $$(echo $(locations \u003clabel\u003e) | awk \u0027{ print $$1 }\u0027)\n\nThis might not work if a filename contains whitespace, but I don\u0027t think we have that problem here.\n\nMore discussion: https://stackoverflow.com/questions/2440414/how-can-i-retrieve-the-first-word-of-the-output-of-a-command-in-bash",
+      "parentUuid": "92f49795_715455c5",
       "range": {
         "startLine": 47,
         "startChar": 9,
