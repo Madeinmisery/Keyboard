@@ -139,6 +139,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b84b2d7c_bb6482c3",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-21T23:22:47Z",
+      "side": 1,
+      "message": "Okay, I will try to adopt your suggestion here. After the local build and test, I will push the updated CL soon for further review.",
+      "parentUuid": "03ef54b7_39e05c2e",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ac8024c6_c7e84e9b",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 8
