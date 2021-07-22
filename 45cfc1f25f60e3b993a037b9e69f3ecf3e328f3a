@@ -161,6 +161,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7f9cae4_0238098a",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T16:44:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b84b2d7c_bb6482c3",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac8024c6_c7e84e9b",
@@ -246,6 +270,30 @@
       "side": 1,
       "message": "Thanks Colin \u0026 David for this info, I will update this part using the new feature.",
       "parentUuid": "6c72c7e3_49422fec",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 7
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "897f0485_c342ca7b",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T16:44:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1c35ddd_39820472",
       "range": {
         "startLine": 34,
         "startChar": 0,
@@ -465,6 +513,54 @@
         "startChar": 9,
         "endLine": 47,
         "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c3c84e5_55d38007",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T16:44:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6d436f84_a270ed52",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 11
+      },
+      "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8d19757_dfb5ed34",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T16:44:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd9a7bbc_7c3e0e6c",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 23
       },
       "revId": "45cfc1f25f60e3b993a037b9e69f3ecf3e328f3a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
