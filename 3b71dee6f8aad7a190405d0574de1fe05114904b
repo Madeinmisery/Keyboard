@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3ea7f4db_c87d4f35",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-22T18:06:00Z",
+      "side": 1,
+      "message": "Okay, will change it to variable.",
+      "parentUuid": "23ebda76_3c536e06",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "3b71dee6f8aad7a190405d0574de1fe05114904b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f432c3c6_4edb8c81",
         "filename": "samples/RenderScript/HelloCompute/Android.bp",
         "patchSetId": 9
@@ -54,6 +78,30 @@
       "writtenOn": "2021-07-22T16:44:43Z",
       "side": 1,
       "message": "Does \"Make\" mean the .mk build system, in contrast to the Soong build system? Is there a better name for this?",
+      "range": {
+        "startLine": 25,
+        "startChar": 78,
+        "endLine": 25,
+        "endChar": 100
+      },
+      "revId": "3b71dee6f8aad7a190405d0574de1fe05114904b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "918aec5f_7aa0c58b",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1863140
+      },
+      "writtenOn": "2021-07-22T18:06:00Z",
+      "side": 1,
+      "message": "Will change it to \"Make build system\".",
+      "parentUuid": "f432c3c6_4edb8c81",
       "range": {
         "startLine": 25,
         "startChar": 78,
