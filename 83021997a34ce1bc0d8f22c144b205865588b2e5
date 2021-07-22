@@ -22,6 +22,76 @@
       },
       "revId": "83021997a34ce1bc0d8f22c144b205865588b2e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0dcf519_06dca8c6",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-22T21:27:53Z",
+      "side": 1,
+      "message": "Unfortunately no.",
+      "parentUuid": "e78493f7_40d01da3",
+      "range": {
+        "startLine": 25,
+        "startChar": 96,
+        "endLine": 25,
+        "endChar": 114
+      },
+      "revId": "83021997a34ce1bc0d8f22c144b205865588b2e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa206459_fa1746cb",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-22T21:27:53Z",
+      "side": 1,
+      "message": "Use $(location RsHelloCompute.srcjar)",
+      "range": {
+        "startLine": 63,
+        "startChar": 42,
+        "endLine": 63,
+        "endChar": 73
+      },
+      "revId": "83021997a34ce1bc0d8f22c144b205865588b2e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d612b20_abc95576",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-07-22T21:27:53Z",
+      "side": 1,
+      "message": "Use $(location RsHelloCompute.res.zip)",
+      "range": {
+        "startLine": 64,
+        "startChar": 34,
+        "endLine": 64,
+        "endChar": 66
+      },
+      "revId": "83021997a34ce1bc0d8f22c144b205865588b2e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
