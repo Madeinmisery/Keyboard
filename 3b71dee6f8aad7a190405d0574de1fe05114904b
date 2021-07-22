@@ -65,6 +65,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8f6ed19_076400ff",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T18:26:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ea7f4db_c87d4f35",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "3b71dee6f8aad7a190405d0574de1fe05114904b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f432c3c6_4edb8c81",
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "Will change it to \"Make build system\".",
       "parentUuid": "f432c3c6_4edb8c81",
+      "range": {
+        "startLine": 25,
+        "startChar": 78,
+        "endLine": 25,
+        "endChar": 100
+      },
+      "revId": "3b71dee6f8aad7a190405d0574de1fe05114904b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45aff8f7_244ad9f0",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T18:26:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "918aec5f_7aa0c58b",
       "range": {
         "startLine": 25,
         "startChar": 78,

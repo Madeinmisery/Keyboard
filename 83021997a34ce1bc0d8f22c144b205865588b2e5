@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e78493f7_40d01da3",
+        "filename": "samples/RenderScript/HelloCompute/Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-22T18:26:09Z",
+      "side": 1,
+      "message": "ccross@, is there a better term for this?",
+      "range": {
+        "startLine": 25,
+        "startChar": 96,
+        "endLine": 25,
+        "endChar": 114
+      },
+      "revId": "83021997a34ce1bc0d8f22c144b205865588b2e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
