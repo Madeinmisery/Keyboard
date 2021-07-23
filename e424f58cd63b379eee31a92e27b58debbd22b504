@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8dc3ac6e_908e23f5",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T14:24:31Z",
+      "side": 1,
+      "message": "maybe something like \"otaConfig\" instead of generic \"input\"",
+      "range": {
+        "startLine": 74,
+        "startChar": 6,
+        "endLine": 74,
+        "endChar": 11
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "199c1c25_f8a3bc50",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T14:24:31Z",
+      "side": 1,
+      "message": "Different devices can have very different partitions, the correct way is probably make this component take in a targetBuild, and use partition list for that build. This doesn\u0027t have to be done in this CL, just update the TODO comment.",
+      "range": {
+        "startLine": 86,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 26
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b51eec0_c6c88838",
+        "filename": "tools/otagui/src/views/JobConfigure.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T14:24:31Z",
+      "side": 1,
+      "message": "`handler` to be consistent with other variable names",
+      "range": {
+        "startLine": 21,
+        "startChar": 16,
+        "endLine": 21,
+        "endChar": 18
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
