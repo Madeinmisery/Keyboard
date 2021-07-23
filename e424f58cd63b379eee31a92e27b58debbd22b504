@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c67b5183_f93c13f2",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T15:12:57Z",
+      "side": 1,
+      "message": "Yes.",
+      "parentUuid": "8dc3ac6e_908e23f5",
+      "range": {
+        "startLine": 74,
+        "startChar": 6,
+        "endLine": 74,
+        "endChar": 11
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "199c1c25_f8a3bc50",
@@ -49,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5a014df4_b790d37c",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T15:12:57Z",
+      "side": 1,
+      "message": "That could also be a choice. \n\nBut in a batch generation, should the chosen partitions exist in every single target build? If so, by letting users only choose from the intersection part of all partition lists (from the given target builds), no mistakes will be made and looks more seamless for users.",
+      "parentUuid": "199c1c25_f8a3bc50",
+      "range": {
+        "startLine": 86,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 26
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9b51eec0_c6c88838",
         "filename": "tools/otagui/src/views/JobConfigure.vue",
         "patchSetId": 2
@@ -60,6 +108,30 @@
       "writtenOn": "2021-07-23T14:24:31Z",
       "side": 1,
       "message": "`handler` to be consistent with other variable names",
+      "range": {
+        "startLine": 21,
+        "startChar": 16,
+        "endLine": 21,
+        "endChar": 18
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c7bd568_7c9ec15a",
+        "filename": "tools/otagui/src/views/JobConfigure.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T15:12:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b51eec0_c6c88838",
       "range": {
         "startLine": 21,
         "startChar": 16,
