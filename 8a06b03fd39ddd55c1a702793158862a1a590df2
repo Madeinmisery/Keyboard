@@ -142,6 +142,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b96b042d_f3113496",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T19:26:02Z",
+      "side": 1,
+      "message": "If you do not intent to mutate this variable, mark it as const",
+      "parentUuid": "a5b6c637_e2e67e5c",
+      "range": {
+        "startLine": 52,
+        "startChar": 11,
+        "endLine": 52,
+        "endChar": 14
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "65099710_219fa146",
