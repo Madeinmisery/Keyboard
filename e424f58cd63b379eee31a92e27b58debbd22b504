@@ -95,6 +95,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fbce9e2_bc0b1996",
+        "filename": "tools/otagui/src/components/OTAOptions.vue",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T15:32:31Z",
+      "side": 1,
+      "message": "That\u0027s a very good point! Let\u0027s follow your approach.",
+      "parentUuid": "5a014df4_b790d37c",
+      "range": {
+        "startLine": 86,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 26
+      },
+      "revId": "e424f58cd63b379eee31a92e27b58debbd22b504",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b51eec0_c6c88838",
