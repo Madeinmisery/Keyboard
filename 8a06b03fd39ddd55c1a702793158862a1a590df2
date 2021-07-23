@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c41b8b55_37feaad5",
+        "filename": "tools/otagui/src/components/FileList.vue",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b4bf295f_fc461fa3",
+      "range": {
+        "startLine": 46,
+        "startChar": 21,
+        "endLine": 46,
+        "endChar": 22
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7003da9d_bf4c7921",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-07-23T18:02:44Z",
       "side": 1,
       "message": "`const responses \u003d targetBuilds.map(build \u003d\u003e await this.sendForm(build))`",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 7
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a29a788_d3c66255",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7003da9d_bf4c7921",
       "range": {
         "startLine": 43,
         "startChar": 0,
@@ -72,6 +120,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a5b6c637_e2e67e5c",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Changed. But why this is better than let?",
+      "parentUuid": "289af1cb_ed3260a9",
+      "range": {
+        "startLine": 52,
+        "startChar": 11,
+        "endLine": 52,
+        "endChar": 14
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "65099710_219fa146",
         "filename": "tools/otagui/src/services/JobSubmission.js",
         "patchSetId": 5
@@ -83,6 +155,30 @@
       "writtenOn": "2021-07-23T18:02:44Z",
       "side": 1,
       "message": "const",
+      "range": {
+        "startLine": 53,
+        "startChar": 13,
+        "endLine": 53,
+        "endChar": 16
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7260265_0e83cb01",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "65099710_219fa146",
       "range": {
         "startLine": 53,
         "startChar": 13,
@@ -116,6 +212,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e283c287_01d471c9",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "accd7dd3_2064686c",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 11
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "001a0f0f_f132f5c4",
@@ -139,6 +259,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "87941096_5ce1bb4f",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "001a0f0f_f132f5c4",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 31
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ace9571b_86127906",
@@ -152,6 +296,30 @@
       "writtenOn": "2021-07-23T18:02:44Z",
       "side": 1,
       "message": "unintentional change?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 12
+      },
+      "revId": "8a06b03fd39ddd55c1a702793158862a1a590df2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eae8819e_2e123c8b",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-23T19:21:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ace9571b_86127906",
       "range": {
         "startLine": 89,
         "startChar": 0,
