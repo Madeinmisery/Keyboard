@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b12a2e3f_407f2e47",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T19:27:54Z",
+      "side": 1,
+      "message": "space around operator",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 20
+      },
+      "revId": "7b73ab0cef33834ad08038f6896b42b7a036af22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0db00fe_f072d706",
+        "filename": "tools/otagui/src/services/JobSubmission.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-23T19:27:54Z",
+      "side": 1,
+      "message": "space around operator",
+      "range": {
+        "startLine": 72,
+        "startChar": 14,
+        "endLine": 72,
+        "endChar": 16
+      },
+      "revId": "7b73ab0cef33834ad08038f6896b42b7a036af22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
