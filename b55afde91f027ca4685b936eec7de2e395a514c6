@@ -50,6 +50,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "6b34190d_25c0ce3e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-26T21:44:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4353d037_11356040",
+      "range": {
+        "startLine": 21,
+        "startChar": 29,
+        "endLine": 21,
+        "endChar": 36
+      },
+      "revId": "b55afde91f027ca4685b936eec7de2e395a514c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "f5a72d53_61167043",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 5
@@ -119,6 +143,30 @@
       "side": 1,
       "message": "I had done this kind of change before, but was told not to change the time in conversions.",
       "parentUuid": "0b908ea5_94044d10",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "b55afde91f027ca4685b936eec7de2e395a514c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e74a38_dc71e102",
+        "filename": "samples/RenderScript/Levels/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1063563
+      },
+      "writtenOn": "2021-07-26T21:44:50Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "82aa8f0f_fdffcd90",
       "range": {
         "startLine": 2,
         "startChar": 17,
