@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56c82804_eb0bad8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-26T18:00:57Z",
+      "side": 1,
+      "message": "Remember to upload the demo OTA files when deploying to github",
+      "revId": "cdf499330dbf0211fda9b2153327ca06f93072a0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
