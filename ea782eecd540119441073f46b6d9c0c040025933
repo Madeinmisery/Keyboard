@@ -22,6 +22,30 @@
       },
       "revId": "ea782eecd540119441073f46b6d9c0c040025933",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07565503_b47c6a5f",
+        "filename": "tools/otagui/ota_interface.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-28T17:47:00Z",
+      "side": 1,
+      "message": "They are actually different things... The \u0027extra_keys\u0027 are those check boxes in the front end. The \u0027extra\u0027 is the extra args provided by typing in.\n\nThey are combined here because I want to store both of them under the same column (\u0027extra\u0027) in the database. Do you think it is better to store them separately?",
+      "parentUuid": "84aa420b_2173759f",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 47
+      },
+      "revId": "ea782eecd540119441073f46b6d9c0c040025933",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
