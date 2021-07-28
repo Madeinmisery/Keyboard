@@ -22,6 +22,30 @@
       },
       "revId": "5eaad35b319fd685671e69a6a54c9477cbf0c95a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "888f8739_e7f10327",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-28T17:52:34Z",
+      "side": 1,
+      "message": "Changed to MetadataFormat.",
+      "parentUuid": "cc94e366_81b4b5b1",
+      "range": {
+        "startLine": 18,
+        "startChar": 34,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "5eaad35b319fd685671e69a6a54c9477cbf0c95a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
