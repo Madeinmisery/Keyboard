@@ -70,6 +70,30 @@
       },
       "revId": "6dd2d80481b5c0de1e4750cf504df616a645c8c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8ea1bfc_87fca8c1",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-28T23:39:40Z",
+      "side": 1,
+      "message": "Ah, I missed this point. I think you are perfectly right, I just found one situation that this code breaks. Now I add another check to make sure there are enough data for reading in.",
+      "parentUuid": "809ff764_e2acb7ff",
+      "range": {
+        "startLine": 74,
+        "startChar": 8,
+        "endLine": 74,
+        "endChar": 29
+      },
+      "revId": "6dd2d80481b5c0de1e4750cf504df616a645c8c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
