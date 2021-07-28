@@ -1,0 +1,125 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013943480",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1777971?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "b85899e5_57c5c6c2",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T22:02:15Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 18,
+        "startChar": 42,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "09d31903618297404fade319120139415167cbbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013943480",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1777971?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "02266e87_5a56b236",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T22:02:15Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 55,
+        "startChar": 29,
+        "endLine": 55,
+        "endChar": 30
+      },
+      "revId": "09d31903618297404fade319120139415167cbbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013943480",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1777971?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1e956d64_a9b57ba9",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T22:02:15Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 56,
+        "startChar": 32,
+        "endLine": 56,
+        "endChar": 33
+      },
+      "revId": "09d31903618297404fade319120139415167cbbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013943476",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1777971?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "617a8cc8_e33f4242",
+          "description": "Change to \"tools/ota_analysis/src/services/payload.js\"",
+          "replacements": [
+            {
+              "path": "tools/ota_analysis/src/services/payload.js",
+              "range": {
+                "startLine": 71,
+                "startChar": 46,
+                "endLine": 71,
+                "endChar": 52
+              },
+              "replacement": "address"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "1c00babf_be9e0104",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T22:02:15Z",
+      "side": 1,
+      "message": "Common typo found: \"adress\" -- should it be \"address\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.",
+      "range": {
+        "startLine": 71,
+        "startChar": 46,
+        "endLine": 71,
+        "endChar": 52
+      },
+      "revId": "09d31903618297404fade319120139415167cbbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
