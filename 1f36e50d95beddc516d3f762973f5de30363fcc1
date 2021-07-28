@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cfeb3f6_8b464037",
+        "filename": "tools/otagui/web_server.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-28T17:21:56Z",
+      "side": 1,
+      "message": "This is a standard way to handle SPA(redirect all URLs to index.html). However is the user actually typed in an invalid URl, they will get a blank frontend page instead of proper 404 error message. Consider adding a 404 component in the front-end.",
+      "range": {
+        "startLine": 102,
+        "startChar": 16,
+        "endLine": 102,
+        "endChar": 36
+      },
+      "revId": "1f36e50d95beddc516d3f762973f5de30363fcc1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
