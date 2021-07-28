@@ -22,6 +22,30 @@
       },
       "revId": "6dd2d80481b5c0de1e4750cf504df616a645c8c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98b49ae9_103d7a2d",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-28T23:14:30Z",
+      "side": 1,
+      "message": "Yes that is checked after this. If these two are flipped: it will throw a StopIteration before everything is read in.",
+      "parentUuid": "4c7d415a_82dc9647",
+      "range": {
+        "startLine": 74,
+        "startChar": 8,
+        "endLine": 74,
+        "endChar": 29
+      },
+      "revId": "6dd2d80481b5c0de1e4750cf504df616a645c8c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
