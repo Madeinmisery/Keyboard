@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84aa420b_2173759f",
+        "filename": "tools/otagui/ota_interface.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-28T17:17:20Z",
+      "side": 1,
+      "message": "Are extra_keys and extra supposed to be present at the same time? I suggest just keep 1 way of adding extra flags, e.g. pass a list of string to backend",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 47
+      },
+      "revId": "ea782eecd540119441073f46b6d9c0c040025933",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
