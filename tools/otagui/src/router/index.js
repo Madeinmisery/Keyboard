@@ -11,7 +11,7 @@ const routes = [
     component: JobList
   },
   {
-    path: '/check/:id',
+    path: '/check-job/:id',
     name: 'JobDetails',
     props: true,
     component: JobDetails
