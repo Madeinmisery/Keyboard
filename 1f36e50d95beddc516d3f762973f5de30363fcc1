@@ -22,6 +22,30 @@
       },
       "revId": "1f36e50d95beddc516d3f762973f5de30363fcc1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fda76338_b268314e",
+        "filename": "tools/otagui/web_server.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-07-28T18:16:30Z",
+      "side": 1,
+      "message": "Add NotFound.vue. If the url does not exist, it will be redirected to this page.",
+      "parentUuid": "7cfeb3f6_8b464037",
+      "range": {
+        "startLine": 102,
+        "startChar": 16,
+        "endLine": 102,
+        "endChar": 36
+      },
+      "revId": "1f36e50d95beddc516d3f762973f5de30363fcc1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
