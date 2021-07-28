@@ -1,0 +1,82 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013911883",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1780768?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "785c0be6_c9bc70f4",
+        "filename": "tools/otagui/yarn.lock",
+        "patchSetId": 1
+      },
+      "lineNbr": 4601,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T00:13:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027they\u0027, \u0027them\u0027, or \u0027person\u0027; see https://developers.google.com/style/word-list#gender for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 4601,
+        "startChar": 3,
+        "endLine": 4601,
+        "endChar": 7
+      },
+      "revId": "fcc38d9934646bb45055aa34851f8cdb41d20ccb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013911883",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1780768?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "b6f16807_78ad9bee",
+        "filename": "tools/otagui/yarn.lock",
+        "patchSetId": 1
+      },
+      "lineNbr": 6924,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T00:13:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027they\u0027, \u0027them\u0027, or \u0027person\u0027; see https://developers.google.com/style/word-list#gender for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 6924,
+        "startChar": 53,
+        "endLine": 6924,
+        "endChar": 56
+      },
+      "revId": "fcc38d9934646bb45055aa34851f8cdb41d20ccb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013911883",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1780768?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "2ad9df5a_ee30d2ff",
+        "filename": "tools/otagui/yarn.lock",
+        "patchSetId": 1
+      },
+      "lineNbr": 8380,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-28T00:13:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027they\u0027, \u0027them\u0027, or \u0027person\u0027; see https://developers.google.com/style/word-list#gender for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 8380,
+        "startChar": 69,
+        "endLine": 8380,
+        "endChar": 72
+      },
+      "revId": "fcc38d9934646bb45055aa34851f8cdb41d20ccb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
