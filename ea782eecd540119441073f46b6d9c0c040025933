@@ -46,6 +46,30 @@
       },
       "revId": "ea782eecd540119441073f46b6d9c0c040025933",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e79dd786_84f6b4e7",
+        "filename": "tools/otagui/ota_interface.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-28T18:04:14Z",
+      "side": 1,
+      "message": "We can store them in 1 column for now",
+      "parentUuid": "07565503_b47c6a5f",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 47
+      },
+      "revId": "ea782eecd540119441073f46b6d9c0c040025933",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
