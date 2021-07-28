@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc94e366_81b4b5b1",
+        "filename": "tools/ota_analysis/src/services/payload.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-07-28T17:18:43Z",
+      "side": 1,
+      "message": "use `MetadataFormat` or all caps for constants",
+      "range": {
+        "startLine": 18,
+        "startChar": 34,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "5eaad35b319fd685671e69a6a54c9477cbf0c95a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
