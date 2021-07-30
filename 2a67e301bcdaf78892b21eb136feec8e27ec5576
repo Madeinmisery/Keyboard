@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1765bd0_fd1aaffd",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 431,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-07-30T15:33:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ad308f3_b7fc0bc4",
+      "range": {
+        "startLine": 431,
+        "startChar": 13,
+        "endLine": 431,
+        "endChar": 14
+      },
+      "revId": "2a67e301bcdaf78892b21eb136feec8e27ec5576",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d4d8f89_24f9a182",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "920626eb_bf82f406",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-07-30T15:33:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d4d8f89_24f9a182",
+      "range": {
+        "startLine": 454,
+        "startChar": 4,
+        "endLine": 464,
+        "endChar": 0
+      },
+      "revId": "2a67e301bcdaf78892b21eb136feec8e27ec5576",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fdae2261_acea2719",
@@ -60,6 +108,30 @@
       "writtenOn": "2021-07-30T04:29:57Z",
       "side": 1,
       "message": "Can\u0027t the host snapshot use the same format with the other snapshots?",
+      "range": {
+        "startLine": 896,
+        "startChar": 8,
+        "endLine": 896,
+        "endChar": 19
+      },
+      "revId": "2a67e301bcdaf78892b21eb136feec8e27ec5576",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f9e0fad_f6088bda",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 896,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-07-30T15:33:19Z",
+      "side": 1,
+      "message": "Yes.  I have an open bug for this as an add on after this change.",
+      "parentUuid": "fdae2261_acea2719",
       "range": {
         "startLine": 896,
         "startChar": 8,
