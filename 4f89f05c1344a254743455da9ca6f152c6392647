@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baa53d92_ee59c010",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-02T20:21:54Z",
+      "side": 1,
+      "message": "Could you take a look of this non-AB patch for OTA analyzer?",
+      "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
