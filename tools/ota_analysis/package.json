@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "jest"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -13,6 +14,7 @@
     "core-js": "^3.6.5",
     "echarts": "^5.1.2",
     "eslint-config-airbnb-base": "^14.2.1",
+    "jest": "^27.0.6",
     "material-design-icons": "^3.0.1",
     "protobufjs": "^6.11.2",
     "roboto-fontface": "*",
