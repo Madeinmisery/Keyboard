@@ -16,6 +16,29 @@
       "message": "Could you take a look of this non-AB patch for OTA analyzer?",
       "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4039bac_4693a7a5",
+        "filename": "tools/ota_analysis/src/services/payload_nonab.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-05T14:35:09Z",
+      "side": 1,
+      "message": "totalBlocks * blockSize should give total size? block size is assumed to be 4096 unless specified otherwise in the ota PACKAGE.",
+      "range": {
+        "startLine": 51,
+        "startChar": 39,
+        "endLine": 51,
+        "endChar": 46
+      },
+      "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
