@@ -111,6 +111,30 @@
       },
       "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0e19e2b_971916e4",
+        "filename": "tools/ota_analysis/src/services/payload_nonab.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1088085
+      },
+      "writtenOn": "2021-08-05T18:50:44Z",
+      "side": 1,
+      "message": "indeed it\u0027s not known directly from the OTA package. A more complicated way is to  check the last block index in the OTA, and use that * blockSize",
+      "parentUuid": "bc7a0af6_da4169c8",
+      "range": {
+        "startLine": 51,
+        "startChar": 39,
+        "endLine": 51,
+        "endChar": 46
+      },
+      "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
