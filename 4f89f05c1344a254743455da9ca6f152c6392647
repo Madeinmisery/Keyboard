@@ -87,6 +87,30 @@
       },
       "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc7a0af6_da4169c8",
+        "filename": "tools/ota_analysis/src/services/payload_nonab.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-05T18:31:05Z",
+      "side": 1,
+      "message": "Got it. Is there a way to know the real total blocks of the file system, just from the non-AB OTA package?",
+      "parentUuid": "9df3001c_26db3289",
+      "range": {
+        "startLine": 51,
+        "startChar": 39,
+        "endLine": 51,
+        "endChar": 46
+      },
+      "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
