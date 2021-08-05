@@ -197,7 +197,11 @@ def _parse_args():
     if args.products is None:
         # If `args.products` is unspecified, generate reference ABI dumps for
         # all products.
-        args.products = PRODUCTS_DEFAULT
+        # First check the "TARGET_PRODUCT" env variable is set or not
+        if 'TARGET_PRODUCT' in os.environ:
+            args.products = [os.environ['TARGET_PRODUCT']]
+        else:
+            args.products = PRODUCTS_DEFAULT
 
     return args
 
