@@ -39,6 +39,30 @@
       },
       "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ed1acdb_36b2748d",
+        "filename": "tools/ota_analysis/src/services/payload_nonab.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-05T16:27:45Z",
+      "side": 1,
+      "message": "The reason I did not specify it here is because the totalBlocks is unknown. \n\nIn this comment: https://source.corp.google.com/aosp-master/bootable/recovery/updater/blockimg.cpp;rcl\u003d4f81130039f6a312eba2027b3594a2be282f6b3a;l\u003d1753\nIt says, the \u0027total number of blocks we expect to write\u0027, is that the totalBlocks of the new partitions?",
+      "parentUuid": "d4039bac_4693a7a5",
+      "range": {
+        "startLine": 51,
+        "startChar": 39,
+        "endLine": 51,
+        "endChar": 46
+      },
+      "revId": "4f89f05c1344a254743455da9ca6f152c6392647",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
