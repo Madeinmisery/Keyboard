@@ -87,6 +87,24 @@
       "parentUuid": "65693954_cc8ecb4a",
       "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d73cb2b4_020e7eff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-08-06T09:37:01Z",
+      "side": 1,
+      "message": "Correction: There is no document about config.ini.",
+      "parentUuid": "a64d2a0c_2dc8eb58",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
