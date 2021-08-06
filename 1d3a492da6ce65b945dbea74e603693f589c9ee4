@@ -69,6 +69,24 @@
       "parentUuid": "9db08eab_66e79e7d",
       "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a64d2a0c_2dc8eb58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-08-06T09:33:57Z",
+      "side": 1,
+      "message": "We cannot merge this patch to AOSP because we intend to generate ABI dumps from generic products.\n\nIf you want to add and check ABI extension for your own products, you can modify the script or the ABI dumps in your branch.\n\nIf you want to add the extension but not trigger the build error, you can add\nprebuilts/abi-dumps/vndk/30/64/arm64_armv8-a/source-based/config.ini\n\nThe file content is:\n\n[global]\nallow_extensions \u003d true\n\nThere is document about config.ini. The available options are listed in\nhttps://cs.android.com/android/platform/superproject/+/master:development/vndk/tools/header-checker/src/diff/header_abi_diff.cpp;l\u003d170",
+      "parentUuid": "65693954_cc8ecb4a",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
