@@ -34,6 +34,41 @@
       "parentUuid": "ed989f53_826abca2",
       "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e4643e9_bf1a0139",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890625
+      },
+      "writtenOn": "2021-08-06T08:00:27Z",
+      "side": 1,
+      "message": "Thanks for your reply. \n\nFor ordinary gerrit\u0027s operation, seems that any changes committed to the \"master\" branch are prohibitted. So I turned one normal branch this time.\n\nAbout the ABI consistant, here is one short description, and I could file one issue on issuetracker. \n\nThe short version: \nthe \"external/libnl\" package lacks of link-related APIs, so I added \"lib/route/link/api.c\", \"lib/route/link.c\" and \"src/lib/utils.c\" to the android.bp file. Along with these c files, there should be one \u0027if.h\u0027 file to describe the interface flags and device mapping structure. \nBesides, all the existing APIs are NOT modified. \n\u003d\u003d\n\nSome ABI differences might trigge the updating operation, but this time the difference is detected, and through one error message saying that I need to run this python script, but do not mention the \"-products\" option, which updated the ABIs for wrong product.",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65693954_cc8ecb4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890625
+      },
+      "writtenOn": "2021-08-06T08:00:27Z",
+      "side": 1,
+      "message": "Thanks for your reply. \nFor ordinary gerrit\u0027s operation, seems that any changes committed to the \"master\" branch are prohibitted. So I turned one normal branch this time.\n\nAbout the ABI consistant, here is one short description, and I could file one issue on issuetracker. \n\nThe short version: \nthe \"external/libnl\" package lacks of link-related APIs, so I added \"lib/route/link/api.c\", \"lib/route/link.c\" and \"src/lib/utils.c\" to the android.bp file. Along with these c files, there should be one \u0027if.h\u0027 file to describe the interface flags and device mapping structure. \nBesides, all the existing APIs are NOT modified. \n\u003d\u003d\n\nSome ABI differences might trigge the updating operation, but this time the difference is detected, and through one error message saying that I need to run this python script, but do not mention the \"-products\" option, which updated the ABIs for wrong product.",
+      "parentUuid": "9db08eab_66e79e7d",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
