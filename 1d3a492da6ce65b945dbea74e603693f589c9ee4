@@ -16,6 +16,24 @@
       "message": "Hi all, this commits could apply to all branches. Because it\u0027s my 1st time to submit, and there\u0027s so many branches here, I don\u0027t know which branch is the best one, so I choose this branch as one start point. \n\nWhy we need to check the $TARGET_PRODUCT env variable? Because most developers working on some specific PRODUCT (e.g. coral from Google, venus from Xiaomi). Once we changed the ABI interface of one library (e.g. external lib in .so format), and ran the `mmm .` command to compile this single library, one error message would appear saying \"you need to run `${path}/blah/blah/create_reference_dumps.py -l \u003clibname\u003e` to refresh/generate the latest ABI infomation for this lib\". \n\nIf following this error message, I run \"${path}/blah/blah/create_reference_dumps.py -l \u003clibname\u003e\", the problem comes. this python script will generate the ABI info for the default product (e.g. aosp_arm), and the real product (defined as TARGET_PRODUCT) could not get the ABI info updates.\n\nIf there\u0027s any questions, please let me know. Thanks.",
       "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9db08eab_66e79e7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-08-06T07:18:12Z",
+      "side": 1,
+      "message": "Master branch is the appropriate branch.\n\nThe ABI is required to be consistent among all Android products in order to keep the system updatable. That\u0027s the reason why the script dumps ABI from generic products, and your product\u0027s ABI is compared with the generic ABI.\n\nThe ABI tool can be configured to allow some ABI difference without updating dumps. We would like to know your case and help with it. Could you explain it here or on issuetracker.google.com ?",
+      "parentUuid": "ed989f53_826abca2",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
