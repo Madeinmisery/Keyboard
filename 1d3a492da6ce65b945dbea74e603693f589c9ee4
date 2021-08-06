@@ -105,6 +105,41 @@
       "parentUuid": "a64d2a0c_2dc8eb58",
       "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9d915c4_1f30c816",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890625
+      },
+      "writtenOn": "2021-08-06T12:22:17Z",
+      "side": 1,
+      "message": "Thanks, that seems fine to me. \nI will follow your advice to define the config.ini file. \n ",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef8546c8_72476e1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890625
+      },
+      "writtenOn": "2021-08-06T12:22:17Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d73cb2b4_020e7eff",
+      "revId": "1d3a492da6ce65b945dbea74e603693f589c9ee4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
