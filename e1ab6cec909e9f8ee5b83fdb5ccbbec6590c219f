@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c95c7662_7a786201",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-11T20:55:13Z",
+      "side": 1,
+      "message": "-2 temporarily since this should land after https://android-review.googlesource.com/c/platform/build/soong/+/1792594 gets submitted, but I\u0027m not tying them together with a topic as the build support shouldn\u0027t necessarily block on this CL.",
+      "revId": "e1ab6cec909e9f8ee5b83fdb5ccbbec6590c219f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
