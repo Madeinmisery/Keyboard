@@ -1,6 +1,7 @@
 import unittest
 from ota_interface import JobInfo, ProcessesManagement
 from unittest.mock import patch, mock_open, Mock, MagicMock
+import os
 
 class TestJobInfo(unittest.TestCase):
     def setUp(self):
@@ -176,7 +177,23 @@ class TestJobInfo(unittest.TestCase):
         )
 
 class TestProcessesManagement(unittest.TestCase):
-    pass
+    def setUp(self):
+        if os.path.isfile('test_process.db'):
+            self.tearDown()
+        self.processes = ProcessesManagement(path='test_process.db')
+        with sqlite3.connect('test_process.db') as connect:
+                cursor = connect.cursor()
+                cursor.execute("""
+                    INSERT INTO Jobs (ID, TargetPath, IncrementalPath, Verbose, Partial, OutputPath, Status, Downgrade, OtherFlags, STDOUT, STDERR, StartTime)
+                    VALUES (:id, :target, :incremental, :verbose, :partial, :output, :status, :downgrade, :extra, :stdout, :stderr, :start_time)
+                """, job_info.to_sql_form_dict())
+
+    def tearDown(self):
+        os.remove('test_process.db')
+
+    def test_init(self):
+        # Test the database is created successfully
+        self.assertTrue(os.path.isfile('test_process.db'))
 
 if __name__ == '__main__':
     unittest.main()
