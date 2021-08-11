@@ -1,0 +1,524 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "4a619a4b_3143cf10",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 4191,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 4191,
+        "startChar": 9,
+        "endLine": 4191,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "9026f71c_7efd3bc2",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 13533,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 13533,
+        "startChar": 9,
+        "endLine": 13533,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "72187fba_13cfe70f",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 19296,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 19296,
+        "startChar": 18,
+        "endLine": 19296,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "6234ace3_d6266089",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 19298,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 19298,
+        "startChar": 46,
+        "endLine": 19298,
+        "endChar": 50
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "fce67de9_ea46766d",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 19314,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 19314,
+        "startChar": 9,
+        "endLine": 19314,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "6779bf5b_775ab2cd",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 19320,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 19320,
+        "startChar": 18,
+        "endLine": 19320,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1e39ef2a_7131ab24",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 19330,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 19330,
+        "startChar": 18,
+        "endLine": 19330,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1640937b_54e9ff66",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 26663,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 26663,
+        "startChar": 13,
+        "endLine": 26663,
+        "endChar": 17
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "be78b2a9_a51a4d50",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 34061,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 34061,
+        "startChar": 13,
+        "endLine": 34061,
+        "endChar": 17
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "3b25461a_2523fa9e",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 38631,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 38631,
+        "startChar": 5,
+        "endLine": 38631,
+        "endChar": 9
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1815f595_8d221345",
+        "filename": "tools/ota_analysis/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 38633,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 38633,
+        "startChar": 46,
+        "endLine": 38633,
+        "endChar": 50
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "31313a61_38fe511a",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 10349,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 10349,
+        "startChar": 9,
+        "endLine": 10349,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "7c972011_024d2364",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 14535,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 14535,
+        "startChar": 18,
+        "endLine": 14535,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "22a4e7d1_1999920c",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 14537,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 14537,
+        "startChar": 46,
+        "endLine": 14537,
+        "endChar": 50
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "38647dca_4a16ca56",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 14552,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 14552,
+        "startChar": 9,
+        "endLine": 14552,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "44a2ee5e_97fbc286",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 14558,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 14558,
+        "startChar": 18,
+        "endLine": 14558,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "dd4516f2_9ca911a2",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 14567,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 14567,
+        "startChar": 18,
+        "endLine": 14567,
+        "endChar": 22
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "12ab049f_d20be1c5",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 26624,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 26624,
+        "startChar": 9,
+        "endLine": 26624,
+        "endChar": 13
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "d3c9f59b_7a4d1658",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 30062,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 30062,
+        "startChar": 5,
+        "endLine": 30062,
+        "endChar": 9
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014335819",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1786387?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "a88176fe_644505cd",
+        "filename": "tools/otagui/package-lock.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 30064,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-11T20:46:30Z",
+      "side": 1,
+      "message": "Prefer to use inclusive terms like \u0027valid\u0027, \u0027validity check\u0027 or \u0027initial check\u0027; see https://source.android.com/setup/contribute/respectful-code for more details. In the case of a false positive add BYPASS_INCLUSIVE_LANGUAGE_REASON\u003dmy_reason_here to your commit message to disable this check.",
+      "range": {
+        "startLine": 30064,
+        "startChar": 46,
+        "endLine": 30064,
+        "endChar": 50
+      },
+      "revId": "400253b2249b57a14611aa57c3923b1bed05f0cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
