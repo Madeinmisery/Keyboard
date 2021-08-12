@@ -1,0 +1,151 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014343051",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1793173?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "33e145b0_9ee09ae4",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-12T00:43:35Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 190,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 8
+      },
+      "revId": "af90221f4e48029e6bcae09d9913da8165a9e6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014343051",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1793173?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "82cf0218_760ed588",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-12T00:43:35Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 230,
+        "startChar": 0,
+        "endLine": 230,
+        "endChar": 4
+      },
+      "revId": "af90221f4e48029e6bcae09d9913da8165a9e6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014343051",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1793173?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "acbf8f06_9a1faa6e",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-12T00:43:35Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 236,
+        "startChar": 0,
+        "endLine": 236,
+        "endChar": 4
+      },
+      "revId": "af90221f4e48029e6bcae09d9913da8165a9e6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014343051",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1793173?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "b59634b6_30639a49",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-12T00:43:35Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 252,
+        "startChar": 0,
+        "endLine": 252,
+        "endChar": 4
+      },
+      "revId": "af90221f4e48029e6bcae09d9913da8165a9e6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014343053",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1793173?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "86d1843d_38a9a75e",
+          "description": "Change to \"tools/otagui/test_ota_interface.py\"",
+          "replacements": [
+            {
+              "path": "tools/otagui/test_ota_interface.py",
+              "range": {
+                "startLine": 317,
+                "startChar": 38,
+                "endLine": 317,
+                "endChar": 45
+              },
+              "replacement": "database"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "6bc8d0cb_52c774be",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-12T00:43:35Z",
+      "side": 1,
+      "message": "Common typo found: \"databse\" -- should it be \"database\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.",
+      "range": {
+        "startLine": 317,
+        "startChar": 38,
+        "endLine": 317,
+        "endChar": 45
+      },
+      "revId": "af90221f4e48029e6bcae09d9913da8165a9e6d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
