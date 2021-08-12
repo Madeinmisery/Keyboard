@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9e67643_2bae9fb8",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-12T08:16:01Z",
+      "side": 1,
+      "message": "bp?",
+      "range": {
+        "startLine": 401,
+        "startChar": 30,
+        "endLine": 401,
+        "endChar": 34
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92cb94e7_3d401ae2",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-12T08:16:01Z",
+      "side": 1,
+      "message": "nit: Can you please format your changes if possible? I see some places where needs to be formatted properly.",
+      "range": {
+        "startLine": 408,
+        "startChar": 17,
+        "endLine": 408,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38e32aa2_34f41eba",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-12T08:16:01Z",
+      "side": 1,
+      "message": "Just to be sure, do we expect all host items as cc_prebuilt_binary type?",
+      "range": {
+        "startLine": 413,
+        "startChar": 10,
+        "endLine": 413,
+        "endChar": 28
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acc779f4_6ea95e3b",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-12T08:16:01Z",
+      "side": 1,
+      "message": "Is it OK not to create host_tools module from here?",
+      "range": {
+        "startLine": 416,
+        "startChar": 4,
+        "endLine": 416,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2c2f4e6_a42be04b",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-12T08:16:01Z",
+      "side": 1,
+      "message": "not used from this function?",
+      "range": {
+        "startLine": 607,
+        "startChar": 0,
+        "endLine": 607,
+        "endChar": 29
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
