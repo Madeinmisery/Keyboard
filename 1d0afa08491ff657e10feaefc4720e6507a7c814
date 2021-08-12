@@ -152,6 +152,30 @@
       },
       "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a07b9865_cec43611",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:32:24Z",
+      "side": 1,
+      "message": "No, this field isn\u0027t required by the build system (and can be left blank as well). This would only break compilation if we skip emitting the version number and the crate actually uses CARGO_PKG_VERSION (like quiche).",
+      "parentUuid": "966476de_8bb62209",
+      "range": {
+        "startLine": 441,
+        "startChar": 63,
+        "endLine": 441,
+        "endChar": 64
+      },
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
