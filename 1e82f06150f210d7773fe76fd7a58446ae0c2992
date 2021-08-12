@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a167e19a_69c55da9",
+        "filename": "tools/otagui/test_ota_interface.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-12T01:10:16Z",
+      "side": 1,
+      "message": "Add a case that tests the conversion from jobinfo to actual CLI flags?",
+      "range": {
+        "startLine": 127,
+        "startChar": 8,
+        "endLine": 127,
+        "endChar": 27
+      },
+      "revId": "1e82f06150f210d7773fe76fd7a58446ae0c2992",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
