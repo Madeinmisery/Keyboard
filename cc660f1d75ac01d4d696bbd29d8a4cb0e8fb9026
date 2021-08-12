@@ -16,6 +16,23 @@
       "message": "LGTM but I\u0027ll wait to +2 it.",
       "revId": "cc660f1d75ac01d4d696bbd29d8a4cb0e8fb9026",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8421d968_0a47b86b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:52:04Z",
+      "side": 1,
+      "message": "Build support has landed.",
+      "revId": "cc660f1d75ac01d4d696bbd29d8a4cb0e8fb9026",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

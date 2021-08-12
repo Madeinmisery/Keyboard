@@ -200,6 +200,30 @@
       },
       "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea31b16e_ac3dcdcd",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:52:04Z",
+      "side": 1,
+      "message": "Ah sorry, I didn\u0027t realize the errors were printed to the Android.bp. Yea that would invalidate them.",
+      "parentUuid": "d283b23d_f3da0165",
+      "range": {
+        "startLine": 441,
+        "startChar": 63,
+        "endLine": 441,
+        "endChar": 64
+      },
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
