@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe05a239_dbe03913",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-12T17:07:35Z",
+      "side": 1,
+      "message": "LGTM but I\u0027ll wait to +2 it.",
+      "revId": "cc660f1d75ac01d4d696bbd29d8a4cb0e8fb9026",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

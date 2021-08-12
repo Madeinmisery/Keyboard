@@ -128,6 +128,30 @@
       },
       "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "966476de_8bb62209",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-12T17:07:35Z",
+      "side": 1,
+      "message": "Makes sense.  Note that adding to errors will actually generate a malformed Android.bp, right?  So it\u0027s a bit more than just skipping emitting it.  But that would help us figure out this is a problem, at least. \u003d)",
+      "parentUuid": "d12d1e25_266edb6c",
+      "range": {
+        "startLine": 441,
+        "startChar": 63,
+        "endLine": 441,
+        "endChar": 64
+      },
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
