@@ -33,6 +33,24 @@
       "message": "Per an offline discussion, we\u0027re going to investigate getting this information from cargo via cargo metatada or something instead of this.",
       "revId": "e1ab6cec909e9f8ee5b83fdb5ccbbec6590c219f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9578fb10_0b0e95d1",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T16:26:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f044c353_3690e409",
+      "revId": "e1ab6cec909e9f8ee5b83fdb5ccbbec6590c219f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
