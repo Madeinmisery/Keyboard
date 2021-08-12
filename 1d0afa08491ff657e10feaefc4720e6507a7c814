@@ -41,6 +41,48 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74b1c400_b1d788e9",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:04:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "691b14b9_ccacce73",
+      "range": {
+        "startLine": 436,
+        "startChar": 36,
+        "endLine": 436,
+        "endChar": 39
+      },
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a8cbfb1_19534314",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:04:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b6a1854b_31504726",
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a2e0b446_02560323",
@@ -54,6 +96,30 @@
       "writtenOn": "2021-08-12T16:31:08Z",
       "side": 1,
       "message": "Do we think this is always right?",
+      "range": {
+        "startLine": 441,
+        "startChar": 63,
+        "endLine": 441,
+        "endChar": 64
+      },
+      "revId": "1d0afa08491ff657e10feaefc4720e6507a7c814",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d12d1e25_266edb6c",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 441,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-12T17:04:59Z",
+      "side": 1,
+      "message": "This only has multiple values when processing Cargo.tomls defining a workspace. I think all of the Cargo.toml files we ingest with the script only define a single package. I added a check here just in case though that skips emitting the package version.\n\nIf this is something we end up running into often then we can add logic for handling the multiple package case.",
+      "parentUuid": "a2e0b446_02560323",
       "range": {
         "startLine": 441,
         "startChar": 63,
