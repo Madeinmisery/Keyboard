@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45a19faa_24e09f8e",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-13T22:18:15Z",
+      "side": 1,
+      "message": "Substitutes this part with tempfile.NamedTemporaryFile",
+      "parentUuid": "22555d0a_b42efd9a",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 46
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "85ed6e93_4e8d09ff",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-08-13T21:04:49Z",
       "side": 1,
       "message": "Why is tearDown() called inside setup()?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 23
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b75c351_9aa3b3a3",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-13T22:18:15Z",
+      "side": 1,
+      "message": "It was meant to clean any pre-exist \u0027test.db\u0027. It is useless if the test directory is not messed up with. Deleted.",
+      "parentUuid": "85ed6e93_4e8d09ff",
       "range": {
         "startLine": 89,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f50d9976_9c16a7eb",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-13T22:18:15Z",
+      "side": 1,
+      "message": "This is an accident...",
+      "parentUuid": "304580de_7fc9a670",
+      "range": {
+        "startLine": 91,
+        "startChar": 8,
+        "endLine": 91,
+        "endChar": 12
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44c91058_a7307e4d",
@@ -83,6 +155,30 @@
       "writtenOn": "2021-08-13T21:04:49Z",
       "side": 1,
       "message": "Try not to create an instance of another testcase. If sharing code is needed, create helper class/functions/objects.",
+      "range": {
+        "startLine": 123,
+        "startChar": 0,
+        "endLine": 123,
+        "endChar": 36
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2afb326c_dd7e29c8",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1880180
+      },
+      "writtenOn": "2021-08-13T22:18:15Z",
+      "side": 1,
+      "message": "Now create a class called CreateTestBuild, which helps create an virtual OTA file on disk and also contains test_info (infos that is supposed to be parsed correctly by BuildInfo class).",
+      "parentUuid": "44c91058_a7307e4d",
       "range": {
         "startLine": 123,
         "startChar": 0,
