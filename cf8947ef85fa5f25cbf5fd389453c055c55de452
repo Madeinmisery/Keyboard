@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22555d0a_b42efd9a",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-13T21:04:49Z",
+      "side": 1,
+      "message": "Consider using tempfile module",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 46
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ed6e93_4e8d09ff",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-13T21:04:49Z",
+      "side": 1,
+      "message": "Why is tearDown() called inside setup()?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 23
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "304580de_7fc9a670",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-13T21:04:49Z",
+      "side": 1,
+      "message": "no need to skip",
+      "range": {
+        "startLine": 91,
+        "startChar": 8,
+        "endLine": 91,
+        "endChar": 12
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44c91058_a7307e4d",
+        "filename": "tools/otagui/test_target_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2021-08-13T21:04:49Z",
+      "side": 1,
+      "message": "Try not to create an instance of another testcase. If sharing code is needed, create helper class/functions/objects.",
+      "range": {
+        "startLine": 123,
+        "startChar": 0,
+        "endLine": 123,
+        "endChar": 36
+      },
+      "revId": "cf8947ef85fa5f25cbf5fd389453c055c55de452",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
