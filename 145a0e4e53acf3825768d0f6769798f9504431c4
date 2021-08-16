@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e14849ce_1fbef110",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-08-16T04:11:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9e67643_2bae9fb8",
+      "range": {
+        "startLine": 401,
+        "startChar": 30,
+        "endLine": 401,
+        "endChar": 34
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92cb94e7_3d401ae2",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b71a3b96_706e806d",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-08-16T04:11:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92cb94e7_3d401ae2",
+      "range": {
+        "startLine": 408,
+        "startChar": 17,
+        "endLine": 408,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38e32aa2_34f41eba",
@@ -60,6 +108,30 @@
       "writtenOn": "2021-08-12T08:16:01Z",
       "side": 1,
       "message": "Just to be sure, do we expect all host items as cc_prebuilt_binary type?",
+      "range": {
+        "startLine": 413,
+        "startChar": 10,
+        "endLine": 413,
+        "endChar": 28
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b8f3fa1_29f3c2b0",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-08-16T04:11:15Z",
+      "side": 1,
+      "message": "Yes, added a comment as well.",
+      "parentUuid": "38e32aa2_34f41eba",
       "range": {
         "startLine": 413,
         "startChar": 10,
@@ -95,6 +167,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "39995184_ed334728",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-08-16T04:11:15Z",
+      "side": 1,
+      "message": "Can you clarify what you mean here?  Thanks.",
+      "parentUuid": "acc779f4_6ea95e3b",
+      "range": {
+        "startLine": 416,
+        "startChar": 4,
+        "endLine": 416,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a2c2f4e6_a42be04b",
         "filename": "vendor_snapshot/update.py",
         "patchSetId": 1
@@ -106,6 +202,30 @@
       "writtenOn": "2021-08-12T08:16:01Z",
       "side": 1,
       "message": "not used from this function?",
+      "range": {
+        "startLine": 607,
+        "startChar": 0,
+        "endLine": 607,
+        "endChar": 29
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7de2a4dd_2a78508d",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-08-16T04:11:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2c2f4e6_a42be04b",
       "range": {
         "startLine": 607,
         "startChar": 0,
