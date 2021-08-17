@@ -191,6 +191,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "31668322_94f911e3",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-17T12:06:15Z",
+      "side": 1,
+      "message": "I thought \u0027host_tools\u0027 module would be created with dependency to all snapshot host tools, similar to vendor_snapshot_shared.",
+      "parentUuid": "39995184_ed334728",
+      "range": {
+        "startLine": 416,
+        "startChar": 4,
+        "endLine": 416,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a2c2f4e6_a42be04b",
         "filename": "vendor_snapshot/update.py",
         "patchSetId": 1
