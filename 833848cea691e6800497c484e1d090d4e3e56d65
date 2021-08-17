@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55a36573_773d3554",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-17T17:53:37Z",
+      "side": 1,
+      "message": "I remember talking about this change with Ivan and I remember Matt saying he also didn\u0027t like it.  Does this approach seem fine to both of you as opposed to removing all uses of this in crates and then removing it fully?",
+      "revId": "833848cea691e6800497c484e1d090d4e3e56d65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
