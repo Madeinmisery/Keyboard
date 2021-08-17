@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a5625cd_94a4c7ee",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 729,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-17T22:33:12Z",
+      "side": 1,
+      "message": "How come this is here but not apex or include_dirs or other things?",
+      "revId": "35417f7ca894ee9570a3e9b8607a6c58fc7adf0a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
