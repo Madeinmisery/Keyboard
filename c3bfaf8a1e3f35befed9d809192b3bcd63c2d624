@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfe569eb_f926d789",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-18T16:48:26Z",
+      "side": 1,
+      "message": "I can\u0027t find any remaining uses of this in Code Search, and I\u0027m not sure what to test beyond the updater.  What do you think?",
+      "revId": "c3bfaf8a1e3f35befed9d809192b3bcd63c2d624",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
