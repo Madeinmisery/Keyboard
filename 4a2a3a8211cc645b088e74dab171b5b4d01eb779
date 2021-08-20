@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa2d9c62_e69d5500",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-20T19:29:05Z",
+      "side": 1,
+      "message": "https://android-review.googlesource.com/q/topic:test-mapping-08-20 is what it generated when I ran it on unicode-* (with one minor manual tweak due to my testing).",
+      "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
