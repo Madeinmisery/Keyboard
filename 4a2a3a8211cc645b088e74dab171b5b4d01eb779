@@ -87,6 +87,30 @@
       },
       "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a4bd52f_cee45d20",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-23T15:42:35Z",
+      "side": 1,
+      "message": "I\u0027ll keep it this way, then, since I\u0027ll trust the updater.",
+      "parentUuid": "ac6adbed_ebf9cf3a",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 291,
+        "endChar": 0
+      },
+      "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
