@@ -16,6 +16,29 @@
       "message": "https://android-review.googlesource.com/q/topic:test-mapping-08-20 is what it generated when I ran it on unicode-* (with one minor manual tweak due to my testing).",
       "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66ffc1d5_0bdb0fb6",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-23T13:20:55Z",
+      "side": 1,
+      "message": "Is this possible with `repo upload` instead? There\u0027s a few flags that might be useful (-y, --no-verify, --ignore-hooks, -t \u003ctopic\u003e, etc...)",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 291,
+        "endChar": 0
+      },
+      "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
