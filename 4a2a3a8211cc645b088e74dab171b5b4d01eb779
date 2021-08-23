@@ -39,6 +39,30 @@
       },
       "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63825c8d_edb8c2dd",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-08-23T14:08:36Z",
+      "side": 1,
+      "message": "Probably, but I was just copying all of these commands from https://cs.android.com/android/platform/superproject/+/master:tools/external_updater/git_utils.py;l\u003d182.  Do you want me to try to replace it or do you think it\u0027s good enough since it\u0027s like that other file?",
+      "parentUuid": "66ffc1d5_0bdb0fb6",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 291,
+        "endChar": 0
+      },
+      "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
