@@ -63,6 +63,30 @@
       },
       "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac6adbed_ebf9cf3a",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-08-23T14:30:52Z",
+      "side": 1,
+      "message": "Hrmm, my thought was repo might be more future-proof in-case anything changes. There\u0027s a couple instances of repo being used (update-art-module-prebuilts.py), but also plenty of instances of git being used too.\n\nI\u0027m OK either way here and defer to your judgement.",
+      "parentUuid": "63825c8d_edb8c2dd",
+      "range": {
+        "startLine": 289,
+        "startChar": 0,
+        "endLine": 291,
+        "endChar": 0
+      },
+      "revId": "4a2a3a8211cc645b088e74dab171b5b4d01eb779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
