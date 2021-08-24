@@ -237,6 +237,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f3cd14a_d00f882d",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2021-08-24T03:53:17Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b6e9a0a5_c9fd67e0",
+      "range": {
+        "startLine": 416,
+        "startChar": 4,
+        "endLine": 416,
+        "endChar": 20
+      },
+      "revId": "145a0e4e53acf3825768d0f6769798f9504431c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a2c2f4e6_a42be04b",
