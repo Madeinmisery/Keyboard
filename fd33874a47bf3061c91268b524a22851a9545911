@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f3c2f14_651c533b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1088085
+      },
+      "writtenOn": "2021-09-01T07:18:04Z",
+      "side": 1,
+      "message": "you can put the files in exclude, so you don\u0027t need to submit them.",
+      "revId": "fd33874a47bf3061c91268b524a22851a9545911",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
