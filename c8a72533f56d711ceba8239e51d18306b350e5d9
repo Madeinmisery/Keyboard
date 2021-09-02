@@ -16,6 +16,23 @@
       "message": "Apparently this is still current and still good.",
       "revId": "c8a72533f56d711ceba8239e51d18306b350e5d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c103f86b_5e206d59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2021-09-02T16:30:01Z",
+      "side": 1,
+      "message": "By the way do we need to add minSdkVersion\u003d30 or something to the manifest file of this app ?",
+      "revId": "c8a72533f56d711ceba8239e51d18306b350e5d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
