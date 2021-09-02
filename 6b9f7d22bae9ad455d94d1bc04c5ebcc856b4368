@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6314a9bd_004ce265",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-09-02T10:00:17Z",
+      "side": 1,
+      "message": "I like to make the ko for a specific KMI version reproducible with the Makefile. In this case, the Makefile target and the corresponding source files need version strings too. ",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85771098_77d1cb34",
+        "filename": "gki/kmi_abi_chk/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-09-02T10:00:17Z",
+      "side": 1,
+      "message": "How about using ${ANDROID_BUILD_TOP}/kernel/common .... as the default directory.",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d30ba65_1f0c2073",
+        "filename": "gki/kmi_abi_chk/kmi_sym_list.inc",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-09-02T10:00:17Z",
+      "side": 1,
+      "message": "The inc file can have a version string too.",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
