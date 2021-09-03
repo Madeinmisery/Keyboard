@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20135428_8295e058",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-09-03T03:57:15Z",
+      "side": 1,
+      "message": "GKI build number is added in Makefile and kmi_sym_main.c in PS2.",
+      "parentUuid": "6314a9bd_004ce265",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "85771098_77d1cb34",
@@ -35,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9229f56f_75e7bc00",
+        "filename": "gki/kmi_abi_chk/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-09-03T03:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85771098_77d1cb34",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d30ba65_1f0c2073",
@@ -48,6 +84,24 @@
       "writtenOn": "2021-09-02T10:00:17Z",
       "side": 1,
       "message": "The inc file can have a version string too.",
+      "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "653aa650_75116624",
+        "filename": "gki/kmi_abi_chk/kmi_sym_list.inc",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-09-03T03:57:15Z",
+      "side": 1,
+      "message": "GKI build number is added in Makefile and kmi_sym_main.c in PS2.",
+      "parentUuid": "0d30ba65_1f0c2073",
       "revId": "6b9f7d22bae9ad455d94d1bc04c5ebcc856b4368",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
