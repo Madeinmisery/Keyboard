@@ -22,6 +22,30 @@
       },
       "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9143c2c_2c9f19df",
+        "filename": "scripts/stack",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2021-09-10T15:26:59Z",
+      "side": 1,
+      "message": "i think that\u0027s just built into the build system? +dwillemsen because i don\u0027t actually have an example of a mainline module symbols zip file to check they\u0027re the same...",
+      "parentUuid": "3decd31f_317a135b",
+      "range": {
+        "startLine": 52,
+        "startChar": 39,
+        "endLine": 52,
+        "endChar": 68
+      },
+      "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
