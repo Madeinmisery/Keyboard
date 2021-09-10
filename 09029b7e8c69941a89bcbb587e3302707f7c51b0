@@ -87,6 +87,30 @@
       },
       "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa04fcbf_a9288939",
+        "filename": "scripts/stack",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2021-09-10T20:21:40Z",
+      "side": 1,
+      "message": "reworded in ps2, which also switches to atexit for cleaner cleanup code...",
+      "parentUuid": "ea4efb61_ab732181",
+      "range": {
+        "startLine": 52,
+        "startChar": 39,
+        "endLine": 52,
+        "endChar": 68
+      },
+      "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
