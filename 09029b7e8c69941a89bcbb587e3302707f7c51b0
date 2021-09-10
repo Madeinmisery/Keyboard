@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2be30b21_85e7ef59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2021-09-10T20:12:17Z",
+      "side": 1,
+      "message": "Since it\u0027s unlikely that anyone would use anything but the build produced symbol zip file.",
+      "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3decd31f_317a135b",
