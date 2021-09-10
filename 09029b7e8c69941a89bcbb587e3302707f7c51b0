@@ -46,6 +46,30 @@
       },
       "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea4efb61_ab732181",
+        "filename": "scripts/stack",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2021-09-10T19:22:33Z",
+      "side": 1,
+      "message": "Yeah, the mainline modules zip file is the same. If \"out\" is really $OUT_DIR, we very rarely change that on the build servers, but it\u0027s possible that a user-generated file would be different.\n\nIt probably shouldn\u0027t be like that, but it didn\u0027t seem worth tracking down all the places that made these assumptions.",
+      "parentUuid": "e9143c2c_2c9f19df",
+      "range": {
+        "startLine": 52,
+        "startChar": 39,
+        "endLine": 52,
+        "endChar": 68
+      },
+      "revId": "09029b7e8c69941a89bcbb587e3302707f7c51b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
