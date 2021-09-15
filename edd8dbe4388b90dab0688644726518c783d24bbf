@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ff559f6_4afcf7f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1455782
+      },
+      "writtenOn": "2021-09-15T23:30:33Z",
+      "side": 1,
+      "message": "Adding Logan for review FYI as they\u0027re the latest author of this file.",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa4fd3c3_5faf40ca",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1455782
+      },
+      "writtenOn": "2021-09-15T23:30:33Z",
+      "side": 1,
+      "message": "Note: This is changing behavior, in case anyone is used to expecting the json output by default.\n\nThis is probably fine, considering the relatively narrow set of people using this script.",
+      "range": {
+        "startLine": 413,
+        "startChar": 0,
+        "endLine": 413,
+        "endChar": 20
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f347643a_08462eeb",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1455782
+      },
+      "writtenOn": "2021-09-15T23:30:33Z",
+      "side": 1,
+      "message": "meganit: extra space",
+      "range": {
+        "startLine": 418,
+        "startChar": 18,
+        "endLine": 418,
+        "endChar": 19
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
