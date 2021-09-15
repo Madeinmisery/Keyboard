@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a6ff32a_20da8868",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "limits",
+      "range": {
+        "startLine": 15,
+        "startChar": 29,
+        "endLine": 15,
+        "endChar": 34
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "6ff559f6_4afcf7f2",
@@ -14,6 +37,190 @@
       "writtenOn": "2021-09-15T23:30:33Z",
       "side": 1,
       "message": "Adding Logan for review FYI as they\u0027re the latest author of this file.",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "452eb08e_f4554f05",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Please use 4-space indent and 80-column line wrap (match the rest of the code).",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 2
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca713843_0dd3a643",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Add spaces between +",
+      "range": {
+        "startLine": 195,
+        "startChar": 74,
+        "endLine": 195,
+        "endChar": 75
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b498a339_3d8f5b2f",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Choose a better name that doesn\u0027t start with underscore (_).\n\nFor example, changes_chunk",
+      "range": {
+        "startLine": 195,
+        "startChar": 4,
+        "endLine": 195,
+        "endChar": 12
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed84eb9c_90abac57",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Choose a better name that doesn\u0027t start with underscore (_).",
+      "range": {
+        "startLine": 197,
+        "startChar": 4,
+        "endLine": 197,
+        "endChar": 10
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4249102_8c2b9bbb",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Is this correct?  Do you mean _changes[-1]?\n\nFor example, if len(changes) \u003d 8, len(_changes) \u003d 4, changes[_count-1] is not in _changes.",
+      "range": {
+        "startLine": 200,
+        "startChar": 13,
+        "endLine": 200,
+        "endChar": 30
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e7822f3_da443b10",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "`more` is not used.  It seems that this can be simplified as:\n\n    if \u0027_more_changes\u0027 not in _changes[-1]:\n        break",
+      "range": {
+        "startLine": 202,
+        "startChar": 0,
+        "endLine": 203,
+        "endChar": 13
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e34e4b58_fc9ff282",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Move this part to Line 198 and break early (and write the condition in Pythonic syntax):\n\n    if not _count:\n        break",
+      "range": {
+        "startLine": 204,
+        "startChar": 0,
+        "endLine": 205,
+        "endChar": 11
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9ef03b6_56f03036",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Instead of calling this as `--verbose`, I prefer introducing a `--format` option with \"json\" or \"oneline\" options.",
+      "range": {
+        "startLine": 387,
+        "startChar": 0,
+        "endLine": 390,
+        "endChar": 0
+      },
       "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -60,6 +267,57 @@
         "endLine": 418,
         "endChar": 19
       },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fbd6cf7_e21888c0",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "This should be moved to Line 414.",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4badf0c9_9933bdb5",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Update this line as well",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74c9e481_54a6c1e6",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-15T23:52:35Z",
+      "side": 1,
+      "message": "Please wrap at 80-column",
       "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
