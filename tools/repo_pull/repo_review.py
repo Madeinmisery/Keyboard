@@ -95,7 +95,8 @@ def _parse_args():
                         help='Gerrit cookie file')
     parser.add_argument('--limits', default=1000,
                         help='Max number of change lists')
-
+    parser.add_argument('--start',default=0,
+                        help='Skip first N changes in query')
     parser.add_argument('-l', '--label', nargs=2, action='append',
                         help='Labels to be added')
     parser.add_argument('-m', '--message', help='Review message')
@@ -219,7 +220,7 @@ def main():
 
     # Retrieve change lists
     change_lists = query_change_lists(
-        url_opener, args.gerrit, args.query, args.limits)
+        url_opener, args.gerrit, args.query, int(args.start), int(args.limits))
     if not change_lists:
         print('error: No matching change lists.', file=sys.stderr)
         sys.exit(1)

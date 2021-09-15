@@ -171,21 +171,40 @@ def _decode_xssi_json(data):
     return json.loads(data)
 
 
-def query_change_lists(url_opener, gerrit, query_string, limits):
-    """Query change lists."""
-    data = [
-        ('q', query_string),
-        ('o', 'CURRENT_REVISION'),
-        ('o', 'CURRENT_COMMIT'),
-        ('n', str(limits)),
-    ]
-    url = gerrit + '/a/changes/?' + urlencode(data)
+def _query_change_lists(url_opener, gerrit, query_string, start, count):
+  """Query change lists for (count) number of changes skipping the first (start) changes."""
+  data = [
+      ('q', query_string),
+      ('o', 'CURRENT_REVISION'),
+      ('o', 'CURRENT_COMMIT'),
+      ('start', str(start)),
+      ('n', str(count)),
+  ]
+  url = gerrit + '/a/changes/?' + urlencode(data)
 
-    response_file = url_opener.open(url)
-    try:
-        return _decode_xssi_json(response_file.read())
-    finally:
-        response_file.close()
+  response_file = url_opener.open(url)
+  try:
+    return _decode_xssi_json(response_file.read())
+  finally:
+    response_file.close()
+
+def query_change_lists(url_opener, gerrit, query_string, start, count):
+  """Query change lists for (count) number of changes skipping the first (start) changes, handle _more_changes from server."""
+  changes = []
+  while len(changes) < count:
+    _changes = _query_change_lists(url_opener, gerrit, query_string, start+len(changes),
+                                   count - len(changes))
+    _count = len(_changes)
+    if(_count):
+      changes += _changes
+      more = changes[_count-1]['_more_changes'] if '_more_changes' in  changes[_count-1] else False
+
+      if (more == False):
+        break
+    else:
+      break
+
+  return changes
 
 
 def _make_json_post_request(url_opener, url, data, method='POST'):
@@ -363,6 +382,11 @@ def _parse_args():
                         help='Gerrit cookie file')
     parser.add_argument('--limits', default=1000,
                         help='Max number of change lists')
+    parser.add_argument('--start', default=0,
+                        help='Skip first N changes in query')
+    parser.add_argument('--verbose', default=False,
+                        action='store_true',
+                        help='Show verbose data')
 
     return parser.parse_args()
 
@@ -383,10 +407,22 @@ def main():
     # Query change lists
     url_opener = create_url_opener_from_args(args)
     change_lists = query_change_lists(
-        url_opener, args.gerrit, args.query, args.limits)
+        url_opener, args.gerrit, args.query, int(args.start), int(args.limits))
 
     # Print the result
-    json.dump(change_lists, sys.stdout, indent=4, separators=(', ', ': '))
+    if args.verbose:
+        json.dump(change_lists, sys.stdout, indent=4, separators=(', ', ': '))
+    else:
+        txt = '{i:<8} {number:<16} {status:<20} {change_id:<60} {project:<120} {subject}'
+        for i, change in enumerate(change_lists):
+            print( txt.format(i=i,
+                              project=change['project'],
+                              change_id=change['change_id'],
+                              status=change['status'],
+                              number=change['_number'],
+                              subject=change['subject']
+                              ))
+
     print()  # Print the end-of-line
 
 if __name__ == '__main__':
