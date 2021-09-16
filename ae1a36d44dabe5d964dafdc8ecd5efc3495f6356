@@ -16,6 +16,24 @@
       "message": "add test case for repo_pull, repo_patch, repo_review",
       "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76cb4fec_7ce26450",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T16:19:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f8d0357b_78503a3d",
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "restore newline",
       "revId": "d29c0d62e3acf8e9c7c390ce494837d4a7a43dc9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43e47277_8b0ef112",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T16:19:09Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "bbfc79a9_49c59064",
+      "revId": "d29c0d62e3acf8e9c7c390ce494837d4a7a43dc9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
