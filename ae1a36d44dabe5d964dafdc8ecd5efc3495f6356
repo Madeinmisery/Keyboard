@@ -34,6 +34,420 @@
       "parentUuid": "f8d0357b_78503a3d",
       "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c19a8d71_612ed97a",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Reword as:\n\n```\n    \"\"\"Query change lists with one REST request.\n\n    This function queries change lists with a query string.\n\n    This function only makes one REST request. The Gerrit server may return\n    less change lists than requested. To obtain the all matching change lists,\n    the caller should call this function multiple times with different `start`\n    value.\n\n    Args:\n        url_opener: URL opener to make the request.\n        gerrit: URL to the Gerrit server.\n        query_string: Query string for searching change lists.\n        start: Number of change lists to be skipped from the beginning.\n        count: Number of requested change lists.\n\n    Returns:\n        A list of change lists returned by the Gerrit server. \n    \"\"\"\n```",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 176,
+        "endChar": 26
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de616ff6_479a740f",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Reword as:\n\n```\n    \"\"\"Query change lists.\n\n    This function queries change lists with a query string. It may make\n    multiple REST requests if the Gerrit server indicates that there are\n    more change lists to be returned.\n\n    Args:\n        url_opener: URL opener to make the request.\n        gerrit: URL to the Gerrit server.\n        query_string: Query string for searching change lists.\n        start: Number of change lists to be skipped from the beginning.\n        count: Number of requested change lists.\n\n    Returns:\n        A list of change lists returned by the Gerrit server.\n    \"\"\"\n```",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 60
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c4e8aca_06effefe",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Simplify as:\n\n    chunk\n    \nAn empty list is a falsy value in Python.",
+      "range": {
+        "startLine": 199,
+        "startChar": 15,
+        "endLine": 199,
+        "endChar": 25
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94507aaa_de926e40",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Replace with comments:\n\n        # The Gerrit server may return less CLs than the requested `count`. If\n        # there are more CLs to be returned, a \u0027_more_changes\u0027 field will be\n        # set in the last entry. If \u0027_more_changes\u0027 is not set, it\u0027s the end\n        # of the matching CLs.",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 38
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f174bfa_0441d46b",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 384,
+        "startChar": 48,
+        "endLine": 384,
+        "endChar": 49
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e8f0663_67d09ff3",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 386,
+        "startChar": 44,
+        "endLine": 386,
+        "endChar": 45
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9244ce74_9cf3131c",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 43,
+        "startChar": 48,
+        "endLine": 43,
+        "endChar": 49
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bf74db9_5e807dd6",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 45,
+        "startChar": 43,
+        "endLine": 45,
+        "endChar": 44
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e018affb_d72e59f2",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.limits",
+      "range": {
+        "startLine": 68,
+        "startChar": 62,
+        "endLine": 68,
+        "endChar": 78
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45665d63_9be15fbb",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.start",
+      "range": {
+        "startLine": 68,
+        "startChar": 45,
+        "endLine": 68,
+        "endChar": 60
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0a7ef00_9b18f7b3",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 377,
+        "startChar": 48,
+        "endLine": 377,
+        "endChar": 49
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fae0c1b_c42df7ab",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 379,
+        "startChar": 43,
+        "endLine": 379,
+        "endChar": 44
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "816174a8_ae1dafa7",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.limits",
+      "range": {
+        "startLine": 405,
+        "startChar": 47,
+        "endLine": 405,
+        "endChar": 63
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03454764_1072751b",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.start",
+      "range": {
+        "startLine": 405,
+        "startChar": 30,
+        "endLine": 405,
+        "endChar": 45
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e5dc9a9_b51efeeb",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 96,
+        "startChar": 48,
+        "endLine": 96,
+        "endChar": 49
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7908d80d_978555a9",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "Add type\u003dint,",
+      "range": {
+        "startLine": 98,
+        "startChar": 43,
+        "endLine": 98,
+        "endChar": 44
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cba6fd9_16e670f4",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.start",
+      "range": {
+        "startLine": 223,
+        "startChar": 45,
+        "endLine": 223,
+        "endChar": 60
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6455508_9e4049df",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "args.limits",
+      "range": {
+        "startLine": 223,
+        "startChar": 62,
+        "endLine": 223,
+        "endChar": 78
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

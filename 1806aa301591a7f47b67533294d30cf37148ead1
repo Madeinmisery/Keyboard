@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "768845b0_c40c660d",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "80-column:\n\n        format_str \u003d \u0027{i:\u003c8} {number:\u003c16} {status:\u003c20} {change_id:\u003c60} \u0027 \\\n                     \u0027{project:\u003c120} {subject}\u0027",
+      "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90556e34_3d925c78",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T16:47:28Z",
+      "side": 1,
+      "message": "format_str",
+      "range": {
+        "startLine": 420,
+        "startChar": 18,
+        "endLine": 420,
+        "endChar": 21
+      },
+      "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
