@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eac6bdeb_25dcde0b",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T22:57:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "768845b0_c40c660d",
+      "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "90556e34_3d925c78",
@@ -31,6 +49,30 @@
       "writtenOn": "2021-09-16T16:47:28Z",
       "side": 1,
       "message": "format_str",
+      "range": {
+        "startLine": 420,
+        "startChar": 18,
+        "endLine": 420,
+        "endChar": 21
+      },
+      "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97b7c7de_9c751831",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T22:57:07Z",
+      "side": 1,
+      "message": "Don\u0027t think that would add any more context",
+      "parentUuid": "90556e34_3d925c78",
       "range": {
         "startLine": 420,
         "startChar": 18,
