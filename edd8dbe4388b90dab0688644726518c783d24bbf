@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "c97abb02_6d43f461",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a6ff32a_20da8868",
+      "range": {
+        "startLine": 15,
+        "startChar": 29,
+        "endLine": 15,
+        "endChar": 34
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "6ff559f6_4afcf7f2",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
@@ -54,6 +78,30 @@
       "writtenOn": "2021-09-15T23:52:35Z",
       "side": 1,
       "message": "Please use 4-space indent and 80-column line wrap (match the rest of the code).",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 2
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9c7d29a_94b846cc",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "452eb08e_f4554f05",
       "range": {
         "startLine": 175,
         "startChar": 0,
@@ -110,6 +158,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "efb9e2e0_a16a2471",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca713843_0dd3a643",
+      "range": {
+        "startLine": 195,
+        "startChar": 74,
+        "endLine": 195,
+        "endChar": 75
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84843e82_c5ca9b19",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b498a339_3d8f5b2f",
+      "range": {
+        "startLine": 195,
+        "startChar": 4,
+        "endLine": 195,
+        "endChar": 12
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed84eb9c_90abac57",
@@ -123,6 +219,30 @@
       "writtenOn": "2021-09-15T23:52:35Z",
       "side": 1,
       "message": "Choose a better name that doesn\u0027t start with underscore (_).",
+      "range": {
+        "startLine": 197,
+        "startChar": 4,
+        "endLine": 197,
+        "endChar": 10
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75b5dbd9_6a62a0b4",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed84eb9c_90abac57",
       "range": {
         "startLine": 197,
         "startChar": 4,
@@ -156,6 +276,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b7fb096_872ef639",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Good catch this should have been _changes[..].\nReworked based on other comments, thanks!",
+      "parentUuid": "c4249102_8c2b9bbb",
+      "range": {
+        "startLine": 200,
+        "startChar": 13,
+        "endLine": 200,
+        "endChar": 30
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e7822f3_da443b10",
@@ -169,6 +313,30 @@
       "writtenOn": "2021-09-15T23:52:35Z",
       "side": 1,
       "message": "`more` is not used.  It seems that this can be simplified as:\n\n    if \u0027_more_changes\u0027 not in _changes[-1]:\n        break",
+      "range": {
+        "startLine": 202,
+        "startChar": 0,
+        "endLine": 203,
+        "endChar": 13
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97feae81_a83731b2",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e7822f3_da443b10",
       "range": {
         "startLine": 202,
         "startChar": 0,
@@ -202,6 +370,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "085ad792_4c450ca5",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e34e4b58_fc9ff282",
+      "range": {
+        "startLine": 204,
+        "startChar": 0,
+        "endLine": 205,
+        "endChar": 11
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9ef03b6_56f03036",
@@ -215,6 +407,30 @@
       "writtenOn": "2021-09-15T23:52:35Z",
       "side": 1,
       "message": "Instead of calling this as `--verbose`, I prefer introducing a `--format` option with \"json\" or \"oneline\" options.",
+      "range": {
+        "startLine": 387,
+        "startChar": 0,
+        "endLine": 390,
+        "endChar": 0
+      },
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bbed478_f481f865",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9ef03b6_56f03036",
       "range": {
         "startLine": 387,
         "startChar": 0,
@@ -288,6 +504,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f642d128_a4b78d8b",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3fbd6cf7_e21888c0",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4badf0c9_9933bdb5",
@@ -305,6 +539,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7dcaa0a4_ab205e9e",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4badf0c9_9933bdb5",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74c9e481_54a6c1e6",
@@ -318,6 +570,24 @@
       "writtenOn": "2021-09-15T23:52:35Z",
       "side": 1,
       "message": "Please wrap at 80-column",
+      "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b9d4d4a_1b0fa5aa",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-16T02:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74c9e481_54a6c1e6",
       "revId": "edd8dbe4388b90dab0688644726518c783d24bbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
