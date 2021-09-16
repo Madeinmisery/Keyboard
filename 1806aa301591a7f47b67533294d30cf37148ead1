@@ -81,6 +81,30 @@
       },
       "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47f00757_596313ff",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "I don\u0027t like the variable name `txt` because it is to generic.  I prefer more specific names like `format_str` or `template` that explicitly describes the purpose of the variable.\n\nOr, alternatively, how about simply use the literal here?",
+      "parentUuid": "97b7c7de_9c751831",
+      "range": {
+        "startLine": 420,
+        "startChar": 18,
+        "endLine": 420,
+        "endChar": 21
+      },
+      "revId": "1806aa301591a7f47b67533294d30cf37148ead1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

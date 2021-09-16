@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4514c6c8_ff56f8e3",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "Use the ordinary Python comment syntax.  We don\u0027t use docstring for this purpose.",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 12
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b1413ba_e3f2a077",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "Reword as (fix typo s/attirbute/attribute/ and rewrite last sentence):\n\n```\n        # The last change object contains a `_more_changes` attribute if the\n        # number of changes exceeds the query parameter or the internal server\n        # limit. Stop iteration if `_more_changes` attribute doesn\u0027t exist.\n```",
+      "range": {
+        "startLine": 204,
+        "startChar": 13,
+        "endLine": 207,
+        "endChar": 42
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d415bd4_81f5b664",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "This is different from what I suggested earlier.  For example:\n\n```\n    a \u003d \u0027xyz\\\n        abc\u0027\n```\n\nYou will get:\n\n```\na \u003d\u003d \u0027xyz        abc\u0027\n```\n\nOn the contrary:\n\n```\n    a \u003d \u0027xyz\u0027 \\\n        \u0027abc\u0027\n```\n\nYou will get\n\n```\na \u003d\u003d \u0027xyzabc\u0027\n```",
+      "range": {
+        "startLine": 421,
+        "startChar": 63,
+        "endLine": 421,
+        "endChar": 65
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0438a7bb_9e070076",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "Add a space between , and d",
+      "range": {
+        "startLine": 45,
+        "startChar": 33,
+        "endLine": 45,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb5414bd_b240a3a5",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "Add a space between , and d",
+      "range": {
+        "startLine": 379,
+        "startChar": 33,
+        "endLine": 379,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb598d94_5b39ab6b",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-16T23:24:41Z",
+      "side": 1,
+      "message": "Add a space between , and d",
+      "range": {
+        "startLine": 98,
+        "startChar": 33,
+        "endLine": 98,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
