@@ -24,6 +24,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9544cf8e_8f61c842",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4514c6c8_ff56f8e3",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 12
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20101174_521ab5af",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4514c6c8_ff56f8e3",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 12
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b1413ba_e3f2a077",
@@ -37,6 +85,54 @@
       "writtenOn": "2021-09-16T23:24:41Z",
       "side": 1,
       "message": "Reword as (fix typo s/attirbute/attribute/ and rewrite last sentence):\n\n```\n        # The last change object contains a `_more_changes` attribute if the\n        # number of changes exceeds the query parameter or the internal server\n        # limit. Stop iteration if `_more_changes` attribute doesn\u0027t exist.\n```",
+      "range": {
+        "startLine": 204,
+        "startChar": 13,
+        "endLine": 207,
+        "endChar": 42
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12543482_17171a1f",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b1413ba_e3f2a077",
+      "range": {
+        "startLine": 204,
+        "startChar": 13,
+        "endLine": 207,
+        "endChar": 42
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e32ffb9_c8f26d14",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b1413ba_e3f2a077",
       "range": {
         "startLine": 204,
         "startChar": 13,
@@ -70,6 +166,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "352f4100_1dc67e44",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d415bd4_81f5b664",
+      "range": {
+        "startLine": 421,
+        "startChar": 63,
+        "endLine": 421,
+        "endChar": 65
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a91c5ae_1ec7f1f4",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d415bd4_81f5b664",
+      "range": {
+        "startLine": 421,
+        "startChar": 63,
+        "endLine": 421,
+        "endChar": 65
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0438a7bb_9e070076",
@@ -83,6 +227,30 @@
       "writtenOn": "2021-09-16T23:24:41Z",
       "side": 1,
       "message": "Add a space between , and d",
+      "range": {
+        "startLine": 45,
+        "startChar": 33,
+        "endLine": 45,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "919e5043_f0611109",
+        "filename": "tools/repo_pull/repo_patch.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0438a7bb_9e070076",
       "range": {
         "startLine": 45,
         "startChar": 33,
@@ -116,6 +284,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "11739a6b_d244ab91",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb5414bd_b240a3a5",
+      "range": {
+        "startLine": 379,
+        "startChar": 33,
+        "endLine": 379,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb598d94_5b39ab6b",
@@ -129,6 +321,30 @@
       "writtenOn": "2021-09-16T23:24:41Z",
       "side": 1,
       "message": "Add a space between , and d",
+      "range": {
+        "startLine": 98,
+        "startChar": 33,
+        "endLine": 98,
+        "endChar": 35
+      },
+      "revId": "c1f574ff7ceb5dd41624446f52a239dd1236882d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ca5499e_7ef545db",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T00:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb598d94_5b39ab6b",
       "range": {
         "startLine": 98,
         "startChar": 33,
