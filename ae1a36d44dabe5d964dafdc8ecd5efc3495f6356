@@ -59,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c2a201a_7b439d9f",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T15:33:52Z",
+      "side": 1,
+      "message": "Added more description to comments",
+      "parentUuid": "c19a8d71_612ed97a",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 176,
+        "endChar": 26
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "de616ff6_479a740f",
@@ -72,6 +96,30 @@
       "writtenOn": "2021-09-16T16:47:28Z",
       "side": 1,
       "message": "Reword as:\n\n```\n    \"\"\"Query change lists.\n\n    This function queries change lists with a query string. It may make\n    multiple REST requests if the Gerrit server indicates that there are\n    more change lists to be returned.\n\n    Args:\n        url_opener: URL opener to make the request.\n        gerrit: URL to the Gerrit server.\n        query_string: Query string for searching change lists.\n        start: Number of change lists to be skipped from the beginning.\n        count: Number of requested change lists.\n\n    Returns:\n        A list of change lists returned by the Gerrit server.\n    \"\"\"\n```",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 60
+      },
+      "revId": "ae1a36d44dabe5d964dafdc8ecd5efc3495f6356",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7389e3e7_bae2fc9a",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-17T15:33:52Z",
+      "side": 1,
+      "message": "Added more description to comments",
+      "parentUuid": "de616ff6_479a740f",
       "range": {
         "startLine": 193,
         "startChar": 0,
