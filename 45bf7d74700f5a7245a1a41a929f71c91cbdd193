@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b89ea56e_88d006f2",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Move to the end of previous line to fully utilize 80-column.",
+      "range": {
+        "startLine": 236,
+        "startChar": 9,
+        "endLine": 236,
+        "endChar": 13
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d59f74c_ebf9a304",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Move to the end of previous line to fully utilize 80-column.",
+      "range": {
+        "startLine": 237,
+        "startChar": 9,
+        "endLine": 237,
+        "endChar": 25
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bef538ef_1ed92da3",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Remove one space character.",
+      "range": {
+        "startLine": 237,
+        "startChar": 32,
+        "endLine": 237,
+        "endChar": 33
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30313b7a_84ae5836",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Move to the end of previous line to fully utilize 80-column.",
+      "range": {
+        "startLine": 238,
+        "startChar": 9,
+        "endLine": 238,
+        "endChar": 34
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2094ea7_5ec17207",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 238,
+        "startChar": 0,
+        "endLine": 238,
+        "endChar": 9
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79d36262_6b86845d",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 454,
+        "startChar": 18,
+        "endLine": 454,
+        "endChar": 19
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2374b42_49e688c7",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 455,
+        "startChar": 18,
+        "endLine": 455,
+        "endChar": 19
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebfc4c10_828eb8d7",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 461,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-17T15:43:11Z",
+      "side": 1,
+      "message": "Move to the end of the previous line",
+      "range": {
+        "startLine": 461,
+        "startChar": 37,
+        "endLine": 461,
+        "endChar": 39
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
