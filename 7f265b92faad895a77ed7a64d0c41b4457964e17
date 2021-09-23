@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e4dd5d6_faf1307b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2021-09-23T19:47:29Z",
+      "side": 1,
+      "message": "Hi Daniel,\n\nMay you please take a look?  I cannot CR+2 because I have left the Android team for a while.",
+      "revId": "7f265b92faad895a77ed7a64d0c41b4457964e17",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
