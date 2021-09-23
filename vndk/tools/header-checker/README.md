@@ -109,5 +109,4 @@ $ python3 create_reference_dumps.py -l libfoo --llndk
 This will create reference dumps for `libfoo`, assuming `libfoo` is an LLNDK
 library.
 
-
 For more command line options, run `utils/create_reference_dumps.py --help`.
