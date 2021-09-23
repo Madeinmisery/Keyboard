@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db0eb69a_b4d37003",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b89ea56e_88d006f2",
+      "range": {
+        "startLine": 236,
+        "startChar": 9,
+        "endLine": 236,
+        "endChar": 13
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2d59f74c_ebf9a304",
@@ -82,6 +106,54 @@
         "startChar": 32,
         "endLine": 237,
         "endChar": 33
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c06c18fb_a46f209a",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bef538ef_1ed92da3",
+      "range": {
+        "startLine": 237,
+        "startChar": 32,
+        "endLine": 237,
+        "endChar": 33
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d8fe2e6_18e837fc",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d59f74c_ebf9a304",
+      "range": {
+        "startLine": 237,
+        "startChar": 9,
+        "endLine": 237,
+        "endChar": 25
       },
       "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
@@ -133,6 +205,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28edad7e_4ac432dd",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30313b7a_84ae5836",
+      "range": {
+        "startLine": 238,
+        "startChar": 9,
+        "endLine": 238,
+        "endChar": 34
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4189b71d_6e6b7a35",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2094ea7_5ec17207",
+      "range": {
+        "startLine": 238,
+        "startChar": 0,
+        "endLine": 238,
+        "endChar": 9
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "79d36262_6b86845d",
@@ -146,6 +266,30 @@
       "writtenOn": "2021-09-17T15:43:11Z",
       "side": 1,
       "message": "Remove",
+      "range": {
+        "startLine": 454,
+        "startChar": 18,
+        "endLine": 454,
+        "endChar": 19
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba2a256d_3833bc07",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "79d36262_6b86845d",
       "range": {
         "startLine": 454,
         "startChar": 18,
@@ -179,6 +323,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e4c6efb_6f79751d",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2374b42_49e688c7",
+      "range": {
+        "startLine": 455,
+        "startChar": 18,
+        "endLine": 455,
+        "endChar": 19
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebfc4c10_828eb8d7",
@@ -192,6 +360,30 @@
       "writtenOn": "2021-09-17T15:43:11Z",
       "side": 1,
       "message": "Move to the end of the previous line",
+      "range": {
+        "startLine": 461,
+        "startChar": 37,
+        "endLine": 461,
+        "endChar": 39
+      },
+      "revId": "45bf7d74700f5a7245a1a41a929f71c91cbdd193",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06bb450f_cea11eb2",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 461,
+      "author": {
+        "id": 1830881
+      },
+      "writtenOn": "2021-09-23T19:28:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebfc4c10_828eb8d7",
       "range": {
         "startLine": 461,
         "startChar": 37,
