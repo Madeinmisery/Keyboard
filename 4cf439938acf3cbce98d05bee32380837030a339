@@ -16,6 +16,24 @@
       "message": "https://doc.rust-lang.org/cargo/reference/resolver.html#version-metadata\n\nAccept *anything* after the +, not just another 3-dotted version, but good catch.",
       "revId": "4cf439938acf3cbce98d05bee32380837030a339",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c598bac_b3fe7f45",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-10-01T22:20:37Z",
+      "side": 1,
+      "message": "Thanks!",
+      "parentUuid": "c24b0ed4_9aaa3f8c",
+      "revId": "4cf439938acf3cbce98d05bee32380837030a339",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
