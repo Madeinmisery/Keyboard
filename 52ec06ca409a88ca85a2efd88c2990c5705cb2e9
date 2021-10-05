@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9189d700_000bb374",
+        "filename": "build/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-10-05T17:51:14Z",
+      "side": 1,
+      "message": "If there aren\u0027t too many files in the list you could put the list in a bash variable and then use $$(dirname $$(dirname )) on the first element.  It may also make more sense in frameworks/rs/Android.bp",
+      "range": {
+        "startLine": 120,
+        "startChar": 60,
+        "endLine": 120,
+        "endChar": 84
+      },
+      "revId": "52ec06ca409a88ca85a2efd88c2990c5705cb2e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31b922d1_4ee75efe",
+        "filename": "build/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2021-10-05T17:51:14Z",
+      "side": 1,
+      "message": "java_device_for_host?",
+      "revId": "52ec06ca409a88ca85a2efd88c2990c5705cb2e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
