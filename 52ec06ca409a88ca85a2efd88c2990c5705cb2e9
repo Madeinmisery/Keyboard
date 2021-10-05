@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b71e12f_f150ba08",
+        "filename": "build/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2021-10-05T22:36:43Z",
+      "side": 1,
+      "message": "Yeah, I went back and forth on where to put this, and ended up putting the simple rewrite using an existing filegroup here, as the unique part of this is putting it in the directory the sdk-repo wants it in.\n\nI wonder if it would make sense to add a `$(dir \u003cinput\u003e)` function to the genrule, since then it could use the information from `filegroup`\u0027s `path` property. But probably not for a small number of users, especially with Bazel.\n\nI\u0027ve fixed this in place for now, though with awk instead of bash arrays (since we still support multiple versions of bash, and it\u0027s not the simplest feature to use in the first place)",
+      "parentUuid": "9189d700_000bb374",
+      "range": {
+        "startLine": 120,
+        "startChar": 60,
+        "endLine": 120,
+        "endChar": 84
+      },
+      "revId": "52ec06ca409a88ca85a2efd88c2990c5705cb2e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31b922d1_4ee75efe",
@@ -37,6 +61,24 @@
       "writtenOn": "2021-10-05T17:51:14Z",
       "side": 1,
       "message": "java_device_for_host?",
+      "revId": "52ec06ca409a88ca85a2efd88c2990c5705cb2e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a260f461_8020d8d2",
+        "filename": "build/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2021-10-05T22:36:43Z",
+      "side": 1,
+      "message": "Ah, the right way to do this 🙂 FWIW, I copied this idea from frameworks/layoutlib, which is allowlisted for java_device_for_host too.\n\nIt looks like java_device_for_host is not a source file provider, nor a module that installs files, so it\u0027s not a direct drop-in, and I need to wrap it in another installable java_library_host.\n\nDone.",
+      "parentUuid": "31b922d1_4ee75efe",
       "revId": "52ec06ca409a88ca85a2efd88c2990c5705cb2e9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
