@@ -1,0 +1,39 @@
+package {
+    default_applicable_licenses:   ["development_app_development_license"],
+}
+
+license {
+    name: "development_app_development_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+android_app {
+    name: "Development",
+
+    libs: [
+        "android.test.runner.stubs",
+        "org.apache.http.legacy",
+        "telephony-common",
+    ],
+
+    uses_libs: [
+        "android.test.runner",
+    ],
+    optional_uses_libs: [
+        "org.apache.http.legacy",
+    ],
+
+    srcs: [
+        "**/*.java",
+        "src/com/android/development/IRemoteService.aidl",
+    ],
+
+    platform_apis: true,
+    certificate: "platform",
+}
