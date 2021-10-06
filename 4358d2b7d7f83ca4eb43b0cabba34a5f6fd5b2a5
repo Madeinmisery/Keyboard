@@ -16,6 +16,24 @@
       "message": "I think you may need to add these lines on the top of this file:\n#\n# Copyright (C) 2021 The Android Open Source Project\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#      http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#",
       "revId": "4358d2b7d7f83ca4eb43b0cabba34a5f6fd5b2a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "091db17e_9735c68d",
+        "filename": "apps/Development/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2021-10-06T13:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b730976c_c3d76219",
+      "revId": "4358d2b7d7f83ca4eb43b0cabba34a5f6fd5b2a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
