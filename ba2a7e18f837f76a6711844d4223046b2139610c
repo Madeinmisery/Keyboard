@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61db3322_ceb5e97a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393190
+      },
+      "writtenOn": "2021-10-15T16:04:59Z",
+      "side": 1,
+      "message": "Open Source Liscensing",
+      "revId": "ba2a7e18f837f76a6711844d4223046b2139610c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
