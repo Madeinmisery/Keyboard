@@ -56,6 +56,24 @@
       },
       "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0faaaf87_f4d8f15c",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1373,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2021-10-15T20:26:17Z",
+      "side": 1,
+      "message": "Our test runners use --list, though, so if it\u0027s not supported something weird will likely happen with atest/TH/whatever.  Do we know if this is the case anywhere?",
+      "parentUuid": "2d7a1eff_18af3b77",
+      "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
