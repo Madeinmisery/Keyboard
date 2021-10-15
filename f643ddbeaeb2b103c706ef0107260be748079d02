@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb38f057_b38947ec",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1341,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2021-10-15T20:23:37Z",
+      "side": 1,
+      "message": "In general you should prefer to use the stdout+stderr parameter of Popen rather than setting shell\u003dtrue or using system and using bash features, but the script did it before you touched it too.",
+      "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d7a1eff_18af3b77",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1373,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2021-10-15T20:23:37Z",
+      "side": 1,
+      "message": "The integration tests may choose not to use the default test harness. If they do so, they won\u0027t generate useful output on --list. Your parsing code seems to be robust against this, but I think we\u0027ll spit out an error? It looks like you don\u0027t error out on it, just print a message, so this should work fine, but might look a little funny for those packages.",
+      "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63daaca7_28ed8f94",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1373,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2021-10-15T20:23:37Z",
+      "side": 1,
+      "message": "I think you need to put the features in here too, otherwise you might run the tests without features that make them nonempty.",
+      "range": {
+        "startLine": 1373,
+        "startChar": 29,
+        "endLine": 1373,
+        "endChar": 30
+      },
+      "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
