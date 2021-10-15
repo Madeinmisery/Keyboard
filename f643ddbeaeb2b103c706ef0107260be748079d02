@@ -74,6 +74,24 @@
       "parentUuid": "2d7a1eff_18af3b77",
       "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b95e06e_1eabd4a7",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1373,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2021-10-15T20:34:48Z",
+      "side": 1,
+      "message": "That\u0027s true, we don\u0027t support it elsewhere, so I guess we don\u0027t need to support it here. We can add it later if we need it.",
+      "parentUuid": "0faaaf87_f4d8f15c",
+      "revId": "f643ddbeaeb2b103c706ef0107260be748079d02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
