@@ -110,8 +110,7 @@ ALL_SDK_FILES += $(full_target)
 $(call dist-for-goals,sdk win_sdk,$(full_target):data/api-versions.xml)
 
 # ======= Lint Annotations zip ===========
-full_target := $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGING/sdk-annotations.zip
-$(eval $(call copy-one-file,$(call intermediates-dir-for,ETC,sdk-annotations.zip)/sdk-annotations.zip,$(full_target)))
+full_target := $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGING/framework-doc-stubs_annotations.zip
 ALL_SDK_FILES += $(full_target)
 $(call dist-for-goals,sdk win_sdk,$(full_target):data/annotations.zip)
 
