@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0ac6cc6_d2f99926",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2021-10-18T17:20:45Z",
+      "side": 1,
+      "message": "Nice! This fixed aosp/1861194.",
+      "revId": "7cfc6fe5de180c7b4978f47e7e01e6f21945dbff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
