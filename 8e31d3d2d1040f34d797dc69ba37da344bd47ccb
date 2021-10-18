@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95bdfb03_fc4f31ea",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2021-10-18T23:14:15Z",
+      "side": 1,
+      "message": "Nit: Maybe just delete device_host? It was needed before so the tests would have distinct names, but if we\u0027re going to break name compatibility now, we might as well go all the way. It\u0027ll be annoying to remove it later if we decide we don\u0027t want it.",
+      "revId": "8e31d3d2d1040f34d797dc69ba37da344bd47ccb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
