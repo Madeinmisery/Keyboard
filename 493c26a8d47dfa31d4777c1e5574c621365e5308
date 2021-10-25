@@ -34,6 +34,24 @@
       "parentUuid": "5ab62ec9_1a5fb9da",
       "revId": "493c26a8d47dfa31d4777c1e5574c621365e5308",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc24da77_f7bc258d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-10-25T15:22:50Z",
+      "side": 1,
+      "message": "I\u0027m alright with leaving it as is -- if we notice this becomes a problem we can add the restriction.",
+      "parentUuid": "09830c4a_8394278f",
+      "revId": "493c26a8d47dfa31d4777c1e5574c621365e5308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
