@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ab62ec9_1a5fb9da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2021-10-25T15:16:27Z",
+      "side": 1,
+      "message": "Should we add some sanity checking here that prevents filenames that aren\u0027t prefixed with cargo2android? Or would that be too restrictive",
+      "revId": "493c26a8d47dfa31d4777c1e5574c621365e5308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
