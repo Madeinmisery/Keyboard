@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcf88d5e_4fb0002a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2021-10-28T21:36:25Z",
+      "side": 1,
+      "message": "If you have to do file manipulation, it\u0027s probably not worth a lot of effort. We could probably create a fake file system, but since we haven\u0027t for any of the other code here, then I don\u0027t think it\u0027s really worth the effort.\n\nThe problem is that when this script goes wrong, we don\u0027t necessarily hear about it for a long time. At some point, we really should add better testing for this script.\n\nSo I\u0027d leave this be for now unless there is something easy you can add to the current unit tests.",
+      "parentUuid": "0911c39d_7c2cbafd",
+      "revId": "c062be890a4bfbad029fbb775fb0f78815911f27",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b7da3c8a_0b8d2c50",
@@ -73,6 +91,30 @@
       "side": 1,
       "message": "Note the \"+ lib\".\nThe intent is to do the brute-force search only if the lib does not exist.\nShould I just remove the condition and always do the build_id search regardless?\n\nLikewise, if the file does exist it will use it... even if the build id does not match.\n\nThe intent was to be conservative to start with, but I would consider just failing in that case...",
       "parentUuid": "b7da3c8a_0b8d2c50",
+      "range": {
+        "startLine": 486,
+        "startChar": 23,
+        "endLine": 486,
+        "endChar": 29
+      },
+      "revId": "c062be890a4bfbad029fbb775fb0f78815911f27",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0466e50b_3ebed424",
+        "filename": "scripts/stack_core.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 486,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2021-10-28T21:36:25Z",
+      "side": 1,
+      "message": "I think it would be useful to check build id against lib even if it does exist. It might be nice to have the function check the lib file first, then go searching if you are worried about performance.\n\nIdeally, adding a warning message when a build id lib cannot be found, and then skipping the symbol lookup. But this code is kind of a mess, so maybe a warning is good enough.",
+      "parentUuid": "7a3aab78_7b957300",
       "range": {
         "startLine": 486,
         "startChar": 23,
