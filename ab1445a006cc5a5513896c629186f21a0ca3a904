@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5578143_5915d5cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-10-29T03:12:29Z",
+      "side": 1,
+      "message": "`OUTDIR\u003dout development/vndk/tools/header-checker/android/build-prebuilts.sh` in aosp-clang-tools is working.",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 91
+      },
+      "revId": "ab1445a006cc5a5513896c629186f21a0ca3a904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
