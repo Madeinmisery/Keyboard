@@ -484,6 +484,28 @@ def FormatSymbolWithOffset(symbol, offset):
     return symbol
   return "%s+%d" % (symbol, offset)
 
+def FormatSymbolWithoutParameters(symbol):
+  """Remove parameters from function.
+
+  Rather than trying to parse the demangled C++ signature,
+  it just removes matching top level parenthesis.
+  """
+  nested = []  # Keeps tract of current nesting level of parenthesis.
+  result = symbol.removesuffix(" const")
+  result = result.replace("operator<<", "operator\u00AB")  # Avoid unmatched '<'.
+  result = result.replace("operator>>", "operator\u00BB")  # Avoid unmatched '>'.
+  for i in reversed(range(len(result))):  # Backward to make cutting easier.
+    c = result[i]
+    if c == ')' or c == '>':
+      if len(nested) == 0:
+        end = i + 1  # Mark the end of top-level pair.
+      nested.append(c)
+    if c == '(' or c == '<':
+      if len(nested) == 0 or {')':'(', '>':'<'}[nested.pop()] != c:
+        return symbol  # Malformed: character does not match its pair.
+      if len(nested) == 0 and c == '(' and (end - i) > 2:
+        result = result[:i] + result[end:]  # Remove substring (i, end).
+  return result if len(nested) == 0 else symbol
 
 def GetAbiFromToolchain(toolchain_var, bits):
   toolchain = os.environ.get(toolchain_var)
@@ -747,6 +769,33 @@ class SetArchTests(unittest.TestCase):
     self.assertRaisesRegex(Exception,
                            "Could not determine arch from input, use --arch=XXX to specify it",
                            SetAbi, [])
+
+class FormatSymbolWithoutParametersTests(unittest.TestCase):
+  def test_c(self):
+    self.assertEqual(FormatSymbolWithoutParameters("foo"), "foo")
+    self.assertEqual(FormatSymbolWithoutParameters("foo+42"), "foo+42")
+
+  def test_simple(self):
+    self.assertEqual(FormatSymbolWithoutParameters("foo(int i)"), "foo")
+    self.assertEqual(FormatSymbolWithoutParameters("foo(int i)+42"), "foo+42")
+    self.assertEqual(FormatSymbolWithoutParameters("bar::foo(int i)+42"), "bar::foo+42")
+    self.assertEqual(FormatSymbolWithoutParameters("operator()"), "operator()")
+
+  def test_templates(self):
+    self.assertEqual(FormatSymbolWithoutParameters("bar::foo<T>(vector<T>& v)"), "bar::foo<T>")
+    self.assertEqual(FormatSymbolWithoutParameters("bar<T>::foo(vector<T>& v)"), "bar<T>::foo")
+    self.assertEqual(FormatSymbolWithoutParameters("bar::foo<T>(vector<T<U>>& v)"), "bar::foo<T>")
+    self.assertEqual(FormatSymbolWithoutParameters("bar::foo<(EnumType)0>(vector<(EnumType)0>& v)"),
+                                                   "bar::foo<(EnumType)0>")
+
+  def test_nested(self):
+    self.assertEqual(FormatSymbolWithoutParameters("foo(int i)::bar(int j)"), "foo::bar")
+
+  def test_unballanced(self):
+    self.assertEqual(FormatSymbolWithoutParameters("foo(bar(int i)"), "foo(bar(int i)")
+    self.assertEqual(FormatSymbolWithoutParameters("foo)bar(int i)"), "foo)bar(int i)")
+    self.assertEqual(FormatSymbolWithoutParameters("foo<bar(int i)"), "foo<bar(int i)")
+    self.assertEqual(FormatSymbolWithoutParameters("foo>bar(int i)"), "foo>bar(int i)")
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
