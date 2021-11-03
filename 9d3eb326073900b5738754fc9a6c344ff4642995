@@ -16,6 +16,23 @@
       "message": "RFC: Chris, what do you think?",
       "revId": "9d3eb326073900b5738754fc9a6c344ff4642995",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37e1a988_6e4e7bb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2021-11-03T20:50:47Z",
+      "side": 1,
+      "message": "I really like this, because I have never once looked at the parameters, and it clutters the output.\n\nInstead of an option to enable this, the default is no parameters, but an option like verbose or something that displays the parameters. That way if someone really does want to see them, they can.",
+      "revId": "9d3eb326073900b5738754fc9a6c344ff4642995",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
