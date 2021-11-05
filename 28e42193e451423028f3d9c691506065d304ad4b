@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c39d6573_8843da80",
+        "filename": "gki/script_test.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-05T09:14:22Z",
+      "side": 1,
+      "message": "Since the script does not delete files, this value should be true.",
+      "range": {
+        "startLine": 18,
+        "startChar": 38,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "28e42193e451423028f3d9c691506065d304ad4b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
