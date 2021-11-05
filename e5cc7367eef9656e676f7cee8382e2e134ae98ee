@@ -16,6 +16,24 @@
       "message": "I have a question. For the testing part, are you referring to an adb connection? ",
       "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd3257b5_883f8d7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-05T07:29:18Z",
+      "side": 1,
+      "message": "Yes, adb connection is needed for atest to work, locally or on ATP.",
+      "parentUuid": "828041d6_097e36a2",
+      "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
