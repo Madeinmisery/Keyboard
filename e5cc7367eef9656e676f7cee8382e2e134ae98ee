@@ -53,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaf34629_d5e62c3a",
+        "filename": "gki/run-script-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-05T08:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ccfef93_45244fc7",
+      "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8887a0f_a39de1eb",
@@ -76,6 +94,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3ddcf0b_d3c2fff9",
+        "filename": "gki/run-script-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-05T08:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8887a0f_a39de1eb",
+      "range": {
+        "startLine": 27,
+        "startChar": 3,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8e1d71f_93da07e0",
@@ -89,6 +131,30 @@
       "writtenOn": "2021-11-05T07:49:39Z",
       "side": 1,
       "message": "Replace with spaces.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 1
+      },
+      "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "181a6d3c_97636aee",
+        "filename": "gki/script_test.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-05T08:42:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8e1d71f_93da07e0",
       "range": {
         "startLine": 25,
         "startChar": 0,
