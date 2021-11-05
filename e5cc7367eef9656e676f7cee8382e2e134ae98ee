@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "828041d6_097e36a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-11-05T07:20:36Z",
+      "side": 1,
+      "message": "I have a question. For the testing part, are you referring to an adb connection? ",
+      "revId": "e5cc7367eef9656e676f7cee8382e2e134ae98ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
