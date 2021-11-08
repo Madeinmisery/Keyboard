@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a051eec4_d5741a4b",
+        "filename": "gki/run-script-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-08T04:19:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ca82c54_42fead2c",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "28e42193e451423028f3d9c691506065d304ad4b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c39d6573_8843da80",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-11-05T09:14:22Z",
       "side": 1,
       "message": "Since the script does not delete files, this value should be true.",
+      "range": {
+        "startLine": 18,
+        "startChar": 38,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "28e42193e451423028f3d9c691506065d304ad4b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89a1753c_b0bd03e6",
+        "filename": "gki/script_test.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-08T04:19:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c39d6573_8843da80",
       "range": {
         "startLine": 18,
         "startChar": 38,
