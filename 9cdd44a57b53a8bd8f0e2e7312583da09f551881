@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "701ad805_fd94890b",
+        "filename": "gsi/build_with_kernel/repack_kernels_common.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1128729
+      },
+      "writtenOn": "2021-11-08T03:43:07Z",
+      "side": 1,
+      "message": "`$OUT_DIR` may be defined by environment.\nPlease use `${OUT_DIR}` instead of `${WD}/out`.",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 32,
+        "endChar": 14
+      },
+      "revId": "9cdd44a57b53a8bd8f0e2e7312583da09f551881",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
