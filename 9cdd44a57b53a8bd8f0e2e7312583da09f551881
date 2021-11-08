@@ -22,6 +22,30 @@
       },
       "revId": "9cdd44a57b53a8bd8f0e2e7312583da09f551881",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b7a040d_8c272ffd",
+        "filename": "gsi/build_with_kernel/repack_kernels_common.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-11-08T04:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "701ad805_fd94890b",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 32,
+        "endChar": 14
+      },
+      "revId": "9cdd44a57b53a8bd8f0e2e7312583da09f551881",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
