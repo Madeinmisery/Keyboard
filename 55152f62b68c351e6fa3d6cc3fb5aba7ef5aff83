@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3da803d8_2fc45522",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-10T08:18:15Z",
+      "side": 1,
+      "message": "As discussed, let\u0027s try the build-time check or the lightweight zip first.",
+      "revId": "55152f62b68c351e6fa3d6cc3fb5aba7ef5aff83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
