@@ -22,6 +22,7 @@ sh_test {
     src: "run-script-test.sh",
     filename: "run-script-test.sh",
     test_config: "script_test.xml",
+    test_suites: ["device-tests"],
     data: [
         "kmi_abi_chk/prebuilts/kmi_sym-a12-5.4-7855344.ko",
         "kmi_abi_chk/prebuilts/kmi_sym-a12-5.10-7833008.ko",
