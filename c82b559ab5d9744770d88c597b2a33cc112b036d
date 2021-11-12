@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017198166",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1890319?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "cf826ffa_2659f262",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-12T08:50:59Z",
+      "side": 1,
+      "message": "Android.​mk files are being deprecated, please use blueprint files (go/soong) to define the modules",
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017198169",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1890319?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "321b87c5_23586e74",
+          "description": "Change to \"gki/kmi_abi_chk/kmi_static_chk.sh\"",
+          "replacements": [
+            {
+              "path": "gki/kmi_abi_chk/kmi_static_chk.sh",
+              "range": {
+                "startLine": 27,
+                "startChar": 50,
+                "endLine": 27,
+                "endChar": 56
+              },
+              "replacement": "against"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "adb1d860_56681563",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-12T08:50:59Z",
+      "side": 1,
+      "message": "Common typo found: \"aginst\" -- should it be \"against\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.",
+      "range": {
+        "startLine": 27,
+        "startChar": 50,
+        "endLine": 27,
+        "endChar": 56
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
