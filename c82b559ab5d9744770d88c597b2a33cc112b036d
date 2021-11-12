@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e8a0a44_40131b91",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-12T10:12:52Z",
+      "side": 1,
+      "message": "Maybe you can convert this to a bp file that contains a genrule executing the script, and a filegroup for PREV SYMVERS.",
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6da1c2fe_bd4cee83",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-12T10:12:52Z",
+      "side": 1,
+      "message": "Any lunch target can run this check.\nIs the limitation necessary?",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 27
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "069be696_c8baa520",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-12T10:12:52Z",
+      "side": 1,
+      "message": "$(wildcard ...)\nand let the chk rule depend on the found files.",
+      "range": {
+        "startLine": 27,
+        "startChar": 20,
+        "endLine": 27,
+        "endChar": 70
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2aeed88_3c8fa0c5",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-12T10:12:52Z",
+      "side": 1,
+      "message": "To avoid triggering the check unnecessarily, it should touch a timestamp or write a report file in the out directory.",
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85209185_cc2b8ff2",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-12T10:12:52Z",
+      "side": 1,
+      "message": "It\u0027s hard for the users to understand the second argument unless they read through the script. Could you have the script take more than one \u003cprevious_symbol_info\u003e, or have Android.mk call this script more than once?",
+      "range": {
+        "startLine": 32,
+        "startChar": 9,
+        "endLine": 32,
+        "endChar": 13
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
