@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43a30332_7211d7ab",
+        "filename": "gsi/build_with_kernel/repack_kernels_common.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1128729
+      },
+      "writtenOn": "2021-11-12T06:07:08Z",
+      "side": 1,
+      "message": "lz4 outputs a host binary. I guess we don\u0027t need to put these here.",
+      "range": {
+        "startLine": 39,
+        "startChar": 42,
+        "endLine": 39,
+        "endChar": 93
+      },
+      "revId": "c7839441b03082dab781fecc1269958a5e656a42",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
