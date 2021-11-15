@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f545697_e6052624",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "The directory name is here for some time, better not change it and introduce surprise. Also keep the file name for consistency here.",
+      "parentUuid": "f75ad45d_8bb7193e",
+      "range": {
+        "startLine": 19,
+        "startChar": 32,
+        "endLine": 19,
+        "endChar": 35
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8fd348ef_fd3c4b52",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-11-12T12:43:43Z",
       "side": 1,
       "message": "Am I missing something or is this really an alias to $(BUILD_QEMU_IMAGES_NOT_DEFINED) ? Why not just say $(BUILD_QEMU_IMAGES_NOT_DEFINED) here?",
+      "range": {
+        "startLine": 25,
+        "startChar": 8,
+        "endLine": 25,
+        "endChar": 27
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d81804ad_30df3d91",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "It\u0027s copied from other file and I\u0027ve forgot to remove the unneeded part! Now removed. Sorry!",
+      "parentUuid": "8fd348ef_fd3c4b52",
       "range": {
         "startLine": 25,
         "startChar": 8,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0434b4d_c319afb1",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Removed here, but will check the source where a real bug might exist!",
+      "parentUuid": "d7324cb2_868e3ebe",
+      "range": {
+        "startLine": 27,
+        "startChar": 23,
+        "endLine": 27,
+        "endChar": 66
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14549b8c_e33ef787",
@@ -93,6 +165,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a55f7043_4cc6f19e",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Removed here, but will check the source where a real bug might exist!",
+      "parentUuid": "14549b8c_e33ef787",
+      "range": {
+        "startLine": 31,
+        "startChar": 21,
+        "endLine": 31,
+        "endChar": 24
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8c856f50_30846857",
@@ -106,6 +202,30 @@
       "writtenOn": "2021-11-12T12:43:43Z",
       "side": 1,
       "message": "Why? There seems to be no Android.mk under this directory.",
+      "range": {
+        "startLine": 36,
+        "startChar": 1,
+        "endLine": 37,
+        "endChar": 84
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f18552aa_50c10303",
+        "filename": "gki/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "8c856f50_30846857",
       "range": {
         "startLine": 36,
         "startChar": 1,
@@ -273,6 +393,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34969c39_e469e07c",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "930219fb_b89b6b66",
+      "range": {
+        "startLine": 17,
+        "startChar": 2,
+        "endLine": 17,
+        "endChar": 8
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b470d00_32565078",
@@ -286,6 +430,30 @@
       "writtenOn": "2021-11-12T12:43:43Z",
       "side": 1,
       "message": "Add\n```\ncleanup() {\n  rm -f \"$tmpfile\"\n}\ntrap cleanup EXIT\n```\nto ensure the tmpfile is removed upon exit.",
+      "range": {
+        "startLine": 22,
+        "startChar": 42,
+        "endLine": 22,
+        "endChar": 43
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa88f397_a3362a74",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b470d00_32565078",
       "range": {
         "startLine": 22,
         "startChar": 42,
@@ -321,6 +489,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f71e670c_870df0fe",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Added some comments to explain why stripping $1 is needed and enough.",
+      "parentUuid": "685cbf12_af63aec2",
+      "range": {
+        "startLine": 24,
+        "startChar": 41,
+        "endLine": 24,
+        "endChar": 70
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fda2dc23_e603b19e",
         "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
         "patchSetId": 1
@@ -333,6 +525,30 @@
       "side": 1,
       "message": "\u003e Common typo found: \"aginst\" -- should it be \"against\"?\n\u003e Note: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.\n\nPlease fix.",
       "parentUuid": "adb1d860_56681563",
+      "range": {
+        "startLine": 27,
+        "startChar": 50,
+        "endLine": 27,
+        "endChar": 56
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7662364_f4f350fc",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fda2dc23_e603b19e",
       "range": {
         "startLine": 27,
         "startChar": 50,
@@ -366,6 +582,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bc9097c_f0c5a206",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85209185_cc2b8ff2",
+      "range": {
+        "startLine": 32,
+        "startChar": 9,
+        "endLine": 32,
+        "endChar": 13
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e713648c_76327f97",
@@ -379,6 +619,30 @@
       "writtenOn": "2021-11-12T12:43:43Z",
       "side": 1,
       "message": "this can be just\n\n```\nif ! grep -vf \"$tmpfile\" \"$f\" \u003e/dev/null; then\n  ret\u003d1\n  # ...\nfi\n```",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 35,
+        "endChar": 23
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b235cde4_92261da7",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-15T06:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e713648c_76327f97",
       "range": {
         "startLine": 34,
         "startChar": 2,
