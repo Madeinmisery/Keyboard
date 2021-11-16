@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2a607a44_0ddbce32",
+        "filename": "gki/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-16T07:58:07Z",
+      "side": 1,
+      "message": "$(LOCAL_PATH)",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 19,
+        "endChar": 23
+      },
+      "revId": "ae0caaebb6edd00ceadd7d026d725c16107f70eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5fd92e7f_c29e7510",
         "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
         "patchSetId": 2
