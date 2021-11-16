@@ -511,6 +511,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79872541_a84b5442",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-16T06:51:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f71e670c_870df0fe",
+      "range": {
+        "startLine": 24,
+        "startChar": 41,
+        "endLine": 24,
+        "endChar": 70
+      },
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fda2dc23_e603b19e",
