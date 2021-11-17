@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d60923a_f694a1b3",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-17T02:28:11Z",
+      "side": 1,
+      "message": "arm64",
+      "range": {
+        "startLine": 18,
+        "startChar": 30,
+        "endLine": 18,
+        "endChar": 35
+      },
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "782ef07a_f31cf979",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-17T02:28:11Z",
+      "side": 1,
+      "message": "$(PREV_5_4_SYMVERS)",
+      "range": {
+        "startLine": 38,
+        "startChar": 55,
+        "endLine": 38,
+        "endChar": 56
+      },
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a18c3f4_30972428",
+        "filename": "gki/kmi_abi_chk/sym-5.4/Module.symvers",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-17T02:28:11Z",
+      "side": 1,
+      "message": "This file is unused.",
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

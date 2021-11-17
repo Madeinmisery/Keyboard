@@ -438,6 +438,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cde386df_308260a6",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2021-11-17T02:28:11Z",
+      "side": 1,
+      "message": "I think the test needs the timestamp file to reduce the time on incremental build servers.",
+      "parentUuid": "0b215f15_c37d9d78",
+      "revId": "c82b559ab5d9744770d88c597b2a33cc112b036d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "930219fb_b89b6b66",
         "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
         "patchSetId": 1
