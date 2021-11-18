@@ -16,6 +16,52 @@
       "message": "LGTM",
       "revId": "7bcd945399575920a43c5544356809a29eaff160",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "624168a3_e0247c31",
+        "filename": "gki/kmi_abi_chk/kmi_compatibility_test.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-18T08:32:59Z",
+      "side": 1,
+      "message": "rename to kmi_compatibility_test.sh for consistency?",
+      "range": {
+        "startLine": 16,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 46
+      },
+      "revId": "7bcd945399575920a43c5544356809a29eaff160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3567618b_47e86217",
+        "filename": "gki/kmi_abi_chk/kmi_compatibility_test.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-18T08:32:59Z",
+      "side": 1,
+      "message": "Use BUILD_PHONY_PACKAGE to depend on Android.mk modules, example https://cs.android.com/android/platform/superproject/+/master:build/make/target/product/gsi/Android.mk;l\u003d187",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 90
+      },
+      "revId": "7bcd945399575920a43c5544356809a29eaff160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
