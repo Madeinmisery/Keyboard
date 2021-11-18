@@ -83,6 +83,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8f9b86de_a7382afe",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-18T08:55:08Z",
+      "side": 1,
+      "message": "also check that all input files are existing file pathnames",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 1
+      },
+      "revId": "7bcd945399575920a43c5544356809a29eaff160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0e7ed197_fbbcdeba",
         "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
         "patchSetId": 5
