@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74c8d817_9021d8a5",
+        "filename": "gki/Android.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-18T07:20:31Z",
+      "side": 1,
+      "message": "\u003e Android.​mk files are being deprecated, please use blueprint files (go/soong) to define the modules\n\nNo corresponding phony target mechanism in blueprint file.",
+      "parentUuid": "633e2576_00dad83b",
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d60923a_f694a1b3",
@@ -14,6 +32,30 @@
       "writtenOn": "2021-11-17T02:28:11Z",
       "side": 1,
       "message": "arm64",
+      "range": {
+        "startLine": 18,
+        "startChar": 30,
+        "endLine": 18,
+        "endChar": 35
+      },
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "890b47e8_7ce3f4a3",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-18T07:20:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d60923a_f694a1b3",
       "range": {
         "startLine": 18,
         "startChar": 30,
@@ -47,6 +89,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "572b43c8_8ced9096",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-18T07:20:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "782ef07a_f31cf979",
+      "range": {
+        "startLine": 38,
+        "startChar": 55,
+        "endLine": 38,
+        "endChar": 56
+      },
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8a18c3f4_30972428",
@@ -60,6 +126,24 @@
       "writtenOn": "2021-11-17T02:28:11Z",
       "side": 1,
       "message": "This file is unused.",
+      "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d5509f_6d263b34",
+        "filename": "gki/kmi_abi_chk/sym-5.4/Module.symvers",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-18T07:20:31Z",
+      "side": 1,
+      "message": "This is used in the self-test before the latest/current Module.symvers is released to kernel/prebuilts/5.4/arm64. See the \"Test:\" section in the commit message.",
+      "parentUuid": "8a18c3f4_30972428",
       "revId": "50c2ea32155b568cf766f207060ea0d783aed45f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
