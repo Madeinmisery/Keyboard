@@ -126,6 +126,30 @@
       },
       "revId": "7bcd945399575920a43c5544356809a29eaff160",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9bd0b08_0e04035d",
+        "filename": "gki/kmi_abi_chk/kmi_static_chk.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2021-11-18T08:47:04Z",
+      "side": 1,
+      "message": "oops again, should be\n```\nsed -n \u0027/vmlinux.EXPORT_SYMBOL/{s/[ \\t]*$//; p}\u0027 \u003e \"$tmp\"\n```\n\nso the filtered line is always printed, maybe just keep it simple and use grep if you like D:",
+      "parentUuid": "e5bcc080_fd72bc91",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 61
+      },
+      "revId": "7bcd945399575920a43c5544356809a29eaff160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
