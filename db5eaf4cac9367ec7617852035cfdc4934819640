@@ -16,6 +16,115 @@
       "message": "The license checker from the Lint-bot is a false-alarm that can be overridden by two +2 votes.",
       "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f55230e8_996d3109",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T06:57:25Z",
+      "side": 1,
+      "message": "We don\u0027t seem to use this in gen_buildfiles.py. Why is this needed?",
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52993892_39c05047",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T06:57:25Z",
+      "side": 1,
+      "message": "This reads the entire file into memory. Wouldn\u0027t it be too expensive?",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 46
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abb9cc62_2e2d4622",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T06:57:25Z",
+      "side": 1,
+      "message": "wrong indent?",
+      "range": {
+        "startLine": 84,
+        "startChar": 16,
+        "endLine": 84,
+        "endChar": 21
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "300fe394_f0c9aba8",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T06:57:25Z",
+      "side": 1,
+      "message": "is this necessary? `for f in files` wouldn\u0027t do anything if len(files) \u003d\u003d 0 ?",
+      "range": {
+        "startLine": 93,
+        "startChar": 12,
+        "endLine": 93,
+        "endChar": 30
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebb950d4_b69f5363",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T06:57:25Z",
+      "side": 1,
+      "message": "We will read the same file twice",
+      "range": {
+        "startLine": 96,
+        "startChar": 20,
+        "endLine": 97,
+        "endChar": 92
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
