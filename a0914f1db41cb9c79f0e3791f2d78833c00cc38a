@@ -1,0 +1,24 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017555216",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1890319?revision\u003d9",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "70e05bff_e3d868c5",
+        "filename": "gki/Android.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T08:48:15Z",
+      "side": 1,
+      "message": "Android.​mk files are being deprecated, please use blueprint files (go/soong) to define the modules",
+      "revId": "a0914f1db41cb9c79f0e3791f2d78833c00cc38a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
