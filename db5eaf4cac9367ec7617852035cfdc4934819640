@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2419ea6c_a7ba5ba8",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T07:35:10Z",
+      "side": 1,
+      "message": "This is for the future use. I want to use this from the `check_gpl_license`.",
+      "parentUuid": "f55230e8_996d3109",
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "52993892_39c05047",
         "filename": "vndk/snapshot/collect_licenses.py",
         "patchSetId": 2
@@ -48,6 +66,30 @@
       "writtenOn": "2021-11-22T06:57:25Z",
       "side": 1,
       "message": "This reads the entire file into memory. Wouldn\u0027t it be too expensive?",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 46
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64f87cbf_4507eb93",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T07:35:10Z",
+      "side": 1,
+      "message": "The files are mostly less than 500KB.\nI need to check the multiple patterns in the text and header files. Instead of opening the files multiple times, I loaded the file into memory and checked the patterns from it.\nThis script is used when updating the VNDK snapshots only. So I thought it must be acceptable.",
+      "parentUuid": "52993892_39c05047",
       "range": {
         "startLine": 79,
         "startChar": 12,
@@ -83,6 +125,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3a2a6650_2d0d3939",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T07:35:10Z",
+      "side": 1,
+      "message": "No. This is for-else in python. If \u0027for\u0027 loop finishes, \u0027else\u0027 condition will be executed.",
+      "parentUuid": "abb9cc62_2e2d4622",
+      "range": {
+        "startLine": 84,
+        "startChar": 16,
+        "endLine": 84,
+        "endChar": 21
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "300fe394_f0c9aba8",
         "filename": "vndk/snapshot/collect_licenses.py",
         "patchSetId": 2
@@ -94,6 +160,30 @@
       "writtenOn": "2021-11-22T06:57:25Z",
       "side": 1,
       "message": "is this necessary? `for f in files` wouldn\u0027t do anything if len(files) \u003d\u003d 0 ?",
+      "range": {
+        "startLine": 93,
+        "startChar": 12,
+        "endLine": 93,
+        "endChar": 30
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "123afd56_c271740a",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T07:35:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "300fe394_f0c9aba8",
       "range": {
         "startLine": 93,
         "startChar": 12,
@@ -117,6 +207,30 @@
       "writtenOn": "2021-11-22T06:57:25Z",
       "side": 1,
       "message": "We will read the same file twice",
+      "range": {
+        "startLine": 96,
+        "startChar": 20,
+        "endLine": 97,
+        "endChar": 92
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d74ae99_d6c9ba7c",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T07:35:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebb950d4_b69f5363",
       "range": {
         "startLine": 96,
         "startChar": 20,
