@@ -1,0 +1,186 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "da291202_ab6fa827",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Unrecognized finding :\nlicense\n",
+      "range": {
+        "startLine": 9,
+        "startChar": 57,
+        "endLine": 9,
+        "endChar": 64
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "93f6a254_461406ed",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (ISC) disallowed in repository platform/development:\nISC license\n",
+      "range": {
+        "startLine": 32,
+        "startChar": 14,
+        "endLine": 32,
+        "endChar": 25
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "26d7f4c3_5fbdc511",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (ZLIB) disallowed in repository platform/development:\nzlib License\n",
+      "range": {
+        "startLine": 38,
+        "startChar": 15,
+        "endLine": 38,
+        "endChar": 27
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1516c620_602236d3",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (LGPL2.1, LGPL3) disallowed in repository platform/development:\nLESSER GENERAL PUBLIC LICENSE...LESSER GENERAL PUBLIC LICENSE\n",
+      "range": {
+        "startLine": 41,
+        "startChar": 19,
+        "endLine": 42,
+        "endChar": 48
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "50b58c44_66acccce",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (LGPL) disallowed in repository platform/development:\nGNU LIBRARY GENERAL PUBLIC LICENSE\n",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 53
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "e193959e_b1a3db12",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (LGPL2.1, LGPL3) disallowed in repository platform/development:\nLESSER GENERAL PUBLIC LICENSE\n",
+      "range": {
+        "startLine": 44,
+        "startChar": 15,
+        "endLine": 44,
+        "endChar": 44
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000017550499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1895253?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "99f72729_e8ac7dc3",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-11-22T03:52:25Z",
+      "side": 1,
+      "message": "Third-party license (GPL) disallowed in repository platform/development:\nGNU GENERAL PUBLIC LICENSE...GNU GENERAL PUBLIC LICENSE\n",
+      "range": {
+        "startLine": 45,
+        "startChar": 18,
+        "endLine": 46,
+        "endChar": 40
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
