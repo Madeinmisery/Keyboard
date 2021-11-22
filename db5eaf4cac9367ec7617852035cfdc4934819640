@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2165a35_f2f98eaa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2021-11-22T03:55:05Z",
+      "side": 1,
+      "message": "The license checker from the Lint-bot is a false-alarm that can be overridden by two +2 votes.",
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
