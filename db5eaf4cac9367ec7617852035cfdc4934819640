@@ -53,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42c387bb_f0aa1a2b",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T08:22:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2419ea6c_a7ba5ba8",
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52993892_39c05047",
@@ -100,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "811cf970_96c25ceb",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T08:22:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "64f87cbf_4507eb93",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 46
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "abb9cc62_2e2d4622",
@@ -137,6 +179,30 @@
       "side": 1,
       "message": "No. This is for-else in python. If \u0027for\u0027 loop finishes, \u0027else\u0027 condition will be executed.",
       "parentUuid": "abb9cc62_2e2d4622",
+      "range": {
+        "startLine": 84,
+        "startChar": 16,
+        "endLine": 84,
+        "endChar": 21
+      },
+      "revId": "db5eaf4cac9367ec7617852035cfdc4934819640",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "602933bb_9dba4e55",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2021-11-22T08:22:28Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3a2a6650_2d0d3939",
       "range": {
         "startLine": 84,
         "startChar": 16,
