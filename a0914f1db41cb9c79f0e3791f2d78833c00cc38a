@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10c58ac5_4b11023c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-11-23T02:14:03Z",
+      "side": 1,
+      "message": "Had a discussion with ycchen@ offline. It will be submitted to master and then cp to android12-gsi.",
+      "revId": "a0914f1db41cb9c79f0e3791f2d78833c00cc38a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
