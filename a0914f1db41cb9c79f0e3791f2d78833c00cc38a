@@ -16,6 +16,24 @@
       "message": "Had a discussion with ycchen@ offline. It will be submitted to master and then cp to android12-gsi.",
       "revId": "a0914f1db41cb9c79f0e3791f2d78833c00cc38a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f45e7147_8a8c8452",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-23T02:18:58Z",
+      "side": 1,
+      "message": "Yes, the CL here is basically a template to be CPed to other branches so GKIs can be tested where their KMI ABI were frozen. The test in this CL won\u0027t likely run continuously against GKIs on master, where KMIs of GKIs are not stable/frozen most of the time.",
+      "parentUuid": "10c58ac5_4b11023c",
+      "revId": "a0914f1db41cb9c79f0e3791f2d78833c00cc38a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
