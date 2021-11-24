@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c656a79_2f3f0b1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-11-24T05:42:06Z",
+      "side": 1,
+      "message": "This is cherry-pick from sc-gsi-dev to android12-gsi.",
+      "revId": "6c1eee208ec66e89d8b7cae3ebf93d41ee394bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
