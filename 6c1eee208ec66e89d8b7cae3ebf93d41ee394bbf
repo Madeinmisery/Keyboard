@@ -34,6 +34,24 @@
       "parentUuid": "8c656a79_2f3f0b1e",
       "revId": "6c1eee208ec66e89d8b7cae3ebf93d41ee394bbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a83cbbb1_b61b9fa1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2021-11-24T06:08:06Z",
+      "side": 1,
+      "message": "These CLs are CPed from aosp/master, not sc-gsi-dev.",
+      "parentUuid": "6ab0c4c3_66b40d6a",
+      "revId": "6c1eee208ec66e89d8b7cae3ebf93d41ee394bbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
