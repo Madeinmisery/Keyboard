@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "090e54dc_a876131d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-11-25T01:55:03Z",
+      "side": 1,
+      "message": "all CLs in this chain are required to sync android12-gsi and sc-gsi-dev",
+      "revId": "0b0401b0a6f0573ca0599aefab1dae83a85fa2ca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
