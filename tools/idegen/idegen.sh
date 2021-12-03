@@ -14,5 +14,5 @@ fi
 if [ "" = "$idegenjar" ]; then
     echo "Couldn't find idegen.jar. Please run make first."
 else
-    java -cp $idegenjar Main
+    ${ANDROID_JAVA_HOME}"/bin/java" -cp $idegenjar Main
 fi
