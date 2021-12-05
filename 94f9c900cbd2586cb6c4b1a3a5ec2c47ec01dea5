@@ -51,6 +51,24 @@
       "parentUuid": "05ba7935_c98bca17",
       "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45c4846b_391b0660",
+        "filename": "tools/idegen/README",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1928827
+      },
+      "writtenOn": "2021-12-05T01:42:29Z",
+      "side": 1,
+      "message": "### Just for myself,solution is\n\n1.set env\n\nsource build/envsetup.sh \u0026\u0026 lunch xxx\nwhich java\n/home/qiucheng/aosp/prebuilts/jdk/jdk11/linux-x86/bin/java\n\n2.modify idegen.sh\n\n/home/qiucheng/aosp/prebuilts/jdk/jdk11/linux-x86/bin/java -cp $idegenjar Main\n\n3.sudo development/tools/idegen/idegen.sh\n\n### but for aosp,i submitted this",
+      "parentUuid": "215fda81_7309c619",
+      "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
