@@ -69,6 +69,24 @@
       "parentUuid": "215fda81_7309c619",
       "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d7cbb6e_1eb41f6e",
+        "filename": "tools/idegen/README",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1928827
+      },
+      "writtenOn": "2021-12-05T11:31:20Z",
+      "side": 1,
+      "message": "This submission is too naive, I\u0027m sorry to disturb you\n\nAbandoned.",
+      "parentUuid": "45c4846b_391b0660",
+      "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
