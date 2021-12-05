@@ -33,6 +33,24 @@
       "message": "i don\u0027t know what problem you\u0027re trying to fix here, but that\u0027s definitely not the right way to do it!",
       "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "215fda81_7309c619",
+        "filename": "tools/idegen/README",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1928827
+      },
+      "writtenOn": "2021-12-05T00:22:57Z",
+      "side": 1,
+      "message": "Thanks for your reply!\n\nThe fundamental problem is，Non-root user exec idegen.sh will get permission denied,The details are as follows：\nhttps://issuetracker.google.com/u/0/issues/208862325\n\nSo I thought about it and tried the following solutions\n####################################################\n1.sudo development/tools/idegen/idegen.sh\n\nsh modified:   no\nresult:        fail\nerror is:      java not found.\n\ndetail:\nif local pc have not already set java,sudo will reset all env we set by `source build/envsetup.sh`,java will not found.\n####################################################\n2.sudo development/tools/idegen/idegen.sh\n\nsh modified:   yes\n${ANDROID_JAVA_HOME}\"/bin/java\" -cp $idegenjar Main\nresult:        fail\nerror is:      /bin/java not found\n\ndetail:\nsudo will reset all env we set by `source build/envsetup.sh`,${ANDROID_JAVA_HOME} now is empty\n\n####################################################\n3.su 1st and then development/tools/idegen/idegen.sh\n\nsh modified:   yes\n${ANDROID_JAVA_HOME}\"/bin/java\" -cp $idegenjar Main\nresult:        sucess\n\ndetail:\nThe difference between `su` and `sudo` is,su will keep all env we set in this terminal,so ${ANDROID_JAVA_HOME} will be keep.\n\nEven if the java environment variable is not set locally，the script will also execute smoothly.",
+      "parentUuid": "05ba7935_c98bca17",
+      "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
