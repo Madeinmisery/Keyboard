@@ -87,6 +87,24 @@
       "parentUuid": "45c4846b_391b0660",
       "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "920aec38_356e8592",
+        "filename": "tools/idegen/README",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2021-12-06T17:28:46Z",
+      "side": 1,
+      "message": "yeah, sudo/su is never the answer for a problem like this. in fact, it\u0027s likely that an *earlier* use of sudo/su is what *caused* your problem --- something was done as root, so now you have issues as a regular user.\n\nthe real question is why you got this:\n```\nfind: ‘out/target/product/emulator_x86_64/root/d’: Permission denied\n```\nwhat does `ls -l` say?",
+      "parentUuid": "9d7cbb6e_1eb41f6e",
+      "revId": "94f9c900cbd2586cb6c4b1a3a5ec2c47ec01dea5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
