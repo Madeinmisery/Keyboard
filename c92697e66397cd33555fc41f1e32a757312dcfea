@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "569bf365_ee6f423e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-12-13T07:37:22Z",
+      "side": 1,
+      "message": "This CL is to temporarily unblock the work of b/196916063.",
+      "revId": "c92697e66397cd33555fc41f1e32a757312dcfea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
