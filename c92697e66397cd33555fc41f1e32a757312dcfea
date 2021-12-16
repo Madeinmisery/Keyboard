@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e58c7fe0_fcdf444c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1128729
+      },
+      "writtenOn": "2021-12-16T08:30:54Z",
+      "side": 1,
+      "message": "nit: Honestly, I feel this is not very good on modifying source code. If me would try to avoid it.",
+      "revId": "c92697e66397cd33555fc41f1e32a757312dcfea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6f478708_1b21d7d7",
