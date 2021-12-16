@@ -58,6 +58,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "25ec6d6e_e0d6c365",
+        "filename": "gsi/build_with_kernel/repack_kernels_common.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-12-16T08:35:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6f478708_1b21d7d7",
+      "range": {
+        "startLine": 133,
+        "startChar": 6,
+        "endLine": 133,
+        "endChar": 7
+      },
+      "revId": "c92697e66397cd33555fc41f1e32a757312dcfea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3972fce_8935c1c0",
@@ -71,6 +95,30 @@
       "writtenOn": "2021-12-16T08:27:07Z",
       "side": 1,
       "message": "Same as previous.",
+      "range": {
+        "startLine": 151,
+        "startChar": 6,
+        "endLine": 151,
+        "endChar": 7
+      },
+      "revId": "c92697e66397cd33555fc41f1e32a757312dcfea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1b918d5_1cb3de2e",
+        "filename": "gsi/build_with_kernel/repack_kernels_common.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2021-12-16T08:35:09Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d3972fce_8935c1c0",
       "range": {
         "startLine": 151,
         "startChar": 6,
