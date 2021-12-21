@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8d88d6f_f02897d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1080813
+      },
+      "writtenOn": "2021-12-21T07:50:00Z",
+      "side": 1,
+      "message": "Most of the implementation is done by Szuwei.\n\nIIRC, this tool is not used nowadays.\nSo it LGTM to remove them.  (Let\u0027s get Szuwei\u0027s green light)",
+      "revId": "54d873122b8f7f80b55b28bceb435c0690cb09ff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
