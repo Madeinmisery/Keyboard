@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76840f9b_016768ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065473
+      },
+      "writtenOn": "2021-12-22T23:47:10Z",
+      "side": 1,
+      "message": "I have added the --verbose option.\n\nI have also made a diff of all ART functions names and checked how the algorithm behaves. (the libart.so is huge, so I have mostly skimmed through it) I have not found anything that would worry me. (even class templates can still be verbose, but this CL does not try to address that.  llvm sometimes includes return type in the signature.  The algorithm will shrink \"foo::(annoymous namespace)::bar::baz()\" to \"foo::::bar::baz()\", which seems appropriate.  llvm also sometimes appends large random identifies in parentheses, which this algorithm strips, which also seems very appropriate). ",
+      "revId": "b5c0cdea8a3fcdc67b309048c20c235d9515ddb5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
