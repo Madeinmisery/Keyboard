@@ -39,6 +39,30 @@
       },
       "revId": "4076f7f2370e636f8af0ee8eda99bd9867bde493",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3631504d_4145cbcc",
+        "filename": "gsi/build_with_kernel/pack_boot_for_signing.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2022-01-05T02:03:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f691872b_51c7ca18",
+      "range": {
+        "startLine": 21,
+        "startChar": 14,
+        "endLine": 21,
+        "endChar": 21
+      },
+      "revId": "4076f7f2370e636f8af0ee8eda99bd9867bde493",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
