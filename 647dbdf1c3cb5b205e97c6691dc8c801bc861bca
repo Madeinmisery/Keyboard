@@ -16,6 +16,23 @@
       "message": "ptal, thanks!",
       "revId": "647dbdf1c3cb5b205e97c6691dc8c801bc861bca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fef2b8a_380bc67e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1040443
+      },
+      "writtenOn": "2022-01-05T12:19:59Z",
+      "side": 1,
+      "message": "LGTM but I guess this will require some matching changes somewhere in the SDK generation process?",
+      "revId": "647dbdf1c3cb5b205e97c6691dc8c801bc861bca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
