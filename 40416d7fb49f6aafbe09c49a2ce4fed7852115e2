@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b554808_6993bb07",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2022-01-06T17:49:14Z",
+      "side": 1,
+      "message": "Maybe add a comment stating that we might want to store these somehow later.  Or perhaps that\u0027s implicit...",
+      "revId": "40416d7fb49f6aafbe09c49a2ce4fed7852115e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
