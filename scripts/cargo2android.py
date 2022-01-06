@@ -432,6 +432,8 @@ class Crate(object):
         self.emit_list = arg.replace('--emit=', '')
       elif arg.startswith('--edition='):
         self.edition = arg.replace('--edition=', '')
+      elif arg.startswith('\'-Aclippy'):
+        _ = arg # ignored
       elif not arg.startswith('-'):
         # shorten imported crate main source paths like $HOME/.cargo/
         # registry/src/github.com-1ecc6299db9ec823/memchr-2.3.3/src/lib.rs
