@@ -16,6 +16,24 @@
       "message": "Maybe add a comment stating that we might want to store these somehow later.  Or perhaps that\u0027s implicit...",
       "revId": "40416d7fb49f6aafbe09c49a2ce4fed7852115e2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db03c8aa_7079ac8e",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2022-01-07T15:12:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b554808_6993bb07",
+      "revId": "40416d7fb49f6aafbe09c49a2ce4fed7852115e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
