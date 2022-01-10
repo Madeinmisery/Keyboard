@@ -34,6 +34,24 @@
       "parentUuid": "5f3aac20_c1598da6",
       "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d798fbe_61047ae5",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2022-01-10T16:24:00Z",
+      "side": 1,
+      "message": "In that case would you want a different flag to set it to true?",
+      "parentUuid": "47a82f5a_7366a992",
+      "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
