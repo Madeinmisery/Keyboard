@@ -16,6 +16,24 @@
       "message": "Ivan, do you know if this is the default?  If so, it\u0027s probably easier to guard the whole test_options block, not just this line?",
       "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47a82f5a_7366a992",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2022-01-10T16:20:31Z",
+      "side": 1,
+      "message": "For rust_test_host modules this is set true by default in the build system, for rust_test modules it is false by default (incl. rust_test modules with host_supported: true).\n\nWe may want to only set this property if the no_presubmit flag is provided, otherwise it may be safer to allow the build system to use it\u0027s default value.",
+      "parentUuid": "5f3aac20_c1598da6",
+      "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
