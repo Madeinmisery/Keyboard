@@ -52,6 +52,24 @@
       "parentUuid": "47a82f5a_7366a992",
       "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ec522f6_1b4746b4",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2022-01-10T17:17:27Z",
+      "side": 1,
+      "message": "Chatted offline, it makes sense to me to leave this as is to reflect the implicit behavior of cc_test, which sets unit_test: true by default if host_supported.",
+      "parentUuid": "4d798fbe_61047ae5",
+      "revId": "ca9f9f22669663fe3f3d893b689b930ce820b502",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
