@@ -16,6 +16,23 @@
       "message": "It seems like we don\u0027t have any human owner for this piece of code :-(",
       "revId": "a359c62edfde853fc043f51b90de9b4d26da94c4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4054efb_43ad1865",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-01-13T01:07:40Z",
+      "side": 1,
+      "message": "these are just old devices, right? how old? what\u0027s the most recent such device?\n\ni.e. \"how would you motivate me to believe that the potential benefit to actual users is greater than the potential for disruption, especially given that i don\u0027t remember hearing about this before now, and the word \u0027legacy\u0027 right there\" :-)",
+      "revId": "a359c62edfde853fc043f51b90de9b4d26da94c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
