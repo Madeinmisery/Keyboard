@@ -52,6 +52,24 @@
       "parentUuid": "0029d8f1_d3262ea7",
       "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fca0dbc7_095d5cfa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-01-20T19:29:21Z",
+      "side": 1,
+      "message": "/me looks...\n```\n  File \"/buildbot/src/android/master-ndk/ndk/do_checkbuild.py\", line 22, in \u003cmodule\u003e\n    import ndk.checkbuild\n  File \"/buildbot/src/android/master-ndk/ndk/ndk/checkbuild.py\", line 2358, in \u003cmodule\u003e\n    ALL_MODULES \u003d [t() for t in ALL_MODULE_TYPES]\n  File \"/buildbot/src/android/master-ndk/ndk/ndk/checkbuild.py\", line 2358, in \u003clistcomp\u003e\n    ALL_MODULES \u003d [t() for t in ALL_MODULE_TYPES]\n  File \"/buildbot/src/android/master-ndk/ndk/ndk/builds.py\", line 123, in __init__\n    self.validate()\n  File \"/buildbot/src/android/master-ndk/ndk/ndk/builds.py\", line 160, in validate\n    self.validate_notice()\n  File \"/buildbot/src/android/master-ndk/ndk/ndk/builds.py\", line 175, in validate_notice\n    raise self.validate_error(f\"notice file {notice} does not exist\")\nndk.builds.ModuleValidateError: python-packages: notice file /buildbot/src/android/master-ndk/development/python-packages/NOTICE does not exist\n```\n\ndanalbert: i assume this is still useful for ensuring that the NDK packages contain licenses for everything they use?",
+      "parentUuid": "5bba1697_96d20f4e",
+      "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
