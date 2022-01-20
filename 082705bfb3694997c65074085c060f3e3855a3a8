@@ -34,6 +34,24 @@
       "parentUuid": "07a2f0d7_a789c613",
       "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bba1697_96d20f4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2022-01-20T19:23:30Z",
+      "side": 1,
+      "message": "You can find it by going into the build failures for the revision 1 presubmits. It\u0027s clear in the log that the build fails if there is no NOTICE file in python-packages.",
+      "parentUuid": "0029d8f1_d3262ea7",
+      "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
