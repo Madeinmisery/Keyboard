@@ -16,6 +16,24 @@
       "message": "PTAL\n\nSomeone put a test on one of the NOTICE files so I had to create another patchset.",
       "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0029d8f1_d3262ea7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-01-20T19:10:25Z",
+      "side": 1,
+      "message": "that sounds weird... what\u0027s the test?",
+      "parentUuid": "07a2f0d7_a789c613",
+      "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
