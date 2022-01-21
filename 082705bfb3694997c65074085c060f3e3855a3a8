@@ -105,6 +105,24 @@
       "parentUuid": "fca0dbc7_095d5cfa",
       "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f9cbff2_5a6e49df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-01-21T20:50:19Z",
+      "side": 1,
+      "message": "That\u0027s not a test, that\u0027s just the build failing early on bad data. The NDK packages the licenses for each component it ships. That stage of the build is making sure all the license files claimed by each package are actually there.",
+      "parentUuid": "a0216717_88efa44c",
+      "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
