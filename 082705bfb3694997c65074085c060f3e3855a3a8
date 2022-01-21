@@ -70,6 +70,23 @@
       "parentUuid": "5bba1697_96d20f4e",
       "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3120493_12314b45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2022-01-21T18:46:44Z",
+      "side": 1,
+      "message": "If Dan comes up with an objection, we can fix it with another change.",
+      "revId": "082705bfb3694997c65074085c060f3e3855a3a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
