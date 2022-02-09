@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e62ad8b_6eb179c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-02-09T19:52:10Z",
+      "side": 1,
+      "message": "We\u0027re going to add a \u0027clang-r445002b\u0027 build soon but this change is needed to fix the broken clang-tools build.",
+      "revId": "ba7dc83be589bda9c258fbce41c35c79628aedee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
