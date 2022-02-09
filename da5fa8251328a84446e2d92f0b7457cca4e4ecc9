@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1f88ed6_ccc7c608",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1561651
+      },
+      "writtenOn": "2022-02-09T00:27:30Z",
+      "side": 1,
+      "message": ":) I followed the steps from our source.android.com documentation, without authenticating. vendor/google is not available in this case.",
+      "parentUuid": "a1b1f83f_528a4213",
+      "revId": "da5fa8251328a84446e2d92f0b7457cca4e4ecc9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "faceb523_4180220c",
@@ -41,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bec4c74_9144761d",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1157,
+      "author": {
+        "id": 1561651
+      },
+      "writtenOn": "2022-02-09T00:27:30Z",
+      "side": 1,
+      "message": "That variable is set by vendor_setup.sh in vendor/google/tools. This project is only available internally.",
+      "parentUuid": "faceb523_4180220c",
+      "range": {
+        "startLine": 1157,
+        "startChar": 25,
+        "endLine": 1157,
+        "endChar": 57
+      },
+      "revId": "da5fa8251328a84446e2d92f0b7457cca4e4ecc9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d5a2f3ef_c0d9eba9",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-02-09T00:13:36Z",
       "side": 1,
       "message": "Nit: The prebuilt cargo is fine, the prebuilt `libstd` is not usable by cargo. Swapping out the cargo is just an end-run around switching libstd prebuilts.",
+      "range": {
+        "startLine": 1161,
+        "startChar": 23,
+        "endLine": 1161,
+        "endChar": 41
+      },
+      "revId": "da5fa8251328a84446e2d92f0b7457cca4e4ecc9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d54e3a3_77ac7e07",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1161,
+      "author": {
+        "id": 1561651
+      },
+      "writtenOn": "2022-02-09T00:27:30Z",
+      "side": 1,
+      "message": "Ack, thanks for the clarification. Leaving the error message as-is. Updated the commit message.",
+      "parentUuid": "d5a2f3ef_c0d9eba9",
       "range": {
         "startLine": 1161,
         "startChar": 23,
