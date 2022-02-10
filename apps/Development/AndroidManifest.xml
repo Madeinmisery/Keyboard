@@ -94,14 +94,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="SyncAdapterDriver" android:label="Sync Tester"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.TEST" />
-            </intent-filter>
-        </activity>
-
         <activity android:name="DataList" android:exported="true">
         </activity>
         <activity android:name="Details" android:exported="true">
