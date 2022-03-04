@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "732b8eb2_5b756904",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-03-04T19:13:14Z",
+      "side": 1,
+      "message": "Since we just looked at these, can we add a comment to the aidl block explaining why they aren\u0027t in there? (They are utility binaries for a test, not actual tests.)\n\nSuggesting this because looking down the list, I have no idea why the other tests are on the list.",
+      "revId": "eefa48a508b40f1fe5cb49eca42efc86f6dd0016",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
