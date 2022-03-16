@@ -311,6 +311,7 @@ def gen_bp_list_module(image, snapshot_version, vndk_list, target_arch, arch_pro
         'shared': 'shared_libs',
         'static': 'static_libs',
         'rlib': 'rlibs',
+        'proc_macro': 'proc_macros',
         'header': 'header_libs',
         'binary': 'binaries',
         'object': 'objects',
