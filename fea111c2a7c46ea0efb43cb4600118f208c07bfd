@@ -22,6 +22,30 @@
       },
       "revId": "fea111c2a7c46ea0efb43cb4600118f208c07bfd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d412b7bb_6bd54a3e",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-03-21T02:21:03Z",
+      "side": 1,
+      "message": "As this is already submitted internally, let\u0027s consider this nit in the following CLs.",
+      "parentUuid": "2693aee4_2749a18d",
+      "range": {
+        "startLine": 489,
+        "startChar": 0,
+        "endLine": 489,
+        "endChar": 33
+      },
+      "revId": "fea111c2a7c46ea0efb43cb4600118f208c07bfd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
