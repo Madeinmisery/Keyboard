@@ -110,6 +110,7 @@ JSON_TO_BP = {
     'RuntimeLibs': 'runtime_libs',
     'Required': 'required',
     'Filename': 'filename',
+    'Prebuilt': 'prebuilt',
 }
 
 SANITIZER_VARIANT_PROPS = {
@@ -405,11 +406,16 @@ def convert_json_host_data_to_bp(mod, install_dir):
     All host modules are created as a cc_prebuilt_binary
     blueprint module with the prefer attribute set to true.
 
+    Modules that already have a prebuilt are not created.
+
     Args:
       mod: JSON definition of the module
       install_dir: installation directory of the host snapshot
     """
     prop = convert_json_data_to_bp_prop(mod, install_dir)
+    if 'prebuilt' in prop:
+        return
+
     prop['host_supported'] = True
     prop['device_supported'] = False
     prop['prefer'] = True
@@ -441,7 +447,8 @@ def gen_host_bp_file(install_dir):
                     props = json.load(rfp)
                     for mod in props:
                         prop = convert_json_host_data_to_bp(mod, install_dir)
-                        wfp.write(prop)
+                        if prop:
+                            wfp.write(prop)
 
 def gen_bp_files(image, vndk_dir, install_dir, snapshot_version):
     """Generates Android.bp for each archtecture.
