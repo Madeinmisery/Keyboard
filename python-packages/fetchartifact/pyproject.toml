@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "fetchartifact"
+version = "0.1.0"
+description = "Python library for http://go/fetchartifact."
+authors = ["The Android Open Source Project"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.942"
+pylint = "^2.13.0"
+black = "^22.1.0"
+pytest = "^7.1.1"
+coverage = {extras = ["toml"], version = "^6.3.2"}
+pytest-asyncio = "^0.18.3"
+isort = "^5.10.1"
+
+[tool.coverage.report]
+fail_under = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_any_unimported = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+follow_imports = "silent"
+implicit_reexport = false
+namespace_packages = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = "duplicate-code"
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
