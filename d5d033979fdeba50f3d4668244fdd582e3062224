@@ -1,4 +1,28 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fb7b362_a461eec5",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1162,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2022-03-29T00:43:59Z",
+      "side": 1,
+      "message": "hey - I\u0027m always getting this error (instead of the elif case), even with, say, \"./all2android.sh --cargo_bin\u003d/usr/bin/cargo\".\n\n\u003e ANDROID_BUILD_ENVIRONMENT_CONFIG\n\nand this is not set for me ???",
+      "range": {
+        "startLine": 1161,
+        "startChar": 0,
+        "endLine": 1162,
+        "endChar": 43
+      },
+      "revId": "d5d033979fdeba50f3d4668244fdd582e3062224",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": []
 }
