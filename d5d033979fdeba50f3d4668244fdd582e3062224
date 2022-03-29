@@ -22,6 +22,30 @@
       },
       "revId": "d5d033979fdeba50f3d4668244fdd582e3062224",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0acf4581_6ea5677f",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1162,
+      "author": {
+        "id": 1208973
+      },
+      "writtenOn": "2022-03-29T14:25:11Z",
+      "side": 1,
+      "message": "It looks like cargo_bin should point to the directory that contains cargo, not to the file itself (see https://cs.android.com/android/platform/superproject/+/master:development/scripts/cargo2android.py;l\u003d1152).  So try \"--cargo_bin\u003d/usr/bin\" instead.",
+      "parentUuid": "6fb7b362_a461eec5",
+      "range": {
+        "startLine": 1161,
+        "startChar": 0,
+        "endLine": 1162,
+        "endChar": 43
+      },
+      "revId": "d5d033979fdeba50f3d4668244fdd582e3062224",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": []
