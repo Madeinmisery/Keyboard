@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8a48912_db0d3531",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-06T23:05:43Z",
+      "side": 1,
+      "message": "assume i know no python ... does this do the right thing for a non-TCP ANDROID_SERIAL with no colons?",
+      "revId": "fc44444835af75de2be1d27359c673c27987168b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
