@@ -34,6 +34,24 @@
       "parentUuid": "b8a48912_db0d3531",
       "revId": "fc44444835af75de2be1d27359c673c27987168b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "430444d7_6500e121",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1942356
+      },
+      "writtenOn": "2022-04-06T23:33:20Z",
+      "side": 1,
+      "message": "And in that event, what should gdb-remote be connecting to?  `localhost:\u003cport\u003e`?",
+      "parentUuid": "fb0995a9_a5c2d54c",
+      "revId": "fc44444835af75de2be1d27359c673c27987168b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
