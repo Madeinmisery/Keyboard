@@ -52,6 +52,24 @@
       "parentUuid": "fb0995a9_a5c2d54c",
       "revId": "fc44444835af75de2be1d27359c673c27987168b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "646064f4_af482f27",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-06T23:57:49Z",
+      "side": 1,
+      "message": "*mind blown* at android swe who can\u0027t imagine a non-TCP ANDROID_SERIAL ... i guess we\u0027re living in the cuttlefish future! :-)\n\na random device i have lying around has \"16011FDEE000B2\" as its ANDROID_SERIAL. and, yes, i think localhost is correct in that case. _somewhere_ in all this python there\u0027s code to set up the port forwarding via adb so there\u0027s no separate \"usb\" transport to worry about.",
+      "parentUuid": "430444d7_6500e121",
+      "revId": "fc44444835af75de2be1d27359c673c27987168b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
