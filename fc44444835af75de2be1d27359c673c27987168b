@@ -88,6 +88,24 @@
       "parentUuid": "646064f4_af482f27",
       "revId": "fc44444835af75de2be1d27359c673c27987168b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68c1bde1_84eb602c",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-07T00:23:00Z",
+      "side": 1,
+      "message": "\u003e Haha, guess I gave myself away there; I\u0027m a noogler that is very new to the Android platform :P\n\nheh, thanks to covid and wfh, it\u0027s been a _long_ time since i used anything but cuttlefish myself. that \"random device\" i mentioned is literally my \"is $WHATEVER true for a production device connected to a mac laptop?\" (since that\u0027s the typical user configuration, even if it\u0027s atypical for a _googler_ :-) ).\n\n\u003e I\u0027m not sure if what\u0027s the right way to do it... should I check the serial string for  :  or is there a better method to determine what type of serial I\u0027m dealing with?\n\nyeah, your first suggestion sounded right to me --- if there\u0027s a colon, assume TCP and extract the host; if not, assume \"localhost\".",
+      "parentUuid": "c8a21b91_6688f508",
+      "revId": "fc44444835af75de2be1d27359c673c27987168b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
