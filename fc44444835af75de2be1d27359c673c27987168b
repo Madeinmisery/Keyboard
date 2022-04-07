@@ -70,6 +70,24 @@
       "parentUuid": "430444d7_6500e121",
       "revId": "fc44444835af75de2be1d27359c673c27987168b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8a21b91_6688f508",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1942356
+      },
+      "writtenOn": "2022-04-07T00:18:48Z",
+      "side": 1,
+      "message": "Haha, guess I gave myself away there; I\u0027m a noogler that is very new to the Android platform :P\n\nI\u0027m not sure if what\u0027s the right way to do it... should I check the serial string for `:` or is there a better method to determine what type of serial I\u0027m dealing with?",
+      "parentUuid": "646064f4_af482f27",
+      "revId": "fc44444835af75de2be1d27359c673c27987168b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
