@@ -16,6 +16,23 @@
       "message": "Hi Howard, \n\nHonestly, I am not satisfy the patch. I thought this is a workaround and does not solve the root issue. The details analyzing and reason I commented in b/226704582#comment2. For urgent reason, I +2 the patch. However, I believe this is a serious issue. We need to find out the root cause. Please add b/226704582 into the commit message and add a TODO comment in the source code for tracking.",
       "revId": "f3e1facf7f8120341b428906e1b756b478ddf497",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a863faa7_50a1dbe5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135739
+      },
+      "writtenOn": "2022-04-20T05:25:17Z",
+      "side": 1,
+      "message": "Issues like this keep happening so we need to submit it first.",
+      "revId": "f3e1facf7f8120341b428906e1b756b478ddf497",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
