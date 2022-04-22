@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed8c308c_1f262de7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-22T21:45:23Z",
+      "side": 1,
+      "message": "+ccross,jiyong for whether that\u0027s actually expected/always true. (/me wonders whether it\u0027s only true for devices that are using a signed module, versus devices with an unsigned module that the builder built themselves, say?)",
+      "revId": "598cc3607ba837df8cd4b5d4a12b6e6add7488dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
