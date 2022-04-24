@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd384de7_76e2fab4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2022-04-24T22:52:52Z",
+      "side": 1,
+      "message": "We always have tried to not have \"google\" in AOSP. This obviously is not the first case, so I don\u0027t feel so bad (thus +1\u0027ed), but wish we could avoid this.\n\nWhy don\u0027t we fix the build system so that symbols directory matches with the directory on device?",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 46
+      },
+      "revId": "598cc3607ba837df8cd4b5d4a12b6e6add7488dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "ed8c308c_1f262de7",
