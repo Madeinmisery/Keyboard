@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2892a7e_1491a214",
+        "filename": "build/tools/sdk_repo.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1046320
+      },
+      "writtenOn": "2022-04-27T00:53:02Z",
+      "side": 1,
+      "message": "do you still need this ?",
+      "range": {
+        "startLine": 130,
+        "startChar": 1,
+        "endLine": 131,
+        "endChar": 71
+      },
+      "revId": "897fe0505342c8129ee46907e6b2f8196b555788",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
