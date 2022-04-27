@@ -22,6 +22,30 @@
       },
       "revId": "897fe0505342c8129ee46907e6b2f8196b555788",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8763d0f6_050b6eff",
+        "filename": "build/tools/sdk_repo.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1060959
+      },
+      "writtenOn": "2022-04-27T15:40:13Z",
+      "side": 1,
+      "message": "Sorry, missed the comment. No, I will remove it.",
+      "parentUuid": "c2892a7e_1491a214",
+      "range": {
+        "startLine": 130,
+        "startChar": 1,
+        "endLine": 131,
+        "endChar": 71
+      },
+      "revId": "897fe0505342c8129ee46907e6b2f8196b555788",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
