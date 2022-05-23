@@ -174,13 +174,6 @@ def make_libraries(product, variant, vndk_version, targets, libs):
     make_targets(product, variant, make_target_paths)
 
 
-def get_lsdump_paths_file_path(product, variant):
-    """Get the path to lsdump_paths.txt."""
-    product_out = get_build_vars_for_product(
-        ['PRODUCT_OUT'], product, variant)[0]
-    return os.path.join(product_out, 'lsdump_paths.txt')
-
-
 def _get_module_variant_sort_key(suffix):
     for variant in suffix.split('_'):
         match = re.match(r'apex(\d+)$', variant)
@@ -250,10 +243,12 @@ def _read_lsdump_paths(lsdump_paths_file_path, vndk_version, targets):
 
 def read_lsdump_paths(product, variant, vndk_version, targets, build=True):
     """Build lsdump_paths.txt and read the paths."""
-    lsdump_paths_file_path = get_lsdump_paths_file_path(product, variant)
     if build:
-        make_targets(product, variant, [lsdump_paths_file_path])
-    lsdump_paths_file_abspath = os.path.join(AOSP_DIR, lsdump_paths_file_path)
+        make_targets(product, variant, ['lsdump_paths'])
+    product_out = get_build_vars_for_product(
+        ['PRODUCT_OUT'], product, variant)[0]
+    lsdump_paths_file_abspath = os.path.join(
+        AOSP_DIR, product_out, 'lsdump_paths.txt')
     return _read_lsdump_paths(lsdump_paths_file_abspath, vndk_version,
                               targets)
 
