@@ -198,6 +198,12 @@ def _parse_args():
 def main():
     args = _parse_args()
 
+    # Clear SKIP_ABI_CHECKS as it forbids ABI dumps from being built.
+    try:
+        del os.environ['SKIP_ABI_CHECKS']
+    except KeyError:
+        pass
+
     start = time.time()
     num_processed = create_source_abi_reference_dumps_for_all_products(args)
     end = time.time()
