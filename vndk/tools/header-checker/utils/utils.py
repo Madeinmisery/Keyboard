@@ -251,9 +251,13 @@ def _read_lsdump_paths(lsdump_paths_file_path, vndk_version, targets):
 def read_lsdump_paths(product, variant, vndk_version, targets, build=True):
     """Build lsdump_paths.txt and read the paths."""
     lsdump_paths_file_path = get_lsdump_paths_file_path(product, variant)
-    if build:
-        make_targets(product, variant, [lsdump_paths_file_path])
     lsdump_paths_file_abspath = os.path.join(AOSP_DIR, lsdump_paths_file_path)
+    if build:
+        try:
+            os.unlink(lsdump_paths_file_abspath)
+        except (IsADirectoryError, FileNotFoundError):
+            pass
+        make_targets(product, variant, [lsdump_paths_file_path])
     return _read_lsdump_paths(lsdump_paths_file_abspath, vndk_version,
                               targets)
 
