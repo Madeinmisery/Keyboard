@@ -22,6 +22,30 @@
       },
       "revId": "b242db09b1cd263caf5eb29b11f924c8635f507d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b848c66_c705a45c",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-05-24T10:11:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "051ef29d_631c81b6",
+      "range": {
+        "startLine": 256,
+        "startChar": 8,
+        "endLine": 256,
+        "endChar": 11
+      },
+      "revId": "b242db09b1cd263caf5eb29b11f924c8635f507d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
