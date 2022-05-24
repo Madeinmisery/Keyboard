@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04af59aa_fa0a7827",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-05-24T02:50:54Z",
+      "side": 1,
+      "message": "forgets",
+      "range": {
+        "startLine": 11,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 46
+      },
+      "revId": "fea8efe28c7ca101724e30ab55a047172b33eeac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a13717b_a6b9b5a2",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-05-24T02:50:54Z",
+      "side": 1,
+      "message": "os.environ.pop(\u0027SKIP_ABI_CHECKS\u0027, None)",
+      "range": {
+        "startLine": 202,
+        "startChar": 4,
+        "endLine": 205,
+        "endChar": 12
+      },
+      "revId": "fea8efe28c7ca101724e30ab55a047172b33eeac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
