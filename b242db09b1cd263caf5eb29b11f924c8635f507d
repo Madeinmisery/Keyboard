@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "051ef29d_631c81b6",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-05-24T08:14:56Z",
+      "side": 1,
+      "message": "if os.path.exists(lsdump_paths_file_abspath):",
+      "range": {
+        "startLine": 256,
+        "startChar": 8,
+        "endLine": 256,
+        "endChar": 11
+      },
+      "revId": "b242db09b1cd263caf5eb29b11f924c8635f507d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
