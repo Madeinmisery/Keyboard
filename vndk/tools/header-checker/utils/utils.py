@@ -83,9 +83,18 @@ class Target(object):
 def _validate_dump_content(dump_path):
     """Make sure that the dump contains relative source paths."""
     with open(dump_path, 'r') as f:
-        if AOSP_DIR in f.read():
-            raise ValueError(
-                dump_path + ' contains absolute path to $ANDROID_BUILD_TOP.')
+        for line in f:
+            start = 0
+            while True:
+                start = line.find(AOSP_DIR, start)
+                if start < 0:
+                    break
+                # The substring is not preceded by a common path character.
+                if start == 0 or not (line[start - 1].isalnum() or
+                                      line[start - 1] in '.-_/'):
+                    raise ValueError(dump_path + ' contains absolute path to '
+                                     '$ANDROID_BUILD_TOP.')
+                start += 1
 
 
 def copy_reference_dump(lib_path, reference_dump_dir, compress):
