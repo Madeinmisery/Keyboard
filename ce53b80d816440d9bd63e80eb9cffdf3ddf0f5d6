@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5685369_55b641d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-06-16T21:13:31Z",
+      "side": 1,
+      "message": "I tested with 1.60 locally initially, but something is wrong with 1.61.0.p2. Blocking submission until that\u0027s figured out.",
+      "revId": "ce53b80d816440d9bd63e80eb9cffdf3ddf0f5d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
