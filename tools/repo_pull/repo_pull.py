@@ -94,7 +94,7 @@ class ChangeList(object):
         self.fetch = fetch
 
         fetch_git = None
-        for protocol in ('http', 'sso', 'rpc'):
+        for protocol in ('ssh', 'http', 'sso', 'rpc'):
             fetch_git = fetch.get(protocol)
             if fetch_git:
                 break
