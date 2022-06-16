@@ -25,13 +25,8 @@ import json
 import os
 import sys
 
-try:
-    from urllib.error import HTTPError  # PY3
-except ImportError:
-    from urllib2 import HTTPError  # PY2
-
 from gerrit import (
-    abandon, add_reviewers, create_url_opener_from_args, delete_reviewer,
+    abandon, add_reviewers, create_headers_from_args, delete_reviewer,
     delete_topic, find_gerrit_name, normalize_gerrit_name, query_change_lists,
     restore, set_hashtags, set_review, set_topic, submit
 )
@@ -217,11 +212,11 @@ def main():
     new_reviewers = [{'reviewer': name} for name in args.add_reviewer]
 
     # Load authentication credentials
-    url_opener = create_url_opener_from_args(args)
+    headers = create_headers_from_args(args)
 
     # Retrieve change lists
     change_lists = query_change_lists(
-        url_opener, args.gerrit, args.query, args.start, args.limits)
+        headers, args.gerrit, args.query, args.start, args.limits)
     if not change_lists:
         print('error: No matching change lists.', file=sys.stderr)
         sys.exit(1)
@@ -236,32 +231,32 @@ def main():
     errors = {'num_errors': 0}
     for change in change_lists:
         if args.label or args.message:
-            _do_task(change, set_review, url_opener, args.gerrit, change['id'],
+            _do_task(change, set_review, headers, args.gerrit, change['id'],
                      labels, args.message, errors=errors)
         if args.add_hashtag or args.remove_hashtag:
-            _do_task(change, set_hashtags, url_opener, args.gerrit,
+            _do_task(change, set_hashtags, headers, args.gerrit,
                      change['id'], args.add_hashtag, args.remove_hashtag,
                      errors=errors)
         if args.set_topic:
-            _do_task(change, set_topic, url_opener, args.gerrit, change['id'],
+            _do_task(change, set_topic, headers, args.gerrit, change['id'],
                      args.set_topic, errors=errors)
         if args.delete_topic:
-            _do_task(change, delete_topic, url_opener, args.gerrit,
+            _do_task(change, delete_topic, headers, args.gerrit,
                      change['id'], expected_http_code=204, errors=errors)
         if args.submit:
-            _do_task(change, submit, url_opener, args.gerrit, change['id'],
+            _do_task(change, submit, headers, args.gerrit, change['id'],
                      errors=errors)
         if args.abandon:
-            _do_task(change, abandon, url_opener, args.gerrit, change['id'],
+            _do_task(change, abandon, headers, args.gerrit, change['id'],
                      args.abandon, errors=errors)
         if args.restore:
-            _do_task(change, restore, url_opener, args.gerrit, change['id'],
+            _do_task(change, restore, headers, args.gerrit, change['id'],
                      errors=errors)
         if args.add_reviewer:
-            _do_task(change, add_reviewers, url_opener, args.gerrit,
+            _do_task(change, add_reviewers, headers, args.gerrit,
                      change['id'], new_reviewers, errors=errors)
         for name in args.delete_reviewer:
-            _do_task(change, delete_reviewer, url_opener, args.gerrit,
+            _do_task(change, delete_reviewer, headers, args.gerrit,
                      change['id'], name, expected_http_code=204, errors=errors)
 
 

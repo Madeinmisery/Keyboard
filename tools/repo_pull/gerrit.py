@@ -24,23 +24,11 @@ import argparse
 import base64
 import json
 import os
+import requests
 import sys
 import xml.dom.minidom
 
-try:
-    # PY3
-    from urllib.error import HTTPError
-    from urllib.parse import urlencode, urlparse
-    from urllib.request import (
-        HTTPBasicAuthHandler, Request, build_opener
-    )
-except ImportError:
-    # PY2
-    from urllib import urlencode
-    from urllib2 import (
-        HTTPBasicAuthHandler, HTTPError, Request, build_opener
-    )
-    from urlparse import urlparse
+from urllib.parse import urlencode, urlparse
 
 try:
     # PY3.5
@@ -117,27 +105,22 @@ def load_auth_credentials(cookie_file_path):
         return load_auth_credentials_from_file(cookie_file)
 
 
-def create_url_opener(cookie_file_path, domain):
-    """Load username and password from .gitcookies and return a URL opener with
-    an authentication handler."""
+def create_headers(cookie_file_path, domain):
+    """Load username and password from .gitcookies and return them."""
 
     # Load authentication credentials
     credentials = load_auth_credentials(cookie_file_path)
     username, password = credentials[domain]
-
-    # Create URL opener with authentication handler
-    auth_handler = HTTPBasicAuthHandler()
-    auth_handler.add_password(domain, domain, username, password)
-    return build_opener(auth_handler)
+    return (username.strip(), password.strip())
 
 
-def create_url_opener_from_args(args):
-    """Create URL opener from command line arguments."""
+def create_headers_from_args(args):
+    """Create headers from command line arguments."""
 
     domain = urlparse(args.gerrit).netloc
 
     try:
-        return create_url_opener(args.gitcookies, domain)
+        return create_headers(args.gitcookies, domain)
     except KeyError:
         print('error: Cannot find the domain "{}" in "{}". '
               .format(domain, args.gitcookies), file=sys.stderr)
@@ -171,7 +154,7 @@ def _decode_xssi_json(data):
     return json.loads(data)
 
 
-def _query_change_lists(url_opener, gerrit, query_string, start, count):
+def _query_change_lists(headers, gerrit, query_string, start, count):
     """Query change lists from the Gerrit server with a single request.
 
     This function performs a single query of the Gerrit server based on the
@@ -199,13 +182,10 @@ def _query_change_lists(url_opener, gerrit, query_string, start, count):
     ]
     url = gerrit + '/a/changes/?' + urlencode(data)
 
-    response_file = url_opener.open(url)
-    try:
-        return _decode_xssi_json(response_file.read())
-    finally:
-        response_file.close()
+    response_file = requests.get(url, auth=headers)
+    return _decode_xssi_json(response_file.content)
 
-def query_change_lists(url_opener, gerrit, query_string, start, count):
+def query_change_lists(headers, gerrit, query_string, start, count):
     """Query change lists from the Gerrit server.
 
     This function queries the Gerrit server based on the input parameters for a
@@ -224,7 +204,7 @@ def query_change_lists(url_opener, gerrit, query_string, start, count):
     """
     changes = []
     while len(changes) < count:
-        chunk = _query_change_lists(url_opener, gerrit, query_string,
+        chunk = _query_change_lists(headers, gerrit, query_string,
                                     start + len(changes), count - len(changes))
         if not chunk:
             break
@@ -240,7 +220,7 @@ def query_change_lists(url_opener, gerrit, query_string, start, count):
     return changes
 
 
-def _make_json_post_request(url_opener, url, data, method='POST'):
+def _make_json_post_request(headers, url, data, method='POST'):
     """Open an URL request and decode its response.
 
     Returns a 3-tuple of (code, body, json).
@@ -250,31 +230,24 @@ def _make_json_post_request(url_opener, url, data, method='POST'):
     """
 
     data = json.dumps(data).encode('utf-8')
-    headers = {
-        'Content-Type': 'application/json; charset=UTF-8',
-    }
 
-    request = Request(url, data, headers)
-    request.get_method = lambda: method
+    if method == 'POST':
+        response_file = requests.post(url, json=data, auth=headers)
+    else:
+        response_file = requests.get(url, json=data, auth=headers)
 
+    res_code = response_file.status_code
+    res_body = response_file.content
     try:
-        response_file = url_opener.open(request)
-    except HTTPError as error:
-        response_file = error
-
-    with response_file:
-        res_code = response_file.getcode()
-        res_body = response_file.read()
-        try:
-            res_json = _decode_xssi_json(res_body)
-        except ValueError:
-            # The response isn't JSON if it doesn't start with a XSSI token.
-            # Possibly a plain text error message or empty body.
-            res_json = None
-        return (res_code, res_body, res_json)
+        res_json = _decode_xssi_json(res_body)
+    except ValueError:
+        # The response isn't JSON if it doesn't start with a XSSI token.
+        # Possibly a plain text error message or empty body.
+        res_json = None
+    return (res_code, res_body, res_json)
 
 
-def set_review(url_opener, gerrit_url, change_id, labels, message):
+def set_review(headers, gerrit_url, change_id, labels, message):
     """Set review votes to a change list."""
 
     url = '{}/a/changes/{}/revisions/current/review'.format(
@@ -286,18 +259,18 @@ def set_review(url_opener, gerrit_url, change_id, labels, message):
     if message:
         data['message'] = message
 
-    return _make_json_post_request(url_opener, url, data)
+    return _make_json_post_request(headers, url, data)
 
 
-def submit(url_opener, gerrit_url, change_id):
+def submit(headers, gerrit_url, change_id):
     """Submit a change list."""
 
     url = '{}/a/changes/{}/submit'.format(gerrit_url, change_id)
 
-    return _make_json_post_request(url_opener, url, {})
+    return _make_json_post_request(headers, url, {})
 
 
-def abandon(url_opener, gerrit_url, change_id, message):
+def abandon(headers, gerrit_url, change_id, message):
     """Abandon a change list."""
 
     url = '{}/a/changes/{}/abandon'.format(gerrit_url, change_id)
@@ -306,34 +279,34 @@ def abandon(url_opener, gerrit_url, change_id, message):
     if message:
         data['message'] = message
 
-    return _make_json_post_request(url_opener, url, data)
+    return _make_json_post_request(headers, url, data)
 
 
-def restore(url_opener, gerrit_url, change_id):
+def restore(headers, gerrit_url, change_id):
     """Restore a change list."""
 
     url = '{}/a/changes/{}/restore'.format(gerrit_url, change_id)
 
-    return _make_json_post_request(url_opener, url, {})
+    return _make_json_post_request(headers, url, {})
 
 
-def set_topic(url_opener, gerrit_url, change_id, name):
+def set_topic(headers, gerrit_url, change_id, name):
     """Set the topic name."""
 
     url = '{}/a/changes/{}/topic'.format(gerrit_url, change_id)
     data = {'topic': name}
-    return _make_json_post_request(url_opener, url, data, method='PUT')
+    return _make_json_post_request(headers, url, data, method='PUT')
 
 
-def delete_topic(url_opener, gerrit_url, change_id):
+def delete_topic(headers, gerrit_url, change_id):
     """Delete the topic name."""
 
     url = '{}/a/changes/{}/topic'.format(gerrit_url, change_id)
 
-    return _make_json_post_request(url_opener, url, {}, method='DELETE')
+    return _make_json_post_request(headers, url, {}, method='DELETE')
 
 
-def set_hashtags(url_opener, gerrit_url, change_id, add_tags=None,
+def set_hashtags(headers, gerrit_url, change_id, add_tags=None,
                  remove_tags=None):
     """Add or remove hash tags."""
 
@@ -345,10 +318,10 @@ def set_hashtags(url_opener, gerrit_url, change_id, add_tags=None,
     if remove_tags:
         data['remove'] = remove_tags
 
-    return _make_json_post_request(url_opener, url, data)
+    return _make_json_post_request(headers, url, data)
 
 
-def add_reviewers(url_opener, gerrit_url, change_id, reviewers):
+def add_reviewers(headers, gerrit_url, change_id, reviewers):
     """Add reviewers."""
 
     url = '{}/a/changes/{}/revisions/current/review'.format(
@@ -358,29 +331,26 @@ def add_reviewers(url_opener, gerrit_url, change_id, reviewers):
     if reviewers:
         data['reviewers'] = reviewers
 
-    return _make_json_post_request(url_opener, url, data)
+    return _make_json_post_request(headers, url, data)
 
 
-def delete_reviewer(url_opener, gerrit_url, change_id, name):
+def delete_reviewer(headers, gerrit_url, change_id, name):
     """Delete reviewer."""
 
     url = '{}/a/changes/{}/reviewers/{}/delete'.format(
         gerrit_url, change_id, name)
 
-    return _make_json_post_request(url_opener, url, {})
+    return _make_json_post_request(headers, url, {})
 
 
-def get_patch(url_opener, gerrit_url, change_id, revision_id='current'):
+def get_patch(headers, gerrit_url, change_id, revision_id='current'):
     """Download the patch file."""
 
     url = '{}/a/changes/{}/revisions/{}/patch'.format(
         gerrit_url, change_id, revision_id)
 
-    response_file = url_opener.open(url)
-    try:
-        return base64.b64decode(response_file.read())
-    finally:
-        response_file.close()
+    response_file = requests.get(url, auth=headers)
+    return base64.b64decode(response_file.content)
 
 def find_gerrit_name():
     """Find the gerrit instance specified in the default remote."""
@@ -438,9 +408,9 @@ def main():
             sys.exit(1)
 
     # Query change lists
-    url_opener = create_url_opener_from_args(args)
+    headers = create_headers_from_args(args)
     change_lists = query_change_lists(
-        url_opener, args.gerrit, args.query, args.start, args.limits)
+        headers, args.gerrit, args.query, args.start, args.limits)
 
     # Print the result
     if args.format == 'json':

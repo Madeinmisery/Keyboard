@@ -32,16 +32,10 @@ import sys
 import xml.dom.minidom
 
 from gerrit import (
-    create_url_opener_from_args, find_gerrit_name, normalize_gerrit_name,
+    create_headers_from_args, find_gerrit_name, normalize_gerrit_name,
     query_change_lists, run
 )
 from subprocess import PIPE
-
-try:
-    # pylint: disable=redefined-builtin
-    from __builtin__ import raw_input as input  # PY2
-except ImportError:
-    pass
 
 try:
     from shlex import quote as _sh_quote  # PY3.3
@@ -400,8 +394,8 @@ def _parse_args():
 
 def _get_change_lists_from_args(args):
     """Query the change lists by args."""
-    url_opener = create_url_opener_from_args(args)
-    return query_change_lists(url_opener, args.gerrit, args.query, args.start,
+    headers = create_headers_from_args(args)
+    return query_change_lists(headers, args.gerrit, args.query, args.start,
                               args.limits)
 
 
