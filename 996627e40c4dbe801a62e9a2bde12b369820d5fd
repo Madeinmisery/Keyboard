@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6a76a84_19df7722",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2022-06-23T14:38:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae42a226_cc1fbf4a",
+      "range": {
+        "startLine": 1323,
+        "startChar": 21,
+        "endLine": 1323,
+        "endChar": 33
+      },
+      "revId": "996627e40c4dbe801a62e9a2bde12b369820d5fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9d22016_a40d5bbd",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-06-23T14:21:44Z",
       "side": 1,
       "message": "nit: Maybe print this before the file ops, since if those fail (seems unlikely) then you\u0027d get the message indicating the overwrite is occurring before the failure.\n\nOr change the message to \"Overwrote Cargo.toml...\"",
+      "range": {
+        "startLine": 1354,
+        "startChar": 8,
+        "endLine": 1356,
+        "endChar": 0
+      },
+      "revId": "996627e40c4dbe801a62e9a2bde12b369820d5fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5cc0896_72f16c7b",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1356,
+      "author": {
+        "id": 1054468
+      },
+      "writtenOn": "2022-06-23T14:38:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9d22016_a40d5bbd",
       "range": {
         "startLine": 1354,
         "startChar": 8,
