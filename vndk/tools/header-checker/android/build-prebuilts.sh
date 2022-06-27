@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 # Copyright 2019 Google Inc. All rights reserved.
 #
@@ -66,6 +66,43 @@ else
         "versioner"
     )
 fi
+
+# Override Target binarie when specified in args
+usage() {
+      echo "Usage: $(basename $0)"
+      echo "   -l                       list available build targets"
+      echo "   -t build_target,         build specific target"
+}
+while getopts ":lt:?" arg; do
+  case $arg in
+    t) # Check if specified build target in SOONG_BINARIES
+      for i in "${SOONG_BINARIES[@]}"
+      do
+        if [ "$i" == "$OPTARG" ] ; then
+          SOONG_BINARIES=("$OPTARG")
+        fi
+      done
+      if [[ $SOONG_BINARIES != $OPTARG ]] ; then
+        echo "build_target specified not supported"
+        exit 0
+      fi
+      ;;
+    l) # Show available build targets
+      echo "${SOONG_BINARIES[@]}"
+      exit 0
+      ;;
+    ?) # Display help.
+      usage
+      exit 0
+      ;;
+    *)
+      usage
+      exit 0
+      ;;
+  esac
+done
+
+set -ex
 
 binaries=()
 for name in "${SOONG_BINARIES[@]}"; do
