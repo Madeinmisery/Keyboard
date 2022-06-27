@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 # Copyright 2019 Google Inc. All rights reserved.
 #
@@ -16,12 +16,11 @@
 
 source "$(dirname "$0")/envsetup.sh"
 
-if [ -z "${OUT_DIR}" ]; then
-    echo "error: Must set OUT_DIR"
-    exit 1
-fi
-
-TOP=$(pwd)
+usage() {
+    echo "Usage: $(basename $0) [-t build_target].."
+    echo "      Supported build targets for macOS: ${MACOS_SOONG_BINARIES[@]}"
+    echo "      Supported build targets for Linux: ${LINUX_SOONG_BINARIES[@]}"
+}
 
 UNAME="$(uname)"
 case "${UNAME}" in
@@ -37,6 +36,72 @@ Darwin)
     ;;
 esac
 
+LINUX_SOONG_BINARIES=(
+    "bindgen"
+    "cxx_extractor"
+    "header-abi-linker"
+    "header-abi-dumper"
+    "header-abi-diff"
+    "proto_metadata_plugin"
+    "protoc_extractor"
+    "versioner"
+)
+
+MACOS_SOONG_BINARIES=(
+    "versioner"
+)
+
+# Targets to be built
+if [ "${OS}" = "darwin" ]; then
+    SOONG_BINARIES=("${MACOS_SOONG_BINARIES[@]}")
+else
+    SOONG_BINARIES=("${LINUX_SOONG_BINARIES[@]}")
+fi
+
+
+containsElement () {
+    for i in "${SOONG_BINARIES[@]}"
+    do
+        if [ "$i" == "$1" ] ; then
+            echo 1
+            exit 0
+        fi
+    done
+    echo 0
+}
+
+while getopts "t:" arg; do
+    case $arg in
+        t) # Check if specified build targets in SOONG_BINARIES
+            if [[ $(containsElement ${OPTARG}) -eq 1 ]];
+            then
+                TARGET_BINARIES+=("$OPTARG")
+            else
+                echo "build_target ${OPTARG} not supported."
+                exit 0
+            fi
+            ;;
+        *) # Display help.
+            usage
+            exit 0
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+if [[ ${TARGET_BINARIES[@]} ]]; then
+    SOONG_BINARIES=("${TARGET_BINARIES[@]}")
+fi
+
+set -ex
+
+if [ -z "${OUT_DIR}" ]; then
+    echo "error: Must set OUT_DIR"
+    exit 1
+fi
+
+TOP=$(pwd)
+
 # Setup Soong configuration
 SOONG_OUT="${OUT_DIR}/soong"
 SOONG_HOST_OUT="${OUT_DIR}/soong/host/${OS}-x86"
@@ -49,23 +114,6 @@ cat > "${SOONG_OUT}/soong.variables" << __EOF__
 }
 __EOF__
 
-# Targets to be built
-if [ "${OS}" = "darwin" ]; then
-    SOONG_BINARIES=(
-        "versioner"
-    )
-else
-    SOONG_BINARIES=(
-        "bindgen"
-        "cxx_extractor"
-        "header-abi-linker"
-        "header-abi-dumper"
-        "header-abi-diff"
-        "proto_metadata_plugin"
-        "protoc_extractor"
-        "versioner"
-    )
-fi
 
 binaries=()
 for name in "${SOONG_BINARIES[@]}"; do
