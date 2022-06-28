@@ -61,6 +61,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e11986a0_300f1157",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T05:28:32Z",
+      "side": 1,
+      "message": "even `-h` can be optional, we can show usage() whenever argument is not valid:\n\n```\n# Show usage because `blah, -h` are not in SOONG_BINARIES\n$ ./build-prebuilts.sh blah\n\u003e Usage: ...\n$ ./build-prebuilts.sh -h\n\u003e Usage: ...\n```",
+      "parentUuid": "d1b66d05_82314dea",
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "508d86e9_12bd7907",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 2
