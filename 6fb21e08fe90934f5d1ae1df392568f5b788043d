@@ -26,6 +26,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d1b66d05_82314dea",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T05:20:58Z",
+      "side": 1,
+      "message": "We don\u0027t need a new `-t` option to do what you want.\nWe can do this:\n\n```\n# No argument. Build everything in SOONG_BINARIES (bindgen, cxx_extractor...)\n$ ./build-prebuilts.sh\n# With arguments. Build targets specified in argument list only.\n$ ./build-prebuilts.sh header-abi-linker header-abi-dumper\n# With `-h/--help/-u/--usage` options. Show usage().\n$ ./build-prebuilts.sh -h\n\u003e Usage: ...\n```",
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "508d86e9_12bd7907",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 2
