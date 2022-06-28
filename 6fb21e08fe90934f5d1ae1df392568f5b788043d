@@ -470,6 +470,30 @@
       },
       "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b44a8aa5_0f15f87d",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-06-28T07:25:22Z",
+      "side": 1,
+      "message": "Please separate the check from this loop, and move the loop before envsetup\nso that `set -ex` takes effect early.",
+      "parentUuid": "7102d84d_1c6570f0",
+      "range": {
+        "startLine": 95,
+        "startChar": 6,
+        "endLine": 95,
+        "endChar": 11
+      },
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
