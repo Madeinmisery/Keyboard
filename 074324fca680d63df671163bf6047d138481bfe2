@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ae8bc65_8f2b5852",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Thanks! that helps a lot.",
+      "parentUuid": "05386b8b_31d89b16",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f952805b_134eb5a7",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-06-28T08:11:53Z",
       "side": 1,
       "message": "covention is to use three dots to denote \"repeatable arguments\"",
+      "range": {
+        "startLine": 20,
+        "startChar": 46,
+        "endLine": 20,
+        "endChar": 48
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53ec2d22_bddd28d7",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f952805b_134eb5a7",
       "range": {
         "startLine": 20,
         "startChar": 46,
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c345b4f1_14cc9324",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05de9caf_1e8d062a",
+      "range": {
+        "startLine": 21,
+        "startChar": 20,
+        "endLine": 21,
+        "endChar": 58
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc0510ed_388ddbde",
@@ -77,6 +143,30 @@
       "writtenOn": "2022-06-28T08:11:53Z",
       "side": 1,
       "message": "coding style is snek_case() for function name, also use a more descriptive name, for example \"valid_build_target()\"",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 15
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12a5dc8d_51508493",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc0510ed_388ddbde",
       "range": {
         "startLine": 63,
         "startChar": 0,
@@ -104,6 +194,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1dd179b_53740441",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "41d8154d_e287bf26",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4573981_dba0b33e",
@@ -127,6 +235,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de7fd184_c1936e9e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4573981_dba0b33e",
+      "range": {
+        "startLine": 66,
+        "startChar": 11,
+        "endLine": 66,
+        "endChar": 27
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1bcd2319_ffeeeea9",
@@ -140,6 +272,30 @@
       "writtenOn": "2022-06-28T08:11:53Z",
       "side": 1,
       "message": "return 1",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa75f2b3_de9c615f",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Since there is a `-e` flag in first line: `#!/bin/bash -e`, this script would stop the execution whenever return with nonzero. So I use echo to catch the return value of this bash function. Is this okey? or should I just get rid of this bash function?",
+      "parentUuid": "1bcd2319_ffeeeea9",
       "range": {
         "startLine": 67,
         "startChar": 12,
@@ -190,6 +346,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66d80f01_0389e56e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2281cb5_90c54011",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1e83b8a2_f460e891",
@@ -230,6 +404,48 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2474f191_5f6a1628",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e83b8a2_f460e891",
+      "range": {
+        "startLine": 82,
+        "startChar": 37,
+        "endLine": 82,
+        "endChar": 38
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02aca628_d80ba294",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c67a33e8_46a3ea1d",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d19eb191_d20b526e",
@@ -243,6 +459,30 @@
       "writtenOn": "2022-06-28T07:25:22Z",
       "side": 1,
       "message": "is not one of the supported targets: ${SOONG_BINARIES}",
+      "range": {
+        "startLine": 86,
+        "startChar": 37,
+        "endLine": 87,
+        "endChar": 21
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4d5a2a5_dc940bc3",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d19eb191_d20b526e",
       "range": {
         "startLine": 86,
         "startChar": 37,
@@ -276,6 +516,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0685ab77_630a7995",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2effde2f_e1203e6b",
+      "range": {
+        "startLine": 88,
+        "startChar": 21,
+        "endLine": 88,
+        "endChar": 22
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6ac91cec_ca9d640e",
@@ -293,6 +557,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1fb10ad_a4a8eefe",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ac91cec_ca9d640e",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6893796a_8894b1e6",
@@ -306,6 +588,24 @@
       "writtenOn": "2022-06-28T08:23:50Z",
       "side": 1,
       "message": "initializing SOONG_BINARIES with the complete list of build targets, and overriding it here seems convoluted. how about structure the program to\n\n```\nif [ \"${OS}\" \u003d \"darwin\" ]; then\n    VALID_SOONG_BINARIES\u003d(\"${MACOS_SOONG_BINARIES[@]}\")\nelse\n    VALID_SOONG_BINARIES\u003d(\"${LINUX_SOONG_BINARIES[@]}\")\nfi\n\nSOONG_BINARIES\u003d()\nwhile (loop through the commandline args); do\n   SOONG_BINARIES+\u003d(\"${args}\")\ndone\n\nif [ \"${#SOONG_BINARIES[@]}\" -eq 0 ]; then\n  // SOONG_BINARIES is empty, so there must be no commandline argument, thus we\n  // build everything.\n  SOONG_BINARIES\u003d(\"${VALID_SOONG_BINARIES[@]}\")\nfi\n```",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4886302d_a9a9cd5e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T17:59:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6893796a_8894b1e6",
       "revId": "074324fca680d63df671163bf6047d138481bfe2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
