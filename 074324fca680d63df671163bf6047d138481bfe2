@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f952805b_134eb5a7",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "covention is to use three dots to denote \"repeatable arguments\"",
+      "range": {
+        "startLine": 20,
+        "startChar": 46,
+        "endLine": 20,
+        "endChar": 48
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "05de9caf_1e8d062a",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 5
@@ -26,6 +49,132 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cc0510ed_388ddbde",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "coding style is snek_case() for function name, also use a more descriptive name, for example \"valid_build_target()\"",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 15
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41d8154d_e287bf26",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "Coding style is to add \"; do\" after for-expression (go/shell-style#control-flow)\n\n```\nfor e in ...; do \n   ...\ndone\n```",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4573981_dba0b33e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "either use\n [ STR1 \u003d STR2 ]\nor\n [[ STR1 \u003d\u003d STR2 ]]\n \n[ is more portable, but using [[ is fine too",
+      "range": {
+        "startLine": 66,
+        "startChar": 11,
+        "endLine": 66,
+        "endChar": 27
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bcd2319_ffeeeea9",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "return 1",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb4e73bc_9749d42b",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "return 0",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 10
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2281cb5_90c54011",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "; do",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1e83b8a2_f460e891",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 5
@@ -43,6 +192,23 @@
         "endLine": 82,
         "endChar": 38
       },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c67a33e8_46a3ea1d",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "```\nif valid_build_target \"$1\"; then\n  ...\nelse\n  ...\nfi\n```",
       "revId": "074324fca680d63df671163bf6047d138481bfe2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -89,6 +255,23 @@
         "endLine": 88,
         "endChar": 22
       },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ac91cec_ca9d640e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:11:53Z",
+      "side": 1,
+      "message": "\"${#TARGET_BINARIES[@]}\" to get the length of an array.\n\n[ \"${#TARGET_BINARIES[@]}\" -gt 0 ] to test that array is not empty",
       "revId": "074324fca680d63df671163bf6047d138481bfe2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
