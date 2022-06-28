@@ -49,6 +49,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "688c990d_5fc87fb1",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T04:09:28Z",
+      "side": 1,
+      "message": "Should this message be printed every time or just when the specified target is not supported?",
+      "parentUuid": "508d86e9_12bd7907",
+      "range": {
+        "startLine": 73,
+        "startChar": 40,
+        "endLine": 73,
+        "endChar": 68
+      },
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c889c66_081edb75",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 2
