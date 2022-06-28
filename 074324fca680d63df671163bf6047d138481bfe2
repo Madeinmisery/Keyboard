@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "05386b8b_31d89b16",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:23:50Z",
+      "side": 1,
+      "message": "also run your script through shellcheck before uploading, it often catches hard-to-see bugs.",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f952805b_134eb5a7",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 5
@@ -272,6 +289,23 @@
       "writtenOn": "2022-06-28T08:11:53Z",
       "side": 1,
       "message": "\"${#TARGET_BINARIES[@]}\" to get the length of an array.\n\n[ \"${#TARGET_BINARIES[@]}\" -gt 0 ] to test that array is not empty",
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6893796a_8894b1e6",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-28T08:23:50Z",
+      "side": 1,
+      "message": "initializing SOONG_BINARIES with the complete list of build targets, and overriding it here seems convoluted. how about structure the program to\n\n```\nif [ \"${OS}\" \u003d \"darwin\" ]; then\n    VALID_SOONG_BINARIES\u003d(\"${MACOS_SOONG_BINARIES[@]}\")\nelse\n    VALID_SOONG_BINARIES\u003d(\"${LINUX_SOONG_BINARIES[@]}\")\nfi\n\nSOONG_BINARIES\u003d()\nwhile (loop through the commandline args); do\n   SOONG_BINARIES+\u003d(\"${args}\")\ndone\n\nif [ \"${#SOONG_BINARIES[@]}\" -eq 0 ]; then\n  // SOONG_BINARIES is empty, so there must be no commandline argument, thus we\n  // build everything.\n  SOONG_BINARIES\u003d(\"${VALID_SOONG_BINARIES[@]}\")\nfi\n```",
       "revId": "074324fca680d63df671163bf6047d138481bfe2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
