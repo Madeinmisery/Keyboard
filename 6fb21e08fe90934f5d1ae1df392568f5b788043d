@@ -73,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6f0f42aa_e7b63137",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-06-28T05:01:41Z",
+      "side": 1,
+      "message": "Every time.\nThe users need to know the supported values when they read the help message about \"-t\".",
+      "parentUuid": "688c990d_5fc87fb1",
+      "range": {
+        "startLine": 73,
+        "startChar": 40,
+        "endLine": 73,
+        "endChar": 68
+      },
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c889c66_081edb75",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 2
