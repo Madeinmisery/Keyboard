@@ -43,6 +43,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8d486bd3_76f14eb5",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-28T05:26:16Z",
+      "side": 1,
+      "message": "Sure, I used flags to support -l and -t. Since the -l flag has been removed, I\u0027ll use arguments directly. Thanks!",
+      "parentUuid": "d1b66d05_82314dea",
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "508d86e9_12bd7907",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 2
