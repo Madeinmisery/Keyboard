@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24332863_af75e786",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T03:29:06Z",
+      "side": 1,
+      "message": "Add `SOONG_BINARIES\u003d()` to initialize SOONG_BINARIES, else it could inherit value from env.",
+      "revId": "8b4094e1d7b84b9d110716b23508437ef96c6e93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

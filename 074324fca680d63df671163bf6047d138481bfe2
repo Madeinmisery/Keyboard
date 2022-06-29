@@ -308,6 +308,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "20398827_8eed36f5",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T03:29:06Z",
+      "side": 1,
+      "message": "if the function is called in a if-block condition, then it won\u0027t trigger the \"-e\".\n\n```\nif ! valid_build_target blah ; then\n    usage\n    exit 1\nfi\n```",
+      "parentUuid": "fa75f2b3_de9c615f",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cb4e73bc_9749d42b",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 5
