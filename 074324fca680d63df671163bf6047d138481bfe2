@@ -330,6 +330,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa66c9e8_7710f614",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-29T03:58:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20398827_8eed36f5",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 68,
+        "endChar": 18
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb4e73bc_9749d42b",
@@ -343,6 +367,30 @@
       "writtenOn": "2022-06-28T08:11:53Z",
       "side": 1,
       "message": "return 0",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 10
+      },
+      "revId": "074324fca680d63df671163bf6047d138481bfe2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "276c0dae_e7821800",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-29T03:58:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb4e73bc_9749d42b",
       "range": {
         "startLine": 71,
         "startChar": 4,
