@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8fce5a97_ee0d53f6",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T04:36:15Z",
+      "side": 1,
+      "message": "this should be at L69, right before its first use.",
+      "revId": "7bc4749ac91d41083043f9b6d4325b996518e410",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cdb7a5b_410a6e83",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T04:36:15Z",
+      "side": 1,
+      "message": "there should be at least one blank line before and after function definitions",
+      "revId": "7bc4749ac91d41083043f9b6d4325b996518e410",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9798ec4_798b6d43",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T04:36:15Z",
+      "side": 1,
+      "message": "return 0 for success",
+      "range": {
+        "startLine": 64,
+        "startChar": 19,
+        "endLine": 64,
+        "endChar": 20
+      },
+      "revId": "7bc4749ac91d41083043f9b6d4325b996518e410",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ec45efe_d735372d",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T04:36:15Z",
+      "side": 1,
+      "message": "return 1 for fail/invalid",
+      "revId": "7bc4749ac91d41083043f9b6d4325b996518e410",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
