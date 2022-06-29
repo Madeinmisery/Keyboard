@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b41a1e69_6ce805ca",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-06-29T03:39:20Z",
+      "side": 1,
+      "message": "this is an extra space",
+      "range": {
+        "startLine": 62,
+        "startChar": 26,
+        "endLine": 62,
+        "endChar": 27
+      },
+      "revId": "8b4094e1d7b84b9d110716b23508437ef96c6e93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "24332863_af75e786",
         "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
         "patchSetId": 6
