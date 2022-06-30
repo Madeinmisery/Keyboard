@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a31658b_5440f2fb",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-30T02:53:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "78f440be_d9971fa5",
+      "range": {
+        "startLine": 78,
+        "startChar": 12,
+        "endLine": 78,
+        "endChar": 44
+      },
+      "revId": "12aba6e15369a84ab942b50f695e46d205dd7598",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54c06298_a44a995e",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-06-30T01:43:34Z",
       "side": 1,
       "message": "Since VALID_SOONG_BINARIES are displayed, this is not needed.",
+      "range": {
+        "startLine": 82,
+        "startChar": 16,
+        "endLine": 82,
+        "endChar": 21
+      },
+      "revId": "12aba6e15369a84ab942b50f695e46d205dd7598",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27045087_2371b6bf",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-06-30T02:53:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54c06298_a44a995e",
       "range": {
         "startLine": 82,
         "startChar": 16,
