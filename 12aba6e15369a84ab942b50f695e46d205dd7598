@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78f440be_d9971fa5",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-06-30T01:43:34Z",
+      "side": 1,
+      "message": "```\n        *)\n            SOONG_BINARIES+\u003d(\"$1\")\n            ;;\n    esac\n    shift\ndone\n\nset -ex\n\nsource \"$(dirname \"$0\")/envsetup.sh\"\n\nUNAME\u003d\"$(uname)\"\n...\n\nfor name in \"${SOONG_BINARIES[@]}\"; do\n    if  valid_build_target \"${name}\"; then\n        ...\ndone\n```",
+      "range": {
+        "startLine": 78,
+        "startChar": 12,
+        "endLine": 78,
+        "endChar": 44
+      },
+      "revId": "12aba6e15369a84ab942b50f695e46d205dd7598",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54c06298_a44a995e",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-06-30T01:43:34Z",
+      "side": 1,
+      "message": "Since VALID_SOONG_BINARIES are displayed, this is not needed.",
+      "range": {
+        "startLine": 82,
+        "startChar": 16,
+        "endLine": 82,
+        "endChar": 21
+      },
+      "revId": "12aba6e15369a84ab942b50f695e46d205dd7598",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

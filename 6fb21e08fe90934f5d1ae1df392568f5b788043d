@@ -656,6 +656,30 @@
       },
       "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "125010df_e400eb72",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-06-30T01:43:34Z",
+      "side": 1,
+      "message": "Please see the comment on patchset 8.",
+      "parentUuid": "b44a8aa5_0f15f87d",
+      "range": {
+        "startLine": 95,
+        "startChar": 6,
+        "endLine": 95,
+        "endChar": 11
+      },
+      "revId": "6fb21e08fe90934f5d1ae1df392568f5b788043d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
