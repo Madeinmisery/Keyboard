@@ -16,6 +16,24 @@
       "message": "delete this empty line",
       "revId": "5b6476f80ceaeb9655deaae240ff56bed6a5e48f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6188698b_74524c5c",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-01T02:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9eed6ac3_fbb185d3",
+      "revId": "5b6476f80ceaeb9655deaae240ff56bed6a5e48f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
