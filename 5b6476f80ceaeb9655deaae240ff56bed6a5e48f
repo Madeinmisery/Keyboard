@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9eed6ac3_fbb185d3",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-01T02:32:36Z",
+      "side": 1,
+      "message": "delete this empty line",
+      "revId": "5b6476f80ceaeb9655deaae240ff56bed6a5e48f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
