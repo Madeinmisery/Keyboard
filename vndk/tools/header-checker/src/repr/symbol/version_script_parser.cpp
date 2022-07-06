@@ -52,8 +52,8 @@ void VersionScriptParser::SetArch(const std::string &arch) {
 
 VersionScriptParser::ParsedTags VersionScriptParser::ParseSymbolTags(
     const std::string &line) {
-  static const char *const POSSIBLE_ARCHES[] = {
-      "arm", "arm64", "x86", "x86_64", "mips", "mips64"};
+  static const char *const POSSIBLE_ARCHES[] = {"arm", "arm64", "x86",
+                                                "x86_64"};
 
   ParsedTags result;
 

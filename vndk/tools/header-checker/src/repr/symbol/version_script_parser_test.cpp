@@ -286,7 +286,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsArch) {
     EXPECT_NE(funcs.end(), funcs.find("test1"));
     EXPECT_NE(funcs.end(), funcs.find("test2"));
     EXPECT_EQ(funcs.end(), funcs.find("test3"));
-    EXPECT_EQ(funcs.end(), funcs.find("test4"));
+    EXPECT_NE(funcs.end(), funcs.find("test4"));
   }
 
   {
@@ -302,22 +302,6 @@ TEST(VersionScriptParserTest, ParseSymbolTagsArch) {
     EXPECT_NE(funcs.end(), funcs.find("test1"));
     EXPECT_NE(funcs.end(), funcs.find("test2"));
     EXPECT_NE(funcs.end(), funcs.find("test3"));
-    EXPECT_EQ(funcs.end(), funcs.find("test4"));
-  }
-
-  {
-    VersionScriptParser parser;
-    parser.SetArch("mips");
-
-    std::istringstream stream(testdata);
-    std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
-    ASSERT_TRUE(result);
-
-    const ExportedSymbolSet::FunctionMap &funcs = result->GetFunctions();
-
-    EXPECT_NE(funcs.end(), funcs.find("test1"));
-    EXPECT_EQ(funcs.end(), funcs.find("test2"));
-    EXPECT_EQ(funcs.end(), funcs.find("test3"));
     EXPECT_NE(funcs.end(), funcs.find("test4"));
   }
 }
