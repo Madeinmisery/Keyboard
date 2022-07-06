@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ea8b4c50_8f370fb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T07:55:51Z",
+      "side": 1,
+      "message": "Can you please add description in the commit message?",
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e6b8d6b0_7d54a3a7",
         "filename": "tools/ninja_dependency_analysis/README.md",
         "patchSetId": 2
