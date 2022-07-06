@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e6b8d6b0_7d54a3a7",
+        "filename": "tools/ninja_dependency_analysis/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T07:54:17Z",
+      "side": 1,
+      "message": "./",
+      "range": {
+        "startLine": 5,
+        "startChar": 1,
+        "endLine": 5,
+        "endChar": 2
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cb68644_261b4b66",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T07:54:17Z",
+      "side": 1,
+      "message": "I guess it would apply same here : \n  if exempted_file_list and ...",
+      "range": {
+        "startLine": 30,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 37
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4cb20c99_16cb1534",
         "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
         "patchSetId": 2
@@ -129,6 +175,30 @@
       "writtenOn": "2022-07-06T07:45:31Z",
       "side": 1,
       "message": "I think this can throw an error, because projects may not be defined at all.",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 24
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ece37118_8ecc1e28",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T07:54:17Z",
+      "side": 1,
+      "message": "Probably we need extra error handling : when the file does not exist.\n\nAnyway, it is still required to define projects argument first.",
+      "parentUuid": "e8efa997_60b3ffa8",
       "range": {
         "startLine": 80,
         "startChar": 0,
