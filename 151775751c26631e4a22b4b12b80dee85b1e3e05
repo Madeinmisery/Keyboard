@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb4e5513_ae96c288",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea8b4c50_8f370fb7",
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e6b8d6b0_7d54a3a7",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-07-06T07:54:17Z",
       "side": 1,
       "message": "./",
+      "range": {
+        "startLine": 5,
+        "startChar": 1,
+        "endLine": 5,
+        "endChar": 2
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d8c50a9_325bc83e",
+        "filename": "tools/ninja_dependency_analysis/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e6b8d6b0_7d54a3a7",
       "range": {
         "startLine": 5,
         "startChar": 1,
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f8e9ec8_84e1714a",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7cb68644_261b4b66",
+      "range": {
+        "startLine": 30,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 37
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4cb20c99_16cb1534",
@@ -77,6 +143,30 @@
       "writtenOn": "2022-07-06T07:45:31Z",
       "side": 1,
       "message": "if l:",
+      "range": {
+        "startLine": 33,
+        "startChar": 16,
+        "endLine": 33,
+        "endChar": 30
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ff34746_a22766ff",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4cb20c99_16cb1534",
       "range": {
         "startLine": 33,
         "startChar": 16,
@@ -112,6 +202,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7e0727ba_173edf67",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "I am not sure about python version in CI. IIRC, it uses older python3..",
+      "parentUuid": "5883c5ff_c65ec76e",
+      "range": {
+        "startLine": 47,
+        "startChar": 11,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5a1e56ab_ddb1abda",
         "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
         "patchSetId": 2
@@ -123,6 +237,30 @@
       "writtenOn": "2022-07-06T07:45:31Z",
       "side": 1,
       "message": "use text\u003dTrue?",
+      "range": {
+        "startLine": 65,
+        "startChar": 44,
+        "endLine": 65,
+        "endChar": 50
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "516bbb51_54c2b15a",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "https://docs.python.org/3/library/subprocess.html#subprocess.check_output\nIt is also introduced in 3.7.",
+      "parentUuid": "5a1e56ab_ddb1abda",
       "range": {
         "startLine": 65,
         "startChar": 44,
@@ -156,6 +294,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "14b61db8_a4ec16e0",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b61d2b9e_62709cd6",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 41
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5aa64706_5f4599c1",
@@ -169,6 +331,30 @@
       "writtenOn": "2022-07-06T07:45:31Z",
       "side": 1,
       "message": "elif args.repo_manifest and",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 39
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef16452e_2af5ebd5",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5aa64706_5f4599c1",
       "range": {
         "startLine": 74,
         "startChar": 0,
@@ -216,6 +402,30 @@
       "side": 1,
       "message": "Probably we need extra error handling : when the file does not exist.\n\nAnyway, it is still required to define projects argument first.",
       "parentUuid": "e8efa997_60b3ffa8",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 24
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1411593_8d059e63",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-06T08:16:14Z",
+      "side": 1,
+      "message": "set default value(None) for projects. actually project list is optional field.",
+      "parentUuid": "ece37118_8ecc1e28",
       "range": {
         "startLine": 80,
         "startChar": 0,
