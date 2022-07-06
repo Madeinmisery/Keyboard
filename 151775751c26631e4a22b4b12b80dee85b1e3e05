@@ -226,6 +226,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d4ad88cf_c7f0605f",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T08:25:57Z",
+      "side": 1,
+      "message": "What about build this file with Android.bp and use the output binary? It may use fixed version of python with prebuilts.",
+      "parentUuid": "7e0727ba_173edf67",
+      "range": {
+        "startLine": 47,
+        "startChar": 11,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5a1e56ab_ddb1abda",
         "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
         "patchSetId": 2

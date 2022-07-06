@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c54fb4d9_a0017248",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T08:25:57Z",
+      "side": 1,
+      "message": "Sorry I missed this. Please use either \u0027 or \" (I personally prefer \u0027) for strings",
+      "range": {
+        "startLine": 29,
+        "startChar": 25,
+        "endLine": 29,
+        "endChar": 26
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305e752a_8807bde9",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-06T08:25:57Z",
+      "side": 1,
+      "message": "Same here and some others below : use either \u0027 or \" for strings.",
+      "range": {
+        "startLine": 69,
+        "startChar": 7,
+        "endLine": 69,
+        "endChar": 8
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
