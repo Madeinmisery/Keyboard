@@ -26,6 +26,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e48c098f_6f7ca6c8",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-07-06T08:46:11Z",
+      "side": 1,
+      "message": "Why don\u0027t you define this as a positional argument, or use \"os.getenv(\u0027ANDROID_BUILD_TOP\u0027)\" to find the ninja binary automatically from the source tree if user already called \u0027lunch target\u0027?",
+      "range": {
+        "startLine": 53,
+        "startChar": 20,
+        "endLine": 53,
+        "endChar": 29
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "305e752a_8807bde9",
         "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
         "patchSetId": 3
@@ -43,6 +66,23 @@
         "endLine": 69,
         "endChar": 8
       },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "408d81fe_12acbc47",
+        "filename": "tools/ninja_dependency_analysis/exempted_files",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-07-06T08:46:11Z",
+      "side": 1,
+      "message": "Can we remove this empty file?",
       "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
