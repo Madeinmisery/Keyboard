@@ -120,11 +120,12 @@ def create_source_abi_reference_dumps_for_all_products(args):
 
     for product in args.products:
         build_vars = get_build_vars_for_product(
-            ['PLATFORM_VNDK_VERSION', 'BOARD_VNDK_VERSION', 'BINDER32BIT'],
+            ['PLATFORM_VNDK_VERSION', 'BOARD_VNDK_VERSION', 'BINDER32BIT', 'PLATFORM_VERSION_CODENAME'],
             product, args.build_variant)
 
         platform_vndk_version = build_vars[0]
         board_vndk_version = build_vars[1]
+        platform_version_codename = build_vars[3]
         if build_vars[2] == 'true':
             binder_bitness = '32'
         else:
@@ -135,12 +136,6 @@ def create_source_abi_reference_dumps_for_all_products(args):
 
         targets = [t for t in (Target(True, product), Target(False, product))
                    if t.arch]
-        # Remove reference ABI dumps specified in `args.libs` (or remove all of
-        # them if none of them are specified) so that we may build these
-        # libraries successfully.
-        remove_references_for_all_arches(
-            args.ref_dump_dir, chosen_vndk_version, binder_bitness, targets,
-            args.libs)
 
         if not args.no_make_lib:
             # Build all the specified libs, or build `findlsdumps` if no libs
@@ -151,6 +146,18 @@ def create_source_abi_reference_dumps_for_all_products(args):
         lsdump_paths = read_lsdump_paths(product, args.build_variant,
                                          platform_vndk_version, targets,
                                          build=False)
+        arch_lsdump_paths = find_lib_lsdumps(lsdump_paths, args.libs, targets[0])
+        tag, _ = arch_lsdump_paths[0]
+
+        if tag_to_dir_name(tag) != 'vndk' and platform_version_codename != 'REL':
+            chosen_vndk_version = 'current'
+
+        # Remove reference ABI dumps specified in `args.libs` (or remove all of
+        # them if none of them are specified) so that we may build these
+        # libraries successfully.
+        remove_references_for_all_arches(
+            args.ref_dump_dir, chosen_vndk_version, binder_bitness, targets,
+            args.libs)
 
         num_processed += create_source_abi_reference_dumps(
             args, chosen_vndk_version, binder_bitness, lsdump_paths, targets)
