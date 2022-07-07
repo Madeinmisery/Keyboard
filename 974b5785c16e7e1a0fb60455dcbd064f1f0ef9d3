@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "008c0fa3_5953e836",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c54fb4d9_a0017248",
+      "range": {
+        "startLine": 29,
+        "startChar": 25,
+        "endLine": 29,
+        "endChar": 26
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e48c098f_6f7ca6c8",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-07-06T08:46:11Z",
       "side": 1,
       "message": "Why don\u0027t you define this as a positional argument, or use \"os.getenv(\u0027ANDROID_BUILD_TOP\u0027)\" to find the ninja binary automatically from the source tree if user already called \u0027lunch target\u0027?",
+      "range": {
+        "startLine": 53,
+        "startChar": 20,
+        "endLine": 53,
+        "endChar": 29
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b50907c0_3c2aee9b",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "As talked in offline, `lunch` isn\u0027t launched before build in CI, so I made the tool specify ninja binary, ninja_file explicitly.",
+      "parentUuid": "e48c098f_6f7ca6c8",
       "range": {
         "startLine": 53,
         "startChar": 20,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4620617_b722db53",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "305e752a_8807bde9",
+      "range": {
+        "startLine": 69,
+        "startChar": 7,
+        "endLine": 69,
+        "endChar": 8
+      },
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "408d81fe_12acbc47",
@@ -83,6 +155,24 @@
       "writtenOn": "2022-07-06T08:46:11Z",
       "side": 1,
       "message": "Can we remove this empty file?",
+      "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "655ff465_e7b2d74b",
+        "filename": "tools/ninja_dependency_analysis/exempted_files",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "408d81fe_12acbc47",
       "revId": "974b5785c16e7e1a0fb60455dcbd064f1f0ef9d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }

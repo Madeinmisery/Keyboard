@@ -248,6 +248,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "35219546_d0b9b0d3",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "I used embed_launcher for that. Thanks for suggestions!",
+      "parentUuid": "d4ad88cf_c7f0605f",
+      "range": {
+        "startLine": 47,
+        "startChar": 11,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a1e56ab_ddb1abda",
@@ -309,6 +333,30 @@
       "side": 1,
       "message": "then try universal_newlines\u003dTrue?",
       "parentUuid": "516bbb51_54c2b15a",
+      "range": {
+        "startLine": 65,
+        "startChar": 44,
+        "endLine": 65,
+        "endChar": 50
+      },
+      "revId": "151775751c26631e4a22b4b12b80dee85b1e3e05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16dfdbc1_962b3f13",
+        "filename": "tools/ninja_dependency_analysis/collect_inputs.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-07-07T15:12:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5df09efd_914b4937",
       "range": {
         "startLine": 65,
         "startChar": 44,
