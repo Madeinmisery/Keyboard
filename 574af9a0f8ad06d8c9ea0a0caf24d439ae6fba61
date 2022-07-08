@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83bea9c0_45d39acd",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-08T03:56:53Z",
+      "side": 1,
+      "message": "nit:\n\nif tag in (\u0027LLNDK\u0027, \u0027PLATFORM\u0027):",
+      "revId": "574af9a0f8ad06d8c9ea0a0caf24d439ae6fba61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
