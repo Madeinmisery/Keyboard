@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b91f8dcc_4a6db2eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2022-07-08T16:20:43Z",
+      "side": 1,
+      "message": "The change looks fine, but I am not sure about the preference of the protocols.  Also, I haven\u0027t worked on this or used this tool for a while.  I probably not the best person to review this.  Yi-yo may take a look?",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
