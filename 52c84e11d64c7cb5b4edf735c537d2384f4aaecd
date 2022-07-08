@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8e4f510_a2ee59a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-08T10:54:33Z",
+      "side": 1,
+      "message": "split too long line",
+      "revId": "52c84e11d64c7cb5b4edf735c537d2384f4aaecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
