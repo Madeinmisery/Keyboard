@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "79091661_80af8674",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-08T04:51:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2362b08_c1d01756",
+      "revId": "574af9a0f8ad06d8c9ea0a0caf24d439ae6fba61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "83bea9c0_45d39acd",
         "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
         "patchSetId": 2
