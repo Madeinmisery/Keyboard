@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "164896cd_384fa130",
+        "filename": "tools/ninja_dependency_analysis/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-07-08T00:40:53Z",
+      "side": 1,
+      "message": "nit: },",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 5
+      },
+      "revId": "c731d5f50799dfabf1bf65b659ec8e1a2a17664d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
