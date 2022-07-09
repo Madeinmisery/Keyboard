@@ -16,6 +16,24 @@
       "message": "split too long line",
       "revId": "52c84e11d64c7cb5b4edf735c537d2384f4aaecd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4389d99_1d632c8a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-09T06:16:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8e4f510_a2ee59a6",
+      "revId": "52c84e11d64c7cb5b4edf735c537d2384f4aaecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
