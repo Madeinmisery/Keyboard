@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90cd84d0_1a633664",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1958469
+      },
+      "writtenOn": "2022-07-10T10:19:02Z",
+      "side": 1,
+      "message": "việc làm Bắc Ninh Bắc Giang ",
+      "revId": "2dc5c8aa70731a7524108de60678b6fd0c275daf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
