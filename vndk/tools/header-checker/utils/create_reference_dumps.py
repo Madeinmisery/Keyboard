@@ -104,8 +104,8 @@ def create_source_abi_reference_dumps(args, chosen_vndk_version,
     num_libs_copied = 0
     for target in targets:
         assert target.primary_arch != ''
-        print(f'Creating dumps for arch: {target.arch}, '
-              f'primary arch: {target.primary_arch}')
+        print('Creating dumps for arch: %s, primary arch: %s' %
+              (target.arch, target.primary_arch))
 
         num_libs_copied += find_and_copy_lib_lsdumps(
             args.ref_dump_dir, chosen_vndk_version, binder_bitness, target,
