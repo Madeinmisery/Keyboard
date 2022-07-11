@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee43f780_a1b9f277",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-11T08:56:53Z",
+      "side": 1,
+      "message": "Third stage of what mechanism? Tthis is not very informative, please state what\u0027s this \"mechanism\" instead.\n\nFirst line of commit message should be a brief title or topic of this change, like describing the goal or subtask.\n\nMessage body includes details description of what changed in this commit.\n\nSo for this change, the title should describe \"what the mechanism is\" (goal), or describe the logic delta (move platform and ndk under .../current) (subtask); and the body can describe what stage 1, 2 and 3 actually are.",
+      "range": {
+        "startLine": 7,
+        "startChar": 40,
+        "endLine": 7,
+        "endChar": 65
+      },
+      "revId": "d2dcca5862370a8e59dee3287ffd597e469b2c86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
