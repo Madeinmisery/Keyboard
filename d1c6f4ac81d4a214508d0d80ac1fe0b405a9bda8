@@ -22,6 +22,30 @@
       },
       "revId": "d1c6f4ac81d4a214508d0d80ac1fe0b405a9bda8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1cb7e06_85fcdcd4",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-11T08:47:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd404515_5eb3644f",
+      "range": {
+        "startLine": 150,
+        "startChar": 8,
+        "endLine": 150,
+        "endChar": 37
+      },
+      "revId": "d1c6f4ac81d4a214508d0d80ac1fe0b405a9bda8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
