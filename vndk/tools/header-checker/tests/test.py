@@ -91,8 +91,8 @@ class HeaderCheckerTest(unittest.TestCase):
         if create:
             return make_and_copy_dump(module, self.get_tmp_dir())
         self.assertTrue(module.has_reference_dump,
-                        f'Module {module.name} is not configured to generate '
-                        f'reference dump.')
+                        'Module %s is not configured to generate reference '
+                        'dump.' % module.name)
         return os.path.join(REF_DUMP_DIR, module.arch, module.get_dump_name())
 
     def prepare_and_run_abi_diff_all_archs(self, old_lib, new_lib,

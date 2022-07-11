@@ -92,9 +92,9 @@ def _validate_dump_content(dump_path):
                 # The substring is not preceded by a common path character.
                 if start == 0 or not (line[start - 1].isalnum() or
                                       line[start - 1] in '.-_/'):
-                    raise ValueError(f'{dump_path} contains absolute path to '
-                                     f'$ANDROID_BUILD_TOP at line '
-                                     f'{line_number}:\n{line}')
+                    raise ValueError('%s contains absolute path to '
+                                     '$ANDROID_BUILD_TOP at line %d:\n%s' %
+                                     (dump_path, line_number, line))
                 start += len(AOSP_DIR)
 
 
