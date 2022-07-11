@@ -26,7 +26,7 @@ import os
 import sys
 
 from gerrit import (
-    create_url_opener_from_args, find_gerrit_name, normalize_gerrit_name,
+    create_headers_from_args, find_gerrit_name, normalize_gerrit_name,
     query_change_lists, get_patch
 )
 
@@ -63,9 +63,9 @@ def main():
             sys.exit(1)
 
     # Query change lists
-    url_opener = create_url_opener_from_args(args)
+    headers = create_headers_from_args(args)
     change_lists = query_change_lists(
-        url_opener, args.gerrit, args.query, args.start, args.limits)
+        headers, args.gerrit, args.query, args.start, args.limits)
 
     # Download patch files
     num_changes = len(change_lists)
@@ -75,7 +75,7 @@ def main():
             i, num_changes_width, num_changes, change['_number'],
             change['subject']))
 
-        patch_file = get_patch(url_opener, args.gerrit, change['id'])
+        patch_file = get_patch(headers, args.gerrit, change['id'])
         with open('{}.patch'.format(change['_number']), 'wb') as output_file:
             output_file.write(patch_file)
 
