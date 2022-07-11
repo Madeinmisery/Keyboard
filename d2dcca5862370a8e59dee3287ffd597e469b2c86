@@ -46,6 +46,30 @@
       },
       "revId": "d2dcca5862370a8e59dee3287ffd597e469b2c86",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "facd0478_497ed5b6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-11T09:47:14Z",
+      "side": 1,
+      "message": "much better indeed!",
+      "parentUuid": "0b6b8dda_7c81a436",
+      "range": {
+        "startLine": 7,
+        "startChar": 40,
+        "endLine": 7,
+        "endChar": 65
+      },
+      "revId": "d2dcca5862370a8e59dee3287ffd597e469b2c86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
