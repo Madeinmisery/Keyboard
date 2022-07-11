@@ -22,6 +22,30 @@
       },
       "revId": "d2dcca5862370a8e59dee3287ffd597e469b2c86",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b6b8dda_7c81a436",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-11T09:18:13Z",
+      "side": 1,
+      "message": "Thanks for feedback! I updated the commit message and hope it is more informative now.",
+      "parentUuid": "ee43f780_a1b9f277",
+      "range": {
+        "startLine": 7,
+        "startChar": 40,
+        "endLine": 7,
+        "endChar": 65
+      },
+      "revId": "d2dcca5862370a8e59dee3287ffd597e469b2c86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
