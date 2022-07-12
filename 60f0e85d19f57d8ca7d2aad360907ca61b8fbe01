@@ -34,6 +34,24 @@
       "parentUuid": "b91f8dcc_4a6db2eb",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29adff85_948d99e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2022-07-12T07:36:54Z",
+      "side": 1,
+      "message": "Moving ssh last surely is possible ( more so for breaking use-cases ) but as you said http _usually_ allows no auth ( and the auth method can\u0027t be provided via this tool )\nThat\u0027s exactly the case here, but I can see why you don\u0027t want that will amend\n\nMaybe we could add a param to use a user provided protocol if found?",
+      "parentUuid": "510e0eee_fee06682",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
