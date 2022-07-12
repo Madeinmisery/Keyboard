@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "618488ca_f8075a3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-07-12T21:10:48Z",
+      "side": 1,
+      "message": "I think this flag is equivalent to `--apex_available \"//apex_available:platform\"` - why can\u0027t we just use that?",
+      "revId": "35b325dc9428c16745ce222c4e341229f8739085",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
