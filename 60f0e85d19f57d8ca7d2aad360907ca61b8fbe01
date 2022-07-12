@@ -88,6 +88,24 @@
       "parentUuid": "1b9e5493_bd8dcf85",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2ba0b74_a0705772",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2022-07-12T08:46:37Z",
+      "side": 1,
+      "message": "Either way, adding SSH last is fine?\nIn an other instance we offer SSH only so currently there\u0027s not way to use this tool :)",
+      "parentUuid": "ae2c2af8_e7f8cb72",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
