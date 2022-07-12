@@ -52,6 +52,24 @@
       "parentUuid": "510e0eee_fee06682",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b9e5493_bd8dcf85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T08:27:11Z",
+      "side": 1,
+      "message": "Are you accessing a gerrit that have both \u0027ssh\u0027 and \u0027https\u0027 available, but for some reason must use one and nto the other?",
+      "parentUuid": "29adff85_948d99e7",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
