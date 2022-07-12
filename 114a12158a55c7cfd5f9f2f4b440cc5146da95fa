@@ -81,6 +81,47 @@
       "parentUuid": "92cd378d_32da115d",
       "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "683f09c3_2de3f90a",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T05:12:25Z",
+      "side": 1,
+      "message": "I\u0027d prefer getting PLATFORM_SDK_VERSION directly as it fits the semantics better.",
+      "parentUuid": "92cd378d_32da115d",
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1230938f_90af549b",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T05:12:25Z",
+      "side": 1,
+      "message": "these args are all passed in just so that at the bottom of the call stack, get_ref_dump_dir_stem()ref_dump_du can calculate the directory. For methods other than get_ref_dump_dir_stem(), these values are not used at all.\n\nWe can wrap these get_ref_dump_dir_stem() logic into a class so that the other functions can be cleaner. This can be in another CL.\n\n```\nclass GetRefDumpDirStem:\n  def __init__(self, ref_dump_dir, chosen_vndk_version, chosen_platform_version, binder_bitness):\n    self.ref_dump_dir \u003d ref_dump_dir\n    ...\n    \n  def __call__(self, category, arch):\n    version_stem \u003d self.chosen_vndk_version if category \u003d\u003d \u0027vndk\u0027 else self.chosen_platform_version\n    return os.path.join(self.ref_dump_dir, category, version_stem,\n                        self.binder_bitness, arch)\n\n// Remove [ref_dump_dir, chosen_vndk_version, chosen_platform_version, binder_bitness] from other method\u0027s arguments\nremove_references_for_all_arches(GetRefDumpDirStem(args.ref_dump_dir, chosen_vndk_version, platform_version_codename, binder_bitness), targets, args.libs)\n\n// Caller of get_ref_dump_dir_stem() can be replaced\nget_ref_dump_dir_stem \u003d GetRefDumpDirStem(...)\nref_dump_dir_stem \u003d get_ref_dump_dir_stem(category, arch)\n```",
+      "range": {
+        "startLine": 149,
+        "startChar": 12,
+        "endLine": 149,
+        "endChar": 94
+      },
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
