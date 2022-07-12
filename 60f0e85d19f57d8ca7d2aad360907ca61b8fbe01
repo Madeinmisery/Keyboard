@@ -106,6 +106,24 @@
       "parentUuid": "ae2c2af8_e7f8cb72",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ca6c260_486088f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T09:26:45Z",
+      "side": 1,
+      "message": "\u003e Either way, adding SSH last is fine?\n\nYes\n\n\u003e the current code would always pick http ( which in my case git isn\u0027t setup to use with Auth )\n\nWhat happens when https is used but auth is not ready, does git prompt you to enter auth credentials? or git-fetch just fails? If it\u0027s the latter, maybe we can implement something like trying each fetch protocols one-by-one if previous protocol fails (chain git-fetch with shell \u0027||\u0027 operator)",
+      "parentUuid": "b2ba0b74_a0705772",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
