@@ -103,6 +103,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "813ac69c_5a500326",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T05:13:10Z",
+      "side": 1,
+      "message": "also this line is too long",
+      "parentUuid": "683f09c3_2de3f90a",
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1230938f_90af549b",
         "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
         "patchSetId": 5
