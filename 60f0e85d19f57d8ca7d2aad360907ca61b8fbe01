@@ -16,6 +16,24 @@
       "message": "The change looks fine, but I am not sure about the preference of the protocols.  Also, I haven\u0027t worked on this or used this tool for a while.  I probably not the best person to review this.  Yi-yo may take a look?",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "510e0eee_fee06682",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-07-12T06:06:20Z",
+      "side": 1,
+      "message": "I also haven\u0027t used this for quite some time. The change itself looks mostly harmless to me, but I\u0027m not familiar with these fetching protocols either.\n\nDoing the following points would make me more confident merging this in\n\n1. Move \u0027ssh\u0027 to the end of the protocol list, so we don\u0027t accidentally break someone by changing the protocol test order. If this is not possible, why?\n2. Expand more about how ssh is **usually preferred** over https? I thought https is preferred as it *usually* allows fetching without auth. While fetching over ssh *usually* requires auth (like github requires user to upload their public keys beforehand). I know the opposite could happen (https with auth, ssh with anonymous private id key), but I think the former case is more prominent? which gerrit are you fetching from (does aosp support ssh:)?",
+      "parentUuid": "b91f8dcc_4a6db2eb",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
