@@ -16,6 +16,24 @@
       "message": "I think this flag is equivalent to `--apex_available \"//apex_available:platform\"` - why can\u0027t we just use that?",
       "revId": "35b325dc9428c16745ce222c4e341229f8739085",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fa05d1e_33e60aeb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2022-07-12T21:15:45Z",
+      "side": 1,
+      "message": "Aha, I didn\u0027t realize the default in soong was \"//apex_available:platform\". That SGTM. I\u0027ll abandon this change.",
+      "parentUuid": "618488ca_f8075a3d",
+      "revId": "35b325dc9428c16745ce222c4e341229f8739085",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
