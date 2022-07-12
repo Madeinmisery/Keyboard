@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b24174d_396ef1db",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-12T04:50:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0698764c_0bebf46c",
+      "range": {
+        "startLine": 42,
+        "startChar": 26,
+        "endLine": 42,
+        "endChar": 51
+      },
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92cd378d_32da115d",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-07-12T02:35:41Z",
       "side": 1,
       "message": "```\n# chosen_vndk_version is expected to be the finalized PLATFORM_SDK_VERSION if the codename is REL.\nchosen_platform_version \u003d chosen_vndk_version if platform_version_codename \u003d\u003d \u0027REL\u0027 else \u0027current\u0027\n```\n\nor get PLATFORM_SDK_VERSION directly.",
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "334d4875_15376f6e",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-12T04:50:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92cd378d_32da115d",
       "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
