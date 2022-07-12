@@ -70,6 +70,24 @@
       "parentUuid": "29adff85_948d99e7",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae2c2af8_e7f8cb72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2022-07-12T08:40:31Z",
+      "side": 1,
+      "message": "Must is an hard word, but the way it\u0027s exposed is http first and ssh last, the current code would always pick http ( which in my case git isn\u0027t setup to use with Auth )\nI can add a .netrc with the plain password that\u0027s it",
+      "parentUuid": "1b9e5493_bd8dcf85",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
