@@ -140,6 +140,30 @@
       },
       "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69484049_40b75dc4",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-12T08:42:42Z",
+      "side": 1,
+      "message": "Should I upload this CL about GetRefDumpDirStem first and then revise current CL base on it? Or just submit current CL and upload the refactor of GetRefDumpDirStem later?",
+      "parentUuid": "1230938f_90af549b",
+      "range": {
+        "startLine": 149,
+        "startChar": 12,
+        "endLine": 149,
+        "endChar": 94
+      },
+      "revId": "114a12158a55c7cfd5f9f2f4b440cc5146da95fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
