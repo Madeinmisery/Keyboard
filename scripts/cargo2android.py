@@ -1739,6 +1739,13 @@ def get_parser():
       nargs='*',
       help='Mark the main library as apex_available with the given apexes.')
   parser.add_argument(
+      '--no-apex-available',
+      action='store_const',
+      const=[],
+      dest='apex_available',
+      help='Don\'t mark the main library as apex_available with the given apexes.'
+  )
+  parser.add_argument(
       '--native-bridge-supported',
       action='store_true',
       default=False,
