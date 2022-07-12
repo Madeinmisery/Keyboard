@@ -124,6 +124,24 @@
       "parentUuid": "b2ba0b74_a0705772",
       "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "173fe52c_bf4787ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2022-07-12T13:03:36Z",
+      "side": 1,
+      "message": "It asks for credentials each time you do a http request, or once them if you setup credential.helper to save them on disk",
+      "parentUuid": "4ca6c260_486088f5",
+      "revId": "60f0e85d19f57d8ca7d2aad360907ca61b8fbe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
