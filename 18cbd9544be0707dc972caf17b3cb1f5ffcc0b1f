@@ -16,6 +16,24 @@
       "message": "and this line is too short",
       "revId": "18cbd9544be0707dc972caf17b3cb1f5ffcc0b1f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8cfc5a3_01c5e3a8",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-13T03:45:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "245e62f1_21c9aa4c",
+      "revId": "18cbd9544be0707dc972caf17b3cb1f5ffcc0b1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
