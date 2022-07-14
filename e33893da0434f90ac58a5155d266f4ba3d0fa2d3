@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "826d3b84_c66df8e9",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-14T09:41:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "463a2a4f_f4c60519",
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fbfa7eb8_d396e4db",
@@ -41,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e6b72af_9398a8ab",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-14T09:41:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fbfa7eb8_d396e4db",
+      "range": {
+        "startLine": 23,
+        "startChar": 58,
+        "endLine": 23,
+        "endChar": 81
+      },
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e90cbff_c28273dc",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-07-14T08:47:06Z",
       "side": 1,
       "message": "4 spaces",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 7
+      },
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96f1f75f_c521d01a",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-07-14T09:41:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e90cbff_c28273dc",
       "range": {
         "startLine": 24,
         "startChar": 4,
