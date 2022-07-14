@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "463a2a4f_f4c60519",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-14T08:47:06Z",
+      "side": 1,
+      "message": "2 blank lines before each class definition.",
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbfa7eb8_d396e4db",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-14T08:47:06Z",
+      "side": 1,
+      "message": "Many lines are too long.\nPlease check the style with `pycodestyle create_reference_dumps.py`.",
+      "range": {
+        "startLine": 23,
+        "startChar": 58,
+        "endLine": 23,
+        "endChar": 81
+      },
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e90cbff_c28273dc",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-14T08:47:06Z",
+      "side": 1,
+      "message": "4 spaces",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 7
+      },
+      "revId": "e33893da0434f90ac58a5155d266f4ba3d0fa2d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
