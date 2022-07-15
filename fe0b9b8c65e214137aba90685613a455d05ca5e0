@@ -16,6 +16,24 @@
       "message": "Maybe add a comment about the old python interpreter compatibility is necessary for some specific builds in case others will open a bug about updating formatting style someday.",
       "revId": "fe0b9b8c65e214137aba90685613a455d05ca5e0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea30dae5_eb3702f0",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-15T06:41:26Z",
+      "side": 1,
+      "message": "Added to create_reference_dumps.py.",
+      "parentUuid": "48701f00_e7fe3017",
+      "revId": "fe0b9b8c65e214137aba90685613a455d05ca5e0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
