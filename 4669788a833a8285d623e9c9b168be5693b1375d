@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b283091_fac64bd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-07-15T02:05:29Z",
+      "side": 1,
+      "message": "Hey Bob, I touched a little bit to fix the errors. I confirmed that `m nothing` works for generated Android.bp files.",
+      "revId": "4669788a833a8285d623e9c9b168be5693b1375d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
