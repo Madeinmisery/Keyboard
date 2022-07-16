@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db47bc3e_b09e5ed3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1893310
+      },
+      "writtenOn": "2022-07-16T06:54:05Z",
+      "side": 1,
+      "message": "When following the instructions in development/tools/idegen/README, I got stuck for a very long time on running development/tools/idegen.sh. Adding some debug output, I saw hundreds of thousands of\n\n\n (...)\n Traversing ./external/autotest/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/venv/autotest_lib/autotest_lib/autotest_lib/venv/autotest_lib/autotest_lib/autotest_lib/autotest_lib/frontend/client/src/autotest/common/table\n Traversing ./external/autotest/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/autotest_lib/venv/autotest_lib/autotest_lib/autotest_lib/venv/autotest_lib/autotest_lib/autotest_lib/autotest_lib/frontend/client/src/autotest/common/ui\n (...)\n \n \nExcluding these links made me able to generate the IntelliJ config.\n",
+      "revId": "cdcd7b3d2ab0b187651b39df7d264fb701a4ca0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
