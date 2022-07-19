@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d633cea_c149926b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-07-19T08:28:20Z",
+      "side": 1,
+      "message": "This is an alternative to aosp/2149593",
+      "revId": "f4f89e7224e53bd90df1b1caf9692cb6d74f0d3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
