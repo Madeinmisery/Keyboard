@@ -49,6 +49,10 @@ cat > "${SOONG_OUT}/soong.variables" << __EOF__
 }
 __EOF__
 
+# Allow unknown warning options since this may lag behind platform's compiler
+# version.
+ALLOW_UNKNOWN_WARNING_OPTION=true
+
 # Targets to be built
 if [ "${OS}" = "darwin" ]; then
     SOONG_BINARIES=(
