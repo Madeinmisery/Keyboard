@@ -15,6 +15,9 @@
 #ifndef CONFIG_FILE_H_
 #define CONFIG_FILE_H_
 
+#include <json/json.h>
+
+#include <algorithm>
 #include <cassert>
 #include <iosfwd>
 #include <map>
@@ -25,12 +28,9 @@ namespace header_checker {
 namespace utils {
 
 
-class ConfigParser;
-
-
 class ConfigSection {
  public:
-  using MapType = std::map<std::string, std::string>;
+  using MapType = std::map<std::string, Json::Value>;
   using const_iterator = MapType::const_iterator;
 
 
@@ -38,20 +38,21 @@ class ConfigSection {
   ConfigSection() = default;
   ConfigSection(ConfigSection &&) = default;
   ConfigSection &operator=(ConfigSection &&) = default;
+  ConfigSection(Json::Value root);
 
   bool HasProperty(const std::string &name) const {
     return map_.find(name) != map_.end();
   }
 
-  std::string GetProperty(const std::string &name) const {
+  Json::Value GetProperty(const std::string &name) const {
     auto &&it = map_.find(name);
     if (it == map_.end()) {
-      return "";
+      return Json::Value();
     }
     return it->second;
   }
 
-  std::string operator[](const std::string &name) const {
+  Json::Value operator[](const std::string &name) const {
     return GetProperty(name);
   }
 
@@ -63,16 +64,13 @@ class ConfigSection {
     return map_.end();
   }
 
-
  private:
   ConfigSection(const ConfigSection &) = delete;
   ConfigSection &operator=(const ConfigSection &) = delete;
 
-
  private:
-  std::map<std::string, std::string> map_;
-
-  friend class ConfigParser;
+  MapType map_;
+  Json::Value root;
 };
 
 
@@ -86,6 +84,8 @@ class ConfigFile {
   ConfigFile() = default;
   ConfigFile(ConfigFile &&) = default;
   ConfigFile &operator=(ConfigFile &&) = default;
+  ConfigFile(std::istream &istream);
+  ConfigFile(const std::string &path);
 
   bool HasSection(const std::string &section_name) const {
     return map_.find(section_name) != map_.end();
@@ -110,14 +110,15 @@ class ConfigFile {
     return it->second.HasProperty(property_name);
   }
 
-  std::string GetProperty(const std::string &section_name,
+  Json::Value GetProperty(const std::string &section_name,
                           const std::string &property_name) const {
     auto &&it = map_.find(section_name);
     if (it == map_.end()) {
-      return "";
+      return Json::Value();
     }
     return it->second.GetProperty(property_name);
   }
+
 
   const_iterator begin() const {
     return map_.begin();
@@ -127,62 +128,14 @@ class ConfigFile {
     return map_.end();
   }
 
-
  private:
   ConfigFile(const ConfigFile &) = delete;
   ConfigFile &operator=(const ConfigFile &) = delete;
 
 
  private:
-  std::map<std::string, ConfigSection> map_;
-
-  friend class ConfigParser;
-};
-
-
-class ConfigParser {
- public:
-  using ErrorListener = std::function<void (size_t, const char *)>;
-
-
- public:
-  ConfigParser(std::istream &stream)
-      : stream_(stream), section_(nullptr) { }
-
-  ConfigFile ParseFile();
-
-  static ConfigFile ParseFile(std::istream &istream);
-
-  static ConfigFile ParseFile(const std::string &path);
-
-  void SetErrorListener(ErrorListener listener) {
-    error_listener_ = std::move(listener);
-  }
-
-
- private:
-  void ParseLine(size_t line_no, std::string_view line);
-
-  void ReportError(size_t line_no, const char *cause) {
-    if (error_listener_) {
-      error_listener_(line_no, cause);
-    }
-  }
-
-
- private:
-  ConfigParser(const ConfigParser &) = delete;
-  ConfigParser &operator=(const ConfigParser &) = delete;
-
-
- private:
-  std::istream &stream_;
-
-  ErrorListener error_listener_;
-
-  ConfigSection *section_;
-
-  ConfigFile cfg_;
+  MapType map_;
+  Json::Value root;
 };
 
 

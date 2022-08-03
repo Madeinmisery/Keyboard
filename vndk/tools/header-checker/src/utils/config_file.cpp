@@ -16,6 +16,9 @@
 
 #include "utils/string_utils.h"
 
+#include <json/json.h>
+
+#include <algorithm>
 #include <fstream>
 #include <map>
 #include <string>
@@ -25,61 +28,20 @@ namespace header_checker {
 namespace utils {
 
 
-ConfigFile ConfigParser::ParseFile(std::istream &istream) {
-  ConfigParser parser(istream);
-  return parser.ParseFile();
+ConfigSection::ConfigSection(Json::Value root_) : root(root_) {
+  assert(root.isMember("flags"));
+  for (auto &key : root["flags"].getMemberNames()) {
+    map_[key] = root["flags"][key];
+  }
 }
 
-
-ConfigFile ConfigParser::ParseFile(const std::string &path) {
-  std::ifstream stream(path, std::ios_base::in);
-  return ParseFile(stream);
-}
-
-
-ConfigFile ConfigParser::ParseFile() {
-  size_t line_no = 0;
-  std::string line;
-  while (std::getline(stream_, line)) {
-    ParseLine(++line_no, line);
+ConfigFile::ConfigFile(const std::string &path) {
+  std::ifstream stream(path);
+  Json::Value root;
+  stream >> root;
+  for (auto &key : root.getMemberNames()) {
+    map_[key] = ConfigSection(root[key]);
   }
-  return std::move(cfg_);
-}
-
-
-void ConfigParser::ParseLine(size_t line_no, std::string_view line) {
-  if (line.empty() || line[0] == ';' || line[0] == '#') {
-    // Skip empty or comment line.
-    return;
-  }
-
-  // Parse section name line.
-  if (line[0] == '[') {
-    std::string::size_type pos = line.rfind(']');
-    if (pos == std::string::npos) {
-      ReportError(line_no, "bad section name line");
-      return;
-    }
-    std::string_view section_name = line.substr(1, pos - 1);
-    section_ = &cfg_.map_[std::string(section_name)];
-    return;
-  }
-
-  // Parse key-value line.
-  std::string::size_type pos = line.find('=');
-  if (pos == std::string::npos) {
-    ReportError(line_no, "bad key-value line");
-    return;
-  }
-
-  // Add key-value entry to current section.
-  std::string_view key = Trim(line.substr(0, pos));
-  std::string_view value = Trim(line.substr(pos + 1));
-
-  if (!section_) {
-    section_ = &cfg_.map_[""];
-  }
-  section_->map_[std::string(key)] = std::string(value);
 }
 
 
