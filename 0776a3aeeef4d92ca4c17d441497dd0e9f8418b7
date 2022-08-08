@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "664c2a7a_20a7fa1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-08T06:54:52Z",
+      "side": 1,
+      "message": "I changed the format of header-abi-diff config from .ini to .josn. The config parser were deleted because it is no need for json since we can use the parser in the jsoncpp library.",
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
