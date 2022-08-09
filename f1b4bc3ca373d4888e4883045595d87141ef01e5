@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "779b97ca_05ae5c46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-08-09T10:33:48Z",
+      "side": 1,
+      "message": "out/soong/build.ninja is about 13GB. Is it fine? 😊",
+      "revId": "f1b4bc3ca373d4888e4883045595d87141ef01e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
