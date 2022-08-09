@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "08f89dba_fc4d8a15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:21:19Z",
+      "side": 1,
+      "message": "Please update the unit test.\ndevelopment/vndk/tools/header-checker/src/utils/config_file_test.cpp\n\nYou can compile it by\n```\n. development/vndk/tools/header-checker/android/envsetup.sh\nexport OUT_DIR\u003dout\nbuild/soong/soong_ui.bash --make-mode --skip-config --soong-only header-checker-unittests\n```\n\nIf you get a compile error, try cherry picking aosp/2161660.",
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d555ef66_b7aa5e2a",
         "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
         "patchSetId": 2
