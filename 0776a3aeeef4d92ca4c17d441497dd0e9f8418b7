@@ -16,6 +16,190 @@
       "message": "I changed the format of header-abi-diff config from .ini to .josn. The config parser were deleted because it is no need for json since we can use the parser in the jsoncpp library.",
       "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d555ef66_b7aa5e2a",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Can this be removed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 9,
+        "endLine": 18,
+        "endChar": 31
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b01efd1_e307493f",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Can utils/string_utils.h, algorithm, and map be removed?",
+      "range": {
+        "startLine": 17,
+        "startChar": 16,
+        "endLine": 17,
+        "endChar": 30
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcb28a99_6c0268f6",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "const Json::Value \u0026",
+      "range": {
+        "startLine": 31,
+        "startChar": 29,
+        "endLine": 31,
+        "endChar": 41
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eed67051_084b0138",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Do not assert the input. Initialize an empty map if the key does not exist.",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 8
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df00cc96_c23b9ff3",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Please handle invalid input like\nhttps://cs.android.com/android/platform/superproject/+/master:development/vndk/tools/header-checker/src/repr/json/ir_reader.cpp;l\u003d162",
+      "range": {
+        "startLine": 41,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 16
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3828c246_093768e9",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Can you change it to bool and not include json/json.h in this header?",
+      "range": {
+        "startLine": 33,
+        "startChar": 40,
+        "endLine": 33,
+        "endChar": 51
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2bc875f_e8451b7f",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Can this be removed?",
+      "range": {
+        "startLine": 75,
+        "startChar": 2,
+        "endLine": 75,
+        "endChar": 19
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4891a0f_c7a4bc9b",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-09T05:02:14Z",
+      "side": 1,
+      "message": "Can this be removed?",
+      "range": {
+        "startLine": 140,
+        "startChar": 2,
+        "endLine": 140,
+        "endChar": 19
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
