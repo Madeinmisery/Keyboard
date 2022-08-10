@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "44f28ed4_6da68877",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T16:15:18Z",
+      "side": 1,
+      "message": "I just add a unittest for bad json format.",
+      "parentUuid": "0c93f69b_46b3a6e6",
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d555ef66_b7aa5e2a",
         "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
         "patchSetId": 2
