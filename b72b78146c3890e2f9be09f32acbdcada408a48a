@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "464a4b58_37ce1c18",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-08-10T01:25:26Z",
+      "side": 1,
+      "message": "Just in curious, why don\u0027t you gzip ninja files before copying it to DIST_DIR?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 22
+      },
+      "revId": "b72b78146c3890e2f9be09f32acbdcada408a48a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
