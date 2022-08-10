@@ -25,6 +25,9 @@ namespace header_checker {
 namespace utils {
 
 
+static const std::string GLOBAL_SECTION_NAME = "global";
+
+
 class ConfigSection {
  public:
   using MapType = std::map<std::string, bool>;
@@ -75,7 +78,7 @@ class ConfigSection {
 
 class ConfigFile {
  public:
-  using MapType = std::map<std::string, ConfigSection>;
+  using MapType = std::map<std::pair<std::string, std::string>, ConfigSection>;
   using const_iterator = MapType::const_iterator;
 
 
@@ -87,23 +90,24 @@ class ConfigFile {
   bool Load(const std::string &path);
   bool Load(std::istream &istream);
 
-  bool HasSection(const std::string &section_name) const {
-    return map_.find(section_name) != map_.end();
+  bool HasSection(const std::string &section_name, const std::string &version) const {
+    return map_.find({section_name, version}) != map_.end();
   }
 
-  const ConfigSection &GetSection(const std::string &section_name) const {
-    auto &&it = map_.find(section_name);
+  const ConfigSection &GetSection(const std::string &section_name, const std::string &version) const {
+    auto &&it = map_.find({section_name, version});
     assert(it != map_.end());
     return it->second;
   }
 
-  const ConfigSection &operator[](const std::string &section_name) const {
-    return GetSection(section_name);
-  }
+  bool HasGlobalSection();
+
+  ConfigSection &GetGlobalSection();
 
   bool HasProperty(const std::string &section_name,
+                   const std::string &version,
                    const std::string &property_name) const {
-    auto &&it = map_.find(section_name);
+    auto &&it = map_.find({section_name, version});
     if (it == map_.end()) {
       return false;
     }
@@ -111,8 +115,9 @@ class ConfigFile {
   }
 
   bool GetProperty(const std::string &section_name,
-                          const std::string &property_name) const {
-    auto &&it = map_.find(section_name);
+                   const std::string &version,
+                   const std::string &property_name) const {
+    auto &&it = map_.find({section_name, version});
     if (it == map_.end()) {
       return false;
     }
