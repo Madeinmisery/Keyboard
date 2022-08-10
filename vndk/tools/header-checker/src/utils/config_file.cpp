@@ -34,10 +34,21 @@ bool ConfigFile::Load(std::istream &istream) {
     return false;
   }
   for (auto &key : root.getMemberNames()) {
-    map_[key] = ConfigSection();
-    if (root[key].isMember("flags")) {
-      for (auto &flag_keys : root[key]["flags"].getMemberNames()) {
-        map_[key].map_[flag_keys] = root[key]["flags"][flag_keys].asBool();
+    if (key == "global") {
+      map_[{key, ""}] = ConfigSection();
+      if (root[key].isMember("flags")) {
+        for (auto &flag_keys : root[key]["flags"].getMemberNames()) {
+          map_[{key, ""}].map_[flag_keys] = root[key]["flags"][flag_keys].asBool();
+        }
+      }
+      continue;
+    }
+    for (auto &section : root[key]) {
+      map_[{key, section["target_version"].asString()}] = ConfigSection();
+      if (section.isMember("flags")) {
+        for (auto &flag_keys : section["flags"].getMemberNames()) {
+          map_[{key, section["target_version"].asString()}].map_[flag_keys] = section["flags"][flag_keys].asBool();
+        }
       }
     }
   }
