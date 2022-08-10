@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee13de09_3bf45081",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-08-10T22:42:48Z",
+      "side": 1,
+      "message": "Lint is tripping on the word \"LICENSE\" in the commit message. This is a tool for finding LICENSE files and analyzing them, nothing is changing about the licensing of any code here.",
+      "revId": "51ec016f76af3617429c8da3e0c424d480d5ba46",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
