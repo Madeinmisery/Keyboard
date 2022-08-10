@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0c93f69b_46b3a6e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "The unitests for parser error were removed since we don\u0027t implement the parser ourselves.",
+      "parentUuid": "08f89dba_fc4d8a15",
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d555ef66_b7aa5e2a",
         "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
         "patchSetId": 2
@@ -48,6 +66,30 @@
       "writtenOn": "2022-08-09T05:02:14Z",
       "side": 1,
       "message": "Can this be removed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 9,
+        "endLine": 18,
+        "endChar": 31
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "759472ef_58692219",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d555ef66_b7aa5e2a",
       "range": {
         "startLine": 18,
         "startChar": 9,
@@ -81,6 +123,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c14d69d_a480a642",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b01efd1_e307493f",
+      "range": {
+        "startLine": 17,
+        "startChar": 16,
+        "endLine": 17,
+        "endChar": 30
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dcb28a99_6c0268f6",
@@ -94,6 +160,30 @@
       "writtenOn": "2022-08-09T05:02:14Z",
       "side": 1,
       "message": "const Json::Value \u0026",
+      "range": {
+        "startLine": 31,
+        "startChar": 29,
+        "endLine": 31,
+        "endChar": 41
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7260162_3cc6dbb3",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dcb28a99_6c0268f6",
       "range": {
         "startLine": 31,
         "startChar": 29,
@@ -127,6 +217,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9558f9d7_56312e06",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eed67051_084b0138",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 8
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df00cc96_c23b9ff3",
@@ -140,6 +254,30 @@
       "writtenOn": "2022-08-09T05:02:14Z",
       "side": 1,
       "message": "Please handle invalid input like\nhttps://cs.android.com/android/platform/superproject/+/master:development/vndk/tools/header-checker/src/repr/json/ir_reader.cpp;l\u003d162",
+      "range": {
+        "startLine": 41,
+        "startChar": 2,
+        "endLine": 41,
+        "endChar": 16
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fce30aa_37df4d5a",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df00cc96_c23b9ff3",
       "range": {
         "startLine": 41,
         "startChar": 2,
@@ -173,6 +311,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "92f4d392_20b23d7d",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3828c246_093768e9",
+      "range": {
+        "startLine": 33,
+        "startChar": 40,
+        "endLine": 33,
+        "endChar": 51
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c2bc875f_e8451b7f",
@@ -196,6 +358,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dca55fab_57c03f64",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2bc875f_e8451b7f",
+      "range": {
+        "startLine": 75,
+        "startChar": 2,
+        "endLine": 75,
+        "endChar": 19
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4891a0f_c7a4bc9b",
@@ -209,6 +395,30 @@
       "writtenOn": "2022-08-09T05:02:14Z",
       "side": 1,
       "message": "Can this be removed?",
+      "range": {
+        "startLine": 140,
+        "startChar": 2,
+        "endLine": 140,
+        "endChar": 19
+      },
+      "revId": "0776a3aeeef4d92ca4c17d441497dd0e9f8418b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "558960a8_1d1b7e3d",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-10T06:40:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4891a0f_c7a4bc9b",
       "range": {
         "startLine": 140,
         "startChar": 2,
