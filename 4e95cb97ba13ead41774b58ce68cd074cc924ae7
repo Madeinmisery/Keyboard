@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49af6646_8c857a07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-11T09:15:20Z",
+      "side": 1,
+      "message": "The symbol ignoring feature has not been implemented. so the available flags is same as original. This Cl just introduces cross-version abi diff configuration.",
+      "revId": "4e95cb97ba13ead41774b58ce68cd074cc924ae7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
