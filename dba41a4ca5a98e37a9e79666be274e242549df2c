@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "305f16dd_bfca9f52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1097570
+      },
+      "writtenOn": "2022-08-12T16:01:13Z",
+      "side": 1,
+      "message": "I got the syntax error while building the emulator on android11-dev ((https://source.android.com/setup/create/avd#building_avd_images)\n\nI was about to convert the script with \"2to3\", but then I checked aosp/master and found this commit. I verified it works on android11-dev as well.",
+      "revId": "dba41a4ca5a98e37a9e79666be274e242549df2c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
