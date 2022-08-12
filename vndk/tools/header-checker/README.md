@@ -78,6 +78,47 @@ For more command line options, run `header-abi-diff --help`.
 * `16`: ELF incompatible (Some symbols in the `.dynsym` table, not exported by
   public headers, were removed.)
 
+### Configuration
+header-abi-diff reads a json format config file. User can specify different config for current version ABI Check or previous version ABI Check. The header-abi-diff chooses config section by options `-target-version <version>` and the `-lib <lib_name>`.
+There are two types of config section: global config section and library config section. The header-abi-diff applies cli flags first, then the global config section and library config section.
+
+#### Format
+Here is an example of a config.json. The location of a config would be like `prebuilts/abi-dumps/platform/33/64/x86_64/source-based/config.json`.
+```json
+{
+  "global": {
+    "flags": {
+      "allow_adding_removing_weak_symbols": true,
+    },
+  },
+  "libfoo": [
+    {
+      "target_version": "current",
+      "flags": {
+        "check_all_apis": true,
+      },
+    },
+    {
+      "target_version": "34",
+      "flags": {
+        "allow_extensions": true,
+      }
+    }
+  ]
+}
+```
+
+#### Config Section
+A config section includes two members: "target_version" and "flags". header-abi-diff selects the config section with target_version passed as cli option.
+Take above config as an example, if `-target-version 34` and `-lib libfoo` are passed as options, the selected config section would be:
+```json
+{
+  "target_version": "34",
+  "flags": {
+    "allow_extensions": true,
+  }
+}
+```
 
 ## Create Reference ABI Dumps
 
