@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "229376f2_14cf06e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-12T09:11:53Z",
+      "side": 1,
+      "message": "I updated the README in header-checker to help developers update header-abi-diff config when encounter Cross-Version ABI Check failure.",
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
