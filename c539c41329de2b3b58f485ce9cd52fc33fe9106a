@@ -58,6 +58,48 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df153500_30ccf5d0",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4645c03a_78b40928",
+      "range": {
+        "startLine": 82,
+        "startChar": 22,
+        "endLine": 82,
+        "endChar": 143
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d593093_90529a75",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac23aae2_08f2ab2e",
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d4b3385d_bec76960",
@@ -71,6 +113,30 @@
       "writtenOn": "2022-08-16T08:41:19Z",
       "side": 1,
       "message": "I think this sentence can be moved to the previous section.\n\nThe config file must be placed in the dump directory, such as `prebuilts/...`.",
+      "range": {
+        "startLine": 86,
+        "startChar": 37,
+        "endLine": 86,
+        "endChar": 75
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8da7e23_252d8c43",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4b3385d_bec76960",
       "range": {
         "startLine": 86,
         "startChar": 37,
@@ -127,6 +193,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "adeb1059_796eb775",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc75a51a_13e3d8b5",
+      "range": {
+        "startLine": 112,
+        "startChar": 112,
+        "endLine": 112,
+        "endChar": 152
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5181b36_bcc822d0",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce5d2c41_2a476912",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 16
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8c74e9f1_aa22ce53",
@@ -168,6 +282,54 @@
         "startChar": 79,
         "endLine": 113,
         "endChar": 96
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f116256_bf75b531",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "953592e3_3d2f21d8",
+      "range": {
+        "startLine": 113,
+        "startChar": 79,
+        "endLine": 113,
+        "endChar": 96
+      },
+      "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7b1bb25_a3991b9e",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T12:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c74e9f1_aa22ce53",
+      "range": {
+        "startLine": 113,
+        "startChar": 126,
+        "endLine": 113,
+        "endChar": 134
       },
       "revId": "c539c41329de2b3b58f485ce9cd52fc33fe9106a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
