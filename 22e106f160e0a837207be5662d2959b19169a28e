@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "120789c7_80d848ac",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T09:41:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "104f545a_0dc75561",
+      "range": {
+        "startLine": 135,
+        "startChar": 20,
+        "endLine": 135,
+        "endChar": 47
+      },
+      "revId": "22e106f160e0a837207be5662d2959b19169a28e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "12474923_ec10e9b9",
@@ -97,6 +121,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "341074ad_d6cb1943",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T09:41:03Z",
+      "side": 1,
+      "message": "I put the const string in config_file.h and add two functions HasGlobalSecion and GetGlobalSeciton.",
+      "parentUuid": "5804f140_1a406fd6",
+      "range": {
+        "startLine": 189,
+        "startChar": 21,
+        "endLine": 189,
+        "endChar": 33
+      },
+      "revId": "22e106f160e0a837207be5662d2959b19169a28e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "53bced19_62cc7c2b",
         "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
         "patchSetId": 2
@@ -108,6 +156,30 @@
       "writtenOn": "2022-08-16T05:24:44Z",
       "side": 1,
       "message": "ConfigSection \u0026section \u003d map_[{key, \"\"}];",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 38,
+        "endChar": 40
+      },
+      "revId": "22e106f160e0a837207be5662d2959b19169a28e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e01e79de_0b28a5af",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T09:41:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53bced19_62cc7c2b",
       "range": {
         "startLine": 38,
         "startChar": 6,
@@ -131,6 +203,30 @@
       "writtenOn": "2022-08-16T05:24:44Z",
       "side": 1,
       "message": "Please define a function.\n\nstatic std::map\u003cstd::string, bool\u003e LoadFlags(const Json::Value \u0026section) {\n}",
+      "range": {
+        "startLine": 39,
+        "startChar": 6,
+        "endLine": 39,
+        "endChar": 10
+      },
+      "revId": "22e106f160e0a837207be5662d2959b19169a28e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65f403d3_c4c6acaf",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T09:41:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10d1cbb9_7d1cbdba",
       "range": {
         "startLine": 39,
         "startChar": 6,
@@ -248,6 +344,30 @@
       "writtenOn": "2022-08-16T05:24:44Z",
       "side": 1,
       "message": "Remove the spaces.",
+      "range": {
+        "startLine": 111,
+        "startChar": 19,
+        "endLine": 111,
+        "endChar": 26
+      },
+      "revId": "22e106f160e0a837207be5662d2959b19169a28e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a866be1_05fdf16e",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-16T09:41:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "043b3cc2_d381dac4",
       "range": {
         "startLine": 111,
         "startChar": 19,
