@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17ec0052_b49b40d1",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-16T10:24:17Z",
+      "side": 1,
+      "message": "Please keep each line shorter than 80 characters.",
+      "revId": "3262aa85d3fa4dbcdfe6f285f27c9f4504b79eea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d780004_60e37451",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-16T10:24:17Z",
+      "side": 1,
+      "message": "2 empty lines",
+      "revId": "3262aa85d3fa4dbcdfe6f285f27c9f4504b79eea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9bec8fc_ebf51944",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-16T10:24:17Z",
+      "side": 1,
+      "message": "Do not append an underscore to a local variable.",
+      "range": {
+        "startLine": 29,
+        "startChar": 30,
+        "endLine": 29,
+        "endChar": 34
+      },
+      "revId": "3262aa85d3fa4dbcdfe6f285f27c9f4504b79eea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5ea1f1c_985d5051",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-16T10:24:17Z",
+      "side": 1,
+      "message": "This is not necessary.",
+      "range": {
+        "startLine": 49,
+        "startChar": 28,
+        "endLine": 49,
+        "endChar": 38
+      },
+      "revId": "3262aa85d3fa4dbcdfe6f285f27c9f4504b79eea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecd1f746_48824d3a",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-16T10:24:17Z",
+      "side": 1,
+      "message": "HasSection(GLOBAL_SECTION_NAME, \"\")\n\nI suggest move the implementation to config_file.cpp so that it\u0027s easy to notice that the version is set to an empty string by Load().",
+      "range": {
+        "startLine": 104,
+        "startChar": 11,
+        "endLine": 104,
+        "endChar": 61
+      },
+      "revId": "3262aa85d3fa4dbcdfe6f285f27c9f4504b79eea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
