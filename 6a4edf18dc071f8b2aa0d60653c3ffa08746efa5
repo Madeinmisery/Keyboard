@@ -69,6 +69,24 @@
       "parentUuid": "70b53823_3a192b2b",
       "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "480c783e_049c7573",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-08-17T12:25:47Z",
+      "side": 1,
+      "message": "It might due to the old code is checked in *before* we have clang-format set up. For new checked in code we should always use clang-format.\n\nIf you use clang-format directly, you can pass in commandline options to ask it to format only changed lines.\nIf you use the vim plugin, you can use the \":FormatLines\" command to format only the selected lines. https://github.com/google/vim-codefmt#commands",
+      "parentUuid": "63b15d37_970e2357",
+      "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
