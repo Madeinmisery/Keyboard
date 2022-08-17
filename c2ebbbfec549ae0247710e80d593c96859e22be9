@@ -16,6 +16,23 @@
       "message": "Yi-yo, do you have any comments?",
       "revId": "c2ebbbfec549ae0247710e80d593c96859e22be9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2560769e_98ab150a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-17T05:57:59Z",
+      "side": 1,
+      "message": "I found that there is no config.ini right now, so I think I can submit this CL now.",
+      "revId": "c2ebbbfec549ae0247710e80d593c96859e22be9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
