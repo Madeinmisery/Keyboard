@@ -33,6 +33,24 @@
       "message": "This line is too long.\nYou can check the style by downloading\nhttps://android-review.googlesource.com/c/platform/development/+/2144739\nand `repo upload . --dry-run`.",
       "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70b53823_3a192b2b",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-08-17T10:08:42Z",
+      "side": 1,
+      "message": "you can also install https://github.com/google/vim-codefmt, which calls clang-format under the hood, which is the same as repo --dry-run",
+      "parentUuid": "5cc859a9_036d3378",
+      "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
