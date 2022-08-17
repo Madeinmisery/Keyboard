@@ -51,6 +51,24 @@
       "parentUuid": "5cc859a9_036d3378",
       "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63b15d37_970e2357",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-17T12:06:23Z",
+      "side": 1,
+      "message": "But I found .cpp files in this project don\u0027t match the format of the google style in clang-format. For example, the two blank lines before and after `namespace header_checker {\nnamespace utils {\n`\nwould be changed to one line after clang-format.",
+      "parentUuid": "70b53823_3a192b2b",
+      "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
