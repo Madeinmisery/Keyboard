@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48dece5c_70b4552e",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-17T10:04:58Z",
+      "side": 1,
+      "message": "return GetSection(GLOBAL_SECTION_NAME, \"\");\n\nand change the return type.",
+      "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cc859a9_036d3378",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-17T10:04:58Z",
+      "side": 1,
+      "message": "This line is too long.\nYou can check the style by downloading\nhttps://android-review.googlesource.com/c/platform/development/+/2144739\nand `repo upload . --dry-run`.",
+      "revId": "6a4edf18dc071f8b2aa0d60653c3ffa08746efa5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
