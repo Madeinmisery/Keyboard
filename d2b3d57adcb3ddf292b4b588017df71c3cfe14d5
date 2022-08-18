@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74b7162f_b5150e91",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-18T10:30:17Z",
+      "side": 1,
+      "message": "Please move it to config_file.cpp.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 56
+      },
+      "revId": "d2b3d57adcb3ddf292b4b588017df71c3cfe14d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
