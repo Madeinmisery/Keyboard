@@ -46,6 +46,30 @@
       },
       "revId": "96d16aed753557aa4babe46cff1bd0be2f4ca5a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3141d7ef_843c87d2",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-08-19T07:24:41Z",
+      "side": 1,
+      "message": "Not necessarily, but just felt these values as arguments rather than environmental variables. I\u0027m fine for now, unless we face any problem 😊",
+      "parentUuid": "2819f9fc_2e03cfb6",
+      "range": {
+        "startLine": 21,
+        "startChar": 18,
+        "endLine": 21,
+        "endChar": 25
+      },
+      "revId": "96d16aed753557aa4babe46cff1bd0be2f4ca5a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
