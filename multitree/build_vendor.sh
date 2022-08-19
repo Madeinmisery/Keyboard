@@ -18,7 +18,7 @@
 export ALLOW_MISSING_DEPENDENCIES=true
 
 build/soong/soong_ui.bash --make-mode vendorimage collect_ninja_inputs \
-  TARGET_PRODUCT=cf_x86_64_phone TARGET_BUILD_VARIANT=userdebug
+  TARGET_PRODUCT=$PRODUCT TARGET_BUILD_VARIANT=userdebug
 
 mkdir -p $DIST_DIR/soong
 
@@ -26,7 +26,7 @@ for f in out/*.ninja out/soong/build.ninja; do
   gzip -c $f > $DIST_DIR/${f#out/}.gz
 done
 
-cp out/target/product/vsoc_x86_64/vendor.img $DIST_DIR
+cp out/target/product/$DEVICE/vendor.img $DIST_DIR
 
 out/host/linux-x86/bin/collect_ninja_inputs -n prebuilts/build-tools/linux-x86/bin/ninja \
-  -f out/combined-cf_x86_64_phone.ninja -t vendorimage > $DIST_DIR/ninja_inputs.json
+  -f out/combined-$PRODUCT.ninja -t vendorimage > $DIST_DIR/ninja_inputs.json
