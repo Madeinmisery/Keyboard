@@ -22,6 +22,30 @@
       },
       "revId": "96d16aed753557aa4babe46cff1bd0be2f4ca5a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2819f9fc_2e03cfb6",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-08-19T07:21:41Z",
+      "side": 1,
+      "message": "Well, this was the easiest way for me. Should we use arguments instead?",
+      "parentUuid": "e56fb5fc_f5b923b5",
+      "range": {
+        "startLine": 21,
+        "startChar": 18,
+        "endLine": 21,
+        "endChar": 25
+      },
+      "revId": "96d16aed753557aa4babe46cff1bd0be2f4ca5a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
