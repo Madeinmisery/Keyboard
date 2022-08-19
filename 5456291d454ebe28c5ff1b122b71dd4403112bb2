@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a1cc1fe_799311a9",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-19T06:20:29Z",
+      "side": 1,
+      "message": "sections",
+      "range": {
+        "startLine": 85,
+        "startChar": 70,
+        "endLine": 85,
+        "endChar": 77
+      },
+      "revId": "5456291d454ebe28c5ff1b122b71dd4403112bb2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a17684b3_989bff97",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-19T06:20:29Z",
+      "side": 1,
+      "message": "matches",
+      "range": {
+        "startLine": 120,
+        "startChar": 48,
+        "endLine": 120,
+        "endChar": 54
+      },
+      "revId": "5456291d454ebe28c5ff1b122b71dd4403112bb2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
