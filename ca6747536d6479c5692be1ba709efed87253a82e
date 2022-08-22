@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6cc4b94_14df15b3",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T08:20:21Z",
+      "side": 1,
+      "message": "Done, thanks.",
+      "parentUuid": "bd1e54dc_65089da8",
+      "range": {
+        "startLine": 189,
+        "startChar": 7,
+        "endLine": 189,
+        "endChar": 21
+      },
+      "revId": "ca6747536d6479c5692be1ba709efed87253a82e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8e9372ff_36bb8c00",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-08-22T08:14:57Z",
       "side": 1,
       "message": "check existence of config file here. If file doesn\u0027t exist, then don\u0027t call ReadConfigFile at all",
+      "revId": "ca6747536d6479c5692be1ba709efed87253a82e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d23f53b1_6bdc39d6",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T08:20:21Z",
+      "side": 1,
+      "message": "Done, thanks.",
+      "parentUuid": "8e9372ff_36bb8c00",
       "revId": "ca6747536d6479c5692be1ba709efed87253a82e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
