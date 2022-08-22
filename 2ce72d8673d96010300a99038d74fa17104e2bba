@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18771c44_e195003d",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-08-22T08:26:41Z",
+      "side": 0,
+      "message": "You can use this:\n```\nreturn stream \u0026\u0026 Load(stream);\n```\n\nCasting |stream| to bool checks it\u0027s failure bit.\n|stream| \u003d\u003e true, stream is healthy and usable\n|stream| \u003d\u003e false, stream is bad, do not use",
+      "revId": "2ce72d8673d96010300a99038d74fa17104e2bba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
