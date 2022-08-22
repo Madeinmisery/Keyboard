@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d63638b8_c1de31ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-22T08:26:15Z",
+      "side": 1,
+      "message": "Skip loading config.json",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 42
+      },
+      "revId": "d5757207c05edf9e18904b0674526aa97b9de1a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
