@@ -63,6 +63,30 @@
       },
       "revId": "53284e0859a8672e50a37edfa01fd9dc3f354fcf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93faa475_bcae3182",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T08:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04cda2c0_a21411aa",
+      "range": {
+        "startLine": 78,
+        "startChar": 2,
+        "endLine": 78,
+        "endChar": 13
+      },
+      "revId": "53284e0859a8672e50a37edfa01fd9dc3f354fcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
