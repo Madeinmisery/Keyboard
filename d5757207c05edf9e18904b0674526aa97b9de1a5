@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e802e103_e302e518",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T08:34:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d63638b8_c1de31ef",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 42
+      },
+      "revId": "d5757207c05edf9e18904b0674526aa97b9de1a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "128733e0_9087bbbb",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-08-22T08:26:41Z",
       "side": 1,
       "message": "const if variable is assigned only once.",
+      "revId": "d5757207c05edf9e18904b0674526aa97b9de1a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f45070dd_a6771b12",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T08:34:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "128733e0_9087bbbb",
       "revId": "d5757207c05edf9e18904b0674526aa97b9de1a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
