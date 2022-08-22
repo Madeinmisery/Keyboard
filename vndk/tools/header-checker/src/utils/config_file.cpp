@@ -75,7 +75,7 @@ bool ConfigFile::Load(const std::string &path) {
   if (stream.is_open()) {
     return Load(stream);
   }
-  return false;
+  return true;
 }
 
 }  // namespace utils
