@@ -185,6 +185,10 @@ static void UpdateFlags(const ConfigSection &section) {
 }
 
 static void ReadConfigFile(const std::string &config_file_path) {
+  std::ifstream stream(config_file_path);
+  if (!stream.is_open()) {
+    return;
+  }
   ConfigFile cfg;
   if (!cfg.Load(config_file_path)) {
     ::exit(1);
