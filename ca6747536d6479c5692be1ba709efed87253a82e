@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd1e54dc_65089da8",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-22T08:13:02Z",
+      "side": 1,
+      "message": "llvm::sys::fs::exists like line 223.",
+      "range": {
+        "startLine": 189,
+        "startChar": 7,
+        "endLine": 189,
+        "endChar": 21
+      },
+      "revId": "ca6747536d6479c5692be1ba709efed87253a82e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
