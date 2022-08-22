@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c6627a8_462eb425",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-22T05:26:01Z",
+      "side": 1,
+      "message": "In aosp/2182596, I returned wrong value in function `ConfigFile::Load(const std::string \u0026path)`.\nThis Cl corrects it to return true so the header-abi-diff still perform abi diff when config.json is not found.",
+      "revId": "53284e0859a8672e50a37edfa01fd9dc3f354fcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
