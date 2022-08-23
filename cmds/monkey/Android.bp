@@ -8,7 +8,7 @@ package {
 
 //###############################################################
 java_binary {
-    name: "monkey",
+    name: "monkey_lib",
     srcs: ["**/*.java"],
     wrapper: "monkey",
 }
