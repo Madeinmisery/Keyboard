@@ -96,6 +96,14 @@ with version 33 dump to check the backward compatibility. In this case, the
 `-target-version 34` is passed to header-abi-diff to select the corresponding
 config section.
 
+#### Ignored Linker Set Keys
+NDK and platform Libraries are required to ensure the compatibility across SDK
+version. However, some changes of a library that break its ABI compatibility
+are necessary. The cli option `-ignored_linker_set_key` and the key
+`ignored_linker_set_keys` in config section specify symbols that will skip ABI
+diff check. The linker set key of a symbol could be found in the genereted
+.abidiff file or the .lsdump file.
+
 #### Format
 Here is an example of a config.json.
 ```json
@@ -114,6 +122,9 @@ Here is an example of a config.json.
     },
     {
       "target_version": "34",
+      "ignored_linker_set_keys": [
+        "_ZTI14internal_state",
+      ],
       "flags": {
         "allow_extensions": true,
       }
@@ -123,14 +134,17 @@ Here is an example of a config.json.
 ```
 
 #### Library Config Section
-A library config section includes two members: "target_version" and "flags".
-header-abi-diff selects the config section that matches the target version
-given by cli.
+A library config section includes members: "target_version",
+"ignored_linker_set_keys" and "flags". header-abi-diff selects the config
+section that matches the target version given by cli.
 Take above config as an example, if `-target-version 34` and `-lib libfoo` are
 specified, the selected config section is:
 ```json
 {
   "target_version": "34",
+  "ignored_linker_set_keys": [
+    "_ZTI14internal_state",
+  ],
   "flags": {
     "allow_extensions": true,
   }
