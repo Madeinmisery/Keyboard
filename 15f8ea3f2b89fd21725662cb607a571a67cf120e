@@ -34,6 +34,24 @@
       "parentUuid": "0a2a9df8_e25f4540",
       "revId": "15f8ea3f2b89fd21725662cb607a571a67cf120e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "725384fb_1c7ede64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-08-26T10:33:34Z",
+      "side": 1,
+      "message": "I think this is explained in the design doc, but can you write it down here too for longevity? As readers of this doc might not know to look at the design doc for answers.",
+      "parentUuid": "3cb2b10f_d33c9fb7",
+      "revId": "15f8ea3f2b89fd21725662cb607a571a67cf120e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
