@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69ffca47_9b2d25a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-26T10:19:07Z",
+      "side": 1,
+      "message": "The example of the config could be found in aosp/2197801\n",
+      "revId": "f141fda6176ae0fb5c14bd563476b90ff33305b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
