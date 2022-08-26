@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a2a9df8_e25f4540",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-26T10:23:09Z",
+      "side": 1,
+      "message": "Hi Yi-yo, do you have any comment about this? I\u0027m going to push another CL to update README for aosp/2198080 based on this CL.",
+      "revId": "15f8ea3f2b89fd21725662cb607a571a67cf120e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
