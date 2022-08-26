@@ -16,6 +16,24 @@
       "message": "Hi Yi-yo, do you have any comment about this? I\u0027m going to push another CL to update README for aosp/2198080 based on this CL.",
       "revId": "15f8ea3f2b89fd21725662cb607a571a67cf120e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cb2b10f_d33c9fb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-08-26T10:32:00Z",
+      "side": 1,
+      "message": "overall LGTM.\n\nJust a question, what does \"-target-version\" mean actually?\nI know I can use it to choose some set of flags fine-grain. But when do I want to do this?\nFor example if refdump dir is 33, then what does specifying \"-target-version 34\" mean? I think it means comparing 33 refdump to 34 source dump?",
+      "parentUuid": "0a2a9df8_e25f4540",
+      "revId": "15f8ea3f2b89fd21725662cb607a571a67cf120e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
