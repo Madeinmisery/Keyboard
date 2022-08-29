@@ -6,6 +6,11 @@ python_binary_host {
     name: "collect_ninja_inputs",
     srcs: [
         "collect_ninja_inputs.py",
+        "ninja_metrics_proto/ninja_metrics.py",
+        "ninja_metrics_proto/ninja_metrics_pb2.py",
+    ],
+    libs: [
+        "libprotobuf-python",
     ],
     version: {
         py2: {
