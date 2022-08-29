@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "643655cf_18923a18",
+        "filename": "tools/ninja_dependency_analysis/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-08-29T06:23:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df7418f9_7c5ce5ab",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 51
+      },
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19d4be7f_ce840bd1",
@@ -58,6 +82,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2becfc4_1484b912",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-08-29T06:23:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19d4be7f_ce840bd1",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "59f521c2_1a543432",
@@ -71,6 +113,24 @@
       "writtenOn": "2022-08-29T05:32:29Z",
       "side": 1,
       "message": "don\u0027t we need input files?",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1300a19_2fb7dd3a",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/ninja_metrics.proto",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-08-29T06:23:42Z",
+      "side": 1,
+      "message": "I didn\u0027t add that because that is too verbose to include in the monitoring. We may read the json file directly if we need the information. WDYT?",
+      "parentUuid": "59f521c2_1a543432",
       "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
