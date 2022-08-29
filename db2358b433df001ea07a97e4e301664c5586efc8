@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df40349e_1b2aa816",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-29T09:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70ec8a44_7e3973e3",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 16
+      },
+      "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "71488177_0847a946",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-08-29T06:49:07Z",
       "side": 1,
       "message": "in some cases, it is necessary to skip the ABI check for specific types and functions.",
+      "range": {
+        "startLine": 101,
+        "startChar": 18,
+        "endLine": 102,
+        "endChar": 13
+      },
+      "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d074441_1a2f840d",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-29T09:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71488177_0847a946",
       "range": {
         "startLine": 101,
         "startChar": 18,
@@ -128,6 +176,78 @@
         "startChar": 30,
         "endLine": 104,
         "endChar": 42
+      },
+      "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eab35d46_1d500701",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-29T09:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc0c29da_78a71420",
+      "range": {
+        "startLine": 104,
+        "startChar": 65,
+        "endLine": 104,
+        "endChar": 74
+      },
+      "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee6c3a27_3ad928d9",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-29T09:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "294e6eb6_a2c6ef3e",
+      "range": {
+        "startLine": 104,
+        "startChar": 30,
+        "endLine": 104,
+        "endChar": 42
+      },
+      "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03d646d8_657ed232",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-29T09:05:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "41d6a18b_82840f51",
+      "range": {
+        "startLine": 103,
+        "startChar": 52,
+        "endLine": 104,
+        "endChar": 10
       },
       "revId": "db2358b433df001ea07a97e4e301664c5586efc8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
