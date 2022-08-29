@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fe6aba4_01c8f824",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-08-29T05:50:37Z",
+      "side": 1,
+      "message": "LGTM except for jeongik\u0027s comments",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df7418f9_7c5ce5ab",
