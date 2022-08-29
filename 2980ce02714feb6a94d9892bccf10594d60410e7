@@ -133,6 +133,24 @@
       "parentUuid": "59f521c2_1a543432",
       "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1773a48_55da9562",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/ninja_metrics.proto",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-08-29T07:20:57Z",
+      "side": 1,
+      "message": "I agree, resolved.",
+      "parentUuid": "c1300a19_2fb7dd3a",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
