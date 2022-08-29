@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df7418f9_7c5ce5ab",
+        "filename": "tools/ninja_dependency_analysis/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-08-29T05:32:29Z",
+      "side": 1,
+      "message": "how about using `proto` field in `python_binary_host` instead of generating these adapter files?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 51
+      },
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19d4be7f_ce840bd1",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-08-29T05:32:29Z",
+      "side": 1,
+      "message": "by adding proto in python_binary_host, we can remove this README and python code regarding proto.",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59f521c2_1a543432",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/ninja_metrics.proto",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-08-29T05:32:29Z",
+      "side": 1,
+      "message": "don\u0027t we need input files?",
+      "revId": "2980ce02714feb6a94d9892bccf10594d60410e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
