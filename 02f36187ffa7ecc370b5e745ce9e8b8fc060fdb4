@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be4a89e9_e02c57ef",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "The existing options are allow-... and ignore-...\nShould this be \"ignore\"?",
+      "range": {
+        "startLine": 143,
+        "startChar": 5,
+        "endLine": 143,
+        "endChar": 12
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edf4ea68_19f5b7da",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "a specific type or function",
+      "range": {
+        "startLine": 144,
+        "startChar": 27,
+        "endLine": 144,
+        "endChar": 42
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa9c5972_f9997d64",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "This can be a local variable in the main function.",
+      "range": {
+        "startLine": 147,
+        "startChar": 22,
+        "endLine": 147,
+        "endChar": 49
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fa1a33c_fa067bc7",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "Can you add the elements to ignored_linker_set_keys?",
+      "range": {
+        "startLine": 172,
+        "startChar": 4,
+        "endLine": 172,
+        "endChar": 31
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d144727c_e36165c1",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "emplace_back",
+      "range": {
+        "startLine": 46,
+        "startChar": 8,
+        "endLine": 46,
+        "endChar": 17
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4136fc6_55b6a274",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "\u0026",
+      "range": {
+        "startLine": 52,
+        "startChar": 32,
+        "endLine": 52,
+        "endChar": 33
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2f34bef_3c3a8b7d",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T04:35:37Z",
+      "side": 1,
+      "message": "Append an underscore.",
+      "range": {
+        "startLine": 69,
+        "startChar": 46,
+        "endLine": 69,
+        "endChar": 50
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
