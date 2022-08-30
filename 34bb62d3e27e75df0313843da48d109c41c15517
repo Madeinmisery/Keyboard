@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aadb21ed_a89e6da3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:15:56Z",
+      "side": 1,
+      "message": "Please test the this feature in config_file_test.cpp.",
+      "revId": "34bb62d3e27e75df0313843da48d109c41c15517",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dc4e640_f195d1ab",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:15:56Z",
+      "side": 1,
+      "message": "Does the following constructor work?\n\nignored_linker_set_keys_set(ignore_linker_set_keys.begin(), ignore_linker_set_keys.end());",
+      "range": {
+        "startLine": 234,
+        "startChar": 51,
+        "endLine": 234,
+        "endChar": 52
+      },
+      "revId": "34bb62d3e27e75df0313843da48d109c41c15517",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
