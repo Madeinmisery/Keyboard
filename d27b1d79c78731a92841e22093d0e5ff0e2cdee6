@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f48fbadf_fefc23d5",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:03:03Z",
+      "side": 1,
+      "message": "on NDK and platform libraries to ensure their compatibility across versions.",
+      "range": {
+        "startLine": 93,
+        "startChar": 55,
+        "endLine": 94,
+        "endChar": 69
+      },
+      "revId": "d27b1d79c78731a92841e22093d0e5ff0e2cdee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10b979a6_746a143b",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:03:03Z",
+      "side": 1,
+      "message": "Can this word be removed?",
+      "range": {
+        "startLine": 100,
+        "startChar": 5,
+        "endLine": 100,
+        "endChar": 12
+      },
+      "revId": "d27b1d79c78731a92841e22093d0e5ff0e2cdee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2788bf82_ecf31ac4",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:03:03Z",
+      "side": 1,
+      "message": "remove this word",
+      "range": {
+        "startLine": 104,
+        "startChar": 52,
+        "endLine": 104,
+        "endChar": 59
+      },
+      "revId": "d27b1d79c78731a92841e22093d0e5ff0e2cdee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4214345_09e67b0f",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:03:03Z",
+      "side": 1,
+      "message": "keys can",
+      "range": {
+        "startLine": 105,
+        "startChar": 49,
+        "endLine": 105,
+        "endChar": 70
+      },
+      "revId": "d27b1d79c78731a92841e22093d0e5ff0e2cdee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1141ecfe_110d98aa",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-30T05:03:03Z",
+      "side": 1,
+      "message": "and",
+      "range": {
+        "startLine": 106,
+        "startChar": 31,
+        "endLine": 106,
+        "endChar": 33
+      },
+      "revId": "d27b1d79c78731a92841e22093d0e5ff0e2cdee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
