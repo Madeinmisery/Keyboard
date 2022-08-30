@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b096892_8c138964",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be4a89e9_e02c57ef",
+      "range": {
+        "startLine": 143,
+        "startChar": 5,
+        "endLine": 143,
+        "endChar": 12
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "edf4ea68_19f5b7da",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-08-30T04:35:37Z",
       "side": 1,
       "message": "a specific type or function",
+      "range": {
+        "startLine": 144,
+        "startChar": 27,
+        "endLine": 144,
+        "endChar": 42
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8ca1ce6_c5d5216b",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "edf4ea68_19f5b7da",
       "range": {
         "startLine": 144,
         "startChar": 27,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94a26c5c_1616b5f0",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa9c5972_f9997d64",
+      "range": {
+        "startLine": 147,
+        "startChar": 22,
+        "endLine": 147,
+        "endChar": 49
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4fa1a33c_fa067bc7",
@@ -83,6 +155,30 @@
       "writtenOn": "2022-08-30T04:35:37Z",
       "side": 1,
       "message": "Can you add the elements to ignored_linker_set_keys?",
+      "range": {
+        "startLine": 172,
+        "startChar": 4,
+        "endLine": 172,
+        "endChar": 31
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7775931_9cd75b3e",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Yes, but ignored_linker_set_keys is a llvm::cl::list instead of a vector.",
+      "parentUuid": "4fa1a33c_fa067bc7",
       "range": {
         "startLine": 172,
         "startChar": 4,
@@ -116,6 +212,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13f20151_6581c779",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d144727c_e36165c1",
+      "range": {
+        "startLine": 46,
+        "startChar": 8,
+        "endLine": 46,
+        "endChar": 17
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4136fc6_55b6a274",
@@ -139,6 +259,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20fc1142_eaf74413",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4136fc6_55b6a274",
+      "range": {
+        "startLine": 52,
+        "startChar": 32,
+        "endLine": 52,
+        "endChar": 33
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e2f34bef_3c3a8b7d",
@@ -152,6 +296,30 @@
       "writtenOn": "2022-08-30T04:35:37Z",
       "side": 1,
       "message": "Append an underscore.",
+      "range": {
+        "startLine": 69,
+        "startChar": 46,
+        "endLine": 69,
+        "endChar": 50
+      },
+      "revId": "02f36187ffa7ecc370b5e745ce9e8b8fc060fdb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ee83397_4acc2d9a",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-08-30T04:52:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e2f34bef_3c3a8b7d",
       "range": {
         "startLine": 69,
         "startChar": 46,
