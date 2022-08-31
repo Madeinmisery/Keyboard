@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6abd4b7e_90fbe092",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-31T08:33:11Z",
+      "side": 1,
+      "message": "ignore-linker-set-key",
+      "range": {
+        "startLine": 103,
+        "startChar": 40,
+        "endLine": 103,
+        "endChar": 61
+      },
+      "revId": "47d7912f70f1d6dafd7e75129f084b660732d5ec",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
