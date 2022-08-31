@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "136bf29a_dc64b50b",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-08-31T08:29:15Z",
+      "side": 1,
+      "message": "or",
+      "range": {
+        "startLine": 144,
+        "startChar": 43,
+        "endLine": 144,
+        "endChar": 45
+      },
+      "revId": "7a6cc2c4a2a47125df2ed5bfe00869d2abe1e0d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
