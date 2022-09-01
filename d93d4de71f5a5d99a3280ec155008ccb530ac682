@@ -16,6 +16,29 @@
       "message": "I fixed a bug found in the presubmit.",
       "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9170071_3748c0b8",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-09-01T13:38:14Z",
+      "side": 1,
+      "message": "my fault for not noticing this earlier, but coding style is to stick \u0027\u0026\u0027 and \u0027*\u0027 to the type. i.e. `const Json::Value\u0026 section`\n\nno need to go all out and fix all occurrences, but for new added/modified code, please use the conventional `\u003ctype\u003e\u003c\u0026*decoration\u003e\u003cspace\u003e\u003cvarname\u003e`style",
+      "range": {
+        "startLine": 43,
+        "startChar": 30,
+        "endLine": 43,
+        "endChar": 43
+      },
+      "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
