@@ -39,6 +39,30 @@
       },
       "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0602b92f_96dda18d",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-09-01T19:04:45Z",
+      "side": 1,
+      "message": "In [google c++ style guide](In https://engdoc.corp.google.com/eng/doc/devguide/cpp/styleguide.md?cl\u003dhead#Pointer_and_Reference_Expressions), space placing before and after \u0026 are both accepted.\n`clang-format -style\u003dGoogle` likes `const Json::Value \u0026section` and I noticed that in header-checker, this style appears every where.",
+      "parentUuid": "b9170071_3748c0b8",
+      "range": {
+        "startLine": 43,
+        "startChar": 30,
+        "endLine": 43,
+        "endChar": 43
+      },
+      "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

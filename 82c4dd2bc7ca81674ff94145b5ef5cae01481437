@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53e7afeb_6cfeac4f",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-09-01T19:04:45Z",
+      "side": 0,
+      "message": "For example, here.",
+      "revId": "82c4dd2bc7ca81674ff94145b5ef5cae01481437",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
