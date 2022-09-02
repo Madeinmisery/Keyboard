@@ -87,6 +87,30 @@
       },
       "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1048349a_494cf4c3",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-09-02T05:25:19Z",
+      "side": 1,
+      "message": "I see. yeah consistency wins here.\nBoth styles are fine, if in doubt, follow the style that is consistent with rest of the file.\n\n\u003e google c++ style\n\nthing is we, AOSP, usually don\u0027t follow the Google style. We usually have per project clang-format config, or just use default style (which is probably \u0027llvm\u0027). That why I have the impression of \u0027stick \u0026 to the right is bad\u0027.😅",
+      "parentUuid": "d3b49630_31a1f1e6",
+      "range": {
+        "startLine": 43,
+        "startChar": 30,
+        "endLine": 43,
+        "endChar": 43
+      },
+      "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
