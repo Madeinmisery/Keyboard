@@ -63,6 +63,30 @@
       },
       "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3b49630_31a1f1e6",
+        "filename": "vndk/tools/header-checker/src/utils/config_file.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-09-02T04:22:34Z",
+      "side": 1,
+      "message": "https://google.github.io/styleguide/cppguide.html#Pointer_and_Reference_Expressions",
+      "parentUuid": "0602b92f_96dda18d",
+      "range": {
+        "startLine": 43,
+        "startChar": 30,
+        "endLine": 43,
+        "endChar": 43
+      },
+      "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
