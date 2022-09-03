@@ -15,6 +15,7 @@
  */
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -216,8 +217,7 @@ public class Configuration {
      * found.
      */
     private static String parsePackageName(File file) throws IOException {
-        BufferedReader in = new BufferedReader(new FileReader(file));
-        try {
+        try (BufferedReader in = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = in.readLine()) != null) {
                 String trimmed = line.trim();
@@ -230,8 +230,8 @@ public class Configuration {
             }
 
             return null;
-        } finally {
-            in.close();
+        } catch (FileNotFoundException ignored) {
+	    return null;
         }
     }
 
