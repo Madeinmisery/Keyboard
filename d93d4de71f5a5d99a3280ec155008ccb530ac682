@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13e3436b_a03a1bb6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956136
+      },
+      "writtenOn": "2022-09-04T21:19:08Z",
+      "side": 1,
+      "message": "I hope this CL can be submitted early so I can update the clangs-tools to prebuilts before my internship ends.",
+      "revId": "d93d4de71f5a5d99a3280ec155008ccb530ac682",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b9170071_3748c0b8",
