@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2449b30_e04ad5ef",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-09-05T03:12:33Z",
+      "side": 0,
+      "message": "These are already included in the \u0027dist\u0027 build",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 4
+      },
+      "revId": "8e3e3530e84ed4511414b9d8b19e2c6d5011225c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
