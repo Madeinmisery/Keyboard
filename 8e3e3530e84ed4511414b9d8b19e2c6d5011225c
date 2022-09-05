@@ -45,6 +45,30 @@
       },
       "revId": "8e3e3530e84ed4511414b9d8b19e2c6d5011225c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87860127_f2662db0",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-09-05T04:23:51Z",
+      "side": 0,
+      "message": "No. `dist` target already creates logs directory and put metrics data to the directory.",
+      "parentUuid": "6fe50a96_6dfd9054",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "8e3e3530e84ed4511414b9d8b19e2c6d5011225c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
