@@ -16,6 +16,29 @@
       "message": "Hi Googler, could you help to review this CL? Thanks.",
       "revId": "e7ebdc010794532f9e19857cc3e21b06982f5cc1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "427f0613_51f66e07",
+        "filename": "tools/idegen/src/Configuration.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-09-05T04:17:55Z",
+      "side": 1,
+      "message": "Would you use java.nio.file.Files to check whether a link goes to its parent?\n\n```\nPath target \u003d Files.readSymbolicLink(file.toPath()).normalize();\nif (target.startsWith(\"\") || target.startsWith(\".\") || target.startsWith(\"..\")) {\n    continue;\n}\n```",
+      "range": {
+        "startLine": 163,
+        "startChar": 23,
+        "endLine": 163,
+        "endChar": 24
+      },
+      "revId": "e7ebdc010794532f9e19857cc3e21b06982f5cc1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
