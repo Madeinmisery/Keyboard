@@ -16,6 +16,24 @@
       "message": "Hello Yi-yo, do you have any comment about this README.md change?",
       "revId": "173a9dd2082f67cd35b45dbe8cd209c1e24dbbb1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d494881_8ad85385",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-09-05T07:47:24Z",
+      "side": 1,
+      "message": "lgtm",
+      "parentUuid": "26af3063_6cf418a1",
+      "revId": "173a9dd2082f67cd35b45dbe8cd209c1e24dbbb1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
