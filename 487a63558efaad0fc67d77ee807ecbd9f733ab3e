@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a22033a8_57be4f8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1670415
+      },
+      "writtenOn": "2022-09-10T09:04:50Z",
+      "side": 1,
+      "message": "After symbolic link checking and filtering, I can generate Intellij IDEA configuration locally under five minutes. It\u0027s faster than origin generation with too much symbolic link errors.",
+      "revId": "487a63558efaad0fc67d77ee807ecbd9f733ab3e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
