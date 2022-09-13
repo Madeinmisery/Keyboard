@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "130f53f9_09052297",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/ninja_metrics.proto",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-09-13T01:24:09Z",
+      "side": 1,
+      "message": "Does this include projects only for build tools, such as RBE prebuilts?",
+      "range": {
+        "startLine": 25,
+        "startChar": 39,
+        "endLine": 25,
+        "endChar": 61
+      },
+      "revId": "8e0560c60165fdbc51a881f8c3ab1cb41e53eed8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
