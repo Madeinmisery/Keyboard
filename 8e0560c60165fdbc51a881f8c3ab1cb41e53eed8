@@ -22,6 +22,30 @@
       },
       "revId": "8e0560c60165fdbc51a881f8c3ab1cb41e53eed8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd32d07b_d0103357",
+        "filename": "tools/ninja_dependency_analysis/ninja_metrics_proto/ninja_metrics.proto",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-09-13T01:37:20Z",
+      "side": 1,
+      "message": "It only counts the dependencies from the ninja graph. I don\u0027t think RBE prebuilts are in the dependency graph.",
+      "parentUuid": "130f53f9_09052297",
+      "range": {
+        "startLine": 25,
+        "startChar": 39,
+        "endLine": 25,
+        "endChar": 61
+      },
+      "revId": "8e0560c60165fdbc51a881f8c3ab1cb41e53eed8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
