@@ -22,6 +22,30 @@
       },
       "revId": "4424f3d4af6ccde22ab90812b05f398fd344264d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "619954a3_c6214606",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-09-13T04:50:47Z",
+      "side": 1,
+      "message": "yeah, it doesn\u0027t need an extra argument. removed. thanks!",
+      "parentUuid": "c6be343d_d570ecd9",
+      "range": {
+        "startLine": 34,
+        "startChar": 22,
+        "endLine": 34,
+        "endChar": 24
+      },
+      "revId": "4424f3d4af6ccde22ab90812b05f398fd344264d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
