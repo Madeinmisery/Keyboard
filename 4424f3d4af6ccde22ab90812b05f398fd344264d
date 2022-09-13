@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6be343d_d570ecd9",
+        "filename": "multitree/build_vendor.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2022-09-13T04:35:14Z",
+      "side": 1,
+      "message": "Why do we need an argument with -u ? What about just enable unbundled build when -u is specified?",
+      "range": {
+        "startLine": 34,
+        "startChar": 22,
+        "endLine": 34,
+        "endChar": 24
+      },
+      "revId": "4424f3d4af6ccde22ab90812b05f398fd344264d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
