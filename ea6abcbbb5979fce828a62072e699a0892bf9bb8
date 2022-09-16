@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0c9a062_54438d0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1061057
+      },
+      "writtenOn": "2022-09-16T05:01:48Z",
+      "side": 1,
+      "message": "Remove the top-level Android.bp and OWNERS?",
+      "revId": "ea6abcbbb5979fce828a62072e699a0892bf9bb8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
