@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d339744_fbf561d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1670415
+      },
+      "writtenOn": "2022-09-18T09:59:36Z",
+      "side": 1,
+      "message": "I removed catch for FileNotFoundException.",
+      "revId": "05d9c2c8abd8f5c9cdd65d5b9e8498c4a753f127",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
