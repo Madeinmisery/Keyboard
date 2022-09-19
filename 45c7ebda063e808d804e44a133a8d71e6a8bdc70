@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad7860b9_66db6b5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1080813
+      },
+      "writtenOn": "2022-09-19T05:57:15Z",
+      "side": 1,
+      "message": "Adding HsinYi for gsi/repack_super_image/",
+      "revId": "45c7ebda063e808d804e44a133a8d71e6a8bdc70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
