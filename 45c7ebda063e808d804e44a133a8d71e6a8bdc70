@@ -16,6 +16,23 @@
       "message": "Adding HsinYi for gsi/repack_super_image/",
       "revId": "45c7ebda063e808d804e44a133a8d71e6a8bdc70",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "082135e5_56940050",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2022-09-19T05:58:47Z",
+      "side": 1,
+      "message": "+1 for image-diff-tool and ninja_dependency_analysis",
+      "revId": "45c7ebda063e808d804e44a133a8d71e6a8bdc70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
