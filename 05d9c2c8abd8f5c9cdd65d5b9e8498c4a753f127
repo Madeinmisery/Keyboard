@@ -39,6 +39,30 @@
       },
       "revId": "05d9c2c8abd8f5c9cdd65d5b9e8498c4a753f127",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c315877f_0e22dcea",
+        "filename": "tools/idegen/src/Configuration.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1670415
+      },
+      "writtenOn": "2022-09-21T14:04:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bbbf20db_0d0778cb",
+      "range": {
+        "startLine": 18,
+        "startChar": 15,
+        "endLine": 18,
+        "endChar": 36
+      },
+      "revId": "05d9c2c8abd8f5c9cdd65d5b9e8498c4a753f127",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
