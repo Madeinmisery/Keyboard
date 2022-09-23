@@ -1,0 +1,4 @@
+libclass_extensions {
+  global:
+    _Z15PassByReferenceR7Struct1R7Struct2;
+};
