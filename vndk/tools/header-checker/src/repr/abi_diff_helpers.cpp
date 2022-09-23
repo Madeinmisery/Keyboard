@@ -49,26 +49,6 @@ static void TypeQueueCheckAndPop(std::deque<std::string> *type_queue) {
   }
 }
 
-static bool IsAccessDownGraded(AccessSpecifierIR old_access,
-                               AccessSpecifierIR new_access) {
-  bool access_downgraded = false;
-  switch (old_access) {
-    case AccessSpecifierIR::ProtectedAccess:
-      if (new_access == AccessSpecifierIR::PrivateAccess) {
-        access_downgraded = true;
-      }
-      break;
-    case AccessSpecifierIR::PublicAccess:
-      if (new_access != AccessSpecifierIR::PublicAccess) {
-        access_downgraded = true;
-      }
-      break;
-    default:
-      break;
-  }
-  return access_downgraded;
-}
-
 static std::string ConvertTypeIdToString(
     const AbiElementMap<const TypeIR *> &type_graph,
     const std::string &type_id) {
