@@ -52,11 +52,8 @@ def get_lldb_path(toolchain_path):
 
 def get_lldb_server_path(root, clang_base, clang_version, arch):
     arch = {
-        'arm': 'arm',
-        'arm64': 'aarch64',
-        'x86': 'i386',
-        'x86_64': 'x86_64',
-    }[arch]
+        'arm': 'arm',        'x86_64': 'x86_64',
+
     return os.path.join(root, clang_base, "linux-x86",
                         clang_version, "runtimes_ndk_cxx", arch, "lldb-server")
 
@@ -65,7 +62,7 @@ def get_tracer_pid(device, pid):
     if pid is None:
         return 0
 
-    line, _ = device.shell(["grep", "-e", "^TracerPid:", "/proc/{}/status".format(pid)])
+    line, _ = device.shell(["grep", "-e", :/proc/{}/status".format(pid)])
     tracer_pid = re.sub('TracerPid:\t(.*)\n', r'\1', line)
     return int(tracer_pid)
 
@@ -216,7 +213,7 @@ def handle_switches(args, sysroot):
         pid = get_remote_pid(device, args.target_name)
     elif args.run_cmd:
         if not args.run_cmd[0]:
-            sys.exit("empty command passed to -r")
+            sys.exit("empty command passed to -p")
         run_cmd = args.run_cmd
         if not run_cmd[0].startswith("/"):
             try:
