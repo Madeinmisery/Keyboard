@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "192b8a6a_722cf9ce",
+        "filename": "vndk/tools/header-checker/src/repr/ir_diff_representation.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-09-28T04:20:03Z",
+      "side": 1,
+      "message": "It means a nested class.",
+      "parentUuid": "a2f9bdff_998ef734",
+      "revId": "27afc6d9de0af65e7e6b2775ec4b53698874bacd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dadde94e_9ce5051c",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-09-27T08:18:26Z",
       "side": 1,
       "message": "Prefer struct over std::pair, go/struct-vs-tuple\n\nIn this case, we already have a struct (AccessSpecifierDiffIR) that have more meaningful field names than pair (first, second). We should just define getters for the two fields: GetOldAccess() \u0026 GetNewAccess()\n\nAlternatively, just define IsDowngrade() since the caller only cares about the relative order of old_access_ \u0026 new_access_, not the actual value",
+      "revId": "27afc6d9de0af65e7e6b2775ec4b53698874bacd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51f6e248_27b62c5e",
+        "filename": "vndk/tools/header-checker/src/repr/ir_diff_representation.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-09-28T04:20:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dadde94e_9ce5051c",
       "revId": "27afc6d9de0af65e7e6b2775ec4b53698874bacd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
