@@ -1,9 +1,7 @@
 struct Struct1 {
  public:
-  short offset_0;
-  short offset_16;
-  int offset_32;
-  int offset_64;
+  int member;
+  int added_member;
 };
 
 struct Struct2 {
