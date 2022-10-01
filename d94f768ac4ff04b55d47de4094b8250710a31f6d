@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b641694_44fd0572",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1670415
+      },
+      "writtenOn": "2022-10-01T04:14:10Z",
+      "side": 1,
+      "message": "Hi Hsin-Yi, could you help to review this CL? Thanks.",
+      "revId": "d94f768ac4ff04b55d47de4094b8250710a31f6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
