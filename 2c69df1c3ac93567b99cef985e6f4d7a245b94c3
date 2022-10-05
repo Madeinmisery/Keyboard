@@ -22,6 +22,30 @@
       },
       "revId": "2c69df1c3ac93567b99cef985e6f4d7a245b94c3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df99e144_ed304247",
+        "filename": "vndk/tools/header-checker/src/diff/header_abi_diff.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-10-05T02:16:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ef91fb4e_23b505b8",
+      "range": {
+        "startLine": 265,
+        "startChar": 9,
+        "endLine": 265,
+        "endChar": 42
+      },
+      "revId": "2c69df1c3ac93567b99cef985e6f4d7a245b94c3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
