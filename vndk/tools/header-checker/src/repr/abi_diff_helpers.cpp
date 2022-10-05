@@ -274,7 +274,8 @@ bool AbiDiffHelper::AreTypeSizeAndAlignmentEqual(
       new_types_.find(new_type_id);
 
   if (old_it == old_types_.end() || new_it == new_types_.end()) {
-    return !diff_policy_options_.consider_opaque_types_different_;
+    return !diff_policy_options_.consider_opaque_types_different_ ||
+           old_type_id == new_type_id;
   }
 
   return CompareSizeAndAlignment(old_it->second, new_it->second);
