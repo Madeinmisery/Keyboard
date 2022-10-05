@@ -1,5 +1,0 @@
-libpass_by_value {
-  global:
-    _Z11PassByValue9Parameter;
-    _Z13ReturnByValuev;
-};
