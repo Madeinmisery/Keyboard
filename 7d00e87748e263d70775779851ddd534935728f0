@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe74fb2f_1ac381a9",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-10-06T07:00:45Z",
+      "side": 1,
+      "message": "static const std::unordered_set\u003cstd::string\u003e va_list_names \u003d {...};\nreturn va_list_names.contains(old_type_id) \u0026\u0026 va_list_names.contains(new_type_id);\n// or va_list_names.count() if c++20 is not available",
+      "revId": "7d00e87748e263d70775779851ddd534935728f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
