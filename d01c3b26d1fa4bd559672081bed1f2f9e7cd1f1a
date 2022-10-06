@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "651d0c81_3aa7d563",
+        "filename": "build/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2022-10-06T21:56:19Z",
+      "side": 1,
+      "message": "I changed this to be consistent with `api_versions_public` above, it\u0027s mostly the same, but produces this diff: https://paste.googleplex.com/6327200700694528\n\nNot sure what is more correct here.",
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
