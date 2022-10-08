@@ -78,6 +78,79 @@ For more command line options, run `header-abi-diff --help`.
 * `16`: ELF incompatible (Some symbols in the `.dynsym` table, not exported by
   public headers, were removed.)
 
+### Configuration
+header-abi-diff reads a config file named `config.json`. The config file must
+be placed in the dump directory, such as
+`prebuilts/abi-dumps/platform/33/64/x86_64/source-based/config.json`.
+The file consists of multiple sections. There are two types of config sections:
+global config section and library config section. Each library config section
+contains flags for a specific version and a library. header-abi-diff chooses
+the library config section by options `-target-version` and `-lib`.
+header-abi-diff applies cli flags first, then the global config section and
+library config section.
+
+#### Target version
+The Soong Build System performs Cross-Version ABI Check on NDK and platform
+libraries to ensure their compatibility across versions. For example, when the
+future SDK version of current source is 34, the source ABI dump would be diffed
+with version 33 dump to check the backward compatibility. In this case, the
+`-target-version 34` is passed to header-abi-diff to select the corresponding
+config section.
+
+#### Linker Set Keys
+In some cases, it is necessary to skip the ABI check for specific types and
+functions. In the ABI dumps, every class, union, enum, and function has a
+unique linker set key. The cli option `-ignore-linker-set-key` and the key
+`ignore_linker_set_keys` in the config section specify the types and
+functions that should be skipped. The linker set key can be found in the
+generated .abidiff file and the .lsdump file.
+
+#### Format
+Here is an example of a config.json.
+```json
+{
+  "global": {
+    "flags": {
+      "allow_adding_removing_weak_symbols": true,
+    },
+  },
+  "libfoo": [
+    {
+      "target_version": "current",
+      "flags": {
+        "check_all_apis": true,
+      },
+    },
+    {
+      "target_version": "34",
+      "ignore_linker_set_keys": [
+        "_ZTI14internal_state",
+      ],
+      "flags": {
+        "allow_extensions": true,
+      }
+    }
+  ]
+}
+```
+
+#### Library Config Section
+A library config section includes members: "target_version",
+"ignore_linker_set_keys" and "flags". header-abi-diff selects the config
+section that matches the target version given by cli.
+Take above config as an example, if `-target-version 34` and `-lib libfoo` are
+specified, the selected config section is:
+```json
+{
+  "target_version": "34",
+  "ignore_linker_set_keys": [
+    "_ZTI14internal_state",
+  ],
+  "flags": {
+    "allow_extensions": true,
+  }
+}
+```
 
 ## Create Reference ABI Dumps
 
