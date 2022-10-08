@@ -127,6 +127,10 @@ cc_binary_host {
         "src/diff/abi_diff_wrappers.cpp",
         "src/diff/header_abi_diff.cpp",
     ],
+
+    static_libs: [
+        "libjsoncpp",
+    ],
 }
 
 cc_library_host_static {
@@ -139,6 +143,7 @@ cc_library_host_static {
     srcs: [
         "src/repr/abi_diff_helpers.cpp",
         "src/repr/ir_diff_dumper.cpp",
+        "src/repr/ir_diff_representation.cpp",
         "src/repr/ir_dumper.cpp",
         "src/repr/ir_reader.cpp",
         "src/repr/ir_representation.cpp",
@@ -197,6 +202,7 @@ cc_test_host {
         "libgtest",
         "libgtest_main",
         "libheader-checker",
+        "libjsoncpp",
     ],
 
     shared_libs: [

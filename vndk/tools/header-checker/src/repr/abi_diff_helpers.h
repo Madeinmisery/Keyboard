@@ -20,6 +20,7 @@
 #include "repr/ir_representation.h"
 
 #include <deque>
+#include <set>
 
 
 namespace header_checker {
@@ -80,10 +81,18 @@ class AbiDiffHelper {
       const AbiElementMap<const TypeIR *> &new_types,
       const DiffPolicyOptions &diff_policy_options,
       std::set<std::string> *type_cache,
+      const std::set<std::string> &ignored_linker_set_keys,
       IRDiffDumper *ir_diff_dumper = nullptr)
       : old_types_(old_types), new_types_(new_types),
         diff_policy_options_(diff_policy_options), type_cache_(type_cache),
+        ignored_linker_set_keys_(ignored_linker_set_keys),
         ir_diff_dumper_(ir_diff_dumper) {}
+
+  bool AreOpaqueTypesEqual(const std::string &old_type_str,
+                           const std::string &new_type_str) const;
+
+  bool AreTypeSizeAndAlignmentEqual(const std::string &old_type_str,
+                                    const std::string &new_type_str) const;
 
   DiffStatus CompareAndDumpTypeDiff(
       const std::string &old_type_str, const std::string &new_type_str,
@@ -107,8 +116,8 @@ class AbiDiffHelper {
                               std::deque<std::string> *type_queue,
                               IRDiffDumper::DiffKind diff_kind);
 
-  DiffStatus CompareFunctionTypes(const FunctionTypeIR *old_type,
-                                  const FunctionTypeIR *new_type,
+  DiffStatus CompareFunctionTypes(const CFunctionLikeIR *old_type,
+                                  const CFunctionLikeIR *new_type,
                                   std::deque<std::string> *type_queue,
                                   DiffMessageIR::DiffKind diff_kind);
 
@@ -117,6 +126,11 @@ class AbiDiffHelper {
       const std::vector<ParamIR> &new_parameters,
       std::deque<std::string> *type_queue,
       IRDiffDumper::DiffKind diff_kind);
+
+  DiffStatus CompareParameterOrReturnType(const std::string &old_type_id,
+                                          const std::string &new_type_id,
+                                          std::deque<std::string> *type_queue,
+                                          IRDiffDumper::DiffKind diff_kind);
 
   DiffStatus CompareTemplateInfo(
       const std::vector<TemplateElementIR> &old_template_elements,
@@ -195,9 +209,6 @@ class AbiDiffHelper {
       const VTableComponentIR &old_component,
       const VTableComponentIR &new_component);
 
-  bool CompareSizeAndAlignment(const TypeIR *old_ti,
-                               const TypeIR *new_ti);
-
   template <typename DiffType, typename DiffElement>
   bool AddToDiff(DiffType *mutable_diff, const DiffElement *oldp,
                  const DiffElement *newp,
@@ -208,6 +219,7 @@ class AbiDiffHelper {
   const AbiElementMap<const TypeIR *> &new_types_;
   const DiffPolicyOptions &diff_policy_options_;
   std::set<std::string> *type_cache_;
+  const std::set<std::string> &ignored_linker_set_keys_;
   IRDiffDumper *ir_diff_dumper_;
 };
 
