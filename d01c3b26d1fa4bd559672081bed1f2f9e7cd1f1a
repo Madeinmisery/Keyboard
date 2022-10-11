@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "bc639b7e_8ce88c62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2022-10-11T19:10:27Z",
+      "side": 1,
+      "message": "Let\u0027s discuss this in the thread on the other cl, but I think we do need them.",
+      "parentUuid": "c321ae5a_b2de0209",
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "651d0c81_3aa7d563",
         "filename": "build/Android.mk",
         "patchSetId": 1
@@ -66,6 +84,30 @@
       "writtenOn": "2022-10-11T10:51:23Z",
       "side": 1,
       "message": "Kind of think we should use a better directory structure for these, rather than these random subdir names in the root. Something like `sdk-data/\u003cvisibility\u003e/api-versions.xml`. But we can do that separately, as we\u0027d want to change the public one at the same time.",
+      "range": {
+        "startLine": 124,
+        "startChar": 41,
+        "endLine": 124,
+        "endChar": 56
+      },
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff445398_9560c4dc",
+        "filename": "build/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2022-10-11T19:10:27Z",
+      "side": 1,
+      "message": "Agreed, I can do that in a followup.",
+      "parentUuid": "7c2f948d_d7c796ea",
       "range": {
         "startLine": 124,
         "startChar": 41,
