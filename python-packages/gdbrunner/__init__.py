@@ -171,6 +171,7 @@ def start_gdbserver(device, gdbserver_local_path, gdbserver_remote_path,
     # Push gdbserver to the target.
     if gdbserver_local_path is not None:
         device.push(gdbserver_local_path, chroot + gdbserver_remote_path)
+        device.shell_nocheck(["chmod", "+x", gdbserver_remote_path])
 
     # Run gdbserver.
     gdbserver_cmd = [gdbserver_remote_path]
