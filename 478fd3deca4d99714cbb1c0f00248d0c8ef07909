@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6e14fa8c_ec1fb1a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-10-11T23:38:30Z",
+      "side": 1,
+      "message": "My comment in http://cs/android/ndk/ndk/run_tests.py;l\u003d193-195;rcl\u003d15190ef11ef3310a3780e08981f90f90d4b7bbc6 claims that it\u0027s not just windows but also mac? That\u0027s weird.",
+      "parentUuid": "5dd69ffc_6735e306",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 57
+      },
+      "revId": "478fd3deca4d99714cbb1c0f00248d0c8ef07909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9de28837_5dbf0024",
         "filename": "python-packages/gdbrunner/__init__.py",
         "patchSetId": 1
