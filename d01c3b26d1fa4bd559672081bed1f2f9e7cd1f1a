@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "c321ae5a_b2de0209",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060959
+      },
+      "writtenOn": "2022-10-11T10:51:23Z",
+      "side": 1,
+      "message": "Looks fine except for the same question of whether we need the annotations.zip or not.",
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "651d0c81_3aa7d563",
@@ -14,6 +31,47 @@
       "writtenOn": "2022-10-06T21:56:19Z",
       "side": 1,
       "message": "I changed this to be consistent with `api_versions_public` above, it\u0027s mostly the same, but produces this diff: https://paste.googleplex.com/6327200700694528\n\nNot sure what is more correct here.",
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "101bca23_d4141465",
+        "filename": "build/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1060959
+      },
+      "writtenOn": "2022-10-11T10:51:23Z",
+      "side": 1,
+      "message": "Thanks. We want the new one. We should ideally also stop the old one (the doc stubs target) from generating an API database.",
+      "parentUuid": "651d0c81_3aa7d563",
+      "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c2f948d_d7c796ea",
+        "filename": "build/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1060959
+      },
+      "writtenOn": "2022-10-11T10:51:23Z",
+      "side": 1,
+      "message": "Kind of think we should use a better directory structure for these, rather than these random subdir names in the root. Something like `sdk-data/\u003cvisibility\u003e/api-versions.xml`. But we can do that separately, as we\u0027d want to change the public one at the same time.",
+      "range": {
+        "startLine": 124,
+        "startChar": 41,
+        "endLine": 124,
+        "endChar": 56
+      },
       "revId": "d01c3b26d1fa4bd559672081bed1f2f9e7cd1f1a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
