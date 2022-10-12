@@ -45,6 +45,54 @@
       },
       "revId": "d30a4df1915f95ed0b619c25161b71c559dde7f7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eccffc4a_bb2805e6",
+        "filename": "python-packages/gdbrunner/__init__.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-10-12T00:40:47Z",
+      "side": 1,
+      "message": "yup, updated.",
+      "parentUuid": "bfcfc0bb_7e1677e6",
+      "range": {
+        "startLine": 174,
+        "startChar": 67,
+        "endLine": 174,
+        "endChar": 74
+      },
+      "revId": "d30a4df1915f95ed0b619c25161b71c559dde7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ae2edf6_47bd6754",
+        "filename": "python-packages/gdbrunner/__init__.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-10-12T00:40:47Z",
+      "side": 1,
+      "message": "removed the macOS part.",
+      "parentUuid": "fcbe5366_6bc4f765",
+      "range": {
+        "startLine": 174,
+        "startChar": 53,
+        "endLine": 174,
+        "endChar": 61
+      },
+      "revId": "d30a4df1915f95ed0b619c25161b71c559dde7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
