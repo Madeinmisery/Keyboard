@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfcfc0bb_7e1677e6",
+        "filename": "python-packages/gdbrunner/__init__.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-10-12T00:35:12Z",
+      "side": 1,
+      "message": "and for windows, this is \"cannot\", no? there\u0027s literally no such thing as execute permission on windows aiui?",
+      "range": {
+        "startLine": 174,
+        "startChar": 67,
+        "endLine": 174,
+        "endChar": 74
+      },
+      "revId": "d30a4df1915f95ed0b619c25161b71c559dde7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcbe5366_6bc4f765",
+        "filename": "python-packages/gdbrunner/__init__.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-10-12T00:35:12Z",
+      "side": 1,
+      "message": "(i don\u0027t think this bit is true; i think danalbert was just confused reading his own comment :-) )",
+      "range": {
+        "startLine": 174,
+        "startChar": 53,
+        "endLine": 174,
+        "endChar": 61
+      },
+      "revId": "d30a4df1915f95ed0b619c25161b71c559dde7f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
