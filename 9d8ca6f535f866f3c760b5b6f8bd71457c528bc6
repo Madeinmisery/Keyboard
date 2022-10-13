@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cb3e57f_770b1131",
+        "filename": "vndk/tools/header-checker/tests/reference_dumps/arm64/libmerge_multi_definitions.so.lsdump",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-10-13T08:09:58Z",
+      "side": 1,
+      "message": "I think that header-abi-linker not generating this type is a bug.\nEven though we fix the bug, we cannot modify the dumps in T version.  We still need ExtractMultiDefinitionTypeId in the diff function.",
+      "range": {
+        "startLine": 72,
+        "startChar": 26,
+        "endLine": 72,
+        "endChar": 69
+      },
+      "revId": "9d8ca6f535f866f3c760b5b6f8bd71457c528bc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
