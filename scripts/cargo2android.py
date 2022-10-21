@@ -666,6 +666,8 @@ class Crate(object):
     if 'test' in self.crate_types:
       self.write('    test_suites: ["general-tests"],')
       self.write('    auto_gen_config: true,')
+      if self.runner.args.test_requires_root:
+        self.write('    require_root: true,')
     self.dump_edition_flags_libs()
     if 'test' in self.crate_types and len(self.srcs) == 1:
       self.dump_test_data()
@@ -1836,6 +1838,11 @@ def get_parser():
       type=str,
       help=('Load command-line options from the given config file. ' +
             'Options in this file will override those passed on the command line.'))
+  parser.add_argument(
+      '--test-requires-root',
+      action='store_true',
+      default=False
+      help='Set "requires_root: true" for rust_test modules')
   return parser
 
 
