@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8db9cab_ca95cea2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2022-10-24T17:18:48Z",
+      "side": 1,
+      "message": "Thanks! - if the NDK usage (CL) is included as a reference, that\u0027ll be cool",
+      "revId": "034e7e2827d19e8cdad67f302910c5360ea15f05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
