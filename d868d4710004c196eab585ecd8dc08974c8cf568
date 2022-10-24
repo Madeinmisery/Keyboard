@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f0fd42c_9fedc24a",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-10-24T07:28:06Z",
+      "side": 1,
+      "message": "\"CLI\", as this is an abbreviation",
+      "range": {
+        "startLine": 139,
+        "startChar": 40,
+        "endLine": 139,
+        "endChar": 43
+      },
+      "revId": "d868d4710004c196eab585ecd8dc08974c8cf568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
