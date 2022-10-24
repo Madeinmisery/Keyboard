@@ -22,6 +22,30 @@
       },
       "revId": "d868d4710004c196eab585ecd8dc08974c8cf568",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3989f8d4_d802b1ba",
+        "filename": "vndk/tools/header-checker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-10-24T08:43:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f0fd42c_9fedc24a",
+      "range": {
+        "startLine": 139,
+        "startChar": 40,
+        "endLine": 139,
+        "endChar": 43
+      },
+      "revId": "d868d4710004c196eab585ecd8dc08974c8cf568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
