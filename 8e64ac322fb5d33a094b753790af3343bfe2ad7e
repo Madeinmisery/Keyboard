@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ab97993_c181b747",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-11-04T15:37:16Z",
+      "side": 1,
+      "message": "danalbert,jomof: right now Studio still expects these renderscript tools to be in build-tools, i think? Studio still only _warns_ about renderscript and doesn\u0027t actually refuse to build it?",
+      "revId": "8e64ac322fb5d33a094b753790af3343bfe2ad7e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
