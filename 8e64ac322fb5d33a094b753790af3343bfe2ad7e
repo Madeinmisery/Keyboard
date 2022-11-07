@@ -16,6 +16,24 @@
       "message": "danalbert,jomof: right now Studio still expects these renderscript tools to be in build-tools, i think? Studio still only _warns_ about renderscript and doesn\u0027t actually refuse to build it?",
       "revId": "8e64ac322fb5d33a094b753790af3343bfe2ad7e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ac1668f_8c1f41af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-11-07T22:19:06Z",
+      "side": 1,
+      "message": "https://source.corp.google.com/search?q\u003dllvm-rs-cc%20file:tools%2Fbase%20p:studio-main\u0026sq\u003d\n\nMinimally poking around, I\u0027m not convinced they didn\u0027t already remove it. It looks like it might only still exist in tests that someone overlooked? I\u0027m not confident that I\u0027ve read that correctly though. Easiest way to find out will be to remove it and wait for something to break. If it does break, the fix on the AGP side is easy, they just delete all that code.",
+      "parentUuid": "0ab97993_c181b747",
+      "revId": "8e64ac322fb5d33a094b753790af3343bfe2ad7e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
