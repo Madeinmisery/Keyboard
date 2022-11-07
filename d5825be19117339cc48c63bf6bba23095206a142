@@ -93,6 +93,30 @@
       },
       "revId": "d5825be19117339cc48c63bf6bba23095206a142",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df2c931b_6e7c0ba9",
+        "filename": "vndk/tools/header-checker/src/repr/ir_diff_representation.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-07T11:41:03Z",
+      "side": 1,
+      "message": "I see",
+      "parentUuid": "ec8f75d9_f2a49841",
+      "range": {
+        "startLine": 97,
+        "startChar": 10,
+        "endLine": 97,
+        "endChar": 48
+      },
+      "revId": "d5825be19117339cc48c63bf6bba23095206a142",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
