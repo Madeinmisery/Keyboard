@@ -16,6 +16,24 @@
       "message": "you had symlinks or something?",
       "revId": "e6e02b0e2298fd064f6790597c82d919cf087fd9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e242df57_ad9f302d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2022-11-09T20:57:45Z",
+      "side": 1,
+      "message": "Weirdly, I couldn\u0027t find exactly what it was getting confused by. I assumed a bad symlink, but didn\u0027t check too far after this worked. Looking at the docs, I don\u0027t think a symlink should have caused a problem, but I went for easiest fix.",
+      "parentUuid": "00c71b41_37b4ee20",
+      "revId": "e6e02b0e2298fd064f6790597c82d919cf087fd9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
