@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31f8cb6f_f0f2729a",
+        "filename": "vndk/tools/header-checker/src/diff/abi_diff.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-15T11:33:28Z",
+      "side": 1,
+      "message": "I suggest remove this whole block, as we expect the caller to pass in \"pairs of old\u0026new type with same linker_set_key\".\n\nOr use an assert() instead of handling it as an error, so it\u0027s clear that we don\u0027t expect this to happen under any case.",
+      "range": {
+        "startLine": 392,
+        "startChar": 4,
+        "endLine": 397,
+        "endChar": 5
+      },
+      "revId": "11a7320d468d5b689c9f801b3986cb01ffa0bae5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
