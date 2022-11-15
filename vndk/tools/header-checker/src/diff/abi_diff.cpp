@@ -383,8 +383,15 @@ bool HeaderAbiDiff::DumpDiffElements(
     const T *new_element = pair.second;
 
     if (IgnoreSymbol<T>(old_element, ignored_symbols_,
-                        [](const T *e) {return e->GetLinkerSetKey();})) {
+                        [](const T *e) {return e->GetLinkerSetKey();}) ||
+        ignored_linker_set_keys_.find(old_element->GetLinkerSetKey()) !=
+            ignored_linker_set_keys_.end()) {
       continue;
+    }
+
+    if (old_element->GetLinkerSetKey() != new_element->GetLinkerSetKey()) {
+      llvm::errs() << "Diff two different unreferenced elements: " << old_element->GetLinkerSetKey() << " "<< new_element->GetLinkerSetKey() << "\n";
+      return false;
     }
 
     DiffWrapper<T> diff_wrapper(
