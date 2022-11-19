@@ -8,3 +8,4 @@ Thumbs.db
 *.yarn/
 .yarnrc
 gen/
+scripts/c2a/target
