@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7d26e50_5ff5c461",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-24T07:21:16Z",
+      "side": 1,
+      "message": "could be in next patch after \"vendor\" tags are added",
+      "parentUuid": "b702a22c_5d7a8813",
+      "revId": "8947bed8b77a1f6c380f8f4aec2ea53b7b95cf06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "323aa928_153e8159",
