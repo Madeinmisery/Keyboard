@@ -51,6 +51,24 @@
       "message": "add check \"if -ref-dump-dir is given, then -libs must be given too\"",
       "revId": "8947bed8b77a1f6c380f8f4aec2ea53b7b95cf06",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01cccfe5_ce802e56",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-11-25T02:41:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "323aa928_153e8159",
+      "revId": "8947bed8b77a1f6c380f8f4aec2ea53b7b95cf06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
