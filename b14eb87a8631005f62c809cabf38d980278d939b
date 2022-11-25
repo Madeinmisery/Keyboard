@@ -95,6 +95,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "38a8e775_59168fd5",
+        "filename": "vndk/snapshot/multi_update.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-25T08:14:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c880e718_043626b6",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 53
+      },
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5b4fb1c7_624afc84",
@@ -125,6 +149,24 @@
       "writtenOn": "2022-11-25T07:17:55Z",
       "side": 1,
       "message": "nit; add eol",
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7437ed6e_3dc1904c",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-25T08:14:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b4fb1c7_624afc84",
       "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
