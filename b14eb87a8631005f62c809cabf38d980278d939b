@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40d60023_e61abf75",
+        "filename": "vndk/snapshot/multi_update.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-11-25T07:17:55Z",
+      "side": 1,
+      "message": "hmm, I wonder if we can do better than hard-coding.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 1
+      },
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9256599d_c3139af0",
+        "filename": "vndk/snapshot/multi_update.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-11-25T07:17:55Z",
+      "side": 1,
+      "message": "Is `--local` compatible with `--all` or `--versions`?",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 53
+      },
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b4fb1c7_624afc84",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-11-25T07:17:55Z",
+      "side": 1,
+      "message": "comment about the output of ab tool?",
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3680791_43f9dab7",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2022-11-25T07:17:55Z",
+      "side": 1,
+      "message": "nit; add eol",
+      "revId": "b14eb87a8631005f62c809cabf38d980278d939b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
