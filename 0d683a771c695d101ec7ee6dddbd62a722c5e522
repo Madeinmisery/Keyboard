@@ -22,6 +22,30 @@
       },
       "revId": "0d683a771c695d101ec7ee6dddbd62a722c5e522",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb14977f_e7bc74f4",
+        "filename": "tools/ndk/ndkabidump/test_soong.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-11-28T22:20:42Z",
+      "side": 1,
+      "message": "This is an override of something that doesn\u0027t follow pep8, I don\u0027t have a choice in the matter: https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp",
+      "parentUuid": "55324443_03ebe889",
+      "range": {
+        "startLine": 42,
+        "startChar": 8,
+        "endLine": 42,
+        "endChar": 13
+      },
+      "revId": "0d683a771c695d101ec7ee6dddbd62a722c5e522",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
