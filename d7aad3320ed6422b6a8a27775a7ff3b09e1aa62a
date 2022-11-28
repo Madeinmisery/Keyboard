@@ -22,6 +22,30 @@
       },
       "revId": "d7aad3320ed6422b6a8a27775a7ff3b09e1aa62a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d4617e4_b2992f6a",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-11-28T08:06:59Z",
+      "side": 1,
+      "message": "If we have read_lsdump_paths filter the tags, the other functions will not be able to distinguish between wrong library names and excluded tags. i.e., the two kinds of errors raised by find_lib_lsdumps.",
+      "parentUuid": "81ebe9b9_81192c14",
+      "range": {
+        "startLine": 182,
+        "startChar": 64,
+        "endLine": 182,
+        "endChar": 76
+      },
+      "revId": "d7aad3320ed6422b6a8a27775a7ff3b09e1aa62a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
