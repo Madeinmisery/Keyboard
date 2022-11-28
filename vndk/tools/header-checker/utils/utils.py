@@ -162,16 +162,14 @@ def make_tree(product, variant):
     return make_targets(product, variant, ['findlsdumps'])
 
 
-def make_libraries(product, variant, vndk_version, targets, libs):
+def make_libraries(product, variant, vndk_version, targets, libs,
+                   exclude_tags):
     """Build lsdump files for specific libs."""
     lsdump_paths = read_lsdump_paths(product, variant, vndk_version, targets,
                                      build=True)
-    make_target_paths = []
-    for name in libs:
-        if not (name in lsdump_paths and lsdump_paths[name]):
-            raise KeyError('Cannot find lsdump for %s.' % name)
-        for tag_path_dict in lsdump_paths[name].values():
-            make_target_paths.extend(tag_path_dict.values())
+    make_target_paths = [
+        path for tag, path in
+        find_lib_lsdumps(lsdump_paths, libs, targets, exclude_tags)]
     make_targets(product, variant, make_target_paths)
 
 
@@ -196,9 +194,11 @@ def _get_module_variant_dir_name(tag, vndk_version, arch_cpu_str):
     For example, android_x86_shared, android_vendor.R_arm_armv7-a-neon_shared.
     """
     if tag in ('LLNDK', 'NDK', 'PLATFORM'):
-        return 'android_%s_shared' % arch_cpu_str
-    if tag.startswith('VNDK'):
-        return 'android_vendor.%s_%s_shared' % (vndk_version, arch_cpu_str)
+        return f'android_{arch_cpu_str}_shared'
+    if tag.startswith('VNDK') or tag == 'VENDOR':
+        return f'android_vendor.{vndk_version}_{arch_cpu_str}_shared'
+    if tag == 'PRODUCT':
+        return f'android.product.{vndk_version}_{arch_cpu_str}_shared'
     raise ValueError(tag + ' is not a known tag.')
 
 
@@ -261,31 +261,38 @@ def read_lsdump_paths(product, variant, vndk_version, targets, build=True):
                               targets)
 
 
-def find_lib_lsdumps(lsdump_paths, libs, target):
+def find_lib_lsdumps(lsdump_paths, libs, targets, exclude_tags):
     """Find the lsdump corresponding to libs for the given target.
 
-    This function returns a list of (tag, absolute_path).
+    This function raises an error if libs are not empty and not all libs have
+    lsdumps. This function returns a list of (tag, path).
     For example,
     [
       (
         "NDK",
-        "/path/to/libc.so.lsdump"
+        "out/soong/.intermediate/path/to/libc.so.lsdump"
       )
     ]
     """
-    arch_cpu = target.get_arch_cpu_str()
     result = []
-    if libs:
-        for lib_name in libs:
-            if not (lib_name in lsdump_paths and
-                    arch_cpu in lsdump_paths[lib_name]):
-                raise KeyError('Cannot find lsdump for %s, %s.' %
-                               (lib_name, arch_cpu))
-            result.extend(lsdump_paths[lib_name][arch_cpu].items())
-    else:
-        for arch_tag_path_dict in lsdump_paths.values():
-            result.extend(arch_tag_path_dict[arch_cpu].items())
-    return [(tag, os.path.join(AOSP_DIR, path)) for tag, path in result]
+    arches = [target.get_arch_cpu_str() for target in targets]
+    for lib in (libs or lsdump_paths):
+        if lib not in lsdump_paths:
+            raise KeyError(f'No lsdump for {lib}.')
+        has_lsdump = False
+        for arch in arches:
+            if arch not in lsdump_paths[lib]:
+                continue
+            for tag, path in lsdump_paths[lib][arch].items():
+                if tag in exclude_tags:
+                    continue
+                has_lsdump = True
+                result.append((tag, path))
+        if not has_lsdump and libs:
+            raise KeyError(f'No lsdump for {lib} can be created in the '
+                           'reference dump directory. Please specify '
+                           '-ref-dump-dir.')
+    return result
 
 
 def run_abi_diff(old_test_dump_path, new_test_dump_path, arch, lib_name,
