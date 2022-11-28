@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81ebe9b9_81192c14",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-28T07:29:09Z",
+      "side": 1,
+      "message": "instead of tossing this everywhere just for make_libraries() and find_lib_lsdumps() to filter on the library tags, how about just pass |exclude_tags| into read_lsdump_paths() and filter only once?\n\nIt seems the ultimate goal is always to use |exclude_tags| to filter lsdump_paths, so we should just read and filter lsdump_paths once, and reuse the filtered lsdump_paths dictionary everywhere",
+      "range": {
+        "startLine": 182,
+        "startChar": 64,
+        "endLine": 182,
+        "endChar": 76
+      },
+      "revId": "d7aad3320ed6422b6a8a27775a7ff3b09e1aa62a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
