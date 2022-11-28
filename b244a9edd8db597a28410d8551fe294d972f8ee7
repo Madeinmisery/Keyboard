@@ -124,6 +124,24 @@
       "parentUuid": "1afd08b2_82561ec6",
       "revId": "b244a9edd8db597a28410d8551fe294d972f8ee7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5251c4c_cbb7f0c1",
+        "filename": "tools/ndk/ndkabidump/soong.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-11-28T20:57:18Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ec551355_f77ad349",
+      "revId": "b244a9edd8db597a28410d8551fe294d972f8ee7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
