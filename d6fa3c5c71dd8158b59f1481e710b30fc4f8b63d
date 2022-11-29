@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8cdf750_05c70643",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-29T07:36:19Z",
+      "side": 1,
+      "message": "could you also add more detail here? like \"specify -ref-dump-dir if you are updating reference dumps for opt-in product or vendor libraries\"",
+      "range": {
+        "startLine": 187,
+        "startChar": 36,
+        "endLine": 187,
+        "endChar": 50
+      },
+      "revId": "d6fa3c5c71dd8158b59f1481e710b30fc4f8b63d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
