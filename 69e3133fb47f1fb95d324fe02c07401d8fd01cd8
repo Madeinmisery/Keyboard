@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c16f528_89022470",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-11-29T06:14:05Z",
+      "side": 1,
+      "message": "I think the convention is to just re-raise the exception instead of `print(e) and exit()`:\n\n```\nexcept KeyError as e:\n  print(\u0027Please check ...\u0027)\n  raise\n```",
+      "revId": "69e3133fb47f1fb95d324fe02c07401d8fd01cd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
