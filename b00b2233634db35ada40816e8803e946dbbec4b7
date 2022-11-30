@@ -189,6 +189,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ce75410_6f078460",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T04:45:02Z",
+      "side": 1,
+      "message": "Resolved",
+      "parentUuid": "2bdd1ac7_61051c74",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 96
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3c6f918d_37f98c42",
