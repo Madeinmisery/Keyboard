@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f880993c_036beba7",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T01:44:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "968f7cc2_fc928934",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 6
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6853b84f_bc1bb01b",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02035369_063e8f9c",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T01:44:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6853b84f_bc1bb01b",
+      "range": {
+        "startLine": 39,
+        "startChar": 73,
+        "endLine": 39,
+        "endChar": 82
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8dfd0d0_48ec748c",
@@ -60,6 +108,30 @@
       "writtenOn": "2022-11-30T01:32:14Z",
       "side": 1,
       "message": "exit 1",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 8
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91cfd111_518d56e8",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T01:44:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8dfd0d0_48ec748c",
       "range": {
         "startLine": 40,
         "startChar": 4,
@@ -95,6 +167,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2bdd1ac7_61051c74",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T01:44:48Z",
+      "side": 1,
+      "message": "I assumed this is only for hwasan build. cfi must be disabled for the hwasan build and will not be used.\nTo build the cfi, original bp must be restored.\nI chose this way because we don\u0027t have enough information for the exported headers for the hwasan build. I used the information by replacing the cfi with the hwasan.",
+      "parentUuid": "5839303a_a7004752",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 96
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3c6f918d_37f98c42",
         "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
         "patchSetId": 2
@@ -106,6 +202,30 @@
       "writtenOn": "2022-11-30T01:32:14Z",
       "side": 1,
       "message": "exit 1",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 8
+      },
+      "revId": "b00b2233634db35ada40816e8803e946dbbec4b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49e13e22_5eb0a74f",
+        "filename": "vendor_snapshot/modify_bp_for_hwasan.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2022-11-30T01:44:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3c6f918d_37f98c42",
       "range": {
         "startLine": 54,
         "startChar": 4,
