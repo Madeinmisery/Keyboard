@@ -36,8 +36,11 @@ class DiffStatus {
     NoDiff = 0,
     // The diff has been added to the IRDiffDumper.
     IndirectDiff = 1,
+    // The diff has not been added to the IRDiffDumper, and the new ABI is
+    // an extension to the old ABI.
+    DirectExt = 2,
     // The diff has not been added to the IRDiffDumper.
-    DirectDiff = 2,
+    DirectDiff = 3,
   };
 
   // Allow implicit conversion.
@@ -45,7 +48,11 @@ class DiffStatus {
 
   bool HasDiff() const { return status_ != NoDiff; }
 
-  bool IsDirectDiff() const { return status_ == DirectDiff; }
+  bool IsDirectDiff() const {
+    return status_ == DirectDiff || status_ == DirectExt;
+  }
+
+  bool IsExtension() const { return status_ == DirectExt; }
 
   DiffStatus &CombineWith(DiffStatus other) {
     if (status_ < other.status_) {
@@ -125,17 +132,6 @@ class AbiDiffHelper {
                                   std::deque<std::string> *type_queue,
                                   DiffMessageIR::DiffKind diff_kind);
 
-  DiffStatus CompareFunctionParameters(
-      const std::vector<ParamIR> &old_parameters,
-      const std::vector<ParamIR> &new_parameters,
-      std::deque<std::string> *type_queue,
-      IRDiffDumper::DiffKind diff_kind);
-
-  DiffStatus CompareParameterOrReturnType(const std::string &old_type_id,
-                                          const std::string &new_type_id,
-                                          std::deque<std::string> *type_queue,
-                                          IRDiffDumper::DiffKind diff_kind);
-
   DiffStatus CompareTemplateInfo(
       const std::vector<TemplateElementIR> &old_template_elements,
       const std::vector<TemplateElementIR> &new_template_elements,
@@ -212,6 +208,17 @@ class AbiDiffHelper {
   bool CompareVTableComponents(
       const VTableComponentIR &old_component,
       const VTableComponentIR &new_component);
+
+  DiffStatus CompareFunctionParameters(
+      const std::vector<ParamIR> &old_parameters,
+      const std::vector<ParamIR> &new_parameters,
+      std::deque<std::string> *type_queue, IRDiffDumper::DiffKind diff_kind);
+
+  DiffStatus CompareParameterOrReturnType(const std::string &old_type_id,
+                                          const std::string &new_type_id,
+                                          std::deque<std::string> *type_queue,
+                                          IRDiffDumper::DiffKind diff_kind,
+                                          bool cast_old_to_new);
 
   template <typename DiffType, typename DiffElement>
   bool AddToDiff(DiffType *mutable_diff, const DiffElement *oldp,

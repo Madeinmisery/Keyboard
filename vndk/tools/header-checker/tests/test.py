@@ -437,6 +437,21 @@ class HeaderCheckerTest(unittest.TestCase):
             flags=["-input-format-new", "Json", "-input-format-old", "Json"],
             create_old=False, create_new=False)
 
+    def test_function_extensions(self):
+        diff = self.prepare_and_run_abi_diff_all_archs(
+            "libfunction_extensions", "liballowed_function_extensions", 4,
+            flags=["-input-format-new", "Json", "-input-format-old", "Json"],
+            create_old=False, create_new=False)
+        self.assertEqual(6, diff.count('function_extension_diffs'))
+
+        diff = self.prepare_and_run_abi_diff_all_archs(
+            "liballowed_function_extensions", "libfunction_extensions", 8,
+            flags=["-input-format-new", "Json", "-input-format-old", "Json"],
+            create_old=False, create_new=False)
+        # Adding and removing __restrict__ are considered extension.
+        self.assertEqual(1, diff.count('function_extension_diffs'))
+        self.assertEqual(5, diff.count('function_diffs'))
+
 
 if __name__ == '__main__':
     unittest.main()
