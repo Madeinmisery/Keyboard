@@ -281,20 +281,6 @@ static bool CompareSizeAndAlignment(const TypeIR *old_type,
       old_type->GetAlignment() == new_type->GetAlignment();
 }
 
-bool AbiDiffHelper::AreTypeSizeAndAlignmentEqual(
-    const std::string &old_type_id, const std::string &new_type_id) const {
-  AbiElementMap<const TypeIR *>::const_iterator old_it =
-      old_types_.find(old_type_id);
-  AbiElementMap<const TypeIR *>::const_iterator new_it =
-      new_types_.find(new_type_id);
-
-  if (old_it == old_types_.end() || new_it == new_types_.end()) {
-    return AreOpaqueTypesEqual(old_type_id, new_type_id);
-  }
-
-  return CompareSizeAndAlignment(old_it->second, new_it->second);
-}
-
 DiffStatusPair<std::unique_ptr<RecordFieldDiffIR>>
 AbiDiffHelper::CompareCommonRecordFields(
     const RecordFieldIR *old_field,
@@ -521,15 +507,18 @@ AbiDiffHelper::FixupDiffedFieldTypeIds(
 
 DiffStatus AbiDiffHelper::CompareFunctionTypes(
     const CFunctionLikeIR *old_type, const CFunctionLikeIR *new_type,
-    std::deque<std::string> *type_queue, DiffMessageIR::DiffKind diff_kind) {
-  DiffStatus param_diffs = CompareFunctionParameters(old_type->GetParameters(),
-                                                     new_type->GetParameters(),
-                                                     type_queue, diff_kind);
-  DiffStatus return_type_diff = CompareParameterOrReturnType(
+    std::deque<std::string> *type_queue, DiffMessageIR::DiffKind diff_kind,
+    bool allow_extensions) {
+  DiffStatus status = CompareFunctionParameters(old_type->GetParameters(),
+                                                new_type->GetParameters(),
+                                                type_queue, diff_kind);
+  status.CombineWith(CompareParameterOrReturnType(
       old_type->GetReturnType(), new_type->GetReturnType(), type_queue,
-      diff_kind);
-
-  return param_diffs.CombineWith(return_type_diff);
+      diff_kind, /* is_parameter */ false));
+  if (!allow_extensions && status.IsExtension()) {
+    status.CombineWith(DiffStatus::kDirectDiff);
+  }
+  return status;
 }
 
 DiffStatus AbiDiffHelper::CompareRecordTypes(
@@ -696,36 +685,176 @@ DiffStatus AbiDiffHelper::CompareBuiltinTypes(
 DiffStatus AbiDiffHelper::CompareFunctionParameters(
     const std::vector<ParamIR> &old_parameters,
     const std::vector<ParamIR> &new_parameters,
-    std::deque<std::string> *type_queue,
-    DiffMessageIR::DiffKind diff_kind) {
+    std::deque<std::string> *type_queue, DiffMessageIR::DiffKind diff_kind) {
   size_t old_parameters_size = old_parameters.size();
   if (old_parameters_size != new_parameters.size()) {
     return DiffStatus::kDirectDiff;
   }
-  uint64_t i = 0;
-  while (i < old_parameters_size) {
+  DiffStatus result = DiffStatus::kNoDiff;
+  for (uint64_t i = 0; i < old_parameters_size; i++) {
     const ParamIR &old_parameter = old_parameters.at(i);
     const ParamIR &new_parameter = new_parameters.at(i);
-    if (CompareParameterOrReturnType(old_parameter.GetReferencedType(),
-                                     new_parameter.GetReferencedType(),
-                                     type_queue, diff_kind)
-            .IsDirectDiff() ||
-        (old_parameter.GetIsDefault() != new_parameter.GetIsDefault())) {
-      return DiffStatus::kDirectDiff;
+    result.CombineWith(CompareParameterOrReturnType(
+        old_parameter.GetReferencedType(), new_parameter.GetReferencedType(),
+        type_queue, diff_kind, /* is_parameter */ true));
+    if (old_parameter.GetIsDefault() != new_parameter.GetIsDefault()) {
+      result.CombineWith(DiffStatus::kDirectDiff);
     }
-    i++;
   }
-  return DiffStatus::kNoDiff;
+  return result;
+}
+
+static const TypeIR *FindTypeById(
+    const AbiElementMap<const TypeIR *> &type_graph,
+    const std::string &type_id) {
+  auto it = type_graph.find(type_id);
+  return it == type_graph.end() ? nullptr : it->second;
+}
+
+static const std::string &ResolveQualifiers(
+    const TypeIR *type_ir, const AbiElementMap<const TypeIR *> &types_,
+    bool &is_const, bool &is_restricted, bool &is_volatile) {
+  is_const = false;
+  is_restricted = false;
+  is_volatile = false;
+
+  while (type_ir->GetKind() == LinkableMessageKind::QualifiedTypeKind) {
+    const QualifiedTypeIR *qualified =
+        static_cast<const QualifiedTypeIR *>(type_ir);
+    is_const |= qualified->IsConst();
+    is_restricted |= qualified->IsRestricted();
+    is_volatile |= qualified->IsVolatile();
+
+    const std::string &referenced_type_id = type_ir->GetReferencedType();
+    type_ir = FindTypeById(types_, referenced_type_id);
+    if (type_ir == nullptr) {
+      return referenced_type_id;
+    }
+  }
+  return type_ir->GetSelfType();
+}
+
+// This function returns whether the old_type can be casted to new_type.
+// It resolves qualified pointers and references until it reaches a type that
+// does not reference other types. It does not compare the final referenced
+// types.
+//
+// If this function returns true, old_type_id and new_type_id are set to the
+// final referenced types. are_qualifiers_equal represents whether the
+// qualifiers are exactly the same.
+//
+// If this function returns false, old_type_id, new_type_id, and
+// are_qualifiers_equal do not have valid values.
+//
+// This function follows C++ standard to determine whether qualifiers can be
+// casted. The rules are descrcibed on
+// https://en.cppreference.com/w/cpp/language/implicit_conversion#Qualification_conversions
+// Additionally, clang disallows adding and removing __restrict__ except for
+// the first level.
+static bool CompareQualifiedReferences(
+    std::string &old_type_id, std::string &new_type_id,
+    const AbiElementMap<const TypeIR *> &old_types,
+    const AbiElementMap<const TypeIR *> &new_types,
+    bool &are_qualifiers_equal) {
+  are_qualifiers_equal = true;
+  bool is_first_level = true;
+  bool is_const_since_second_level = true;
+  while (true) {
+    const TypeIR *old_type = FindTypeById(old_types, old_type_id);
+    const TypeIR *new_type = FindTypeById(new_types, new_type_id);
+    // Resolve qualifiers.
+    bool old_const = false;
+    bool old_restricted = false;
+    bool old_volatile = false;
+    bool new_const = false;
+    bool new_restricted = false;
+    bool new_volatile = false;
+    // nullptr represents an opaque type. The input old_type and new_type must
+    // not be nullptr. The types that they reference can be nullptr.
+    if (old_type != nullptr) {
+      old_type_id = ResolveQualifiers(old_type, old_types, old_const,
+                                      old_restricted, old_volatile);
+      old_type = FindTypeById(old_types, old_type_id);
+    }
+    if (new_type != nullptr) {
+      new_type_id = ResolveQualifiers(new_type, new_types, new_const,
+                                      new_restricted, new_volatile);
+      new_type = FindTypeById(new_types, new_type_id);
+    }
+    // Check qualifiers.
+    if (old_const != new_const || old_volatile != new_volatile ||
+        old_restricted != new_restricted) {
+      are_qualifiers_equal = false;
+    }
+    if ((old_const && !new_const) || (old_volatile && !new_volatile)) {
+      return false;
+    }
+    if (is_first_level) {
+      is_first_level = false;
+    } else {
+      if (!new_const) {
+        is_const_since_second_level = false;
+      }
+      if (!old_const && new_const && !is_const_since_second_level) {
+        return false;
+      }
+      if (old_restricted != new_restricted) {
+        return false;
+      }
+    }
+    // Stop if the unqualified types differ or don't reference other types.
+    if (old_type == nullptr || new_type == nullptr) {
+      return true;
+    }
+    if (old_type->GetKind() != new_type->GetKind()) {
+      return true;
+    }
+    if (old_type->GetKind() != LinkableMessageKind::PointerTypeKind &&
+        old_type->GetKind() != LinkableMessageKind::LvalueReferenceTypeKind &&
+        old_type->GetKind() != LinkableMessageKind::RvalueReferenceTypeKind) {
+      return true;
+    }
+    // Get the referenced types.
+    old_type_id = old_type->GetReferencedType();
+    new_type_id = new_type->GetReferencedType();
+  }
 }
 
 DiffStatus AbiDiffHelper::CompareParameterOrReturnType(
     const std::string &old_type_id, const std::string &new_type_id,
-    std::deque<std::string> *type_queue, DiffMessageIR::DiffKind diff_kind) {
-  if (!AreTypeSizeAndAlignmentEqual(old_type_id, new_type_id)) {
+    std::deque<std::string> *type_queue, DiffMessageIR::DiffKind diff_kind,
+    bool is_parameter) {
+  // Compare size and alignment.
+  const TypeIR *old_type_ir = FindTypeById(old_types_, old_type_id);
+  const TypeIR *new_type_ir = FindTypeById(new_types_, new_type_id);
+  if (old_type_ir != nullptr && new_type_ir != nullptr &&
+      !CompareSizeAndAlignment(old_type_ir, new_type_ir)) {
     return DiffStatus::kDirectDiff;
   }
-  return CompareAndDumpTypeDiff(old_type_id, new_type_id, type_queue,
-                                diff_kind);
+  // Comapare qualifiers, pointers and references.
+  std::string old_referenced_type_id = old_type_id;
+  std::string new_referenced_type_id = new_type_id;
+  bool are_qualifiers_equal;
+  if (is_parameter) {
+    if (!CompareQualifiedReferences(old_referenced_type_id,
+                                    new_referenced_type_id, old_types_,
+                                    new_types_, are_qualifiers_equal)) {
+      return DiffStatus::kDirectDiff;
+    }
+  } else {
+    if (!CompareQualifiedReferences(new_referenced_type_id,
+                                    old_referenced_type_id, new_types_,
+                                    old_types_, are_qualifiers_equal)) {
+      return DiffStatus::kDirectDiff;
+    }
+  }
+  // Compare the unqualified referenced types.
+  DiffStatus result = CompareAndDumpTypeDiff(
+      old_referenced_type_id, new_referenced_type_id, type_queue, diff_kind);
+  if (!are_qualifiers_equal) {
+    result.CombineWith(DiffStatus::kDirectExt);
+  }
+  return result;
 }
 
 DiffStatus AbiDiffHelper::CompareAndDumpTypeDiff(
@@ -786,10 +915,10 @@ DiffStatus AbiDiffHelper::CompareAndDumpTypeDiff(
   }
 
   if (kind == LinkableMessageKind::FunctionTypeKind) {
-    return CompareFunctionTypes(
-        static_cast<const FunctionTypeIR *>(old_type),
-        static_cast<const FunctionTypeIR *>(new_type),
-        type_queue, diff_kind);
+    return CompareFunctionTypes(static_cast<const FunctionTypeIR *>(old_type),
+                                static_cast<const FunctionTypeIR *>(new_type),
+                                type_queue, diff_kind,
+                                /* allow_extensions */ false);
   }
   return DiffStatus::kNoDiff;
 }
