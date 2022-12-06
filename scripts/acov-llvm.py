@@ -125,7 +125,13 @@ def send_flush_signal(pids=None):
         logging.warning(
             f'couldn\'t find any process with handler for signal 37')
 
-    adb_shell(['kill', '-37'] + pids)
+    try:
+        adb_shell(['kill', '-37'] + pids)
+    except Exception as e:
+        # For this particular class of errors, ignore *all* failures
+        # originating from on-device processes, and channeled through
+        # adb shell service.
+        pass
 
 
 def do_clean_device(args):
