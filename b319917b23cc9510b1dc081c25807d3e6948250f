@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4990c31d_81169568",
+        "filename": "scripts/acov-llvm.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-12-06T17:31:07Z",
+      "side": 1,
+      "message": "might be worth explicitly stating \"we rely on kill(1) sending the signal to all pids on the command line even if some don\u0027t exist\"? which is true of toybox and \"probably implied\" by POSIX, even if not explicitly called out [https://pubs.opengroup.org/onlinepubs/9699919799/utilities/kill.html], but you made me check :-)",
+      "revId": "b319917b23cc9510b1dc081c25807d3e6948250f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
