@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c592a43_a0838069",
+        "filename": "scripts/acov-llvm.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-12-06T15:52:49Z",
+      "side": 1,
+      "message": "is this right? i think at the least the code comment and/or commit message should explain _why_ this is expect, and why it\u0027s okay to just continue.\n\nis this actually supposed to be in an `else:` with the check above? what\u0027s the _specific_ failure case you\u0027re seeing, and why is it okay to ignore?",
+      "revId": "85e0fe8f9d4a9b214be12bbc7697664da77c0f7f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
