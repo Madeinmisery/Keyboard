@@ -125,7 +125,12 @@ def send_flush_signal(pids=None):
         logging.warning(
             f'couldn\'t find any process with handler for signal 37')
 
-    adb_shell(['kill', '-37'] + pids)
+    # Some processes may exit after we run `ps` command above - ignore failures when sending
+    # flush signal.
+    try:
+        adb_shell(['kill', '-37'] + pids)
+    except subprocess.CalledProcessError:
+        logging.warning('Sending flush signal failed - some pids no longer active')
 
 
 def do_clean_device(args):
