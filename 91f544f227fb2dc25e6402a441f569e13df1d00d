@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88133876_5868cc6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-12-06T19:32:19Z",
+      "side": 1,
+      "message": "Bypassing presubmit - only comments updated after latest verified patchset.",
+      "revId": "91f544f227fb2dc25e6402a441f569e13df1d00d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
