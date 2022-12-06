@@ -16,6 +16,24 @@
       "message": "WDYT we should do with this Paul? Seems like the bug will reappear unless we submit it",
       "revId": "2a88527d85d7f2f5825076d423380303a486e22f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68f937fc_3c206712",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1056183
+      },
+      "writtenOn": "2022-12-06T12:31:44Z",
+      "side": 1,
+      "message": "Sorry I haven\u0027t managed to test this out yet as I haven\u0027t found someone with the platform building on mac to try it out and we don\u0027t have any forrest macs, but the thing is this is already ok (all platform build tools have the jar with sources and debug info) on aosp and internal master, it\u0027s the older SDK targets for T that diverge",
+      "parentUuid": "35fea985_4de4e9fd",
+      "revId": "2a88527d85d7f2f5825076d423380303a486e22f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
