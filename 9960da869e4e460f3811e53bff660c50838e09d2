@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "391db829_06842a95",
+        "filename": "scripts/acov-llvm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-12-06T05:50:36Z",
+      "side": 1,
+      "message": "Is the issue really adb\u0027s return code though - isn\u0027t `adb shell \u003ccmd\u003e` expected to return the exit code for `\u003ccmd\u003e`\u003e?  In this instance, it\u0027s acceptable for this `\u003ccmd\u003e` to fail.",
+      "range": {
+        "startLine": 132,
+        "startChar": 21,
+        "endLine": 132,
+        "endChar": 67
+      },
+      "revId": "9960da869e4e460f3811e53bff660c50838e09d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
