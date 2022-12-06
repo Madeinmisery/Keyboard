@@ -33,6 +33,29 @@
       "message": "also - add OWNERS file here?",
       "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98403f9a_e5867965",
+        "filename": "scripts/cargo2android/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1644679
+      },
+      "writtenOn": "2022-12-06T00:25:07Z",
+      "side": 1,
+      "message": "nit: maybe add what defaults we should expect for each of these options?",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 21
+      },
+      "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
