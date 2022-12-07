@@ -16,6 +16,24 @@
       "message": "i don\u0027t think this makes sense, because these are both 32-bit prebuilts?",
       "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00cfda5c_af9de3e6",
+        "filename": "host/windows/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-12-07T19:54:11Z",
+      "side": 1,
+      "message": "This is useful for just getting Soong to finish analysis, but shouldn\u0027t be checked in.  If you don\u0027t need the DLL for 32-bit leave this as 32 and make the dependencies on the DLL conditional on windows_x86.  If you do need the DLL you can remove this completely (it will default to \"both\"), and then in the prebuilts modules you\u0027ll need separate source files for the two variants:\n\n```\ntarget: {\n    windows_x86: {\n        srcs: [\"prebuilt/usb/AdbWinApi.dll\"],\n        windows_import_lib: \"prebuilt/usb/AdbWinApi.lib\",\n    },\n    windows_x86_64: {\n        srcs: [\"prebuilt/usb/AdbWinApi64.dll\"],\n        windows_import_lib: \"prebuilt/usb/AdbWinApi64.lib\",\n    },\n}\n```",
+      "parentUuid": "c6984930_619bd48e",
+      "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
