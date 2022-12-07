@@ -34,6 +34,24 @@
       "parentUuid": "35fea985_4de4e9fd",
       "revId": "2a88527d85d7f2f5825076d423380303a486e22f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18d884a6_40b9a0fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060959
+      },
+      "writtenOn": "2022-12-07T12:08:25Z",
+      "side": 1,
+      "message": "It is currently, but when we switch over to prebuilts (which we do at the end of the release), the bug will reappear.",
+      "parentUuid": "68f937fc_3c206712",
+      "revId": "2a88527d85d7f2f5825076d423380303a486e22f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
