@@ -34,6 +34,24 @@
       "parentUuid": "c6984930_619bd48e",
       "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e3de5be_580f02a5",
+        "filename": "host/windows/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-12-07T20:04:25Z",
+      "side": 1,
+      "message": "\u003e If you don\u0027t need the DLL for 32-bit leave this as 32 \n\n(i\u0027m assuming \"for 64-bit leave this as 32\" :-) )\n\nyeah, right now we don\u0027t know, but the first experiment to try is \"does a 64-bit adb.exe work without the dll on modern Windows?\". (aiui the belief is that the dll is for \"old\" Windows, for uncertain values of \"old\".) hopefully that\u0027s true, and we can just leave this as-is!",
+      "parentUuid": "00cfda5c_af9de3e6",
+      "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
