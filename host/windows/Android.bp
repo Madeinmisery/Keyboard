@@ -8,7 +8,7 @@ cc_defaults {
     host_supported: true,
     enabled: false,
     device_supported: false,
-    compile_multilib: "32",
+    compile_multilib: "both",
     target: {
         windows: {
             enabled: true,
