@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6984930_619bd48e",
+        "filename": "host/windows/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-12-07T17:31:22Z",
+      "side": 1,
+      "message": "i don\u0027t think this makes sense, because these are both 32-bit prebuilts?",
+      "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
