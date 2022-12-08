@@ -30,34 +30,40 @@ namespace repr {
 // Classes which act as middle-men between clang AST parsing routines and
 // message format specific dumpers.
 
-enum DiffStatus {
-  // There was no diff found while comparing types.
-  no_diff = 0,
-  // There was a diff found and it should be added as a part of a diff message.
-  direct_diff = 1,
-  // There was a diff found, however it need not be added as a part of a diff
-  // message, since it would have already been noted elsewhere.
-  indirect_diff = 2,
+class DiffStatus {
+ public:
+  enum Status {
+    NoDiff = 0,
+    // The diff has been added to the IRDiffDumper.
+    IndirectDiff = 1,
+    // The diff has not been added to the IRDiffDumper.
+    DirectDiff = 2,
+  };
+
+  // Allow implicit conversion.
+  DiffStatus(Status status) : status_(status) {}
+
+  bool HasDiff() const { return status_ != NoDiff; }
+
+  bool IsDirectDiff() const { return status_ == DirectDiff; }
+
+  DiffStatus &CombineWith(DiffStatus other) {
+    if (status_ < other.status_) {
+      status_ = other.status_;
+    }
+    return *this;
+  }
+
+ private:
+  Status status_;
 };
-
-static inline DiffStatus operator|(DiffStatus f, DiffStatus s) {
-  return static_cast<DiffStatus>(
-      static_cast<std::underlying_type<DiffStatus>::type>(f) |
-      static_cast<std::underlying_type<DiffStatus>::type>(s));
-}
-
-static inline DiffStatus operator&(DiffStatus f, DiffStatus s) {
-  return static_cast<DiffStatus>(
-      static_cast<std::underlying_type<DiffStatus>::type>(f) &
-      static_cast<std::underlying_type<DiffStatus>::type>(s));
-}
 
 template <typename T>
 using DiffStatusPair = std::pair<DiffStatus, T>;
 
 template <typename GenericField, typename GenericFieldDiff>
 struct GenericFieldDiffInfo {
-  DiffStatus diff_status_;
+  DiffStatus diff_status_ = DiffStatus::NoDiff;
   std::vector<GenericFieldDiff> diffed_fields_;
   std::vector<const GenericField *> removed_fields_;
   std::vector<const GenericField *> added_fields_;
