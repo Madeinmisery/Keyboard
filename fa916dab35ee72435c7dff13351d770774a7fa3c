@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "55906166_a99f89cc",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-09T03:49:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d2fc5e8_48e7e074",
+      "range": {
+        "startLine": 144,
+        "startChar": 18,
+        "endLine": 144,
+        "endChar": 46
+      },
+      "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b963a022_f505ef1b",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-12-09T02:54:47Z",
       "side": 1,
       "message": "should we update this too? seems like we don\u0027t actually build the libraries anymore?",
+      "range": {
+        "startLine": 173,
+        "startChar": 33,
+        "endLine": 173,
+        "endChar": 48
+      },
+      "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3052b73b_edc9bdd3",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-09T03:49:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b963a022_f505ef1b",
       "range": {
         "startLine": 173,
         "startChar": 33,
