@@ -93,6 +93,30 @@
       },
       "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb1ef7fa_22090ef7",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-09T04:06:22Z",
+      "side": 1,
+      "message": "who uses this option? could we remove it if it has no user?",
+      "parentUuid": "3052b73b_edc9bdd3",
+      "range": {
+        "startLine": 173,
+        "startChar": 33,
+        "endLine": 173,
+        "endChar": 48
+      },
+      "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
