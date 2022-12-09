@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f580265b_950cc1f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-12-09T09:13:18Z",
+      "side": 1,
+      "message": "What are the ultimate goals of this rewrite? Do you intend to match all the features/functionality of cargo2android.py? Will you support emitting Bazel build rules as well?",
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a58344d_f8698fac",
+        "filename": "scripts/cargo_embargo/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-12-09T09:13:18Z",
+      "side": 1,
+      "message": "2022",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fae9447_bd998720",
+        "filename": "scripts/cargo_embargo/src/main.rs",
+        "patchSetId": 9
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-12-09T09:13:18Z",
+      "side": 1,
+      "message": "This is an unfortunate default. It would be better to use the prebuilt cargo by default.\n\nAlthough cargo2android.py doesn\u0027t do it right now, we should also try to run cargo with the `--frozen` or `--offline` flags too, to minimize unnecessary network problems.",
+      "range": {
+        "startLine": 40,
+        "startChar": 61,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
