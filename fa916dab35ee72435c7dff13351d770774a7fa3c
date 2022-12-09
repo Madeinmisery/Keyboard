@@ -117,6 +117,30 @@
       },
       "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2206a01a_897036ee",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-09T04:20:23Z",
+      "side": 1,
+      "message": "Some users need it to optimize their build processes.\n\nb/149273462\n\nhttps://android-review.googlesource.com/c/platform/system/core/+/2330313/comments/367e2a16_3facf3c0",
+      "parentUuid": "bb1ef7fa_22090ef7",
+      "range": {
+        "startLine": 173,
+        "startChar": 33,
+        "endLine": 173,
+        "endChar": 48
+      },
+      "revId": "fa916dab35ee72435c7dff13351d770774a7fa3c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
