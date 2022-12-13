@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20ac1260_9a278ca3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2022-12-13T01:24:01Z",
+      "side": 1,
+      "message": "The main goal is to make the crosvm merge less painful. I\u0027d be willing to maintain this as a fork even if that is its only use case.\n\nIf the various android rust folks are happy with it, then I\u0027d be up for trying to obsolete cargo2android.py in favor of this. I think the only big feature I cut is the merging logic (when there are \"extra\" cargo invocations). I need to look at a project that is using it to really understand what it is trying to do.\n\n\u003e Will you support emitting Bazel build rules as well?\n\nI factored out most of the output format code from the business logic, so I think bazel would be easy to support alongside soong.\n\n(That is assuming that the rust bazel rules have a close correspondence to the rust soong modules. For example, if instead, we try to switch directly to something like https://github.com/bazelbuild/rules_rust, then the business logic would probably need significant changes as well)",
+      "parentUuid": "f580265b_950cc1f2",
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7a58344d_f8698fac",
@@ -41,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db71fb14_688af5c5",
+        "filename": "scripts/cargo_embargo/Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2022-12-13T01:24:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a58344d_f8698fac",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7fae9447_bd998720",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-12-09T09:13:18Z",
       "side": 1,
       "message": "This is an unfortunate default. It would be better to use the prebuilt cargo by default.\n\nAlthough cargo2android.py doesn\u0027t do it right now, we should also try to run cargo with the `--frozen` or `--offline` flags too, to minimize unnecessary network problems.",
+      "range": {
+        "startLine": 40,
+        "startChar": 61,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59b2954f_c9cdf530",
+        "filename": "scripts/cargo_embargo/src/main.rs",
+        "patchSetId": 9
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2022-12-13T01:24:01Z",
+      "side": 1,
+      "message": "Switching the default to the android prebuilts SGTM. They don\u0027t work for crosvm yet, but we are overriding this on the cli for crosvm anyways.\n\n`--offline` and `--frozen` seems like a good ideas to try",
+      "parentUuid": "7fae9447_bd998720",
       "range": {
         "startLine": 40,
         "startChar": 61,
