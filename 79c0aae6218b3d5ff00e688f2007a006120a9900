@@ -22,6 +22,30 @@
       },
       "revId": "79c0aae6218b3d5ff00e688f2007a006120a9900",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "720b38bd_835ec9fd",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-13T10:06:36Z",
+      "side": 1,
+      "message": "Yes.\nMost test cases are independent of architecture. Verifying one of them is sufficient.",
+      "parentUuid": "6eead593_332de2b3",
+      "range": {
+        "startLine": 115,
+        "startChar": 15,
+        "endLine": 115,
+        "endChar": 21
+      },
+      "revId": "79c0aae6218b3d5ff00e688f2007a006120a9900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
