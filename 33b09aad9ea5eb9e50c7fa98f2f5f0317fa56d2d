@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b5dce48_5a35e5a9",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:32:07Z",
+      "side": 1,
+      "message": "do we really need this?\n\nwhy not just:\n\n```\nif (diffed_removed_added_fields.diffed_fields_.size() !\u003d 0 ||\n      diffed_removed_added_fields.removed_fields_.size() !\u003d 0) {\n    diffed_removed_added_fields.diff_status_ \u003d {DiffStatus::DirectDiff};\n  } else if (common_field_diff_exists) {\n    diffed_removed_added_fields.diff_status_ \u003d {DiffStatus::IndirectDiff};\n  } else {\n    diffed_removed_added_fields.diff_status_ \u003d {DiffStatus::NoDiff};\n  }\n```",
+      "range": {
+        "startLine": 408,
+        "startChar": 13,
+        "endLine": 408,
+        "endChar": 30
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6691f54e_53ab4efe",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:32:07Z",
+      "side": 1,
+      "message": "enum values should name like konstants go/cstyle#Enumerator_Names\n\ne.g. kNoDiff",
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a1a901c_aebb290d",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:32:07Z",
+      "side": 1,
+      "message": "nit: just a style nit, could overload the +\u003d or |\u003d operator for this, and then we would have:\n```\nfinal_diff_status +\u003d DiffStatus::DirectDiff;\nfinal_diff_status +\u003d {DiffStatus::DirectDiff};\n```\n\nwhich might be slightly easier to format as we have one less level of parenthesis.",
+      "range": {
+        "startLine": 50,
+        "startChar": 14,
+        "endLine": 50,
+        "endChar": 25
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4154e9e0_8971a2f9",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:32:07Z",
+      "side": 1,
+      "message": "status_ \u003d std::max(status_, other.status_);",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 5
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "961e1d24_701a302a",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:32:07Z",
+      "side": 1,
+      "message": "explicitly set default to \"NoDiff\", or delete the default constructor, or provide a default constructor",
+      "range": {
+        "startLine": 58,
+        "startChar": 9,
+        "endLine": 58,
+        "endChar": 16
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
