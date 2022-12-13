@@ -108,6 +108,30 @@
       },
       "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "038256a0_d9c358b5",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:39:40Z",
+      "side": 1,
+      "message": "oops sorry nvm, you already provided a constructor so there is already no default constructor.",
+      "parentUuid": "961e1d24_701a302a",
+      "range": {
+        "startLine": 58,
+        "startChar": 9,
+        "endLine": 58,
+        "endChar": 16
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
