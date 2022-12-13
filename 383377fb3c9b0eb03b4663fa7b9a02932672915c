@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43f4aa25_eb507be2",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2022-12-13T14:40:30Z",
+      "side": 1,
+      "message": "This change looks unrelated, maybe it should be a separate CL?",
+      "revId": "383377fb3c9b0eb03b4663fa7b9a02932672915c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "019bede9_f6ddf631",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1880,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2022-12-13T14:40:30Z",
+      "side": 1,
+      "message": "Either uncomment these lines or remove them entirely.",
+      "revId": "383377fb3c9b0eb03b4663fa7b9a02932672915c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
