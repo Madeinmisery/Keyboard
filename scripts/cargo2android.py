@@ -56,7 +56,7 @@ import sys
 
 # Some Rust packages include extra unwanted crates.
 # This set contains all such excluded crate names.
-EXCLUDED_CRATES = {'protobuf_bin_gen_rust_do_not_use'}
+EXCLUDED_CRATES = {'protobuf_bin_gen_rust_do_not_use', 'libdoc_comment'}
 
 RENAME_MAP = {
     # This map includes all changes to the default rust module names
@@ -1876,6 +1876,8 @@ def main():
     dump_config(parser, args)
   else:
     Runner(args).run_cargo().gen_bp().apply_patch()
+  #shutil.rmtree(TARGET_TMP)
+  #os.remove("cargo.out")
 
 
 if __name__ == '__main__':
