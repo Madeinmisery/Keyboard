@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6eead593_332de2b3",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-13T10:00:47Z",
+      "side": 1,
+      "message": "this returns _only_ the last diff result, is this right?",
+      "range": {
+        "startLine": 115,
+        "startChar": 15,
+        "endLine": 115,
+        "endChar": 21
+      },
+      "revId": "79c0aae6218b3d5ff00e688f2007a006120a9900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
