@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "032c52c9_23f51f72",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-14T02:10:51Z",
+      "side": 1,
+      "message": "Done\nThe three conditions assume the priority of the enum values, so I prefer CombineWith. However, not checking added_fields_ looks like a bug. I will confirm it and upload a patch.",
+      "parentUuid": "2b5dce48_5a35e5a9",
+      "range": {
+        "startLine": 408,
+        "startChar": 13,
+        "endLine": 408,
+        "endChar": 30
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6691f54e_53ab4efe",
@@ -37,6 +61,24 @@
       "writtenOn": "2022-12-13T10:32:07Z",
       "side": 1,
       "message": "enum values should name like konstants go/cstyle#Enumerator_Names\n\ne.g. kNoDiff",
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "548b82ad_5c4a8b3f",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-14T02:10:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6691f54e_53ab4efe",
       "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "35b4bece_7c9c1331",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-14T02:10:51Z",
+      "side": 1,
+      "message": "This is not the addition of the numeric values. I would not like to overload the operators.",
+      "parentUuid": "3a1a901c_aebb290d",
+      "range": {
+        "startLine": 50,
+        "startChar": 14,
+        "endLine": 50,
+        "endChar": 25
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4154e9e0_8971a2f9",
@@ -77,6 +143,30 @@
       "writtenOn": "2022-12-13T10:32:07Z",
       "side": 1,
       "message": "status_ \u003d std::max(status_, other.status_);",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 5
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6f44fd3_952f60b3",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-14T02:10:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4154e9e0_8971a2f9",
       "range": {
         "startLine": 51,
         "startChar": 0,
