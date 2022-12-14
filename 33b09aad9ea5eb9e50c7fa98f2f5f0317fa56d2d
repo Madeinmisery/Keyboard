@@ -130,6 +130,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7cefb3b_734f8aa1",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-14T08:13:15Z",
+      "side": 1,
+      "message": "\u0027+\u0027 doesn\u0027t exclusively imply \u0027add\u0027. It could mean \u0027combine\u0027 if you generalize its semantic. Think like the abstract \u0027+\u0027 operator in a mathematical Group, or boolean algebra. (no big deal though its just a notation, no need to take action on this)",
+      "parentUuid": "35b4bece_7c9c1331",
+      "range": {
+        "startLine": 50,
+        "startChar": 14,
+        "endLine": 50,
+        "endChar": 25
+      },
+      "revId": "33b09aad9ea5eb9e50c7fa98f2f5f0317fa56d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4154e9e0_8971a2f9",
