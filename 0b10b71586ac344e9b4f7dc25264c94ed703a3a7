@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "48b09e54_760b2da1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-12-15T22:58:15Z",
+      "side": 1,
+      "message": "Good catch. Bob, bug in the LSC? Not a big issue, but the commit message doesn\u0027t match the change.",
+      "parentUuid": "b1477a70_2e7e7cb5",
+      "revId": "0b10b71586ac344e9b4f7dc25264c94ed703a3a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e00f58a6_bc9786e8",
