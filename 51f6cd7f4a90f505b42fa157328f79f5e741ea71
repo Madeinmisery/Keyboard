@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ab981cb_cbe2cad5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-12-15T18:33:57Z",
+      "side": 1,
+      "message": "Would it make more sense to just host this as part of crosvm instead of here? `development/scripts/` is actually probably not the right place for this (even cargo2android probably belongs in a different project instead). While it might be possible to find a maintainer/champion for this fork/rewrite in the Android Rust team, unfortunately I don\u0027t think there is a high prioritization for that, which further makes me want to separate this out as crosvm-only tool.",
+      "parentUuid": "20ac1260_9a278ca3",
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7a58344d_f8698fac",
