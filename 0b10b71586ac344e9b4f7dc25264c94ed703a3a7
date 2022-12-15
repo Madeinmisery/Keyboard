@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1477a70_2e7e7cb5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2022-12-15T22:13:17Z",
+      "side": 1,
+      "message": "I was confused by the mention of the apps and samples bp files when this CL doesn\u0027t modify them. It looks like all the lines in them are commented out.",
+      "revId": "0b10b71586ac344e9b4f7dc25264c94ed703a3a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e00f58a6_bc9786e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2022-12-15T22:13:17Z",
+      "side": 1,
+      "message": "It looks like this is danalbert\u0027s code from Idf850c7a2a7b02d096943c24989bc12de692af13 and I4bb8c3a81f529fabbc1663b48f93f153db23aa5d. It does appear to be the Android Apache 2.0 license, though, so this CL looks good to me.",
+      "revId": "0b10b71586ac344e9b4f7dc25264c94ed703a3a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
