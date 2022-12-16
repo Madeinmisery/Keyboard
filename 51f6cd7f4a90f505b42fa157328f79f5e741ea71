@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c8f71e2_401e9c0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2022-12-16T18:03:03Z",
+      "side": 1,
+      "message": "I\u0027d rather not put it in the crosvm repo itself. If we put it in the upstream repo, then we run into some awkwardness around updating the tool vs pulling in new versions of crosvm (e.g. bisecting could be extra painful). If it is just in the AOSP repo, then it makes it harder to track divergence with upstream.\n\nIs there a good directory for random dev tools? Maybe `development/crosvm_tools/cargo_embargo`?",
+      "parentUuid": "2ab981cb_cbe2cad5",
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7a58344d_f8698fac",
         "filename": "scripts/cargo_embargo/Android.bp",
         "patchSetId": 9
