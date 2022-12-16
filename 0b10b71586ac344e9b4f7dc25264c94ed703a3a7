@@ -38,6 +38,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b32c8537_65ff1b00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2022-12-16T00:59:28Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s a known issue. One script identifies which files to update. Another script does the update. The 2nd script can detect when the blueprint is equivalent to whitespace and skips the update in that case.",
+      "parentUuid": "48b09e54_760b2da1",
+      "revId": "0b10b71586ac344e9b4f7dc25264c94ed703a3a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e00f58a6_bc9786e8",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
