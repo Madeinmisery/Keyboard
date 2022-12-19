@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00d5be6f_7d24fa53",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T10:52:07Z",
+      "side": 1,
+      "message": "Instead of coding all these in out-param, we can pack out-params \u0026 return value into a single struct, and return this struct instead. This way the caller doesn\u0027t need to know the \"direction\" of each parameter:\n\n```\nstruct ResolvedType {\n  std::string type_id;\n  bool is_const;\n  bool is_restricted;\n  bool is_volatile;\n};\n```",
+      "range": {
+        "startLine": 716,
+        "startChar": 4,
+        "endLine": 716,
+        "endChar": 58
+      },
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ead114e_17f98aaf",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T10:52:07Z",
+      "side": 1,
+      "message": "It seems the caller is going to call FindTypeById() on the returned type_id anyway, so why not just return type_ir here?",
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34f9366b_a19a4a52",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 755,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T10:52:07Z",
+      "side": 1,
+      "message": "according to go/cstyle#Inputs_and_Outputs, the parameter order should be \"foo(in-params..., in-out-parms..., out-params...)\".\n\nAlternatively, just define a struct for the return value (like my above suggestion):\n\n```\nstruct QualifiedTypeImplicitConvertableResult {\n  std::string new/old type_id;\n  bool are_qualifiers_equal;\n};\n\nstatic std::optional\u003cQualifiedTypeImplicitConvertableResult\u003e CompareQualifiedReferences(...);\n```",
+      "range": {
+        "startLine": 755,
+        "startChar": 4,
+        "endLine": 755,
+        "endChar": 55
+      },
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
