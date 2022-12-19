@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cc35f58_7ca3ab98",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T09:21:39Z",
+      "side": 1,
+      "message": "Why needn\u0027t we consult AreOpaqueTypesEqual() here?",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc8d7351_248a7d6d",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T09:21:39Z",
+      "side": 1,
+      "message": "is this unused now? can remove?",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
