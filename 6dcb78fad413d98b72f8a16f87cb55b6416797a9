@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2087a2b1_f9cfad3b",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-19T09:53:15Z",
+      "side": 1,
+      "message": "Opaque types can be qualified. They are compared at line 852. Take the unit test for example,\n\nOld type \u003d `Struct \u0026\u0026`.\nNew type \u003d `volatile Struct \u0026\u0026`.\n\nCompareQualifiedReferences returns:\nold_referenced_type_id \u003d `Struct`\nnew_referenced_type_id \u003d `Struct`\nare_qualifiers_equal \u003d false\n\nCompareAndDumpTypeDiff returns no diff.",
+      "parentUuid": "5cc35f58_7ca3ab98",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc8d7351_248a7d6d",
         "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
         "patchSetId": 4
@@ -31,6 +49,24 @@
       "writtenOn": "2022-12-19T09:21:39Z",
       "side": 1,
       "message": "is this unused now? can remove?",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e90a1ac6_cdccd42a",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-19T09:53:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc8d7351_248a7d6d",
       "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
