@@ -38,6 +38,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ab854998_39aba7da",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 921,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T09:56:03Z",
+      "side": 1,
+      "message": "passing this into CompareFunctionTypes() feels like leaking _caller intentions_ into callee. instead of passing this into CompareFunctionTypes(), the callee should just focus on returning the diff status, and the caller should decide what to do with extension diff status:\n\n```\nif (kind \u003d\u003d LinkableMessageKind::FunctionTypeKind) {\n  DiffStatus status \u003d CompareFunctionTypes(\n      static_cast\u003cconst FunctionTypeIR *\u003e(old_type),\n      static_cast\u003cconst FunctionTypeIR *\u003e(new_type),\n      type_queue, diff_kind);\n  return status.IsExtension() ? {kDirectDiff} : status;\n}\n```",
+      "range": {
+        "startLine": 921,
+        "startChar": 35,
+        "endLine": 921,
+        "endChar": 51
+      },
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cc8d7351_248a7d6d",
         "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
         "patchSetId": 4
@@ -67,6 +90,29 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "cc8d7351_248a7d6d",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "297e4198_6cc05537",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T09:56:03Z",
+      "side": 1,
+      "message": "We used to define a common CompareParameterOrReturnType() method for parameter and return types because they share common logic. This change added a |is_parameter| flag to multiplex the logic within CompareParameterOrReturnType(), which means _parameter_ and _return_ types no longer share common logic.\n\nI\u0027d suggest we just split this into two \"CompareParameterType()\" and \"CompareReturnType()\", which should simplify the control flow (since |is_parameter| is no longer needed).\n\nCompareFunctionParameters() could also be merged with CompareParameterType()",
+      "range": {
+        "startLine": 220,
+        "startChar": 47,
+        "endLine": 220,
+        "endChar": 59
+      },
       "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
