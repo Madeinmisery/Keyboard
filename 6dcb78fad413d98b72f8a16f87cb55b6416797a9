@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bee52f91_59586b3e",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-19T09:59:12Z",
+      "side": 1,
+      "message": "I see",
+      "parentUuid": "2087a2b1_f9cfad3b",
+      "revId": "6dcb78fad413d98b72f8a16f87cb55b6416797a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab854998_39aba7da",
