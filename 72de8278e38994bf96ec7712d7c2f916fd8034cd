@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "77dd7300_94a6f69d",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-21T10:37:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00d5be6f_7d24fa53",
+      "range": {
+        "startLine": 716,
+        "startChar": 4,
+        "endLine": 716,
+        "endChar": 58
+      },
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0ead114e_17f98aaf",
@@ -43,6 +67,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b7f0b527_49dbb473",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-21T10:37:37Z",
+      "side": 1,
+      "message": "If the input is a qualified opaque type, this function removes the qualifiers and returns the opaque type name at line 731. The opaque type name will be passed to CompareAndDumpTypeDiff.",
+      "parentUuid": "0ead114e_17f98aaf",
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "34f9366b_a19a4a52",
         "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
         "patchSetId": 5
@@ -54,6 +96,30 @@
       "writtenOn": "2022-12-19T10:52:07Z",
       "side": 1,
       "message": "according to go/cstyle#Inputs_and_Outputs, the parameter order should be \"foo(in-params..., in-out-parms..., out-params...)\".\n\nAlternatively, just define a struct for the return value (like my above suggestion):\n\n```\nstruct QualifiedTypeImplicitConvertableResult {\n  std::string new/old type_id;\n  bool are_qualifiers_equal;\n};\n\nstatic std::optional\u003cQualifiedTypeImplicitConvertableResult\u003e CompareQualifiedReferences(...);\n```",
+      "range": {
+        "startLine": 755,
+        "startChar": 4,
+        "endLine": 755,
+        "endChar": 55
+      },
+      "revId": "72de8278e38994bf96ec7712d7c2f916fd8034cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3547ce3b_484b2fc0",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 755,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-21T10:37:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "34f9366b_a19a4a52",
       "range": {
         "startLine": 755,
         "startChar": 4,
