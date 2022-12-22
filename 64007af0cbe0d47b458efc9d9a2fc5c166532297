@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c71f737_9af6a34d",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 711,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "struct data members mustn\u0027t have trailing underscore (go/cstyle#struct_data_members)",
+      "range": {
+        "startLine": 711,
+        "startChar": 12,
+        "endLine": 711,
+        "endChar": 13
+      },
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "029e8148_bd8eb9af",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 736,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "implicitly casted / implicitly converted",
+      "range": {
+        "startLine": 736,
+        "startChar": 53,
+        "endLine": 736,
+        "endChar": 59
+      },
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5aec39e3_9e008e2b",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 753,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "Be explicit about what we are \"comparing\"\n\nhow about, ImplicitlyConvertibleQualifiedReferences or ResolveImplicitlyConvertibleQualifiedReferences ?",
+      "range": {
+        "startLine": 753,
+        "startChar": 12,
+        "endLine": 753,
+        "endChar": 38
+      },
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4c9ad24_5624d2e2",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 768,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "could just be\n```\nare_qualifiers_equal \u0026\u003d (old_qual \u003d\u003d new_qual);\n```",
+      "range": {
+        "startLine": 764,
+        "startChar": 4,
+        "endLine": 768,
+        "endChar": 5
+      },
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "750dc054_f8d6c298",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 790,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be false? if one of old or new type is opaque, then we cannot guarantee they can convert?",
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfe21673_1fbad0c9",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-22T13:57:16Z",
+      "side": 1,
+      "message": "why isn\u0027t this false? If old and new kinds are different, means they differ in type, thus not convertible?",
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
