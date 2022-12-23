@@ -257,6 +257,24 @@
       "parentUuid": "bfe21673_1fbad0c9",
       "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "970698cc_a5c90961",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-23T11:30:20Z",
+      "side": 1,
+      "message": "i see",
+      "parentUuid": "be0cb043_7776f292",
+      "revId": "64007af0cbe0d47b458efc9d9a2fc5c166532297",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
