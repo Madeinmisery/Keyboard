@@ -243,6 +243,12 @@ class Crate(object):
     self.cargo_env_compat = True
     self.cargo_pkg_version = ''  # value extracted from Cargo.toml version field
 
+    # Handle feature libraries
+    if "feature_libraries" in self.runner.args:
+      self.stem = self.runner.args.feature_libraries[self.runner.feature_lib_count]['name']
+      self.module_name = self.stem
+      # self.features = self.runner.args.feature_libraries[self.runner.feature_lib_count]['features']
+
   def write(self, s):
     # convenient way to output one line at a time with EOL.
     self.outf.write(s + '\n')
@@ -800,30 +806,30 @@ class Crate(object):
       self.module_type = 'rust_binary' + host
       # In rare cases like protobuf-codegen, the output binary name must
       # be renamed to use as a plugin for protoc.
-      self.stem = altered_stem(self.crate_name)
-      self.module_name = altered_name(self.crate_name)
+      self.stem = self.stem if self.stem else altered_stem(self.crate_name)
+      self.module_name = altered_name(self.stem)
     elif crate_type == 'lib':  # rust_library[_host]
       # TODO(chh): should this be rust_library[_host]?
       # Assuming that Cargo.toml do not use both 'lib' and 'rlib',
       # because we map them both to rlib.
       self.module_type = 'rust_library' + rlib + host
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem)
     elif crate_type == 'rlib':  # rust_library[_host]
       self.module_type = 'rust_library' + rlib + host
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem)
     elif crate_type == 'dylib':  # rust_library[_host]_dylib
       self.module_type = 'rust_library' + host + '_dylib'
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem) + '_dylib'
     elif crate_type == 'cdylib':  # rust_library[_host]_shared
       self.module_type = 'rust_ffi' + host + '_shared'
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem) + '_shared'
     elif crate_type == 'staticlib':  # rust_library[_host]_static
       self.module_type = 'rust_ffi' + host + '_static'
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem) + '_static'
     elif crate_type == 'test':  # rust_test[_host]
       self.module_type = 'rust_test' + host
@@ -846,7 +852,7 @@ class Crate(object):
         self.stem = self.module_name
     elif crate_type == 'proc-macro':  # rust_proc_macro
       self.module_type = 'rust_proc_macro'
-      self.stem = 'lib' + self.crate_name
+      self.stem = self.stem if self.stem else 'lib' + self.crate_name
       self.module_name = altered_name(self.stem)
     else:  # unknown module type, rust_prebuilt_dylib? rust_library[_host]?
       self.module_type = ''
@@ -1153,6 +1159,7 @@ class Runner(object):
         self.cargo.append('build --tests ' + default_target)
     self.empty_tests = set()
     self.empty_unittests = False
+    self.feature_lib_count = 0
 
   def setup_cargo_path(self):
     """Find cargo in the --cargo_bin or prebuilt rust bin directory."""
@@ -1326,68 +1333,77 @@ class Runner(object):
     """Calls cargo -v and save its output to ./cargo.out."""
     if self.skip_cargo:
       return self
-    cargo_toml = './Cargo.toml'
-    cargo_out = './cargo.out'
-    # Do not use Cargo.lock, because .bp rules are designed to
-    # run with "latest" crates avaialable on Android.
-    cargo_lock = './Cargo.lock'
-    cargo_lock_saved = './cargo.lock.saved'
-    had_cargo_lock = os.path.exists(cargo_lock)
-    if not os.access(cargo_toml, os.R_OK):
-      print('ERROR: Cannot find or read', cargo_toml)
-      return self
-    if not self.dry_run:
-      if os.path.exists(cargo_out):
-        os.remove(cargo_out)
-      if not self.args.use_cargo_lock and had_cargo_lock:  # save it
-        os.rename(cargo_lock, cargo_lock_saved)
-    cmd_tail_target = ' --target-dir ' + TARGET_TMP
-    cmd_tail_redir = ' >> ' + cargo_out + ' 2>&1'
-    # set up search PATH for cargo to find the correct rustc
-    saved_path = os.environ['PATH']
-    os.environ['PATH'] = os.path.dirname(self.cargo_path) + ':' + saved_path
-    # Add [workspace] to Cargo.toml if it is not there.
-    added_workspace = False
-    if self.args.add_workspace:
-      with open(cargo_toml, 'r') as in_file:
-        cargo_toml_lines = in_file.readlines()
-      found_workspace = '[workspace]\n' in cargo_toml_lines
-      if found_workspace:
-        print('### WARNING: found [workspace] in Cargo.toml')
-      else:
-        with open(cargo_toml, 'a') as out_file:
-          out_file.write('\n\n[workspace]\n')
-          added_workspace = True
-          if self.args.verbose:
-            print('### INFO: added [workspace] to Cargo.toml')
-    for c in self.cargo:
-      features = ''
-      if c != 'clean':
-        if self.args.features is not None:
-          features = ' --no-default-features'
-        if self.args.features:
-          features += ' --features ' + self.args.features
-      cmd_v_flag = ' -vv ' if self.args.vv else ' -v '
-      cmd = self.cargo_path + cmd_v_flag
-      cmd += c + features + cmd_tail_target + cmd_tail_redir
-      if self.args.rustflags and c != 'clean':
-        cmd = 'RUSTFLAGS="' + self.args.rustflags + '" ' + cmd
-      self.run_cmd(cmd, cargo_out)
-    if self.args.tests:
-      cmd = self.cargo_path + ' test' + features + cmd_tail_target + ' -- --list' + cmd_tail_redir
-      self.run_cmd(cmd, cargo_out)
-    if added_workspace:  # restore original Cargo.toml
-      with open(cargo_toml, 'w') as out_file:
-        out_file.writelines(cargo_toml_lines)
-      if self.args.verbose:
-        print('### INFO: restored original Cargo.toml')
-    os.environ['PATH'] = saved_path
-    if not self.dry_run:
-      if not had_cargo_lock:  # restore to no Cargo.lock state
-        if os.path.exists(cargo_lock):
-          os.remove(cargo_lock)
-      elif not self.args.use_cargo_lock:  # restore saved Cargo.lock
-        os.rename(cargo_lock_saved, cargo_lock)
+    num_runs = len(self.args.feature_libraries) if 'feature_libraries' in self.args else 1
+    for run_num in range(num_runs):
+      print(f'Running # {run_num} / {num_runs}')
+      cargo_toml = './Cargo.toml'
+      cargo_out = './cargo.out'
+      if run_num > 0:
+        cargo_out = f'./cargo_{run_num}.out'
+
+      # Do not use Cargo.lock, because .bp rules are designed to
+      # run with "latest" crates avaialable on Android.
+      cargo_lock = './Cargo.lock'
+      cargo_lock_saved = './cargo.lock.saved'
+      had_cargo_lock = os.path.exists(cargo_lock)
+      if not os.access(cargo_toml, os.R_OK):
+        print('ERROR: Cannot find or read', cargo_toml)
+        return self
+      if not self.dry_run:
+        if os.path.exists(cargo_out):
+          os.remove(cargo_out)
+        if not self.args.use_cargo_lock and had_cargo_lock:  # save it
+          os.rename(cargo_lock, cargo_lock_saved)
+      cmd_tail_target = ' --target-dir ' + TARGET_TMP
+      cmd_tail_redir = ' >> ' + cargo_out + ' 2>&1'
+      # set up search PATH for cargo to find the correct rustc
+      saved_path = os.environ['PATH']
+      os.environ['PATH'] = os.path.dirname(self.cargo_path) + ':' + saved_path
+      # Add [workspace] to Cargo.toml if it is not there.
+      added_workspace = False
+      if self.args.add_workspace:
+        with open(cargo_toml, 'r') as in_file:
+          cargo_toml_lines = in_file.readlines()
+        found_workspace = '[workspace]\n' in cargo_toml_lines
+        if found_workspace:
+          print('### WARNING: found [workspace] in Cargo.toml')
+        else:
+          with open(cargo_toml, 'a') as out_file:
+            out_file.write('\n\n[workspace]\n')
+            added_workspace = True
+            if self.args.verbose:
+              print('### INFO: added [workspace] to Cargo.toml')
+      for c in self.cargo:
+        features = ''
+        if c != 'clean':
+          if 'feature_libraries' in self.args:
+            self.args.features = self.args.feature_libraries[run_num]['features']
+          if self.args.features is not None:
+            features = ' --no-default-features'
+          if self.args.features:
+            features += ' --features ' + self.args.features
+        cmd_v_flag = ' -vv ' if self.args.vv else ' -v '
+        cmd = self.cargo_path + cmd_v_flag
+        cmd += c + features + cmd_tail_target + cmd_tail_redir
+        if self.args.rustflags and c != 'clean':
+          cmd = 'RUSTFLAGS="' + self.args.rustflags + '" ' + cmd
+        print(f'Command: {cmd}')
+        self.run_cmd(cmd, cargo_out)
+      if self.args.tests:
+        cmd = self.cargo_path + ' test' + features + cmd_tail_target + ' -- --list' + cmd_tail_redir
+        self.run_cmd(cmd, cargo_out)
+      if added_workspace:  # restore original Cargo.toml
+        with open(cargo_toml, 'w') as out_file:
+          out_file.writelines(cargo_toml_lines)
+        if self.args.verbose:
+          print('### INFO: restored original Cargo.toml')
+      os.environ['PATH'] = saved_path
+      if not self.dry_run:
+        if not had_cargo_lock:  # restore to no Cargo.lock state
+          if os.path.exists(cargo_lock):
+            os.remove(cargo_lock)
+        elif not self.args.use_cargo_lock:  # restore saved Cargo.lock
+          os.rename(cargo_lock_saved, cargo_lock)
     return self
 
   def run_cmd(self, cmd, cargo_out):
@@ -1396,7 +1412,7 @@ class Runner(object):
     else:
       if self.args.verbose:
         print('Running:', cmd)
-      with open(cargo_out, 'a') as out_file:
+      with open(cargo_out, 'a+') as out_file:
         out_file.write('### Running: ' + cmd + '\n')
       ret = os.system(cmd)
       if ret != 0:
@@ -1445,28 +1461,34 @@ class Runner(object):
       elif self.find_out_files() and self.has_used_out_dir():
         print('WARNING: ' + self.root_pkg + ' has cargo output files; ' +
               'please rerun with the --copy-out flag.')
-      with open(CARGO_OUT, 'r') as cargo_out:
-        self.parse(cargo_out, 'Android.bp')
-        self.crates.sort(key=get_module_name)
-        for obj in self.cc_objects:
-          obj.dump()
-        self.dump_pkg_obj2cc()
-        for crate in self.crates:
-          crate.dump()
-        dumped_libs = set()
-        for lib in self.ar_objects:
-          if lib.pkg == self.root_pkg:
-            lib_name = file_base_name(lib.lib)
-            if lib_name not in dumped_libs:
-              dumped_libs.add(lib_name)
-              lib.dump()
-        if self.args.add_toplevel_block:
-          with open(self.args.add_toplevel_block, 'r') as f:
-            self.append_to_bp('\n' + f.read() + '\n')
-        if self.errors:
-          self.append_to_bp('\n' + ERRORS_LINE + '\n' + self.errors)
-        if self.test_errors:
-          self.append_to_bp('\n// Errors when listing tests:\n' + self.test_errors)
+      num_runs = len(self.args.feature_libraries) if 'feature_libraries' in self.args else 1
+      for run_num in range(num_runs):
+        cargo_out_path = CARGO_OUT
+        if run_num > 0:
+          cargo_out_path = f'./cargo_{run_num}.out'
+        self.feature_lib_count = run_num
+        with open(cargo_out_path, 'r') as cargo_out:
+            self.parse(cargo_out, 'Android.bp')
+      self.crates.sort(key=get_module_name)
+      for obj in self.cc_objects:
+        obj.dump()
+      self.dump_pkg_obj2cc()
+      for crate in self.crates:
+        crate.dump()
+      dumped_libs = set()
+      for lib in self.ar_objects:
+        if lib.pkg == self.root_pkg:
+          lib_name = file_base_name(lib.lib)
+          if lib_name not in dumped_libs:
+            dumped_libs.add(lib_name)
+            lib.dump()
+      if self.args.add_toplevel_block:
+        with open(self.args.add_toplevel_block, 'r') as f:
+          self.append_to_bp('\n' + f.read() + '\n')
+      if self.errors:
+        self.append_to_bp('\n' + ERRORS_LINE + '\n' + self.errors)
+      if self.test_errors:
+        self.append_to_bp('\n// Errors when listing tests:\n' + self.test_errors)
     return self
 
   def add_ar_object(self, obj):
