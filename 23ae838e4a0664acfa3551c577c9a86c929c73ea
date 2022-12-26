@@ -65,6 +65,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7114b888_ad7c4984",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 779,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-26T02:46:42Z",
+      "side": 1,
+      "message": "I think the description is wrong. The following code can be compiled.\n```\nchar**const a\u003dnullptr;\nchar**b\u003da;\n```",
+      "parentUuid": "16c8643a_a417dc20",
+      "range": {
+        "startLine": 779,
+        "startChar": 19,
+        "endLine": 779,
+        "endChar": 38
+      },
+      "revId": "23ae838e4a0664acfa3551c577c9a86c929c73ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fffe3024_4f773b9b",
@@ -78,6 +102,24 @@
       "writtenOn": "2022-12-23T11:30:20Z",
       "side": 1,
       "message": "why isn\u0027t this line come before L782 according to the text:\n\n\"if at some level k the P2 is more cv-qualified than P1 |or there is an array type of known bound in P1 and an array type of unknown bound in P2 (since C++20)|, then there must be a const at every single level (other than level zero) of P2 up until k\"",
+      "revId": "23ae838e4a0664acfa3551c577c9a86c929c73ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9b5ddbf_cf9b9ead",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 786,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2022-12-26T02:46:42Z",
+      "side": 1,
+      "message": "The following code can be compiled.\n```\nchar**a\u003dnullptr;\nchar*volatile*b\u003da;\n```",
+      "parentUuid": "fffe3024_4f773b9b",
       "revId": "23ae838e4a0664acfa3551c577c9a86c929c73ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
