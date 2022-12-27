@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc7c1820_23e2949d",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 721,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-27T15:02:04Z",
+      "side": 1,
+      "message": "Could you change this to the same \"more qualified\" definition as https://en.cppreference.com/w/cpp/language/implicit_conversion#Qualification_conversions\nto prevent confusion? Or just inline this at L781 if this has only one caller after resolving my other comment?",
+      "revId": "5e1252f98c487b8d80c918608ebd071002d2184b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01ca0337_6b755f66",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 785,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-27T15:02:04Z",
+      "side": 1,
+      "message": "we already know `!old_qual.IsMoreQualifiedThan(new_qual)` from L781,\nwhich means either `old_qual \u003d\u003d new_qual` or `new_qual.IsMoreQualifiedThan(old_qual)`\nwhich means we can just check `!is_const_since_second_level \u0026\u0026 old_qual !\u003d new_qual` here. This also corresponds to (3.3) of section 7.5, and, IMO, is more simple to understand.",
+      "range": {
+        "startLine": 785,
+        "startChar": 10,
+        "endLine": 785,
+        "endChar": 48
+      },
+      "revId": "5e1252f98c487b8d80c918608ebd071002d2184b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
