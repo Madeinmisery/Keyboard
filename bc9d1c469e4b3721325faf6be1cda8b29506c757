@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35c49430_52bda310",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1892435
+      },
+      "writtenOn": "2022-12-27T20:37:11Z",
+      "side": 1,
+      "message": "The description should have a block comment describing the method.",
+      "revId": "bc9d1c469e4b3721325faf6be1cda8b29506c757",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
