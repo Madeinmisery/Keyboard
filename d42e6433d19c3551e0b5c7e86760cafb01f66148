@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a748f61c_23f60ec7",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 1345,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-12-28T20:50:46Z",
+      "side": 1,
+      "message": "Did you try running this on a c2a.json without a `variants` entry? Unless I\u0027m misreading this, it unconditionally accesses `self.args.variants[0]`, even if `variants` is not a defined key.",
+      "revId": "d42e6433d19c3551e0b5c7e86760cafb01f66148",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
