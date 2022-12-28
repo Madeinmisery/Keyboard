@@ -1,0 +1,8 @@
+libarray {
+  global:
+    StructMember;
+    Pointer;
+    Pointer2;
+    Reference;
+    Element;
+};
