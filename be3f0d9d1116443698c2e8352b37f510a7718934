@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d50491fb_438e356a",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 1489,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2022-12-28T23:53:14Z",
+      "side": 1,
+      "message": "Everywhere you update_variant_args, you also do `self.variant_num \u003d variant_num` except here.\n\n`self.variant_num` also doesn\u0027t appear to ever be read from.\n\nI suspect we should either remove `self.variant_num` entirely, or perhaps setting it should be inside `update_variant_args` instead so it can\u0027t be forgotten if it\u0027s being used somewhere I missed?",
+      "revId": "be3f0d9d1116443698c2e8352b37f510a7718934",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
