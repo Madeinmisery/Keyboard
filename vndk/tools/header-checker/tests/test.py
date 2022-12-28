@@ -456,6 +456,18 @@ class HeaderCheckerTest(unittest.TestCase):
         self.assertEqual(1, diff.count('function_extension_diffs'))
         self.assertEqual(5, diff.count('function_diffs'))
 
+    def test_array_diff(self):
+        self.prepare_and_absolute_diff_all_archs("libarray", "libarray")
+        self.prepare_and_absolute_diff_all_archs(
+            "libarray_diff", "libarray_diff")
+        diff = self.prepare_and_run_abi_diff_all_archs(
+            "libarray", "libarray_diff", 8,
+            flags=["-input-format-new", "Json", "-input-format-old", "Json"],
+            create_old=False, create_new=False)
+        self.assertNotIn('"Pointer"', diff)
+        self.assertEqual(1, diff.count('record_type_diffs'))
+        self.assertEqual(5, diff.count('function_diffs'))
+
 
 if __name__ == '__main__':
     unittest.main()
