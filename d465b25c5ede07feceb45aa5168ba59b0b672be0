@@ -52,6 +52,24 @@
       "parentUuid": "00cfda5c_af9de3e6",
       "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb3521d0_0d433747",
+        "filename": "host/windows/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2022-12-29T00:06:25Z",
+      "side": 1,
+      "message": "The parent CL (https://android-review.git.corp.google.com/c/platform/packages/modules/adb/+/2332662) failed on presubmit with the following error:\n...\" build/soong/soong_ui.bash --make-mode TARGET_PRODUCT\u003daosp_arm64 TARGET_BUILD_VARIANT\u003duserdebug droid dist DIST_DIR\u003d/buildbot/dist_dirs/aosp-master-linux-aosp_arm64-userdebug/P46804370 platform_tests\nFAILED: out/soong/build.ninja\n... build --globFile out/soong/globs-build.ninja -t -l out/.module_paths/Android.bp.list --available_env out/soong/soong.environment.available --used_env out/soong/soong.environment.used.build Android.bp\nerror: packages/modules/adb/Android.bp:260:1: dependency \"AdbWinApi\" of \"libadb_host\" missing variant:\n  os:windows,arch:x86_64,link:shared\navailable variants:\n  os:linux_glibc,arch:x86 (alias to os:linux_glibc,arch:x86,link:shared)\n  os:linux_glibc,arch:x86,link:static\n  os:linux_glibc,arch:x86,link:shared\n  os:windows,arch:x86 (alias to os:windows,arch:x86,link:shared)\n  os:windows,arch:x86,link:static\n  os:windows,arch:x86,link:shared\nninja: build stopped: subcommand failed.\n21:55:17 soong bootstrap failed with: exit status 1\n\nSounds like the DLL (aka shared lib) is needed after all?",
+      "parentUuid": "4e3de5be_580f02a5",
+      "revId": "d465b25c5ede07feceb45aa5168ba59b0b672be0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
