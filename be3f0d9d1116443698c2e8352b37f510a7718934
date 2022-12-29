@@ -16,6 +16,24 @@
       "message": "Everywhere you update_variant_args, you also do `self.variant_num \u003d variant_num` except here.\n\n`self.variant_num` also doesn\u0027t appear to ever be read from.\n\nI suspect we should either remove `self.variant_num` entirely, or perhaps setting it should be inside `update_variant_args` instead so it can\u0027t be forgotten if it\u0027s being used somewhere I missed?",
       "revId": "be3f0d9d1116443698c2e8352b37f510a7718934",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e77fd378_df49d361",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 1489,
+      "author": {
+        "id": 1975240
+      },
+      "writtenOn": "2022-12-29T00:14:26Z",
+      "side": 1,
+      "message": "The crates in self.crates were added one by one inside the call to self.parse in line 1483. Then the crates are sorted at line 1484. In order to remember which variant each crate was when we call crate.dump I needed to store the variant_num in each Crate. The Runner\u0027s variant_num is read by the Crate when the crate was initialized and added. The Crate\u0027s variant_num is read by this line to use the right variant args when dumping them to Android.bp.\nThere might be a better way to do this but I think this is better than trying to figure out which variant a crate is by comparing suffix and module name or trying to pass the variant num along multiple function calls.",
+      "parentUuid": "d50491fb_438e356a",
+      "revId": "be3f0d9d1116443698c2e8352b37f510a7718934",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
