@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f4aa79f_7a4830c1",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 704,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2022-12-30T08:23:34Z",
+      "side": 1,
+      "message": "nit: `record_type_diff_ir-\u003eSetExtended(final_diff_status.IsExtension());`",
+      "revId": "6d34fe9c37693998b1e47e4cfebc0ea0fc2a4cde",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
