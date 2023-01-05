@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab590738_3ba521cd",
+        "filename": "tools/build_dep_layer_analysis/example_output.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-05T03:28:02Z",
+      "side": 1,
+      "message": "this is a pretty high-level test, so it makes sense here",
+      "range": {
+        "startLine": 7,
+        "startChar": 47,
+        "endLine": 11,
+        "endChar": 37
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "252e6d27_694bdf28",
+        "filename": "tools/build_dep_layer_analysis/example_output.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-05T03:28:02Z",
+      "side": 1,
+      "message": "This test pulls in some deps, but it\u0027s not as high-level.",
+      "range": {
+        "startLine": 24,
+        "startChar": 47,
+        "endLine": 24,
+        "endChar": 51
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d994a5e_fb9ae47b",
+        "filename": "tools/build_dep_layer_analysis/example_output.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-05T03:28:02Z",
+      "side": 1,
+      "message": "This test is really complex, so we wouldn\u0027t consider it yet. Note - 0.99 is much higher than it would be, since we are dropping all Java tests for this demo. However, it has some deep deps.",
+      "range": {
+        "startLine": 41,
+        "startChar": 47,
+        "endLine": 47,
+        "endChar": 37
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31f85d39_5bf867ae",
+        "filename": "tools/build_dep_layer_analysis/example_output.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-05T03:28:02Z",
+      "side": 1,
+      "message": "this is a Java test which didn\u0027t get correctly cut off",
+      "range": {
+        "startLine": 57,
+        "startChar": 8,
+        "endLine": 58,
+        "endChar": 51
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
