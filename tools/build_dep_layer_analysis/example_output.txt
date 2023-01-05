@@ -1,0 +1,72 @@
+:) ./read_order.py order.txt vts_treble_vintf_vendor_test binderLibTest SurfaceFlinger_test timezone_data_e2e_tests
+WARNING: this is not an efficient lookup, but it is used as a demonstration
+
+This shows a discreet step down, but we could make the steps arbitrarily small.
+
+Consider vts_treble_vintf_vendor_test
+    Approximate complexity (in [0,1] interval) 0.72
+    Consider stepping down allowed flake rate like this:
+    - Phase 1                    0.95
+    - Phase 2                    0.95
+    - Phase 3                    0.95
+    - Phase 4                    0.88
+    - Phase 5                    0.81
+    - Phase 6                    0.76
+    - Phase 7                    0.71
+    - Phase 8                    0.66
+    - Phase 9                    0.63
+    - Phase 10                   0.59
+    - Phase 11                   0.56
+    - Phase 12                   0.53
+    - ...
+
+Consider binderLibTest
+    Approximate complexity (in [0,1] interval) 0.65
+    Consider stepping down allowed flake rate like this:
+    - Phase 1                    0.95
+    - Phase 2                    0.95
+    - Phase 3                    0.90
+    - Phase 4                    0.83
+    - Phase 5                    0.76
+    - Phase 6                    0.71
+    - Phase 7                    0.66
+    - Phase 8                    0.62
+    - Phase 9                    0.58
+    - Phase 10                   0.55
+    - Phase 11                   0.52
+    - Phase 12                   0.50
+    - ...
+
+Consider SurfaceFlinger_test
+    Approximate complexity (in [0,1] interval) 0.99
+    Consider stepping down allowed flake rate like this:
+    - Phase 1                    0.95
+    - Phase 2                    0.95
+    - Phase 3                    0.95
+    - Phase 4                    0.95
+    - Phase 5                    0.95
+    - Phase 6                    0.93
+    - Phase 7                    0.88
+    - Phase 8                    0.82
+    - Phase 9                    0.78
+    - Phase 10                   0.74
+    - Phase 11                   0.70
+    - Phase 12                   0.67
+    - ...
+
+Consider timezone_data_e2e_tests
+    Approximate complexity (in [0,1] interval) 0.05
+    Consider stepping down allowed flake rate like this:
+    - Phase 1                    0.55
+    - Phase 2                    0.47
+    - Phase 3                    0.41
+    - Phase 4                    0.37
+    - Phase 5                    0.33
+    - Phase 6                    0.31
+    - Phase 7                    0.28
+    - Phase 8                    0.26
+    - Phase 9                    0.24
+    - Phase 10                   0.23
+    - Phase 11                   0.21
+    - Phase 12                   0.20
+    - ...
