@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ff5fd7c_2d6949c8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-05T03:29:44Z",
+      "side": 1,
+      "message": "Colin, do you have a suggested way to do this?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 39
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ab590738_3ba521cd",
         "filename": "tools/build_dep_layer_analysis/example_output.txt",
         "patchSetId": 1
