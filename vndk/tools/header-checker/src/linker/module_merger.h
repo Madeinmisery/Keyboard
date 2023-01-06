@@ -20,7 +20,7 @@ namespace linker {
 
 
 class MergeStatus {
-public:
+ public:
   MergeStatus(bool was_newly_added, const std::string &type_id)
       : was_newly_added_(was_newly_added), type_id_(type_id) {}
 
@@ -39,7 +39,7 @@ public:
 
 
 class ModuleMerger {
-public:
+ public:
   ModuleMerger(const std::set<std::string> *exported_headers)
       : module_(new repr::ModuleIR(exported_headers)) {}
 
@@ -49,105 +49,103 @@ public:
 
   void MergeGraphs(const repr::ModuleIR &addend);
 
-private:
-  void MergeCFunctionLikeDeps(
-      const repr::ModuleIR &addend, repr::CFunctionLikeIR *cfunction_like_ir,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+ private:
+  // This maps the type IDs in the addend module to those in the merged module.
+  using TypeIdMap = std::map<std::string, std::string>;
 
-  MergeStatus MergeFunctionType(
-      const repr::FunctionTypeIR *addend_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeCFunctionLikeDeps(const repr::ModuleIR &addend,
+                              repr::CFunctionLikeIR *cfunction_like_ir,
+                              TypeIdMap &local_to_global_type_id_map);
 
-  MergeStatus
-  MergeEnumType(const repr::EnumTypeIR *addend_node,
-                const repr::ModuleIR &addend,
-                repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus MergeFunctionType(const repr::FunctionTypeIR *addend_node,
+                                const repr::ModuleIR &addend,
+                                TypeIdMap &local_to_global_type_id_map);
 
-  void MergeEnumDependencies(
-      const repr::ModuleIR &addend, repr::EnumTypeIR *added_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus MergeEnumType(const repr::EnumTypeIR *addend_node,
+                            const repr::ModuleIR &addend,
+                            TypeIdMap &local_to_global_type_id_map);
+
+  void MergeEnumDependencies(const repr::ModuleIR &addend,
+                             repr::EnumTypeIR *added_node,
+                             TypeIdMap &local_to_global_type_id_map);
 
   MergeStatus MergeRecordAndDependencies(
       const repr::RecordTypeIR *addend_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+      TypeIdMap &local_to_global_type_id_map);
 
-  void MergeRecordDependencies(
-      const repr::ModuleIR &addend, repr::RecordTypeIR *added_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeRecordDependencies(const repr::ModuleIR &addend,
+                               repr::RecordTypeIR *added_node,
+                               TypeIdMap &local_to_global_type_id_map);
 
-  void MergeRecordFields(
-      const repr::ModuleIR &addend, repr::RecordTypeIR *added_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeRecordFields(const repr::ModuleIR &addend,
+                         repr::RecordTypeIR *added_node,
+                         TypeIdMap &local_to_global_type_id_map);
 
-  void MergeRecordCXXBases(
-      const repr::ModuleIR &addend, repr::RecordTypeIR *added_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeRecordCXXBases(const repr::ModuleIR &addend,
+                           repr::RecordTypeIR *added_node,
+                           TypeIdMap &local_to_global_type_id_map);
 
-  void MergeRecordTemplateElements(
-      const repr::ModuleIR &addend, repr::RecordTypeIR *added_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeRecordTemplateElements(const repr::ModuleIR &addend,
+                                   repr::RecordTypeIR *added_node,
+                                   TypeIdMap &local_to_global_type_id_map);
 
-  void MergeGlobalVariable(
-      const repr::GlobalVarIR *addend_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeGlobalVariable(const repr::GlobalVarIR *addend_node,
+                           const repr::ModuleIR &addend,
+                           TypeIdMap &local_to_global_type_id_map);
 
-  void MergeGlobalVariables(
-      const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeGlobalVariables(const repr::ModuleIR &addend,
+                            TypeIdMap &local_to_global_type_id_map);
 
-  void MergeFunctionDeps(
-      repr::FunctionIR *added_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeFunctionDeps(repr::FunctionIR *added_node,
+                         const repr::ModuleIR &addend,
+                         TypeIdMap &local_to_global_type_id_map);
 
-  void
-  MergeFunction(const repr::FunctionIR *addend_node,
-                const repr::ModuleIR &addend,
-                repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  void MergeFunction(const repr::FunctionIR *addend_node,
+                     const repr::ModuleIR &addend,
+                     TypeIdMap &local_to_global_type_id_map);
 
   template <typename T>
   MergeStatus MergeReferencingTypeInternalAndUpdateParent(
       const repr::ModuleIR &addend, const T *addend_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map,
+      TypeIdMap &local_to_global_type_id_map,
       repr::AbiElementMap<T> *parent_map,
       const std::string &updated_self_type_id);
 
   MergeStatus MergeReferencingTypeInternal(
       const repr::ModuleIR &addend, repr::ReferencesOtherType *references_type,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+      TypeIdMap &local_to_global_type_id_map);
 
-  MergeStatus MergeReferencingType(
-      const repr::ModuleIR &addend, const repr::TypeIR *addend_node,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus MergeReferencingType(const repr::ModuleIR &addend,
+                                   const repr::TypeIR *addend_node,
+                                   TypeIdMap &local_to_global_type_id_map);
 
   template <typename T>
   std::pair<MergeStatus, typename repr::AbiElementMap<T>::iterator>
-  UpdateUDTypeAccounting(
-      const T *addend_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map,
-      repr::AbiElementMap<T> *specific_type_map);
+  UpdateUDTypeAccounting(const T *addend_node, const repr::ModuleIR &addend,
+                         TypeIdMap &local_to_global_type_id_map,
+                         repr::AbiElementMap<T> *specific_type_map);
 
-  MergeStatus MergeBuiltinType(
-      const repr::BuiltinTypeIR *builtin_type, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus MergeBuiltinType(const repr::BuiltinTypeIR *builtin_type,
+                               const repr::ModuleIR &addend,
+                               TypeIdMap &local_to_global_type_id_map);
 
-  MergeStatus LookupUserDefinedType(
-      const repr::TypeIR *ud_type, const repr::ModuleIR &addend,
-      const std::string &ud_type_unique_id,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map_);
+  MergeStatus LookupUserDefinedType(const repr::TypeIR *ud_type,
+                                    const repr::ModuleIR &addend,
+                                    const std::string &ud_type_unique_id,
+                                    TypeIdMap &local_to_global_type_id_map);
 
-  MergeStatus
-  LookupType(const repr::TypeIR *addend_node, const repr::ModuleIR &addend,
-             repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus LookupType(const repr::TypeIR *addend_node,
+                         const repr::ModuleIR &addend,
+                         TypeIdMap &local_to_global_type_id_map);
 
-  MergeStatus MergeTypeInternal(
-      const repr::TypeIR *addend_node, const repr::ModuleIR &addend,
-      repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
+  MergeStatus MergeTypeInternal(const repr::TypeIR *addend_node,
+                                const repr::ModuleIR &addend,
+                                TypeIdMap &local_to_global_type_id_map);
 
   MergeStatus MergeType(const repr::TypeIR *addend_type,
                         const repr::ModuleIR &addend,
-                        repr::AbiElementMap<MergeStatus> *merged_types_cache);
+                        TypeIdMap &local_to_global_type_id_map);
 
-private:
   std::unique_ptr<repr::ModuleIR> module_;
 };
 
