@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9766dc31_05d9906d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-01-09T06:56:43Z",
+      "side": 1,
+      "message": "what does this mean? does this mean being newly added to local_to_global_type_id_map or AddToMapAndTypeGraph?",
+      "range": {
+        "startLine": 10,
+        "startChar": 42,
+        "endLine": 10,
+        "endChar": 58
+      },
+      "revId": "6e5894f6a2844a96acf78e788c42c181d00694dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42fe8282_19210c90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-01-09T06:56:43Z",
+      "side": 1,
+      "message": "TBH I don\u0027t understand this file wholly (and I really hope there were unit tests for all these routines), but the change itself looks harmless enough for me to just stamp it 👍",
+      "revId": "6e5894f6a2844a96acf78e788c42c181d00694dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
