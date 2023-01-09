@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "eaf3cbc9_74763272",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-01-09T09:05:15Z",
+      "side": 1,
+      "message": "The recursive functions add referencing types to local_to_global_type_id_map before AddToMapAndTypeGraph in order to avoid going into a loop. Therefore I think was_newly_added_ means local_to_global_type_id_map.",
+      "parentUuid": "9766dc31_05d9906d",
+      "range": {
+        "startLine": 10,
+        "startChar": 42,
+        "endLine": 10,
+        "endChar": 58
+      },
+      "revId": "6e5894f6a2844a96acf78e788c42c181d00694dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "42fe8282_19210c90",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
