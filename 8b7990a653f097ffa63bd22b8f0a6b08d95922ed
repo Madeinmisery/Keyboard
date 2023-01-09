@@ -22,6 +22,30 @@
       },
       "revId": "8b7990a653f097ffa63bd22b8f0a6b08d95922ed",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a23b85ef_b99afd0d",
+        "filename": "python-packages/adb/device.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-01-09T23:56:38Z",
+      "side": 1,
+      "message": "There\u0027s no need. You could if you wanted (the API is slightly more ergonomic, IMO, but this code hasn\u0027t been touched in forever). I\u0027ve typically used `subprocess.run` for new or heavily modified code, but if it ain\u0027t broke don\u0027t fix it.",
+      "parentUuid": "4c373085_07afd160",
+      "range": {
+        "startLine": 361,
+        "startChar": 23,
+        "endLine": 361,
+        "endChar": 28
+      },
+      "revId": "8b7990a653f097ffa63bd22b8f0a6b08d95922ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
