@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7232b60_bdf6a1c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2023-01-10T22:30:21Z",
+      "side": 1,
+      "message": "out/soong/module_bp_java_deps.json has more detailed information for Soong modules.",
+      "parentUuid": "7ff5fd7c_2d6949c8",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 39
+      },
+      "revId": "e100691b9467c59dd8179743015afb3e95a502c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "2db9f9eb_bfe8c48d",
