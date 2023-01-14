@@ -467,6 +467,15 @@ class HeaderCheckerTest(unittest.TestCase):
         self.assertEqual(1, diff.count('record_type_diffs'))
         self.assertEqual(3, diff.count('function_diffs'))
 
+    def test_union_diff(self):
+        diff = self.prepare_and_run_abi_diff_all_archs(
+            "libunion", "libunion_diff", 8,
+            flags=["-input-format-new", "Json", "-input-format-old", "Json"],
+            create_old=False, create_new=True)
+        self.assertEqual(2, diff.count('fields_diff'))
+        self.assertNotIn("fields_added", diff)
+        self.assertNotIn('fields_removed', diff)
+
 
 if __name__ == '__main__':
     unittest.main()
