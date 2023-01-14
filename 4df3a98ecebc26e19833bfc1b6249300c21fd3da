@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efa1eda9_982b6a37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-01-14T01:11:39Z",
+      "side": 1,
+      "message": "+2 so that this can be worked on in parallel to discussions about how to bring everything together (any necessary missing cargo2android functionality + probably a more appropriate git repo/project for future maintenance).",
+      "revId": "4df3a98ecebc26e19833bfc1b6249300c21fd3da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
