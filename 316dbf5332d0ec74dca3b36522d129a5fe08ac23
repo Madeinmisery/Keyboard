@@ -22,6 +22,30 @@
       },
       "revId": "316dbf5332d0ec74dca3b36522d129a5fe08ac23",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d304eee9_cea12b4b",
+        "filename": "python-packages/adb/device.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-01-17T18:50:36Z",
+      "side": 1,
+      "message": "That\u0027s not how any import sorter I\u0027ve seen would do it. If that\u0027s how you want it anyway (and I really don\u0027t suggest it, because you\u0027d likely be ruling out using tools like isort to automate that), I\u0027ll make it a follow up. It took days to get TH+2 for this.",
+      "parentUuid": "1cb575d8_3656bf41",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 32
+      },
+      "revId": "316dbf5332d0ec74dca3b36522d129a5fe08ac23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
