@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cb575d8_3656bf41",
+        "filename": "python-packages/adb/device.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2023-01-17T16:03:44Z",
+      "side": 1,
+      "message": "Nit: Move to above line #18?",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 32
+      },
+      "revId": "316dbf5332d0ec74dca3b36522d129a5fe08ac23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
