@@ -16,6 +16,24 @@
       "message": "+2 so that this can be worked on in parallel to discussions about how to bring everything together (any necessary missing cargo2android functionality + probably a more appropriate git repo/project for future maintenance).",
       "revId": "4df3a98ecebc26e19833bfc1b6249300c21fd3da",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fce9553_05d1d878",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-01-17T23:03:11Z",
+      "side": 1,
+      "message": "Thanks, sounds good. Let me know if there is anyone from your side interested in chatting or coordinating on it. I\u0027ll write up something to outline what I know is missing in one tool vs the other.",
+      "parentUuid": "efa1eda9_982b6a37",
+      "revId": "4df3a98ecebc26e19833bfc1b6249300c21fd3da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
