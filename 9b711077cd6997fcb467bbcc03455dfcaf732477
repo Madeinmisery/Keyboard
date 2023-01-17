@@ -110,6 +110,30 @@
       },
       "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c87f70e_c563fa26",
+        "filename": "scripts/cargo2android/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-01-17T23:28:10Z",
+      "side": 1,
+      "message": "Unless overridden, it uses the default of the field type, usually `false`, `0`, `\"\"`, or empty container.\n\nDo you think it would be help to add \"Defaults to false\" to these?",
+      "parentUuid": "98403f9a_e5867965",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 21
+      },
+      "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

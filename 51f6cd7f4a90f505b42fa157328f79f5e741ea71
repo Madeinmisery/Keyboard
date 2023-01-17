@@ -218,6 +218,30 @@
       },
       "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f42b3c8b_c2eb9a96",
+        "filename": "scripts/cargo_embargo/src/main.rs",
+        "patchSetId": 9
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-01-17T23:28:10Z",
+      "side": 1,
+      "message": "\u003e This is an unfortunate default. It would be better to use the prebuilt cargo by default.\n\nAdded a TODO for now. I\u0027m hesitant to reproduce the code that uses a regexp to grab the rust version from a soong .go file. Will look for a simpler solution.",
+      "parentUuid": "59b2954f_c9cdf530",
+      "range": {
+        "startLine": 40,
+        "startChar": 61,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
