@@ -128,6 +128,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52a5b473_a87534ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-18T17:57:10Z",
+      "side": 1,
+      "message": "A discussion of whether we can have a tool - I don\u0027t think it should be necessary, and actually - we really should take OWNERS of this tool, so can we add an OWNERS file here or move it to development/tools instead of development/scripts or add an OWNERS file?\n\nWe already talked to Matthew, and given the codebases - this is pretty clean compared to cargo2android. We\u0027d like to expand use of it, but we gotta merge it somewhere. This has already saved us ~30min per run per import, but having to download this adds an unnecessary extra step every week. So - if you don\u0027t want it here, just say, but the value add for crosvm is already worth putting it somewhere, and it can\u0027t be in external/crosvm because that\u0027s an external repo.",
+      "parentUuid": "79045395_baccdf92",
+      "revId": "51f6cd7f4a90f505b42fa157328f79f5e741ea71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7a58344d_f8698fac",
         "filename": "scripts/cargo_embargo/Android.bp",
         "patchSetId": 9

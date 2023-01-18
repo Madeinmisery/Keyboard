@@ -134,6 +134,30 @@
       },
       "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be6d76b7_3b10a450",
+        "filename": "scripts/cargo2android/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-01-18T17:57:10Z",
+      "side": 1,
+      "message": "Meaning, Default in Serde is presumably an alias for the Rust language concept std::default::Default, which is generally understood? :) So - as a criticism of the Rust language, I would agree with Devin here ;P, but this CL makes sense?",
+      "parentUuid": "7c87f70e_c563fa26",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 21
+      },
+      "revId": "9b711077cd6997fcb467bbcc03455dfcaf732477",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
