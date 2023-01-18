@@ -114,6 +114,8 @@ class GenBuildFile(object):
         self._vndk_product = self._parse_lib_list(
             os.path.basename(self._etc_paths['vndkproduct.libraries.txt']))
         self._modules_with_notice = self._get_modules_with_notice()
+        self._license_collector = collect_licenses.LicenseCollector(install_dir)
+
 
     def _get_etc_paths(self):
         """Returns a map of relative file paths for each ETC module."""
@@ -308,14 +310,14 @@ class GenBuildFile(object):
           license_text_path: path to the license text file to check.
                              If empty, check all license files.
         """
-        license_collector = collect_licenses.LicenseCollector(self._install_dir)
-        license_collector.run(license_text_path)
-        return license_collector.license_kinds
+        self._license_collector.run(license_text_path)
+        return self._license_collector.license_kinds
 
     def _gen_license(self):
         """ Generates license module.
 
-        It uses license files for all VNDK snapshot libraries in common/NOTICE_FILES directory.
+        It uses license files for all VNDK snapshot libraries in
+        common/NOTICE_FILES directory.
         """
         license_kinds = self._get_license_kinds()
         license_kinds_string = ''
@@ -607,8 +609,10 @@ class GenBuildFile(object):
                             name=name))
 
             def rename_generated_dirs(dirs):
-                # Reame out/soong/.intermedaites to generated-headers for better readability.
-                return [d.replace(utils.SOONG_INTERMEDIATES_DIR, utils.GENERATED_HEADERS_DIR, 1) for d in dirs]
+                # Reame out/soong/.intermedaites to generated-headers for better
+                # readability.
+                return [d.replace(utils.SOONG_INTERMEDIATES_DIR,
+                        utils.GENERATED_HEADERS_DIR, 1) for d in dirs]
 
             for src in sorted(src_paths):
                 include_dirs = ''
@@ -768,6 +772,10 @@ def main():
     buildfile_generator.generate_root_android_bp()
     buildfile_generator.generate_common_android_bp()
     buildfile_generator.generate_android_bp()
+
+    if buildfile_generator._license_collector.unhandled_licenses:
+        logging.warning('Unhandled licenses are found: {}'.format(
+            buildfile_generator._license_collector.unhandled_licenses))
 
     logging.info('Done.')
 
