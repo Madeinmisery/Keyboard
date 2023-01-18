@@ -45,8 +45,12 @@ RESTRICTED_LICENSE_KEYWORDS = {
     'GPL-2.0': ('GNU GENERAL PUBLIC LICENSE', 'Version 2,',),
     'GPL': ('GNU GENERAL PUBLIC LICENSE',),
 }
+SPECIAL_LICENSES = {
+    'legacy_notice': ('BLAS', 'PNG', 'IBM-DHCP', 'SunPro', 'Caffe',),
+    'legacy_permissive': ('blessing',),
+    'SPDX-license-identifier-MIT': ('LicenseRef-MIT-Lucent', 'cURL',)
+}
 
-LICENSE_INCLUDE = ['legacy_permissive', 'legacy_unencumbered']
 
 class LicenseCollector(object):
     """ Collect licenses from a VNDK snapshot directory
@@ -60,6 +64,19 @@ class LicenseCollector(object):
     'restricted' will have the files that have the restricted licenses.
     """
     def __init__(self, install_dir):
+        def read_license_modules():
+            available_license_kinds = []
+            licenses_android_bp = os.path.join(utils.get_android_build_top(), 'build/soong/licenses/Android.bp')
+            with open(licenses_android_bp, 'r') as f:
+                while True:
+                    line = f.readline()
+                    if not line:
+                        break
+                    if not line.strip().startswith('name: "SPDX-license-identifier-'):
+                        continue
+                    available_license_kinds.append(line.strip()[len('name: "SPDX-license-identifier-'):-2])
+            return available_license_kinds
+
         self._install_dir = install_dir
         self._paths_to_check = [os.path.join(install_dir,
                                               utils.NOTICE_FILES_DIR_PATH),]
@@ -67,6 +84,10 @@ class LicenseCollector(object):
 
         self.license_kinds = set()
         self.restricted = set()
+
+        self._is_identify_license_tool_available = utils.check_identify_license_tool()
+        self.unhandled_licenses = set()
+        self.available_licenses = read_license_modules()
 
     def read_and_check_licenses(self, license_text, license_keywords):
         """ Read the license keywords and check if all keywords are in the file.
@@ -84,14 +105,56 @@ class LicenseCollector(object):
                 found = True
         return found
 
-    def check_licenses(self, filepath):
+    def identify_license_with_keywords(self, filepath):
         """ Read a license text file and find the license_kinds.
+            This finds the licenses with simple keyword matching.
         """
         with open(filepath, 'r') as file_to_check:
             file_string = file_to_check.read()
             self.read_and_check_licenses(file_string, LICENSE_KEYWORDS)
             if self.read_and_check_licenses(file_string, RESTRICTED_LICENSE_KEYWORDS):
                 self.restricted.add(os.path.basename(filepath))
+
+    def license_kind_map(self, license):
+        """ Replace the name of license with those for the license module
+        """
+        lic = license[len('Supplement:'):] if license.startswith('Supplement:') else license
+        if lic in self.available_licenses:
+            return LICENSE_KINDS_PREFIX + lic
+
+        for lic_kind in SPECIAL_LICENSES:
+            if lic in SPECIAL_LICENSES[lic_kind]:
+                return lic_kind
+
+        self.unhandled_licenses.add(lic)
+        return 'legacy_unencumbered'
+
+    def interpret_licenses(self, licenses):
+        """ Generate a license set after interpreting the library identification.
+        """
+        license_kinds = set()
+        for lic in licenses:
+            license_kinds.add(self.license_kind_map(lic))
+        return license_kinds
+
+    def identify_license_with_tool(self, path, header):
+        """ Read license text files in the path to identify.
+
+        Args:
+          path: string, path to read license files. If the path is a directory,
+                it reads the files under the directory.
+          header: boolean, True to read the head files. It must be false to
+                read a single file.
+        """
+        if not self._is_identify_license_tool_available:
+            # identify tool does not exist.
+            return
+
+        try:
+            licenses = utils.identify_license(path, header)
+            self.license_kinds.update(self.interpret_licenses(licenses))
+        except:
+            logging.debug('Tool skipped')
 
     def run(self, license_text_path=''):
         """ search licenses in vndk snapshots
@@ -100,19 +163,24 @@ class LicenseCollector(object):
           license_text_path: path to the license text file to check.
                              If empty, check all license files.
         """
+        self.license_kinds.clear()
         if license_text_path == '':
+            # check all files
             for path in self._paths_to_check:
                 logging.info('Reading {}'.format(path))
+                self.identify_license_with_tool(path, header=True)
                 for (root, _, files) in os.walk(path):
                     for f in files:
-                        self.check_licenses(os.path.join(root, f))
-            self.license_kinds.update(LICENSE_INCLUDE)
+                        self.identify_license_with_keywords(os.path.join(root, f))
         else:
+            # check a single file
             logging.info('Reading {}'.format(license_text_path))
-            self.check_licenses(os.path.join(self._install_dir, utils.COMMON_DIR_PATH, license_text_path))
+            self.identify_license_with_tool(os.path.join(self._install_dir, utils.COMMON_DIR_PATH, license_text_path), header=False)
+            self.identify_license_with_keywords(os.path.join(self._install_dir, utils.COMMON_DIR_PATH, license_text_path))
             if not self.license_kinds:
-                # Add 'legacy_permissive' if no licenses are found for this file.
-                self.license_kinds.add('legacy_permissive')
+                # Add 'legacy_unencumbered' if no licenses are found for this file.
+                self.license_kinds.add('legacy_unencumbered')
+
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -129,6 +197,7 @@ def get_args():
         help='Increase output verbosity, e.g. "-v", "-vv".')
     return parser.parse_args()
 
+
 def main():
     """ For the local testing purpose.
     """
@@ -144,6 +213,7 @@ def main():
     license_collector.run()
     print(sorted(license_collector.license_kinds))
     print(sorted(license_collector.restricted))
+
 
 if __name__ == '__main__':
     main()

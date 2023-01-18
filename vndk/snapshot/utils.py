@@ -191,3 +191,32 @@ def get_latest_vndk_bid(branch):
 
     # return build_id from the output
     return output.split()[2]
+
+
+def check_identify_license_tool():
+    """See if users can use the identify_license tool
+
+    Returns:
+      boolean: True if the tool is found and has permission to use
+    """
+    return os.access('/google/bin/releases/opensource/thirdparty/licenseclassifier/identify_license', os.X_OK)
+
+
+def identify_license(path, header):
+    """Read license text files and header files and create json as an output
+
+    Args:
+      path: string, directory of license and header files
+
+    Retruns:
+      string: path to the output json file
+    """
+    cmd = ['/google/bin/releases/opensource/thirdparty/licenseclassifier/identify_license',]
+    if header:
+        cmd.append('-headers=true')
+    cmd.append(path)
+    # output is lines with heads plus outputs of 'path license_kind (additional information)'
+    output = check_output(cmd).strip().split('\n')
+
+    # retruns set to remove duplications
+    return set(line.split()[1] for line in output if line.startswith(path))
