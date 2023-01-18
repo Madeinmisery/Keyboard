@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f90863a_16d59eb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "please invite someone who has Python readability. I don\u0027t.",
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c249924_a8da1419",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "This parsing routine seems to be highly dependent on how the bp file is formatted. Wouldn\u0027t it be more robust to have a BP file parser, or use module-info.json instead?",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 67
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "412b4940_f0ba3fca",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "this is hard to read. consider giving it a name",
+      "range": {
+        "startLine": 184,
+        "startChar": 16,
+        "endLine": 186,
+        "endChar": 47
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9974e53_8ea0a63d",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 189,
+        "startChar": 16,
+        "endLine": 191,
+        "endChar": 47
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "722484fa_9daa2443",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "this doesn\u0027t read like a good comment. it simply repeats the code below. I wish it explains why the below line is needed instead.",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 69
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11bf17ac_ae69fce5",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "no comment for `header`",
+      "range": {
+        "startLine": 209,
+        "startChar": 4,
+        "endLine": 209,
+        "endChar": 9
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d1173bb_71e28bfe",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-01-18T06:51:12Z",
+      "side": 1,
+      "message": "This function returns paths. So shouldn\u0027t this be [0], according to the comment at L219?",
+      "range": {
+        "startLine": 223,
+        "startChar": 27,
+        "endLine": 223,
+        "endChar": 30
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
