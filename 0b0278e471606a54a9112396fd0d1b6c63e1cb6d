@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "740b4832_ab880a1d",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-01-19T03:16:40Z",
+      "side": 1,
+      "message": "license.removeprefix(\u0027Supplement:\u0027)?",
+      "range": {
+        "startLine": 150,
+        "startChar": 0,
+        "endLine": 151,
+        "endChar": 39
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "386bced7_3ebdb059",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-01-19T03:16:40Z",
+      "side": 1,
+      "message": "is legacy_permissive changed to this? Where does this come from?",
+      "range": {
+        "startLine": 160,
+        "startChar": 16,
+        "endLine": 160,
+        "endChar": 35
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c49bb71_036041d9",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-01-19T03:16:40Z",
+      "side": 1,
+      "message": "json?",
+      "range": {
+        "startLine": 208,
+        "startChar": 59,
+        "endLine": 208,
+        "endChar": 63
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
