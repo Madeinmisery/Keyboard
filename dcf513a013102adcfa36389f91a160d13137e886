@@ -22,6 +22,30 @@
       },
       "revId": "dcf513a013102adcfa36389f91a160d13137e886",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf2456ed_049f06c7",
+        "filename": "python-packages/adb/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-01-19T00:34:28Z",
+      "side": 1,
+      "message": "Will fix in a follow up. We\u0027re not going to wait another 4 hours for that to pass presubmit when this is causing issues.",
+      "parentUuid": "e94db0e7_a01aef12",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "dcf513a013102adcfa36389f91a160d13137e886",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
