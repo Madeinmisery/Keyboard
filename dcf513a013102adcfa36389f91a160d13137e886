@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e94db0e7_a01aef12",
+        "filename": "python-packages/adb/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2023-01-19T00:33:15Z",
+      "side": 1,
+      "message": "2023?",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "dcf513a013102adcfa36389f91a160d13137e886",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
