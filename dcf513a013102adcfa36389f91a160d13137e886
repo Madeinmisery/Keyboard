@@ -46,6 +46,30 @@
       },
       "revId": "dcf513a013102adcfa36389f91a160d13137e886",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bff2b2e0_211b20b3",
+        "filename": "python-packages/adb/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-01-19T00:35:22Z",
+      "side": 1,
+      "message": "(I\u0027m not convinced it should be updated, since it\u0027s a direct copy of a 2017 file)",
+      "parentUuid": "bf2456ed_049f06c7",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "dcf513a013102adcfa36389f91a160d13137e886",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
