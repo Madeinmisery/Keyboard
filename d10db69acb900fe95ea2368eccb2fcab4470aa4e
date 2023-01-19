@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a88e56bc_e92a8cf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "I ran pyformat for the changes.\nLet me invite Jeongik for the readability.",
+      "parentUuid": "6f90863a_16d59eb1",
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3c249924_a8da1419",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-01-18T06:51:12Z",
       "side": 1,
       "message": "This parsing routine seems to be highly dependent on how the bp file is formatted. Wouldn\u0027t it be more robust to have a BP file parser, or use module-info.json instead?",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 67
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67f2f3cd_9e8f4010",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "I want to avoid additional tools to install or build requirement to use this script to make the VNDK snapshot update simple and quick for users.\nInstead, I used regex to parse the names in the bp file. This must be better than using the old parsing routine.",
+      "parentUuid": "3c249924_a8da1419",
       "range": {
         "startLine": 69,
         "startChar": 0,
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "731a5a56_53339218",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "412b4940_f0ba3fca",
+      "range": {
+        "startLine": 184,
+        "startChar": 16,
+        "endLine": 186,
+        "endChar": 47
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9974e53_8ea0a63d",
@@ -77,6 +143,30 @@
       "writtenOn": "2023-01-18T06:51:12Z",
       "side": 1,
       "message": "ditto",
+      "range": {
+        "startLine": 189,
+        "startChar": 16,
+        "endLine": 191,
+        "endChar": 47
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4b889c1_63e366ab",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9974e53_8ea0a63d",
       "range": {
         "startLine": 189,
         "startChar": 16,
@@ -110,6 +200,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c490bfe9_3338ff0c",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "722484fa_9daa2443",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 69
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11bf17ac_ae69fce5",
@@ -133,6 +247,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "29c6bceb_3cc1bd66",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "Thanks for the catch. Updated.",
+      "parentUuid": "11bf17ac_ae69fce5",
+      "range": {
+        "startLine": 209,
+        "startChar": 4,
+        "endLine": 209,
+        "endChar": 9
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d1173bb_71e28bfe",
@@ -146,6 +284,30 @@
       "writtenOn": "2023-01-18T06:51:12Z",
       "side": 1,
       "message": "This function returns paths. So shouldn\u0027t this be [0], according to the comment at L219?",
+      "range": {
+        "startLine": 223,
+        "startChar": 27,
+        "endLine": 223,
+        "endChar": 30
+      },
+      "revId": "d10db69acb900fe95ea2368eccb2fcab4470aa4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "735dab3b_3bee3483",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-19T02:03:00Z",
+      "side": 1,
+      "message": "I forgot to update the function description.\nIt must return the set of license kinds.\nI updated the comment.",
+      "parentUuid": "0d1173bb_71e28bfe",
       "range": {
         "startLine": 223,
         "startChar": 27,
