@@ -16,6 +16,24 @@
       "message": "is copying a small `[\u0026str]` really preferable over using a `\u0026[\u0026str]`? does the warning change once the array gets bigger? this seems a bit too pedantic\n\nsame for the others below\n\n(just marking unresolved for visibility, not a blocker)",
       "revId": "33e7c091f5232d9dd51bd2531ee3ec6bf8403763",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "121a6fdc_f53ca4b0",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1047255
+      },
+      "writtenOn": "2023-01-20T21:24:10Z",
+      "side": 1,
+      "message": "My guess is that the compiler can optimize away the copying in this case where it\u0027s a constant.\n\nAdjust this however you like in follow up CLs :-)  Unfortunately this warning is blocking updating the compiler and that\u0027s my primary concern.  If you\u0027d like to talk about this further feel free to reach out to me via chat or email.",
+      "parentUuid": "e65ea13b_864b062b",
+      "revId": "33e7c091f5232d9dd51bd2531ee3ec6bf8403763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
