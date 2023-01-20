@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e65ea13b_864b062b",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-01-20T03:38:55Z",
+      "side": 1,
+      "message": "is copying a small `[\u0026str]` really preferable over using a `\u0026[\u0026str]`? does the warning change once the array gets bigger? this seems a bit too pedantic\n\nsame for the others below\n\n(just marking unresolved for visibility, not a blocker)",
+      "revId": "33e7c091f5232d9dd51bd2531ee3ec6bf8403763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
