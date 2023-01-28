@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59c64b28_2420171d",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "I don\u0027t find any for now.\nAlso, I want to generate VNDK snapshot without the build system involved.",
+      "parentUuid": "5df226d1_1cb6ca84",
+      "range": {
+        "startLine": 98,
+        "startChar": 12,
+        "endLine": 100,
+        "endChar": 50
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "740b4832_ab880a1d",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-01-19T03:16:40Z",
       "side": 1,
       "message": "license.removeprefix(\u0027Supplement:\u0027)?",
+      "range": {
+        "startLine": 150,
+        "startChar": 0,
+        "endLine": 151,
+        "endChar": 39
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d3564f6_9ffa2874",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "740b4832_ab880a1d",
       "range": {
         "startLine": 150,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05b544f2_4bbb5a06",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "Yes. I added SPECIAL_LICENSES mapping to list the permissive licenses.\nI mapped unknown licenses as unencumbered because most known (strict) licenses must be identified with the tool.",
+      "parentUuid": "386bced7_3ebdb059",
+      "range": {
+        "startLine": 160,
+        "startChar": 16,
+        "endLine": 160,
+        "endChar": 35
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67554a02_41a90812",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-01-19T04:44:56Z",
       "side": 1,
       "message": "raise an error here?",
+      "range": {
+        "startLine": 178,
+        "startChar": 20,
+        "endLine": 178,
+        "endChar": 55
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffbe812f_1eb79ab4",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "No. This script must run in any environment.\nIf the tools in not provided, just use the old keyword based mapping.",
+      "parentUuid": "67554a02_41a90812",
       "range": {
         "startLine": 178,
         "startChar": 20,
@@ -118,6 +214,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e19ef679_125b3798",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "No. It does not accumulate the result.\nI didn\u0027t want to init the LicenseCollector multiple times. It is enough just clearing license data from the LicenseCollector.\nAdd clear_data() function for it.",
+      "parentUuid": "4dde3afd_2eba3ec6",
+      "range": {
+        "startLine": 313,
+        "startChar": 13,
+        "endLine": 313,
+        "endChar": 31
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c49bb71_036041d9",
         "filename": "vndk/snapshot/utils.py",
         "patchSetId": 4
@@ -129,6 +249,30 @@
       "writtenOn": "2023-01-19T03:16:40Z",
       "side": 1,
       "message": "json?",
+      "range": {
+        "startLine": 208,
+        "startChar": 59,
+        "endLine": 208,
+        "endChar": 63
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c3925da_b1ba40dd",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c49bb71_036041d9",
       "range": {
         "startLine": 208,
         "startChar": 59,
@@ -152,6 +296,30 @@
       "writtenOn": "2023-01-19T04:44:56Z",
       "side": 1,
       "message": "identify_license supports --json option, I think we\u0027d better rely on json output instead of parsing stdout result.",
+      "range": {
+        "startLine": 225,
+        "startChar": 4,
+        "endLine": 228,
+        "endChar": 75
+      },
+      "revId": "0b0278e471606a54a9112396fd0d1b6c63e1cb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc48c15f_ee2c4f42",
+        "filename": "vndk/snapshot/utils.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-01-28T05:01:46Z",
+      "side": 1,
+      "message": "This function will be called about hundred times for each license files when updating snapshots. I wanted to avoid generating that many json files just for the intermediate data.",
+      "parentUuid": "d0af0f2b_68ba4f57",
       "range": {
         "startLine": 225,
         "startChar": 4,
