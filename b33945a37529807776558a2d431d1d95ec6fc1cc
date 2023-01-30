@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6ebc80d_4fabcdb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1892435
+      },
+      "writtenOn": "2023-01-30T00:09:40Z",
+      "side": 1,
+      "message": "Vendorized crates are needed for CMake. This change will be followed by one that creates .cargo-checksum.json files for each external/rust/crate.\n\nThe vendorize.sh would be run each time a new crate is added or src is changed.\n\nThere are two crates that will not vendorize, see the source.\n\nThere are a number of crates that get vendorized \"name-version\" which I believe means the collection in /external/rust/crates is not *as a whole* consistent in version. Look at the resulting tmp direcotry. Not sure what to do with that.",
+      "revId": "b33945a37529807776558a2d431d1d95ec6fc1cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
