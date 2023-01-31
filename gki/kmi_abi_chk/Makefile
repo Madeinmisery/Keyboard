@@ -21,11 +21,10 @@ KSRC=${GKI_DIR}/out/android12-${GKI_VER}/common
 
 GKI_BID ?= 7618735
 CFLAGS_kmi_sym_main.o = -DGKI_BID=${GKI_BID}
-AFLAGS_kmi_sym_list.o = -DGKI_BID=${GKI_BID}
 
 all:
 	make -C $(KSRC) M=$(PWD) modules
-	cp kmi_sym.ko prebuilts/kmi_sym-a12-${GKI_VER}-${GKI_BID}.ko
+	mv kmi_sym.ko kmi_sym-a12-${GKI_VER}.ko
 
 clean:
 	make -C $(KSRC) M=$(PWD) clean
