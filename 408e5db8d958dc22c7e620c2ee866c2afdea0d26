@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5add26ed_f3168afb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2023-01-31T14:42:05Z",
+      "side": 1,
+      "message": "Other than the style comment, LGTM",
+      "revId": "408e5db8d958dc22c7e620c2ee866c2afdea0d26",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "641872cc_f9eaad98",
+        "filename": "scripts/update_crate_tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2023-01-31T14:42:05Z",
+      "side": 1,
+      "message": "Style nit: Here and above, use triple quotes for consistency to denote documentation blocks. See functions above (in particular \\_\\_init\\_\\_)",
+      "range": {
+        "startLine": 214,
+        "startChar": 0,
+        "endLine": 214,
+        "endChar": 14
+      },
+      "revId": "408e5db8d958dc22c7e620c2ee866c2afdea0d26",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
