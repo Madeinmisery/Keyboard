@@ -85,6 +85,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "23bcfb44_b5c9112b",
+        "filename": "vndk/tools/header-checker/tests/integration/array/include/base.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-01T10:37:42Z",
+      "side": 1,
+      "message": "it\u0027s clear to me that \"pointer to array\" is incompatible with \"pointer to pointer\", but what about the other case I mentioned?\n\n* `int **` pointer of pointer\n* `int *[]` array _of_ pointer, is this represented as \"pointer of pointer\" internally, and considered \"the same\" by clang (like `int*` and `int[]` are both actually just `int*`)?",
+      "parentUuid": "20f49291_f85b0fe8",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "72406a64_e028525c",
         "filename": "vndk/tools/header-checker/tests/test.py",
         "patchSetId": 3
@@ -114,6 +132,24 @@
       "side": 1,
       "message": "We don\u0027t have an abidiff parser. We can simply assert whether the symbol names are in the abidiff. Do you want to assert every symbol in map.txt?",
       "parentUuid": "72406a64_e028525c",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da844fd3_556140bf",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-01T10:37:42Z",
+      "side": 1,
+      "message": "sounds good",
+      "parentUuid": "8071fc05_0268f2e7",
       "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
