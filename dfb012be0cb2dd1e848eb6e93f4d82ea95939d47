@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27b78cba_909157a5",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 1042,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-01T09:21:23Z",
+      "side": 1,
+      "message": "case LinkableMessageKind::FunctionKind:\ncase LinkableMessageKind::GlobalVarKind:\n\nto fit the style",
+      "range": {
+        "startLine": 1041,
+        "startChar": 1,
+        "endLine": 1042,
+        "endChar": 23
+      },
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c5a76a9_ceae3fee",
+        "filename": "vndk/tools/header-checker/tests/integration/array/include/base.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-01T09:21:23Z",
+      "side": 1,
+      "message": "can we add cases for multi-dimention arrays like\n\n`int [][10] \u003c-\u003e int [10][10]`\n(I\u0027m genuinely curious what the compiler internally represent these as?)\n\nand \n\n`int *[10] \u003c-\u003e int **`",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72406a64_e028525c",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-01T09:21:23Z",
+      "side": 1,
+      "message": "NIT: most if not all of the tests only count the number of diffed symbols. Could we fortify this to also check the exact list of reported symbols are as expected?",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
