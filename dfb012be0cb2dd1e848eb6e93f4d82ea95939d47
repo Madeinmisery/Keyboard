@@ -101,6 +101,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a79fa5d2_a9ec671b",
+        "filename": "vndk/tools/header-checker/tests/integration/array/include/base.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-02-02T05:27:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23bcfb44_b5c9112b",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "72406a64_e028525c",
@@ -150,6 +168,24 @@
       "side": 1,
       "message": "sounds good",
       "parentUuid": "8071fc05_0268f2e7",
+      "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e92adde_dfd9c824",
+        "filename": "vndk/tools/header-checker/tests/test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 468,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-02-02T05:27:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da844fd3_556140bf",
       "revId": "dfb012be0cb2dd1e848eb6e93f4d82ea95939d47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
