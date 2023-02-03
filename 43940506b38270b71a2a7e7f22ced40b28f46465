@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "123c7f72_f7f049dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2023-02-03T17:50:43Z",
+      "side": 1,
+      "message": "Please review - will need to re-run coastguard (since the major version got rolled over to 34.x.x)",
+      "revId": "43940506b38270b71a2a7e7f22ced40b28f46465",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
