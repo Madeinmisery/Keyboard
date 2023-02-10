@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "781f79b3_2d456707",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1962190
+      },
+      "writtenOn": "2023-02-10T19:50:19Z",
+      "side": 1,
+      "message": "This fixes one problem that I was seeing. (To run repo pull, I had to add new credentials to my `.gitcookies` for aosp/ and ag/ even though I already had credentials for all googlesource.)\n\nI\u0027m still seeing the SSO error like in http://yaqs/6566897899536384 when I try to repo pull from ag/.",
+      "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
