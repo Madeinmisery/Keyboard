@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cfd4e5d_5b5cf727",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-10T11:31:32Z",
+      "side": 1,
+      "message": "Can we initialize this as `next_old_it \u003d std::next(old_it)` `next_new_it \u003d std::next(new_it)`? This way it is clear at least one of old_it \u0026 new_it is incremented by some non-zero amount every loop, thus ensure the loop is finite.",
+      "revId": "2d79166e45443aa2bd76215984be646b5cd436c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00a5f416_3a3f1e75",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 422,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-10T11:31:32Z",
+      "side": 1,
+      "message": "I\u0027d prefer `std::distance(old_it, next_old_it) \u003e 1` for this kind of comparison, but it\u0027s your call.\n\nhttps://en.cppreference.com/w/cpp/iterator/distance",
+      "range": {
+        "startLine": 422,
+        "startChar": 37,
+        "endLine": 422,
+        "endChar": 61
+      },
+      "revId": "2d79166e45443aa2bd76215984be646b5cd436c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
