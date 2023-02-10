@@ -117,13 +117,37 @@ def load_auth_credentials(cookie_file_path):
         return load_auth_credentials_from_file(cookie_file)
 
 
+def _find_auth_credentials(credentials, domain):
+    domain_elems = domain.split('.')
+
+    def _matches(cred_domain):
+        cred_domain_elems = cred_domain.split('.')
+        shorter_len = min(len(domain_elems), len(cred_domain_elems))
+
+        for i in range(-1, -shorter_len - 1, -1):
+            # `cred_domain` starts with a `.` and all following elems match.
+            if cred_domain_elems[i] == '' and i == -len(cred_domain_elems):
+                return True
+            # Domains don't match if element `i`s aren't identical.
+            elif domain_elems[i] != cred_domain_elems[i]:
+                return False
+
+        # If either domain has extra elements, they don't match.
+        return len(domain_elems) == len(cred_domain_elems)
+
+    for cred_domain, login in credentials.items():
+        if _matches(cred_domain):
+            return login
+    raise KeyError('Domain {} not found'.format(domain))
+
+
 def create_url_opener(cookie_file_path, domain):
     """Load username and password from .gitcookies and return a URL opener with
     an authentication handler."""
 
     # Load authentication credentials
     credentials = load_auth_credentials(cookie_file_path)
-    username, password = credentials[domain]
+    username, password = _find_auth_credentials(credentials, domain)
 
     # Create URL opener with authentication handler
     auth_handler = HTTPBasicAuthHandler()
