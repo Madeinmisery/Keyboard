@@ -39,6 +39,30 @@
       },
       "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "943b8100_d1df8eae",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-10T20:25:26Z",
+      "side": 1,
+      "message": "Maybe we should find the most matching domain (e.g. if domain \u003d\u003d a.b.example.com and [example.com, b.example.com, a.b.example.com] are in the .gitcookies, we should return a.b.example.com.",
+      "parentUuid": "096ed891_edd9af2b",
+      "range": {
+        "startLine": 122,
+        "startChar": 39,
+        "endLine": 122,
+        "endChar": 40
+      },
+      "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
