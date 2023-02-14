@@ -93,6 +93,30 @@
       },
       "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b5acddc_452fa1f3",
+        "filename": "tools/repo_pull/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1962190
+      },
+      "writtenOn": "2023-02-14T19:15:29Z",
+      "side": 1,
+      "message": "To add some context from our PMs, some of the other people on my team have been able to successfully pull from ag/ without `use_curl`, but we haven\u0027t been able to figure out what they\u0027re doing differently from me or the person from the linked YAQs.",
+      "parentUuid": "07660036_9c66acc1",
+      "range": {
+        "startLine": 34,
+        "startChar": 10,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
