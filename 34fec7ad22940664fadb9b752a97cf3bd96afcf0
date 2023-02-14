@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f5d0d74_8271ac3a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-14T15:46:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "763bc8c3_53ea2e51",
+      "range": {
+        "startLine": 9,
+        "startChar": 32,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4272a3a6_830af7e5",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-02-14T07:22:23Z",
       "side": 1,
       "message": "I have gitcookies. repo_pull.py without use_curl works for me. Would you file a bug or describe the error you saw?",
+      "range": {
+        "startLine": 34,
+        "startChar": 10,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07660036_9c66acc1",
+        "filename": "tools/repo_pull/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-14T15:46:51Z",
+      "side": 1,
+      "message": "Does ag/ work with .gitcookies?  My understanding is that aosp/ and pa/ are fine with .gitcookies, but ag/ disables the basic HTTP authentication, which .gitcookies replies on.\n\nI no longer have access to most Android buganizer components.  May you create one for me?\n\nOne relevant discussion was on yaqs/5207064967798325248, though I looked into this one becuase westoncarvalho@ ping\u0027ed me privately.",
+      "parentUuid": "4272a3a6_830af7e5",
       "range": {
         "startLine": 34,
         "startChar": 10,
