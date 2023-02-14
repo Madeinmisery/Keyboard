@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f337e7bd_0944b9df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-14T10:15:50Z",
+      "side": 1,
+      "message": "NOTE: internal tools and urls are already in AOSP (for acloud and some tools)",
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
