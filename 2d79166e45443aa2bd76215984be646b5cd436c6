@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ff217fba_cbb8a9f3",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-14T16:10:36Z",
+      "side": 1,
+      "message": "although this new implementation is more analytically efficient (linear complexity, traverse input data once), I find it really difficult to read and parse, and spend a lot of time reasoning any off-by-1/0 case.\n\nI would rather we use a less efficient, but easy to understand, two-pass approach like the original code (1st pass create (offset,type)-\u003eir map, 2nd pass filter the old/new fields with the map), we just need to modify the original code to handle the new \"(offset,type) pair must be unique requirement\" during the 1st pass.\n\nwhat\u0027s the usual size of the input vector. do we often, or ever, need to compare really huge struct definitions?\nthe runtime difference between new and old approach would be negligible if the struct definitions we are comparing are usually small.",
+      "revId": "2d79166e45443aa2bd76215984be646b5cd436c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1cfd4e5d_5b5cf727",
         "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
         "patchSetId": 6
