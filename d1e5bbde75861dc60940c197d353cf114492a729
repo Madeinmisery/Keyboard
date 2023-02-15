@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "84dcc099_f5ac8eaa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-15T18:57:40Z",
+      "side": 1,
+      "message": "BTW, where did you get .googlesource.com credentials?  The \"Obtain Password\" from \"Settings\" do not generate wildcard credential for all .googlesource.com domains.",
+      "revId": "d1e5bbde75861dc60940c197d353cf114492a729",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5d1e737c_bb140ef8",
