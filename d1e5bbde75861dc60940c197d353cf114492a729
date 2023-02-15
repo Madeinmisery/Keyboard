@@ -81,6 +81,30 @@
       },
       "revId": "d1e5bbde75861dc60940c197d353cf114492a729",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84d0a8ad_b5f5a50b",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-15T21:29:43Z",
+      "side": 1,
+      "message": "Ah.  Yes.  removeprefix(\u0027.\u0027) makes sense.  Even though it is not intuitive that _domain_matches(\u0027example.com\u0027, \u0027.example.com\u0027) returns True, it appears to be what RFC specifies.",
+      "parentUuid": "5a3e2c8c_85f2b503",
+      "range": {
+        "startLine": 122,
+        "startChar": 8,
+        "endLine": 122,
+        "endChar": 100
+      },
+      "revId": "d1e5bbde75861dc60940c197d353cf114492a729",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
