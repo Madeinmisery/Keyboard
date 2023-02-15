@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "023b8997_e72c228f",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-02-15T06:59:46Z",
+      "side": 1,
+      "message": "The length is usually less than 100.\n\nThe original code needs two multimaps, a structure of (offset, type), key comparator, and AddToMap() for multimap. The predicate function has to take the two multimaps as parameters so that it can determine whether a key is unique in both. Therefore, I think both algorithms would look difficult.",
+      "parentUuid": "ff217fba_cbb8a9f3",
+      "revId": "2d79166e45443aa2bd76215984be646b5cd436c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1cfd4e5d_5b5cf727",
