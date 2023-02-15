@@ -20,6 +20,121 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f76cf69a_4e1570a1",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "Can we initialize these values from a specific function, rather than let it processed while script is loaded? subprocess (especially repo) can take quite a time, so I\u0027d prefer to make an init function instead.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 31
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6c17f5e_43d974f8",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "nit: name global constant as capital",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 9
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82d87f88_a65ab0fe",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "result is already defined globally as dictionary. Please rename this variable to avoid any confusion.",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9bb83914_1fbf1fd3",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "nit: artifact",
+      "range": {
+        "startLine": 28,
+        "startChar": 28,
+        "endLine": 28,
+        "endChar": 38
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7f73fbf_e36bd384",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "current[key] !\u003d remote[key] for key in common_key",
+      "range": {
+        "startLine": 40,
+        "startChar": 15,
+        "endLine": 40,
+        "endChar": 71
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "84a60948_8112c353",
         "filename": "multitree/find_build_id.py",
         "patchSetId": 1
@@ -82,6 +197,29 @@
         "startChar": 2,
         "endLine": 72,
         "endChar": 23
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "174dbd6d_dff4e092",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-02-15T06:46:44Z",
+      "side": 1,
+      "message": "Why don\u0027t we just return the closest one instead?",
+      "range": {
+        "startLine": 76,
+        "startChar": 15,
+        "endLine": 76,
+        "endChar": 20
       },
       "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
