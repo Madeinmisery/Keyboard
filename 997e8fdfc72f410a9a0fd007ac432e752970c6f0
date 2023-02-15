@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45d13034_1336e271",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "made a class for whole process, and move the logic into init",
+      "parentUuid": "f76cf69a_4e1570a1",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 31
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b6c17f5e_43d974f8",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-02-15T06:46:44Z",
       "side": 1,
       "message": "nit: name global constant as capital",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 9
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94d5d002_b6765573",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "removed threshold variable.",
+      "parentUuid": "b6c17f5e_43d974f8",
       "range": {
         "startLine": 19,
         "startChar": 0,
@@ -87,6 +135,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e3bfebc_49ee4b97",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82d87f88_a65ab0fe",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 10
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9bb83914_1fbf1fd3",
@@ -100,6 +172,30 @@
       "writtenOn": "2023-02-15T06:46:44Z",
       "side": 1,
       "message": "nit: artifact",
+      "range": {
+        "startLine": 28,
+        "startChar": 28,
+        "endLine": 28,
+        "endChar": 38
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43eb343b_1d78ddce",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9bb83914_1fbf1fd3",
       "range": {
         "startLine": 28,
         "startChar": 28,
@@ -133,6 +229,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8eb85cf_b012f298",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a7f73fbf_e36bd384",
+      "range": {
+        "startLine": 40,
+        "startChar": 15,
+        "endLine": 40,
+        "endChar": 71
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84a60948_8112c353",
@@ -146,6 +266,30 @@
       "writtenOn": "2023-02-15T03:59:22Z",
       "side": 1,
       "message": "Is this accessible from outside of Google? If not, do we have a public link?",
+      "range": {
+        "startLine": 44,
+        "startChar": 11,
+        "endLine": 44,
+        "endChar": 157
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be42818c_24cd0cd8",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "it looks like it is accessible for the public(for aosp)",
+      "parentUuid": "84a60948_8112c353",
       "range": {
         "startLine": 44,
         "startChar": 11,
@@ -179,6 +323,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b7c8f27_497c8d13",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45aa78ea_804cbb9f",
+      "range": {
+        "startLine": 65,
+        "startChar": 20,
+        "endLine": 65,
+        "endChar": 31
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a3a4ebe_50a63bf3",
@@ -192,6 +360,30 @@
       "writtenOn": "2023-02-15T05:20:42Z",
       "side": 1,
       "message": "Threshold is not an argument here.\n\nCan we assume convex graph and stop when the diffs increases exponentially without try until meeting the threshold?",
+      "range": {
+        "startLine": 72,
+        "startChar": 2,
+        "endLine": 72,
+        "endChar": 23
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d27db32b_a0892173",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "done. removed threshold, find global minimum value instead.",
+      "parentUuid": "4a3a4ebe_50a63bf3",
       "range": {
         "startLine": 72,
         "startChar": 2,
@@ -225,6 +417,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9fd0059_73c92c3e",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "174dbd6d_dff4e092",
+      "range": {
+        "startLine": 76,
+        "startChar": 15,
+        "endLine": 76,
+        "endChar": 20
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2e895a5_c9f40caa",
@@ -238,6 +454,30 @@
       "writtenOn": "2023-02-15T03:59:22Z",
       "side": 1,
       "message": "Can you revise the help message with the cmdline syntax?",
+      "range": {
+        "startLine": 86,
+        "startChar": 8,
+        "endLine": 86,
+        "endChar": 74
+      },
+      "revId": "997e8fdfc72f410a9a0fd007ac432e752970c6f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "914925f9_8e08d275",
+        "filename": "multitree/find_build_id.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-02-15T08:22:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2e895a5_c9f40caa",
       "range": {
         "startLine": 86,
         "startChar": 8,
