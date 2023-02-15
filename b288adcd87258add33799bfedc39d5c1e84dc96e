@@ -111,6 +111,30 @@
       },
       "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bb69025_ffbd6315",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1962190
+      },
+      "writtenOn": "2023-02-15T20:19:36Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "bd21fea3_632322d7",
+      "range": {
+        "startLine": 122,
+        "startChar": 39,
+        "endLine": 122,
+        "endChar": 40
+      },
+      "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
