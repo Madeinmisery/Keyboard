@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d1e737c_bb140ef8",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-15T18:55:50Z",
+      "side": 1,
+      "message": "This is still slightly different from my suggestion.  This won\u0027t work if we want to match example.com (in .gitcookies) with a.example.com (the requested URL).\n\nRevise as:\n\n    def _domain_matches(domain_name, domain_pattern):\n        \"\"\"Returns whether `domain_name` matches `domain_pattern` under the\n        definition of RFC 6265 (Section 4.1.2.3 and 5.1.3).\n    \n        Pattern matching rule defined by Section 5.1.3:\n    \n            \u003e\u003e\u003e _domain_matches(\u0027example.com\u0027, \u0027example.com\u0027)\n            True\n            \u003e\u003e\u003e _domain_matches(\u0027a.example.com\u0027, \u0027example.com\u0027)\n            True\n            \u003e\u003e\u003e _domain_matches(\u0027aaaexample.com\u0027, \u0027example.com\u0027)\n            False\n\n        If the domain pattern starts with \u0027.\u0027, \u0027.\u0027 is ignored (Section 4.1.2.3):\n\n            \u003e\u003e\u003e _domain_matches(\u0027a.example.com\u0027, \u0027.example.com\u0027)\n            True\n    \n        See also. https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.2.3\n        See also. https://datatracker.ietf.org/doc/html/rfc6265#section-5.1.3\n        \"\"\"\n        return (domain_name \u003d\u003d domain_pattern or\n                (domain_name.endswith(domain_pattern) and\n                 (domain_pattern[0] \u003d\u003d \u0027.\u0027 or\n                  domain_name[-len(domain_pattern) - 1] \u003d\u003d \u0027.\u0027)))\n \n and then:\n \n    def _find_auth_credentials(credentials, domain):\n        \"\"\"Find login credentials (username and password) that `domain` matches.\"\"\"\n        for domain_pattern, login in credentials.items():\n            if _domain_matches(domain, domain_pattern):\n                return login\n        raise ValueError(\u0027Domain {} not found\u0027.format(domain))",
+      "range": {
+        "startLine": 122,
+        "startChar": 8,
+        "endLine": 122,
+        "endChar": 100
+      },
+      "revId": "d1e5bbde75861dc60940c197d353cf114492a729",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

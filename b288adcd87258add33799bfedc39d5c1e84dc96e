@@ -87,6 +87,30 @@
       },
       "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd21fea3_632322d7",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-02-15T18:55:50Z",
+      "side": 1,
+      "message": "Never mind on the specific domain part.  The browser is not doing that either.  If the user cares about the order, they can sort their own .gitcookies file.",
+      "parentUuid": "eca4e1ab_d3ba5861",
+      "range": {
+        "startLine": 122,
+        "startChar": 39,
+        "endLine": 122,
+        "endChar": 40
+      },
+      "revId": "b288adcd87258add33799bfedc39d5c1e84dc96e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
