@@ -141,6 +141,30 @@
       },
       "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a6d7fe0_e284afcf",
+        "filename": "tools/repo_pull/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-02-16T05:36:39Z",
+      "side": 1,
+      "message": "I am okay with this new feature. We will not need it if we can find out why some people can pull without using curl.",
+      "parentUuid": "c7daa1b0_ef66a6bc",
+      "range": {
+        "startLine": 34,
+        "startChar": 10,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "34fec7ad22940664fadb9b752a97cf3bd96afcf0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
