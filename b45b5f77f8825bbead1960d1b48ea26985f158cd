@@ -16,6 +16,24 @@
       "message": "Add:\n\n    \u003e\u003e\u003e _domain_matches(\u0027example.com\u0027, \u0027.example.com\u0027)\n    True",
       "revId": "b45b5f77f8825bbead1960d1b48ea26985f158cd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c6a896f_a20c9d23",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1962190
+      },
+      "writtenOn": "2023-02-16T18:43:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d845e28e_59555237",
+      "revId": "b45b5f77f8825bbead1960d1b48ea26985f158cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
