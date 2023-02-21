@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b56a8fb9_d71d9918",
+        "filename": "vndk/tools/header-checker/src/repr/abi_diff_helpers.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-02-21T10:54:58Z",
+      "side": 1,
+      "message": "please use a implementation like https://cs.android.com/android/platform/superproject/+/master:system/libbase/include/android-base/strings.h;drc\u003d50251b5af2588301c8a477ea5a7f6b7d0050c49c;l\u003d99\n\nso we don\u0027t generate a trailing \"-\u003e \"",
+      "range": {
+        "startLine": 120,
+        "startChar": 23,
+        "endLine": 120,
+        "endChar": 33
+      },
+      "revId": "c2a3fc1357c5691cb7c119cf6a18d6ec7f98af9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
