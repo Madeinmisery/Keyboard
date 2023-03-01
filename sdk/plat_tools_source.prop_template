@@ -1,2 +1,6 @@
 Pkg.UserSrc=false
+<<<<<<< PATCH SET (aa0bad Updating package version number for 34.0.1 (patch) release.)
+Pkg.Revision=34.0.1
+=======
 Pkg.Revision=34.0.0
+>>>>>>> BASE      (1fb80a Merge "Update clang version to clang-r487747")
