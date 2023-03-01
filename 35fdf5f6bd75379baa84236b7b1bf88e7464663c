@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e31d922_f75cf848",
+        "filename": "vndk/tools/header-checker/src/utils/api_level_test.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-03-01T07:13:54Z",
+      "side": 1,
+      "message": "has_value",
+      "range": {
+        "startLine": 28,
+        "startChar": 39,
+        "endLine": 28,
+        "endChar": 47
+      },
+      "revId": "35fdf5f6bd75379baa84236b7b1bf88e7464663c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
