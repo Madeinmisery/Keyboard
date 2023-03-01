@@ -26,10 +26,10 @@ TEST(ApiLevelTest, ParseApiLevel) {
   EXPECT_FALSE(ParseApiLevel("A"));
 
   EXPECT_TRUE(ParseApiLevel("current").hasValue());
-  EXPECT_EQ(FUTURE_API_LEVEL, ParseApiLevel("current").getValue());
+  EXPECT_EQ(FUTURE_API_LEVEL, ParseApiLevel("current").value());
 
   EXPECT_TRUE(ParseApiLevel("16").hasValue());
-  EXPECT_EQ(16l, ParseApiLevel("16").getValue());
+  EXPECT_EQ(16l, ParseApiLevel("16").value());
 }
 
 

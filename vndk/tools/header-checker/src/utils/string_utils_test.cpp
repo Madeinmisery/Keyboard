@@ -84,13 +84,13 @@ TEST(StringUtilsTest, ParseInt) {
   EXPECT_FALSE(ParseInt("16h"));
 
   EXPECT_TRUE(ParseInt("0").hasValue());
-  EXPECT_EQ(0, ParseInt("0").getValue());
+  EXPECT_EQ(0, ParseInt("0").value());
 
   EXPECT_TRUE(ParseInt("16").hasValue());
-  EXPECT_EQ(16, ParseInt("16").getValue());
+  EXPECT_EQ(16, ParseInt("16").value());
 
   EXPECT_TRUE(ParseInt("-16").hasValue());
-  EXPECT_EQ(-16, ParseInt("-16").getValue());
+  EXPECT_EQ(-16, ParseInt("-16").value());
 }
 
 
