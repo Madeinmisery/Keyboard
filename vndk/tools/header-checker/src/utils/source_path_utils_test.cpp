@@ -16,10 +16,86 @@
 
 #include <gtest/gtest.h>
 
+#include <cstdlib>
+#include <filesystem>
+#include <fstream>
+#include <vector>
 
 namespace header_checker {
 namespace utils {
 
+class TempDir {
+ public:
+  TempDir() {
+    std::string temp_dir_template =
+        std::filesystem::temp_directory_path() / "SourcePathUtilsTest_XXXXXX";
+    std::vector<char> temp_dir_vec(temp_dir_template.begin(),
+                                   temp_dir_template.end());
+    temp_dir_vec.push_back('\0');
+    if (mkdtemp(temp_dir_vec.data()) == NULL) {
+      return;
+    }
+    temp_dir_vec.pop_back();
+    path_.assign(temp_dir_vec.begin(), temp_dir_vec.end());
+  }
+
+  ~TempDir() {
+    if (!path_.empty()) {
+      std::filesystem::remove_all(path_);
+    }
+  }
+
+  const std::filesystem::path &GetPath() const { return path_; }
+
+ private:
+  std::filesystem::path path_;
+};
+
+TEST(SourcePathUtilsTest, CollectAllExportedHeaders) {
+  TempDir temp_dir;
+  const std::filesystem::path &header_dir = temp_dir.GetPath();
+  ASSERT_FALSE(header_dir.empty());
+
+  const std::filesystem::path header = header_dir / "header.h";
+  std::ofstream fs(header);
+  fs << "// test";
+  fs.close();
+
+  std::error_code ec;
+  const std::filesystem::path subdir = header_dir / "subdir";
+  std::filesystem::create_directory(subdir, ec);
+  ASSERT_FALSE(ec);
+
+  const std::filesystem::path subdir_link = header_dir / "subdir_link";
+  std::filesystem::create_directory_symlink(subdir, subdir_link, ec);
+  ASSERT_FALSE(ec);
+
+  const std::filesystem::path hidden_subdir_link = header_dir / ".subdir_link";
+  std::filesystem::create_directory_symlink(subdir, hidden_subdir_link, ec);
+  ASSERT_FALSE(ec);
+
+  const std::filesystem::path header_link = subdir / "header_link.h";
+  std::filesystem::create_symlink(header, header_link, ec);
+  ASSERT_FALSE(ec);
+
+  const std::filesystem::path hidden_header_link = subdir / ".header_link.h";
+  std::filesystem::create_symlink(header, hidden_header_link, ec);
+  ASSERT_FALSE(ec);
+
+  const std::filesystem::path non_header_link = subdir / "header_link.txt";
+  std::filesystem::create_symlink(header, non_header_link, ec);
+  ASSERT_FALSE(ec);
+
+  std::vector<std::string> exported_header_dirs{header_dir};
+  std::vector<RootDir> root_dirs{{header_dir, "include"}};
+  std::set<std::string> headers =
+      CollectAllExportedHeaders(exported_header_dirs, root_dirs);
+
+  std::set<std::string> expected_headers{"include/header.h",
+                                         "include/subdir/header_link.h",
+                                         "include/subdir_link/header_link.h"};
+  ASSERT_EQ(headers, expected_headers);
+}
 
 TEST(SourcePathUtilsTest, NormalizeAbsolutePaths) {
   const std::vector<std::string> args{"/root/dir"};
