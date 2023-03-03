@@ -16,6 +16,24 @@
       "message": "Add ASSERT_TRUE(std::filesystem::create...());",
       "revId": "a2d9592af79b60ec0f43b5a5ca530ee1e71c6da1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9c19831_ea4309ac",
+        "filename": "vndk/tools/header-checker/src/utils/source_path_utils_test.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-03-03T10:07:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f976cc01_e5b34820",
+      "revId": "a2d9592af79b60ec0f43b5a5ca530ee1e71c6da1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
