@@ -34,6 +34,24 @@
       "parentUuid": "f976cc01_e5b34820",
       "revId": "a2d9592af79b60ec0f43b5a5ca530ee1e71c6da1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35a5687c_e5e43ab5",
+        "filename": "vndk/tools/header-checker/src/utils/source_path_utils_test.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-03-03T10:23:21Z",
+      "side": 1,
+      "message": "the other callsites too",
+      "parentUuid": "c9c19831_ea4309ac",
+      "revId": "a2d9592af79b60ec0f43b5a5ca530ee1e71c6da1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
