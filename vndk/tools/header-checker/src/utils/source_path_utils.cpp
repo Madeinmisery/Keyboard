@@ -30,6 +30,10 @@ static const std::vector<std::string> header_extensions{
     ".h", ".hh", ".hpp", ".hxx", ".h++", ".inl", ".inc", ".ipp", ".h.generic"};
 
 static bool HasHeaderExtension(llvm::StringRef &file_name) {
+  // libc++ headers do not have extensions.
+  if (!file_name.contains(".")) {
+    return true;
+  }
   return std::find_if(header_extensions.begin(), header_extensions.end(),
                       [file_name](const std::string &e) {
                         return file_name.endswith(e);

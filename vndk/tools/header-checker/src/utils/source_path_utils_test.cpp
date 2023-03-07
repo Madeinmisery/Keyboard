@@ -28,7 +28,7 @@ TEST(SourcePathUtilsTest, CollectAllExportedHeaders) {
   TemporaryDir temp_dir;
   const std::filesystem::path header_dir = temp_dir.path;
 
-  const std::filesystem::path header = header_dir / "header.h";
+  const std::filesystem::path header = header_dir / "header";
   ASSERT_TRUE(android::base::WriteStringToFile("// test", header));
 
   std::error_code ec;
@@ -61,7 +61,7 @@ TEST(SourcePathUtilsTest, CollectAllExportedHeaders) {
   std::set<std::string> headers =
       CollectAllExportedHeaders(exported_header_dirs, root_dirs);
 
-  std::set<std::string> expected_headers{"include/header.h",
+  std::set<std::string> expected_headers{"include/header",
                                          "include/subdir/header_link.h",
                                          "include/subdir_link/header_link.h"};
   ASSERT_EQ(headers, expected_headers);
