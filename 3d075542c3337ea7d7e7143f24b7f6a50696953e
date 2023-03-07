@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bad8fd7e_d83e8695",
+        "filename": "vndk/tools/header-checker/src/utils/source_path_utils.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1124746
+      },
+      "writtenOn": "2023-03-07T03:47:06Z",
+      "side": 1,
+      "message": "is it possible to limit this to a certain directory? are these extension-less headers located in directories that follow certain patterns? I am just trying to reduce the impact of this to the minimum.",
+      "range": {
+        "startLine": 34,
+        "startChar": 7,
+        "endLine": 34,
+        "endChar": 16
+      },
+      "revId": "3d075542c3337ea7d7e7143f24b7f6a50696953e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
