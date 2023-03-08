@@ -46,6 +46,30 @@
       },
       "revId": "01fd4185b1f8a35e5151e32062af2fd360b47385",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f0223aa_961640a9",
+        "filename": "scripts/stack_core.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-08T22:45:03Z",
+      "side": 1,
+      "message": "makes sense, thanks!",
+      "parentUuid": "644b72ce_3e607343",
+      "range": {
+        "startLine": 88,
+        "startChar": 121,
+        "endLine": 88,
+        "endChar": 122
+      },
+      "revId": "01fd4185b1f8a35e5151e32062af2fd360b47385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
