@@ -22,6 +22,30 @@
       },
       "revId": "01fd4185b1f8a35e5151e32062af2fd360b47385",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "644b72ce_3e607343",
+        "filename": "scripts/stack_core.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1279898
+      },
+      "writtenOn": "2023-03-08T22:39:17Z",
+      "side": 1,
+      "message": "Crash dumps contain these two register lines:\n\n```\n    a7  00000000000000f0\n    pc  00ffffff1407e582  ra  00ffffff140811d2  sp  00ffffffca72d9d0\n```\n    \n1) As there is a line with only one address, I had to change the allowed range to include a single address.\n\n2) As \u0027pc\u0027 shows up in the register list, this conflates register lines with trace lines that look like:\n\n```\n#00  pc 00ffffff1407e582  /data/data/com.my.project/lib/libmyproject.so\n```\n\nTo avoid this, I also require that after the addresses, the match explicitly hits EOL, hence the addition of \"$\".",
+      "parentUuid": "7439b5c9_4fa25ce1",
+      "range": {
+        "startLine": 88,
+        "startChar": 121,
+        "endLine": 88,
+        "endChar": 122
+      },
+      "revId": "01fd4185b1f8a35e5151e32062af2fd360b47385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
