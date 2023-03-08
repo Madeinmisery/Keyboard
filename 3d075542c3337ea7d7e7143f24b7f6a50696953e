@@ -22,6 +22,30 @@
       },
       "revId": "3d075542c3337ea7d7e7143f24b7f6a50696953e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2a39e34_5fd8b253",
+        "filename": "vndk/tools/header-checker/src/utils/source_path_utils.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-03-08T04:45:14Z",
+      "side": 1,
+      "message": "It\u0027s possible to limit to external/libcxx/include.\n\nWe filter the headers by extension because RBE creates and deletes temporary files in the header directories. Does RBE create temporary files without extensions?",
+      "parentUuid": "bad8fd7e_d83e8695",
+      "range": {
+        "startLine": 34,
+        "startChar": 7,
+        "endLine": 34,
+        "endChar": 16
+      },
+      "revId": "3d075542c3337ea7d7e7143f24b7f6a50696953e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
