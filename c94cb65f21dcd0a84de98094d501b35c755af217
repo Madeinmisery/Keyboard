@@ -16,6 +16,24 @@
       "message": "if you\u0027re asking yourselves \"why didn\u0027t he add riscv in here?\", i think this is all dead code. i don\u0027t think we set ANDROID_TOOLCHAIN or ANDROID_TOOLCHAIN_2ND_ARCH any more (and definitely not to gcc paths!), so i\u0027ll come back and remove all this. but i\u0027ll do that in a separate change for clarity.\n\n(the \"ABI:\" line that has priority anyway has been in crashes since at least lollipop [i didn\u0027t look further back], so we don\u0027t support older crashes at this point anyway.)",
       "revId": "c94cb65f21dcd0a84de98094d501b35c755af217",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ef52da2_cbdcb89e",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-09T00:55:16Z",
+      "side": 1,
+      "message": "Yep, all of that code doesn\u0027t work any more. It, basically, now defaults to arm64 for 64 bit and arm for 32 bit. I don\u0027t know if there is an easy way to figure out the arch from a lunched target, which is what it\u0027s trying to do.\n\nYou might be able to do readelf on any shared library in the symbols directory to figure it out.",
+      "parentUuid": "70ae8e90_bfdc5dc3",
+      "revId": "c94cb65f21dcd0a84de98094d501b35c755af217",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
