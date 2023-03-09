@@ -34,6 +34,24 @@
       "parentUuid": "70ae8e90_bfdc5dc3",
       "revId": "c94cb65f21dcd0a84de98094d501b35c755af217",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e7c0c2f_8bcd5e64",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-09T16:17:46Z",
+      "side": 1,
+      "message": "yeah, \"is anyone relying on the fallback?\" is one reason i\u0027m nervous. personally though -- if they exist -- i\u0027d rather flush them out and find out why they don\u0027t have an `ABI:` line (maybe because they\u0027re generating their own fake crashes?). i\u0027ll try that for the first version, fall back (ho ho) to the \"i like both kinds of music: arm and arm64\" option if we have problems, and think about actually being clever with $ANDROID_OUT then...",
+      "parentUuid": "5ef52da2_cbdcb89e",
+      "revId": "c94cb65f21dcd0a84de98094d501b35c755af217",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
