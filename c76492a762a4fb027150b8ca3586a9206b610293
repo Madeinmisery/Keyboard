@@ -16,6 +16,24 @@
       "message": "i asked eugenis\u0027 team whether this change would affect them, and eugenis asked me why we even need to know ARCH anyway... is _all_ of this obsolete now we\u0027re just calling llvm-* tools that \"just work\" regardless of architecture?",
       "revId": "c76492a762a4fb027150b8ca3586a9206b610293",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75d4b150_8d43cf16",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T02:47:27Z",
+      "side": 1,
+      "message": "I created a version that removes all of the ARCH stuff.\n\nSee https://android-review.git.corp.google.com/c/platform/development/+/2481575",
+      "parentUuid": "c6719f94_56021fe8",
+      "revId": "c76492a762a4fb027150b8ca3586a9206b610293",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
