@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8584435d_c1cb80a8",
+        "filename": "scripts/stack",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T20:50:45Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "a025a857_37ab732b",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d1aeeac9_ffba97d2",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-03-10T19:19:31Z",
       "side": 1,
       "message": "was this for debugging, or a new feature? (or a fix for a bug introduced when we switched to python3?)",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9818db3f_1b92d4f8",
+        "filename": "scripts/stack",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T20:50:45Z",
+      "side": 1,
+      "message": "I passed in a logcat and without this, I get errors. The same if I capture it in a file, so I just dump any encoding errors.",
+      "parentUuid": "d1aeeac9_ffba97d2",
       "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -69,6 +105,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8668b79d_11aeda4f",
+        "filename": "scripts/stack_core.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 587,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T20:50:45Z",
+      "side": 1,
+      "message": "Oops, removed.",
+      "parentUuid": "edc9e752_236db093",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d786a34_7c604f70",
@@ -82,6 +136,30 @@
       "writtenOn": "2023-03-10T19:19:31Z",
       "side": 1,
       "message": "fix the typo i fixed in passing in my change? :-)",
+      "range": {
+        "startLine": 583,
+        "startChar": 6,
+        "endLine": 583,
+        "endChar": 22
+      },
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eb1c8f7_d3de909c",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T20:50:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3d786a34_7c604f70",
       "range": {
         "startLine": 583,
         "startChar": 6,
