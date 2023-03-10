@@ -16,6 +16,80 @@
       "message": "I\u0027m wondering if I should remove the register_line completely. It feels useless since I\u0027ve never used it and it just puts extra on the screen.",
       "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a025a857_37ab732b",
+        "filename": "scripts/stack",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-10T19:19:31Z",
+      "side": 1,
+      "message": "(elsewhere we\u0027re already using `.contains(\"64\")` or whatever the python equivalent of that would be.)",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1aeeac9_ffba97d2",
+        "filename": "scripts/stack",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-10T19:19:31Z",
+      "side": 1,
+      "message": "was this for debugging, or a new feature? (or a fix for a bug introduced when we switched to python3?)",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edc9e752_236db093",
+        "filename": "scripts/stack_core.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 587,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-10T19:19:31Z",
+      "side": 1,
+      "message": "did you mean to leave this in?",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d786a34_7c604f70",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-10T19:19:31Z",
+      "side": 1,
+      "message": "fix the typo i fixed in passing in my change? :-)",
+      "range": {
+        "startLine": 583,
+        "startChar": 6,
+        "endLine": 583,
+        "endChar": 22
+      },
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
