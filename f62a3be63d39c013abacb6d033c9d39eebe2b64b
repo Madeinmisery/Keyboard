@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d59d5c7_1b7fd169",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-03-10T02:48:10Z",
+      "side": 1,
+      "message": "I\u0027m wondering if I should remove the register_line completely. It feels useless since I\u0027ve never used it and it just puts extra on the screen.",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
