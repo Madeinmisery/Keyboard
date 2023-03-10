@@ -88,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec766245_26ed1ebd",
+        "filename": "scripts/stack",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-10T22:26:16Z",
+      "side": 1,
+      "message": "interesting. i bet that was a python3 change. logcat has _always_ contained dodgy crap. (we don\u0027t enforce that it\u0027s valid utf8 sequences. it\u0027s costly enough as it is!)\n\n(and sorry for not noticing that you\u0027d _already_ documented this in the checkin comment!)",
+      "parentUuid": "9818db3f_1b92d4f8",
+      "revId": "f62a3be63d39c013abacb6d033c9d39eebe2b64b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "edc9e752_236db093",
