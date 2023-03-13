@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32c7b1d6_1c458dec",
+        "filename": "scripts/stack",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-13T23:50:25Z",
+      "side": 1,
+      "message": "heh, i did think \"dan always uses `in` for this\" but since i always prefer methods to keywords anyway, if there was a method i was happy :-)",
+      "revId": "a47d6d090f42487a889af56c8894bb5d88e87ca5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
