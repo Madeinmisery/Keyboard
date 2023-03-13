@@ -44,10 +44,10 @@ def main():
 
   args = parser.parse_args()
   if args.arch:
-    if args.arch == "arm" or args.arch == "x86":
-      symbol.ARCH_IS_32BIT = True
-    else:
+    if args.arch.contains("64"):
       symbol.ARCH_IS_32BIT = False
+    else:
+      symbol.ARCH_IS_32BIT = True
   if args.symbols_dir:
     symbol.SYMBOLS_DIR = args.symbols_dir
   if args.symbols_zip:
