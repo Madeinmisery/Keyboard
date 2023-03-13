@@ -16,6 +16,29 @@
       "message": "Somehow I didn\u0027t upload these changes. Not sure what happened, but this includes the missing changes for review comments.",
       "revId": "0663322930823ae5d51c008941c3538b63ae1b24",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9341da2_0f91ba7f",
+        "filename": "scripts/stack",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-13T22:17:08Z",
+      "side": 1,
+      "message": "(python n00b asks: can\u0027t you just assign `symbol.ARCH_IS_32BIT \u003d args.arch.contains(\"64\")`?)",
+      "range": {
+        "startLine": 47,
+        "startChar": 7,
+        "endLine": 47,
+        "endChar": 31
+      },
+      "revId": "0663322930823ae5d51c008941c3538b63ae1b24",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
