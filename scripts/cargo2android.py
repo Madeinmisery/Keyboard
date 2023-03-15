@@ -675,7 +675,7 @@ class Crate(object):
       if not self.runner.variant_args.no_pkg_vers:
         self.write('    cargo_pkg_version: "' + self.cargo_pkg_version + '",')
     if 'test' in self.crate_types:
-      self.write('    test_suites: ["general-tests"],')
+      self.write('    test_suites: ["device-tests"],')
       self.write('    auto_gen_config: true,')
     self.dump_edition_flags_libs()
     if 'test' in self.crate_types and len(self.srcs) == 1:
