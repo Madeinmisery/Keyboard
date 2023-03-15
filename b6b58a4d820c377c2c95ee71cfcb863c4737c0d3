@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f91c3b4_095bd449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2023-03-15T22:58:50Z",
+      "side": 1,
+      "message": "Looking through the history of gdbclient.py it looks like this effectively reverts aosp/2056834. But looking at the bug they had an IP of 0.0.0.0 which is effectively equivalent to localhost. So I think that CL acted as a workaround for the IPv6 issue which was also worked around in the non-host:port case by aosp/2125714 and eventually resolved by aosp/2254565.",
+      "revId": "b6b58a4d820c377c2c95ee71cfcb863c4737c0d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
