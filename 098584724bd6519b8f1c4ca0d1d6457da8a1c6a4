@@ -52,6 +52,24 @@
       "parentUuid": "21d02545_8ddd328e",
       "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f54c7fc6_0a81fd17",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2023-03-16T00:25:09Z",
+      "side": 0,
+      "message": "Yes, exactly.",
+      "parentUuid": "91b43195_2ddd437b",
+      "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
