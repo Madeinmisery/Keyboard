@@ -34,6 +34,24 @@
       "parentUuid": "0e604432_21fe93ed",
       "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91b43195_2ddd437b",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-16T00:21:10Z",
+      "side": 0,
+      "message": "```\nFix it by entirely removing the code that tries to connect directly to\nthe host if the $ANDROID_SERIAL is of the form host:port.\n```\nah, so the _forwarding_ deals with the remote host and port, and everything else should ignore it and just talk to the local port?",
+      "parentUuid": "21d02545_8ddd328e",
+      "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
