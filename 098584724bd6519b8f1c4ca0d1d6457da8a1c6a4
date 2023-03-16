@@ -16,6 +16,24 @@
       "message": "but what if my device serial does have a host (that isn\u0027t localhost) in it?",
       "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21d02545_8ddd328e",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2023-03-16T00:08:53Z",
+      "side": 0,
+      "message": "Well, right now that\u0027s broken, for the reason described in the commit message:\n```\n(lldb) gdb-remote 172.16.243.3:5039\nerror: Failed to connect port\n```\nThis CL fixes it:\n```\n(lldb) gdb-remote 5039\n[succeeds]\n```",
+      "parentUuid": "0e604432_21fe93ed",
+      "revId": "098584724bd6519b8f1c4ca0d1d6457da8a1c6a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
