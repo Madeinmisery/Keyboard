@@ -67,7 +67,10 @@ struct Args {
 }
 
 fn default_apex_available() -> Vec<String> {
-    vec!["//apex_available:platform".to_string(), "//apex_available:anyapex".to_string()]
+    vec![
+        "//apex_available:platform".to_string(),
+        "//apex_available:anyapex".to_string(),
+    ]
 }
 
 /// Options that apply to everything.
@@ -149,10 +152,16 @@ fn main() -> Result<()> {
     let json_str = std::fs::read_to_string(&args.cfg)
         .with_context(|| format!("failed to read file: {:?}", args.cfg))?;
     // Add some basic support for comments to JSON.
-    let json_str: String = json_str.lines().filter(|l| !l.trim_start().starts_with("//")).collect();
+    let json_str: String = json_str
+        .lines()
+        .filter(|l| !l.trim_start().starts_with("//"))
+        .collect();
     let cfg: Config = serde_json::from_str(&json_str).context("failed to parse config")?;
 
-    if !Path::new("Cargo.toml").try_exists().context("when checking Cargo.toml")? {
+    if !Path::new("Cargo.toml")
+        .try_exists()
+        .context("when checking Cargo.toml")?
+    {
         bail!("Cargo.toml missing. Run in a directory with a Cargo.toml file.");
     }
 
@@ -203,7 +212,10 @@ fn main() -> Result<()> {
     // Group by package.
     let mut module_by_package: BTreeMap<PathBuf, Vec<Crate>> = BTreeMap::new();
     for c in crates {
-        module_by_package.entry(c.package_dir.clone()).or_default().push(c);
+        module_by_package
+            .entry(c.package_dir.clone())
+            .or_default()
+            .push(c);
     }
     // Write an Android.bp file per package.
     for (package_dir, crates) in module_by_package {
@@ -223,7 +235,10 @@ fn run_cargo(cargo_out: &mut File, cmd: &mut Command) -> Result<()> {
     use std::process::Stdio;
     let fd: OwnedFd = cargo_out.try_clone()?.into();
     // eprintln!("Running: {:?}\n", cmd);
-    let output = cmd.stdout(Stdio::from(fd.try_clone()?)).stderr(Stdio::from(fd)).output()?;
+    let output = cmd
+        .stdout(Stdio::from(fd.try_clone()?))
+        .stderr(Stdio::from(fd))
+        .output()?;
     if !output.status.success() {
         bail!("cargo command failed with exit status: {:?}", output.status);
     }
@@ -239,13 +254,20 @@ fn generate_cargo_out(cfg: &Config, cargo_out_path: &str, cargo_metadata_path: &
     let target_dir_args = ["--target-dir", "target.tmp"];
 
     // cargo clean
-    run_cargo(&mut cargo_out_file, Command::new("cargo").arg("clean").args(target_dir_args))?;
+    run_cargo(
+        &mut cargo_out_file,
+        Command::new("cargo").arg("clean").args(target_dir_args),
+    )?;
 
     let default_target = "x86_64-unknown-linux-gnu";
     let feature_args = if cfg.features.is_empty() {
         vec![]
     } else {
-        vec!["--no-default-features".to_string(), "--features".to_string(), cfg.features.join(",")]
+        vec![
+            "--no-default-features".to_string(),
+            "--features".to_string(),
+            cfg.features.join(","),
+        ]
     };
 
     let workspace_args = if cfg.workspace {
@@ -388,8 +410,11 @@ fn write_android_bp(
     }
 
     if let Some(patch_path) = &package_cfg.patch {
-        let patch_output =
-            Command::new("patch").arg("-s").arg(&bp_path).arg(patch_path).output()?;
+        let patch_output = Command::new("patch")
+            .arg("-s")
+            .arg(&bp_path)
+            .arg(patch_path)
+            .output()?;
         if !patch_output.status.success() {
             eprintln!("WARNING: failed to apply patch {:?}", patch_path);
         }
@@ -422,25 +447,45 @@ fn crate_to_bp_modules(
         types.push("test".to_string());
     }
     for crate_type in types {
-        let host = if package_cfg.device_supported.unwrap_or(true) { "" } else { "_host" };
+        let host = if package_cfg.device_supported.unwrap_or(true) {
+            ""
+        } else {
+            "_host"
+        };
         let rlib = if package_cfg.force_rlib { "_rlib" } else { "" };
         let (module_type, module_name, stem) = match crate_type.as_str() {
-            "bin" => ("rust_binary".to_string() + host, crate_.name.clone(), crate_.name.clone()),
+            "bin" => (
+                "rust_binary".to_string() + host,
+                crate_.name.clone(),
+                crate_.name.clone(),
+            ),
             "lib" | "rlib" => {
                 let stem = "lib".to_string() + &crate_.name;
                 ("rust_library".to_string() + rlib + host, stem.clone(), stem)
             }
             "dylib" => {
                 let stem = "lib".to_string() + &crate_.name;
-                ("rust_library".to_string() + host + "_dylib", stem.clone() + "_dylib", stem)
+                (
+                    "rust_library".to_string() + host + "_dylib",
+                    stem.clone() + "_dylib",
+                    stem,
+                )
             }
             "cdylib" => {
                 let stem = "lib".to_string() + &crate_.name;
-                ("rust_ffi".to_string() + host + "_shared", stem.clone() + "_shared", stem)
+                (
+                    "rust_ffi".to_string() + host + "_shared",
+                    stem.clone() + "_shared",
+                    stem,
+                )
             }
             "staticlib" => {
                 let stem = "lib".to_string() + &crate_.name;
-                ("rust_ffi".to_string() + host + "_static", stem.clone() + "_static", stem)
+                (
+                    "rust_ffi".to_string() + host + "_static",
+                    stem.clone() + "_static",
+                    stem,
+                )
             }
             "proc-macro" => {
                 let stem = "lib".to_string() + &crate_.name;
@@ -456,7 +501,10 @@ fn crate_to_bp_modules(
         };
 
         let mut m = BpModule::new(module_type.clone());
-        let module_name = cfg.module_name_overrides.get(&module_name).unwrap_or(&module_name);
+        let module_name = cfg
+            .module_name_overrides
+            .get(&module_name)
+            .unwrap_or(&module_name);
         if cfg.module_blocklist.contains(module_name) {
             continue;
         }
@@ -487,7 +535,9 @@ fn crate_to_bp_modules(
             m.props.set("test_suites", vec!["general-tests"]);
             m.props.set("auto_gen_config", true);
             if package_cfg.host_supported.unwrap_or(true) {
-                m.props.object("test_options").set("unit_test", !package_cfg.no_presubmit);
+                m.props
+                    .object("test_options")
+                    .set("unit_test", !package_cfg.no_presubmit);
             }
         }
 
@@ -518,8 +568,9 @@ fn crate_to_bp_modules(
             if extern_name == "proc_macro" {
                 continue;
             }
-            let filename =
-                filename.as_ref().unwrap_or_else(|| panic!("no filename for {}", extern_name));
+            let filename = filename
+                .as_ref()
+                .unwrap_or_else(|| panic!("no filename for {}", extern_name));
             // Example filename: "libgetrandom-fd8800939535fc59.rmeta"
             static REGEX: Lazy<Regex> =
                 Lazy::new(|| Regex::new(r"^lib(.*)-[0-9a-f]*.(rlib|so|rmeta)$").unwrap());
@@ -543,8 +594,10 @@ fn crate_to_bp_modules(
             let mut result = Vec::new();
             for x in libs {
                 let module_name = "lib".to_string() + x.as_str();
-                let module_name =
-                    cfg.module_name_overrides.get(&module_name).unwrap_or(&module_name);
+                let module_name = cfg
+                    .module_name_overrides
+                    .get(&module_name)
+                    .unwrap_or(&module_name);
                 if package_cfg.dep_blocklist.contains(module_name) {
                     continue;
                 }
@@ -557,13 +610,16 @@ fn crate_to_bp_modules(
             m.props.set("rustlibs", process_lib_deps(rust_libs));
         }
         if !proc_macro_libs.is_empty() {
-            m.props.set("proc_macros", process_lib_deps(proc_macro_libs));
+            m.props
+                .set("proc_macros", process_lib_deps(proc_macro_libs));
         }
         if !crate_.static_libs.is_empty() {
-            m.props.set("static_libs", process_lib_deps(crate_.static_libs.clone()));
+            m.props
+                .set("static_libs", process_lib_deps(crate_.static_libs.clone()));
         }
         if !crate_.shared_libs.is_empty() {
-            m.props.set("shared_libs", process_lib_deps(crate_.shared_libs.clone()));
+            m.props
+                .set("shared_libs", process_lib_deps(crate_.shared_libs.clone()));
         }
 
         if !cfg.apex_available.is_empty()
