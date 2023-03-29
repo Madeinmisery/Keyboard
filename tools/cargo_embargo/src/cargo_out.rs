@@ -35,6 +35,8 @@ pub enum CrateType {
     ProcMacro,
     // --test
     Test,
+    // "--cfg test" without --test. (Assume it is a test with the harness disabled.
+    TestNoHarness,
 }
 
 /// Info extracted from `CargoOut` for a crate.
@@ -383,13 +385,16 @@ impl Crate {
         if out.main_src.as_os_str().is_empty() {
             bail!("missing main source file");
         }
-        let has_test = out.types.contains(&CrateType::Test);
-        if has_test {
-            if out.types.len() != 1 {
-                bail!("cannot specify both --test and --crate-type");
+        // Must have at least one type.
+        if out.types.is_empty() {
+            if out.cfgs.contains(&"test".to_string()) {
+                out.types.push(CrateType::TestNoHarness);
+            } else {
+                bail!("failed to detect crate type. did not have --crate-type or --test or '--cfg test'");
             }
-        } else if out.types.is_empty() {
-            bail!("must specify one of --test or --crate-type");
+        }
+        if out.types.contains(&CrateType::Test) && out.types.len() != 1 {
+            bail!("cannot specify both --test and --crate-type");
         }
         if out.types.contains(&CrateType::Lib) && out.types.contains(&CrateType::RLib) {
             bail!("cannot both have lib and rlib crate types");
