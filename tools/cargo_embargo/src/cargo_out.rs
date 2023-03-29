@@ -22,6 +22,21 @@ use std::collections::BTreeMap;
 use std::path::Path;
 use std::path::PathBuf;
 
+/// Combined representation of --crate-type and --test flags.
+#[derive(Debug, PartialEq, Eq)]
+pub enum CrateType {
+    // --crate-type types
+    Bin,
+    Lib,
+    RLib,
+    DyLib,
+    CDyLib,
+    StaticLib,
+    ProcMacro,
+    // --test
+    Test,
+}
+
 /// Info extracted from `CargoOut` for a crate.
 ///
 /// Note that there is a 1-to-many relationship between a Cargo.toml file and these `Crate`
@@ -32,11 +47,7 @@ pub struct Crate {
     pub name: String,
     pub package_name: String,
     pub version: Option<String>,
-    // cargo calls rustc with multiple --crate-type flags.
-    // rustc can accept:
-    //   --crate-type [bin|lib|rlib|dylib|cdylib|staticlib|proc-macro]
-    pub types: Vec<String>,
-    pub test: bool,                             // --test
+    pub types: Vec<CrateType>,
     pub target: Option<String>,                 // --target
     pub features: Vec<String>,                  // --cfg feature=
     pub cfgs: Vec<String>,                      // non-feature --cfg
@@ -116,16 +127,23 @@ struct CargoOut {
 }
 
 fn match1(regex: &Regex, s: &str) -> Option<String> {
-    regex.captures(s).and_then(|x| x.get(1)).map(|x| x.as_str().to_string())
+    regex
+        .captures(s)
+        .and_then(|x| x.get(1))
+        .map(|x| x.as_str().to_string())
 }
 
 fn match3(regex: &Regex, s: &str) -> Option<(String, String, String)> {
-    regex.captures(s).and_then(|x| match (x.get(1), x.get(2), x.get(3)) {
-        (Some(a), Some(b), Some(c)) => {
-            Some((a.as_str().to_string(), b.as_str().to_string(), c.as_str().to_string()))
-        }
-        _ => None,
-    })
+    regex
+        .captures(s)
+        .and_then(|x| match (x.get(1), x.get(2), x.get(3)) {
+            (Some(a), Some(b), Some(c)) => Some((
+                a.as_str().to_string(),
+                b.as_str().to_string(),
+                c.as_str().to_string(),
+            )),
+            _ => None,
+        })
 }
 
 impl CargoOut {
@@ -219,6 +237,21 @@ impl CargoOut {
     }
 }
 
+impl CrateType {
+    fn from_str(s: &str) -> CrateType {
+        match s {
+            "bin" => CrateType::Bin,
+            "lib" => CrateType::Lib,
+            "rlib" => CrateType::RLib,
+            "dylib" => CrateType::DyLib,
+            "cdylib" => CrateType::CDyLib,
+            "staticlib" => CrateType::StaticLib,
+            "proc-macro" => CrateType::ProcMacro,
+            _ => panic!("unexpected --crate-type: {}", s),
+        }
+    }
+}
+
 impl Crate {
     fn from_rustc_invocation(rustc: &str, metadata: &WorkspaceMetadata) -> Result<Crate> {
         let mut out = Crate::default();
@@ -228,25 +261,30 @@ impl Crate {
         let mut arg_iter = args
             .iter()
             // Remove quotes from simple strings, panic for others.
-            .map(|arg| match (arg.chars().next(), arg.chars().skip(1).last()) {
-                (Some('"'), Some('"')) => &arg[1..arg.len() - 1],
-                (Some('\''), Some('\'')) => &arg[1..arg.len() - 1],
-                (Some('"'), _) => panic!("can't handle strings with whitespace"),
-                (Some('\''), _) => panic!("can't handle strings with whitespace"),
-                _ => arg,
-            });
+            .map(
+                |arg| match (arg.chars().next(), arg.chars().skip(1).last()) {
+                    (Some('"'), Some('"')) => &arg[1..arg.len() - 1],
+                    (Some('\''), Some('\'')) => &arg[1..arg.len() - 1],
+                    (Some('"'), _) => panic!("can't handle strings with whitespace"),
+                    (Some('\''), _) => panic!("can't handle strings with whitespace"),
+                    _ => arg,
+                },
+            );
         // process each arg
         while let Some(arg) = arg_iter.next() {
             match arg {
                 "--crate-name" => out.name = arg_iter.next().unwrap().to_string(),
-                "--crate-type" => out.types.push(arg_iter.next().unwrap().to_string()),
-                "--test" => out.test = true,
+                "--crate-type" => out.types.push(CrateType::from_str(
+                    arg_iter.next().unwrap().to_string().as_str(),
+                )),
+                "--test" => out.types.push(CrateType::Test),
                 "--target" => out.target = Some(arg_iter.next().unwrap().to_string()),
                 "--cfg" => {
                     // example: feature=\"sink\"
                     let arg = arg_iter.next().unwrap();
-                    if let Some(feature) =
-                        arg.strip_prefix("feature=\"").and_then(|s| s.strip_suffix('\"'))
+                    if let Some(feature) = arg
+                        .strip_prefix("feature=\"")
+                        .and_then(|s| s.strip_suffix('\"'))
                     {
                         out.features.push(feature.to_string());
                     } else {
@@ -324,7 +362,10 @@ impl Crate {
                             bail!("No Cargo.toml found in parents of {:?}", src_path);
                         }
                     }
-                    out.main_src = src_path.strip_prefix(&out.package_dir).unwrap().to_path_buf();
+                    out.main_src = src_path
+                        .strip_prefix(&out.package_dir)
+                        .unwrap()
+                        .to_path_buf();
                 }
 
                 // ignored flags
@@ -355,10 +396,15 @@ impl Crate {
         if out.main_src.as_os_str().is_empty() {
             bail!("missing main source file");
         }
-        if out.types.is_empty() != out.test {
-            bail!("expected exactly one of either --crate-type or --test");
+        let has_test = out.types.contains(&CrateType::Test);
+        if has_test {
+            if out.types.len() != 1 {
+                bail!("cannot specify both --test and --crate-type");
+            }
+        } else if out.types.is_empty() {
+            bail!("must specify one of --test or --crate-type");
         }
-        if out.types.iter().any(|x| x == "lib") && out.types.iter().any(|x| x == "rlib") {
+        if out.types.contains(&CrateType::Lib) && out.types.contains(&CrateType::RLib) {
             bail!("cannot both have lib and rlib crate types");
         }
 
