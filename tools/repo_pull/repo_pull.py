@@ -90,6 +90,7 @@ class ChangeList(object):
 
         self.project = project
         self.number = change_list['_number']
+        self.branch = change_list['branch']
 
         self.fetch = fetch
 
@@ -129,6 +130,16 @@ def find_repo_top(curdir):
     raise ValueError('.repo dir not found')
 
 
+class ProjectNameDirDict(dict):
+    def find_directory(self, name, revision, default_result=None):
+        try:
+            return self[(name, revision)]
+        except KeyError:
+            if default_result is None:
+                return self[name]
+            return self.get(name, default_result)
+
+
 def build_project_name_dir_dict(manifest_name):
     """Build the mapping from Gerrit project name to source tree project
     directory path."""
@@ -138,14 +149,19 @@ def build_project_name_dir_dict(manifest_name):
     raw_manifest_xml = run(manifest_cmd, stdout=PIPE, check=True).stdout
 
     manifest_xml = xml.dom.minidom.parseString(raw_manifest_xml)
-    project_dirs = {}
+    project_dirs = ProjectNameDirDict()
     for project in manifest_xml.getElementsByTagName('project'):
         name = project.getAttribute('name')
         path = project.getAttribute('path')
+        revision = project.getAttribute('revision')
+
         if path:
             project_dirs[name] = path
         else:
             project_dirs[name] = name
+
+        if revision and path:
+            project_dirs[(name, revision)] = path
 
     return project_dirs
 
@@ -269,7 +285,8 @@ def _main_bash(args):
     print(_sh_quote_command(['pushd', repo_top]))
     for changes in change_list_groups:
         for change in changes:
-            project_dir = project_dirs.get(change.project, change.project)
+            project_dir = project_dirs.find_directory(
+                change.project, change.branch, change.project)
             cmds = []
             cmds.append(['pushd', project_dir])
             cmds.extend(build_pull_commands(
@@ -291,7 +308,7 @@ def _do_pull_change_lists_for_project(task):
 
     for i, change in enumerate(changes):
         try:
-            cwd = project_dirs[change.project]
+            cwd = project_dirs.find_directory(change.project, change.branch)
         except KeyError:
             err_msg = 'error: project "{}" cannot be found in manifest.xml\n'
             err_msg = err_msg.format(change.project).encode('utf-8')
