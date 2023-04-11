@@ -447,20 +447,19 @@ class RecordTypeIR : public TypeIR, public TemplatedArtifactIR {
 
 class EnumFieldIR {
  public:
-  EnumFieldIR(const std::string &name, int value)
+  // Assume that enum values always fit in 64 bits.
+  EnumFieldIR(const std::string &name, int64_t value)
       : name_(name), value_(value) {}
 
   const std::string &GetName() const {
     return name_;
   }
 
-  int GetValue() const {
-    return value_;
-  }
+  int64_t GetValue() const { return value_; }
 
  protected:
   std::string name_;
-  int value_ = 0;
+  int64_t value_ = 0;
 };
 
 class EnumTypeIR : public TypeIR {

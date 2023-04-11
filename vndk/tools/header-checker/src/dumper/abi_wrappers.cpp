@@ -882,8 +882,14 @@ bool EnumDeclWrapper::SetupEnumFields(repr::EnumTypeIR *enump) {
   clang::EnumDecl::enumerator_iterator enum_it = enum_decl_->enumerator_begin();
   while (enum_it != enum_decl_->enumerator_end()) {
     std::string name = enum_it->getQualifiedNameAsString();
-    uint64_t field_value = enum_it->getInitVal().getExtValue();
-    enump->AddEnumField(repr::EnumFieldIR(name, field_value));
+    const llvm::APSInt &value = enum_it->getInitVal();
+    // The value is extended to 64 bits. An unsigned integer >= (1 << 63) is
+    // represented with a negative integer in the dump file. That does not
+    // affect the diff result because every integer still has a unique
+    // representation, and EnumTypeIR has the underlying type information.
+    int64_t ir_value =
+        value.isSigned() ? value.getSExtValue() : value.getZExtValue();
+    enump->AddEnumField(repr::EnumFieldIR(name, ir_value));
     enum_it++;
   }
   return true;

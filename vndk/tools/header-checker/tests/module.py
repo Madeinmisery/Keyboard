@@ -789,6 +789,15 @@ TEST_MODULES = [
         export_include_dirs=['integration/union/include'],
         linker_flags=['-output-format', 'Json'],
     ),
+    LsdumpModule(
+        name='libenum',
+        arch='arm64',
+        srcs=['integration/enum/include/base.h'],
+        version_script='integration/enum/map.txt',
+        export_include_dirs=['integration/enum/include'],
+        linker_flags=['-output-format', 'Json'],
+        has_reference_dump=True,
+    ),
 ]
 
 TEST_MODULES = {m.name: m for m in TEST_MODULES}
