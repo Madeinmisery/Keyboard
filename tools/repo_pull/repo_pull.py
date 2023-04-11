@@ -90,6 +90,7 @@ class ChangeList(object):
 
         self.project = project
         self.number = change_list['_number']
+        self.branch = change_list['branch']
 
         self.fetch = fetch
 
@@ -142,10 +143,15 @@ def build_project_name_dir_dict(manifest_name):
     for project in manifest_xml.getElementsByTagName('project'):
         name = project.getAttribute('name')
         path = project.getAttribute('path')
+        revision = project.getAttribute('revision')
+
         if path:
             project_dirs[name] = path
         else:
             project_dirs[name] = name
+
+        if revision and path:
+            project_dirs[name + ':' + revision] = path
 
     return project_dirs
 
@@ -270,6 +276,9 @@ def _main_bash(args):
     for changes in change_list_groups:
         for change in changes:
             project_dir = project_dirs.get(change.project, change.project)
+            if change.branch:
+                project_dir = project_dirs.get(
+                    change.project + ':' + change.branch, project_dir)
             cmds = []
             cmds.append(['pushd', project_dir])
             cmds.extend(build_pull_commands(
@@ -291,7 +300,10 @@ def _do_pull_change_lists_for_project(task):
 
     for i, change in enumerate(changes):
         try:
-            cwd = project_dirs[change.project]
+            key = change.project
+            if change.branch:
+                key += ':' + change.branch
+            cwd = project_dirs.get(key, project_dirs[change.project])
         except KeyError:
             err_msg = 'error: project "{}" cannot be found in manifest.xml\n'
             err_msg = err_msg.format(change.project).encode('utf-8')
