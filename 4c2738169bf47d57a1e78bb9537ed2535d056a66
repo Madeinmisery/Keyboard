@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aeaaa091_b48b3b67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-04-12T16:39:30Z",
+      "side": 1,
+      "message": "CR+1 is the highest vote I have.  Please add either tyanh@ or hsinyichen@.",
+      "revId": "4c2738169bf47d57a1e78bb9537ed2535d056a66",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bb6249f_b18de0ba",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-04-12T16:39:30Z",
+      "side": 1,
+      "message": "Move to the end of the previous line.",
+      "range": {
+        "startLine": 290,
+        "startChar": 0,
+        "endLine": 290,
+        "endChar": 12
+      },
+      "revId": "4c2738169bf47d57a1e78bb9537ed2535d056a66",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
