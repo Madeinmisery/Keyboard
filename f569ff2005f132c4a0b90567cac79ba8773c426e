@@ -33,6 +33,24 @@
       "message": "Please create a class that derives from dict and define a method named find_directory:\n\n    class ProjectNameDirDict(dict):\n        def find_directory(self, name, revision, default_result\u003dNone):\n            try:\n                return self[(name, revision)]\n            except KeyError:\n                try:\n                    return self[name]\n                except KeyError:\n                    if default_result:\n                        return default_result\n                    raise\n\nand then call `.find_directory(...)` at the callsites.\n\nRegarding the dictionary key, I think it will be better to use tuple, i.e. (name, revision), as the key when a revision is available.",
       "revId": "f569ff2005f132c4a0b90567cac79ba8773c426e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1cbe860_ae20da14",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-12T16:35:45Z",
+      "side": 1,
+      "message": "That\u0027s a great suggestion! After see your suggestion, I also think using tuple is better and it makes the code simpler. Thanks.",
+      "parentUuid": "3c6a3bcf_5e033892",
+      "revId": "f569ff2005f132c4a0b90567cac79ba8773c426e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
