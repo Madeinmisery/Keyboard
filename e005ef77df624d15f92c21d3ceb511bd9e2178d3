@@ -16,6 +16,24 @@
       "message": "IMO, instead of naming this option as -y, naming this as --current-branch or --cbr will be more meaningful.",
       "revId": "e005ef77df624d15f92c21d3ceb511bd9e2178d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5339afa0_b4bd5258",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-12T16:37:04Z",
+      "side": 1,
+      "message": "I adopted `--current-branch` one. Thanks for reviewing this!",
+      "parentUuid": "e8a8470f_f5a0d5da",
+      "revId": "e005ef77df624d15f92c21d3ceb511bd9e2178d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
