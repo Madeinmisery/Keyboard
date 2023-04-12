@@ -16,6 +16,23 @@
       "message": "Hi, @loganchien@google.com. I\u0027m Junghoon from Silicon TPE team. We are going to utilize `repo_pull.py` from our own scripts. However, we have a case of one directory contains multiple repos with the same project, but different branches. Therefore, please let me send some small CLs to make the script can handle it. Also, if you are not someone who maintains this tool, I\u0027m sorry for sending you a review in advance. Thanks!",
       "revId": "f569ff2005f132c4a0b90567cac79ba8773c426e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c6a3bcf_5e033892",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2023-04-12T15:22:46Z",
+      "side": 1,
+      "message": "Please create a class that derives from dict and define a method named find_directory:\n\n    class ProjectNameDirDict(dict):\n        def find_directory(self, name, revision, default_result\u003dNone):\n            try:\n                return self[(name, revision)]\n            except KeyError:\n                try:\n                    return self[name]\n                except KeyError:\n                    if default_result:\n                        return default_result\n                    raise\n\nand then call `.find_directory(...)` at the callsites.\n\nRegarding the dictionary key, I think it will be better to use tuple, i.e. (name, revision), as the key when a revision is available.",
+      "revId": "f569ff2005f132c4a0b90567cac79ba8773c426e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
