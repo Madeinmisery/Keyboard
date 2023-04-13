@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53377391_0418606d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-13T15:44:41Z",
+      "side": 1,
+      "message": "Hi @tyanh@google.com, I\u0027m Junghoon from Silicon TPE team. We are going to utilize `repo_pull.py` from our scripts and need some patches on it. Could you please code review for us? Thanks!",
+      "revId": "6f3980e508103acf5d2636df7f0c9b00e1093dfc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
