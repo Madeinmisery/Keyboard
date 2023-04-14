@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "017701e4_a1772ee0",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-04-14T11:13:04Z",
+      "side": 1,
+      "message": "path or name",
+      "range": {
+        "startLine": 140,
+        "startChar": 27,
+        "endLine": 140,
+        "endChar": 49
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6de24c2_e5f34528",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-04-14T11:13:04Z",
+      "side": 1,
+      "message": "Replace try...catch with if...\ne.g.,\n\n```\nif (name, revision) in self._dirs:\n    return self._dirs[(name, revision)]\nif default_result:\n    return default_result\nreturn self._dirs[name]\n```",
+      "range": {
+        "startLine": 146,
+        "startChar": 8,
+        "endLine": 146,
+        "endChar": 12
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "640bae75_bdfdd6a0",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-04-14T11:13:04Z",
+      "side": 1,
+      "message": "Do you have an example where the default result is returned?",
+      "range": {
+        "startLine": 293,
+        "startChar": 47,
+        "endLine": 293,
+        "endChar": 61
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
