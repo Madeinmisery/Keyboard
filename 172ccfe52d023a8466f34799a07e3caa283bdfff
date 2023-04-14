@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34ed759a_60a40633",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-14T12:40:09Z",
+      "side": 1,
+      "message": "I can\u0027t understand why the presubmit test fails because it passed until patchset 4. Let me retry it.",
+      "revId": "172ccfe52d023a8466f34799a07e3caa283bdfff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

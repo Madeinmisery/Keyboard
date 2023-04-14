@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0689faea_ab3b0879",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-14T12:40:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "017701e4_a1772ee0",
+      "range": {
+        "startLine": 140,
+        "startChar": 27,
+        "endLine": 140,
+        "endChar": 49
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d6de24c2_e5f34528",
@@ -49,6 +73,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "fcdc7e49_bd2c2ba0",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-14T12:40:09Z",
+      "side": 1,
+      "message": "Thanks for the suggestion!",
+      "parentUuid": "d6de24c2_e5f34528",
+      "range": {
+        "startLine": 146,
+        "startChar": 8,
+        "endLine": 146,
+        "endChar": 12
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "640bae75_bdfdd6a0",
         "filename": "tools/repo_pull/repo_pull.py",
         "patchSetId": 5
@@ -60,6 +108,30 @@
       "writtenOn": "2023-04-14T11:13:04Z",
       "side": 1,
       "message": "Do you have an example where the default result is returned?",
+      "range": {
+        "startLine": 293,
+        "startChar": 47,
+        "endLine": 293,
+        "endChar": 61
+      },
+      "revId": "8991800265737e48fe917fa0a18621beec093260",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6594a674_0cff7e73",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1996690
+      },
+      "writtenOn": "2023-04-14T12:40:09Z",
+      "side": 1,
+      "message": "What I understood is that, unlike `repo_pull.py pull`, `repo_pull.py bash` just prints expected bash commands, but not actually executes them. Therefore, it doesn\u0027t have to be too strict on finding the repo path and if it fails to find the repo path of the change from the dict, it will use the project name of the change as default result instead of raising `KeyError`.\n\nFor example, even though the user passes some wrong change ID which is irrelevant to the repos in the source tree, it will still print a bash command pulling a change to the directory of the default result which doesn\u0027t exist actually.\n\nIn `repo_pull.py bash`, the same case will raise `KeyError` to prevent that situation. These are the original logics of this script even before my change. If you think `bash` and `pull` must have the same logic except whether it actually executes commands or not, I would remove `default_result` and make both of them raise `KeyError`. (Maybe it should be done from another CL though)\n\n@loganchien@google.com, if I have some misunderstanding or you have some opinions about this, please let me know. Thanks!",
+      "parentUuid": "640bae75_bdfdd6a0",
       "range": {
         "startLine": 293,
         "startChar": 47,
