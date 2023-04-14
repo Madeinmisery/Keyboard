@@ -16,6 +16,24 @@
       "message": "why do we need to discriminate signed and unsigned here. Can\u0027t we not treat them all as signed like protobuf, because we know the value bit representation would be unique after converted back to int64",
       "revId": "62081d11b4c60f62c042d028e31f4aca6aebb455",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91b1903b_71aa4fe3",
+        "filename": "vndk/tools/header-checker/src/repr/json/ir_dumper.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-04-14T03:22:40Z",
+      "side": 1,
+      "message": "Because I want the values in the JSON dumps to be consistent with the source code. For example, ~0u is converted to 4294967295 in JSON, and -1 is converted to -1.",
+      "parentUuid": "96ad245d_ad7e9df6",
+      "revId": "62081d11b4c60f62c042d028e31f4aca6aebb455",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
