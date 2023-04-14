@@ -16,6 +16,29 @@
       "message": "Hi @tyanh@google.com, I\u0027m Junghoon from Silicon TPE team. We are going to utilize `repo_pull.py` from our scripts and need some patches on it. Could you please code review for us? Thanks!",
       "revId": "6f3980e508103acf5d2636df7f0c9b00e1093dfc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48f24a1d_9d7aa5f8",
+        "filename": "tools/repo_pull/repo_pull.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1061057
+      },
+      "writtenOn": "2023-04-14T03:21:26Z",
+      "side": 1,
+      "message": "Would the following be better?\n```\n  key \u003d (name, revision) if revision else name\n  project_dirs[key] \u003d path if path else name\n```",
+      "range": {
+        "startLine": 158,
+        "startChar": 8,
+        "endLine": 164,
+        "endChar": 49
+      },
+      "revId": "6f3980e508103acf5d2636df7f0c9b00e1093dfc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
