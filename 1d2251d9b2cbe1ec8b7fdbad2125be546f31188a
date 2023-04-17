@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "543e9f49_28069543",
+        "filename": "vndk/snapshot/check_gpl_license.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-17T07:16:30Z",
+      "side": 1,
+      "message": "With the new snapshot zip file, I collected the licenses to module name instead of the prebuilt files. For the backward compatibility, we must support both cases.\nAs the `module_paths` map reads the prebuilt file name as a key, I add `.so` suffix if missing.",
+      "parentUuid": "f7be8730_672b8b4e",
+      "range": {
+        "startLine": 212,
+        "startChar": 0,
+        "endLine": 215,
+        "endChar": 34
+      },
+      "revId": "1d2251d9b2cbe1ec8b7fdbad2125be546f31188a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0a246c58_7136635c",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-04-17T06:22:22Z",
       "side": 1,
       "message": "find",
+      "range": {
+        "startLine": 93,
+        "startChar": 33,
+        "endLine": 93,
+        "endChar": 37
+      },
+      "revId": "1d2251d9b2cbe1ec8b7fdbad2125be546f31188a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a911ddc4_662312c2",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-17T07:16:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a246c58_7136635c",
       "range": {
         "startLine": 93,
         "startChar": 33,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3af479d6_c3104a5b",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-17T07:16:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af2f7cf1_dba4a356",
+      "range": {
+        "startLine": 100,
+        "startChar": 13,
+        "endLine": 100,
+        "endChar": 19
+      },
+      "revId": "1d2251d9b2cbe1ec8b7fdbad2125be546f31188a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "32386935_53a47184",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-04-17T06:22:22Z",
       "side": 1,
       "message": "find",
+      "range": {
+        "startLine": 290,
+        "startChar": 33,
+        "endLine": 290,
+        "endChar": 37
+      },
+      "revId": "1d2251d9b2cbe1ec8b7fdbad2125be546f31188a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0260d68e_eaf88af4",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-17T07:16:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32386935_53a47184",
       "range": {
         "startLine": 290,
         "startChar": 33,
