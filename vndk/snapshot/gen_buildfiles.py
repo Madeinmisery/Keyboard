@@ -566,7 +566,7 @@ class GenBuildFile(object):
                     break
             return notice
 
-        def get_arch_props(name, arch, src_paths):
+        def get_arch_props(name, arch, srcs_props):
             """Returns build rule for arch specific srcs.
 
             e.g.,
@@ -590,7 +590,7 @@ class GenBuildFile(object):
             Args:
               name: string, name of prebuilt module
               arch: string, VNDK snapshot arch (e.g. 'arm64')
-              src_paths: list of string paths, prebuilt source paths
+              srcs_props: dict, prebuilt source paths and corresponding flags
             """
             arch_props = '{ind}arch: {{\n'.format(ind=self.INDENT)
 
@@ -610,21 +610,13 @@ class GenBuildFile(object):
                 # Reame out/soong/.intermedaites to generated-headers for better readability.
                 return [d.replace(utils.SOONG_INTERMEDIATES_DIR, utils.GENERATED_HEADERS_DIR, 1) for d in dirs]
 
-            for src in sorted(src_paths):
+            for src in sorted(srcs_props.keys()):
                 include_dirs = ''
                 system_include_dirs = ''
                 flags = ''
                 relative_install_path = ''
-                prop_path = os.path.join(src_root, src+'.json')
-                props = dict()
-                try:
-                    with open(prop_path, 'r') as f:
-                        props = json.loads(f.read())
-                    os.unlink(prop_path)
-                except:
-                    # TODO(b/70312118): Parse from soong build system
-                    if name == 'android.hidl.memory@1.0-impl':
-                        props['RelativeInstallPath'] = 'hw'
+                min_sdk_version = ''
+                props = srcs_props[src]
                 if 'ExportedDirs' in props:
                     dirs = rename_generated_dirs(props['ExportedDirs'])
                     l = ['include/%s' % d for d in dirs]
@@ -646,6 +638,7 @@ class GenBuildFile(object):
                                '{system_include_dirs}'
                                '{flags}'
                                '{relative_install_path}'
+                               '{min_sdk_version}'
                                '{ind}{ind}{ind}srcs: ["{src}"],\n'
                                '{ind}{ind}}},\n').format(
                                   ind=self.INDENT,
@@ -655,6 +648,7 @@ class GenBuildFile(object):
                                   system_include_dirs=system_include_dirs,
                                   flags=flags,
                                   relative_install_path=relative_install_path,
+                                  min_sdk_version=min_sdk_version,
                                   src=src)
             arch_props += '{ind}}},\n'.format(ind=self.INDENT)
             return arch_props
@@ -701,11 +695,33 @@ class GenBuildFile(object):
                               vndk_private=vndk_private))
 
         notice = get_notice_file(srcs)
-        arch_props = get_arch_props(name, arch, src_paths)
+
+        srcs_props = dict()
+        for src in src_paths:
+            props = dict()
+            prop_path = os.path.join(src_root, src+'.json')
+            try:
+                with open(prop_path, 'r') as f:
+                    props = json.loads(f.read())
+                os.unlink(prop_path)
+            except:
+                # TODO(b/70312118): Parse from soong build system
+                if name == 'android.hidl.memory@1.0-impl':
+                    props['RelativeInstallPath'] = 'hw'
+            srcs_props[src] = props
+        arch_props = get_arch_props(name, arch, srcs_props)
 
         binder32bit = ''
         if is_binder32:
             binder32bit = '{ind}binder32bit: true,\n'.format(ind=self.INDENT)
+
+        min_sdk_version = ''
+        for src, props in srcs_props.items():
+            if 'MinSdkVersion' in props:
+                min_sdk_version = '{ind}min_sdk_version: "{ver}",\n'.format(
+                    ind=self.INDENT,
+                    ver=props['MinSdkVersion'])
+                break
 
         return ('vndk_prebuilt_shared {{\n'
                 '{ind}name: "{name}",\n'
@@ -716,6 +732,7 @@ class GenBuildFile(object):
                 '{product_available}'
                 '{vndk_props}'
                 '{notice}'
+                '{min_sdk_version}'
                 '{arch_props}'
                 '}}\n'.format(
                     ind=self.INDENT,
@@ -726,6 +743,7 @@ class GenBuildFile(object):
                     product_available=product_available,
                     vndk_props=vndk_props,
                     notice=notice,
+                    min_sdk_version=min_sdk_version,
                     arch_props=arch_props))
 
 
