@@ -113,6 +113,7 @@ JSON_TO_BP = {
     'CrateName': 'crate_name',
     'Prebuilt': 'prebuilt',
     'Overrides': 'overrides',
+    'MinSdkVersion': 'min_sdk_version',
 }
 
 SANITIZER_VARIANT_PROPS = {
@@ -388,9 +389,11 @@ def build_props(install_dir):
                         del prop[k]
                 prop = {'name': module_name, sanitizer_type: prop}
 
+            '''
             notice_path = 'NOTICE_FILES/' + module_name + '.txt'
             if os.path.exists(os.path.join(bp_dir, notice_path)):
                 prop['notice'] = notice_path
+            '''
 
             variation_dict = props[target_arch][variation]
             if not module_name in variation_dict:
