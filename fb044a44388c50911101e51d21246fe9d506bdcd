@@ -45,6 +45,30 @@
       },
       "revId": "fb044a44388c50911101e51d21246fe9d506bdcd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcc9c8e0_5ccb88b0",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-04-18T07:51:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6de3a0f_8ac4bbb2",
+      "range": {
+        "startLine": 618,
+        "startChar": 16,
+        "endLine": 618,
+        "endChar": 31
+      },
+      "revId": "fb044a44388c50911101e51d21246fe9d506bdcd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
