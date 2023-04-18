@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32872a7f_1f79dfe6",
+        "filename": "vendor_snapshot/update.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-18T05:56:57Z",
+      "side": 1,
+      "message": "I am working on this to be replaced.",
+      "range": {
+        "startLine": 392,
+        "startChar": 11,
+        "endLine": 392,
+        "endChar": 15
+      },
+      "revId": "fb044a44388c50911101e51d21246fe9d506bdcd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6de3a0f_8ac4bbb2",
+        "filename": "vndk/snapshot/gen_buildfiles.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-04-18T05:56:57Z",
+      "side": 1,
+      "message": "We may remove this from the arch props.",
+      "range": {
+        "startLine": 618,
+        "startChar": 16,
+        "endLine": 618,
+        "endChar": 31
+      },
+      "revId": "fb044a44388c50911101e51d21246fe9d506bdcd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
