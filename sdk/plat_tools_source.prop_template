@@ -1,2 +1,6 @@
 Pkg.UserSrc=false
+<<<<<<< PATCH SET (5d0d92 Package version bump for U.)
+Pkg.Revision=34.0.3
+=======
 Pkg.Revision=34.0.1
+>>>>>>> BASE      (02b386 Merge "Add min_sdk_version prop to snapshots")
