@@ -22,6 +22,29 @@
       },
       "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c94cb1d_41b99b7b",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1944405
+      },
+      "writtenOn": "2023-05-10T23:04:34Z",
+      "side": 1,
+      "message": "Not a blocker.\n\nNot that performance is a req here, but would it be faster to go Vec \u003e HashSet \u003e Vec to get rid of duplicates? Or even declaring modules as a HashSet and then transform to Vec just before line 382?",
+      "range": {
+        "startLine": 379,
+        "startChar": 4,
+        "endLine": 380,
+        "endChar": 20
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
