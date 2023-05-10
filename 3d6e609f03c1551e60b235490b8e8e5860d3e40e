@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cbf292d0_1f8c3a79",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-05-10T23:12:32Z",
+      "side": 1,
+      "message": "I\u0027m also curious - if there are more differences in the future, if this could cause an issue.\n\nShould upstream avoid the extra version? How can we make sure to detect duplicates in the future? - for instance, should we put a list of the ones that are allowed in cargo_embargo.json to be explicit, or is it expected to work forever?",
+      "parentUuid": "95473f86_033d8c17",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4c94cb1d_41b99b7b",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 1
@@ -61,6 +85,30 @@
       "writtenOn": "2023-05-10T23:04:34Z",
       "side": 1,
       "message": "Not a blocker.\n\nNot that performance is a req here, but would it be faster to go Vec \u003e HashSet \u003e Vec to get rid of duplicates? Or even declaring modules as a HashSet and then transform to Vec just before line 382?",
+      "range": {
+        "startLine": 379,
+        "startChar": 4,
+        "endLine": 380,
+        "endChar": 20
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "823eecfa_fccf1569",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-05-10T23:12:32Z",
+      "side": 1,
+      "message": "amdahl\u0027s law, but likely no, given the size of modules, the number of duplicates, avoiding the extra allocations and copy will dominate heavily.",
+      "parentUuid": "4c94cb1d_41b99b7b",
       "range": {
         "startLine": 379,
         "startChar": 4,
