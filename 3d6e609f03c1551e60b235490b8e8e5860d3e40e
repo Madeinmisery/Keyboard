@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "857aae91_8bbfd3b5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-05-10T23:10:27Z",
+      "side": 1,
+      "message": "I got a bit lazy in fully root causing it. Here is an example diff where just a couple hashes are different\n\n\n```\nRunning `rustc --crate-name audio_streams --edition\u003d2021 common/audio_streams/src/audio_streams.rs --error-format\u003djson --json\u003ddiagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit\u003ddep-info,metadata,link -C embed-bitcode\u003dno -C debuginfo\u003d2 -C [-metadata\u003d5dede635fb0d9f4b-]{+metadata\u003d62f2376873b5d66f+} -C [-extra-filename\u003d-5dede635fb0d9f4b-]{+extra-filename\u003d-62f2376873b5d66f+} --out-dir /usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps --target x86_64-unknown-linux-gnu -C incremental\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/incremental -L dependency\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps -L dependency\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/debug/deps --extern async_trait\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/debug/deps/libasync_trait-45af3b9f8ddfe400.so --extern [-futures\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libfutures-dd83b9516aba5d01.rmeta-]{+futures\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libfutures-47ac4424a355b0a5.rmeta+} --extern remain\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/debug/deps/libremain-1b908600c147c663.so --extern serde\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libserde-cd36fded0dacddc4.rmeta --extern thiserror\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libthiserror-b5d36b1e7bc0d94c.rmeta \u0027-Aclippy::missing_safety_doc\u0027 \u0027-Aclippy::bool_assert_comparison\u0027 \u0027-Aclippy::cast_lossless\u0027 \u0027-Aclippy::cognitive_complexity\u0027 \u0027-Aclippy::collapsible_if\u0027 \u0027-Aclippy::enum_variant_names\u0027 \u0027-Aclippy::identity_op\u0027 \u0027-Aclippy::len_without_is_empty\u0027 \u0027-Aclippy::len_zero\u0027 \u0027-Aclippy::match_bool\u0027 \u0027-Aclippy::match_wild_err_arm\u0027 \u0027-Aclippy::module_inception\u0027 \u0027-Aclippy::needless_bool\u0027 \u0027-Aclippy::new_without_default\u0027 \u0027-Aclippy::new-ret-no-self\u0027 \u0027-Aclippy::or_fun_call\u0027 \u0027-Aclippy::result-unit-err\u0027 \u0027-Aclippy::should_implement_trait\u0027 \u0027-Aclippy::single_char_pattern\u0027 \u0027-Aclippy::too_many_arguments\u0027 \u0027-Aclippy::trivially_copy_pass_by_ref\u0027 \u0027-Aclippy::type_complexity\u0027 \u0027-Aclippy::unreadable_literal\u0027 \u0027-Aclippy::useless_let_if_seq\u0027 \u0027-Aclippy::useless_transmute\u0027`\n```\n\ne.g.\n\n\u003e [-metadata\u003d5dede635fb0d9f4b-]{+metadata\u003d62f2376873b5d66f+}\n\nand\n\n\u003e `--extern [-futures\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libfutures-dd83b9516aba5d01.rmeta-]{+futures\u003d/usr/local/google/home/fmayle/z/aosp2/external/crosvm/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libfutures-47ac4424a355b0a5.rmeta+}\n\nI\u0027d guess there is some real diff somewhere if you follow the trail but it gets filtered out early on in processing (e.g. maybe a 3p crate).",
+      "parentUuid": "95473f86_033d8c17",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4c94cb1d_41b99b7b",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 1
