@@ -98,6 +98,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c5ba230d_049fad9f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-05-11T00:55:39Z",
+      "side": 1,
+      "message": "I\u0027m fine with this CL btw, but what do you think if we log the duplicates? At least that way, if a new issue happens, it would be clear if this caused it.",
+      "parentUuid": "74fec112_973f8aa7",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4c94cb1d_41b99b7b",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 1
