@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "74fec112_973f8aa7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-05-11T00:07:42Z",
+      "side": 1,
+      "message": "OK, I looked into it some more.\n\nThis page explains how the new resolver works: https://doc.rust-lang.org/cargo/reference/resolver.html#feature-resolver-version-2 and there is motivation at https://rust-lang.github.io/rfcs/2957-cargo-features2.html.\n\nThe relevant part is that they no longer unify the builds for normal and `dev-dependencies`. `cargo_embargo` makes multiple cargo invocations, `cargo build` and `cargo build --tests`. With the old resolver, the second one would mostly reuse the work from the first, but now it recompiles many of the crates slightly differently. That is the source of all the duplicates at the moment.\n\nSome ideas:\n\n1. Switch back to the old resolver\n    * We\u0027d be diverging from upstream subtly, so seems like a bad idea. Probably can\u0027t convince upstream to switch back because some of the old behavior does seem bad (features you thought were only enabled for tests are also enabled in prod).\n2. Try to massage away all the duplicates upstream\n    * The second link suggested using `cargo tree -d` to view them.\n    * Lot of work and probably will get pushback, especially since we\u0027d probably need to mess up upstream 3p deps too.\n3. Only ignore duplicates when they are from different `cargo` commands\n4. Ignore all duplicates (aka this CL)\n\nI\u0027m leaning towards sticking with this CL.",
+      "parentUuid": "cbf292d0_1f8c3a79",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4c94cb1d_41b99b7b",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 1
