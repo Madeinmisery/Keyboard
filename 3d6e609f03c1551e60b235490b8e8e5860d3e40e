@@ -189,6 +189,30 @@
       },
       "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaa38039_be24b61d",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-05-15T22:53:21Z",
+      "side": 1,
+      "message": "also, the size of the array is very small in this use case. for small N, arrays are often faster than hash maps",
+      "parentUuid": "823eecfa_fccf1569",
+      "range": {
+        "startLine": 379,
+        "startChar": 4,
+        "endLine": 380,
+        "endChar": 20
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
