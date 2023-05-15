@@ -120,6 +120,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28a80818_b9b0135e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-05-15T22:50:20Z",
+      "side": 1,
+      "message": "I\u0027m worried it would just be noise that confuses people and makes them more likely to miss more useful warnings/errors in the output.\n\nWhen this script doesn\u0027t work, you usually need to closely inspect the `rustc` calls and maybe some of the intermediate representations anyways, then reason about how it would work with the various heuristics in code. This isn\u0027t going to be the worst of the heuristics.",
+      "parentUuid": "c5ba230d_049fad9f",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3d6e609f03c1551e60b235490b8e8e5860d3e40e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c94cb1d_41b99b7b",
