@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20e1e7b1_afffc15c",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-05-16T07:06:19Z",
+      "side": 1,
+      "message": "--delete",
+      "range": {
+        "startLine": 202,
+        "startChar": 29,
+        "endLine": 202,
+        "endChar": 30
+      },
+      "revId": "c60ffb3cf697441b8854387011de59ade58af4ca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
