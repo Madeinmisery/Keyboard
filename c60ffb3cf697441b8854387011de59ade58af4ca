@@ -22,6 +22,30 @@
       },
       "revId": "c60ffb3cf697441b8854387011de59ade58af4ca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e60e405_d134583a",
+        "filename": "tools/repo_pull/repo_review.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1128729
+      },
+      "writtenOn": "2023-05-17T03:45:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20e1e7b1_afffc15c",
+      "range": {
+        "startLine": 202,
+        "startChar": 29,
+        "endLine": 202,
+        "endChar": 30
+      },
+      "revId": "c60ffb3cf697441b8854387011de59ade58af4ca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
