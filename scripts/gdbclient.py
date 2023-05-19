@@ -96,8 +96,13 @@ def parse_args():
         choices=["lldb", "vscode-lldb"],
         help=("Set up lldb-server and port forwarding. Prints commands or " +
               ".vscode/launch.json configuration needed to connect the debugging " +
-              "client to the server. 'vscode' with llbd and 'vscode-lldb' both " +
+              "client to the server. 'vscode' with lldb and 'vscode-lldb' both " +
               "require the 'vadimcn.vscode-lldb' extension."))
+    parser.add_argument(
+        "--vscode-launch-props", default=None,
+        dest="vscode_launch_props",
+        help=("JSON with extra properties to add to launch parameters when using " +
+              "vscode-lldb forwarding."))
 
     parser.add_argument(
         "--env", nargs=1, action="append", metavar="VAR=VALUE",
@@ -242,7 +247,43 @@ def handle_switches(args, sysroot):
 
     return (binary_file, pid, run_cmd)
 
-def generate_vscode_lldb_script(root, sysroot, binary_name, port, solib_search_path):
+
+def merge_launch_dict(base, to_add):
+    """Merges two dicts describing VSCode launch.json properties: base and
+    to_add. Base is modified in-place with items from to_add.
+    Items from to_add that are not present in base are inserted. Items that are
+    present are merged following these rules:
+        - Lists are merged with to_add elements appended to the end of base
+          list. Single elements are treated as lists if either base or to_add
+          item is a list.
+        - Dicts are merged recursively. Only a dict can be merged with a dict.
+        - Other present values in base get overwritten with values from to_add.
+
+    The reason for these rules is that merging in new values should prefer to
+    expand the existing set instead of overwriting where possible.
+    """
+    if to_add is None:
+        return
+
+    for key, val in to_add.items():
+        if key not in base:
+            base[key] = val
+        else:
+            if isinstance(base[key], dict) != isinstance(val, dict):
+                raise Exception(f'Cannot merge dict and non-dict at key={key}')
+
+            if isinstance(base[key], list):
+                base[key] += val if isinstance(val, list) else [val]
+            elif isinstance(val, list):
+                base[key] = [base[key]] + val
+            elif isinstance(base[key], dict):
+                merge_launch_dict(base[key], val)
+            else:
+                base[key] = val
+
+
+def generate_vscode_lldb_script(root, sysroot, binary_name, port,
+                                solib_search_path, extra_props):
     # TODO It would be nice if we didn't need to copy this or run the
     #      lldbclient.py program manually. Doing this would probably require
     #      writing a vscode extension or modifying an existing one.
@@ -260,6 +301,7 @@ def generate_vscode_lldb_script(root, sysroot, binary_name, port, solib_search_p
                                  "target modules search-paths add / {}/".format(sysroot)],
         "processCreateCommands": ["gdb-remote {}".format(str(port))]
     }
+    merge_launch_dict(res, extra_props)
     return json.dumps(res, indent=4)
 
 def generate_lldb_script(root, sysroot, binary_name, port, solib_search_path):
@@ -276,7 +318,7 @@ def generate_lldb_script(root, sysroot, binary_name, port, solib_search_path):
     return '\n'.join(commands)
 
 
-def generate_setup_script(debugger_path, sysroot, linker_search_dir, binary_file, is64bit, port, debugger, connect_timeout=5):
+def generate_setup_script(debugger_path, sysroot, linker_search_dir, binary_file, is64bit, port, debugger, vscode_launch_props, connect_timeout=5):
     # Generate a setup script.
     root = os.environ["ANDROID_BUILD_TOP"]
     symbols_dir = os.path.join(sysroot, "system", "lib64" if is64bit else "lib")
@@ -292,7 +334,7 @@ def generate_setup_script(debugger_path, sysroot, linker_search_dir, binary_file
 
     if debugger == "vscode-lldb":
         return generate_vscode_lldb_script(
-            root, sysroot, binary_file.name, port, solib_search_path)
+            root, sysroot, binary_file.name, port, solib_search_path, vscode_launch_props)
     elif debugger == 'lldb':
         return generate_lldb_script(
             root, sysroot, binary_file.name, port, solib_search_path)
@@ -329,6 +371,12 @@ def do_main():
 
     # Fetch binary for -p, -n.
     binary_file, pid, run_cmd = handle_switches(args, sysroot)
+
+    vscode_launch_props = None
+    if args.vscode_launch_props:
+        if args.setup_forwarding != "vscode-lldb":
+            raise Exception('vscode_launch_props requires --setup-forwarding=vscode-lldb')
+        vscode_launch_props = json.loads(args.vscode_launch_props)
 
     with binary_file:
         if sys.platform.startswith("linux"):
@@ -380,7 +428,8 @@ def do_main():
                                                binary_file=binary_file,
                                                is64bit=is64bit,
                                                port=args.port,
-                                               debugger=debugger)
+                                               debugger=debugger,
+                                               vscode_launch_props=vscode_launch_props)
 
         if not args.setup_forwarding:
             # Print a newline to separate our messages from the GDB session.

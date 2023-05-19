@@ -15,3 +15,10 @@
 package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
+
+python_library_host {
+    name: "gdbrunner",
+    srcs: [
+        "gdbrunner/gdbrunner/__init__.py",
+    ],
+}
