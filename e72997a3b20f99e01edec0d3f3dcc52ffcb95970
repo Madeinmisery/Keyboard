@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "148722b1_1bc0c3c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-05-22T14:56:09Z",
+      "side": 1,
+      "message": "(defer to the others for the implementation, but conceptually sgtm...)",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
