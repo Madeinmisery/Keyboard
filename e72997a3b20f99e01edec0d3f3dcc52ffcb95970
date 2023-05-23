@@ -16,6 +16,188 @@
       "message": "(defer to the others for the implementation, but conceptually sgtm...)",
       "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3433a1c4_8ea57145",
+        "filename": "python-packages/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "This should probably go down one directory into gdbrunner?",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc96d0ca_f33c42fb",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "Include type annotations for new code please (I think you may be the first, but someone has to be 😊). Looks like this would be `def merge_launch_dict(base: dict[str, Any], to_add: dict[str, Any] | None) -\u003e None`?",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b9afb71_f7d5e818",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "Bug? If `base[key]` is a `dict` and `val` is a `list`, what should happen?\n\n(should the check on L272 just enforce that the types are identical? what\u0027s the use case for merging dissimilar dicts?)",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a3c2694_938eca9d",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "Don\u0027t raise bare Exception. That can never be safely caught (that `except` would also catch `KeyboardInterrupt` and `sys.exit`). Use `RuntimeError`.",
+      "range": {
+        "startLine": 378,
+        "startChar": 18,
+        "endLine": 378,
+        "endChar": 27
+      },
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e706e649_ac9b041f",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "Wrong copyright header. Should be Android, not Google.\n\n```\n#\n# Copyright (C) 2023 The Android Open Source Project\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#      http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\n```",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5174a12_0667b607",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "(Each of these should be `-\u003e None`. Why? mypy will ignore any function that has zero annotations)",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00312132_c22b9476",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "As I mentioned in the implementation, this behavior looks very odd to me. It\u0027d be worth a code comment explaining what the use case is for this.",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "091f1b7e_784c2bb6",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "Hmm. Order presumably matters for some inputs? Users don\u0027t have any way to prepend (or worse, interleave). Will that cause problems for the data this is expected to handle?",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72354ea9_0c8d4985",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "typo: merging",
+      "range": {
+        "startLine": 74,
+        "startChar": 13,
+        "endLine": 74,
+        "endChar": 21
+      },
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e384609_97cd75b5",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-23T21:07:11Z",
+      "side": 1,
+      "message": "nit: mismatched indentation. Prefer 4 spaces.",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
