@@ -1,2 +1,6 @@
 Pkg.UserSrc=false
+<<<<<<< HEAD   (7dca0b Merge "Merge branch android10-qpr3-release" into android10-g)
 Pkg.Revision=28.0.2
+=======
+Pkg.Revision=34.0.4
+>>>>>>> CHANGE (f83881 Package version bump to 34.0.4)
