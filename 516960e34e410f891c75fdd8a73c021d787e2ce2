@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa1f42a0_aa324a47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T22:07:08Z",
+      "side": 1,
+      "message": "Hello reviewers. I had a comment on another review to add type annotations to new code in this file. So I decided to add annotations to all the code and fixed a couple very minor things in process. Hope this works.",
+      "revId": "516960e34e410f891c75fdd8a73c021d787e2ce2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
