@@ -52,6 +52,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eee829f0_fb562dee",
+        "filename": "python-packages/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3433a1c4_8ea57145",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dc96d0ca_f33c42fb",
@@ -69,6 +87,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bdb3437_265887e6",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc96d0ca_f33c42fb",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7b9afb71_f7d5e818",
@@ -82,6 +118,24 @@
       "writtenOn": "2023-05-23T21:07:11Z",
       "side": 1,
       "message": "Bug? If `base[key]` is a `dict` and `val` is a `list`, what should happen?\n\n(should the check on L272 just enforce that the types are identical? what\u0027s the use case for merging dissimilar dicts?)",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bc8f19b_abb50280",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "We only care about three categories: `list`, `dict`, everything else. If the user wants to replace e.g. a string with an int that\u0027s up to them - validity of this depends on the meaning of the individual element and we don\u0027t have that sort of info here. VSCode will complain if anything is wrong. The check now makes sure these categories match",
+      "parentUuid": "7b9afb71_f7d5e818",
       "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -109,6 +163,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db5e18c3_81004a33",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a3c2694_938eca9d",
+      "range": {
+        "startLine": 378,
+        "startChar": 18,
+        "endLine": 378,
+        "endChar": 27
+      },
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e706e649_ac9b041f",
@@ -122,6 +200,24 @@
       "writtenOn": "2023-05-23T21:07:11Z",
       "side": 1,
       "message": "Wrong copyright header. Should be Android, not Google.\n\n```\n#\n# Copyright (C) 2023 The Android Open Source Project\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#      http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\n```",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10c0a2af_e9e98a5c",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e706e649_ac9b041f",
       "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -143,6 +239,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "40460ef1_8ec53692",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f5174a12_0667b607",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00312132_c22b9476",
@@ -160,6 +274,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3bae97a_4f4a4a10",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "This is no more valid, I\u0027ve updated test cases.\n\nIt was originally just a convenience thing - it was annoying to wrap a single extra item you want to add into a list. But I can see that it can be confusing and it\u0027s not such a big difference anyway.",
+      "parentUuid": "00312132_c22b9476",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "091f1b7e_784c2bb6",
@@ -173,6 +305,24 @@
       "writtenOn": "2023-05-23T21:07:11Z",
       "side": 1,
       "message": "Hmm. Order presumably matters for some inputs? Users don\u0027t have any way to prepend (or worse, interleave). Will that cause problems for the data this is expected to handle?",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "173f0d14_814d671e",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "So we merge launch configs for VSCode. What you\u0027d get from gdbclient is a JSON snippet with properties, the most interesting of which are source map (which is a dict) and varous init commands (including process and target create commands). The users may want to add new elements (such as new source mappings or new init steps) but I don\u0027t really know of a use case to interleave or prepend commands to gdbclient\u0027s output.\n\nI\u0027ve added a comment to explain it. Maybe in the future we\u0027d want to prepend/delete/interleave elements.",
+      "parentUuid": "091f1b7e_784c2bb6",
       "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -200,6 +350,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e8c5095_3da208af",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72354ea9_0c8d4985",
+      "range": {
+        "startLine": 74,
+        "startChar": 13,
+        "endLine": 74,
+        "endChar": 21
+      },
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e384609_97cd75b5",
@@ -213,6 +387,24 @@
       "writtenOn": "2023-05-23T21:07:11Z",
       "side": 1,
       "message": "nit: mismatched indentation. Prefer 4 spaces.",
+      "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "358acd00_66a963dd",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-05-31T20:52:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e384609_97cd75b5",
       "revId": "e72997a3b20f99e01edec0d3f3dcc52ffcb95970",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
