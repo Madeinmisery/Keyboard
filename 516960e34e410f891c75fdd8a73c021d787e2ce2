@@ -16,6 +16,23 @@
       "message": "Hello reviewers. I had a comment on another review to add type annotations to new code in this file. So I decided to add annotations to all the code and fixed a couple very minor things in process. Hope this works.",
       "revId": "516960e34e410f891c75fdd8a73c021d787e2ce2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "295f3ddb_1c763f52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-06-01T22:53:48Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "516960e34e410f891c75fdd8a73c021d787e2ce2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
