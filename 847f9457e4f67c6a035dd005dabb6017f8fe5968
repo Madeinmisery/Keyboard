@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8abe39f0_22c4805f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-06-09T15:35:26Z",
+      "side": 1,
+      "message": "Seems like some type annotations are causing problems with the presubmit test runner:\n```\nFailed to parse the python logs: Test execution failed. Please ensure that verbosity of output is high enough to be parsed. Stderr: Traceback (most recent call last):\n  File \"/tmp/Soong.python_2mvywzl_/__soong_entrypoint_redirector__.py\", line 6, in \u003cmodule\u003e\n    runpy._run_module_as_main(\"gdbclient_test\", alter_argv\u003dFalse)\n  File \"/usr/local/lib/python3.7/runpy.py\", line 193, in _run_module_as_main\n    \"__main__\", mod_spec)\n  File \"/usr/local/lib/python3.7/runpy.py\", line 85, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/Soong.python_2mvywzl_/gdbclient_test.py\", line 17, in \u003cmodule\u003e\n    import gdbclient\n  File \"/tmp/Soong.python_2mvywzl_/gdbclient.py\", line 47, in \u003cmodule\u003e\n    def get_lldb_path(toolchain_path: str) -\u003e str | None:\nTypeError: unsupported operand type(s) for |: \u0027type\u0027 and \u0027NoneType\u0027\n```",
+      "revId": "847f9457e4f67c6a035dd005dabb6017f8fe5968",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
