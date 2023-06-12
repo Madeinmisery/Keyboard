@@ -26,7 +26,7 @@ cc_library_shared {
     // All of the source files that we will compile.
     srcs: ["native.cpp"],
     // All of the shared libraries we link against.
-    shared_libs: ["liblog"],
+    shared_libs: ["liblog", "libfuse"],
     // No static libraries.
     static_libs: [],
     cflags: [

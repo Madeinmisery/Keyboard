@@ -32,4 +32,5 @@ android_app {
     dex_preopt: {
         enabled: false,
     },
+    use_embedded_native_libs: true,
 }
