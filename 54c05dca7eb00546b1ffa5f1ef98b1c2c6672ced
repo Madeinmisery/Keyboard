@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09ab9870_864f1906",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T09:29:23Z",
+      "side": 1,
+      "message": "${OUT_DIR}/build_time_results.txt to be specific",
+      "range": {
+        "startLine": 24,
+        "startChar": 57,
+        "endLine": 24,
+        "endChar": 79
+      },
+      "revId": "54c05dca7eb00546b1ffa5f1ef98b1c2c6672ced",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
