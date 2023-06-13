@@ -22,6 +22,30 @@
       },
       "revId": "54c05dca7eb00546b1ffa5f1ef98b1c2c6672ced",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "570c73e7_5b503233",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T09:49:49Z",
+      "side": 1,
+      "message": "Added the details about the output directory.",
+      "parentUuid": "09ab9870_864f1906",
+      "range": {
+        "startLine": 24,
+        "startChar": 57,
+        "endLine": 24,
+        "endChar": 79
+      },
+      "revId": "54c05dca7eb00546b1ffa5f1ef98b1c2c6672ced",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
