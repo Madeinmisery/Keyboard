@@ -95,6 +95,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7e671d76_61229ac9",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-06-13T06:56:52Z",
+      "side": 1,
+      "message": "Just to check, should we force disable installclean if this value is not set?",
+      "range": {
+        "startLine": 118,
+        "startChar": 6,
+        "endLine": 118,
+        "endChar": 28
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "891ae546_5c7345dd",
         "filename": "treble/combined_build_test.sh",
         "patchSetId": 1
@@ -134,6 +157,29 @@
         "startChar": 0,
         "endLine": 139,
         "endChar": 46
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1663b0df_17a2c10e",
+        "filename": "treble/read_build_trace_gz.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-06-13T06:56:52Z",
+      "side": 1,
+      "message": "nit: What about define self._~~ variables as local variables?",
+      "range": {
+        "startLine": 34,
+        "startChar": 13,
+        "endLine": 34,
+        "endChar": 19
       },
       "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
