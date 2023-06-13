@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fb7da04_0f96e561",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "RESULTS",
+      "range": {
+        "startLine": 24,
+        "startChar": 57,
+        "endLine": 24,
+        "endChar": 63
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b5e89f7_7791a801",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "could be `-n`",
+      "range": {
+        "startLine": 77,
+        "startChar": 6,
+        "endLine": 77,
+        "endChar": 10
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64edf64b_696524e6",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 82,
+        "startChar": 6,
+        "endLine": 82,
+        "endChar": 11
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a04e1b1f_5a3f5842",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "why isn\u0027t result_out an absolute path? This is confusing...",
+      "range": {
+        "startLine": 98,
+        "startChar": 18,
+        "endLine": 98,
+        "endChar": 29
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "891ae546_5c7345dd",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "consider indenting",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 55
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9882d84_8a82731e",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-13T06:45:50Z",
+      "side": 1,
+      "message": "consider indenting",
+      "range": {
+        "startLine": 128,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 46
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
