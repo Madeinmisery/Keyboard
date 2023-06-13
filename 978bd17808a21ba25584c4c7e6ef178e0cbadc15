@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13444af2_3d8d51bd",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0fb7da04_0f96e561",
+      "range": {
+        "startLine": 24,
+        "startChar": 57,
+        "endLine": 24,
+        "endChar": 63
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b5e89f7_7791a801",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-06-13T06:45:50Z",
       "side": 1,
       "message": "could be `-n`",
+      "range": {
+        "startLine": 77,
+        "startChar": 6,
+        "endLine": 77,
+        "endChar": 10
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2ee4dec_156914a8",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b5e89f7_7791a801",
       "range": {
         "startLine": 77,
         "startChar": 6,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a816178b_6d951871",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64edf64b_696524e6",
+      "range": {
+        "startLine": 82,
+        "startChar": 6,
+        "endLine": 82,
+        "endChar": 11
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a04e1b1f_5a3f5842",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-06-13T06:45:50Z",
       "side": 1,
       "message": "why isn\u0027t result_out an absolute path? This is confusing...",
+      "range": {
+        "startLine": 98,
+        "startChar": 18,
+        "endLine": 98,
+        "endChar": 29
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbd61b8a_c052c431",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Agreed. This is to create the file to the same dist directory. To avoid the confusion, it would be better to pre-define the file name instead of allowing users to set the file name manually.",
+      "parentUuid": "a04e1b1f_5a3f5842",
       "range": {
         "startLine": 98,
         "startChar": 18,
@@ -116,6 +212,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2c2573e_15cccc5e",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "This is a test configuration if we need a \"build a - installclean - build a\" target. If it is not set, the test will not run the installclean test build.",
+      "parentUuid": "7e671d76_61229ac9",
+      "range": {
+        "startLine": 118,
+        "startChar": 6,
+        "endLine": 118,
+        "endChar": 28
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "891ae546_5c7345dd",
@@ -129,6 +249,30 @@
       "writtenOn": "2023-06-13T06:45:50Z",
       "side": 1,
       "message": "consider indenting",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 55
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90701f00_aa89258e",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "891ae546_5c7345dd",
       "range": {
         "startLine": 119,
         "startChar": 0,
@@ -162,6 +306,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c76be419_0eff93d8",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9882d84_8a82731e",
+      "range": {
+        "startLine": 128,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 46
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1663b0df_17a2c10e",
@@ -175,6 +343,30 @@
       "writtenOn": "2023-06-13T06:56:52Z",
       "side": 1,
       "message": "nit: What about define self._~~ variables as local variables?",
+      "range": {
+        "startLine": 34,
+        "startChar": 13,
+        "endLine": 34,
+        "endChar": 19
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfe60db1_c34a08eb",
+        "filename": "treble/read_build_trace_gz.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-13T07:50:10Z",
+      "side": 1,
+      "message": "The class is not for used from outside. But I added underscore to represent the variables as intermediate data. Python convention prefers the single underscore. (go/pystyle#naming-conventions)",
+      "parentUuid": "1663b0df_17a2c10e",
       "range": {
         "startLine": 34,
         "startChar": 13,
