@@ -236,6 +236,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "73b2f1d3_7e2a4a9f",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-06-13T11:30:22Z",
+      "side": 1,
+      "message": "installclean can be triggered from soong_ui if variable is not set. Anyway this is not a big blocker now.",
+      "parentUuid": "c2c2573e_15cccc5e",
+      "range": {
+        "startLine": 118,
+        "startChar": 6,
+        "endLine": 118,
+        "endChar": 28
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "891ae546_5c7345dd",
@@ -367,6 +391,30 @@
       "side": 1,
       "message": "The class is not for used from outside. But I added underscore to represent the variables as intermediate data. Python convention prefers the single underscore. (go/pystyle#naming-conventions)",
       "parentUuid": "1663b0df_17a2c10e",
+      "range": {
+        "startLine": 34,
+        "startChar": 13,
+        "endLine": 34,
+        "endChar": 19
+      },
+      "revId": "978bd17808a21ba25584c4c7e6ef178e0cbadc15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0331bf1_eed8ba1b",
+        "filename": "treble/read_build_trace_gz.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-06-13T11:30:22Z",
+      "side": 1,
+      "message": "Still nit, but self._variable is naming of the private class variable AFAIK. I just was curious because those values were not used from other class functions. Not critical, just for the readability.",
+      "parentUuid": "bfe60db1_c34a08eb",
       "range": {
         "startLine": 34,
         "startChar": 13,
