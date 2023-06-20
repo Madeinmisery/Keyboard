@@ -33,6 +33,23 @@
       "message": "heh, thanks for (a) testing lldb on riscv64 before we did and (b) sending us the enablement patch!\n\n+pirama, in case he\u0027d rather wait until the prebuilts are available before we actually merge this. (i don\u0027t care personally; i\u0027d happily merge this as \"strictly less broken\" than the current state :-) )",
       "revId": "c434deca4ebdcd0032024a3dcc73aeef25115c43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc547e16_924d30c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-06-20T22:50:13Z",
+      "side": 1,
+      "message": "Let\u0027s merge - no particular reason to block on the toolchain update.",
+      "revId": "c434deca4ebdcd0032024a3dcc73aeef25115c43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
