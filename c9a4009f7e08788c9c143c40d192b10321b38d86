@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4fc0587_95f533d3",
+        "filename": "vndk/tools/header-checker/src/repr/json/ir_dumper.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-06-21T14:49:32Z",
+      "side": 1,
+      "message": "nit: you don\u0027t really need to call .fail() explicitly. You can evaluate the ofstream object as a boolean expression https://en.cppreference.com/w/cpp/io/basic_ios/operator_bool",
+      "range": {
+        "startLine": 392,
+        "startChar": 10,
+        "endLine": 395,
+        "endChar": 21
+      },
+      "revId": "c9a4009f7e08788c9c143c40d192b10321b38d86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b9b73c4a_6d47f3d7",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-06-21T14:49:32Z",
+      "side": 1,
+      "message": "should this throw an error if |output| is not file?",
+      "range": {
+        "startLine": 316,
+        "startChar": 8,
+        "endLine": 316,
+        "endChar": 39
+      },
+      "revId": "c9a4009f7e08788c9c143c40d192b10321b38d86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
