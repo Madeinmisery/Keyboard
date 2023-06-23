@@ -37,6 +37,7 @@ aconfig_declarations {
 java_aconfig_library {
     name: "aconfig_demo_flags_lib",
     aconfig_declarations: "aconfig_demo_flags",
+    libs: ["aconfig-annotations-lib"],
 }
 
 java_library {
