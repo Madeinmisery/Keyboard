@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d62fa23_dfd68d2b",
+        "filename": "vndk/tools/header-checker/src/repr/json/ir_dumper.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-06-26T03:03:06Z",
+      "side": 1,
+      "message": "It\u0027s equivalent to `if (!output_file.write(...))`\nI think `fail()` is more readable.",
+      "parentUuid": "c4fc0587_95f533d3",
+      "range": {
+        "startLine": 392,
+        "startChar": 10,
+        "endLine": 395,
+        "endChar": 21
+      },
+      "revId": "c9a4009f7e08788c9c143c40d192b10321b38d86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b9b73c4a_6d47f3d7",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-06-21T14:49:32Z",
       "side": 1,
       "message": "should this throw an error if |output| is not file?",
+      "range": {
+        "startLine": 316,
+        "startChar": 8,
+        "endLine": 316,
+        "endChar": 39
+      },
+      "revId": "c9a4009f7e08788c9c143c40d192b10321b38d86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "921f3016_fb682d0c",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-06-26T03:03:06Z",
+      "side": 1,
+      "message": "All callers expect this function to create the file. I let it throw FileNotFoundError.",
+      "parentUuid": "b9b73c4a_6d47f3d7",
       "range": {
         "startLine": 316,
         "startChar": 8,
