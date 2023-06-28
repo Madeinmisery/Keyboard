@@ -22,6 +22,30 @@
       },
       "revId": "6d08991cae2872adc529517eaedec3943852c52b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8e5f129_31a32310",
+        "filename": "vndk/snapshot/collect_licenses.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-28T07:13:19Z",
+      "side": 1,
+      "message": "No. We only expect text files with utf-8 for the notice files. Other formats or binaries can be ignored.",
+      "parentUuid": "1315d652_c7af94c9",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 22
+      },
+      "revId": "6d08991cae2872adc529517eaedec3943852c52b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
