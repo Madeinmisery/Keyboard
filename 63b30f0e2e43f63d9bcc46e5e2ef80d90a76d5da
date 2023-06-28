@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45d6d9af_01177186",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-06-28T13:35:40Z",
+      "side": 1,
+      "message": "You may use `set -e` instead.",
+      "revId": "63b30f0e2e43f63d9bcc46e5e2ef80d90a76d5da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
