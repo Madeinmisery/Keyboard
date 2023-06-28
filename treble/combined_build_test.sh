@@ -85,7 +85,7 @@ fi
 
 run_command() {
     if [[ -z "${dry_run}" ]]; then
-        $1
+        $1 || { echo "FAILED: ${1}"; exit 1; }
     else
         echo "$1"
     fi
