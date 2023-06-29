@@ -22,6 +22,30 @@
       },
       "revId": "740345b38f19cdadb3fcdceec9802e99ccd3cf79",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40460312_4deee800",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-06-29T14:17:58Z",
+      "side": 0,
+      "message": "That works!\nThanks!",
+      "parentUuid": "3c32af72_57849513",
+      "range": {
+        "startLine": 89,
+        "startChar": 8,
+        "endLine": 89,
+        "endChar": 10
+      },
+      "revId": "740345b38f19cdadb3fcdceec9802e99ccd3cf79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
