@@ -82,11 +82,19 @@ base_command="build/soong/soong_ui.bash --make-mode"
 if [[ -n "${dist_dir}" ]]; then
     base_command="${base_command} DIST_DIR=${dist_dir} dist"
 fi
+ninja_args="-d explain"
 
 run_command() {
-    echo "Running: ${1}"
-    if [[ -z "${dry_run}" ]]; then
-        $1
+    if [[ -n "${2}" ]]; then
+        echo "Running: ${1} NINJA_ARGS=${2}"
+        if [[ -z "${dry_run}" ]]; then
+            ${1} NINJA_ARGS="${2}"
+        fi
+    else
+        echo "Running: ${1}"
+        if [[ -z "${dry_run}" ]]; then
+            ${1}
+        fi
     fi
 }
 
@@ -119,7 +127,7 @@ if [[ -n "${installclean}" ]]; then
     echo "Installclean..."
     run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} installclean"
     echo "Build the same initial build..."
-    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} ${goals}" "${ninja_args}"
     get_build_trace "build_${target}_installclean.trace.gz"
 fi
 
@@ -132,7 +140,7 @@ if [[ -n "${alter_target}" ]]; then
         run_command "rm -f ${dist_dir}/${target}*"
     fi
     echo "Build the alternative target..."
-    run_command "${base_command} TARGET_PRODUCT=${alter_target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${alter_target} TARGET_BUILD_VARIANT=${variant} ${goals}" "${ninja_args}"
     get_build_trace "build_${alter_target}_ab.trace.gz"
 
     echo "Installclean for the primary target..."
@@ -142,7 +150,7 @@ if [[ -n "${alter_target}" ]]; then
         run_command "rm -f ${dist_dir}/${alter_target}*"
     fi
     echo "Build the primary target again..."
-    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} ${goals}" "${ninja_args}"
     get_build_trace "build_${target}_aba.trace.gz"
 fi
 
