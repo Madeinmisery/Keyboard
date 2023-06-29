@@ -86,7 +86,7 @@ fi
 run_command() {
     echo "Running: ${1}"
     if [[ -z "${dry_run}" ]]; then
-        $1
+        ${1}
     fi
 }
 
@@ -114,12 +114,14 @@ fi
 echo "Initial build..."
 run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} ${goals}"
 
+export NINJA_ARGS="-d explain"
+
 if [[ -n "${installclean}" ]]; then
     # Run the same build after installclean
     echo "Installclean..."
     run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} installclean"
     echo "Build the same initial build..."
-    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} ${goals}"
     get_build_trace "build_${target}_installclean.trace.gz"
 fi
 
@@ -132,7 +134,7 @@ if [[ -n "${alter_target}" ]]; then
         run_command "rm -f ${dist_dir}/${target}*"
     fi
     echo "Build the alternative target..."
-    run_command "${base_command} TARGET_PRODUCT=${alter_target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${alter_target} TARGET_BUILD_VARIANT=${variant} ${goals}"
     get_build_trace "build_${alter_target}_ab.trace.gz"
 
     echo "Installclean for the primary target..."
@@ -142,7 +144,7 @@ if [[ -n "${alter_target}" ]]; then
         run_command "rm -f ${dist_dir}/${alter_target}*"
     fi
     echo "Build the primary target again..."
-    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} NINJA_ARGS=\"-d explain\" ${goals}"
+    run_command "${base_command} TARGET_PRODUCT=${target} TARGET_BUILD_VARIANT=${variant} ${goals}"
     get_build_trace "build_${target}_aba.trace.gz"
 fi
 
