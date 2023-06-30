@@ -16,12 +16,12 @@ android_app {
         "jsr330",
     ],
     optimize: {
-        enabled: true,
+        enabled: false,
         proguard_compatibility: false,
-        shrink: true,
+        shrink: false,
         optimize: false,
         obfuscate: false,
-        shrink_resources: true,
+        shrink_resources: false,
     },
 
     plugins: ["dagger2-compiler"]
