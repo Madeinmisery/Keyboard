@@ -117,6 +117,81 @@ def rewrite_misc_info(args_part_imgs, unpacked_part_imgs, lpmake_path,
   return partition_names
 
 
+class SuperImageRepacker:
+  def __init__(self, super_img, ota_tools):
+    self.super_img = super_img
+    self.ota_tools = ota_tools
+    self.temp_dirs = []
+    self.temp_files = []
+
+  def unzip_temp_ota_tools_dir(self):
+    print("Unzip OTA tools.")
+    temp_ota_tools_dir = tempfile.mkdtemp(prefix="ota_tools")
+    self.temp_dirs.append(temp_ota_tools_dir)
+    with zipfile.ZipFile(self.ota_tools) as ota_tools_zip:
+      unzip_ota_tools(ota_tools_zip, temp_ota_tools_dir)
+    self.ota_tools = temp_ota_tools_dir
+
+  def unsparse_super_img(self):
+    print("Convert to unsparsed super image.")
+    simg2img_path = os.path.join(self.ota_tools, BIN_DIR_NAME, "simg2img")
+    with tempfile.NamedTemporaryFile(
+        mode="wb", prefix="super", suffix=".img",
+        delete=False) as raw_super_img:
+      self.temp_files.append(raw_super_img.name)
+      subprocess.check_call(
+          [simg2img_path, self.super_img, raw_super_img.name])
+    return raw_super_img.name
+
+  def unpack_super_img(self, super_img):
+    print("Unpack super image.")
+    unpacked_part_imgs = dict()
+    lpunpack_path = os.path.join(self.ota_tools, BIN_DIR_NAME, "lpunpack")
+    unpack_dir = tempfile.mkdtemp(prefix="lpunpack")
+    self.temp_dirs.append(unpack_dir)
+    subprocess.check_call([lpunpack_path, super_img, unpack_dir])
+    for file_name in os.listdir(unpack_dir):
+      if file_name.endswith(IMG_FILE_EXT):
+        part = file_name[:-len(IMG_FILE_EXT)]
+        unpacked_part_imgs[part] = os.path.join(unpack_dir, file_name)
+    return unpacked_part_imgs
+
+  def create_misc_info(self, org_misc_info, args_part_imgs,
+                       unpacked_part_imgs):
+    print("Create temporary misc info.")
+    lpmake_path = os.path.join(self.ota_tools, BIN_DIR_NAME, "lpmake")
+    with tempfile.NamedTemporaryFile(
+        mode="w", prefix="misc_info", suffix=".txt",
+        delete=False) as misc_info_file:
+      self.temp_files.append(misc_info_file.name)
+      misc_info_file_path = misc_info_file.name
+      with open(org_misc_info, "r") as misc_info:
+        part_list = rewrite_misc_info(args_part_imgs, unpacked_part_imgs,
+                                      lpmake_path, misc_info, misc_info_file)
+
+    # Check that all input partitions are in the partition list.
+    parts_not_found = args_part_imgs.keys() - set(part_list)
+    if parts_not_found:
+      raise ValueError("Cannot find partitions in misc info: " +
+                       " ".join(parts_not_found))
+    return misc_info_file_path
+
+  def build_super_img(self, misc_info_file_path):
+    print("Build super image.")
+    build_super_image_path = os.path.join(self.ota_tools, BIN_DIR_NAME,
+                                          "build_super_image")
+    subprocess.check_call([build_super_image_path, misc_info_file_path,
+                           self.super_img])
+
+  def clean(self):
+    print(self.temp_dirs)
+    print(self.temp_files)
+    for temp_dir in self.temp_dirs:
+      shutil.rmtree(temp_dir, ignore_errors=True)
+    for temp_file in self.temp_files:
+      os.remove(temp_file)
+
+
 def main():
   parser = argparse.ArgumentParser(
     description="This script is for test infrastructure to mix images in a "
@@ -161,69 +236,21 @@ def main():
   if args.temp_dir:
     tempfile.tempdir = args.temp_dir
 
-  temp_dirs = []
-  temp_files = []
+  repacker = SuperImageRepacker(args.super_img, args.ota_tools)
   try:
-    if os.path.isdir(args.ota_tools):
-      ota_tools_dir = args.ota_tools
-    else:
-      print("Unzip OTA tools.")
-      temp_ota_tools_dir = tempfile.mkdtemp(prefix="ota_tools")
-      temp_dirs.append(temp_ota_tools_dir)
-      with zipfile.ZipFile(args.ota_tools) as ota_tools_zip:
-        unzip_ota_tools(ota_tools_zip, temp_ota_tools_dir)
-      ota_tools_dir = temp_ota_tools_dir
+    if not os.path.isdir(repacker.ota_tools):
+      repacker.unzip_temp_ota_tools_dir()
 
-    if not is_sparse_image(args.super_img):
-      super_img_path = args.super_img
-    else:
-      print("Convert to unsparsed super image.")
-      simg2img_path = os.path.join(ota_tools_dir, BIN_DIR_NAME, "simg2img")
-      with tempfile.NamedTemporaryFile(
-          mode="wb", prefix="super", suffix=".img",
-          delete=False) as raw_super_img:
-        temp_files.append(raw_super_img.name)
-        super_img_path = raw_super_img.name
-        subprocess.check_call([simg2img_path, args.super_img, super_img_path])
+    super_img = repacker.super_img
+    if is_sparse_image(super_img):
+      super_img = repacker.unsparse_super_img()
 
-    print("Unpack super image.")
-    unpacked_part_imgs = dict()
-    lpunpack_path = os.path.join(ota_tools_dir, BIN_DIR_NAME, "lpunpack")
-    unpack_dir = tempfile.mkdtemp(prefix="lpunpack")
-    temp_dirs.append(unpack_dir)
-    subprocess.check_call([lpunpack_path, super_img_path, unpack_dir])
-    for file_name in os.listdir(unpack_dir):
-      if file_name.endswith(IMG_FILE_EXT):
-        part = file_name[:-len(IMG_FILE_EXT)]
-        unpacked_part_imgs[part] = os.path.join(unpack_dir, file_name)
-
-    print("Create temporary misc info.")
-    lpmake_path = os.path.join(ota_tools_dir, BIN_DIR_NAME, "lpmake")
-    with tempfile.NamedTemporaryFile(
-        mode="w", prefix="misc_info", suffix=".txt",
-        delete=False) as misc_info_file:
-      temp_files.append(misc_info_file.name)
-      misc_info_file_path = misc_info_file.name
-      with open(args.misc_info, "r") as misc_info:
-        part_list = rewrite_misc_info(args_part_imgs, unpacked_part_imgs,
-                                      lpmake_path, misc_info, misc_info_file)
-
-    # Check that all input partitions are in the partition list.
-    parts_not_found = args_part_imgs.keys() - set(part_list)
-    if parts_not_found:
-      raise ValueError("Cannot find partitions in misc info: " +
-                       " ".join(parts_not_found))
-
-    print("Build super image.")
-    build_super_image_path = os.path.join(ota_tools_dir, BIN_DIR_NAME,
-                                          "build_super_image")
-    subprocess.check_call([build_super_image_path, misc_info_file_path,
-                           args.super_img])
+    unpacked_part_imgs = repacker.unpack_super_img(super_img)
+    rewritten_misc_info = repacker.create_misc_info(
+        args.misc_info, args_part_imgs, unpacked_part_imgs)
+    repacker.build_super_img(rewritten_misc_info)
   finally:
-    for temp_dir in temp_dirs:
-      shutil.rmtree(temp_dir, ignore_errors=True)
-    for temp_file in temp_files:
-      os.remove(temp_file)
+    repacker.clean()
 
 
 if __name__ == "__main__":
