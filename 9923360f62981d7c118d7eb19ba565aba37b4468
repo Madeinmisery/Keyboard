@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3150e3f1_ee0f2422",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "```suggestion\n\"\"\"Mix shared system images with a super image and disable vbmeta.\n```",
+      "range": {
+        "startLine": 17,
+        "startChar": 7,
+        "endLine": 17,
+        "endChar": 10
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "350d3ce3_2bdb6ba6",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "SSI stands for Shared System Image(s). How about renaming to mix_ssi.py?",
+      "range": {
+        "startLine": 20,
+        "startChar": 37,
+        "endLine": 20,
+        "endChar": 51
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20408c86_2f6d579c",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "Please follow the style of repack_super_image.py to use double quotes.",
+      "range": {
+        "startLine": 45,
+        "startChar": 33,
+        "endLine": 45,
+        "endChar": 34
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8643665f_557a31c8",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "The script can automatically determine the file type. The two vendor arguments can be merged. The dir contains not only vendor images but a complete super.img. I suggest renaming it to \"--device-image-dir\".",
+      "range": {
+        "startLine": 48,
+        "startChar": 34,
+        "endLine": 48,
+        "endChar": 52
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9371932b_59386cdc",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "Why not support img zip?",
+      "range": {
+        "startLine": 55,
+        "startChar": 33,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57c4fa36_eb448be8",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "Unzip only system.img, system_ext.img, and product.img.",
+      "range": {
+        "startLine": 74,
+        "startChar": 37,
+        "endLine": 74,
+        "endChar": 45
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da81c907_b3d0bb3e",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "Use zipfile module.",
+      "range": {
+        "startLine": 74,
+        "startChar": 10,
+        "endLine": 74,
+        "endChar": 15
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a1ebcbb_21b3c5d8",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "Should this be args.output_dir?",
+      "range": {
+        "startLine": 134,
+        "startChar": 17,
+        "endLine": 134,
+        "endChar": 58
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aba95059_abd58319",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T11:13:56Z",
+      "side": 1,
+      "message": "repack_super_image.py --ota-tools accepts a directory, which is convenient for the users who have $ANDROID_HOST_OUT.",
+      "range": {
+        "startLine": 148,
+        "startChar": 13,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
