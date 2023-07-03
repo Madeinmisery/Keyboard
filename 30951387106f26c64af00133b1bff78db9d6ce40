@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4459839d_1de449ee",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-03T03:09:23Z",
+      "side": 1,
+      "message": "The method calls are complicated.\n\nSuggestion:\n\n```\ndef repack_super_image(ota_tools_dir, misc_info_path, super_img_path, part_imgs):\n  ...\n\n\ndef main():\n  ...\n  temp_ota_tools_dir \u003d None\n  try:\n    if os.path.isdir(args.ota_tools):\n      ota_tools_dir \u003d args.ota_tools\n    else:\n      print(\"Unzip OTA tools.\")\n      temp_ota_tools_dir \u003d tempfile.mkdtemp(prefix\u003d\"ota_tools\")\n      unzip_ota_tools(args.ota_tools, temp_ota_tools_dir)\n      ota_tools_dir \u003d temp_ota_tools_dir\n      ...\n  finally:\n    if temp_ota_tools_dir:\n      shutil.rmtree(temp_ota_tools_dir)\n```",
+      "range": {
+        "startLine": 240,
+        "startChar": 4,
+        "endLine": 240,
+        "endChar": 45
+      },
+      "revId": "30951387106f26c64af00133b1bff78db9d6ce40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
