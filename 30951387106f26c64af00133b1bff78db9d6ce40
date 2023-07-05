@@ -22,6 +22,30 @@
       },
       "revId": "30951387106f26c64af00133b1bff78db9d6ce40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29fc3b4a_c26a2a9d",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:08:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4459839d_1de449ee",
+      "range": {
+        "startLine": 240,
+        "startChar": 4,
+        "endLine": 240,
+        "endChar": 45
+      },
+      "revId": "30951387106f26c64af00133b1bff78db9d6ce40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
