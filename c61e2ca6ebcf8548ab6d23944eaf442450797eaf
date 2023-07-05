@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab7a6a69_8e4efeda",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "img zip",
+      "range": {
+        "startLine": 50,
+        "startChar": 44,
+        "endLine": 50,
+        "endChar": 51
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb82ac06_201d3961",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "target_files zip",
+      "range": {
+        "startLine": 56,
+        "startChar": 44,
+        "endLine": 56,
+        "endChar": 51
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe361e31_42eabb25",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "Can you change it to \"--ota-tools\" which is consistent with repack_super_image?",
+      "range": {
+        "startLine": 58,
+        "startChar": 25,
+        "endLine": 58,
+        "endChar": 33
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fe7ac32_e285da9b",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "The script deletes all temp files. Can this line be removed?",
+      "range": {
+        "startLine": 113,
+        "startChar": 2,
+        "endLine": 113,
+        "endChar": 31
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b3b5be5_07766e00",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "If args.device_image_files is a dir and args.output_dir is not None, the script outputs to device_image_files. It\u0027s probably not the user\u0027s intention.\n\nYou may need to pass output_path as a parameter to repack_super_image function.",
+      "range": {
+        "startLine": 126,
+        "startChar": 6,
+        "endLine": 126,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a5228ff_a24d3630",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "If any variable is None, this script shows \"None does not exist.\" The user does not know which parameter is missing.",
+      "range": {
+        "startLine": 137,
+        "startChar": 30,
+        "endLine": 137,
+        "endChar": 66
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

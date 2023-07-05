@@ -422,6 +422,30 @@
       },
       "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ac596ee_1498359e",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T05:06:49Z",
+      "side": 1,
+      "message": "The OTA tools in ANDROID_HOST_OUT are dependencies of the images, but the zip is not. The developers do not usually build the zip. Besides, it is more efficient to skip unzipping.",
+      "parentUuid": "906d18d2_ab3d9da8",
+      "range": {
+        "startLine": 148,
+        "startChar": 13,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
