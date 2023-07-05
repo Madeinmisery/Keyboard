@@ -72,6 +72,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7c0f86d3_66ea6b13",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-07-05T16:30:13Z",
+      "side": 1,
+      "message": "some SSI doesn\u0027t have system_ext, product partition as separate image.(they are embedded in system.img). In this case, we need to pass empty value for the partitions to repack_super_image.py(for example, product\u003d\"\" system_ext\u003d\"\")\n\nCC-ed @kiyoungkim for this case.",
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2fe7ac32_e285da9b",
         "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
         "patchSetId": 6
