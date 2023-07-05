@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8bbeb001_0c6f2b87",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-05T17:05:43Z",
+      "side": 1,
+      "message": "--vscode-launch-props",
+      "range": {
+        "startLine": 471,
+        "startChar": 17,
+        "endLine": 471,
+        "endChar": 36
+      },
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "caf1303f_423bc617",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-05T17:05:43Z",
+      "side": 1,
+      "message": "--vscode-launch-file",
+      "range": {
+        "startLine": 478,
+        "startChar": 17,
+        "endLine": 478,
+        "endChar": 35
+      },
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "448a0cbb_e2e2a23c",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-05T17:05:43Z",
+      "side": 1,
+      "message": "should this `input()` just be moved out of the `if` rather than duplicated?",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27b4d02b_e5cecdbf",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-05T17:05:43Z",
+      "side": 1,
+      "message": "(not a regression, but `|sort` these imports?)",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
