@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74b765a4_a203ee5e",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3150e3f1_ee0f2422",
+      "range": {
+        "startLine": 17,
+        "startChar": 7,
+        "endLine": 17,
+        "endChar": 10
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "350d3ce3_2bdb6ba6",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-03T11:13:56Z",
       "side": 1,
       "message": "SSI stands for Shared System Image(s). How about renaming to mix_ssi.py?",
+      "range": {
+        "startLine": 20,
+        "startChar": 37,
+        "endLine": 20,
+        "endChar": 51
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6daadfdb_b558ef27",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "I renamed it to mix_ssi_with_device_image.py",
+      "parentUuid": "350d3ce3_2bdb6ba6",
       "range": {
         "startLine": 20,
         "startChar": 37,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c29ef5a0_9ff7afaf",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20408c86_2f6d579c",
+      "range": {
+        "startLine": 45,
+        "startChar": 33,
+        "endLine": 45,
+        "endChar": 34
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8643665f_557a31c8",
@@ -93,6 +165,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9862ce9f_fcd98cea",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done, I merged the two parameters into `--device-image-files`, which can be either a directory or a zipfile.",
+      "parentUuid": "8643665f_557a31c8",
+      "range": {
+        "startLine": 48,
+        "startChar": 34,
+        "endLine": 48,
+        "endChar": 52
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9371932b_59386cdc",
@@ -106,6 +202,30 @@
       "writtenOn": "2023-07-03T11:13:56Z",
       "side": 1,
       "message": "Why not support img zip?",
+      "range": {
+        "startLine": 55,
+        "startChar": 33,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee71526b_e28e0d2d",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "I expect to extract system.img, system_ext.img and product.img, img zip may only have super.img.",
+      "parentUuid": "9371932b_59386cdc",
       "range": {
         "startLine": 55,
         "startChar": 33,
@@ -162,6 +282,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b84a1aa4_82da57af",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da81c907_b3d0bb3e",
+      "range": {
+        "startLine": 74,
+        "startChar": 10,
+        "endLine": 74,
+        "endChar": 15
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdf48c81_694b270d",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57c4fa36_eb448be8",
+      "range": {
+        "startLine": 74,
+        "startChar": 37,
+        "endLine": 74,
+        "endChar": 45
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7a1ebcbb_21b3c5d8",
@@ -185,6 +353,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "520004d7_0c80a207",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1ebcbb_21b3c5d8",
+      "range": {
+        "startLine": 134,
+        "startChar": 17,
+        "endLine": 134,
+        "endChar": 58
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aba95059_abd58319",
@@ -198,6 +390,30 @@
       "writtenOn": "2023-07-03T11:13:56Z",
       "side": 1,
       "message": "repack_super_image.py --ota-tools accepts a directory, which is convenient for the users who have $ANDROID_HOST_OUT.",
+      "range": {
+        "startLine": 148,
+        "startChar": 13,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "906d18d2_ab3d9da8",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-05T03:26:28Z",
+      "side": 1,
+      "message": "I was thinking about using $ANDROID_PRODUCT_OUT/otatools.zip",
+      "parentUuid": "aba95059_abd58319",
       "range": {
         "startLine": 148,
         "startChar": 13,
