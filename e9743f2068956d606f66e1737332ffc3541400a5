@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e24ef33_a257e83c",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-05T03:31:34Z",
+      "side": 1,
+      "message": "\"Raw\" and \"unsparse\" are equivalent. Could you rename one of the variables?",
+      "range": {
+        "startLine": 135,
+        "startChar": 8,
+        "endLine": 135,
+        "endChar": 48
+      },
+      "revId": "e9743f2068956d606f66e1737332ffc3541400a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
