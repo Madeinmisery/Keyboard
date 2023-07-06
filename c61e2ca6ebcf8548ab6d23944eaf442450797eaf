@@ -501,6 +501,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b228a60e_a11d873c",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T04:26:23Z",
+      "side": 1,
+      "message": "Good to know. Thx 😊",
+      "parentUuid": "55f6fa24_af9f42b5",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 14
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3facfe81_6ae2eda1",
@@ -562,6 +586,30 @@
       "side": 1,
       "message": "Kiyoung, do you mean continuous builds or tests?\n\nFor builds, merge_target_files might be a better choice.\nFor tests, it is difficult to make the test infrastructure call this script before launching virtual devices. In the infrastructure, the image preparation logic is implemented in acloud and fetch_cvd. Modifying the two tools would be easier.\n\nTherefore, I don\u0027t think this script needs to zip the images.",
       "parentUuid": "3facfe81_6ae2eda1",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a745a4b5_b25fb818",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T04:26:23Z",
+      "side": 1,
+      "message": "I thought this script would be used for automated build / test in the Keystone CI.\n@jeongik@google.com for any comments.\n\nAnyway, I\u0027m fine to start with current approach first, and then update if needed.",
+      "parentUuid": "17cf235f_b078401b",
       "range": {
         "startLine": 158,
         "startChar": 47,
