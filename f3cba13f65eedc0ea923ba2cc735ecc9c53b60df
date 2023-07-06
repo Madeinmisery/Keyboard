@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d9d1f0a_13c103cb",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-06T04:06:47Z",
+      "side": 1,
+      "message": "```suggestion\n      super_img \u003d unzip_super_images(args.device_image_files, output_dir)\n```",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 79
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "439f5592_199f4dec",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-06T04:06:47Z",
+      "side": 1,
+      "message": "```suggestion\n                       part_imgs, output_path):\n```",
+      "range": {
+        "startLine": 121,
+        "startChar": 34,
+        "endLine": 121,
+        "endChar": 49
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa3ed7f5_c5d0ed76",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-06T04:06:47Z",
+      "side": 1,
+      "message": "```suggestion\n    repack_super_image(ota_tools_dir, args.misc_info, args.super_img,\n                       args_part_imgs, args.super_img)\n```",
+      "range": {
+        "startLine": 236,
+        "startChar": 4,
+        "endLine": 237,
+        "endChar": 38
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
