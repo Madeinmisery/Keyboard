@@ -666,6 +666,30 @@
       },
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "672d15ee_443a7a02",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T08:23:56Z",
+      "side": 1,
+      "message": "Let\u0027s discuss this from separated thread. I think this script is good to go.",
+      "parentUuid": "7e777643_53a193d5",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
