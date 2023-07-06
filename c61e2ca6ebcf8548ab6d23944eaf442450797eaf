@@ -618,6 +618,30 @@
       },
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72d03f7b_27997a88",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2023-07-06T04:35:32Z",
+      "side": 1,
+      "message": "Yeah, I thought this script is used for not only manual test, but also automated test. For merge_target_files, it didn\u0027t work at that moment. @kiyoungkim@google.com, is it worth retrying merge_target_files? I think it might work now because we fixed fstab.",
+      "parentUuid": "a745a4b5_b25fb818",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
