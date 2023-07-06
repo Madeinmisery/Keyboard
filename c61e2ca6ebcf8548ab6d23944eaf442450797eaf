@@ -690,6 +690,30 @@
       },
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b38fc8ce_7e8860f4",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T08:29:08Z",
+      "side": 1,
+      "message": "Thanks, I also feel like using merge_target_files would be good. I can try this later.",
+      "parentUuid": "672d15ee_443a7a02",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
