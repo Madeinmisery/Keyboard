@@ -71,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f5b9f23_2d3e35c2",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T05:55:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "439f5592_199f4dec",
+      "range": {
+        "startLine": 121,
+        "startChar": 34,
+        "endLine": 121,
+        "endChar": 49
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fa3ed7f5_c5d0ed76",
@@ -84,6 +108,30 @@
       "writtenOn": "2023-07-06T04:06:47Z",
       "side": 1,
       "message": "```suggestion\n    repack_super_image(ota_tools_dir, args.misc_info, args.super_img,\n                       args_part_imgs, args.super_img)\n```",
+      "range": {
+        "startLine": 236,
+        "startChar": 4,
+        "endLine": 237,
+        "endChar": 38
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "080c1969_fd1ddd3a",
+        "filename": "gsi/repack_super_image/repack_super_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T05:55:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa3ed7f5_c5d0ed76",
       "range": {
         "startLine": 236,
         "startChar": 4,
