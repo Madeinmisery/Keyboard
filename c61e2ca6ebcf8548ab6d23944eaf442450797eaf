@@ -72,6 +72,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "00b1f293_c394e99d",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T01:22:48Z",
+      "side": 1,
+      "message": "What happens if file does not exist in the zip file?",
+      "range": {
+        "startLine": 75,
+        "startChar": 6,
+        "endLine": 75,
+        "endChar": 59
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7c0f86d3_66ea6b13",
         "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
         "patchSetId": 6
@@ -83,6 +106,24 @@
       "writtenOn": "2023-07-05T16:30:13Z",
       "side": 1,
       "message": "some SSI doesn\u0027t have system_ext, product partition as separate image.(they are embedded in system.img). In this case, we need to pass empty value for the partitions to repack_super_image.py(for example, product\u003d\"\" system_ext\u003d\"\")\n\nCC-ed @kiyoungkim for this case.",
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab8ecb3b_e1ad6caf",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T01:22:48Z",
+      "side": 1,
+      "message": "Yes we need to assume that system_ext and product partition may be embedded in the system image.",
+      "parentUuid": "7c0f86d3_66ea6b13",
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -105,6 +146,29 @@
         "startChar": 2,
         "endLine": 113,
         "endChar": 31
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1ebb84f_5f083724",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T01:22:48Z",
+      "side": 1,
+      "message": "I think it would be better to have a common term between vendor and device.",
+      "range": {
+        "startLine": 123,
+        "startChar": 4,
+        "endLine": 123,
+        "endChar": 19
       },
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
@@ -151,6 +215,52 @@
         "startChar": 30,
         "endLine": 137,
         "endChar": 66
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "579c8a98_272ac5ee",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T01:22:48Z",
+      "side": 1,
+      "message": "Is it ok not to replace vbmeta image for other groups, such as vbmeta_system.img?",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 14
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3facfe81_6ae2eda1",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-07-06T01:22:48Z",
+      "side": 1,
+      "message": "Can we create archives (such as img.zip) to use this output directly with CI?",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
       },
       "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
