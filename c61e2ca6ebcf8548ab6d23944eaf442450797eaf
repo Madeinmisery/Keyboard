@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5beb6826_0d5c902d",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ab7a6a69_8e4efeda",
+      "range": {
+        "startLine": 50,
+        "startChar": 44,
+        "endLine": 50,
+        "endChar": 51
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fb82ac06_201d3961",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-05T05:06:49Z",
       "side": 1,
       "message": "target_files zip",
+      "range": {
+        "startLine": 56,
+        "startChar": 44,
+        "endLine": 56,
+        "endChar": 51
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "092fe27f_4e702277",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb82ac06_201d3961",
       "range": {
         "startLine": 56,
         "startChar": 44,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97a85812_3c815b1c",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe361e31_42eabb25",
+      "range": {
+        "startLine": 58,
+        "startChar": 25,
+        "endLine": 58,
+        "endChar": 33
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00b1f293_c394e99d",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-07-06T01:22:48Z",
       "side": 1,
       "message": "What happens if file does not exist in the zip file?",
+      "range": {
+        "startLine": 75,
+        "startChar": 6,
+        "endLine": 75,
+        "endChar": 59
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7890b402_f594dbf7",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "It raises KeyError. I didn\u0027t notice that we might now have some images. Now the case is addressed.",
+      "parentUuid": "00b1f293_c394e99d",
       "range": {
         "startLine": 75,
         "startChar": 6,
@@ -128,6 +224,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c7f2856_33479ed0",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done, mix_ssi_with_device_image.py now assumes that system.img always exists, while system_ext.img and product.img are optional.",
+      "parentUuid": "ab8ecb3b_e1ad6caf",
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fe7ac32_e285da9b",
@@ -141,6 +255,30 @@
       "writtenOn": "2023-07-05T05:06:49Z",
       "side": 1,
       "message": "The script deletes all temp files. Can this line be removed?",
+      "range": {
+        "startLine": 113,
+        "startChar": 2,
+        "endLine": 113,
+        "endChar": 31
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac0f2632_83011c7c",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fe7ac32_e285da9b",
       "range": {
         "startLine": 113,
         "startChar": 2,
@@ -174,6 +312,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab482ca1_04f34c80",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1ebb84f_5f083724",
+      "range": {
+        "startLine": 123,
+        "startChar": 4,
+        "endLine": 123,
+        "endChar": 19
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b3b5be5_07766e00",
@@ -197,6 +359,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b06152d_7afd8782",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b3b5be5_07766e00",
+      "range": {
+        "startLine": 126,
+        "startChar": 6,
+        "endLine": 126,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a5228ff_a24d3630",
@@ -210,6 +396,30 @@
       "writtenOn": "2023-07-05T05:06:49Z",
       "side": 1,
       "message": "If any variable is None, this script shows \"None does not exist.\" The user does not know which parameter is missing.",
+      "range": {
+        "startLine": 137,
+        "startChar": 30,
+        "endLine": 137,
+        "endChar": 66
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8272f34_338eac3e",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a5228ff_a24d3630",
       "range": {
         "startLine": 137,
         "startChar": 30,
@@ -245,6 +455,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4190ca99_e1d35ccd",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "I checked some SSI flashing documents and it looks like we only flash vbmeta.img. When do we need to replace vbmeta_system.img?",
+      "parentUuid": "579c8a98_272ac5ee",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 14
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3facfe81_6ae2eda1",
         "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
         "patchSetId": 6
@@ -256,6 +490,30 @@
       "writtenOn": "2023-07-06T01:22:48Z",
       "side": 1,
       "message": "Can we create archives (such as img.zip) to use this output directly with CI?",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b5bfae4_f139e099",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "The outputs of this script are super.img and vbmeta.img. What do we expect to have in this zipfile?\n\nI was thinking about we could zip the archive in our CI system, while for those users having their local environment, it may be more convenient to get the output images directly from a directory.",
+      "parentUuid": "3facfe81_6ae2eda1",
       "range": {
         "startLine": 158,
         "startChar": 47,

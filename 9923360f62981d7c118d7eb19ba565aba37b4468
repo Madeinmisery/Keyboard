@@ -446,6 +446,30 @@
       },
       "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c1640ef_24e4c4b8",
+        "filename": "gsi/repack_super_image/mix_ssi_images.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T02:51:31Z",
+      "side": 1,
+      "message": "Done. mix_ssi_with_device_image.py --ota-tools accepts either a directory or a zipfile now. Thanks for the suggestion!",
+      "parentUuid": "1ac596ee_1498359e",
+      "range": {
+        "startLine": 148,
+        "startChar": 13,
+        "endLine": 148,
+        "endChar": 37
+      },
+      "revId": "9923360f62981d7c118d7eb19ba565aba37b4468",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
