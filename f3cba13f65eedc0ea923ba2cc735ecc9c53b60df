@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "99d664b4_f2fcae50",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-07-06T05:42:47Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "3d9d1f0a_13c103cb",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 79
+      },
+      "revId": "f3cba13f65eedc0ea923ba2cc735ecc9c53b60df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "439f5592_199f4dec",
