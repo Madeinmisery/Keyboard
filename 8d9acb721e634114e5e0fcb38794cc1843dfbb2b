@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cf8df69_a4d105ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2023-07-06T23:09:39Z",
+      "side": 1,
+      "message": "I moved the script to the platform/development repo and abandoned the old CL (aosp/2602005) after addressing all review feedback.",
+      "revId": "8d9acb721e634114e5e0fcb38794cc1843dfbb2b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
