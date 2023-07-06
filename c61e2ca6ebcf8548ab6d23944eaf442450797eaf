@@ -479,6 +479,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "55f6fa24_af9f42b5",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-06T03:50:55Z",
+      "side": 1,
+      "message": "It\u0027s ok not to replace vbmeta_system.\nvbmeta_system.img is effective when vbmeta.img is enabled.",
+      "parentUuid": "4190ca99_e1d35ccd",
+      "range": {
+        "startLine": 155,
+        "startChar": 4,
+        "endLine": 155,
+        "endChar": 14
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3facfe81_6ae2eda1",
         "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
         "patchSetId": 6
@@ -513,6 +537,30 @@
       "writtenOn": "2023-07-06T02:51:31Z",
       "side": 1,
       "message": "The outputs of this script are super.img and vbmeta.img. What do we expect to have in this zipfile?\n\nI was thinking about we could zip the archive in our CI system, while for those users having their local environment, it may be more convenient to get the output images directly from a directory.",
+      "parentUuid": "3facfe81_6ae2eda1",
+      "range": {
+        "startLine": 158,
+        "startChar": 47,
+        "endLine": 158,
+        "endChar": 48
+      },
+      "revId": "c61e2ca6ebcf8548ab6d23944eaf442450797eaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17cf235f_b078401b",
+        "filename": "gsi/repack_super_image/mix_ssi_with_device_image.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-07-06T03:50:55Z",
+      "side": 1,
+      "message": "Kiyoung, do you mean continuous builds or tests?\n\nFor builds, merge_target_files might be a better choice.\nFor tests, it is difficult to make the test infrastructure call this script before launching virtual devices. In the infrastructure, the image preparation logic is implemented in acloud and fetch_cvd. Modifying the two tools would be easier.\n\nTherefore, I don\u0027t think this script needs to zip the images.",
       "parentUuid": "3facfe81_6ae2eda1",
       "range": {
         "startLine": 158,
