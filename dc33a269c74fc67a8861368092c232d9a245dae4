@@ -16,6 +16,23 @@
       "message": "bj",
       "revId": "dc33a269c74fc67a8861368092c232d9a245dae4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdf0feed_4734cef0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1889741
+      },
+      "writtenOn": "2023-07-07T14:13:09Z",
+      "side": 1,
+      "message": "We need to also remove occurrences of `dmtracedump` from the build files too",
+      "revId": "dc33a269c74fc67a8861368092c232d9a245dae4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
