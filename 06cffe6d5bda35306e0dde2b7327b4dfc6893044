@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af9fccf5_7e69d823",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2023-07-08T02:10:04Z",
+      "side": 1,
+      "message": "cargo2android uses `self.externs` as the dependency list. I\u0027m not sure if it makes a difference, did you run into a any crate where the two lists don\u0027t match?",
+      "revId": "06cffe6d5bda35306e0dde2b7327b4dfc6893044",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
