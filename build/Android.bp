@@ -190,6 +190,7 @@ android_sdk_repo_host {
 
     deps: [
         "adb",
+        "dmtracedump",
         "etc1tool",
         "fastboot",
         "hprof-conv",
@@ -220,6 +221,7 @@ android_sdk_repo_host {
         not_windows: {
             strip_files: [
                 "adb",
+                "dmtracedump",
                 "etc1tool",
                 "fastboot",
                 "hprof-conv",
