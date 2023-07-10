@@ -16,6 +16,24 @@
       "message": "cargo2android uses `self.externs` as the dependency list. I\u0027m not sure if it makes a difference, did you run into a any crate where the two lists don\u0027t match?",
       "revId": "06cffe6d5bda35306e0dde2b7327b4dfc6893044",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6259e413_0fb1f2f5",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2023-07-10T23:56:16Z",
+      "side": 1,
+      "message": "Yes. `self.externs` follows `--extern` arguments passed to `rustc` which doesn\u0027t include `libcompiler_builtins` or `libcore` whereas `self.dependencies` does. The latter also includes more information for each dependency (version, features, optionality, etc.)\n\n`cargo2rulesmk.py` doesn\u0027t use `self.externs` or `self.core_externs` so I removed those members to avoid any confusion.",
+      "parentUuid": "af9fccf5_7e69d823",
+      "revId": "06cffe6d5bda35306e0dde2b7327b4dfc6893044",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
