@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38737086_48c33e17",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2023-07-11T01:46:59Z",
+      "side": 1,
+      "message": "Aside from the below, LGTM",
+      "revId": "1106b68d560b817f16cbbbf64e935dafc227b583",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81266939_6916331a",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2023-07-11T01:46:59Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by Check Contents: Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 631,
+        "startChar": 0,
+        "endLine": 631,
+        "endChar": 8
+      },
+      "revId": "1106b68d560b817f16cbbbf64e935dafc227b583",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
