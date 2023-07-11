@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2364d35c_9155d959",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2023-07-11T02:03:55Z",
+      "side": 1,
+      "message": "We also set `relocation-model\u003d` to enable PIC, and `target-feature\u003d+reserve-x18` (isn\u0027t that enabled by default?) in `make/common_flags.mk`. Do we want to ignore at least the first one, if not both?",
+      "revId": "1106b68d560b817f16cbbbf64e935dafc227b583",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "81266939_6916331a",
         "filename": "scripts/cargo2rulesmk.py",
         "patchSetId": 5
