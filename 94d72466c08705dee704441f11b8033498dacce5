@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aaba1b7a_b605817b",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Yeah, I used string concat here because the files are small and the code looked better with it. Added an explanation.",
+      "parentUuid": "c146a50a_e6bc292d",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "290166cf_d0f1ef09",
@@ -35,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a677ccc_b4706493",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 432,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "290166cf_d0f1ef09",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8bbeb001_0c6f2b87",
@@ -48,6 +84,30 @@
       "writtenOn": "2023-07-05T17:05:43Z",
       "side": 1,
       "message": "--vscode-launch-props",
+      "range": {
+        "startLine": 471,
+        "startChar": 17,
+        "endLine": 471,
+        "endChar": 36
+      },
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a75c2986_b5ae1a0c",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8bbeb001_0c6f2b87",
       "range": {
         "startLine": 471,
         "startChar": 17,
@@ -81,6 +141,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df25afbc_c875c2b1",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "caf1303f_423bc617",
+      "range": {
+        "startLine": 478,
+        "startChar": 17,
+        "endLine": 478,
+        "endChar": 35
+      },
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "448a0cbb_e2e2a23c",
@@ -94,6 +178,24 @@
       "writtenOn": "2023-07-05T17:05:43Z",
       "side": 1,
       "message": "should this `input()` just be moved out of the `if` rather than duplicated?",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a695e19_2592a5b5",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "448a0cbb_e2e2a23c",
       "revId": "94d72466c08705dee704441f11b8033498dacce5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -129,6 +231,24 @@
       "side": 1,
       "message": "If you want a machine to do it for you, https://pycqa.github.io/isort/ is the python standard (like enh says, not a regression, so not blocking imo)",
       "parentUuid": "27b4d02b_e5cecdbf",
+      "revId": "94d72466c08705dee704441f11b8033498dacce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96bfee2b_08a591ee",
+        "filename": "scripts/gdbclient_test.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-13T13:52:05Z",
+      "side": 1,
+      "message": "Done. Sorted the imports in both files",
+      "parentUuid": "19c98ff0_be25be51",
       "revId": "94d72466c08705dee704441f11b8033498dacce5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
