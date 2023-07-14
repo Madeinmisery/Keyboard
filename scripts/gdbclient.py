@@ -90,7 +90,7 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument(
         "--port", nargs="?", default="5039",
-        help="override the port used on the host [default: 5039]")
+        help="Unused **host** port to forward the debug_socket to.[default: 5039]")
     parser.add_argument(
         "--user", nargs="?", default="root",
         help="user to run commands as on the device [default: root]")
