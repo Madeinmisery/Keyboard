@@ -145,7 +145,7 @@ done
 
 libs=()
 if [ "${OS}" = "darwin" ]; then
-    libs+=("${SOONG_HOST_OUT}/lib64/libc++abi_host.dylib")
+    libs+=("${SOONG_HOST_OUT}/lib64/libc++abi_shared.dylib")
 fi
 
 # Build binaries and shared libs
