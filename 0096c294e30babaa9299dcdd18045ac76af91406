@@ -33,6 +33,24 @@
       "message": "IME the reader always wants `shlex.join(err.cmd)` to be part of this message too so they can repro more easily.",
       "revId": "0096c294e30babaa9299dcdd18045ac76af91406",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33f4bbba_95abca9a",
+        "filename": "python-packages/gdbrunner/gdbrunner/__init__.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2023-07-20T11:21:34Z",
+      "side": 1,
+      "message": "Thanks for the comment, added the command and split the print into several lines for readability",
+      "parentUuid": "f00823a3_8e3aa63b",
+      "revId": "0096c294e30babaa9299dcdd18045ac76af91406",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
