@@ -16,6 +16,24 @@
       "message": "Is anything using this?",
       "revId": "82c9297e96428f38cbd54cdf27220dbac2e8773d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33415e93_9ad28e98",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 811,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2023-07-20T00:16:32Z",
+      "side": 1,
+      "message": "No it looks like this was used for module merging which we do not support here.",
+      "parentUuid": "927a34cd_449b2828",
+      "revId": "82c9297e96428f38cbd54cdf27220dbac2e8773d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
