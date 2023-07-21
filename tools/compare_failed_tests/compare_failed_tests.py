@@ -201,7 +201,7 @@ def main():
   with open(args.csv, 'w') as csvfile:
     summary = compare_failed_tests(test_result_a, test_result_b, csvfile)
 
-    print summary
+    print(summary)
 
 
 if __name__ == '__main__':
