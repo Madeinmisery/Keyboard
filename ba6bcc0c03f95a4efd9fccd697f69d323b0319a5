@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85242dbb_0ce278a4",
+        "filename": "samples/NsdManagerSample/testadvertiseservice/src/main/java/com/example/testadvertiseservice/AdvertiseActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1288034
+      },
+      "writtenOn": "2023-07-24T03:05:35Z",
+      "side": 1,
+      "message": "Since M2023-09 this is not necessary for foreground apps; it would be best not to give this as an example to take the multicast lock by default, because we won\u0027t be able to optimize APF later if developers do this.\n\nMaybe remove this line or add a comment ? Ideally we\u0027d add an option in the app later (some switch or something).",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb6a23d0_9aa64f72",
+        "filename": "samples/NsdManagerSample/testdiscoverservice/src/main/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1288034
+      },
+      "writtenOn": "2023-07-24T03:05:35Z",
+      "side": 1,
+      "message": "Nit: remove",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7864446c_6a9447df",
+        "filename": "samples/NsdManagerSample/testdiscoverservice/src/main/java/com/example/testdiscoverservice/DiscoverActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1288034
+      },
+      "writtenOn": "2023-07-24T03:05:35Z",
+      "side": 1,
+      "message": "Same comment about the lock here; it\u0027s not a good example in all cases so it\u0027s maybe best to avoid adding it as a sample",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

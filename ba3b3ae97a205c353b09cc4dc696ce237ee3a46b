@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fab389c_0fb3efbe",
+        "filename": "samples/NsdManagerSample/testadvertiseservice/src/main/res/drawable/ic_launcher_background.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1288034
+      },
+      "writtenOn": "2023-07-24T03:05:35Z",
+      "side": 0,
+      "message": "Most of the files here are for ic_launcher in various sizes; that complicates the sample for not much (since it\u0027s just the default icon) and binaries add up in git clones.\n\nMaybe you could just use the vector image for all sizes ? Basically move res/mipmap-anydpi-v26/ic_launcher.xml to res/drawable/, and remove everything except ic_launcher.xml, ic_launcher_background.xml, ic_launcher_foreground.xml",
+      "revId": "ba3b3ae97a205c353b09cc4dc696ce237ee3a46b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
