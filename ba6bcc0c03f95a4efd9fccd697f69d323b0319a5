@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7757ee6_1eab6620",
+        "filename": "samples/NsdManagerSample/testadvertiseservice/src/main/java/com/example/testadvertiseservice/AdvertiseActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1758351
+      },
+      "writtenOn": "2023-07-24T08:16:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85242dbb_0ce278a4",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb6a23d0_9aa64f72",
@@ -35,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b1f1075_cefe5fcb",
+        "filename": "samples/NsdManagerSample/testdiscoverservice/src/main/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1758351
+      },
+      "writtenOn": "2023-07-24T08:16:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb6a23d0_9aa64f72",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7864446c_6a9447df",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-07-24T03:05:35Z",
       "side": 1,
       "message": "Same comment about the lock here; it\u0027s not a good example in all cases so it\u0027s maybe best to avoid adding it as a sample",
+      "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8392e96_5533aec9",
+        "filename": "samples/NsdManagerSample/testdiscoverservice/src/main/java/com/example/testdiscoverservice/DiscoverActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1758351
+      },
+      "writtenOn": "2023-07-24T08:16:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7864446c_6a9447df",
       "revId": "ba6bcc0c03f95a4efd9fccd697f69d323b0319a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
