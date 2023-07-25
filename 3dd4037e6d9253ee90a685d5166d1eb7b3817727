@@ -16,6 +16,24 @@
       "message": "Nit: technically I think this should go to /res/drawable/, but it probably doesn\u0027t matter since min SDK \u003e 24.",
       "revId": "3dd4037e6d9253ee90a685d5166d1eb7b3817727",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2a32563_f4d59ffe",
+        "filename": "samples/NsdManagerSample/testadvertiseservice/src/main/res/drawable-v24/ic_launcher_foreground.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1758351
+      },
+      "writtenOn": "2023-07-25T03:05:48Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "9f0a2737_9f690419",
+      "revId": "3dd4037e6d9253ee90a685d5166d1eb7b3817727",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
