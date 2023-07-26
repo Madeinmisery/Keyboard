@@ -116,6 +116,8 @@ struct Config {
     /// Modules name => Soong "visibility" property.
     #[serde(default)]
     module_visibility: BTreeMap<String, Vec<String>>,
+    #[serde(default, flatten)]
+    default_package: PackageConfig,
 }
 
 /// Options that apply to everything in a package (i.e. everything associated with a particular
@@ -319,8 +321,7 @@ fn write_android_bp(
     let bp_path = package_dir.join("Android.bp");
 
     let package_name = crates[0].package_name.clone();
-    let def = PackageConfig::default();
-    let package_cfg = cfg.package.get(&package_name).unwrap_or(&def);
+    let package_cfg = cfg.package.get(&package_name).unwrap_or(&cfg.default_package);
 
     // Keep the old license header.
     let license_section = match std::fs::read_to_string(&bp_path) {
