@@ -24,15 +24,15 @@ The Cargo.toml file should work at least for the host platform.
     without test crates.
 
 (2) To build crates for both host and device in Android.bp, use the
-    --device flag, for example:
-    cargo2android.py --run --device
+    --device_supported flag, for example:
+    cargo2android.py --run --device_supported
 
     Note that cargo build is only called once with the default target
     x86_64-unknown-linux-gnu.
 
 (3) To build default and test crates, for host and device, use both
-    --device and --tests flags:
-    cargo2android.py --run --device --tests
+    --device_supported and --tests flags:
+    cargo2android.py --run --device_supported --tests
 
     This is equivalent to using the --cargo flag to add extra builds:
     cargo2android.py --run
@@ -490,8 +490,8 @@ class Crate(object):
     if not self.runner.variant_args.no_pkg_vers and not self.skip_crate():
         self.get_pkg_version()
 
-    self.device_supported = self.runner.variant_args.device
-    self.host_supported = not self.runner.variant_args.no_host
+    self.device_supported = self.runner.variant_args.device_supported
+    self.host_supported = self.runner.variant_args.host_supported
     self.cfgs = sorted(set(self.cfgs))
     self.features = sorted(set(self.features))
     self.codegens = sorted(set(self.codegens))
@@ -1697,7 +1697,7 @@ def get_parser():
       default=False,
       help='Deprecated. Has no effect.')
   parser.add_argument(
-      '--device',
+      '--device_supported',
       action='store_true',
       default=False,
       help='run cargo also for a default device target')
@@ -1722,10 +1722,10 @@ def get_parser():
       default=False,
       help='do not append cargo/rustc error messages to Android.bp')
   parser.add_argument(
-      '--no-host',
+      '--host_supported',
       action='store_true',
-      default=False,
-      help='do not run cargo for the host; only for the device target')
+      default=True,
+      help='run cargo for the host, not only for the device target')
   parser.add_argument(
       '--no-presubmit',
       action='store_true',
