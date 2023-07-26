@@ -34,6 +34,24 @@
       "parentUuid": "1ddee752_7f5a468a",
       "revId": "bac4e83e5342826401da9fd6539253abf73d3db1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca81c6b2_92a5aec2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-07-26T23:34:09Z",
+      "side": 1,
+      "message": "You can also cherry-pick to `main` from the gerrit UI, in case that helps.",
+      "parentUuid": "74db1b8f_4d0ba29f",
+      "revId": "bac4e83e5342826401da9fd6539253abf73d3db1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
