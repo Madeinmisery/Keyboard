@@ -70,6 +70,10 @@ fn default_apex_available() -> Vec<String> {
     vec!["//apex_available:platform".to_string(), "//apex_available:anyapex".to_string()]
 }
 
+fn default_true() -> bool {
+    true
+}
+
 /// Options that apply to everything.
 #[derive(serde::Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -90,6 +94,12 @@ struct Config {
     /// Value to use for every generated library module's "apex_available" field.
     #[serde(default = "default_apex_available")]
     apex_available: Vec<String>,
+    /// Value to use for every generated library module's `product_available` field.
+    #[serde(default = "default_true")]
+    product_available: bool,
+    /// Value to use for every generated library module's `vendor_available` field.
+    #[serde(default = "default_true")]
+    vendor_available: bool,
     /// Map of renames for modules. For example, if a "libfoo" would be generated and there is an
     /// entry ("libfoo", "libbar"), the generated module will be called "libbar" instead.
     ///
@@ -594,6 +604,18 @@ fn crate_to_bp_modules(
             .contains(crate_type)
         {
             m.props.set("apex_available", cfg.apex_available.clone());
+        }
+        if [
+            CrateType::Lib,
+            CrateType::RLib,
+            CrateType::DyLib,
+            CrateType::CDyLib,
+            CrateType::StaticLib,
+        ]
+        .contains(crate_type)
+        {
+            m.props.set("product_available", cfg.product_available);
+            m.props.set("vendor_available", cfg.vendor_available);
         }
 
         if let Some(visibility) = cfg.module_visibility.get(module_name) {
