@@ -356,10 +356,13 @@ fn write_all_bp(
         write_android_bp(
             cfg,
             package_name,
-            package_dir,
+            &package_dir,
             &crates,
             package_out_files.get(package_name).unwrap_or(&empty_package_out_files),
-        )?;
+        )
+        .with_context(|| {
+            format!("Writing Blueprint for package {:?} file {}", package_dir, package_name,)
+        })?;
     }
 
     Ok(())
@@ -493,12 +496,13 @@ fn generate_cargo_out(cfg: &VariantConfig) -> Result<CargoOutput> {
 fn write_android_bp(
     cfg: &Config,
     package_name: &str,
-    package_dir: PathBuf,
+    package_dir: &Path,
     crates: &[Vec<Crate>],
     out_files: &[Vec<PathBuf>],
 ) -> Result<()> {
     assert_eq!(crates.len(), out_files.len());
     let bp_path = package_dir.join("Android.bp");
+    debug!("Writing {:?}", bp_path);
 
     // Keep the old license header.
     let license_section = match std::fs::read_to_string(&bp_path) {
@@ -942,6 +946,9 @@ mod tests {
     #[test]
     fn generate_bp() {
         for testdata_directory_path in testdata_directories() {
+            debug!("testdata directory: {:?}", testdata_directory_path);
+            debug!("dir contents: {:?}", std::fs::read_dir(&testdata_directory_path).unwrap());
+            debug!("Loading {:?}", testdata_directory_path.join("cargo_embargo.json"));
             let cfg = Config::from_json_str(
                 &read_to_string(testdata_directory_path.join("cargo_embargo.json"))
                     .expect("Failed to open cargo_embargo.json"),

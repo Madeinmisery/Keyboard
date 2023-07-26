@@ -393,6 +393,7 @@ impl Crate {
 
         // Find the metadata for the crates containing package by matching the manifest's path.
         let manifest_path = out.package_dir.join("Cargo.toml");
+        debug!("Metadata: {:?}", metadata);
         let package_metadata = metadata
             .packages
             .iter()
