@@ -125,7 +125,7 @@ struct Config {
 #[serde(deny_unknown_fields)]
 struct PackageConfig {
     /// Whether to compile for device. Defaults to true.
-    #[serde(default)]
+    #[serde(default, alias = "device")]
     device_supported: Option<bool>,
     /// Whether to compile for host. Defaults to true.
     #[serde(default)]
