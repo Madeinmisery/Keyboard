@@ -72,6 +72,8 @@ pub struct Config {
     pub module_visibility: BTreeMap<String, Vec<String>>,
     #[serde(default, flatten)]
     pub default_package: PackageConfig,
+    #[allow(unused)]
+    pub run: bool,
 }
 
 /// Options that apply to everything in a package (i.e. everything associated with a particular
