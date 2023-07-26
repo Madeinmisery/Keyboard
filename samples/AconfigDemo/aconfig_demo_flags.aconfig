@@ -30,5 +30,4 @@ flag {
     namespace: "configuration"
     description: "This flag controls static content"
     bug: "287644619"
-    bug: "280833463"
 }
