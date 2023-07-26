@@ -70,6 +70,8 @@ pub struct Config {
     /// Modules name => Soong "visibility" property.
     #[serde(default)]
     pub module_visibility: BTreeMap<String, Vec<String>>,
+    #[serde(default, flatten)]
+    pub default_package: PackageConfig,
 }
 
 /// Options that apply to everything in a package (i.e. everything associated with a particular
