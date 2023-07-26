@@ -78,7 +78,7 @@ pub struct Config {
 #[serde(deny_unknown_fields)]
 pub struct PackageConfig {
     /// Whether to compile for device. Defaults to true.
-    #[serde(default)]
+    #[serde(default, alias = "device")]
     pub device_supported: Option<bool>,
     /// Whether to compile for host. Defaults to true.
     #[serde(default)]
