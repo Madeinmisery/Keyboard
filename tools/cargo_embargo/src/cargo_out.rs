@@ -129,16 +129,23 @@ struct CargoOut {
 }
 
 fn match1(regex: &Regex, s: &str) -> Option<String> {
-    regex.captures(s).and_then(|x| x.get(1)).map(|x| x.as_str().to_string())
+    regex
+        .captures(s)
+        .and_then(|x| x.get(1))
+        .map(|x| x.as_str().to_string())
 }
 
 fn match3(regex: &Regex, s: &str) -> Option<(String, String, String)> {
-    regex.captures(s).and_then(|x| match (x.get(1), x.get(2), x.get(3)) {
-        (Some(a), Some(b), Some(c)) => {
-            Some((a.as_str().to_string(), b.as_str().to_string(), c.as_str().to_string()))
-        }
-        _ => None,
-    })
+    regex
+        .captures(s)
+        .and_then(|x| match (x.get(1), x.get(2), x.get(3)) {
+            (Some(a), Some(b), Some(c)) => Some((
+                a.as_str().to_string(),
+                b.as_str().to_string(),
+                c.as_str().to_string(),
+            )),
+            _ => None,
+        })
 }
 
 impl CargoOut {
@@ -256,27 +263,30 @@ impl Crate {
         let mut arg_iter = args
             .iter()
             // Remove quotes from simple strings, panic for others.
-            .map(|arg| match (arg.chars().next(), arg.chars().skip(1).last()) {
-                (Some('"'), Some('"')) => &arg[1..arg.len() - 1],
-                (Some('\''), Some('\'')) => &arg[1..arg.len() - 1],
-                (Some('"'), _) => panic!("can't handle strings with whitespace"),
-                (Some('\''), _) => panic!("can't handle strings with whitespace"),
-                _ => arg,
-            });
+            .map(
+                |arg| match (arg.chars().next(), arg.chars().skip(1).last()) {
+                    (Some('"'), Some('"')) => &arg[1..arg.len() - 1],
+                    (Some('\''), Some('\'')) => &arg[1..arg.len() - 1],
+                    (Some('"'), _) => panic!("can't handle strings with whitespace"),
+                    (Some('\''), _) => panic!("can't handle strings with whitespace"),
+                    _ => arg,
+                },
+            );
         // process each arg
         while let Some(arg) = arg_iter.next() {
             match arg {
                 "--crate-name" => out.name = arg_iter.next().unwrap().to_string(),
-                "--crate-type" => out
-                    .types
-                    .push(CrateType::from_str(arg_iter.next().unwrap().to_string().as_str())),
+                "--crate-type" => out.types.push(CrateType::from_str(
+                    arg_iter.next().unwrap().to_string().as_str(),
+                )),
                 "--test" => out.types.push(CrateType::Test),
                 "--target" => out.target = Some(arg_iter.next().unwrap().to_string()),
                 "--cfg" => {
                     // example: feature=\"sink\"
                     let arg = arg_iter.next().unwrap();
-                    if let Some(feature) =
-                        arg.strip_prefix("feature=\"").and_then(|s| s.strip_suffix('\"'))
+                    if let Some(feature) = arg
+                        .strip_prefix("feature=\"")
+                        .and_then(|s| s.strip_suffix('\"'))
                     {
                         out.features.push(feature.to_string());
                     } else {
@@ -354,7 +364,10 @@ impl Crate {
                             bail!("No Cargo.toml found in parents of {:?}", src_path);
                         }
                     }
-                    out.main_src = src_path.strip_prefix(&out.package_dir).unwrap().to_path_buf();
+                    out.main_src = src_path
+                        .strip_prefix(&out.package_dir)
+                        .unwrap()
+                        .to_path_buf();
                 }
 
                 // ignored flags

@@ -54,7 +54,10 @@ pub enum BpValue {
 
 impl BpModule {
     pub fn new(module_type: String) -> BpModule {
-        BpModule { module_type, props: BpProperties::new() }
+        BpModule {
+            module_type,
+            props: BpProperties::new(),
+        }
     }
 
     /// Serialize to Android.bp format.
@@ -69,7 +72,10 @@ impl BpModule {
 
 impl BpProperties {
     pub fn new() -> Self {
-        BpProperties { map: BTreeMap::new(), raw_block: None }
+        BpProperties {
+            map: BTreeMap::new(),
+            raw_block: None,
+        }
     }
 
     pub fn get_string(&self, k: &str) -> &str {
@@ -84,8 +90,10 @@ impl BpProperties {
     }
 
     pub fn object(&mut self, k: &str) -> &mut BpProperties {
-        let v =
-            self.map.entry(k.to_string()).or_insert_with(|| BpValue::Object(BpProperties::new()));
+        let v = self
+            .map
+            .entry(k.to_string())
+            .or_insert_with(|| BpValue::Object(BpProperties::new()));
         match v {
             BpValue::Object(v) => v,
             _ => panic!("key {k:?} already has non-object value"),
@@ -123,7 +131,10 @@ impl BpProperties {
         ];
         let mut props: Vec<(&String, &BpValue)> = self.map.iter().collect();
         props.sort_by_key(|(k, _)| {
-            let i = canonical_order.iter().position(|x| k == x).unwrap_or(canonical_order.len());
+            let i = canonical_order
+                .iter()
+                .position(|x| k == x)
+                .unwrap_or(canonical_order.len());
             (i, (*k).clone())
         });
         for (k, v) in props {
