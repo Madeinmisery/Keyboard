@@ -118,6 +118,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e732aac1_f5e66ea0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-07-28T21:35:29Z",
+      "side": 1,
+      "message": "Aliases are added too often because it\u0027s easy, and we may know it now, but it\u0027s one more thing that users of this tool would need to learn. I don\u0027t think we should accept anything which is \u0027legacy\u0027 or problematic in cargo embargo. We are moving all the configs over, so it\u0027s the only opportunity to keep things simple. It\u0027s very easy to write a script to fix all the JSON files and will likely need it for a few cases, so why not? We could also rename this back to \u0027device\u0027 and fix one file to keep things simple. Of course, we 3 understands this, but there are going to be a million quirks to a tool like cargo embargo and people will have to check \"okay what\u0027s the difference here\". It takes avoiding each one in order to make a good experience and easy. These aliases get created, and they will tend to stick around forever. Nip it in the bud.\n\nAlso to be clear, it\u0027s not about this being a tiny amount of code, it\u0027s about the 277 cargo2android.json files (230 that contain \"device\") that we\u0027re about to switch over and touch. We can get away with a single commit in each moving the file over which can also rename \u0027device\u0027. Or we could rename device_specific to device in crosvm if we\u0027re okay with the \u0027device\u0027 name. There will likely never be another opportunity to resolve this. So I\u0027d prefer we do it now, and also set this as a precedent for any other changes to move these over.",
+      "parentUuid": "d5edcf89_2f94d8f8",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
