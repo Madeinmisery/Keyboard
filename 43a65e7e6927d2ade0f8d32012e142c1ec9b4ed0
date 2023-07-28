@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "98d99d3c_f70a41cd",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-07-28T10:13:46Z",
+      "side": 1,
+      "message": "It represents whether the crate is a library (as opposed to a binary, test or proc macro). Good idea, I\u0027ve made the check a method on `CrateType`.",
+      "parentUuid": "f104f1af_5aeffff7",
+      "range": {
+        "startLine": 597,
+        "startChar": 15,
+        "endLine": 604,
+        "endChar": 33
+      },
+      "revId": "43a65e7e6927d2ade0f8d32012e142c1ec9b4ed0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8d12c6c8_e87b6b63",
@@ -61,6 +85,30 @@
       "writtenOn": "2023-07-28T01:27:24Z",
       "side": 1,
       "message": "not a strong opinion, but maybe only set these conditionally so that the generated files are smaller. could also merge the crate type check with the apex avail property\n\n```\n        if [\n            CrateType::Lib,\n            CrateType::RLib,\n            CrateType::DyLib,\n            CrateType::CDyLib,\n            CrateType::StaticLib,\n        ]\n        .contains(crate_type)\n        {\n            if !cfg.apex_available.is_empty() { m.props.set(\"apex_available\", cfg.apex_available.clone()); }\n            if cfg.product_available { m.props.set(\"product_available\", true); }\n            if cfg.vendor_available { m.props.set(\"vendor_available\", true); }\n        }\n```",
+      "range": {
+        "startLine": 617,
+        "startChar": 0,
+        "endLine": 618,
+        "endChar": 66
+      },
+      "revId": "43a65e7e6927d2ade0f8d32012e142c1ec9b4ed0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63936744_43ce82d2",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-07-28T10:13:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d12c6c8_e87b6b63",
       "range": {
         "startLine": 617,
         "startChar": 0,
