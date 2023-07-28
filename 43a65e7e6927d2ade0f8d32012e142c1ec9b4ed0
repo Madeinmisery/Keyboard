@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f6c61cc_68153558",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-07-28T01:11:19Z",
+      "side": 1,
+      "message": "do we want to copy/paste this list? or could we move it behind a function? I\u0027m not sure what it represents.\n\nIf it represents \"not a test\", then technically product_available/vendor_available should work there as well. However, it may also be the case Rust doesn\u0027t have very good support for this (C++ is just okay, depending on the tool)",
+      "range": {
+        "startLine": 597,
+        "startChar": 15,
+        "endLine": 604,
+        "endChar": 33
+      },
+      "revId": "43a65e7e6927d2ade0f8d32012e142c1ec9b4ed0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
