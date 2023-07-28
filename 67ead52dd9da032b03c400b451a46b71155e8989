@@ -22,6 +22,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ccc3ed6d_e899367b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-07-28T01:29:45Z",
+      "side": 1,
+      "message": "i personally like it being more verbose, but don\u0027t really care much, so +1 just changing it and updating the one existing cargo embargo config file",
+      "parentUuid": "1f56bc70_18853561",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
