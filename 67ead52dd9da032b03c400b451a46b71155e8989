@@ -46,6 +46,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62a0b122_fa47821d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-07-28T09:47:32Z",
+      "side": 1,
+      "message": "My goal here is to make `cargo_embargo` work with the existing `cargo2android.json` files that all our external crates, to simplify the transition. Once we\u0027ve removed `cargo2android.py` entirely then we can remove the alias and change everything, but for a first step I\u0027d prefer to do it this way.",
+      "parentUuid": "ccc3ed6d_e899367b",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
