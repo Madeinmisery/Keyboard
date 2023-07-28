@@ -70,6 +70,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80908f9d_560d728e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-07-28T18:25:10Z",
+      "side": 1,
+      "message": "Why? We need to rename the files and touch them once. So, we can fix them up with an automated rule as part of that step. We don\u0027t want to create more work, or this CL which will only have to be undone?\n\nThis CL achieves a faster conversion, but the total amount of work that is proposed (including creating and reverting this CL) seems larger.",
+      "parentUuid": "62a0b122_fa47821d",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
