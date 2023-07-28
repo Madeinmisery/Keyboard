@@ -94,6 +94,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5edcf89_2f94d8f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-07-28T20:45:48Z",
+      "side": 1,
+      "message": "it is a tiny amount of code, so probably not worth discussing much",
+      "parentUuid": "80908f9d_560d728e",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
