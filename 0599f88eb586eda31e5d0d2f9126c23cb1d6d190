@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84cd4dbc_866929f0",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-07-31T15:14:59Z",
+      "side": 1,
+      "message": "additional_modules?",
+      "range": {
+        "startLine": 22,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 18
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd6d49bf_cbccaeaa",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-07-31T15:14:59Z",
+      "side": 1,
+      "message": "additional_time, or change additional_time to duration_sun in L47.",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 16
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d44a6869_7cea979f",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-07-31T15:14:59Z",
+      "side": 1,
+      "message": "Calling a duration as a module sounds weird to me.",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7c9e226_193caec2",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-07-31T15:14:59Z",
+      "side": 1,
+      "message": "just `else:`?",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 40
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b116471_bf33301e",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-07-31T15:14:59Z",
+      "side": 1,
+      "message": "dedup this and L57-60 using a function",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 45
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
