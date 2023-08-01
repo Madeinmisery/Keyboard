@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d271e7c6_15f24d83",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-01T19:27:45Z",
+      "side": 1,
+      "message": "from https://serde.rs/attr-flatten.html\n\n\u003e Note: flatten is not supported in combination with structs that use deny_unknown_fields. Neither the outer nor inner flattened struct should use that attribute.\n\nthis has caused bugs in crosvm before. idk why it isn\u0027t a hard error when you do this...",
+      "range": {
+        "startLine": 73,
+        "startChar": 21,
+        "endLine": 73,
+        "endChar": 28
+      },
+      "revId": "de7fbb9e4c4a807710d69d3e9f524f055d3692c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
