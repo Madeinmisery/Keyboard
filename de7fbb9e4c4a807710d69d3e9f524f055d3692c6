@@ -22,6 +22,30 @@
       },
       "revId": "de7fbb9e4c4a807710d69d3e9f524f055d3692c6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c90abd27_15e32a03",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-01T19:41:42Z",
+      "side": 1,
+      "message": "maybe we can duplicate the fields needed by c2a.py, but keep them private to this file, then post process them into a `PackageConfig` object\n\n(i know it is in the opposite directions of Steven\u0027s thoughts on the parent CL, but i\u0027d also be OK with create a whole separate config struct just for c2a.py compatibility)",
+      "parentUuid": "d271e7c6_15f24d83",
+      "range": {
+        "startLine": 73,
+        "startChar": 21,
+        "endLine": 73,
+        "endChar": 28
+      },
+      "revId": "de7fbb9e4c4a807710d69d3e9f524f055d3692c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
