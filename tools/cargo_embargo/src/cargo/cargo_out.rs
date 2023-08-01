@@ -66,6 +66,7 @@ fn parse_cargo_out_str(
         }
         // Ignore crates outside the base directory.
         if !c.package_dir.starts_with(&base_directory) {
+            println!("Ignoring {:?} outside {:?}", c.package_dir, base_directory.as_ref());
             continue;
         }
         crates.push(c);
@@ -422,6 +423,7 @@ impl Crate {
 /// Given a path to the main source file of some Rust crate, returns the canonical path to the
 /// package directory, and the relative path to the source file within that directory.
 fn split_src_path(src_path: &Path) -> Result<(PathBuf, PathBuf)> {
+    println!("src_path: {:?}", src_path);
     // Canonicalize the path because:
     //
     // 1. We don't consistently get relative or absolute paths elsewhere. If we
@@ -431,8 +433,9 @@ fn split_src_path(src_path: &Path) -> Result<(PathBuf, PathBuf)> {
     //    project (e.g. AOSP's import of crosvm has symlinks from crosvm's own 3p
     //    directory to the android 3p directories).
     let src_path = src_path
-        .canonicalize()
+        .canonicalize() // TODO: Can we change this in tests somehow? The tests seem to add symlinks.
         .unwrap_or_else(|e| panic!("failed to canonicalize {src_path:?}: {}", e));
+    println!("canonical src_path: {:?}", src_path);
     let package_dir = find_cargo_toml(&src_path)?;
     let main_src = src_path.strip_prefix(&package_dir).unwrap().to_path_buf();
 
@@ -449,4 +452,36 @@ fn find_cargo_toml(src_path: &Path) -> Result<PathBuf> {
             .ok_or_else(|| anyhow!("No Cargo.toml found in parents of {:?}", src_path))?;
     }
     Ok(package_dir.to_path_buf())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::tests::testdata_directories;
+    use std::env::set_current_dir;
+    use std::fs::{read_to_string, File};
+
+    #[ignore]
+    #[test]
+    fn golden() {
+        println!("Current directory: {:?}", std::env::current_dir().unwrap());
+
+        for testdata_directory_path in testdata_directories() {
+            let cargo_out = read_to_string(testdata_directory_path.join("cargo.out")).unwrap();
+            let metadata = serde_json::from_reader(
+                File::open(testdata_directory_path.join("cargo.metadata"))
+                    .expect("failed to open cargo.metadata"),
+            )
+            .expect("failed to parse cargo.metadata");
+            let expected_crates: Vec<Crate> = serde_json::from_reader(
+                File::open(testdata_directory_path.join("crates.json")).unwrap(),
+            )
+            .unwrap();
+
+            set_current_dir("/usr/local/google/home/qwandor/aosp/out/host/linux-x86/testcases/cargo_embargo.test/x86_64/testdata/either").unwrap();
+            let crates =
+                parse_cargo_out_str(&cargo_out, &metadata, "/usr/local/google/home/qwandor/aosp/out/host/linux-x86/testcases/cargo_embargo.test/x86_64/testdata/either").unwrap();
+            assert_eq!(crates, expected_crates);
+        }
+    }
 }

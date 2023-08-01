@@ -140,7 +140,11 @@ enum Mode {
 fn main() -> Result<()> {
     env_logger::init();
     let args = Args::parse();
+    run(args)
+}
 
+/// Runs cargo_embargo with the given command-line parameters.
+fn run(args: Args) -> Result<()> {
     match &args.mode {
         Mode::DumpCrates { config, crates } => {
             dump_crates(&args, config, crates)?;
@@ -251,7 +255,9 @@ fn make_all_crates(args: &Args, cfg: &Config) -> Result<Vec<Vec<Crate>>> {
 }
 
 fn make_crates(args: &Args, cfg: &VariantConfig) -> Result<Vec<Crate>> {
-    if !Path::new("Cargo.toml").try_exists().context("when checking Cargo.toml")? {
+    if !args.reuse_cargo_out
+        && !Path::new("Cargo.toml").try_exists().context("when checking Cargo.toml")?
+    {
         bail!("Cargo.toml missing. Run in a directory with a Cargo.toml file.");
     }
 
@@ -907,6 +913,27 @@ mod tests {
     use std::path::PathBuf;
 
     const TESTDATA_PATH: &str = "testdata";
+
+    #[ignore]
+    #[test]
+    fn golden() {
+        println!("{:?}", std::env::current_dir());
+
+        for testdata_directory_path in testdata_directories() {
+            println!("{:?}", testdata_directory_path);
+            set_current_dir(&testdata_directory_path).unwrap();
+            let config_file = PathBuf::from("cargo_embargo.json");
+            let output_file = "Android.bp";
+            let expected_output_file = "expected_Android.bp";
+            let args =
+                Args { cargo_bin: None, cfg: config_file, reuse_cargo_out: true, mode: None };
+            run(args).expect("cargo_embargo failed");
+            assert_eq!(
+                read_to_string(output_file).expect("Error opening output file"),
+                read_to_string(expected_output_file).expect("Error opening expected output file"),
+            );
+        }
+    }
 
     #[test]
     fn group_variants_by_package() {
