@@ -142,6 +142,30 @@
       },
       "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b7c4690_c87ac3b4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-08-01T16:02:45Z",
+      "side": 1,
+      "message": "My plan is to keep the existing files working with both tools until we get rid of `cargo2android.py` entirely, which is likely to take a while. Once `cargo_embargo` starts to support some of the existing crates, we can have an allowlist or fallback to start using it opportunistically, but I don\u0027t want to break support for `cargo2android.py` in the meantime.\n\nThe filename for `cargo2android.json` doesn\u0027t seem to matter; in either case it\u0027s passed on the command-line, so there\u0027s no need to rename it.\n\nIf you don\u0027t want to have an alias, then we have two options: either change crosvm to use `device` rather than `device_supported`, or change all the other crates to use `device_supported` rather than `device`, and also change `cargo2android.py`. I would prefer the former to minimise churn.",
+      "parentUuid": "e732aac1_f5e66ea0",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "67ead52dd9da032b03c400b451a46b71155e8989",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
