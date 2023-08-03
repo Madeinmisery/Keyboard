@@ -166,6 +166,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1db93cce_eae8154f",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:24:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9adc002_dffba85c",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7c9e226_193caec2",
