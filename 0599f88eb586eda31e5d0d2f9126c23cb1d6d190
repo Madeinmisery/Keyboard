@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1519615a_7a226d70",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84cd4dbc_866929f0",
+      "range": {
+        "startLine": 22,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 18
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bd6d49bf_cbccaeaa",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-31T15:14:59Z",
       "side": 1,
       "message": "additional_time, or change additional_time to duration_sun in L47.",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 16
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2882cec_a50f38bd",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bd6d49bf_cbccaeaa",
       "range": {
         "startLine": 23,
         "startChar": 4,
@@ -72,6 +120,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c73f94fa_edf165fb",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:14:26Z",
+      "side": 1,
+      "message": "`duration` in Trace class is a dictionary of module:duration. I added a 1-line comment for it.",
+      "parentUuid": "d44a6869_7cea979f",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c7c9e226_193caec2",
         "filename": "treble/compare_build_trace.py",
         "patchSetId": 2
@@ -95,6 +167,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4b0b473e_58f976cf",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:14:26Z",
+      "side": 1,
+      "message": "The fifth argument is optional. So the number of arguments also can be 5.",
+      "parentUuid": "c7c9e226_193caec2",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 40
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3b116471_bf33301e",
         "filename": "treble/compare_build_trace.py",
         "patchSetId": 2
@@ -106,6 +202,30 @@
       "writtenOn": "2023-07-31T15:14:59Z",
       "side": 1,
       "message": "dedup this and L57-60 using a function",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 45
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "837181b6_29f3ed28",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2023-08-03T02:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b116471_bf33301e",
       "range": {
         "startLine": 52,
         "startChar": 0,
