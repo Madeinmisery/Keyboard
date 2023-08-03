@@ -144,6 +144,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a9adc002_dffba85c",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-08-03T02:20:21Z",
+      "side": 1,
+      "message": "Then wouldn\u0027t it be clearer to iterate over `target.duration.keys()`? I know they do the same, but this looks clearer to me.",
+      "parentUuid": "c73f94fa_edf165fb",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c7c9e226_193caec2",
         "filename": "treble/compare_build_trace.py",
         "patchSetId": 2
@@ -179,6 +203,30 @@
       "side": 1,
       "message": "The fifth argument is optional. So the number of arguments also can be 5.",
       "parentUuid": "c7c9e226_193caec2",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 40
+      },
+      "revId": "0599f88eb586eda31e5d0d2f9126c23cb1d6d190",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "048a120b_842b79da",
+        "filename": "treble/compare_build_trace.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-08-03T02:20:21Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4b0b473e_58f976cf",
       "range": {
         "startLine": 41,
         "startChar": 4,
