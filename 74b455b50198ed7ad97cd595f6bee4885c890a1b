@@ -16,6 +16,24 @@
       "message": "Add:\nBug: 292454054",
       "revId": "74b455b50198ed7ad97cd595f6bee4885c890a1b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f04535f2_f3757d7d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-04T04:33:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c113a9f_6813265f",
+      "revId": "74b455b50198ed7ad97cd595f6bee4885c890a1b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
