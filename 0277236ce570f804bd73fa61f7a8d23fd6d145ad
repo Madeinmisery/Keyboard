@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54b811b0_80981481",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 574,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-04T22:29:34Z",
+      "side": 1,
+      "message": "might be nicer to assert again the text output, but i guess it would be ugly unless you call bpfmt from the test",
+      "revId": "0277236ce570f804bd73fa61f7a8d23fd6d145ad",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
