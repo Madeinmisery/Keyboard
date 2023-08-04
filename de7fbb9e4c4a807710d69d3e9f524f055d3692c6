@@ -46,6 +46,30 @@
       },
       "revId": "de7fbb9e4c4a807710d69d3e9f524f055d3692c6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44d78acb_e50d250e",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-08-04T17:06:03Z",
+      "side": 1,
+      "message": "Ah, that\u0027s annoying. Experimentally, it seems to work, and looking through the GitHub issues for serde they seem to be with either nested flattened structs or with flattened enums, but I guess it\u0027s still not great to rely on it if it\u0027s not supported.",
+      "parentUuid": "c90abd27_15e32a03",
+      "range": {
+        "startLine": 73,
+        "startChar": 21,
+        "endLine": 73,
+        "endChar": 28
+      },
+      "revId": "de7fbb9e4c4a807710d69d3e9f524f055d3692c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
