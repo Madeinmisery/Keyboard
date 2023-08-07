@@ -1,0 +1,404 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ccf5948_8d954485",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "prefer to name this script as parse_cts_report.py",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a864251a_44d112fb",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "Add Copyright for Android Open Source Project",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74a118b0_cad981fa",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "should this be removed?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d49978d_ba9b4c99",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "I don\u0027t think we need OrderedDict for test status.\n\nSuggestion:\n```\ndef __init__(self):\n  self.counter \u003d {\n      \u0027pass\u0027: 0,                                                                                                                           \n      \u0027fail\u0027: 0,                                                                                                                           \n      \u0027IGNORED\u0027: 0,                                                                                                                        \n      \u0027ASSUMPTION_FAILURE\u0027: 0,                                                                                                             \n      \u0027TEST_ERROR\u0027: 0,                                                                                                                     \n      \u0027TEST_STATUS_UNSPECIFIED\u0027: 0\n  }\n```",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5784dd79_a2c814c6",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "please also add\n```\n\u0027Result::Build.build_device\u0027,\n\u0027Result::Build.build_version_sdk\u0027,\n\u0027Result::Build.build_version_security_patch\u0027,\n\u0027Result::Build.build_board\u0027,\n\u0027Result::Build.build_type\u0027,\n\u0027Result::Build.build_version_release\u0027,\n```",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d7cdfb0_a2c5d520",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "I think we can remove these three items",
+      "range": {
+        "startLine": 51,
+        "startChar": 17,
+        "endLine": 53,
+        "endChar": 47
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22c4f12b_d8fe497e",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "can you also modify `compare_failed_tests.py` to use this function?",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f4e4c96_382e77d1",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "can you also modify `compare_failed_tests.py` to use this function?",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bde5ba09_a2ee21d5",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "```\nwith zipfile.ZipFile(zip_file_path) as myzip:\n  myzip.extract(\u0027test_result.xml\u0027, dir_path)\n```",
+      "range": {
+        "startLine": 107,
+        "startChar": 2,
+        "endLine": 108,
+        "endChar": 49
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da5559f5_d8c15961",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "can you also modify `compare_failed_tests.py` to use this function?",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57fb8d8f_f813321a",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "I would prefer moving abi to the second level under modules",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebf87ebf_309a7d5a",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "we also need the \u0027abi\u0027 column in the result_csvfile",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "877a08b8_c4de8499",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "please make the method calls simpler so that users don\u0027t need to handle complicated logic when importing this script.\n\nSuggestion:\n```\ndef aggregate_reports(report_files, output_dir):\n  ...\n\ndef main():\n  parser \u003d argparse.ArgumentParser()\n  ...\n  args \u003d parser.parse_args()\n  \n  aggregate_reports(args.report_files, args.output_dir)\n```",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "481e4690_07cc9a4d",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "1. line too long (should \u003c 80 characters)\n2. argument name should be accurate, how about `--report-files`? The reason why I prefer `--report-files` here is because I feel like we should also allow user to parse test_result.xml directly in this script. It means that args.report_files could be either a zip file or a xml file.\n3. nargs\u003d\u0027+\u0027\n4. help\u003d\u0027Path to cts report(s), where a cts report could be a zip archive or a xml file.\u0027\n5. Add `required\u003dTrue`",
+      "range": {
+        "startLine": 229,
+        "startChar": 2,
+        "endLine": 229,
+        "endChar": 85
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08300fdb_f642d79d",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "1. line too long (should \u003c 80 characters)\n2. This directory is more like the path to put the output files of this script. How about naming this parameter as `--output-dir`?\n3. help\u003d\u0027Path to the directory to store output files.\u0027\n4. Add `required\u003dTrue`",
+      "range": {
+        "startLine": 230,
+        "startChar": 2,
+        "endLine": 230,
+        "endChar": 91
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f65d182_82d2bab5",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "use `os.path.join` for file paths",
+      "range": {
+        "startLine": 237,
+        "startChar": 37,
+        "endLine": 237,
+        "endChar": 66
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08fcd17d_9f058efa",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "os.path.join(dir_path, \u0027info.json\u0027)",
+      "range": {
+        "startLine": 241,
+        "startChar": 12,
+        "endLine": 241,
+        "endChar": 34
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6eb755e0_b31816df",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "info_file.write(json.dumps(test_result[\u0027info\u0027], indent\u003d2))",
+      "range": {
+        "startLine": 242,
+        "startChar": 4,
+        "endLine": 243,
+        "endChar": 25
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb296bd2_672891eb",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "with open(os.path.join(...), \u0027w\u0027) as result_csvfile, open(os.path.join(...), \u0027w\u0027) as summary_csvfile:",
+      "range": {
+        "startLine": 245,
+        "startChar": 2,
+        "endLine": 246,
+        "endChar": 65
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c7276fb_7464ee47",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-07T01:23:39Z",
+      "side": 1,
+      "message": "please also print the path of script output files",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
