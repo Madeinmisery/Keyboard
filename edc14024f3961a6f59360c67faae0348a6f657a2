@@ -83,6 +83,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "60e1be51_dbfae02d",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-07T02:33:12Z",
+      "side": 1,
+      "message": "Agree. Also, we might want to use defaultDict to handle empty value.",
+      "parentUuid": "1d49978d_ba9b4c99",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5784dd79_a2c814c6",
         "filename": "tools/compare_failed_tests/aggregate.py",
         "patchSetId": 3
@@ -180,6 +204,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4cf4e2a5_be31ab50",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-07T02:33:12Z",
+      "side": 1,
+      "message": "Very likely that we will get exception here if we return NO_DATA - the number of return value are different and different types.",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da5559f5_d8c15961",
         "filename": "tools/compare_failed_tests/aggregate.py",
         "patchSetId": 3
@@ -208,6 +249,23 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "I would prefer moving abi to the second level under modules",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6372c86_f7eb87d3",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-07T02:33:12Z",
+      "side": 1,
+      "message": "I think we can use logging package to handle those debug messages",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
