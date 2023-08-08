@@ -16,6 +16,24 @@
       "message": "might be nicer to assert again the text output, but i guess it would be ugly unless you call bpfmt from the test",
       "revId": "0277236ce570f804bd73fa61f7a8d23fd6d145ad",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5bb9ee8_929cbba2",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 574,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-08-08T09:32:16Z",
+      "side": 1,
+      "message": "Yeah, I\u0027m working on a test that includes the text output, but I haven\u0027t found a way yet to find bpfmt from a test.",
+      "parentUuid": "54b811b0_80981481",
+      "revId": "0277236ce570f804bd73fa61f7a8d23fd6d145ad",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
