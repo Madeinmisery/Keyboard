@@ -575,6 +575,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f8758f53_f0889620",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T02:47:43Z",
+      "side": 1,
+      "message": "1. When we extend this script to support more inputs (although not now), I think using flags has some advantages in terms of\n  (a) less error-prone, because there is no danger of listing inputs in the wrong order.\n  (b) readability. because the name of flags can represent the meaning.\n\n2. `required\u003dTrue` means that this arg cannot be omitted. `nargs\u003d\u0027+\u0027` means that there must be at least one value presented when this arg is given. If we only set `nargs\u003d\u0027+\u0027`, something like `./parse_cts_report.py -d output_dir` would break.",
+      "parentUuid": "d6923b86_816d7526",
+      "range": {
+        "startLine": 229,
+        "startChar": 2,
+        "endLine": 229,
+        "endChar": 85
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "08300fdb_f642d79d",
         "filename": "tools/compare_failed_tests/aggregate.py",
         "patchSetId": 3
