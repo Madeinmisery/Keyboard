@@ -1,0 +1,601 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abbe6397_ff283654",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "2023",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 20
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c85a03ea_bad3b09a",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "TODO(b/293809772)",
+      "range": {
+        "startLine": 33,
+        "startChar": 2,
+        "endLine": 33,
+        "endChar": 15
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2965d48f_b26efa30",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "TODO(b/293809772)",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 15
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed250d3b_422f336b",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Seems unused?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 19
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "914ea4a1_9c869e68",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Use f-strings would be more readable: `print(f\u0027{key}: {value}\u0027)`",
+      "range": {
+        "startLine": 57,
+        "startChar": 6,
+        "endLine": 57,
+        "endChar": 40
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c22d4fb9_8f1b70fb",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Should have a comment for every function, which describes the function\u0027s calling syntax and its semantics.",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91dd7bf0_c4b5b214",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "`print(f\u0027{key:\u003c{max_key_len}}  {info[key]}\u0027)`",
+      "range": {
+        "startLine": 118,
+        "startChar": 4,
+        "endLine": 118,
+        "endChar": 58
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e3474ae_927ca39d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "output_dir",
+      "range": {
+        "startLine": 124,
+        "startChar": 40,
+        "endLine": 124,
+        "endChar": 48
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d5fe5f3_5a15c406",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "`sub_dir_name \u003d os.path.splitext(os.path.basename(zip_file_path))[0]`",
+      "range": {
+        "startLine": 127,
+        "startChar": 2,
+        "endLine": 127,
+        "endChar": 46
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd44412b_809155fb",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Suggestion:\n```\nextracted_xml \u003d os.path.join(output_dir, \u0027test_result.xml\u0027)\nwith zipfile.ZipFile(zip_file_path) as myzip:                                                                                                          \n  with myzip.open(xml_path) as source, open(extracted_xml, \u0027wb\u0027) as target:                                                                               \n    shutil.copyfileobj(source, target)\n```",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 133,
+        "endChar": 50
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91e5f566_ec858c3c",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "test_name",
+      "range": {
+        "startLine": 181,
+        "startChar": 56,
+        "endLine": 181,
+        "endChar": 60
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5e57487_07f0a8b4",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "module_name",
+      "range": {
+        "startLine": 181,
+        "startChar": 27,
+        "endLine": 181,
+        "endChar": 33
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e49b417_b569c24b",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "class_name",
+      "range": {
+        "startLine": 181,
+        "startChar": 44,
+        "endLine": 181,
+        "endChar": 52
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1d3030a_14540a83",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "remove",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d71c17fb_9bfe2ab6",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "remove",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e676ca52_a6616f3a",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "remove",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "719e38d2_e7ec9bb0",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Should not break line after binary operator\n\nSuggestion:\n```\nresult_writer.writerow(\n    [module_name, abi_name, testcase_name, test_name, result]\n)\n```",
+      "range": {
+        "startLine": 199,
+        "startChar": 10,
+        "endLine": 200,
+        "endChar": 68
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f63ee9c_d634ea2b",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Should not break line after binary operator\n\nSuggestion:\n```\nsummary \u003d [value for value in module_result_summary.counter.values()]                                                                              \nsummary_writer.writerow([module_name, abi_name] + summary)\n```",
+      "range": {
+        "startLine": 203,
+        "startChar": 6,
+        "endLine": 205,
+        "endChar": 34
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04dd7ffc_c61a5885",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "I thought about this further, we should remove `nargs\u003d\u0027+\u0027` in this cl because parsing multiple reports is not supported yet. Let\u0027s add this back later when the feature is finished.",
+      "range": {
+        "startLine": 211,
+        "startChar": 40,
+        "endLine": 211,
+        "endChar": 50
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da7766c3_b2b50cce",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "I would prefer setting `required\u003dTrue` instead of having a default value. The reason is that this script creates some output files under args.output_dir, so there is a risk that we may overwrite files in a directory named temp on the user\u0027s computer without their knowledge.",
+      "range": {
+        "startLine": 214,
+        "startChar": 44,
+        "endLine": 214,
+        "endChar": 59
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee75b552_3bf23fad",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Path",
+      "range": {
+        "startLine": 215,
+        "startChar": 29,
+        "endLine": 215,
+        "endChar": 33
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fddb48e_9123ce78",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "output files.",
+      "range": {
+        "startLine": 215,
+        "startChar": 60,
+        "endLine": 215,
+        "endChar": 75
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e185f69b_24eb78b6",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "output_dir",
+      "range": {
+        "startLine": 219,
+        "startChar": 2,
+        "endLine": 219,
+        "endChar": 10
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82bb60be_2e8a33b1",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Prefer using `tempfile.mkdtemp` to create temporary directories.\n\nBut I think we can assume that args.output_dir already exists (the callers should handle the creation and deletion of this directory). So adding a check should be enough:\n```\nif not os.path.exists(output_dir):\n  raise FileNotFoundError(f\u0027Output directory {output_dir} does not exist.\u0027)\n```",
+      "range": {
+        "startLine": 220,
+        "startChar": 2,
+        "endLine": 221,
+        "endChar": 46
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cd59ada_cb9f6663",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "zipfile.is_zipfile(...)",
+      "range": {
+        "startLine": 226,
+        "startChar": 5,
+        "endLine": 226,
+        "endChar": 29
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b77b44da_e165073b",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "This will cause error when dir_path \u003d A and args.report_files[0] \u003d A/test_result.xml\n\nSuggestion:\n```\ndef extract_xml_from_zip(zip_file_path, output_dir):\n  ...\n  return os.path.join(output_dir, \u0027test_result.xml\u0027)\n\ndef main():\n  ...\n  xml_path \u003d (                                                                                                                                           \n      extract_xml_from_zip(args.report_files, output_dir)                                                                                                  \n      if zipfile.is_zipfile(args.report_files)                                                                                                           \n      else args.report_files) \n```",
+      "range": {
+        "startLine": 229,
+        "startChar": 4,
+        "endLine": 230,
+        "endChar": 62
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5b75ff9_19c6cfff",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-08T16:14:04Z",
+      "side": 1,
+      "message": "Please print all the output files:\n\n```\nparsed_info \u003d os.path.join(...)\nparsed_result \u003d os.path.join(...)\nparsed_summary \u003d os.path.join(...)\n\n...\n\nfor f in [parsed_info, parsed_result, parsed_summary]:\n  print(f\u0027Parsed output {f}\u0027)\n```",
+      "range": {
+        "startLine": 246,
+        "startChar": 2,
+        "endLine": 246,
+        "endChar": 34
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
