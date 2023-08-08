@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "245501e0_bad9bf0c",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ccf5948_8d954485",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a864251a_44d112fb",
@@ -35,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "418b8c5e_5e6fbaee",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a864251a_44d112fb",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74a118b0_cad981fa",
@@ -48,6 +84,30 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "should this be removed?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a5aaf0b_e373f90c",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74a118b0_cad981fa",
       "range": {
         "startLine": 20,
         "startChar": 0,
@@ -105,6 +165,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "12031f29_b6d57c29",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60e1be51_dbfae02d",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5784dd79_a2c814c6",
@@ -122,6 +206,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54e71d73_18b02f4e",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5784dd79_a2c814c6",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9d7cdfb0_a2c5d520",
@@ -135,6 +237,30 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "I think we can remove these three items",
+      "range": {
+        "startLine": 51,
+        "startChar": 17,
+        "endLine": 53,
+        "endChar": 47
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fb1d735_8cd0cf79",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d7cdfb0_a2c5d520",
       "range": {
         "startLine": 51,
         "startChar": 17,
@@ -164,6 +290,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d4d7dfd5_19de7b17",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "22c4f12b_d8fe497e",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f4e4c96_382e77d1",
         "filename": "tools/compare_failed_tests/aggregate.py",
         "patchSetId": 3
@@ -175,6 +319,24 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "can you also modify `compare_failed_tests.py` to use this function?",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "369037ba_d3432b43",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1f4e4c96_382e77d1",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -202,6 +364,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e27558b0_eb2c86a7",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bde5ba09_a2ee21d5",
+      "range": {
+        "startLine": 107,
+        "startChar": 2,
+        "endLine": 108,
+        "endChar": 49
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4cf4e2a5_be31ab50",
@@ -215,6 +401,24 @@
       "writtenOn": "2023-08-07T02:33:12Z",
       "side": 1,
       "message": "Very likely that we will get exception here if we return NO_DATA - the number of return value are different and different types.",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64f0d905_f28e6ecf",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4cf4e2a5_be31ab50",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -266,6 +470,24 @@
       "writtenOn": "2023-08-07T02:33:12Z",
       "side": 1,
       "message": "I think we can use logging package to handle those debug messages",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fac51e8_3dd22df3",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c6372c86_f7eb87d3",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -329,6 +551,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d6923b86_816d7526",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "1. How about making report files positional arguments instead of the optional ones? The user input would be something like `./parse_cts_report.py test_result_1.xml test_result_2.xml --output-dir tmp/`\n2. Setting nargs\u003d\u0027+\u0027 would raise an error when no argument is provided. Is `required\u003dTrue` still needed?",
+      "parentUuid": "481e4690_07cc9a4d",
+      "range": {
+        "startLine": 229,
+        "startChar": 2,
+        "endLine": 229,
+        "endChar": 85
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "08300fdb_f642d79d",
         "filename": "tools/compare_failed_tests/aggregate.py",
         "patchSetId": 3
@@ -373,6 +619,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "260ff8e8_889bdc24",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f65d182_82d2bab5",
+      "range": {
+        "startLine": 237,
+        "startChar": 37,
+        "endLine": 237,
+        "endChar": 66
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08fcd17d_9f058efa",
@@ -386,6 +656,30 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "os.path.join(dir_path, \u0027info.json\u0027)",
+      "range": {
+        "startLine": 241,
+        "startChar": 12,
+        "endLine": 241,
+        "endChar": 34
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58a8fe83_7b2e57bf",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08fcd17d_9f058efa",
       "range": {
         "startLine": 241,
         "startChar": 12,
@@ -419,6 +713,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "da74902c_d12fc987",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6eb755e0_b31816df",
+      "range": {
+        "startLine": 242,
+        "startChar": 4,
+        "endLine": 243,
+        "endChar": 25
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb296bd2_672891eb",
@@ -442,6 +760,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6df2608a_dc2e7c01",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb296bd2_672891eb",
+      "range": {
+        "startLine": 245,
+        "startChar": 2,
+        "endLine": 246,
+        "endChar": 65
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7c7276fb_7464ee47",
@@ -455,6 +797,24 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "please also print the path of script output files",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71fac387_eb13acd3",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T02:21:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c7276fb_7464ee47",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
