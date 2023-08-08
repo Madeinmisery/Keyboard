@@ -457,6 +457,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18d10240_298ed1d3",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T03:14:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57fb8d8f_f813321a",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6372c86_f7eb87d3",
@@ -505,6 +523,24 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "we also need the \u0027abi\u0027 column in the result_csvfile",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ec5322c_50e35e10",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T03:14:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebf87ebf_309a7d5a",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -587,6 +623,30 @@
       "side": 1,
       "message": "1. When we extend this script to support more inputs (although not now), I think using flags has some advantages in terms of\n  (a) less error-prone, because there is no danger of listing inputs in the wrong order.\n  (b) readability. because the name of flags can represent the meaning.\n\n2. `required\u003dTrue` means that this arg cannot be omitted. `nargs\u003d\u0027+\u0027` means that there must be at least one value presented when this arg is given. If we only set `nargs\u003d\u0027+\u0027`, something like `./parse_cts_report.py -d output_dir` would break.",
       "parentUuid": "d6923b86_816d7526",
+      "range": {
+        "startLine": 229,
+        "startChar": 2,
+        "endLine": 229,
+        "endChar": 85
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfa8d82b_8054ee77",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-08T03:14:17Z",
+      "side": 1,
+      "message": "\u003e 1. When we extend this script to support more inputs (although not now), I think using flags has some advantages in terms of\n\u003e   (a) less error-prone, because there is no danger of listing inputs in the wrong order.\n\u003e   (b) readability. because the name of flags can represent the meaning.\n\u003e \n\u003e 2. `required\u003dTrue` means that this arg cannot be omitted. `nargs\u003d\u0027+\u0027` means that there must be at least one value presented when this arg is given. If we only set `nargs\u003d\u0027+\u0027`, something like `./parse_cts_report.py -d output_dir` would break.\n\nI see. Thank you for the explanation!",
+      "parentUuid": "f8758f53_f0889620",
       "range": {
         "startLine": 229,
         "startChar": 2,
