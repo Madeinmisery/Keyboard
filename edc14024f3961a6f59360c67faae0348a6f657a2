@@ -306,6 +306,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0b3bb61_b5190374",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T06:39:55Z",
+      "side": 1,
+      "message": "Will do it in the next CL.",
+      "parentUuid": "d4d7dfd5_19de7b17",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1f4e4c96_382e77d1",
@@ -337,6 +355,24 @@
       "side": 1,
       "message": "Acknowledged",
       "parentUuid": "1f4e4c96_382e77d1",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3157224_ecc8e0da",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T06:39:55Z",
+      "side": 1,
+      "message": "Will do it in the next CL.",
+      "parentUuid": "369037ba_d3432b43",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -440,6 +476,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "280f0424_46d482d0",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T06:39:55Z",
+      "side": 1,
+      "message": "Will do it in the next CL.",
+      "parentUuid": "da5559f5_d8c15961",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57fb8d8f_f813321a",
@@ -510,6 +564,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7ad71d4_5b56ea24",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T06:39:55Z",
+      "side": 1,
+      "message": "Will do it in the next CL.",
+      "parentUuid": "3fac51e8_3dd22df3",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebf87ebf_309a7d5a",
@@ -558,6 +630,24 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "please make the method calls simpler so that users don\u0027t need to handle complicated logic when importing this script.\n\nSuggestion:\n```\ndef aggregate_reports(report_files, output_dir):\n  ...\n\ndef main():\n  parser \u003d argparse.ArgumentParser()\n  ...\n  args \u003d parser.parse_args()\n  \n  aggregate_reports(args.report_files, args.output_dir)\n```",
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c438701_8531ad2a",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T06:39:55Z",
+      "side": 1,
+      "message": "Will do it in the next CL.",
+      "parentUuid": "877a08b8_c4de8499",
       "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
