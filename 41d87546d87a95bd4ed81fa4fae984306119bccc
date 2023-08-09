@@ -20,6 +20,75 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c7d9a2c2_c6422b8a",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "This should also be modified",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ce4b9f1_36ef8e56",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "cts module",
+      "range": {
+        "startLine": 37,
+        "startChar": 50,
+        "endLine": 37,
+        "endChar": 56
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8811eec_8cefb686",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "xml tree",
+      "range": {
+        "startLine": 79,
+        "startChar": 24,
+        "endLine": 79,
+        "endChar": 39
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5d99fc15_cf85d3c0",
         "filename": "tools/compare_failed_tests/parse_cts_report.py",
         "patchSetId": 8
@@ -31,6 +100,75 @@
       "writtenOn": "2023-08-09T04:29:45Z",
       "side": 1,
       "message": "Sorry for missing this line when we are discussing orderDict. PCMIIW, I think currently we are relying on python 3.7+ to make it aligned with the previous defined order (aka, [\u0027pass\u0027, \u0027fail\u0027, \u0027IGNORED\u0027, ...]). \nWe can make it better by just having a single string array and depend on its order.",
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e626d6cb_c7ed9282",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "parsed_info",
+      "range": {
+        "startLine": 221,
+        "startChar": 12,
+        "endLine": 221,
+        "endChar": 49
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9d96b6b_ddce6540",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "parsed_result",
+      "range": {
+        "startLine": 225,
+        "startChar": 11,
+        "endLine": 225,
+        "endChar": 49
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67e015fe_38853b8c",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:23:20Z",
+      "side": 1,
+      "message": "parsed_summary",
+      "range": {
+        "startLine": 226,
+        "startChar": 11,
+        "endLine": 226,
+        "endChar": 50
+      },
       "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
