@@ -12,7 +12,6 @@
     "cap_lints": "",
     "static_libs": [],
     "shared_libs": [],
-    "emit_list": "dep-info,metadata,link",
     "edition": "2018",
     "package_dir": ".",
     "main_src": "src/lib.rs"
@@ -30,7 +29,6 @@
     "cap_lints": "",
     "static_libs": [],
     "shared_libs": [],
-    "emit_list": "dep-info,link",
     "edition": "2018",
     "package_dir": ".",
     "main_src": "src/lib.rs"
