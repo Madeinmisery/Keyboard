@@ -435,6 +435,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "815f356f_a7c15c53",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd44412b_809155fb",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 133,
+        "endChar": 50
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "91e5f566_ec858c3c",
@@ -593,6 +617,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6592ff7a_18b55090",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1d3030a_14540a83",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d71c17fb_9bfe2ab6",
@@ -610,6 +652,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef6548af_ccb26ba2",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d71c17fb_9bfe2ab6",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e676ca52_a6616f3a",
@@ -623,6 +683,24 @@
       "writtenOn": "2023-08-08T16:14:04Z",
       "side": 1,
       "message": "remove",
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a279f8e_50aa58ad",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e676ca52_a6616f3a",
       "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -1026,6 +1104,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e18b55b3_16cb477d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cd59ada_cb9f6663",
+      "range": {
+        "startLine": 226,
+        "startChar": 5,
+        "endLine": 226,
+        "endChar": 29
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b77b44da_e165073b",
@@ -1039,6 +1141,30 @@
       "writtenOn": "2023-08-08T16:14:04Z",
       "side": 1,
       "message": "This will cause error when dir_path \u003d A and args.report_files[0] \u003d A/test_result.xml\n\nSuggestion:\n```\ndef extract_xml_from_zip(zip_file_path, output_dir):\n  ...\n  return os.path.join(output_dir, \u0027test_result.xml\u0027)\n\ndef main():\n  ...\n  xml_path \u003d (                                                                                                                                           \n      extract_xml_from_zip(args.report_files, output_dir)                                                                                                  \n      if zipfile.is_zipfile(args.report_files)                                                                                                           \n      else args.report_files) \n```",
+      "range": {
+        "startLine": 229,
+        "startChar": 4,
+        "endLine": 230,
+        "endChar": 62
+      },
+      "revId": "1d4f8c5b189a25f3660054a336c0ce8df5524feb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82db75fa_b30fcc4f",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b77b44da_e165073b",
       "range": {
         "startLine": 229,
         "startChar": 4,

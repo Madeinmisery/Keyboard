@@ -657,6 +657,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "95ae0f5a_cf8e7524",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfa8d82b_8054ee77",
+      "range": {
+        "startLine": 229,
+        "startChar": 2,
+        "endLine": 229,
+        "endChar": 85
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08300fdb_f642d79d",
@@ -670,6 +694,30 @@
       "writtenOn": "2023-08-07T01:23:39Z",
       "side": 1,
       "message": "1. line too long (should \u003c 80 characters)\n2. This directory is more like the path to put the output files of this script. How about naming this parameter as `--output-dir`?\n3. help\u003d\u0027Path to the directory to store output files.\u0027\n4. Add `required\u003dTrue`",
+      "range": {
+        "startLine": 230,
+        "startChar": 2,
+        "endLine": 230,
+        "endChar": 91
+      },
+      "revId": "edc14024f3961a6f59360c67faae0348a6f657a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d43b609b_c2bc2a07",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T03:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08300fdb_f642d79d",
       "range": {
         "startLine": 230,
         "startChar": 2,
