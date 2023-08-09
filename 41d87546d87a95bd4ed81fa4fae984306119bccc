@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0941dc85_e83ee890",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c27d492_a516c77a",
+      "range": {
+        "startLine": 7,
+        "startChar": 26,
+        "endLine": 7,
+        "endChar": 33
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9fbd859f_3f84127c",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc4b9413_4f53dff1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9fbd859f_3f84127c",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 1
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "89fdc6d5_022b70fb",
@@ -60,6 +108,30 @@
       "writtenOn": "2023-08-09T05:37:17Z",
       "side": 1,
       "message": "```\n./parse_cts_report.py --report-file [a.zip, test_result.xml] \\\n    -d output_directory\n```",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 86
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "feadc809_98b7140b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "89fdc6d5_022b70fb",
       "range": {
         "startLine": 20,
         "startChar": 6,
@@ -112,6 +184,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c18c4191_17da2e06",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "\"\"\"Turn a cts report into three information files.\n\nGiven a zip file or a test_result.xml, this script read the xml file\nand produce three output files:\n  info.json\n  result.csv\n  summary.csv\n\"\"\"\n\nIs this ok?",
+      "parentUuid": "c7d9a2c2_c6422b8a",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 20,
+        "endChar": 29
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9ce4b9f1_36ef8e56",
         "filename": "tools/compare_failed_tests/parse_cts_report.py",
         "patchSetId": 8
@@ -123,6 +219,30 @@
       "writtenOn": "2023-08-09T05:23:20Z",
       "side": 1,
       "message": "cts module",
+      "range": {
+        "startLine": 37,
+        "startChar": 50,
+        "endLine": 37,
+        "endChar": 56
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bebb248_e14ef5a1",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ce4b9f1_36ef8e56",
       "range": {
         "startLine": 37,
         "startChar": 50,
@@ -146,6 +266,30 @@
       "writtenOn": "2023-08-09T05:23:20Z",
       "side": 1,
       "message": "xml tree",
+      "range": {
+        "startLine": 79,
+        "startChar": 24,
+        "endLine": 79,
+        "endChar": 39
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16013c11_b6069565",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8811eec_8cefb686",
       "range": {
         "startLine": 79,
         "startChar": 24,
@@ -191,6 +335,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33dacb05_1aeeb298",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "53baa42d_2bdb1699",
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e626d6cb_c7ed9282",
@@ -204,6 +366,30 @@
       "writtenOn": "2023-08-09T05:23:20Z",
       "side": 1,
       "message": "parsed_info",
+      "range": {
+        "startLine": 221,
+        "startChar": 12,
+        "endLine": 221,
+        "endChar": 49
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7c6a0de_89c4b224",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e626d6cb_c7ed9282",
       "range": {
         "startLine": 221,
         "startChar": 12,
@@ -237,6 +423,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7aa9fac1_cfee1fdc",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9d96b6b_ddce6540",
+      "range": {
+        "startLine": 225,
+        "startChar": 11,
+        "endLine": 225,
+        "endChar": 49
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67e015fe_38853b8c",
@@ -250,6 +460,30 @@
       "writtenOn": "2023-08-09T05:23:20Z",
       "side": 1,
       "message": "parsed_summary",
+      "range": {
+        "startLine": 226,
+        "startChar": 11,
+        "endLine": 226,
+        "endChar": 50
+      },
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cf1a5ac_fabebdf3",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-09T05:53:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "67e015fe_38853b8c",
       "range": {
         "startLine": 226,
         "startChar": 11,
