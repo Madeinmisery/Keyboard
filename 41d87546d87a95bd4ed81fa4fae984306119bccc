@@ -16,6 +16,23 @@
       "message": "Fixed.\nI also modified some arguments to make this CL specifically for one input file.",
       "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d99fc15_cf85d3c0",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-09T04:29:45Z",
+      "side": 1,
+      "message": "Sorry for missing this line when we are discussing orderDict. PCMIIW, I think currently we are relying on python 3.7+ to make it aligned with the previous defined order (aka, [\u0027pass\u0027, \u0027fail\u0027, \u0027IGNORED\u0027, ...]). \nWe can make it better by just having a single string array and depend on its order.",
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
