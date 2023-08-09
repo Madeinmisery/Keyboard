@@ -175,6 +175,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "53baa42d_2bdb1699",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-09T05:51:17Z",
+      "side": 1,
+      "message": "Good point. Dictionary order is guaranteed to be insertion order for python 3.7+; however, we may also want to ensure backward compatibility.",
+      "parentUuid": "5d99fc15_cf85d3c0",
+      "revId": "41d87546d87a95bd4ed81fa4fae984306119bccc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e626d6cb_c7ed9282",
         "filename": "tools/compare_failed_tests/parse_cts_report.py",
         "patchSetId": 8
