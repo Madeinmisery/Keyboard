@@ -273,6 +273,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "eec31e40_4937a34c",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-11T08:06:12Z",
+      "side": 1,
+      "message": "nit: module_summaries -\u003e module_summary -\u003e (abi_)summary.",
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4610243e_19d2305f",
         "filename": "tools/compare_failed_tests/parse_cts_report.py",
         "patchSetId": 2
@@ -422,6 +439,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "likewise, can we make this as a function of `CtsReport` class?",
+      "range": {
+        "startLine": 216,
+        "startChar": 4,
+        "endLine": 216,
+        "endChar": 16
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64deadc6_1224128e",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-11T08:06:12Z",
+      "side": 1,
+      "message": "Or even make `output_files` a method of class. I guess we will want to print them out again in aggregation.",
+      "parentUuid": "ae18ae12_de196605",
       "range": {
         "startLine": 216,
         "startChar": 4,
