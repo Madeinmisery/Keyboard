@@ -1,0 +1,481 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "470634a4_f56e73ee",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "I think we should rephrase this because the script can support parsing \u003e\u003d 1 cts reports.",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07bdce4b_51c070a1",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "Is this done or not?",
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "257a3c64_61736433",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `CtsReport` to make it specific",
+      "range": {
+        "startLine": 36,
+        "startChar": 6,
+        "endLine": 36,
+        "endChar": 12
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0292817_c7f6070d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "of a",
+      "range": {
+        "startLine": 37,
+        "startChar": 37,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ed9462c_e93c908d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `class_name`",
+      "range": {
+        "startLine": 45,
+        "startChar": 46,
+        "endLine": 45,
+        "endChar": 59
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb75d9eb_979922f8",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "Get test status from the Report object.",
+      "range": {
+        "startLine": 46,
+        "startChar": 7,
+        "endLine": 46,
+        "endChar": 40
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20a62604_49c7cc07",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `test_classes`",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 13
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1602d2c_52ef31ec",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `test_status`",
+      "range": {
+        "startLine": 65,
+        "startChar": 72,
+        "endLine": 65,
+        "endChar": 78
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac7d6170_411317fd",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `class_name`",
+      "range": {
+        "startLine": 65,
+        "startChar": 46,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bedf6e2_1b5b862d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "Set test status to the Report object.",
+      "range": {
+        "startLine": 66,
+        "startChar": 7,
+        "endLine": 66,
+        "endChar": 38
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecc9cfec_40dc3563",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "if not previous:",
+      "range": {
+        "startLine": 69,
+        "startChar": 4,
+        "endLine": 69,
+        "endChar": 24
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7f2107f_7acbe421",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `test_classes`",
+      "range": {
+        "startLine": 71,
+        "startChar": 6,
+        "endLine": 71,
+        "endChar": 15
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4610243e_19d2305f",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "`result_list` should be able to share among all instances of `CtsReport`. How about making this a class attribute?\n\n```\nclass CtsReport:\n  STATUS_ORDER \u003d [\u0027pass\u0027, ..., \u0027TEST_STATUS_UNSPECIFIED\u0027]\n  \n  def __init__(self, info):\n    ...\n  \n  ...\n  \n  class ModuleSummary:\n    ...\n```",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 53
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce8b4ba3_b4fdaa9e",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "why we need a separate function instead of doing the initialization directly at constructor?",
+      "range": {
+        "startLine": 98,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 28
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c100224_b4df4c5f",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "It seems that users are always calling this function with a created report object. Can we make this as a function of `CtsReport` class?\n\nFor example,\n```\ncts_report \u003d CtsReport(test_info)\ncts_report.read_test_result_xml(xml_path)\n```",
+      "range": {
+        "startLine": 194,
+        "startChar": 4,
+        "endLine": 194,
+        "endChar": 24
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c5f692a_d9c04d24",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "Report object",
+      "range": {
+        "startLine": 195,
+        "startChar": 59,
+        "endLine": 195,
+        "endChar": 65
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "132677fc_399af439",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `test_class`",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 16
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97a74206_14ec5036",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "prefer `class_name`",
+      "range": {
+        "startLine": 205,
+        "startChar": 6,
+        "endLine": 205,
+        "endChar": 19
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae18ae12_de196605",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "likewise, can we make this as a function of `CtsReport` class?",
+      "range": {
+        "startLine": 216,
+        "startChar": 4,
+        "endLine": 216,
+        "endChar": 16
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "383a9b36_75da14c9",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "`[\u0027module_name\u0027, \u0027abi\u0027] + CtsReport.STATUS_ORDER`",
+      "range": {
+        "startLine": 230,
+        "startChar": 26,
+        "endLine": 232,
+        "endChar": 53
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31488fa2_36162f84",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-11T07:21:15Z",
+      "side": 1,
+      "message": "object",
+      "range": {
+        "startLine": 250,
+        "startChar": 39,
+        "endLine": 250,
+        "endChar": 44
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
