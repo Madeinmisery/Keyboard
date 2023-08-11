@@ -14,13 +14,10 @@
 # License for the specific language governing permissions and limitations under
 # the License.
 #
-"""Turn a cts report into three information files.
+"""Aggregate cts reports into information files.
 
-Given a zip file or a test_result.xml, this script read the xml file
-and produce three output files:
-  info.json
-  result.csv
-  summary.csv
+Given several cts reports, this script turn them into one or more sets of
+information files.
 """
 
 import argparse
@@ -36,23 +33,85 @@ import zipfile
 # TODO(b/293809772): Aggregate several CTS reports.
 
 
-class ModuleSummary():
-  """Class to record the test result summary of a cts module."""
+class Report:
+  """Class to record the test result a cts report."""
 
-  def __init__(self):
-    self.counter = {
-        'pass': 0,
-        'fail': 0,
-        'IGNORED': 0,
-        'ASSUMPTION_FAILURE': 0,
-        'TEST_ERROR': 0,
-        'TEST_STATUS_UNSPECIFIED': 0,
-    }
+  # Constructor method
+  def __init__(self, info):
+    self.info = info
+    self.result_tree = {}
+    self.module_summary = {}
 
-  def print_info(self):
-    for key, value in self.counter.items():
-      print(f'{key}: {value}')
-    print()
+  def get_test_status(self, module_name, abi, testcase_name, test_name):
+    """Get result from the report class."""
+
+    if module_name not in self.result_tree:
+      return None
+    abis = self.result_tree[module_name]
+
+    if abi not in abis:
+      return None
+    testcases = abis[abi]
+
+    if testcase_name not in testcases:
+      return None
+    tests = testcases[testcase_name]
+
+    if test_name not in tests:
+      return None
+
+    return tests[test_name]
+
+  def set_test_status(self, module_name, abi, testcase_name, test_name, result):
+    """Set result to the report class."""
+
+    previous = self.get_test_status(module_name, abi, testcase_name, test_name)
+    if previous is None:
+      abis = self.result_tree.setdefault(module_name, {})
+      testcases = abis.setdefault(abi, {})
+      tests = testcases.setdefault(testcase_name, {})
+      tests[test_name] = result
+
+      module_summary = self.module_summary.setdefault(module_name, {})
+      summary = module_summary.setdefault(abi, self.ModuleSummary())
+      summary.counter[result] += 1
+    else:
+      summary = self.module_summary[module_name][abi]
+      if summary.result_list.find(result) < summary.result_list.find(previous):
+        tests[test_name] = result
+        summary[previous] -= 1
+        summary[result] += 1
+
+  class ModuleSummary:
+    """Record the result summary of each (module, abi) pair."""
+
+    def __init__(self):
+      self.result_list = ['pass',
+                          'fail',
+                          'IGNORED',
+                          'ASSUMPTION_FAILURE',
+                          'TEST_ERROR',
+                          'TEST_STATUS_UNSPECIFIED',]
+      self.counter = {}
+      self.reset_counter()
+
+    def reset_counter(self):
+      self.counter = {
+          'pass': 0,
+          'fail': 0,
+          'IGNORED': 0,
+          'ASSUMPTION_FAILURE': 0,
+          'TEST_ERROR': 0,
+          'TEST_STATUS_UNSPECIFIED': 0,
+      }
+
+    def print_summary(self):
+      for key in self.result_list:
+        print(f'{key}: {self.counter[key]}')
+        print()
+
+    def summary_list(self):
+      return [self.counter[type] for type in self.result_list]
 
 
 ATTRS_TO_SHOW = ['Result::Build.build_model',
@@ -68,12 +127,6 @@ ATTRS_TO_SHOW = ['Result::Build.build_model',
                  'Result.suite_version',
                  'Result.suite_plan',
                  'Result.suite_build_number',]
-RESULTS = ['pass',
-           'fail',
-           'IGNORED',
-           'ASSUMPTION_FAILURE',
-           'TEST_ERROR',
-           'TEST_STATUS_UNSPECIFIED',]
 
 
 def parse_attrib_path(attrib_path):
@@ -84,8 +137,11 @@ def parse_attrib_path(attrib_path):
   return tags, attr_name
 
 
-def get_test_info(root):
-  """Get test info from xml tree."""
+def get_test_info_xml(test_result_path):
+  """Get test info from xml file."""
+
+  tree = ET.parse(test_result_path)
+  root = tree.getroot()
 
   test_info = {}
 
@@ -108,7 +164,7 @@ def get_test_info(root):
 def print_test_info(test_result):
   """Print test information of the result in table format."""
 
-  info = test_result['info']
+  info = test_result.info
 
   max_key_len = max([len(k) for k in info])
   max_value_len = max([len(info[k]) for k in info])
@@ -123,58 +179,45 @@ def print_test_info(test_result):
   print()
 
 
-def extract_xml_from_zip(zip_file_path, output_dir):
+def extract_xml_from_zip(zip_file_path, dest_dir):
   """Extract test_result.xml from the zip file."""
 
   sub_dir_name = os.path.splitext(os.path.basename(zip_file_path))[0]
   xml_path = os.path.join(sub_dir_name, 'test_result.xml')
-  extracted_xml = os.path.join(output_dir, 'test_result.xml')
+  extracted_xml = os.path.join(dest_dir, 'test_result.xml')
   with zipfile.ZipFile(zip_file_path) as myzip:
     with myzip.open(xml_path) as source, open(extracted_xml, 'wb') as target:
       shutil.copyfileobj(source, target)
   return extracted_xml
 
 
-def read_test_result_xml(test_result_path):
-  """Given the path to a test_result.xml, read that into a dict."""
+def read_test_result_xml(report, test_result_path):
+  """Given the path to a test_result.xml, read that into a Report."""
 
   tree = ET.parse(test_result_path)
   root = tree.getroot()
 
-  test_result = {}
-  test_result['info'] = get_test_info(root)
-
-  modules = {}
-  test_result['modules'] = modules
-
   for module in root.iter('Module'):
     module_name = module.attrib['name']
-    abi_name = module.attrib['abi']
-
-    abis = modules.setdefault(module_name, {})
-    testcases = abis.setdefault(abi_name, {})
+    abi = module.attrib['abi']
 
     for testcase in module.iter('TestCase'):
       testcase_name = testcase.attrib['name']
 
-      tests = testcases.setdefault(testcase_name, {})
-
       for test in testcase.iter('Test'):
         test_name = test.attrib['name']
+        result = test.attrib['result']
+        report.set_test_status(module_name, abi,
+                               testcase_name, test_name, result)
 
-        if test_name in tests:
-          print('[WARNING] duplicated test:', test_name)
-
-        tests[test_name] = test.attrib['result']
-
-  return test_result
+  return report
 
 
-def write_to_csv(test_result, result_csvfile, summary_csvfile):
-  """Given a result dict, write to the csv files.
+def write_to_csv(report, result_csvfile, summary_csvfile):
+  """Given a report, write to the csv files.
 
   Args:
-    test_result: the dict returned from read_test_result(test_result.xml)
+    report: the Report class
     result_csvfile: path to result.csv
     summary_csvfile: path to summary.csv
   """
@@ -184,24 +227,57 @@ def write_to_csv(test_result, result_csvfile, summary_csvfile):
                           'class_name', 'test_name', 'result'])
 
   summary_writer = csv.writer(summary_csvfile)
-  summary_writer.writerow(['module', 'abi', 'pass', 'fail', 'IGNORED',
+  summary_writer.writerow(['module_name', 'abi', 'pass', 'fail', 'IGNORED',
                            'ASSUMPTION_FAILURE', 'TEST_ERROR',
                            'TEST_STATUS_UNSPECIFIED'])
 
-  modules = test_result['modules']
+  modules = report.result_tree
 
   for module_name, abis in modules.items():
-    module_result_summary = ModuleSummary()
-
     for abi_name, testcases in abis.items():
+      module_summary = report.module_summary[module_name][abi_name]
+
       for testcase_name, tests in testcases.items():
         for test_name, result in tests.items():
           result_writer.writerow([module_name, abi_name,
                                   testcase_name, test_name, result])
-          module_result_summary.counter[result] += 1
 
-      summary = [module_result_summary.counter[result] for result in RESULTS]
+      summary = module_summary.summary_list()
       summary_writer.writerow([module_name, abi_name] + summary)
+
+
+def parse_report_file(report_file, output_dir):
+  """Turn one cts report into a Report class."""
+
+  xml_path = (
+      extract_xml_from_zip(report_file, output_dir)
+      if zipfile.is_zipfile(report_file)
+      else report_file)
+  test_info = get_test_info_xml(xml_path)
+
+  report = read_test_result_xml(Report(test_info), xml_path)
+
+  return report
+
+
+def output_files(report, output_dir):
+  """Produce output files into the directory."""
+
+  parsed_info_path = os.path.join(output_dir, 'info.json')
+  parsed_result_path = os.path.join(output_dir, 'result.csv')
+  parsed_summary_path = os.path.join(output_dir, 'summary.csv')
+
+  with open(parsed_info_path, 'w') as info_file:
+    info_file.write(json.dumps(report.info, indent=2))
+
+  with (
+      open(parsed_result_path, 'w') as result_csvfile,
+      open(parsed_summary_path, 'w') as summary_csvfile,
+  ):
+    write_to_csv(report, result_csvfile, summary_csvfile)
+
+  for f in [parsed_info_path, parsed_result_path, parsed_summary_path]:
+    print(f'Parsed output {f}')
 
 
 def main():
@@ -215,33 +291,13 @@ def main():
 
   args = parser.parse_args()
 
+  report_file = args.report_file
   output_dir = args.output_dir
+
   if not os.path.exists(output_dir):
     raise FileNotFoundError(f'Output directory {output_dir} does not exist.')
 
-  xml_path = (
-      extract_xml_from_zip(args.report_file, output_dir)
-      if zipfile.is_zipfile(args.report_file)
-      else args.report_file)
-  test_result = read_test_result_xml(xml_path)
-
-  print_test_info(test_result)
-
-  parsed_info_path = os.path.join(output_dir, 'info.json')
-  parsed_result_path = os.path.join(output_dir, 'result.csv')
-  parsed_summary_path = os.path.join(output_dir, 'summary.csv')
-
-  with open(parsed_info_path, 'w') as info_file:
-    info_file.write(json.dumps(test_result['info'], indent=2))
-
-  with (
-      open(parsed_result_path, 'w') as result_csvfile,
-      open(parsed_summary_path, 'w') as summary_csvfile,
-  ):
-    write_to_csv(test_result, result_csvfile, summary_csvfile)
-
-  for f in [parsed_info_path, parsed_result_path, parsed_summary_path]:
-    print(f'Parsed output {f}')
+  output_files(parse_report_file(report_file, output_dir), output_dir)
 
 
 if __name__ == '__main__':
