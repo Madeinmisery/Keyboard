@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c252934_e72c9b26",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "470634a4_f56e73ee",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 20,
+        "endChar": 18
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "07bdce4b_51c070a1",
@@ -41,6 +65,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8a13ba2_186879b2",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Logging is not done yet; Aggregating reports would be done in another file.",
+      "parentUuid": "07bdce4b_51c070a1",
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "257a3c64_61736433",
@@ -54,6 +96,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "prefer `CtsReport` to make it specific",
+      "range": {
+        "startLine": 36,
+        "startChar": 6,
+        "endLine": 36,
+        "endChar": 12
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07841d0e_89a97023",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "257a3c64_61736433",
       "range": {
         "startLine": 36,
         "startChar": 6,
@@ -87,6 +153,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee1a8dfd_2f7aa26d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0292817_c7f6070d",
+      "range": {
+        "startLine": 37,
+        "startChar": 37,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4ed9462c_e93c908d",
@@ -100,6 +190,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "prefer `class_name`",
+      "range": {
+        "startLine": 45,
+        "startChar": 46,
+        "endLine": 45,
+        "endChar": 59
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "384b5240_5c1d7c49",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ed9462c_e93c908d",
       "range": {
         "startLine": 45,
         "startChar": 46,
@@ -133,6 +247,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c96e0bb0_61ce2a5f",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb75d9eb_979922f8",
+      "range": {
+        "startLine": 46,
+        "startChar": 7,
+        "endLine": 46,
+        "endChar": 40
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "20a62604_49c7cc07",
@@ -146,6 +284,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "prefer `test_classes`",
+      "range": {
+        "startLine": 54,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 13
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9dd2ae1a_8b230649",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20a62604_49c7cc07",
       "range": {
         "startLine": 54,
         "startChar": 4,
@@ -202,6 +364,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b96ef7aa_564d3701",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1602d2c_52ef31ec",
+      "range": {
+        "startLine": 65,
+        "startChar": 72,
+        "endLine": 65,
+        "endChar": 78
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9df571bd_18c3c0d8",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac7d6170_411317fd",
+      "range": {
+        "startLine": 65,
+        "startChar": 46,
+        "endLine": 65,
+        "endChar": 59
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1bedf6e2_1b5b862d",
@@ -215,6 +425,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "Set test status to the Report object.",
+      "range": {
+        "startLine": 66,
+        "startChar": 7,
+        "endLine": 66,
+        "endChar": 38
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3546ee10_29b84a84",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1bedf6e2_1b5b862d",
       "range": {
         "startLine": 66,
         "startChar": 7,
@@ -248,6 +482,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fea77aff_d718ac17",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ecc9cfec_40dc3563",
+      "range": {
+        "startLine": 69,
+        "startChar": 4,
+        "endLine": 69,
+        "endChar": 24
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7f2107f_7acbe421",
@@ -261,6 +519,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "prefer `test_classes`",
+      "range": {
+        "startLine": 71,
+        "startChar": 6,
+        "endLine": 71,
+        "endChar": 15
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54d76778_b3691b9c",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7f2107f_7acbe421",
       "range": {
         "startLine": 71,
         "startChar": 6,
@@ -288,6 +570,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "83db551d_eeebceb2",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eec31e40_4937a34c",
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4610243e_19d2305f",
@@ -301,6 +601,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "`result_list` should be able to share among all instances of `CtsReport`. How about making this a class attribute?\n\n```\nclass CtsReport:\n  STATUS_ORDER \u003d [\u0027pass\u0027, ..., \u0027TEST_STATUS_UNSPECIFIED\u0027]\n  \n  def __init__(self, info):\n    ...\n  \n  ...\n  \n  class ModuleSummary:\n    ...\n```",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 53
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "294c473c_2095a97a",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4610243e_19d2305f",
       "range": {
         "startLine": 89,
         "startChar": 0,
@@ -334,6 +658,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0ade053_6a2f4eb2",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "I forgot to delete it after changing my method. Deleted now.",
+      "parentUuid": "ce8b4ba3_b4fdaa9e",
+      "range": {
+        "startLine": 98,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 28
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c100224_b4df4c5f",
@@ -347,6 +695,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "It seems that users are always calling this function with a created report object. Can we make this as a function of `CtsReport` class?\n\nFor example,\n```\ncts_report \u003d CtsReport(test_info)\ncts_report.read_test_result_xml(xml_path)\n```",
+      "range": {
+        "startLine": 194,
+        "startChar": 4,
+        "endLine": 194,
+        "endChar": 24
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2984bc69_fac5c779",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2c100224_b4df4c5f",
       "range": {
         "startLine": 194,
         "startChar": 4,
@@ -380,6 +752,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d08e714_d1063477",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "I should also change it to CtsReport object right?",
+      "parentUuid": "0c5f692a_d9c04d24",
+      "range": {
+        "startLine": 195,
+        "startChar": 59,
+        "endLine": 195,
+        "endChar": 65
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "132677fc_399af439",
@@ -403,6 +799,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7598bab5_e422c648",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "132677fc_399af439",
+      "range": {
+        "startLine": 204,
+        "startChar": 8,
+        "endLine": 204,
+        "endChar": 16
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "97a74206_14ec5036",
@@ -416,6 +836,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "prefer `class_name`",
+      "range": {
+        "startLine": 205,
+        "startChar": 6,
+        "endLine": 205,
+        "endChar": 19
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6011274d_290ff3fa",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97a74206_14ec5036",
       "range": {
         "startLine": 205,
         "startChar": 6,
@@ -473,6 +917,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c939575e_078c2829",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64deadc6_1224128e",
+      "range": {
+        "startLine": 216,
+        "startChar": 4,
+        "endLine": 216,
+        "endChar": 16
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "383a9b36_75da14c9",
@@ -496,6 +964,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e67e45ae_8d7edfab",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "383a9b36_75da14c9",
+      "range": {
+        "startLine": 230,
+        "startChar": 26,
+        "endLine": 232,
+        "endChar": 53
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31488fa2_36162f84",
@@ -509,6 +1001,30 @@
       "writtenOn": "2023-08-11T07:21:15Z",
       "side": 1,
       "message": "object",
+      "range": {
+        "startLine": 250,
+        "startChar": 39,
+        "endLine": 250,
+        "endChar": 44
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89b6a866_7254afce",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-11T15:45:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31488fa2_36162f84",
       "range": {
         "startLine": 250,
         "startChar": 39,
