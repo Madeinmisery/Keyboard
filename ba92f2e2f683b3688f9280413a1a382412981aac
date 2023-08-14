@@ -776,6 +776,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b25ec20_9067990d",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "Yes!",
+      "parentUuid": "1d08e714_d1063477",
+      "range": {
+        "startLine": 195,
+        "startChar": 59,
+        "endLine": 195,
+        "endChar": 65
+      },
+      "revId": "ba92f2e2f683b3688f9280413a1a382412981aac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "132677fc_399af439",

@@ -16,6 +16,224 @@
       "message": "All comments resolved. Also added aggregate.py, please review, thank you!",
       "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83fe5355_0943578f",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "aggregate_cts_reports",
+      "range": {
+        "startLine": 31,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 21
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b725667f_74b76c40",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "please briefly introduce the aggregate policy here. For example, we should let users know the test status is aggregated according to `CtsReport.STATUS_ORDER`.",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "602a18fd_36f20c81",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "How do you plan to use this aggregate function? I think it\u0027s reasonable to assume that build fingerprints are consistent among all report files.",
+      "range": {
+        "startLine": 43,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 74
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fce9793a_0a48bccb",
+        "filename": "tools/compare_failed_tests/aggregate.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "remove test_result.xml only if it was created by this function.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 58
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c20d838_bfa580a7",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "prefer \"definitions-before-uses\" while deciding functions order because this makes code review easier. For example, we should define `write_to_csv` before `output_files` because `output_files` calls `write_to_csv`.",
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3674625c_408b17aa",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "can we move them outside the if-statement and share with line#82-84?",
+      "range": {
+        "startLine": 73,
+        "startChar": 6,
+        "endLine": 75,
+        "endChar": 53
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d266849_4632c717",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "move this into the if-statement at line#88 so that line#81 becomes `elif ...`:",
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cea4aec4_c0e1b981",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "prefer using `build_device`",
+      "range": {
+        "startLine": 116,
+        "startChar": 55,
+        "endLine": 116,
+        "endChar": 66
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6f28829_9989c33c",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "We may see two different builds having the same `build_device`, so we should not raise exception here.\n\nHow about creating the sub_dir at caller? We can use `mkdtemp` to avoid duplicate sub_dirs, for example:\n```\ndevice_name \u003d report.info[\u0027build_device\u0027]\nsub_dir \u003d tempfile.mkdtemp(prefix\u003df\u0027{device_name}_\u0027, dir\u003doutput_dir)\nreport.output_files(sub_dir)\n```\n\nBut we may need to check if there is no parsed info/result/summary files in this sub_dir to avoid overriding existing files.",
+      "range": {
+        "startLine": 118,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 26
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03cecbf0_e289b5ee",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-14T02:05:31Z",
+      "side": 1,
+      "message": "move them right after line#158",
+      "range": {
+        "startLine": 165,
+        "startChar": 0,
+        "endLine": 166,
+        "endChar": 66
+      },
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
