@@ -234,6 +234,23 @@
       },
       "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88ef961c_e874b8a1",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-14T02:53:30Z",
+      "side": 1,
+      "message": "nit: utilize CTSReport.STATUS_ORDER to set keys of the counter if possible.",
+      "revId": "7f911169658e1bb65feda6323c6fee489c49e712",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
