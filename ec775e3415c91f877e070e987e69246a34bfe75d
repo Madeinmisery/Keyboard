@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5017ebef_6d4640a5",
+        "filename": "tools/compare_failed_tests/aggregate_reports.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-15T08:23:40Z",
+      "side": 1,
+      "message": "TemporaryDirectory would remove `temp_dir` on destruction of the object.",
+      "revId": "ec775e3415c91f877e070e987e69246a34bfe75d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
