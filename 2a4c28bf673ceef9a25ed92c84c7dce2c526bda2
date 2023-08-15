@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16fe8647_aa70cc81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-15T18:36:02Z",
+      "side": 1,
+      "message": "seems like cargo2android.py has this, but only for debug output? dropping SGTM",
+      "revId": "2a4c28bf673ceef9a25ed92c84c7dce2c526bda2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
