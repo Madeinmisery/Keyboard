@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61653719_38dac008",
+        "filename": "tools/compare_failed_tests/aggregate_reports.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-15T08:12:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16e89085_69d69056",
+      "range": {
+        "startLine": 52,
+        "startChar": 46,
+        "endLine": 52,
+        "endChar": 61
+      },
+      "revId": "028f1f2342d198d591226b48a11e93d37565ac10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e05d5888_972f073f",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-08-15T07:32:55Z",
       "side": 1,
       "message": "likewise, please make sure that `temp_dir` will be deleted even if exceptions happen.",
+      "range": {
+        "startLine": 70,
+        "startChar": 2,
+        "endLine": 70,
+        "endChar": 25
+      },
+      "revId": "028f1f2342d198d591226b48a11e93d37565ac10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "882af863_acc686b7",
+        "filename": "tools/compare_failed_tests/aggregate_reports.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-15T08:12:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e05d5888_972f073f",
       "range": {
         "startLine": 70,
         "startChar": 2,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e1289f5_32073a25",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-15T08:12:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d35221b_b3e0dc08",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 18
+      },
+      "revId": "028f1f2342d198d591226b48a11e93d37565ac10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c8c7757_c9fb9469",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-08-15T07:32:55Z",
       "side": 1,
       "message": "Use try-finally to guarantee that `rmtree` is always called even if exceptions happen. (or use `tempfile.TemporaryDirectory`)\n```\ntry:\n  ...\nfinally:\n  shutil.rmtree(...)\n```",
+      "range": {
+        "startLine": 267,
+        "startChar": 0,
+        "endLine": 281,
+        "endChar": 25
+      },
+      "revId": "028f1f2342d198d591226b48a11e93d37565ac10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8212530_31f41162",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-15T08:12:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c8c7757_c9fb9469",
       "range": {
         "startLine": 267,
         "startChar": 0,
