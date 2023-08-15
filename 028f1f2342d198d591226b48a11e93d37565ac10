@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d35221b_b3e0dc08",
+        "filename": "tools/compare_failed_tests/parse_cts_report.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-15T04:54:12Z",
+      "side": 1,
+      "message": "```suggestion\n    return self.info[\u0027build_fingerprint\u0027] \u003d\u003d info[\u0027build_fingerprint\u0027]\n```",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 18
+      },
+      "revId": "028f1f2342d198d591226b48a11e93d37565ac10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
