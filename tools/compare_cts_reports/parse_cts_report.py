@@ -44,6 +44,9 @@ class CtsReport:
     self.result_tree = {}
     self.module_summaries = {}
 
+  def is_fail(self, status):
+    return (CtsReport.STATUS_ORDER.index(status) >= 3)
+
   def is_compatible(self, info):
     return self.info['build_fingerprint'] == info['build_fingerprint']
 
