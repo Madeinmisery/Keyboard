@@ -33,6 +33,9 @@ import zipfile
 # TODO(b/293809772): Logging.
 
 
+NO_DATA = 'null'
+
+
 class CtsReport:
   """Class to record the test result of a cts report."""
 
@@ -44,11 +47,32 @@ class CtsReport:
     self.result_tree = {}
     self.module_summaries = {}
 
+  @staticmethod
+  def is_fail(status):
+    if status == NO_DATA:
+      return False
+    else:
+      return (CtsReport.STATUS_ORDER.index(status) >= 3)
+
+  def gen_keys_list(self):
+    """Generate a 2D-list of keys."""
+
+    keys_list = []
+
+    modules = self.result_tree
+
+    for module_name, abis in modules.items():
+      for abi, test_classes in abis.items():
+        for class_name, tests in test_classes.items():
+          for test_name in tests.keys():
+            keys_list.append([module_name, abi, class_name, test_name])
+    return keys_list
+
   def is_compatible(self, info):
     return self.info['build_fingerprint'] == info['build_fingerprint']
 
-  def get_test_status(self, module_name, abi, class_name, test_name):
-    """Get test status from the CtsReport object."""
+  def get_tests_in_class(self, module_name, abi, class_name):
+    """Get the dictionary that stores test_name and results."""
 
     if module_name not in self.result_tree:
       return None
@@ -62,8 +86,15 @@ class CtsReport:
       return None
     tests = test_classes[class_name]
 
-    if test_name not in tests:
-      return None
+    return tests
+
+  def get_test_status(self, module_name, abi, class_name, test_name):
+    """Get test status from the CtsReport object."""
+
+    tests = self.get_tests_in_class(module_name, abi, class_name)
+
+    if (not tests) or (test_name not in tests):
+      return NO_DATA
 
     return tests[test_name]
 
@@ -77,7 +108,7 @@ class CtsReport:
     test_classes = abis.setdefault(abi, {})
     tests = test_classes.setdefault(class_name, {})
 
-    if not previous:
+    if previous == NO_DATA:
       tests[test_name] = test_status
 
       module_summary = self.module_summaries.setdefault(module_name, {})
