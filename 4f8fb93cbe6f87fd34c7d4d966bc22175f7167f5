@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "897b9851_4ef14869",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-18T08:02:09Z",
+      "side": 1,
+      "message": "Oops, accidentally have the same comment twice.",
+      "parentUuid": "add7191c_7b62e9c5",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5dc91ffc_d989e38a",
