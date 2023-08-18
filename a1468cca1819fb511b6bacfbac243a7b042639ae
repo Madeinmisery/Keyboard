@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ab65416_ba72e14b",
+        "filename": "tools/cargo_embargo/src/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-18T18:31:33Z",
+      "side": 1,
+      "message": "probably not worth duplicating the comment for a private function",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 68
+      },
+      "revId": "a1468cca1819fb511b6bacfbac243a7b042639ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8385f58_347f9275",
+        "filename": "tools/cargo_embargo/src/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-08-18T18:31:33Z",
+      "side": 1,
+      "message": "is there an advantage to use generics like this instead of `base_directory: \u0026Path`? the caller can do the `AsRef::as_ref`",
+      "range": {
+        "startLine": 100,
+        "startChar": 20,
+        "endLine": 100,
+        "endChar": 36
+      },
+      "revId": "a1468cca1819fb511b6bacfbac243a7b042639ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
