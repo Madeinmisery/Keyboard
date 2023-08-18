@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e418ec63_32d79266",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-18T08:01:19Z",
+      "side": 1,
+      "message": "nit: would be great if you can provide a small example here - I think the -r usage here is a little bit complicated.",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "add7191c_7b62e9c5",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-18T08:01:19Z",
+      "side": 1,
+      "message": "nit: It would be great if you can provide an example usage at here.",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5dc91ffc_d989e38a",
         "filename": "tools/compare_cts_reports/compare_cts_reports.py",
         "patchSetId": 1
@@ -14,6 +48,23 @@
       "writtenOn": "2023-08-18T03:50:07Z",
       "side": 1,
       "message": "Brainstorming: Is it possible that we eliminate these for loops by having a method that output all keys of a report in a 2D-list ?\n\nLike: [ [module1, abi1, class1, testname1], [module2, abi2, class2, testname2], ...]",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f0e465d_b3a4c4cd",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-18T08:01:19Z",
+      "side": 1,
+      "message": "nit: the output can be more human readable by putting tests under the same class together.",
       "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
