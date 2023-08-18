@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dc91ffc_d989e38a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-18T03:50:07Z",
+      "side": 1,
+      "message": "Brainstorming: Is it possible that we eliminate these for loops by having a method that output all keys of a report in a 2D-list ?\n\nLike: [ [module1, abi1, class1, testname1], [module2, abi2, class2, testname2], ...]",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
