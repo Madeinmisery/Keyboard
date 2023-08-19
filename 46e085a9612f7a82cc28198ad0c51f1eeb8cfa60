@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9d21f48_6c8126f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2023-08-19T00:25:33Z",
+      "side": 1,
+      "message": "I think we don\u0027t typically see this fail because `source build/envsetup.sh` puts this directory in PATH, so it works as long as you\u0027ve setup your build environment. This change seems reasonable though.",
+      "revId": "46e085a9612f7a82cc28198ad0c51f1eeb8cfa60",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
