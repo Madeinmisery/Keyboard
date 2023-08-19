@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8def216d_260330e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Mostly solved.",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e418ec63_32d79266",
@@ -53,6 +70,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "62a51583_59e9cdc0",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "e418ec63_32d79266",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "10469d33_37623367",
@@ -66,6 +101,30 @@
       "writtenOn": "2023-08-18T08:49:56Z",
       "side": 1,
       "message": "prefer `\u0027null\u0027`",
+      "range": {
+        "startLine": 35,
+        "startChar": 11,
+        "endLine": 35,
+        "endChar": 18
+      },
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78839ddc_5119252b",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10469d33_37623367",
       "range": {
         "startLine": 35,
         "startChar": 11,
@@ -99,6 +158,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d002771_53ae2736",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8a295c0_f90abc1c",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 2
+      },
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5dc91ffc_d989e38a",
@@ -112,6 +195,24 @@
       "writtenOn": "2023-08-18T03:50:07Z",
       "side": 1,
       "message": "Brainstorming: Is it possible that we eliminate these for loops by having a method that output all keys of a report in a 2D-list ?\n\nLike: [ [module1, abi1, class1, testname1], [module2, abi2, class2, testname2], ...]",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6761f74f_a61cabf4",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5dc91ffc_d989e38a",
       "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -151,6 +252,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04e581cc_ac5bb414",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e3e4a38_afbc65ee",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64b8baef_e4e1f3fb",
@@ -164,6 +283,30 @@
       "writtenOn": "2023-08-18T08:49:56Z",
       "side": 1,
       "message": "remove this since N-way mode has not implemented yet.",
+      "range": {
+        "startLine": 122,
+        "startChar": 70,
+        "endLine": 122,
+        "endChar": 75
+      },
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afa89a63_2e3f8480",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64b8baef_e4e1f3fb",
       "range": {
         "startLine": 122,
         "startChar": 70,
@@ -197,6 +340,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94ec5553_a98a14c4",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a6eed45_3a8be5cf",
+      "range": {
+        "startLine": 125,
+        "startChar": 44,
+        "endLine": 125,
+        "endChar": 57
+      },
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ba28df6_711f14cb",
@@ -220,6 +387,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1dcac461_e7d9a3af",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ba28df6_711f14cb",
+      "range": {
+        "startLine": 136,
+        "startChar": 5,
+        "endLine": 136,
+        "endChar": 33
+      },
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cdd97b7a_e7447ced",
@@ -233,6 +424,24 @@
       "writtenOn": "2023-08-18T08:49:56Z",
       "side": 1,
       "message": "Add `@staticmethod` so that we can use this utility function without having the class object.",
+      "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "096f5e2c_aa2df55c",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-19T09:50:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cdd97b7a_e7447ced",
       "revId": "4f8fb93cbe6f87fd34c7d4d966bc22175f7167f5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
