@@ -654,7 +654,21 @@ class Crate(object):
     copy_out = self.runner.copy_out_module_name()
     if copy_out:
       srcs.append(':' + copy_out)
-    self.dump_android_property_list('srcs', '"%s"', srcs)
+    # This is probably over inclusive, but it should be fine since this
+    # list is meant to be a list of sources which _might_ be used in
+    # compilation.
+    self.write('    srcs: ["**/*.rs"],')
+
+    # crate_root is the entry point and should be the only entry
+    # without the ":" prefix.
+    for i in range(0, len(srcs)):
+      if not srcs[i].startswith(":"):
+        self.write('    crate_root: "' + srcs.pop(i) + '",')
+        break
+
+    # Any remaining srcs entries are modules which provide source files.
+    if len(self.srcs) > 0:
+      self.dump_android_property_list('compile_data', '"%s"', srcs)
 
   def dump_defaults_module(self):
     """Dump a rust_defaults module to be shared by other modules."""
