@@ -136,6 +136,28 @@ class CtsReport:
           self.set_test_status(module_name, abi,
                                class_name, test_name, result)
 
+  def read_from_csv(self, result_csvfile, summary_csvfile):
+    """Read the results into the CtsReport object from parsed files.
+    
+    Args:
+      result_csvfile: path to result.csv
+      summary_csvfile: path to summary.csv
+    """
+
+    summary_reader = csv.reader(summary_csvfile)
+    summary = list(summary_reader)
+
+    result_reader = csv.reader(result_csvfile)
+    result = list(result_reader)
+
+    for row in summary[1:]:
+      module, abi, summaries = row[0], row[1], row[2:]
+      self.ModuleSummary.set_summary(module, abi, summaries)
+
+    for row in result[1:]:
+      module_name, abi, class_name, test_name, result = row
+      self.set_test_status(module_name, abi, class_name, test_name, result)
+
   def write_to_csv(self, result_csvfile, summary_csvfile):
     """Write the information of the report to the csv files.
 
@@ -195,9 +217,7 @@ class CtsReport:
     """Record the result summary of each (module, abi) pair."""
 
     def __init__(self):
-      self.counter = {}
-      for status in CtsReport.STATUS_ORDER:
-        self.counter[status] = 0
+      self.counter = dict.fromkeys(CtsReport.STATUS_ORDER, 0)
 
     def print_summary(self):
       for key in CtsReport.STATUS_ORDER:
@@ -205,8 +225,13 @@ class CtsReport:
         print()
 
     def summary_list(self):
-      return [self.counter[type] for type in CtsReport.STATUS_ORDER]
+      return [self.counter[key] for key in CtsReport.STATUS_ORDER]
 
+    def set_summary(self, module, abi, summaries):
+      module_summary = self.counter.setdefault(module, {})
+      # if len(CtsReport.STATUS_ORDER) != len(summaries):
+      #   print('ModuleSummary.set_summary() Error: length mismatch')
+      module_summary[abi] = dict(zip(CtsReport.STATUS_ORDER, summaries))
 
 ATTRS_TO_SHOW = ['Result::Build.build_model',
                  'Result::Build.build_id',

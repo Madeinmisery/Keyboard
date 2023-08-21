@@ -51,20 +51,42 @@ def aggregate_cts_reports(report_files):
   report = parse_cts_report.parse_report_file(first_report_file)
 
   with tempfile.TemporaryDirectory() as temp_dir:
-
     for report_file in report_files[1:]:
-      xml_path = (
-          parse_cts_report.extract_xml_from_zip(report_file, temp_dir)
-          if zipfile.is_zipfile(report_file)
-          else report_file)
+      if os.path.isdir(report_file):
+        parsed_info_path = os.path.join(report_file, 'info.json')
+        parsed_result_path = os.path.join(report_file, 'result.csv')
+        parsed_summary_path = os.path.join(report_file, 'summary.csv')
 
-      test_info = parse_cts_report.get_test_info_xml(xml_path)
+        files = [parsed_info_path, parsed_result_path, parsed_summary_path]
+
+        for f in files:
+          if not os.path.exists(f):
+            raise FileNotFoundError(f'Output file {f} does not exist.')
+
+        with open(parsed_info_path, 'r') as info_file:
+          test_info = json.loads(info_file.read())
+
+      else:
+        xml_path = (
+            parse_cts_report.extract_xml_from_zip(report_file, temp_dir)
+            if zipfile.is_zipfile(report_file)
+            else report_file)
+
+        test_info = parse_cts_report.get_test_info_xml(xml_path)
 
       if not report.is_compatible(test_info):
         msg = (f'{report_file} is incompatible to {first_report_file}.')
         raise UserWarning(msg)
 
-      report.read_test_result_xml(xml_path)
+      if os.path.isdir(report_file):
+        with (
+            open(parsed_result_path, 'w') as result_csvfile,
+            open(parsed_summary_path, 'w') as summary_csvfile,
+        ):
+          report.read_from_csv(result_csvfile, summary_csvfile)
+
+      else:
+        report.read_test_result_xml(xml_path)
 
   return report
 

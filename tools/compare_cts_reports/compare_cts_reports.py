@@ -122,8 +122,8 @@ def two_way_compare(reports, diff_csv):
       for abi, test_classes in abis.items():
         for class_name, tests in test_classes.items():
           for test_name, results in tests.items():
-            diff_writer.writerow([module_name, abi, class_name, test_name] +
-                                 results)
+            keys = [module_name, abi, class_name, test_name]
+            diff_writer.writerow(keys + results)
 
 
 def main():
