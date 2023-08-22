@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7e215be_54015293",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-22T01:39:40Z",
+      "side": 1,
+      "message": "How about removing repetitive code by:\n\n```\nfor i, report in enumerate(reports):\n  ...\n  tests[test_name][i] \u003d report.get_test_status(...)\n```",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 36
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1b4a461_0631d61a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-22T01:39:40Z",
+      "side": 1,
+      "message": "`diff_csv` should only list the tests having different results in report A and B.",
+      "range": {
+        "startLine": 125,
+        "startChar": 12,
+        "endLine": 126,
+        "endChar": 41
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc5c1cd3_13b76d67",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-22T01:39:40Z",
+      "side": 1,
+      "message": "Suggest using `f\u0027{len(ctsreports)}_{device_name}_\u0027` so that users can easily map the `sub_dir_name` to the reports even though the reports have the same `device_name`.",
+      "range": {
+        "startLine": 164,
+        "startChar": 38,
+        "endLine": 164,
+        "endChar": 62
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
