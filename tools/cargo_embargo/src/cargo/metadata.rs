@@ -99,16 +99,21 @@ pub enum TargetKind {
     Test,
 }
 
-pub fn parse_cargo_metadata_str(cargo_metadata: &str, cfg: &VariantConfig) -> Result<Vec<Crate>> {
+pub fn parse_cargo_metadata_str(
+    cargo_metadata: &str,
+    cfg: &VariantConfig,
+    base_directory: &Path,
+) -> Result<Vec<Crate>> {
     let metadata =
         serde_json::from_str(cargo_metadata).context("failed to parse cargo metadata")?;
-    parse_cargo_metadata(&metadata, &cfg.features, cfg.tests)
+    parse_cargo_metadata(&metadata, &cfg.features, cfg.tests, base_directory)
 }
 
 fn parse_cargo_metadata(
     metadata: &WorkspaceMetadata,
     features: &Option<Vec<String>>,
     include_tests: bool,
+    base_directory: &Path,
 ) -> Result<Vec<Crate>> {
     let mut crates = Vec::new();
     for package in &metadata.packages {
@@ -117,8 +122,11 @@ fn parse_cargo_metadata(
         }
 
         let features = resolve_features(features, &package.features, &package.dependencies);
-        let features_without_deps: Vec<String> =
-            features.clone().into_iter().filter(|feature| !feature.starts_with("dep:")).collect();
+        let features_without_deps: Vec<String> = features
+            .clone()
+            .into_iter()
+            .filter(|feature| !feature.starts_with("dep:"))
+            .collect();
         let package_dir = package_dir_from_id(&package.id)?;
 
         for target in &package.targets {
@@ -139,6 +147,16 @@ fn parse_cargo_metadata(
                 continue;
             }
             let main_src = split_src_path(&target.src_path, &package_dir);
+            // If `package_dir` is under `base_directory`, use the relative path.
+            println!(
+                "package_dir: {:?}, base_dir: {:?}",
+                package_dir, base_directory
+            );
+            let package_dir = if let Ok(relative) = package_dir.strip_prefix(base_directory) {
+                relative.to_owned()
+            } else {
+                package_dir.clone()
+            };
             // Hypens are not allowed in crate names. See
             // https://github.com/rust-lang/rfcs/blob/master/text/0940-hyphens-considered-harmful.md
             // for background.
@@ -180,7 +198,7 @@ fn parse_cargo_metadata(
                     types: vec![CrateType::Test],
                     features: features_without_deps.clone(),
                     edition: package.edition.to_owned(),
-                    package_dir: package_dir.clone(),
+                    package_dir,
                     main_src: main_src.to_owned(),
                     target: target_triple.clone(),
                     externs: get_externs(
@@ -248,19 +266,29 @@ fn make_extern(packages: &[PackageMetadata], package_name: &str) -> Result<Exter
     let Some(target) = package.targets.iter().find(|target| {
         target.kind.contains(&TargetKind::Lib) || target.kind.contains(&TargetKind::ProcMacro)
     }) else {
-        bail!("Package {} didn't have any library or proc-macro targets", package_name);
+        bail!(
+            "Package {} didn't have any library or proc-macro targets",
+            package_name
+        );
     };
     let lib_name = target.name.replace('-', "_");
 
     // Check whether the package is a proc macro.
-    let extern_type =
-        if package.targets.iter().any(|target| target.kind.contains(&TargetKind::ProcMacro)) {
-            ExternType::ProcMacro
-        } else {
-            ExternType::Rust
-        };
+    let extern_type = if package
+        .targets
+        .iter()
+        .any(|target| target.kind.contains(&TargetKind::ProcMacro))
+    {
+        ExternType::ProcMacro
+    } else {
+        ExternType::Rust
+    };
 
-    Ok(Extern { name: lib_name.clone(), lib_name, extern_type })
+    Ok(Extern {
+        name: lib_name.clone(),
+        lib_name,
+        extern_type,
+    })
 }
 
 /// Given a package ID like
@@ -269,8 +297,12 @@ fn make_extern(packages: &[PackageMetadata], package_name: &str) -> Result<Exter
 /// `"/usr/local/google/home/qwandor/aosp/external/rust/crates/either"`.
 fn package_dir_from_id(id: &str) -> Result<PathBuf> {
     const URI_MARKER: &str = "(path+file://";
-    let uri_start = id.find(URI_MARKER).ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
-    Ok(PathBuf::from(id[uri_start + URI_MARKER.len()..id.len() - 1].to_string()))
+    let uri_start = id
+        .find(URI_MARKER)
+        .ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
+    Ok(PathBuf::from(
+        id[uri_start + URI_MARKER.len()..id.len() - 1].to_string(),
+    ))
 }
 
 fn split_src_path<'a>(src_path: &'a Path, package_dir: &Path) -> &'a Path {
@@ -292,8 +324,10 @@ fn resolve_features(
     // Add implicit features for optional dependencies.
     for dependency in dependencies {
         if dependency.optional && !package_features.contains_key(&dependency.name) {
-            package_features
-                .insert(dependency.name.to_owned(), vec![format!("dep:{}", dependency.name)]);
+            package_features.insert(
+                dependency.name.to_owned(),
+                vec![format!("dep:{}", dependency.name)],
+            );
         }
     }
 
@@ -343,11 +377,19 @@ mod tests {
 
     #[test]
     fn resolve_multi_level_feature_dependencies() {
-        let chosen = vec!["default".to_string(), "extra".to_string(), "on_by_default".to_string()];
+        let chosen = vec![
+            "default".to_string(),
+            "extra".to_string(),
+            "on_by_default".to_string(),
+        ];
         let package_features = [
             (
                 "default".to_string(),
-                vec!["std".to_string(), "other".to_string(), "on_by_default".to_string()],
+                vec![
+                    "std".to_string(),
+                    "other".to_string(),
+                    "on_by_default".to_string(),
+                ],
             ),
             ("std".to_string(), vec!["alloc".to_string()]),
             ("not_enabled".to_string(), vec![]),
@@ -405,7 +447,11 @@ mod tests {
         ];
         assert_eq!(
             resolve_features(&None, &package_features, &dependencies),
-            vec!["default".to_string(), "dep:optionaldep".to_string(), "optionaldep".to_string()]
+            vec![
+                "default".to_string(),
+                "dep:optionaldep".to_string(),
+                "optionaldep".to_string()
+            ]
         );
     }
 
@@ -438,6 +484,7 @@ mod tests {
                             .with_context(|| format!("Failed to open {:?}", cargo_metadata_path))
                             .unwrap(),
                         variant_cfg,
+                        &testdata_directory_path,
                     )
                     .unwrap()
                 })

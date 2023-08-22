@@ -50,6 +50,7 @@ use once_cell::sync::Lazy;
 use std::collections::BTreeMap;
 use std::collections::VecDeque;
 use std::env;
+use std::env::current_dir;
 use std::fs::{read_to_string, write, File};
 use std::io::{Read, Write};
 use std::os::fd::{FromRawFd, OwnedFd};
@@ -89,7 +90,10 @@ fn override_module_name(
     blocklist: &[String],
     module_name_overrides: &BTreeMap<String, String>,
 ) -> Option<String> {
-    if blocklist.iter().any(|blocked_name| blocked_name == module_name) {
+    if blocklist
+        .iter()
+        .any(|blocked_name| blocked_name == module_name)
+    {
         None
     } else if let Some(overridden_name) = module_name_overrides.get(module_name) {
         Some(overridden_name.to_string())
@@ -178,23 +182,33 @@ fn dump_crates(args: &Args, config_filename: &Path, crates_filename: &Path) -> R
 fn autoconfig(args: &Args, config_filename: &Path) -> Result<()> {
     println!("Trying default config with tests...");
     let mut config_with_build = Config {
-        variants: vec![VariantConfig { tests: true, ..Default::default() }],
+        variants: vec![VariantConfig {
+            tests: true,
+            ..Default::default()
+        }],
         package: Default::default(),
     };
     let mut crates_with_build = make_all_crates(args, &config_with_build)?;
 
-    let has_tests =
-        crates_with_build[0].iter().any(|c| c.types.contains(&CrateType::Test) && !c.empty_test);
+    let has_tests = crates_with_build[0]
+        .iter()
+        .any(|c| c.types.contains(&CrateType::Test) && !c.empty_test);
     if !has_tests {
         println!("No tests, removing from config.");
-        config_with_build =
-            Config { variants: vec![Default::default()], package: Default::default() };
+        config_with_build = Config {
+            variants: vec![Default::default()],
+            package: Default::default(),
+        };
         crates_with_build = make_all_crates(args, &config_with_build)?;
     }
 
     println!("Trying without cargo build...");
     let config_no_build = Config {
-        variants: vec![VariantConfig { run_cargo: false, tests: has_tests, ..Default::default() }],
+        variants: vec![VariantConfig {
+            run_cargo: false,
+            tests: has_tests,
+            ..Default::default()
+        }],
         package: Default::default(),
     };
     let crates_without_build = make_all_crates(args, &config_no_build)?;
@@ -204,8 +218,14 @@ fn autoconfig(args: &Args, config_filename: &Path) -> Result<()> {
         config_no_build
     } else {
         println!("Output without build was different. Need to run cargo build.");
-        println!("With build: {}", serde_json::to_string_pretty(&crates_with_build)?);
-        println!("Without build: {}", serde_json::to_string_pretty(&crates_without_build)?);
+        println!(
+            "With build: {}",
+            serde_json::to_string_pretty(&crates_with_build)?
+        );
+        println!(
+            "Without build: {}",
+            serde_json::to_string_pretty(&crates_without_build)?
+        );
         config_with_build
     };
     write(config_filename, format!("{}\n", config.to_json_string()?))?;
@@ -251,12 +271,17 @@ fn add_to_path(extra_path: PathBuf) -> Result<()> {
 
 /// Calls make_crates for each variant in the given config.
 fn make_all_crates(args: &Args, cfg: &Config) -> Result<Vec<Vec<Crate>>> {
-    cfg.variants.iter().map(|variant| make_crates(args, variant)).collect()
+    cfg.variants
+        .iter()
+        .map(|variant| make_crates(args, variant))
+        .collect()
 }
 
 fn make_crates(args: &Args, cfg: &VariantConfig) -> Result<Vec<Crate>> {
     if !args.reuse_cargo_out
-        && !Path::new("Cargo.toml").try_exists().context("when checking Cargo.toml")?
+        && !Path::new("Cargo.toml")
+            .try_exists()
+            .context("when checking Cargo.toml")?
     {
         bail!("Cargo.toml missing. Run in a directory with a Cargo.toml file.");
     }
@@ -290,7 +315,12 @@ fn make_crates(args: &Args, cfg: &VariantConfig) -> Result<Vec<Crate>> {
     if cfg.run_cargo {
         parse_cargo_out(&cargo_output).context("parse_cargo_out failed")
     } else {
-        parse_cargo_metadata_str(&cargo_output.cargo_metadata, cfg)
+        let base_directory = if let Some(config_directory) = args.cfg.parent() {
+            config_directory.to_owned()
+        } else {
+            current_dir().unwrap()
+        };
+        parse_cargo_metadata_str(&cargo_output.cargo_metadata, cfg, &base_directory)
     }
 }
 
@@ -364,7 +394,9 @@ fn write_all_bp(
             package_name,
             &package_dir,
             &crates,
-            package_out_files.get(package_name).unwrap_or(&empty_package_out_files),
+            package_out_files
+                .get(package_name)
+                .unwrap_or(&empty_package_out_files),
         )
         .with_context(|| {
             format!("Writing Blueprint for package {:?} file {}", package_dir, package_name,)
@@ -377,7 +409,9 @@ fn write_all_bp(
 /// Runs the given command, and returns its standard output and standard error as a string.
 fn run_cargo(cmd: &mut Command) -> Result<String> {
     let (pipe_read, pipe_write) = pipe()?;
-    cmd.stdout(pipe_write.try_clone()?).stderr(pipe_write).stdin(Stdio::null());
+    cmd.stdout(pipe_write.try_clone()?)
+        .stderr(pipe_write)
+        .stdin(Stdio::null());
     debug!("Running: {:?}\n", cmd);
     let mut child = cmd.spawn()?;
 
@@ -429,7 +463,11 @@ fn generate_cargo_out(cfg: &VariantConfig) -> Result<CargoOutput> {
         if features.is_empty() {
             vec!["--no-default-features".to_string()]
         } else {
-            vec!["--no-default-features".to_string(), "--features".to_string(), features.join(",")]
+            vec![
+                "--no-default-features".to_string(),
+                "--features".to_string(),
+                features.join(","),
+            ]
         }
     } else {
         vec![]
@@ -493,7 +531,10 @@ fn generate_cargo_out(cfg: &VariantConfig) -> Result<CargoOutput> {
         }
     }
 
-    Ok(CargoOutput { cargo_metadata, cargo_out })
+    Ok(CargoOutput {
+        cargo_metadata,
+        cargo_out,
+    })
 }
 
 /// Create the Android.bp file for `package_dir`.
@@ -610,14 +651,14 @@ fn generate_android_bp(
     };
 
     for c in crates {
-        modules.extend(crate_to_bp_modules(c, cfg, package_cfg, &extra_srcs).with_context(
-            || {
+        modules.extend(
+            crate_to_bp_modules(c, cfg, package_cfg, &extra_srcs).with_context(|| {
                 format!(
                     "failed to generate bp module for crate \"{}\" with package name \"{}\"",
                     c.name, c.package_name
                 )
-            },
-        )?);
+            })?,
+        );
     }
 
     // In some cases there are nearly identical rustc invocations that that get processed into
@@ -643,8 +684,11 @@ fn write_format_android_bp(
 ) -> Result<()> {
     File::create(bp_path)?.write_all(bp_contents.as_bytes())?;
 
-    let bpfmt_output =
-        Command::new("bpfmt").arg("-w").arg(bp_path).output().context("Running bpfmt")?;
+    let bpfmt_output = Command::new("bpfmt")
+        .arg("-w")
+        .arg(bp_path)
+        .output()
+        .context("Running bpfmt")?;
     if !bpfmt_output.status.success() {
         eprintln!(
             "WARNING: bpfmt -w {:?} failed before patch: {}",
@@ -692,7 +736,11 @@ fn crate_to_bp_modules(
 ) -> Result<Vec<BpModule>> {
     let mut modules = Vec::new();
     for crate_type in &crate_.types {
-        let host = if package_cfg.device_supported { "" } else { "_host" };
+        let host = if package_cfg.device_supported {
+            ""
+        } else {
+            "_host"
+        };
         let rlib = if package_cfg.force_rlib { "_rlib" } else { "" };
         let (module_type, module_name) = match crate_type {
             CrateType::Bin => ("rust_binary".to_string() + host, crate_.name.clone()),
@@ -702,7 +750,10 @@ fn crate_to_bp_modules(
             }
             CrateType::DyLib => {
                 let stem = "lib".to_string() + &crate_.name;
-                ("rust_library".to_string() + host + "_dylib", stem + "_dylib")
+                (
+                    "rust_library".to_string() + host + "_dylib",
+                    stem + "_dylib",
+                )
             }
             CrateType::CDyLib => {
                 let stem = "lib".to_string() + &crate_.name;
@@ -735,9 +786,11 @@ fn crate_to_bp_modules(
         };
 
         let mut m = BpModule::new(module_type.clone());
-        let Some(module_name) =
-            override_module_name(&module_name, &cfg.module_blocklist, &cfg.module_name_overrides)
-        else {
+        let Some(module_name) = override_module_name(
+            &module_name,
+            &cfg.module_blocklist,
+            &cfg.module_name_overrides,
+        ) else {
             continue;
         };
         if matches!(
@@ -749,7 +802,11 @@ fn crate_to_bp_modules(
                 | CrateType::StaticLib
         ) && !module_name.starts_with(&format!("lib{}", crate_.name))
         {
-            bail!("Module name must start with lib{} but was {}", crate_.name, module_name);
+            bail!(
+                "Module name must start with lib{} but was {}",
+                crate_.name,
+                module_name
+            );
         }
         m.props.set("name", module_name.clone());
 
@@ -768,7 +825,8 @@ fn crate_to_bp_modules(
             m.props.set("compile_multilib", "first");
         }
         if crate_type.is_c_library() {
-            m.props.set_if_nonempty("include_dirs", package_cfg.exported_c_header_dir.clone());
+            m.props
+                .set_if_nonempty("include_dirs", package_cfg.exported_c_header_dir.clone());
         }
 
         m.props.set("crate_name", crate_.name.clone());
@@ -782,7 +840,9 @@ fn crate_to_bp_modules(
             m.props.set("test_suites", vec!["general-tests"]);
             m.props.set("auto_gen_config", true);
             if package_cfg.host_supported {
-                m.props.object("test_options").set("unit_test", !package_cfg.no_presubmit);
+                m.props
+                    .object("test_options")
+                    .set("unit_test", !package_cfg.no_presubmit);
             }
         }
 
@@ -807,7 +867,12 @@ fn crate_to_bp_modules(
         if !crate_.cap_lints.is_empty() {
             flags.push(crate_.cap_lints.clone());
         }
-        flags.extend(crate_.codegens.iter().map(|codegen| format!("-C {}", codegen)));
+        flags.extend(
+            crate_
+                .codegens
+                .iter()
+                .map(|codegen| format!("-C {}", codegen)),
+        );
         m.props.set_if_nonempty("flags", flags);
 
         let mut rust_libs = Vec::new();
@@ -836,14 +901,18 @@ fn crate_to_bp_modules(
             result.dedup();
             result
         };
-        m.props.set_if_nonempty("rustlibs", process_lib_deps(rust_libs));
-        m.props.set_if_nonempty("proc_macros", process_lib_deps(proc_macro_libs));
+        m.props
+            .set_if_nonempty("rustlibs", process_lib_deps(rust_libs));
+        m.props
+            .set_if_nonempty("proc_macros", process_lib_deps(proc_macro_libs));
         let (whole_static_libs, static_libs) = process_lib_deps(crate_.static_libs.clone())
             .into_iter()
             .partition(|static_lib| package_cfg.whole_static_libs.contains(static_lib));
         m.props.set_if_nonempty("static_libs", static_libs);
-        m.props.set_if_nonempty("whole_static_libs", whole_static_libs);
-        m.props.set_if_nonempty("shared_libs", process_lib_deps(crate_.shared_libs.clone()));
+        m.props
+            .set_if_nonempty("whole_static_libs", whole_static_libs);
+        m.props
+            .set_if_nonempty("shared_libs", process_lib_deps(crate_.shared_libs.clone()));
 
         if package_cfg.device_supported {
             if !crate_type.is_test() {
@@ -867,15 +936,17 @@ fn crate_to_bp_modules(
                 }
             }
             if crate_type.is_library() {
-                m.props.set_if_nonempty("apex_available", cfg.apex_available.clone());
+                m.props
+                    .set_if_nonempty("apex_available", cfg.apex_available.clone());
                 if let Some(min_sdk_version) = &cfg.min_sdk_version {
                     m.props.set("min_sdk_version", min_sdk_version.clone());
                 }
             }
         }
         if crate_type.is_test() {
-            if let Some(data) =
-                package_cfg.test_data.get(crate_.main_src.to_string_lossy().as_ref())
+            if let Some(data) = package_cfg
+                .test_data
+                .get(crate_.main_src.to_string_lossy().as_ref())
             {
                 m.props.set("data", data.clone());
             }
@@ -925,8 +996,12 @@ mod tests {
             let config_file = PathBuf::from("cargo_embargo.json");
             let output_file = "Android.bp";
             let expected_output_file = "expected_Android.bp";
-            let args =
-                Args { cargo_bin: None, cfg: config_file, reuse_cargo_out: true, mode: None };
+            let args = Args {
+                cargo_bin: None,
+                cfg: config_file,
+                reuse_cargo_out: true,
+                mode: None,
+            };
             run(args).expect("cargo_embargo failed");
             assert_eq!(
                 read_to_string(output_file).expect("Error opening output file"),
@@ -937,8 +1012,11 @@ mod tests {
 
     #[test]
     fn group_variants_by_package() {
-        let main_v1 =
-            Crate { name: "main_v1".to_string(), package_dir: "main".into(), ..Default::default() };
+        let main_v1 = Crate {
+            name: "main_v1".to_string(),
+            package_dir: "main".into(),
+            ..Default::default()
+        };
         let main_v1_tests = Crate {
             name: "main_v1_tests".to_string(),
             package_dir: "main".into(),
@@ -949,10 +1027,16 @@ mod tests {
             package_dir: "other".into(),
             ..Default::default()
         };
-        let main_v2 =
-            Crate { name: "main_v2".to_string(), package_dir: "main".into(), ..Default::default() };
-        let some_v2 =
-            Crate { name: "some_v2".to_string(), package_dir: "some".into(), ..Default::default() };
+        let main_v2 = Crate {
+            name: "main_v2".to_string(),
+            package_dir: "main".into(),
+            ..Default::default()
+        };
+        let some_v2 = Crate {
+            name: "some_v2".to_string(),
+            package_dir: "some".into(),
+            ..Default::default()
+        };
         let crates = vec![
             vec![main_v1.clone(), main_v1_tests.clone(), other_v1.clone()],
             vec![main_v2.clone(), some_v2.clone()],
@@ -961,7 +1045,10 @@ mod tests {
         let module_by_package = group_by_package(crates);
 
         let expected_by_package: BTreeMap<PathBuf, Vec<Vec<Crate>>> = [
-            ("main".into(), vec![vec![main_v1, main_v1_tests], vec![main_v2]]),
+            (
+                "main".into(),
+                vec![vec![main_v1, main_v1_tests], vec![main_v2]],
+            ),
             ("other".into(), vec![vec![other_v1], vec![]]),
             ("some".into(), vec![vec![], vec![some_v2]]),
         ]
@@ -974,8 +1061,14 @@ mod tests {
     fn generate_bp() {
         for testdata_directory_path in testdata_directories() {
             debug!("testdata directory: {:?}", testdata_directory_path);
-            debug!("dir contents: {:?}", std::fs::read_dir(&testdata_directory_path).unwrap());
-            debug!("Loading {:?}", testdata_directory_path.join("cargo_embargo.json"));
+            debug!(
+                "dir contents: {:?}",
+                std::fs::read_dir(&testdata_directory_path).unwrap()
+            );
+            debug!(
+                "Loading {:?}",
+                testdata_directory_path.join("cargo_embargo.json")
+            );
             let cfg = Config::from_json_str(
                 &read_to_string(testdata_directory_path.join("cargo_embargo.json"))
                     .expect("Failed to open cargo_embargo.json"),
@@ -1028,8 +1121,12 @@ mod tests {
             types: vec![],
             ..Default::default()
         };
-        let cfg = VariantConfig { ..Default::default() };
-        let package_cfg = PackageVariantConfig { ..Default::default() };
+        let cfg = VariantConfig {
+            ..Default::default()
+        };
+        let package_cfg = PackageVariantConfig {
+            ..Default::default()
+        };
         let modules = crate_to_bp_modules(&c, &cfg, &package_cfg, &[]).unwrap();
 
         assert_eq!(modules, vec![]);
@@ -1044,8 +1141,12 @@ mod tests {
             types: vec![CrateType::Lib],
             ..Default::default()
         };
-        let cfg = VariantConfig { ..Default::default() };
-        let package_cfg = PackageVariantConfig { ..Default::default() };
+        let cfg = VariantConfig {
+            ..Default::default()
+        };
+        let package_cfg = PackageVariantConfig {
+            ..Default::default()
+        };
         let modules = crate_to_bp_modules(&c, &cfg, &package_cfg, &[]).unwrap();
 
         assert_eq!(
@@ -1062,12 +1163,18 @@ mod tests {
                             ])
                         ),
                         ("cargo_env_compat".to_string(), BpValue::Bool(true)),
-                        ("crate_name".to_string(), BpValue::String("name".to_string())),
+                        (
+                            "crate_name".to_string(),
+                            BpValue::String("name".to_string())
+                        ),
                         ("edition".to_string(), BpValue::String("2021".to_string())),
                         ("host_supported".to_string(), BpValue::Bool(true)),
                         ("name".to_string(), BpValue::String("libname".to_string())),
                         ("product_available".to_string(), BpValue::Bool(true)),
-                        ("srcs".to_string(), BpValue::List(vec![BpValue::String("".to_string())])),
+                        (
+                            "srcs".to_string(),
+                            BpValue::List(vec![BpValue::String("".to_string())])
+                        ),
                         ("vendor_available".to_string(), BpValue::Bool(true)),
                     ]
                     .into_iter()
@@ -1087,8 +1194,12 @@ mod tests {
             types: vec![CrateType::Lib],
             ..Default::default()
         };
-        let cfg = VariantConfig { ..Default::default() };
-        let package_cfg = PackageVariantConfig { ..Default::default() };
+        let cfg = VariantConfig {
+            ..Default::default()
+        };
+        let package_cfg = PackageVariantConfig {
+            ..Default::default()
+        };
         let modules = crate_to_bp_modules(&c, &cfg, &package_cfg, &[]).unwrap();
 
         assert_eq!(
@@ -1108,9 +1219,15 @@ mod tests {
                         ("crate_name".to_string(), BpValue::String("ash".to_string())),
                         ("edition".to_string(), BpValue::String("2021".to_string())),
                         ("host_supported".to_string(), BpValue::Bool(true)),
-                        ("name".to_string(), BpValue::String("libash_rust".to_string())),
+                        (
+                            "name".to_string(),
+                            BpValue::String("libash_rust".to_string())
+                        ),
                         ("product_available".to_string(), BpValue::Bool(true)),
-                        ("srcs".to_string(), BpValue::List(vec![BpValue::String("".to_string())])),
+                        (
+                            "srcs".to_string(),
+                            BpValue::List(vec![BpValue::String("".to_string())])
+                        ),
                         ("vendor_available".to_string(), BpValue::Bool(true)),
                     ]
                     .into_iter()
