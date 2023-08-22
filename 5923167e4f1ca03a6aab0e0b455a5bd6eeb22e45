@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2904a3dd_454c780a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-22T07:03:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7e215be_54015293",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 36
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a1b4a461_0631d61a",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "067d5da1_5d4d0339",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-22T07:03:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1b4a461_0631d61a",
+      "range": {
+        "startLine": 125,
+        "startChar": 12,
+        "endLine": 126,
+        "endChar": 41
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc5c1cd3_13b76d67",
@@ -60,6 +108,30 @@
       "writtenOn": "2023-08-22T01:39:40Z",
       "side": 1,
       "message": "Suggest using `f\u0027{len(ctsreports)}_{device_name}_\u0027` so that users can easily map the `sub_dir_name` to the reports even though the reports have the same `device_name`.",
+      "range": {
+        "startLine": 164,
+        "startChar": 38,
+        "endLine": 164,
+        "endChar": 62
+      },
+      "revId": "5923167e4f1ca03a6aab0e0b455a5bd6eeb22e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38dad410_622404fc",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-22T07:03:40Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "cc5c1cd3_13b76d67",
       "range": {
         "startLine": 164,
         "startChar": 38,
