@@ -42,6 +42,8 @@ class CtsReport:
   STATUS_ORDER = ['pass', 'IGNORED', 'ASSUMPTION_FAILURE', 'fail',
                   'TEST_ERROR', 'TEST_STATUS_UNSPECIFIED']
 
+  fail_index = 3
+
   def __init__(self, info):
     self.info = info
     self.result_tree = {}
@@ -52,7 +54,7 @@ class CtsReport:
     if status == NO_DATA:
       return False
     else:
-      return (CtsReport.STATUS_ORDER.index(status) >= 3)
+      return (CtsReport.STATUS_ORDER.index(status) >= CtsReport.fail_index)
 
   def gen_keys_list(self):
     """Generate a 2D-list of keys."""
@@ -107,6 +109,7 @@ class CtsReport:
       module_summary = self.module_summaries.setdefault(module_name, {})
       summary = module_summary.setdefault(abi, self.ModuleSummary())
       summary.counter[test_status] += 1
+      summary.counter['tested_items'] += 1
 
     elif (CtsReport.STATUS_ORDER.index(test_status)
           < CtsReport.STATUS_ORDER.index(previous)):
@@ -145,7 +148,8 @@ class CtsReport:
     """
 
     summary_writer = csv.writer(summary_csvfile)
-    summary_writer.writerow(['module_name', 'abi'] + CtsReport.STATUS_ORDER)
+    summary_writer.writerow(['module_name', 'abi'] + CtsReport.STATUS_ORDER +
+                            ['tested_items', 'pass_rate'])
 
     result_writer = csv.writer(result_csvfile)
     result_writer.writerow(['module_name', 'abi',
@@ -157,7 +161,9 @@ class CtsReport:
       for abi, test_classes in abis.items():
         module_summary = self.module_summaries[module_name][abi]
         summary = module_summary.summary_list()
-        summary_writer.writerow([module_name, abi] + summary)
+        module_summary.cal_pass_rate()
+        pass_rate = module_summary.pass_rate
+        summary_writer.writerow([module_name, abi] + summary + [pass_rate])
 
         for class_name, tests in test_classes.items():
           for test_name, result in tests.items():
@@ -195,7 +201,8 @@ class CtsReport:
     """Record the result summary of each (module, abi) pair."""
 
     def __init__(self):
-      self.counter = dict.fromkeys(CtsReport.STATUS_ORDER, 0)
+      self.counter = dict.fromkeys(CtsReport.STATUS_ORDER + ['tested_items'], 0)
+      self.pass_rate = 0
 
     def print_summary(self):
       for key in CtsReport.STATUS_ORDER:
@@ -204,6 +211,15 @@ class CtsReport:
 
     def summary_list(self):
       return [self.counter[type] for type in CtsReport.STATUS_ORDER]
+
+    def cal_pass_rate(self):
+      if self.counter['tested_items'] == 0:
+        self.pass_rate = 0
+      else:
+        pass_category = 0
+        for status in CtsReport.STATUS_ORDER[:CtsReport.fail_index]:
+          pass_category += self.counter[status]
+        self.pass_rate = pass_category/self.counter['tested_items']
 
 
 ATTRS_TO_SHOW = ['Result::Build.build_model',
