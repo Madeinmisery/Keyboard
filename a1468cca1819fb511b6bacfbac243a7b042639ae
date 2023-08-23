@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "abe8f848_9efb14e8",
+        "filename": "tools/cargo_embargo/src/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-08-23T10:26:06Z",
+      "side": 1,
+      "message": "I find it useful to keep track of exactly what each function is doing, as I refactor them and for tests.",
+      "parentUuid": "6ab65416_ba72e14b",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 68
+      },
+      "revId": "a1468cca1819fb511b6bacfbac243a7b042639ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8385f58_347f9275",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-08-18T18:31:33Z",
       "side": 1,
       "message": "is there an advantage to use generics like this instead of `base_directory: \u0026Path`? the caller can do the `AsRef::as_ref`",
+      "range": {
+        "startLine": 100,
+        "startChar": 20,
+        "endLine": 100,
+        "endChar": 36
+      },
+      "revId": "a1468cca1819fb511b6bacfbac243a7b042639ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b54e9f9_f1efb0be",
+        "filename": "tools/cargo_embargo/src/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-08-23T10:26:06Z",
+      "side": 1,
+      "message": "It means that the caller can pass a `Path`, a `PathBuf`, an `\u0026str` or various other types without any extra effort. We use this in `main.rs`, and it\u0027s often useful for tests too.",
+      "parentUuid": "e8385f58_347f9275",
       "range": {
         "startLine": 100,
         "startChar": 20,
