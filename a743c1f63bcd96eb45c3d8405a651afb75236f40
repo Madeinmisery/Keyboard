@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c508d77_bff113b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-23T10:53:59Z",
+      "side": 1,
+      "message": "The goal of this CL is to implement N_way comparison. Currently the script sorts the modules by the lowest pass rate in all reports, and shows 7 other rows along with pass_rate.",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
