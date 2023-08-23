@@ -34,6 +34,7 @@ Usage example:
 import argparse
 import csv
 import os
+import re
 import tempfile
 
 import aggregate_cts_reports
@@ -115,6 +116,74 @@ def two_way_compare(reports, diff_csv):
               diff_writer.writerow(row)
 
 
+def gen_summary_row(reports, module_with_abi, title):
+  """Generate one row of diff.csv."""
+
+  row = []
+
+  abi_with_bracket = re.findall(r'\[[^\[^\]]+\]$', module_with_abi)[0]
+
+  module_name = module_with_abi.removesuffix(abi_with_bracket)
+  abi = abi_with_bracket[1:-1]
+
+  for report in reports:
+    module_summary = report.module_summaries.setdefault(module_name, {})
+    summary = module_summary.setdefault(abi, None)
+
+    if not summary:
+      row.append(0.0 if title == 'pass_rate' else 0)
+    elif title in summary.counter:
+      row.append(summary.counter[title])
+    else:
+      row.append(summary.pass_rate)
+
+  return row
+
+
+def n_way_compare(reports, diff_csv):
+  """Compare multiple reports in N-way Mode.
+
+  Given multiple sets of reports, aggregate them into reports. Then, summarize
+  the results in these reports.
+
+  Args:
+    reports: list of reports
+    diff_csv: path to csv which stores comparison results
+  """
+
+  modules_min_rate = {}
+  report_titles = []
+
+  for i, report in enumerate(reports):
+    device_name = report.info['build_device']
+    report_titles.append(f'{i}_{device_name}')
+
+    for module_name, abis in report.module_summaries.items():
+      for abi, summary in abis.items():
+        module_with_abi = f'{module_name}[{abi}]'
+        summary.cal_pass_rate()
+
+        if module_with_abi not in modules_min_rate:
+          modules_min_rate[module_with_abi] = summary.pass_rate if i == 0 else 0
+
+        elif summary.pass_rate < modules_min_rate[module_with_abi]:
+          modules_min_rate[module_with_abi] = summary.pass_rate
+
+  module_order = sorted(modules_min_rate)
+
+  titles = (parse_cts_report.CtsReport.STATUS_ORDER +
+            ['tested_items', 'pass_rate'])
+
+  with open(diff_csv, 'w') as diff_csvfile:
+    diff_writer = csv.writer(diff_csvfile)
+    diff_writer.writerow(['module_with_abi', ''] + report_titles)
+
+    for module_with_abi in module_order:
+      for title in titles:
+        row = gen_summary_row(reports, module_with_abi, title)
+        diff_writer.writerow([module_with_abi, title] + row)
+
+
 def main():
   parser = argparse.ArgumentParser()
 
@@ -122,8 +191,9 @@ def main():
                       help=('Path to cts reports. Each flag -r is followed by'
                             'a group of files to be aggregated as one report.'),
                       action='append')
-  parser.add_argument('--mode', '-m', required=True, choices=['1', '2'],
-                      help='Comparison mode. 1: One-way mode. 2: Two-way mode.')
+  parser.add_argument('--mode', '-m', required=True, choices=['1', '2', 'n'],
+                      help=('Comparison mode. 1: One-way mode. '
+                            '2: Two-way mode. n: N-way mode.'))
   parser.add_argument('--output-dir', '-d', required=True,
                       help='Directory to store output files.')
   parser.add_argument('--csv', default='diff.csv', help='Path to csv output.')
@@ -161,8 +231,7 @@ def main():
   elif args.mode == '2':
     two_way_compare(ctsreports, diff_csv)
   else:
-    # TODO(b/292453652): Implement N-way comparison.
-    print('Error: Arg --mode must be 1 or 2.')
+    n_way_compare(ctsreports, diff_csv)
 
 
 if __name__ == '__main__':
