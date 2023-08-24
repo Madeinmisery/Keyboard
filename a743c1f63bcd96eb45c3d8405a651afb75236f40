@@ -219,6 +219,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "100c33e6_11ce9ae4",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T08:02:19Z",
+      "side": 1,
+      "message": "SGTM",
+      "parentUuid": "30639444_bde30f2c",
+      "range": {
+        "startLine": 179,
+        "startChar": 45,
+        "endLine": 179,
+        "endChar": 47
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "20f1a4cb_a8abb489",
         "filename": "tools/compare_cts_reports/compare_cts_reports.py",
         "patchSetId": 2
