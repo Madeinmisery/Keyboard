@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edd127a2_944b4ffe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2023-08-24T22:27:40Z",
+      "side": 1,
+      "message": "LGTM but I can\u0027t +2",
+      "revId": "e88e4d6a5f104ca1f077bf5bd9059bdb85faa41b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
