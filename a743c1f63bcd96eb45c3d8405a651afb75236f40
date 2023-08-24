@@ -16,6 +16,224 @@
       "message": "The goal of this CL is to implement N_way comparison. Currently the script sorts the modules by the lowest pass rate in all reports, and shows 7 other rows along with pass_rate.",
       "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "939801ca_59a46f62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "cc",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d19f8945_49eef747",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "I think it a little bit weird to modify `report.module_summaries` in this function. Can we just check if `[module_name][abi]` exisits?",
+      "range": {
+        "startLine": 130,
+        "startChar": 4,
+        "endLine": 131,
+        "endChar": 50
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fbb2ec6_67f4cdff",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "0.0",
+      "range": {
+        "startLine": 167,
+        "startChar": 79,
+        "endLine": 167,
+        "endChar": 80
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60539eb3_be167cbc",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "why using empty string here?",
+      "range": {
+        "startLine": 179,
+        "startChar": 45,
+        "endLine": 179,
+        "endChar": 47
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20f1a4cb_a8abb489",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "```\nelif args.mode \u003d\u003d \u0027n\u0027:\n  ...\nelse:\n  print error\n```",
+      "range": {
+        "startLine": 233,
+        "startChar": 2,
+        "endLine": 233,
+        "endChar": 6
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad3b5051_06b5d819",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "Constants should be named using CAPS_WITH_UNDERSCORES",
+      "range": {
+        "startLine": 45,
+        "startChar": 2,
+        "endLine": 45,
+        "endChar": 12
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d19cfa9a_7697bc33",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "This string is used for several times, so we should define it as a constant.",
+      "range": {
+        "startLine": 112,
+        "startChar": 22,
+        "endLine": 112,
+        "endChar": 36
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4170e04_a7190c8a",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "`\u0027tested_items\u0027` is missing",
+      "range": {
+        "startLine": 166,
+        "startChar": 53,
+        "endLine": 166,
+        "endChar": 60
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dfd39e9_e76269df",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "How about defining a class constant `SUMMARY_COLUMNS \u003d CtsReport.STATUS_ORDER + [\u0027tested_items\u0027]`. This constant can be used in `__init__`, `print_summary`, `summary_list` functions so that we won\u0027t get similar problems as line#166.",
+      "range": {
+        "startLine": 204,
+        "startChar": 35,
+        "endLine": 204,
+        "endChar": 76
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fadf215c_d7313f90",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-24T02:03:13Z",
+      "side": 1,
+      "message": "We may return the calculated pass rate directly instead of updating `self.pass_rate`. This is to prevent from users accessing `ModuleSummary.pass_rate` without calling `cal_pass_rate()` first. If we define the class variable `pass_rate`, we need to ensure that its value is tightly coupled with `counter`, so I would suggest to remove `pass_rate`.",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
