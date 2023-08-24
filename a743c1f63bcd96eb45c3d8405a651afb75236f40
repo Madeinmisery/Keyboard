@@ -76,6 +76,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1debdd60_f29c35c0",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d19f8945_49eef747",
+      "range": {
+        "startLine": 130,
+        "startChar": 4,
+        "endLine": 131,
+        "endChar": 50
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fbb2ec6_67f4cdff",
@@ -89,6 +113,30 @@
       "writtenOn": "2023-08-24T02:03:13Z",
       "side": 1,
       "message": "0.0",
+      "range": {
+        "startLine": 167,
+        "startChar": 79,
+        "endLine": 167,
+        "endChar": 80
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "281d1b1b_b279691a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fbb2ec6_67f4cdff",
       "range": {
         "startLine": 167,
         "startChar": 79,
@@ -147,6 +195,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30639444_bde30f2c",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "I\u0027m not sure about what word is suitable for this column. I thought of \u0027object\u0027, but it seems weird; now I think \u0027item\u0027 might be a better choice, what do you think?",
+      "parentUuid": "60539eb3_be167cbc",
+      "range": {
+        "startLine": 179,
+        "startChar": 45,
+        "endLine": 179,
+        "endChar": 47
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "20f1a4cb_a8abb489",
         "filename": "tools/compare_cts_reports/compare_cts_reports.py",
         "patchSetId": 2
@@ -158,6 +230,30 @@
       "writtenOn": "2023-08-24T02:03:13Z",
       "side": 1,
       "message": "```\nelif args.mode \u003d\u003d \u0027n\u0027:\n  ...\nelse:\n  print error\n```",
+      "range": {
+        "startLine": 233,
+        "startChar": 2,
+        "endLine": 233,
+        "endChar": 6
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf31412c_1e30c363",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 233,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20f1a4cb_a8abb489",
       "range": {
         "startLine": 233,
         "startChar": 2,
@@ -191,6 +287,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64752c9c_945dac38",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad3b5051_06b5d819",
+      "range": {
+        "startLine": 45,
+        "startChar": 2,
+        "endLine": 45,
+        "endChar": 12
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d19cfa9a_7697bc33",
@@ -214,6 +334,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b7167b3_e9957315",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d19cfa9a_7697bc33",
+      "range": {
+        "startLine": 112,
+        "startChar": 22,
+        "endLine": 112,
+        "endChar": 36
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e4170e04_a7190c8a",
@@ -227,6 +371,30 @@
       "writtenOn": "2023-08-24T02:03:13Z",
       "side": 1,
       "message": "`\u0027tested_items\u0027` is missing",
+      "range": {
+        "startLine": 166,
+        "startChar": 53,
+        "endLine": 166,
+        "endChar": 60
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac3e226d_bfd76834",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4170e04_a7190c8a",
       "range": {
         "startLine": 166,
         "startChar": 53,
@@ -262,6 +430,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c6cdb35c_b0066d37",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Some problems to be fixed",
+      "parentUuid": "3dfd39e9_e76269df",
+      "range": {
+        "startLine": 204,
+        "startChar": 35,
+        "endLine": 204,
+        "endChar": 76
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fadf215c_d7313f90",
         "filename": "tools/compare_cts_reports/parse_cts_report.py",
         "patchSetId": 2
@@ -273,6 +465,24 @@
       "writtenOn": "2023-08-24T02:03:13Z",
       "side": 1,
       "message": "We may return the calculated pass rate directly instead of updating `self.pass_rate`. This is to prevent from users accessing `ModuleSummary.pass_rate` without calling `cal_pass_rate()` first. If we define the class variable `pass_rate`, we need to ensure that its value is tightly coupled with `counter`, so I would suggest to remove `pass_rate`.",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df57c883_d119daa7",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-24T07:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fadf215c_d7313f90",
       "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
