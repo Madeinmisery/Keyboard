@@ -454,6 +454,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1f53a62b_910d88d1",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-24T07:52:47Z",
+      "side": 1,
+      "message": "I would prefer the following changes actually:\n```\n@property\ndef test_items(self):\n   # return sum of counters\n```\nso that we don\u0027t need to handle counter in `CtsReport`, and this make it a property, which is better IMO.",
+      "parentUuid": "3dfd39e9_e76269df",
+      "range": {
+        "startLine": 204,
+        "startChar": 35,
+        "endLine": 204,
+        "endChar": 76
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fadf215c_d7313f90",
         "filename": "tools/compare_cts_reports/parse_cts_report.py",
         "patchSetId": 2
@@ -483,6 +507,23 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "fadf215c_d7313f90",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6f0cd0b_04885668",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-24T07:52:47Z",
+      "side": 1,
+      "message": "I actually prefer we utilize `CtsReport.is_fail` to check pass or not here, instead of directly input the fail_index.",
       "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
