@@ -147,6 +147,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80235328_93959cf6",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-24T08:14:23Z",
+      "side": 1,
+      "message": "nit: using `else: min(...,...)`",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "239dac79_62516071",
@@ -325,6 +342,30 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "ad3b5051_06b5d819",
+      "range": {
+        "startLine": 45,
+        "startChar": 2,
+        "endLine": 45,
+        "endChar": 12
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "859da177_d8fb2021",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-24T08:14:23Z",
+      "side": 1,
+      "message": "Also, I think it would better using something like `STATUS_ORDER.index(\u0027fail\u0027)` instead of just constant. Giving more context to this variable",
+      "parentUuid": "64752c9c_945dac38",
       "range": {
         "startLine": 45,
         "startChar": 2,
