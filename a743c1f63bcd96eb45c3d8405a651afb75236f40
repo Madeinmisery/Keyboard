@@ -187,6 +187,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "81a75811_7ef3a59a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-25T03:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "239dac79_62516071",
+      "range": {
+        "startLine": 172,
+        "startChar": 2,
+        "endLine": 172,
+        "endChar": 41
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60539eb3_be167cbc",
@@ -248,6 +272,30 @@
       "side": 1,
       "message": "SGTM",
       "parentUuid": "30639444_bde30f2c",
+      "range": {
+        "startLine": 179,
+        "startChar": 45,
+        "endLine": 179,
+        "endChar": 47
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d10e0d50_c7d80147",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-25T03:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "100c33e6_11ce9ae4",
       "range": {
         "startLine": 179,
         "startChar": 45,
@@ -366,6 +414,30 @@
       "side": 1,
       "message": "Also, I think it would better using something like `STATUS_ORDER.index(\u0027fail\u0027)` instead of just constant. Giving more context to this variable",
       "parentUuid": "64752c9c_945dac38",
+      "range": {
+        "startLine": 45,
+        "startChar": 2,
+        "endLine": 45,
+        "endChar": 12
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27a4923a_0f644220",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-25T03:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "859da177_d8fb2021",
       "range": {
         "startLine": 45,
         "startChar": 2,
@@ -541,6 +613,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "989e1eb5_a24fc3c4",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-25T03:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f53a62b_910d88d1",
+      "range": {
+        "startLine": 204,
+        "startChar": 35,
+        "endLine": 204,
+        "endChar": 76
+      },
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fadf215c_d7313f90",
@@ -589,6 +685,24 @@
       "writtenOn": "2023-08-24T07:52:47Z",
       "side": 1,
       "message": "I actually prefer we utilize `CtsReport.is_fail` to check pass or not here, instead of directly input the fail_index.",
+      "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f32f3328_fe46e4b4",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-08-25T03:46:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6f0cd0b_04885668",
       "revId": "a743c1f63bcd96eb45c3d8405a651afb75236f40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
