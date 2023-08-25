@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bf2388c_499a4e2c",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-08-25T06:27:52Z",
+      "side": 1,
+      "message": "nit: using `self.test_items`",
+      "revId": "452df8aa7d83a2f9cbea744cc90e5daa8c8c9244",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
