@@ -1,6 +1,69 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "48e3096d_f6f429b5",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-25T06:54:59Z",
+      "side": 1,
+      "message": "please also write more detailed comments just like what you did for `n_way_compare`",
+      "range": {
+        "startLine": 127,
+        "startChar": 2,
+        "endLine": 127,
+        "endChar": 37
+      },
+      "revId": "452df8aa7d83a2f9cbea744cc90e5daa8c8c9244",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24e71d89_b6a0c038",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-25T06:54:59Z",
+      "side": 1,
+      "message": "please briefly describe how we sort the modules.",
+      "range": {
+        "startLine": 162,
+        "startChar": 2,
+        "endLine": 163,
+        "endChar": 31
+      },
+      "revId": "452df8aa7d83a2f9cbea744cc90e5daa8c8c9244",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "771711dd_ec62489e",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-08-25T06:54:59Z",
+      "side": 1,
+      "message": "remove",
+      "revId": "452df8aa7d83a2f9cbea744cc90e5daa8c8c9244",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "9bf2388c_499a4e2c",
