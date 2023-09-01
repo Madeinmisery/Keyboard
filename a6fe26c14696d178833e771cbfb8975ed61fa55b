@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97519ac8_b76331b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2023-09-01T18:06:17Z",
+      "side": 1,
+      "message": "This is not stale unless you have managed to remove libsyn-1.x:\nhttps://cs.android.com/android/platform/superproject/main/+/main:external/rust/crates/syn/1.0.107/",
+      "revId": "a6fe26c14696d178833e771cbfb8975ed61fa55b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
