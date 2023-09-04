@@ -16,6 +16,24 @@
       "message": "This is not stale unless you have managed to remove libsyn-1.x:\nhttps://cs.android.com/android/platform/superproject/main/+/main:external/rust/crates/syn/1.0.107/",
       "revId": "a6fe26c14696d178833e771cbfb8975ed61fa55b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35eb2d86_07ebc53b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2023-09-04T09:13:55Z",
+      "side": 1,
+      "message": "Hi Matt, how come? The library called `libsyn` is version 2 right now: https://cs.android.com/android/platform/superproject/+/main:external/rust/crates/syn/Android.bp;l\u003d41;drc\u003dfcd71dcc29ef325341ea7c1a145591b349018eb3.\n\nRight now, `cargo2android.py` is generating `Android.bp` files which reference a `libsyn2` library that doesn\u0027t exist: https://cs.android.com/search?q\u003dlibsyn2\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain.",
+      "parentUuid": "97519ac8_b76331b4",
+      "revId": "a6fe26c14696d178833e771cbfb8975ed61fa55b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
