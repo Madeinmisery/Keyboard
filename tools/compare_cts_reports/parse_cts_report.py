@@ -145,6 +145,22 @@ class CtsReport:
           result = test.attrib['result']
           self.set_test_status(module_name, abi, class_name, test_name, result)
 
+  def read_from_csv(self, result_csvfile, summary_csvfile):
+    """Read the information of the report from the csv files.
+
+    Args:
+      result_csvfile: path to result.csv
+      summary_csvfile: path to summary.csv
+    """
+
+    result_reader = csv.reader(result_csvfile)
+
+    next(result_reader)
+
+    for row in result_reader:
+      module_name, abi, class_name, test_name, result = row
+      self.set_test_status(module_name, abi, class_name, test_name, result)
+
   def write_to_csv(self, result_csvfile, summary_csvfile):
     """Write the information of the report to the csv files.
 
