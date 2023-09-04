@@ -33,6 +33,7 @@ Usage example:
 
 import argparse
 import csv
+import json
 import os
 import re
 import tempfile
@@ -184,7 +185,11 @@ def n_way_compare(reports, diff_csv):
   report_titles = []
 
   for i, report in enumerate(reports):
-    device_name = report.info['build_device']
+    device_name = (
+        f'local_{report.info["build_device"]}'
+        if 'build_device' in report.info
+        else f'internal_{report.info["target"]}'
+    )
     report_titles.append(f'{i}_{device_name}')
 
     for module_name, abis in report.module_summaries.items():
@@ -218,10 +223,13 @@ def n_way_compare(reports, diff_csv):
 def main():
   parser = argparse.ArgumentParser()
 
-  parser.add_argument('--reports', '-r', required=True, nargs='+',
-                      help=('Path to cts reports. Each flag -r is followed by'
+  parser.add_argument('--reports', '-r', nargs='+',
+                      help=('Path to cts reports. Each flag -r is followed by '
                             'a group of files to be aggregated as one report.'),
                       action='append')
+  parser.add_argument('--folder', '-f',
+                      help=('Path to folder that stores intermediate files '
+                            'of internal data.'))
   parser.add_argument('--mode', '-m', required=True, choices=['1', '2', 'n'],
                       help=('Comparison mode. 1: One-way mode. '
                             '2: Two-way mode. n: N-way mode.'))
@@ -235,7 +243,11 @@ def main():
 
   report_files = args.reports
   mode = args.mode
-  if (mode in ['1', '2']) and (len(report_files) != 2):
+  internal_report = args.folder
+
+  num_report = len(report_files) + 1 if internal_report else len(report_files)
+
+  if (mode in ['1', '2']) and (num_report != 2):
     msg = 'Two sets of reports are required for one-way and two-way mode.'
     raise UserWarning(msg)
 
@@ -246,6 +258,24 @@ def main():
   diff_csv = os.path.join(output_dir, args.csv)
 
   ctsreports = []
+  if internal_report:
+    info_path = os.path.join(internal_report, 'info.json')
+    result_path = os.path.join(internal_report, 'result.csv')
+    summary_path = os.path.join(internal_report, 'summary.csv')
+
+    with open(info_path, 'r') as info_jsonfile:
+      info = json.load(info_jsonfile)
+
+    report = parse_cts_report.CtsReport(info)
+
+    with (
+        open(result_path, 'r') as result_csvfile,
+        open(summary_path, 'r') as summary_csvfile,
+    ):
+      report.read_from_csv(result_csvfile, summary_csvfile)
+
+    ctsreports.append(report)
+
   for i, report_group in enumerate(report_files):
     report = aggregate_cts_reports.aggregate_cts_reports(report_group)
 
