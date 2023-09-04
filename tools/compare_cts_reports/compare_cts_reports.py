@@ -29,10 +29,16 @@ Usage example:
   For this command line, the script aggregates test_result_1.xml and
   test_result_2.xml as one report, and then compare it with test_result_3.xml
   under one-way mode. The comparison result is written into output_dir/diff.csv.
+
+  ./compare_cts_reports.py -f parsed_result -r test_result.xml -m n -d tmp/
+  For this command line, the script load the report from the directory
+  parsed_result/, and then summarize the comparison between this report and
+  test_result.xml.
 """
 
 import argparse
 import csv
+import json
 import os
 import re
 import tempfile
@@ -184,7 +190,11 @@ def n_way_compare(reports, diff_csv):
   report_titles = []
 
   for i, report in enumerate(reports):
-    device_name = report.info['build_device']
+    device_name = (
+        f'device_{report.info["build_device"]}'
+        if 'build_device' in report.info
+        else f'build_id_{report.info["build_id"]}'
+    )
     report_titles.append(f'{i}_{device_name}')
 
     for module_name, abis in report.module_summaries.items():
@@ -215,13 +225,33 @@ def n_way_compare(reports, diff_csv):
         diff_writer.writerow([module_with_abi, item] + row)
 
 
+def load_parsed_report(report_dir):
+  """Load CtsReport() from a directory that stores a parsed report."""
+
+  info_path = os.path.join(report_dir, 'info.json')
+  result_path = os.path.join(report_dir, 'result.csv')
+
+  with open(info_path, 'r') as info_jsonfile:
+    info = json.load(info_jsonfile)
+
+  report = parse_cts_report.CtsReport(info)
+
+  with open(result_path, 'r') as result_csvfile:
+    report.load_from_csv(result_csvfile)
+
+  return report
+
+
 def main():
   parser = argparse.ArgumentParser()
 
-  parser.add_argument('--reports', '-r', required=True, nargs='+',
-                      help=('Path to cts reports. Each flag -r is followed by'
+  parser.add_argument('--reports', '-r', nargs='+',
+                      help=('Path to cts reports. Each flag -r is followed by '
                             'a group of files to be aggregated as one report.'),
                       action='append')
+  parser.add_argument('--folder', '-f', nargs='+',
+                      help=('Path to folder that stores intermediate files '
+                            'of parsed reports.'))
   parser.add_argument('--mode', '-m', required=True, choices=['1', '2', 'n'],
                       help=('Comparison mode. 1: One-way mode. '
                             '2: Two-way mode. n: N-way mode.'))
@@ -233,9 +263,13 @@ def main():
 
   args = parser.parse_args()
 
-  report_files = args.reports
   mode = args.mode
-  if (mode in ['1', '2']) and (len(report_files) != 2):
+  report_files = args.reports
+  parsed_report_dirs = args.folder
+
+  num_report = len(report_files) + len(parsed_report_dirs)
+
+  if (mode in ['1', '2']) and (num_report != 2):
     msg = 'Two sets of reports are required for one-way and two-way mode.'
     raise UserWarning(msg)
 
@@ -246,6 +280,11 @@ def main():
   diff_csv = os.path.join(output_dir, args.csv)
 
   ctsreports = []
+  for i, report_dir in enumerate(parsed_report_dirs):
+    report = load_parsed_report(report_dir)
+
+    ctsreports.append(report)
+
   for i, report_group in enumerate(report_files):
     report = aggregate_cts_reports.aggregate_cts_reports(report_group)
 
