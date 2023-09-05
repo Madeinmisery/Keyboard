@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13e11449_78762a8f",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae1e2867_48075095",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 14
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "71dbf021_fee154b7",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-09-05T01:55:07Z",
       "side": 1,
       "message": "`f\u0027device_{report.info[\"build_device\"]}\u0027`",
+      "range": {
+        "startLine": 189,
+        "startChar": 8,
+        "endLine": 189,
+        "endChar": 46
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc103680_0044d2ca",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71dbf021_fee154b7",
       "range": {
         "startLine": 189,
         "startChar": 8,
@@ -87,6 +135,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae7b71a9_e588a2f6",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31fb916d_17c7769c",
+      "range": {
+        "startLine": 191,
+        "startChar": 13,
+        "endLine": 191,
+        "endChar": 48
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ba7229c_07b0a509",
@@ -100,6 +172,30 @@
       "writtenOn": "2023-09-05T01:55:07Z",
       "side": 1,
       "message": "parsed reports",
+      "range": {
+        "startLine": 232,
+        "startChar": 32,
+        "endLine": 232,
+        "endChar": 45
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df7776e3_93d47ee4",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ba7229c_07b0a509",
       "range": {
         "startLine": 232,
         "startChar": 32,
@@ -133,6 +229,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0372102b_9600a789",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "949f8a33_82ea00b3",
+      "range": {
+        "startLine": 246,
+        "startChar": 2,
+        "endLine": 246,
+        "endChar": 17
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f7f97b6_25476384",
@@ -156,6 +276,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05616705_65eaf8eb",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f7f97b6_25476384",
+      "range": {
+        "startLine": 261,
+        "startChar": 2,
+        "endLine": 261,
+        "endChar": 21
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "88242e03_3f14f7e1",
@@ -169,6 +313,30 @@
       "writtenOn": "2023-09-05T01:55:07Z",
       "side": 1,
       "message": "please define a function for this",
+      "range": {
+        "startLine": 262,
+        "startChar": 0,
+        "endLine": 275,
+        "endChar": 59
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fce5ebf2_028cfd4f",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "88242e03_3f14f7e1",
       "range": {
         "startLine": 262,
         "startChar": 0,
@@ -225,6 +393,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc6d25d8_eae380a1",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49984473_1a57ee26",
+      "range": {
+        "startLine": 148,
+        "startChar": 42,
+        "endLine": 148,
+        "endChar": 57
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2b556bf_38a6f419",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44a7c4eb_797de10a",
+      "range": {
+        "startLine": 148,
+        "startChar": 6,
+        "endLine": 148,
+        "endChar": 19
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2b35ba00_05e7be4a",
@@ -248,6 +464,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3fe7e28_7a792af8",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b35ba00_05e7be4a",
+      "range": {
+        "startLine": 158,
+        "startChar": 4,
+        "endLine": 158,
+        "endChar": 23
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ec409b13_80c2df2e",
@@ -261,6 +501,30 @@
       "writtenOn": "2023-09-05T01:55:07Z",
       "side": 1,
       "message": "Use `try ... except ...` to handle the error case when result_csvfile is empty.",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 75
+      },
+      "revId": "99e45b6225b3515be759fb3ff9cbc4c04bb5d173",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71b65bf5_027432db",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-05T05:13:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ec409b13_80c2df2e",
       "range": {
         "startLine": 157,
         "startChar": 0,
