@@ -26,6 +26,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "badd8cdb_78a4c8cd",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-09-06T08:34:33Z",
+      "side": 1,
+      "message": "nit: I think this variable won\u0027t be used twice, we might skip creating it.",
+      "revId": "0292ded02e9ca15b64b63d703f00447d78b60ef7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "28ade656_39ab25c9",
         "filename": "tools/compare_cts_reports/compare_cts_reports.py",
         "patchSetId": 4
