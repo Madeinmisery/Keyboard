@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18f3f9cd_385e963a",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-06T05:37:52Z",
+      "side": 1,
+      "message": "Discussed offline: \u0027-r\u0027 corresponds to a group of reports to be aggregated; \u0027f\u0027 corresponds to one path, which indicates a directory that stores the intermediate files of a parsed report.",
+      "parentUuid": "7bd88c14_4903b25e",
+      "range": {
+        "startLine": 283,
+        "startChar": 0,
+        "endLine": 298,
+        "endChar": 29
+      },
+      "revId": "8f29a4b88266384de62c678adb6703ff4d80e1b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "259e23b1_dce61525",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-09-05T06:39:54Z",
       "side": 1,
       "message": "please print error message here for easier debugging",
+      "range": {
+        "startLine": 160,
+        "startChar": 6,
+        "endLine": 160,
+        "endChar": 12
+      },
+      "revId": "8f29a4b88266384de62c678adb6703ff4d80e1b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc43b061_2b98ccb3",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-06T05:37:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "259e23b1_dce61525",
       "range": {
         "startLine": 160,
         "startChar": 6,
