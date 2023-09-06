@@ -141,6 +141,30 @@
       },
       "revId": "8f29a4b88266384de62c678adb6703ff4d80e1b9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b72e3739_e2cd8acc",
+        "filename": "tools/compare_cts_reports/parse_cts_report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-06T12:35:26Z",
+      "side": 1,
+      "message": "I think printing a reminder is enough, so that users can aware that the report is empty.",
+      "parentUuid": "a640bb71_3210b7ab",
+      "range": {
+        "startLine": 160,
+        "startChar": 6,
+        "endLine": 160,
+        "endChar": 12
+      },
+      "revId": "8f29a4b88266384de62c678adb6703ff4d80e1b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
