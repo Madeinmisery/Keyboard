@@ -56,20 +56,18 @@ FLUSH_SLEEP = 60
 
 
 def android_build_top():
-    return Path(os.environ.get('ANDROID_BUILD_TOP', None))
+    return Path(os.environ.get('ANDROID_BUILD_TOP', None)).as_posix()
 
 
 def _get_clang_revision():
     version_output = subprocess.check_output(
-        android_build_top() / 'build/soong/scripts/get_clang_version.py',
-        text=True)
-    return version_output.strip()
+        f'{android_build_top()}/build/soong/scripts/get_clang_version.py')
+    return version_output.strip().decode('utf-8')
 
 
-CLANG_TOP = android_build_top() / 'prebuilts/clang/host/linux-x86/' \
-        / _get_clang_revision()
-LLVM_PROFDATA_PATH = CLANG_TOP / 'bin' / 'llvm-profdata'
-LLVM_COV_PATH = CLANG_TOP / 'bin' / 'llvm-cov'
+CLANG_TOP = f'{android_build_top()}/prebuilts/clang/host/linux-x86/{_get_clang_revision()}'
+LLVM_PROFDATA_PATH = f'{CLANG_TOP}/bin/llvm-profdata'
+LLVM_COV_PATH = f'{CLANG_TOP}/bin/llvm-cov'
 
 
 def check_output(cmd, *args, **kwargs):
@@ -194,6 +192,10 @@ def do_report(args):
         '--format=html', f'--output-dir={output_dir}',
         '--show-region-summary=false'
     ] + object_flags + source_dirs)
+
+    check_output([
+        'chmod', '+rx', temp_dir
+    ])
 
     print(f'Coverage report data written in {output_dir}')
 
