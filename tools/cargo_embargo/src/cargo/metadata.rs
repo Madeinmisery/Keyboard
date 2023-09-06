@@ -220,6 +220,8 @@ fn resolve_features(
 }
 
 /// Adds the given feature and all features it depends on to the given list of features.
+///
+/// Ignores features of other packages, i.e. those containing slashes.
 fn add_feature_and_dependencies(
     features: &mut Vec<String>,
     feature: &str,
@@ -228,7 +230,9 @@ fn add_feature_and_dependencies(
     features.push(feature.to_owned());
     if let Some(dependencies) = package_features.get(feature) {
         for dependency in dependencies {
-            add_feature_and_dependencies(features, dependency, package_features);
+            if !dependency.contains('/') {
+                add_feature_and_dependencies(features, dependency, package_features);
+            }
         }
     }
 }
