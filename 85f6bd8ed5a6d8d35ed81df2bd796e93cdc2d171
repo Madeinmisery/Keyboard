@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5babc6c9_f3fcf468",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-09-07T20:40:40Z",
+      "side": 1,
+      "message": "(i defer to cferris/danalbert for python reviews...)",
+      "revId": "85f6bd8ed5a6d8d35ed81df2bd796e93cdc2d171",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "922644a5_1b2b851a",
+        "filename": "scripts/acov-llvm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-09-07T20:40:40Z",
+      "side": 1,
+      "message": "this seems unrelated?",
+      "revId": "85f6bd8ed5a6d8d35ed81df2bd796e93cdc2d171",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
