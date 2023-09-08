@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "588a6068_8af37414",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1905021
+      },
+      "writtenOn": "2023-09-08T00:58:07Z",
+      "side": 1,
+      "message": "Retested again, my bad,\n\nIf I use python3.6\n\n```\nTraceback (most recent call last):\n  File \"./development/scripts/acov-llvm.py\", line 70, in \u003cmodule\u003e\n    / _get_clang_revision()\n  File \"./development/scripts/acov-llvm.py\", line 65, in _get_clang_revision\n    text\u003dTrue)\n  File \"/usr/lib/python3.6/subprocess.py\", line 356, in check_output\n    **kwargs).stdout\n  File \"/usr/lib/python3.6/subprocess.py\", line 423, in run\n    with Popen(*popenargs, **kwargs) as process:\nTypeError: __init__() got an unexpected keyword argument \u0027text\u0027\n```\n\nIf I use python3.8, no issue, execpt that the final covreport folder can\u0027t be access from samba.\n\nSo updated the change to correct the permission only.",
+      "revId": "85f6bd8ed5a6d8d35ed81df2bd796e93cdc2d171",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "922644a5_1b2b851a",
