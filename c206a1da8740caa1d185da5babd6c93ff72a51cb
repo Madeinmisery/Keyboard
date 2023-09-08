@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3538a178_bea398c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-09-08T19:10:10Z",
+      "side": 1,
+      "message": "Python LGTM aside from the comments I left. I assume that\u0027s what I\u0027m here for 😊",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6426887a_6a3bbc78",
@@ -67,6 +84,52 @@
       "side": 1,
       "message": "because most people struggle enough using the debugger, let alone with the wrong symbols.\n\nalthough i wonder whether ELF build ids has improved this in the years since? do you get clear \"hey, you\u0027ve probably fucked up --- think about what you\u0027re doing?\" warnings from lldb when the build ids don\u0027t actually match?",
       "parentUuid": "35182ba9_7d44fd3f",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec653a6f_b9afcb51",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-09-08T19:10:10Z",
+      "side": 1,
+      "message": "https://docs.python.org/3/library/stdtypes.html#str.removeprefix (for all of these)",
+      "range": {
+        "startLine": 136,
+        "startChar": 52,
+        "endLine": 136,
+        "endChar": 71
+      },
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b35e3bc4_89b09157",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-09-08T19:10:10Z",
+      "side": 1,
+      "message": "Add a comment explaining what this is removing, or use `.removesuffix()` to make it obvious? (though yes, you\u0027d need three of those calls for `-eng`, `-user`, and `-userdebug`)",
+      "range": {
+        "startLine": 138,
+        "startChar": 54,
+        "endLine": 138,
+        "endChar": 68
+      },
       "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
