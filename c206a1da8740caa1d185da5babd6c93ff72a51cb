@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6426887a_6a3bbc78",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-09-08T14:26:08Z",
+      "side": 1,
+      "message": "that seems like it\u0027s probably fine...",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19800e44_95834ef8",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-09-08T14:26:08Z",
+      "side": 1,
+      "message": "but this was deliberate.\n\ni think some kind of `--ignore-wrong-lunch` flag would make more sense (but have very few users!)?",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
