@@ -33,6 +33,24 @@
       "message": "but this was deliberate.\n\ni think some kind of `--ignore-wrong-lunch` flag would make more sense (but have very few users!)?",
       "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35182ba9_7d44fd3f",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1453063
+      },
+      "writtenOn": "2023-09-08T14:30:42Z",
+      "side": 1,
+      "message": "\u003e but this was deliberate.\n\ncan you elaborate on the reasons why? i use this script basically as a glorified \u0027adb push lldb-server\u0027, which honestly I\u0027d be happy with `--ignore-device-compat` (but at the cost of having to put a line in `.bash_aliases`)",
+      "parentUuid": "19800e44_95834ef8",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
