@@ -129,8 +129,14 @@ def parse_args() -> argparse.Namespace:
 
 
 def verify_device(device: adb.AndroidDevice) -> None:
-    names = set([device.get_prop("ro.build.product"), device.get_prop("ro.product.name")])
-    target_device = os.environ["TARGET_PRODUCT"]
+    # Allow the following (using 'lynx' as an example):
+    #  1. 'lynx' device to be debugged using 'lynx'-lunched tree.
+    #  2. 'lynx' device to be debugged using 'aosp_lynx'-lunched tree (and vice-versa).
+    #  3. 'lynx' device to be debugged using 'aosp_arm64'-lunched tree (and vice-versa).
+    names = set([device.get_prop("ro.build.product").split("aosp_")[-1],
+                 device.get_prop("ro.product.name").split("aosp_")[-1],
+                 device.get_prop("ro.product.cpu.abi").split("-")[0]])
+    target_device = os.environ["TARGET_PRODUCT"].split("aosp_")[-1]
     if target_device not in names:
         msg = "You used the wrong lunch: TARGET_PRODUCT ({}) does not match attached device ({})"
         sys.exit(msg.format(target_device, ", ".join(n if n else "None" for n in names)))
