@@ -51,6 +51,24 @@
       "parentUuid": "19800e44_95834ef8",
       "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3751ad7_cbb4bd72",
+        "filename": "scripts/gdbclient.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-09-08T14:36:07Z",
+      "side": 1,
+      "message": "because most people struggle enough using the debugger, let alone with the wrong symbols.\n\nalthough i wonder whether ELF build ids has improved this in the years since? do you get clear \"hey, you\u0027ve probably fucked up --- think about what you\u0027re doing?\" warnings from lldb when the build ids don\u0027t actually match?",
+      "parentUuid": "35182ba9_7d44fd3f",
+      "revId": "c206a1da8740caa1d185da5babd6c93ff72a51cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
