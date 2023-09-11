@@ -47,6 +47,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e0dc205_58682279",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-11T10:39:09Z",
+      "side": 1,
+      "message": "Multi-line messages aren\u0027t displayed in a readable layout because of `set -ex`.",
+      "parentUuid": "6e776663_01897cd4",
+      "range": {
+        "startLine": 108,
+        "startChar": 13,
+        "endLine": 108,
+        "endChar": 67
+      },
+      "revId": "396c88f28406c424da6b1c8f39b88b6845645bfd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64f7053d_16226d00",
@@ -60,6 +84,30 @@
       "writtenOn": "2023-09-11T10:00:36Z",
       "side": 1,
       "message": "We don\u0027t need subshell here, can just do\n\n```\npushd \"${SOONG_OUT}/dist\"\nzip -qryX build-prebuilts.zip *\npopd\nmkdir -p \"${DIST_DIR}\" || true\ncp \"${SOONG_OUT}/dist/build-prebuilts.zip\" \"${DIST_DIR}/\"\n```",
+      "range": {
+        "startLine": 206,
+        "startChar": 4,
+        "endLine": 209,
+        "endChar": 5
+      },
+      "revId": "396c88f28406c424da6b1c8f39b88b6845645bfd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3656c294_0b28d78f",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-11T10:39:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64f7053d_16226d00",
       "range": {
         "startLine": 206,
         "startChar": 4,
