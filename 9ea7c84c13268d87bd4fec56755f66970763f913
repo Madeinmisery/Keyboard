@@ -16,6 +16,41 @@
       "message": "Writing a simple unit test to make sure the format is correct.",
       "revId": "9ea7c84c13268d87bd4fec56755f66970763f913",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4321743a_1f1d6309",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-13T04:12:18Z",
+      "side": 1,
+      "message": "In general, LGTM. Please add more tests for the core functions in `parse_cts_report.py`.",
+      "parentUuid": "1ff4997a_e5ee2a7b",
+      "revId": "9ea7c84c13268d87bd4fec56755f66970763f913",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2543eca_47c4bf9c",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-13T04:12:18Z",
+      "side": 1,
+      "message": "In addition to checking the test status, could you also check the info fields?",
+      "revId": "9ea7c84c13268d87bd4fec56755f66970763f913",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
