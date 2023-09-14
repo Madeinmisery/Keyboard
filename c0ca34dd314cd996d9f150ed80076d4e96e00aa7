@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ed006e8_1d54684f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T06:02:03Z",
+      "side": 1,
+      "message": "please also add tests for `is_compatible`, `set_test_status` and `write_to_csv`.",
+      "revId": "c0ca34dd314cd996d9f150ed80076d4e96e00aa7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
