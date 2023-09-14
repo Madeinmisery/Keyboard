@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3b02134_acc7754b",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1902,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-09-14T16:31:53Z",
+      "side": 1,
+      "message": "They don\u0027t do the same thing. Variants lets you have targets with different features, like no_std. Take a look at external/rust/crates/zeroize/cargo2android.json for an example.\n\nI agree this is confusing, but I don\u0027t have a great solution right now. cargo2android has a lot of problems and tech debt, and I\u0027m trying to figure out the best way to balance making improvements while also moving forward with the main goal, which is the crates.io monorepo.",
+      "parentUuid": "a70bb802_a8ecbef2",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab35424e_0986ebef",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-09-14T10:32:17Z",
       "side": 1,
       "message": "This looks like a slightly more flexible version of `dependency-suffix`. Can you replace that rather than having both?",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ca1e219_bbb30f42",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1904,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-09-14T16:31:53Z",
+      "side": 1,
+      "message": "It might be possible to get rid of dependency-suffix, but I\u0027m not certain. I\u0027ll look into it, but same comment above applies about the tradeoffs inherent in trying to improve cargo2android.",
+      "parentUuid": "ab35424e_0986ebef",
       "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
