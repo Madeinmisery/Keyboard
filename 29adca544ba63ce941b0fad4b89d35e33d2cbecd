@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "265b9690_ef716900",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-14T13:08:23Z",
+      "side": 1,
+      "message": "Is there any reason to define a type alias for such a fundamental data structure?\n\nWhy not just write `std::set\u003cstd::string\u003e`?",
+      "range": {
+        "startLine": 119,
+        "startChar": 2,
+        "endLine": 119,
+        "endChar": 18
+      },
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d2fa8bd_2d826927",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-14T13:08:23Z",
+      "side": 1,
+      "message": "I think instead of updating this line, we can drop this comment altogether. It\u0027s not providing any more information than it\u0027s very next line.",
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c453eb13_4e868980",
+        "filename": "vndk/tools/header-checker/src/utils/string_utils.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-14T13:08:23Z",
+      "side": 1,
+      "message": "How about just merge the two overloads into one `bool HasMatchingGlobPattern(const StringSet \u0026patterns, const std::string \u0026text)`?\n\nI don\u0027t think it\u0027s worth optimizing for that one single use case.",
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f3b86ea_9bde651a",
+        "filename": "vndk/tools/header-checker/src/utils/string_utils.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-14T13:08:23Z",
+      "side": 1,
+      "message": "Since you are refactoring the code, could we also remove this? It seems to not be doing anything?",
+      "range": {
+        "startLine": 29,
+        "startChar": 40,
+        "endLine": 29,
+        "endChar": 51
+      },
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
