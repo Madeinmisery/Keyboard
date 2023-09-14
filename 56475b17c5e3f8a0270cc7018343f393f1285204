@@ -1,5 +1,40 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a70bb802_a8ecbef2",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1902,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-09-14T10:32:17Z",
+      "side": 1,
+      "message": "Does this work the same way as the existing `suffix` flag for variants? We should avoid having two differently named flags which do the same or a similar thing.",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab35424e_0986ebef",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1904,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-09-14T10:32:17Z",
+      "side": 1,
+      "message": "This looks like a slightly more flexible version of `dependency-suffix`. Can you replace that rather than having both?",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
