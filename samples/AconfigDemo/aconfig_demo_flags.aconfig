@@ -41,3 +41,10 @@ flag {
   description: "This flag controls static content"
   bug: "287644619"
 }
+
+flag {
+  name: "read_only_flag"
+  namespace: "core_experiments_team_internal"
+  description: "A read only flag for demo"
+  bug: "298754733"
+}
