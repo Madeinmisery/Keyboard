@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dd80c5c_50217367",
+        "filename": "samples/AconfigDemo/aconfig_demo_flags.aconfig",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2010956
+      },
+      "writtenOn": "2023-09-14T18:43:39Z",
+      "side": 1,
+      "message": "should we marked this with the `fixed_read_only \u003d true` ?",
+      "range": {
+        "startLine": 48,
+        "startChar": 2,
+        "endLine": 48,
+        "endChar": 13
+      },
+      "revId": "3551aec27c55196e7eb729f20092e8dace1a5f89",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
