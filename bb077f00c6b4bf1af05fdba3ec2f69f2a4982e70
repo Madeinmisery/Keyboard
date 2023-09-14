@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7146288a_b4dc03a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "Add unit tests for tools/compare_cts_reports.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2030d91_53bf4896",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "Also add\nTest: ./test_aggregate_cts_reports.py",
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "318dab6c_d447c495",
+        "filename": "tools/compare_cts_reports/test_aggregate_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "add copyright",
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83c467be_163f951b",
+        "filename": "tools/compare_cts_reports/test_aggregate_cts_reports.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "Please also upload test_result_2.xml in this cl.",
+      "range": {
+        "startLine": 10,
+        "startChar": 50,
+        "endLine": 10,
+        "endChar": 78
+      },
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b165a6ff_bc85a553",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "add copyright",
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e9e988f_3fec26b7",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-14T17:49:42Z",
+      "side": 1,
+      "message": "You may use the unpacking operator `*` to make it simpler.\ne.g.\n```\ntest_item \u003d (\u0027module\u0027, \u0027abi\u0027, \u0027class\u0027, \u0027test\u0027)\n \nreport.set_test_status(*test_item, \u0027IGNORED\u0027)\nreport.set_test_status(*test_item, \u0027fail\u0027)\n...\n```",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 71
+      },
+      "revId": "bb077f00c6b4bf1af05fdba3ec2f69f2a4982e70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
