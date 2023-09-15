@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ff4731a_2b3f4fe6",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-15T07:10:50Z",
+      "side": 1,
+      "message": "i see. that is unfortunate :(",
+      "parentUuid": "b92b0975_7d56b6c9",
+      "range": {
+        "startLine": 119,
+        "startChar": 2,
+        "endLine": 119,
+        "endChar": 18
+      },
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2d2fa8bd_2d826927",
@@ -131,6 +155,30 @@
       "writtenOn": "2023-09-14T13:08:23Z",
       "side": 1,
       "message": "Since you are refactoring the code, could we also remove this? It seems to not be doing anything?",
+      "range": {
+        "startLine": 29,
+        "startChar": 40,
+        "endLine": 29,
+        "endChar": 51
+      },
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3409d9f_dc3c2d36",
+        "filename": "vndk/tools/header-checker/src/utils/string_utils.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-15T07:10:50Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4f3b86ea_9bde651a",
       "range": {
         "startLine": 29,
         "startChar": 40,
