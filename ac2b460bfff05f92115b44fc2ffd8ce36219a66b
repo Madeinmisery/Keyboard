@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56a3e464_fe931268",
+        "filename": "tools/compare_cts_reports/testdata/output/info.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "please rename this file as `info_1.csv` because this is the build info of `test_result_1.xml`.",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0daa9662_01377bd1",
+        "filename": "tools/compare_cts_reports/testdata/output/result.csv",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "please rename this file as `result_1.csv` because this is the result of `test_result_1.xml`.",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e5ad1dc_f084ef88",
+        "filename": "tools/compare_cts_reports/testdata/output/summary.csv",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "please rename this file as `summary_1.csv` because this is the summary of `test_result_1.xml`.",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6b6a5eb_14e67e52",
+        "filename": "tools/compare_cts_reports/testdata/test_result_1.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "`pass\u003d\"3\" failed\u003d\"3\"`",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7611dbc4_be166578",
+        "filename": "tools/compare_cts_reports/testdata/test_result_2.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "`pass\u003d\"4\" failed\u003d\"4\"`",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f013245_61793ac8",
+        "filename": "tools/compare_cts_reports/testdata/test_result_2.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-15T07:32:38Z",
+      "side": 1,
+      "message": "remove this empty line",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
