@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "471c509a_84c3b65c",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1902,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-09-15T11:24:23Z",
+      "side": 1,
+      "message": "Right, but the flags for each variant generally just override the default flags for the crate. The `suffix` flag is currently a bit special in that it can only be applied to variants, but isn\u0027t `name-suffix` just the same thing without variants? So why can\u0027t the flag be the same?",
+      "parentUuid": "e3b02134_acc7754b",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ab35424e_0986ebef",
         "filename": "scripts/cargo2android.py",
         "patchSetId": 1
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "It might be possible to get rid of dependency-suffix, but I\u0027m not certain. I\u0027ll look into it, but same comment above applies about the tradeoffs inherent in trying to improve cargo2android.",
       "parentUuid": "ab35424e_0986ebef",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79335538_24769a8b",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1904,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-09-15T11:24:23Z",
+      "side": 1,
+      "message": "The more features you add to `cargo2android.py`, the more there is for me to replicate in `cargo_embargo` and the longer it will take to move everything off it, so I\u0027d really rather avoid adding extra complexity if we can avoid it.",
+      "parentUuid": "1ca1e219_bbb30f42",
       "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
