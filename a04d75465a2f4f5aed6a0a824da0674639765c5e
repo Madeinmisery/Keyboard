@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31e6eb3a_34c7eb41",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1954181
+      },
+      "writtenOn": "2023-09-15T07:03:19Z",
+      "side": 1,
+      "message": "I think you forgot to use `*test_item` in this line.",
+      "revId": "a04d75465a2f4f5aed6a0a824da0674639765c5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
