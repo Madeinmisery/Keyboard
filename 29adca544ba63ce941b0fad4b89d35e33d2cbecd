@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b92b0975_7d56b6c9",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-15T05:15:51Z",
+      "side": 1,
+      "message": "https://stackoverflow.com/questions/67456235/why-does-the-c-standard-not-change-stdset-to-use-stdless-as-its-default\n\nThe other reason is to allow finding by string_view. In version_script_parser.cpp,\n\n```\nstd::string_view tag\n\nif (excluded_symbol_tags_.find(tag) !\u003d excluded_symbol_tags_.end()) {\n```\n\nThe default std::less\u003cstd::string\u003e cannot be compiled because a string_view is not implicitly converted to a string.",
+      "parentUuid": "265b9690_ef716900",
+      "range": {
+        "startLine": 119,
+        "startChar": 2,
+        "endLine": 119,
+        "endChar": 18
+      },
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2d2fa8bd_2d826927",
@@ -41,6 +65,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20710290_2ac7494f",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-15T05:15:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d2fa8bd_2d826927",
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c453eb13_4e868980",
@@ -54,6 +96,24 @@
       "writtenOn": "2023-09-14T13:08:23Z",
       "side": 1,
       "message": "How about just merge the two overloads into one `bool HasMatchingGlobPattern(const StringSet \u0026patterns, const std::string \u0026text)`?\n\nI don\u0027t think it\u0027s worth optimizing for that one single use case.",
+      "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1262fc68_c147dd2f",
+        "filename": "vndk/tools/header-checker/src/utils/string_utils.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-15T05:15:51Z",
+      "side": 1,
+      "message": "I\u0027d like to keep `const char*`.",
+      "parentUuid": "c453eb13_4e868980",
       "revId": "29adca544ba63ce941b0fad4b89d35e33d2cbecd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
