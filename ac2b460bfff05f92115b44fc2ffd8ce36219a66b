@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d586220_eb6dbc79",
+        "filename": "tools/compare_cts_reports/testdata/output/info.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "56a3e464_fe931268",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0daa9662_01377bd1",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-09-15T07:32:38Z",
       "side": 1,
       "message": "please rename this file as `result_1.csv` because this is the result of `test_result_1.xml`.",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "207c80c4_fa647fa3",
+        "filename": "tools/compare_cts_reports/testdata/output/result.csv",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0daa9662_01377bd1",
       "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -52,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc13c0d2_a8129160",
+        "filename": "tools/compare_cts_reports/testdata/output/summary.csv",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e5ad1dc_f084ef88",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6b6a5eb_14e67e52",
@@ -65,6 +119,30 @@
       "writtenOn": "2023-09-15T07:32:38Z",
       "side": 1,
       "message": "`pass\u003d\"3\" failed\u003d\"3\"`",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92cda099_4ec8a9dc",
+        "filename": "tools/compare_cts_reports/testdata/test_result_1.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6b6a5eb_14e67e52",
       "range": {
         "startLine": 4,
         "startChar": 10,
@@ -98,6 +176,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64eecf9b_1d2042ac",
+        "filename": "tools/compare_cts_reports/testdata/test_result_2.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7611dbc4_be166578",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0f013245_61793ac8",
@@ -111,6 +213,24 @@
       "writtenOn": "2023-09-15T07:32:38Z",
       "side": 1,
       "message": "remove this empty line",
+      "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c385004_fdd34c76",
+        "filename": "tools/compare_cts_reports/testdata/test_result_2.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-15T07:43:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f013245_61793ac8",
       "revId": "ac2b460bfff05f92115b44fc2ffd8ce36219a66b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
