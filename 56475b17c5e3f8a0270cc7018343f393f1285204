@@ -54,6 +54,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "406b63e1_4ca5e5d7",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1902,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-09-18T15:18:04Z",
+      "side": 1,
+      "message": "You may be right that we can combine the flags. I will try to look into it, but my comment above about tech debt makes this complicated.",
+      "parentUuid": "471c509a_84c3b65c",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab35424e_0986ebef",
@@ -103,6 +121,24 @@
       "side": 1,
       "message": "The more features you add to `cargo2android.py`, the more there is for me to replicate in `cargo_embargo` and the longer it will take to move everything off it, so I\u0027d really rather avoid adding extra complexity if we can avoid it.",
       "parentUuid": "1ca1e219_bbb30f42",
+      "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "510eed28_31d5914e",
+        "filename": "scripts/cargo2android.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1904,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-09-18T15:18:04Z",
+      "side": 1,
+      "message": "Yes, I understand this affects you. I think both of our projects are closely related and affect each other, so I\u0027m glad we\u0027ve set up a regular meeting to keep in touch.",
+      "parentUuid": "79335538_24769a8b",
       "revId": "56475b17c5e3f8a0270cc7018343f393f1285204",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
