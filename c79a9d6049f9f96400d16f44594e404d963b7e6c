@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19cb3cb3_80f589d0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "I think the bug id should be 296323842",
+      "range": {
+        "startLine": 9,
+        "startChar": 5,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29d723ca_e0ea660a",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "sort these standard packages in alphabet order",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "437fc5fd_6e25e4ab",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "this can be outside the `with` statement",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b7cb1c2_b7541dbd",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "use `assertTrue`",
+      "range": {
+        "startLine": 36,
+        "startChar": 11,
+        "endLine": 36,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b93d77e8_7dd08380",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "this can be outside the `with` statement",
+      "range": {
+        "startLine": 40,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da2230c1_92936a26",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "use `assertTrue`",
+      "range": {
+        "startLine": 47,
+        "startChar": 11,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4733537_15806d7d",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "this can be outside the `with` statement",
+      "range": {
+        "startLine": 51,
+        "startChar": 6,
+        "endLine": 54,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8879ddab_d9219e63",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "use `assertTrue`",
+      "range": {
+        "startLine": 58,
+        "startChar": 11,
+        "endLine": 58,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c4a93ec_6d72ab9d",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-21T13:16:27Z",
+      "side": 1,
+      "message": "You can use `assertTrue` for these",
+      "range": {
+        "startLine": 142,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
