@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff5ac7d4_185d048f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19cb3cb3_80f589d0",
+      "range": {
+        "startLine": 9,
+        "startChar": 5,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29d723ca_e0ea660a",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-09-21T13:16:27Z",
       "side": 1,
       "message": "sort these standard packages in alphabet order",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb65637f_85043ecc",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29d723ca_e0ea660a",
       "range": {
         "startLine": 17,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "95bdd02e_4c2938e3",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "437fc5fd_6e25e4ab",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b7cb1c2_b7541dbd",
@@ -83,6 +155,30 @@
       "writtenOn": "2023-09-21T13:16:27Z",
       "side": 1,
       "message": "use `assertTrue`",
+      "range": {
+        "startLine": 36,
+        "startChar": 11,
+        "endLine": 36,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "650f1410_11e9f0b8",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b7cb1c2_b7541dbd",
       "range": {
         "startLine": 36,
         "startChar": 11,
@@ -116,6 +212,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f151bf1a_8151ad65",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b93d77e8_7dd08380",
+      "range": {
+        "startLine": 40,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "da2230c1_92936a26",
@@ -129,6 +249,30 @@
       "writtenOn": "2023-09-21T13:16:27Z",
       "side": 1,
       "message": "use `assertTrue`",
+      "range": {
+        "startLine": 47,
+        "startChar": 11,
+        "endLine": 47,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcd701c8_08b51eb6",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da2230c1_92936a26",
       "range": {
         "startLine": 47,
         "startChar": 11,
@@ -162,6 +306,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bda3273_ba0c6401",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4733537_15806d7d",
+      "range": {
+        "startLine": 51,
+        "startChar": 6,
+        "endLine": 54,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8879ddab_d9219e63",
@@ -185,6 +353,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b041047_68e838f2",
+        "filename": "tools/compare_cts_reports/test_compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8879ddab_d9219e63",
+      "range": {
+        "startLine": 58,
+        "startChar": 11,
+        "endLine": 58,
+        "endChar": 22
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4c4a93ec_6d72ab9d",
@@ -198,6 +390,30 @@
       "writtenOn": "2023-09-21T13:16:27Z",
       "side": 1,
       "message": "You can use `assertTrue` for these",
+      "range": {
+        "startLine": 142,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 7
+      },
+      "revId": "c79a9d6049f9f96400d16f44594e404d963b7e6c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a867c9b6_6b8c2ed1",
+        "filename": "tools/compare_cts_reports/test_parse_cts_report.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2025258
+      },
+      "writtenOn": "2023-09-21T14:07:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c4a93ec_6d72ab9d",
       "range": {
         "startLine": 142,
         "startChar": 0,
