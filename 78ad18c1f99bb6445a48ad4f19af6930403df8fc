@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "feb44c76_f1520b76",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-22T07:05:21Z",
+      "side": 1,
+      "message": "for tools/compare_cts_reports/.",
+      "range": {
+        "startLine": 7,
+        "startChar": 13,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "78ad18c1f99bb6445a48ad4f19af6930403df8fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7c0231d_f9ef4108",
+        "filename": "tools/compare_cts_reports/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-22T07:05:21Z",
+      "side": 1,
+      "message": "a test_result.xml",
+      "range": {
+        "startLine": 5,
+        "startChar": 58,
+        "endLine": 5,
+        "endChar": 64
+      },
+      "revId": "78ad18c1f99bb6445a48ad4f19af6930403df8fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0230345a_e4bdcbad",
+        "filename": "tools/compare_cts_reports/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-09-22T07:05:21Z",
+      "side": 1,
+      "message": "please add a section \"Tests\" to list the unit tests commands.",
+      "revId": "78ad18c1f99bb6445a48ad4f19af6930403df8fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
