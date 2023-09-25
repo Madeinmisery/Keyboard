@@ -92,11 +92,13 @@ class VersionScriptParser {
  private:
   bool ReadLine(std::string &line);
 
-  bool ParseVersionBlock(bool ignore_symbols);
+  bool ParseVersionBlock(bool ignore_symbols, const ParsedTags &base_tags);
 
-  bool ParseSymbolLine(const std::string &line, bool is_cpp_symbol);
+  bool ParseSymbolLine(const std::string &line, bool is_cpp_symbol,
+                       const ParsedTags &base_tags);
 
-  ParsedTags ParseSymbolTags(const std::string &line);
+  ParsedTags ParseSymbolTags(const std::string &line,
+                             const ParsedTags &base_tags);
 
   bool IsSymbolExported(const ParsedTags &tags);
 

@@ -51,11 +51,11 @@ void VersionScriptParser::SetArch(const std::string &arch) {
 
 
 VersionScriptParser::ParsedTags VersionScriptParser::ParseSymbolTags(
-    const std::string &line) {
+    const std::string &line, const VersionScriptParser::ParsedTags &base_tags) {
   static const char *const POSSIBLE_ARCHES[] = {
       "arm", "arm64", "x86", "x86_64", "mips", "mips64"};
 
-  ParsedTags result;
+  ParsedTags result = base_tags;
 
   std::string_view line_view(line);
   std::string::size_type comment_pos = line_view.find('#');
@@ -161,8 +161,9 @@ bool VersionScriptParser::IsSymbolExported(
 }
 
 
-bool VersionScriptParser::ParseSymbolLine(const std::string &line,
-                                          bool is_in_extern_cpp) {
+bool VersionScriptParser::ParseSymbolLine(
+    const std::string &line, bool is_in_extern_cpp,
+    const VersionScriptParser::ParsedTags &base_tags) {
   // The symbol name comes before the ';'.
   std::string::size_type pos = line.find(";");
   if (pos == std::string::npos) {
@@ -172,7 +173,7 @@ bool VersionScriptParser::ParseSymbolLine(const std::string &line,
 
   std::string symbol(utils::Trim(line.substr(0, pos)));
 
-  ParsedTags tags = ParseSymbolTags(line);
+  ParsedTags tags = ParseSymbolTags(line, base_tags);
   if (!IsSymbolExported(tags)) {
     return true;
   }
@@ -204,7 +205,8 @@ bool VersionScriptParser::ParseSymbolLine(const std::string &line,
 }
 
 
-bool VersionScriptParser::ParseVersionBlock(bool ignore_symbols) {
+bool VersionScriptParser::ParseVersionBlock(bool ignore_symbols,
+                                            const ParsedTags &base_tags) {
   static const std::regex EXTERN_CPP_PATTERN(R"(extern\s*"[Cc]\+\+"\s*\{)");
 
   LineScope scope = LineScope::GLOBAL;
@@ -245,7 +247,7 @@ bool VersionScriptParser::ParseVersionBlock(bool ignore_symbols) {
 
     // Parse symbol line
     if (!ignore_symbols) {
-      if (!ParseSymbolLine(line, is_in_extern_cpp)) {
+      if (!ParseSymbolLine(line, is_in_extern_cpp, base_tags)) {
         return false;
       }
     }
@@ -280,7 +282,9 @@ std::unique_ptr<ExportedSymbolSet> VersionScriptParser::Parse(
     bool exclude_symbol_version = utils::HasMatchingGlobPattern(
         excluded_symbol_versions_, version.c_str());
 
-    if (!ParseVersionBlock(exclude_symbol_version)) {
+    ParsedTags tags;
+    if (!ParseVersionBlock(exclude_symbol_version,
+                           ParseSymbolTags(line, tags))) {
       return nullptr;
     }
   }
