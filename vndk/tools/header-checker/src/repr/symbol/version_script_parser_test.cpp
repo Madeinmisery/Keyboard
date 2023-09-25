@@ -41,8 +41,9 @@ TEST(VersionScriptParserTest, SmokeTest) {
         bar2;  # var
     } LIBEX_1.0;
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
-  VersionScriptParser parser;
+  VersionScriptParser parser(api_level_map);
 
   std::istringstream stream(testdata);
   std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
@@ -78,10 +79,11 @@ TEST(VersionScriptParserTest, ExcludeSymbolVersions) {
         bar2;  # var
     } LIBEX_1.0;
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
   // excluded_symbol_versions = {}
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
 
     std::istringstream stream(testdata);
     std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
@@ -95,7 +97,7 @@ TEST(VersionScriptParserTest, ExcludeSymbolVersions) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.AddExcludedSymbolVersion("*_PRIVATE");
 
     std::istringstream stream(testdata);
@@ -134,8 +136,9 @@ TEST(VersionScriptParserTest, VisibilityLabels) {
         local_v6;  # var
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
-  VersionScriptParser parser;
+  VersionScriptParser parser(api_level_map);
 
   std::istringstream stream(testdata);
   std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
@@ -174,9 +177,10 @@ TEST(VersionScriptParserTest, ParseSymbolTagsIntroduced) {
         test5;  # introduced=17
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm64");
     parser.SetApiLevel(17);
 
@@ -194,7 +198,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsIntroduced) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm64");
     parser.SetApiLevel(18);
 
@@ -230,7 +234,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsIntroduced) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm");
     parser.SetApiLevel(19);
 
@@ -248,7 +252,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsIntroduced) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm64");
     parser.SetApiLevel(20);
 
@@ -266,7 +270,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsIntroduced) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm64");
     parser.SetApiLevel(utils::FUTURE_API_LEVEL);
 
@@ -295,9 +299,10 @@ TEST(VersionScriptParserTest, ParseSymbolTagsArch) {
         test4;  # mips
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm");
 
     std::istringstream stream(testdata);
@@ -313,7 +318,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsArch) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("arm64");
 
     std::istringstream stream(testdata);
@@ -329,7 +334,7 @@ TEST(VersionScriptParserTest, ParseSymbolTagsArch) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.SetArch("mips");
 
     std::istringstream stream(testdata);
@@ -354,10 +359,11 @@ TEST(VersionScriptParserTest, ExcludeSymbolTags) {
         test2;  # exclude-tag-2
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
   // exclude_symbol_tags = {}
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
 
     std::istringstream stream(testdata);
     std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
@@ -370,7 +376,7 @@ TEST(VersionScriptParserTest, ExcludeSymbolTags) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.AddExcludedSymbolTag("exclude-tag-1");
 
     std::istringstream stream(testdata);
@@ -384,7 +390,7 @@ TEST(VersionScriptParserTest, ExcludeSymbolTags) {
   }
 
   {
-    VersionScriptParser parser;
+    VersionScriptParser parser(api_level_map);
     parser.AddExcludedSymbolTag("exclude-tag-2");
 
     std::istringstream stream(testdata);
@@ -412,8 +418,9 @@ TEST(VersionScriptParserTest, ParseExternCpp) {
         test5;
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
-  VersionScriptParser parser;
+  VersionScriptParser parser(api_level_map);
 
   std::istringstream stream(testdata);
   std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
@@ -445,9 +452,9 @@ TEST(VersionScriptParserTest, ParseGlobPattern) {
         test4;
     };
   )TESTDATA";
+  const utils::ApiLevelMap api_level_map;
 
-
-  VersionScriptParser parser;
+  VersionScriptParser parser(api_level_map);
 
   std::istringstream stream(testdata);
   std::unique_ptr<ExportedSymbolSet> result(parser.Parse(stream));
