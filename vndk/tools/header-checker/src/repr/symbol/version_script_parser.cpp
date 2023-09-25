@@ -39,9 +39,11 @@ inline std::string GetIntroducedArchTag(const std::string &arch) {
 }
 
 
-VersionScriptParser::VersionScriptParser()
+VersionScriptParser::VersionScriptParser(
+    const utils::ApiLevelMap &api_level_map)
     : arch_(DEFAULT_ARCH), introduced_arch_tag_(GetIntroducedArchTag(arch_)),
-      api_level_(utils::FUTURE_API_LEVEL), stream_(nullptr), line_no_(0) {}
+      api_level_(utils::FUTURE_API_LEVEL), api_level_map_(api_level_map),
+      stream_(nullptr), line_no_(0) {}
 
 
 void VersionScriptParser::SetArch(const std::string &arch) {
@@ -96,7 +98,7 @@ VersionScriptParser::ParsedTags VersionScriptParser::ParseSymbolTags(
 
     // Check introduced tags.
     if (utils::StartsWith(tag, "introduced=")) {
-      llvm::Optional<utils::ApiLevel> intro = utils::ParseApiLevel(
+      llvm::Optional<utils::ApiLevel> intro = api_level_map_.Parse(
           std::string(tag.substr(sizeof("introduced=") - 1)));
       if (!intro) {
         ReportError("Bad introduced tag: " + std::string(tag));
@@ -110,7 +112,7 @@ VersionScriptParser::ParsedTags VersionScriptParser::ParseSymbolTags(
     }
 
     if (utils::StartsWith(tag, introduced_arch_tag_)) {
-      llvm::Optional<utils::ApiLevel> intro = utils::ParseApiLevel(
+      llvm::Optional<utils::ApiLevel> intro = api_level_map_.Parse(
           std::string(tag.substr(introduced_arch_tag_.size())));
       if (!intro) {
         ReportError("Bad introduced tag " + std::string(tag));

@@ -66,7 +66,7 @@ class VersionScriptParser {
 
 
  public:
-  VersionScriptParser();
+  VersionScriptParser(const utils::ApiLevelMap &api_level_map);
 
   void SetArch(const std::string &arch);
 
@@ -117,6 +117,7 @@ class VersionScriptParser {
   std::string arch_;
   std::string introduced_arch_tag_;
   utils::ApiLevel api_level_;
+  const utils::ApiLevelMap &api_level_map_;
 
   utils::StringSet excluded_symbol_versions_;
   utils::StringSet excluded_symbol_tags_;
