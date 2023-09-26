@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "986e6ece_81706b26",
+        "filename": "vndk/tools/header-checker/tests/module.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 536,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2023-09-26T07:07:34Z",
+      "side": 1,
+      "message": "Need to rename the file in order not to trigger NDK-API-Review.",
+      "range": {
+        "startLine": 536,
+        "startChar": 59,
+        "endLine": 536,
+        "endChar": 62
+      },
+      "revId": "ffb3f17223ef44b497d2b6f7597241cd3676c2fd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
