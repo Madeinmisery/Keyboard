@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ef57b74_b0e560c3",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-09-26T07:47:43Z",
+      "side": 1,
+      "message": "nit: to make sentence more generic?",
+      "range": {
+        "startLine": 24,
+        "startChar": 35,
+        "endLine": 24,
+        "endChar": 86
+      },
+      "revId": "17b63b30a37915d536b1cc7ea452caa62e861441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99156a7e_cb4328cc",
+        "filename": "treble/combined_build_test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2023-09-26T07:47:43Z",
+      "side": 1,
+      "message": "Is disk_space_source bigger than storage usage after build? I thought it would be `(($(read_df) - ${disk_space_source}))` including usages beyond.",
+      "range": {
+        "startLine": 132,
+        "startChar": 16,
+        "endLine": 132,
+        "endChar": 47
+      },
+      "revId": "17b63b30a37915d536b1cc7ea452caa62e861441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
