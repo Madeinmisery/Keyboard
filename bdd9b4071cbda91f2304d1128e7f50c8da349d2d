@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75a1f50b_21550515",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2023-09-26T05:07:51Z",
+      "side": 1,
+      "message": "nit: Use container matchers to check these conditions? https://github.com/google/googletest/blob/main/docs/reference/matchers.md\n\n```\n#include \u003cgmock/gmock.h\u003e\n\nEXPECT_THAT(funcs, Contains(Key(Ne(\"test4\"))));\nEXPECT_THAT(funcs, Contains(Key(Eq(\"test5\"))));\n```",
+      "revId": "bdd9b4071cbda91f2304d1128e7f50c8da349d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
