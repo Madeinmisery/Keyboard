@@ -42,6 +42,7 @@ use cargo::{
 };
 use clap::Parser;
 use clap::Subcommand;
+use once_cell::sync::Lazy;
 use std::collections::BTreeMap;
 use std::collections::VecDeque;
 use std::fs::File;
@@ -53,6 +54,35 @@ use std::process::Command;
 // Major TODOs
 //  * handle errors, esp. in cargo.out parsing. they should fail the program with an error code
 //  * handle warnings. put them in comments in the android.bp, some kind of report section
+
+/// Rust modules which shouldn't use the default generated names, to avoid conflicts or confusion.
+static RENAME_MAP: Lazy<BTreeMap<&str, &str>> = Lazy::new(|| {
+    [
+        ("libash", "libash_rust"),
+        ("libatomic", "libatomic_rust"),
+        ("libbacktrace", "libbacktrace_rust"),
+        ("libbase", "libbase_rust"),
+        ("libbase64", "libbase64_rust"),
+        ("libfuse", "libfuse_rust"),
+        ("libgcc", "libgcc_rust"),
+        ("liblog", "liblog_rust"),
+        ("libminijail", "libminijail_rust"),
+        ("libsync", "libsync_rust"),
+        ("libx86_64", "libx86_64_rust"),
+        ("libxml", "libxml_rust"),
+        ("protoc_gen_rust", "protoc-gen-rust"),
+    ]
+    .into_iter()
+    .collect()
+});
+
+fn renamed_stem(name: String) -> String {
+    if let Some(renamed) = RENAME_MAP.get(&name.as_str()) {
+        (*renamed).to_owned()
+    } else {
+        name
+    }
+}
 
 /// Command-line parameters for `cargo_embargo`.
 #[derive(Parser, Debug)]
@@ -451,29 +481,29 @@ fn crate_to_bp_modules(
                 ("rust_binary".to_string() + host, crate_.name.clone(), crate_.name.clone())
             }
             CrateType::Lib | CrateType::RLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = renamed_stem("lib".to_string() + &crate_.name);
                 ("rust_library".to_string() + rlib + host, stem.clone(), stem)
             }
             CrateType::DyLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = renamed_stem("lib".to_string() + &crate_.name);
                 ("rust_library".to_string() + host + "_dylib", stem.clone() + "_dylib", stem)
             }
             CrateType::CDyLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = renamed_stem("lib".to_string() + &crate_.name);
                 ("rust_ffi".to_string() + host + "_shared", stem.clone() + "_shared", stem)
             }
             CrateType::StaticLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = renamed_stem("lib".to_string() + &crate_.name);
                 ("rust_ffi".to_string() + host + "_static", stem.clone() + "_static", stem)
             }
             CrateType::ProcMacro => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = renamed_stem("lib".to_string() + &crate_.name);
                 ("rust_proc_macro".to_string(), stem.clone(), stem)
             }
             CrateType::Test | CrateType::TestNoHarness => {
                 let suffix = crate_.main_src.to_string_lossy().into_owned();
                 let suffix = suffix.replace('/', "_").replace(".rs", "");
-                let stem = crate_.package_name.clone() + "_test_" + &suffix;
+                let stem = renamed_stem(crate_.package_name.clone() + "_test_" + &suffix);
                 if crate_type == &CrateType::TestNoHarness {
                     eprintln!(
                         "WARNING: ignoring test \"{}\" with harness=false. not supported yet",
@@ -562,10 +592,11 @@ fn crate_to_bp_modules(
                 let module_name = "lib".to_string() + x.as_str();
                 let module_name =
                     cfg.module_name_overrides.get(&module_name).unwrap_or(&module_name);
-                if package_cfg.dep_blocklist.contains(module_name) {
+                let module_name = renamed_stem(module_name.to_owned());
+                if package_cfg.dep_blocklist.contains(&module_name) {
                     continue;
                 }
-                result.push(module_name.to_string());
+                result.push(module_name);
             }
             result.sort();
             result
