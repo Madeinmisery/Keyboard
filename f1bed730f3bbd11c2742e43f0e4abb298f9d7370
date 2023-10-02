@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8155b74_94ab4470",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:44:54Z",
+      "side": 1,
+      "message": "FYI: some of these are crosvm internal details and we can remove them later since they are handled in the crosvm/cargo_embargo.json now https://cs.android.com/android/platform/superproject/main/+/main:external/crosvm/cargo_embargo.json;l\u003d57-65;drc\u003dbd865eb659cee57be2fa4d9e8693e95057f4dfb6",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 36
+      },
+      "revId": "f1bed730f3bbd11c2742e43f0e4abb298f9d7370",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "542fa7bd_0a3bb09f",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:44:54Z",
+      "side": 1,
+      "message": "i think we only want to override the module name, like being done here, not the stem\n\ne.g. libminijail_rust has a stem of \"libminijail\" https://cs.android.com/android/platform/superproject/main/+/main:external/minijail/rust/minijail/Android.bp;l\u003d16-17;drc\u003dc30d299f93f94a4ee4b786d15e1fb194f8709b9f\n\nit should be consistent with `cfg.module_name_overrides`",
+      "revId": "f1bed730f3bbd11c2742e43f0e4abb298f9d7370",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
