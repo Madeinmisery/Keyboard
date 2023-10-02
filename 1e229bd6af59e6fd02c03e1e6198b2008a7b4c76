@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "651b6d0a_c152b34e",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:14:39Z",
+      "side": 1,
+      "message": "document what the key is. looks like it is the test src file name relative to the create root?",
+      "revId": "1e229bd6af59e6fd02c03e1e6198b2008a7b4c76",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
