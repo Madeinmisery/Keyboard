@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecf668fc_668a2321",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:04:45Z",
+      "side": 1,
+      "message": "probably worth a comment, maybe `// Kind is None for normal dependencies`.",
+      "range": {
+        "startLine": 121,
+        "startChar": 56,
+        "endLine": 121,
+        "endChar": 81
+      },
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e166626c_3da0fbef",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:04:45Z",
+      "side": 1,
+      "message": "i\u0027m not sure if it is the case here, but cargo2android has a lot of string substitutions like this and some of them turned out to be bugs when i looked closed, e.g. mixing up crate names and package names. they are often the same, so it usually works, but sometimes they aren\u0027t and then people end up adding new knobs to paper over the bug because it is too subtle to figure out\n\njust something to look out for",
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56abf42c_93cd7202",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:04:45Z",
+      "side": 1,
+      "message": "could hoist this section out of the target loop. up to you",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 64
+      },
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "208b5fcf_8b5da6df",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-02T23:04:45Z",
+      "side": 1,
+      "message": "tests need dev deps, but do they need build deps? i.e. should we check `dependency.kind !\u003d Some(\"build\")`?",
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
