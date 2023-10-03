@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "6befaed2_9efd3db8",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-03T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ecf668fc_668a2321",
+      "range": {
+        "startLine": 121,
+        "startChar": 56,
+        "endLine": 121,
+        "endChar": 81
+      },
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e166626c_3da0fbef",
         "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
         "patchSetId": 5
@@ -37,6 +61,24 @@
       "writtenOn": "2023-10-02T23:04:45Z",
       "side": 1,
       "message": "i\u0027m not sure if it is the case here, but cargo2android has a lot of string substitutions like this and some of them turned out to be bugs when i looked closed, e.g. mixing up crate names and package names. they are often the same, so it usually works, but sometimes they aren\u0027t and then people end up adding new knobs to paper over the bug because it is too subtle to figure out\n\njust something to look out for",
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47a50f36_92a96bf4",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-03T10:44:36Z",
+      "side": 1,
+      "message": "I think what\u0027s happening here is that the dependency name in the metadata is the package name, but we use the crate name for the library target, so that\u0027s what we need for the dependency in the output `Android.bp`. This is an attempt to convert the package name to the equivalent crate name.",
+      "parentUuid": "e166626c_3da0fbef",
       "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7432d9e_95fb21f6",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-03T10:44:36Z",
+      "side": 1,
+      "message": "Done, though I had to add a bunch of clones.",
+      "parentUuid": "56abf42c_93cd7202",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 64
+      },
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "208b5fcf_8b5da6df",
@@ -77,6 +143,24 @@
       "writtenOn": "2023-10-02T23:04:45Z",
       "side": 1,
       "message": "tests need dev deps, but do they need build deps? i.e. should we check `dependency.kind !\u003d Some(\"build\")`?",
+      "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6324a91_6f55d05e",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-03T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "208b5fcf_8b5da6df",
       "revId": "8c0a6a4d34f14d1f5d6b40ca6ceebd4697af0b61",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
