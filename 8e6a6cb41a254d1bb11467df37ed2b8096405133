@@ -16,6 +16,24 @@
       "message": "Having options to block both by package and",
       "revId": "8e6a6cb41a254d1bb11467df37ed2b8096405133",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23037f25_c7f7503c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-04T17:17:04Z",
+      "side": 1,
+      "message": "disregard, i meant to discard the message",
+      "parentUuid": "33bf7974_1091bff5",
+      "revId": "8e6a6cb41a254d1bb11467df37ed2b8096405133",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
