@@ -615,7 +615,7 @@ fn crate_to_bp_modules(
             m.props.set("shared_libs", process_lib_deps(crate_.shared_libs.clone()));
         }
 
-        if crate_type.is_library() {
+        if crate_type.is_library() && package_cfg.device_supported {
             if !cfg.apex_available.is_empty() {
                 m.props.set("apex_available", cfg.apex_available.clone());
             }
@@ -625,11 +625,8 @@ fn crate_to_bp_modules(
             if cfg.vendor_available {
                 m.props.set("vendor_available", true);
             }
-
-            if package_cfg.device_supported {
-                if let Some(min_sdk_version) = &cfg.min_sdk_version {
-                    m.props.set("min_sdk_version", min_sdk_version.clone());
-                }
+            if let Some(min_sdk_version) = &cfg.min_sdk_version {
+                m.props.set("min_sdk_version", min_sdk_version.clone());
             }
         }
         if crate_type.is_test() {
