@@ -16,6 +16,24 @@
       "message": "let me know if you have an opinion about module name vs package name in the configs. workflow i usually ended up in is that a problematic module would be generated and then to get rid of it i\u0027d just copy that module name into the config. if it uses the package name then i\u0027d need to work backwards a few steps. also i think there is a one-to-many relationship between package name and test modules, so this allows more control",
       "revId": "13786b8c4ca3aebc8f93fe412b5fa103a3f1ab2c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "209cd987_91081f12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-05T08:43:44Z",
+      "side": 1,
+      "message": "I don\u0027t have a strong opinion because I haven\u0027t used this much. I guess using the test filename has the advantage that it will keep working if we change the logic for generating module names, but the module name approach is a bit more general because it covers any kind of module.",
+      "parentUuid": "c6f2ce60_dbcbf9b8",
+      "revId": "13786b8c4ca3aebc8f93fe412b5fa103a3f1ab2c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
