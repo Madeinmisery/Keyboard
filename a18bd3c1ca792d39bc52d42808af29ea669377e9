@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a99caf8b_8f514746",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-10-05T19:55:26Z",
+      "side": 1,
+      "message": "The change alters the behavior of cargo2android, but no Android.bp files were updated.",
+      "revId": "a18bd3c1ca792d39bc52d42808af29ea669377e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
