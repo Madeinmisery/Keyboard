@@ -1,0 +1,160 @@
+[
+  [
+    {
+      "name": "argh",
+      "package_name": "argh",
+      "version": "0.1.12",
+      "types": ["lib"],
+      "target": "x86_64-unknown-linux-gnu",
+      "features": [],
+      "cfgs": [],
+      "externs": [
+        {
+          "name": "argh_derive",
+          "lib_name": "argh_derive",
+          "extern_type": "ProcMacro"
+        },
+        {
+          "name": "argh_shared",
+          "lib_name": "argh_shared",
+          "extern_type": "Rust"
+        }
+      ],
+      "codegens": [],
+      "cap_lints": "",
+      "static_libs": [],
+      "shared_libs": [],
+      "edition": "2018",
+      "package_dir": "/usr/local/google/home/qwandor/aosp/external/rust/crates/argh",
+      "main_src": "src/lib.rs",
+      "empty_test": false
+    },
+    {
+      "name": "args_info_tests",
+      "package_name": "argh",
+      "version": "0.1.12",
+      "types": ["test"],
+      "target": "x86_64-unknown-linux-gnu",
+      "features": [],
+      "cfgs": [],
+      "externs": [
+        { "name": "argh", "lib_name": "argh", "extern_type": "Rust" },
+        {
+          "name": "argh_derive",
+          "lib_name": "argh_derive",
+          "extern_type": "ProcMacro"
+        },
+        {
+          "name": "argh_shared",
+          "lib_name": "argh_shared",
+          "extern_type": "Rust"
+        },
+        { "name": "once_cell", "lib_name": "once_cell", "extern_type": "Rust" },
+        { "name": "trybuild", "lib_name": "trybuild", "extern_type": "Rust" }
+      ],
+      "codegens": [],
+      "cap_lints": "",
+      "static_libs": [],
+      "shared_libs": [],
+      "edition": "2018",
+      "package_dir": "/usr/local/google/home/qwandor/aosp/external/rust/crates/argh",
+      "main_src": "tests/args_info_tests.rs",
+      "empty_test": false
+    },
+    {
+      "name": "lib",
+      "package_name": "argh",
+      "version": "0.1.12",
+      "types": ["test"],
+      "target": "x86_64-unknown-linux-gnu",
+      "features": [],
+      "cfgs": [],
+      "externs": [
+        { "name": "argh", "lib_name": "argh", "extern_type": "Rust" },
+        {
+          "name": "argh_derive",
+          "lib_name": "argh_derive",
+          "extern_type": "ProcMacro"
+        },
+        {
+          "name": "argh_shared",
+          "lib_name": "argh_shared",
+          "extern_type": "Rust"
+        },
+        { "name": "once_cell", "lib_name": "once_cell", "extern_type": "Rust" },
+        { "name": "trybuild", "lib_name": "trybuild", "extern_type": "Rust" }
+      ],
+      "codegens": [],
+      "cap_lints": "",
+      "static_libs": [],
+      "shared_libs": [],
+      "edition": "2018",
+      "package_dir": "/usr/local/google/home/qwandor/aosp/external/rust/crates/argh",
+      "main_src": "tests/lib.rs",
+      "empty_test": false
+    },
+    {
+      "name": "compiletest",
+      "package_name": "argh",
+      "version": "0.1.12",
+      "types": ["test"],
+      "target": "x86_64-unknown-linux-gnu",
+      "features": [],
+      "cfgs": [],
+      "externs": [
+        { "name": "argh", "lib_name": "argh", "extern_type": "Rust" },
+        {
+          "name": "argh_derive",
+          "lib_name": "argh_derive",
+          "extern_type": "ProcMacro"
+        },
+        {
+          "name": "argh_shared",
+          "lib_name": "argh_shared",
+          "extern_type": "Rust"
+        },
+        { "name": "once_cell", "lib_name": "once_cell", "extern_type": "Rust" },
+        { "name": "trybuild", "lib_name": "trybuild", "extern_type": "Rust" }
+      ],
+      "codegens": [],
+      "cap_lints": "",
+      "static_libs": [],
+      "shared_libs": [],
+      "edition": "2018",
+      "package_dir": "/usr/local/google/home/qwandor/aosp/external/rust/crates/argh",
+      "main_src": "tests/compiletest.rs",
+      "empty_test": false
+    },
+    {
+      "name": "argh",
+      "package_name": "argh",
+      "version": "0.1.12",
+      "types": ["test"],
+      "target": "x86_64-unknown-linux-gnu",
+      "features": [],
+      "cfgs": [],
+      "externs": [
+        {
+          "name": "argh_derive",
+          "lib_name": "argh_derive",
+          "extern_type": "ProcMacro"
+        },
+        {
+          "name": "argh_shared",
+          "lib_name": "argh_shared",
+          "extern_type": "Rust"
+        },
+        { "name": "once_cell", "lib_name": "once_cell", "extern_type": "Rust" },
+        { "name": "trybuild", "lib_name": "trybuild", "extern_type": "Rust" }
+      ],
+      "codegens": [],
+      "cap_lints": "",
+      "static_libs": [],
+      "shared_libs": [],
+      "edition": "2018",
+      "package_dir": "/usr/local/google/home/qwandor/aosp/external/rust/crates/argh",
+      "main_src": "src/lib.rs",
+      "empty_test": false
+    }
+  ]
+]

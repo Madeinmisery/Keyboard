@@ -1,0 +1,8 @@
+{
+  "tests": true,
+  "apex_available": ["//apex_available:platform", "com.android.virt"],
+  "min_sdk_version": null,
+  "package": { "argh": { "dep_blocklist": ["libtrybuild"] } },
+  "module_blocklist": ["argh_test_tests_compiletest"],
+  "run_cargo": false
+}
