@@ -119,7 +119,7 @@ fn parse_cargo_metadata(
                     Some(Extern {
                         name: dependency_name.to_owned(),
                         lib_name: dependency_name.to_owned(),
-                        extern_type: ExternType::Rust,
+                        extern_type: extern_type(&metadata.packages, &dependency.name),
                     })
                 } else {
                     None
@@ -170,7 +170,7 @@ fn parse_cargo_metadata(
                             Some(Extern {
                                 name: dependency_name.to_owned(),
                                 lib_name: dependency_name.to_owned(),
-                                extern_type: ExternType::Rust,
+                                extern_type: extern_type(&metadata.packages, &dependency.name),
                             })
                         } else {
                             None
@@ -202,6 +202,18 @@ fn parse_cargo_metadata(
         }
     }
     Ok(crates)
+}
+
+/// Checks whether the given package is a proc macro.
+fn extern_type(packages: &[PackageMetadata], package_name: &str) -> ExternType {
+    let Some(package) = packages.iter().find(|package| package.name == package_name) else {
+        return ExternType::Rust;
+    };
+    if package.targets.iter().any(|target| target.kind.contains(&TargetKind::ProcMacro)) {
+        ExternType::ProcMacro
+    } else {
+        ExternType::Rust
+    }
 }
 
 /// Given a package ID like
