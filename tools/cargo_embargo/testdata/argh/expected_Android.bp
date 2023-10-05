@@ -15,6 +15,7 @@ test_options: {
 unit_test: true,
 },
 edition: "2018",
+features: ["default"],
 rustlibs: ["libargh_shared", "libonce_cell"],
 proc_macros: ["libargh_derive"],
 }
@@ -32,6 +33,7 @@ test_options: {
 unit_test: true,
 },
 edition: "2018",
+features: ["default"],
 rustlibs: ["libargh", "libargh_shared", "libonce_cell"],
 proc_macros: ["libargh_derive"],
 }
@@ -44,6 +46,7 @@ cargo_env_compat: true,
 cargo_pkg_version: "0.1.10",
 srcs: ["src/lib.rs"],
 edition: "2018",
+features: ["default"],
 rustlibs: ["libargh_shared"],
 proc_macros: ["libargh_derive"],
 apex_available: ["//apex_available:platform", "com.android.virt"],
