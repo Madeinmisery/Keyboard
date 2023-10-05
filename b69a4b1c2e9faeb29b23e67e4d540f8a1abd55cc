@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68823faa_361f598b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2023-10-05T19:16:42Z",
+      "side": 1,
+      "message": "Am I correct that this should be a no-op as far as the Android.bp that is generated?",
+      "revId": "b69a4b1c2e9faeb29b23e67e4d540f8a1abd55cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
