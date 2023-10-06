@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45e1c6cf_cf1cc692",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1307979
+      },
+      "writtenOn": "2023-10-06T07:44:52Z",
+      "side": 1,
+      "message": "Seems like this broke the darwin_mac build of aosp-clang-tools:\n\nhttps://android-build.corp.google.com/artifact/submitted/10774661/darwin_mac/latest/view/logs%2Fbuild_error.log",
+      "revId": "f8d367d015ef93e4f5af444ef006296b7e23219e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
