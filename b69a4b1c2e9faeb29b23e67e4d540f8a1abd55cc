@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69e2720f_9354af6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-06T14:46:20Z",
+      "side": 1,
+      "message": "Right, that\u0027s the idea.",
+      "parentUuid": "68823faa_361f598b",
+      "revId": "b69a4b1c2e9faeb29b23e67e4d540f8a1abd55cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "18e27337_898dd912",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-10-06T01:03:09Z",
       "side": 1,
       "message": "`s/package_name/module_name/` i think. it is `dependency` that is a package name, right?",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 43
+      },
+      "revId": "b69a4b1c2e9faeb29b23e67e4d540f8a1abd55cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecaec669_fb79084a",
+        "filename": "tools/cargo_embargo/src/config/legacy.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-06T14:46:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18e27337_898dd912",
       "range": {
         "startLine": 96,
         "startChar": 0,
