@@ -16,6 +16,24 @@
       "message": "this is supposed to be the crate name, which is allowed to have hyphens. if we don\u0027t want hyphens in the generated module names, then i suggest doing this replace in the bp module generation step (i.e. in `crate_to_bp_modules`) so that it also applies to the `cargo.out` based flow and also to maintain separation of concerns",
       "revId": "d0fa65633902ee9795689b8ffac01f070f656eca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af8de0f7_a2315b4a",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-06T14:01:50Z",
+      "side": 1,
+      "message": "Experimentally, that\u0027s not true. Running `cargo_embargo` on the [`annotate-snippets`](https://cs.android.com/android/platform/superproject/main/+/main:external/rust/crates/annotate-snippets/) crate with the `cargo.out` based flow, it sets the crate name to `annotate_snippets`. The package name is still `annotate-snippets`. Presumable cargo is doing this conversion internally when it builds, so we need to replicate it here for metadata mode to be consistent.\n\nThe relevant lines from `cargo.out`:\n\n```\n   Compiling annotate-snippets v0.9.1 (/usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets)\n     Running `rustc --crate-name annotate_snippets --edition\u003d2018 src/lib.rs --error-format\u003djson --json\u003ddiagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit\u003ddep-info,metadata,link -C embed-bitcode\u003dno -C debuginfo\u003d2 --cfg \u0027feature\u003d\"default\"\u0027 -C metadata\u003d2fa16efc3010a281 -C extra-filename\u003d-2fa16efc3010a281 --out-dir /usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets/target.tmp/x86_64-unknown-linux-gnu/debug/deps --target x86_64-unknown-linux-gnu -C incremental\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets/target.tmp/x86_64-unknown-linux-gnu/debug/incremental -L dependency\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets/target.tmp/x86_64-unknown-linux-gnu/debug/deps -L dependency\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets/target.tmp/debug/deps --extern unicode_width\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/annotate-snippets/target.tmp/x86_64-unknown-linux-gnu/debug/deps/libunicode_width-2204e63a7bec17eb.rmeta`\n\n```",
+      "parentUuid": "4d210258_7327dfa0",
+      "revId": "d0fa65633902ee9795689b8ffac01f070f656eca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
