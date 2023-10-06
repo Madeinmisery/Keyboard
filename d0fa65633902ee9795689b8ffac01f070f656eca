@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d210258_7327dfa0",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-06T00:55:21Z",
+      "side": 1,
+      "message": "this is supposed to be the crate name, which is allowed to have hyphens. if we don\u0027t want hyphens in the generated module names, then i suggest doing this replace in the bp module generation step (i.e. in `crate_to_bp_modules`) so that it also applies to the `cargo.out` based flow and also to maintain separation of concerns",
+      "revId": "d0fa65633902ee9795689b8ffac01f070f656eca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
