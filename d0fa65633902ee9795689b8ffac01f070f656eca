@@ -52,6 +52,24 @@
       "parentUuid": "af8de0f7_a2315b4a",
       "revId": "d0fa65633902ee9795689b8ffac01f070f656eca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df56d141_58b2a0c5",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-10-09T09:34:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3eddd418_8a214447",
+      "revId": "d0fa65633902ee9795689b8ffac01f070f656eca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
