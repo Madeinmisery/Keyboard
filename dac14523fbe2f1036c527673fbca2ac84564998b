@@ -46,6 +46,30 @@
       },
       "revId": "dac14523fbe2f1036c527673fbca2ac84564998b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11f13f7a_c49541d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1944405
+      },
+      "writtenOn": "2023-10-14T04:26:17Z",
+      "side": 1,
+      "message": "Ack - thank you!",
+      "parentUuid": "a5220bb6_fd700ea7",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "dac14523fbe2f1036c527673fbca2ac84564998b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
