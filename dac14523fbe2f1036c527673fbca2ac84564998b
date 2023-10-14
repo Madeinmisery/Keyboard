@@ -22,6 +22,30 @@
       },
       "revId": "dac14523fbe2f1036c527673fbca2ac84564998b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5220bb6_fd700ea7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-14T04:25:24Z",
+      "side": 1,
+      "message": "qwandor@google.com has added support for parsing more of the cargo.metadata file, but one of the new fields is an enum and is missing variants that show up in the metadata for crosvm, so cargo_embargo fails with a JSON parsing error when run on crosvm.",
+      "parentUuid": "30e7d2a0_11d6278d",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "dac14523fbe2f1036c527673fbca2ac84564998b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
