@@ -2,7 +2,7 @@
         package="com.android.bluetoothdebug" >
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
+<!-- test cl change -->
     <application android:label="Bluetooth Debug" >
         <receiver android:name="DebugReceiver">
             <intent-filter>
