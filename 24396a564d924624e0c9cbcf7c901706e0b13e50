@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8bb53d0_defce866",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139803
+      },
+      "writtenOn": "2023-10-18T07:23:31Z",
+      "side": 1,
+      "message": "Remember to CP this CL to android13-gsi after it\u0027s merged on aosp.",
+      "revId": "24396a564d924624e0c9cbcf7c901706e0b13e50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
