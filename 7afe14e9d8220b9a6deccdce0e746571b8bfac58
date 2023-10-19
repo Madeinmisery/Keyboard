@@ -16,6 +16,24 @@
       "message": "Without this, what\u0027s the mechanism that\u0027s going to prevent it from dropping rules.mk in every directory? Or is that what you want?",
       "revId": "7afe14e9d8220b9a6deccdce0e746571b8bfac58",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "087d341b_6eaaacb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2023-10-19T22:05:43Z",
+      "side": 1,
+      "message": "This was just a sanity check for missing dependencies, it doesn\u0027t affect the current crate.\n\nWe do have a check like that in the external updater: https://cs.android.com/android/platform/superproject/main/+/main:tools/external_updater/regen_bp.sh;l\u003d44 which only updates the `rules.mk` file if it already exists. The initial `rules.mk` needs to be added manually (I.e. not via the external updater), but I figured that was okay for now.",
+      "parentUuid": "a65d0906_78165224",
+      "revId": "7afe14e9d8220b9a6deccdce0e746571b8bfac58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
