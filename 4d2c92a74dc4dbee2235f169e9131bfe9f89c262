@@ -16,6 +16,24 @@
       "message": "nit: If we init this, I think we don\u0027t need to repeatedly check the existence, and we can also move the writing module_failures to the end of loop, so that skipping the writing block outside of loop.",
       "revId": "4d2c92a74dc4dbee2235f169e9131bfe9f89c262",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4afaee2b_b06aa169",
+        "filename": "tools/compare_cts_reports/generate_spread_sheet.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-10-20T05:42:37Z",
+      "side": 1,
+      "message": "Are you saying about making `module_failures` a list[list] and use this 2D list to write module summary outside `for row_values in compare_results:`?",
+      "parentUuid": "2f12fd38_821d0669",
+      "revId": "4d2c92a74dc4dbee2235f169e9131bfe9f89c262",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
