@@ -130,7 +130,7 @@ impl CargoOut {
 
             // Cargo -v output of a call to rustc.
             static RUSTC_REGEX: Lazy<Regex> =
-                Lazy::new(|| Regex::new(r"^ +Running `rustc (.*)`$").unwrap());
+                Lazy::new(|| Regex::new(r"^ +Running `.*rustc (.*)`$").unwrap());
             if let Some(args) = match1(&RUSTC_REGEX, line) {
                 result.rustc_invocations.push(args);
                 continue;
