@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9abeef2_6d418b2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-20T21:04:41Z",
+      "side": 1,
+      "message": "FYI: crosvm didn\u0027t work with the prebuilts long ago, but hopefully that has changed. Either way, for crosvm, we are explicitly setting the cargo bin path so this won\u0027t have an affect until we decide to try it\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:external/crosvm/android-merge-2-cargo-embargo.sh;l\u003d46;drc\u003d8c554d8d402e0969b07248e75cf47ec23003c2a3",
+      "revId": "32af5dc6288bc2656c06cdbd7aa3d2e5c07bae60",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
