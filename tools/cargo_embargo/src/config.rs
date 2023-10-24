@@ -18,12 +18,16 @@
 
 pub mod legacy;
 
+use anyhow::{Context, Result};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
 use std::path::PathBuf;
 
 fn default_apex_available() -> Vec<String> {
-    vec!["//apex_available:platform".to_string(), "//apex_available:anyapex".to_string()]
+    vec![
+        "//apex_available:platform".to_string(),
+        "//apex_available:anyapex".to_string(),
+    ]
 }
 
 fn is_default_apex_available(apex_available: &[String]) -> bool {
@@ -62,7 +66,10 @@ pub struct Config {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub global_defaults: Option<String>,
     /// Value to use for every generated library module's "apex_available" field.
-    #[serde(default = "default_apex_available", skip_serializing_if = "is_default_apex_available")]
+    #[serde(
+        default = "default_apex_available",
+        skip_serializing_if = "is_default_apex_available"
+    )]
     pub apex_available: Vec<String>,
     /// Value to use for every generated library module's `product_available` field.
     #[serde(default = "default_true", skip_serializing_if = "is_true")]
@@ -117,6 +124,18 @@ impl Default for Config {
             module_visibility: Default::default(),
             run_cargo: true,
         }
+    }
+}
+
+impl Config {
+    /// Parses an instance of this config from a string of JSON.
+    pub fn from_json_str(json_str: &str) -> Result<Self> {
+        serde_json::from_str(json_str).context("failed to parse config")
+    }
+
+    /// Serializes an instance of this config to a string of pretty-printed JSON.
+    pub fn to_json_string(&self) -> Result<String> {
+        serde_json::to_string_pretty(self).context("failed to serialize config")
     }
 }
 
