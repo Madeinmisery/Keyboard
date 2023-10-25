@@ -92,7 +92,6 @@ TEST_EXCLUDE = [
 EXCLUDE_PATHS = [
         "//external/adhd",
         "//external/crosvm",
-        "//external/libchromeos-rs",
         "//external/vm_tools"
 ]
 
