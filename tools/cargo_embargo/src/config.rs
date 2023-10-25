@@ -50,6 +50,27 @@ fn is_false(value: &bool) -> bool {
 #[derive(Clone, Deserialize, Eq, PartialEq, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct Config {
+    pub variants: Vec<VariantConfig>,
+    /// Package specific config options across all variants.
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub package: BTreeMap<String, PackageConfig>,
+}
+
+impl Config {
+    /// Parses an instance of this config from a string of JSON.
+    pub fn from_json_str(json_str: &str) -> Result<Self> {
+        serde_json::from_str(json_str).context("failed to parse config")
+    }
+
+    /// Serializes an instance of this config to a string of pretty-printed JSON.
+    pub fn to_json_string(&self) -> Result<String> {
+        serde_json::to_string_pretty(self).context("failed to serialize config")
+    }
+}
+
+#[derive(Clone, Deserialize, Eq, PartialEq, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct VariantConfig {
     /// Whether to output "rust_test" modules.
     #[serde(default, skip_serializing_if = "is_false")]
     pub tests: bool,
@@ -89,7 +110,7 @@ pub struct Config {
     pub module_name_overrides: BTreeMap<String, String>,
     /// Package specific config options.
     #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
-    pub package: BTreeMap<String, PackageConfig>,
+    pub package: BTreeMap<String, PackageVariantConfig>,
     /// `cfg` flags in this list will not be included.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub cfg_blocklist: Vec<String>,
@@ -105,7 +126,7 @@ pub struct Config {
     pub run_cargo: bool,
 }
 
-impl Default for Config {
+impl Default for VariantConfig {
     fn default() -> Self {
         Self {
             tests: false,
@@ -127,23 +148,24 @@ impl Default for Config {
     }
 }
 
-impl Config {
-    /// Parses an instance of this config from a string of JSON.
-    pub fn from_json_str(json_str: &str) -> Result<Self> {
-        serde_json::from_str(json_str).context("failed to parse config")
-    }
-
-    /// Serializes an instance of this config to a string of pretty-printed JSON.
-    pub fn to_json_string(&self) -> Result<String> {
-        serde_json::to_string_pretty(self).context("failed to serialize config")
-    }
+/// Options that apply to everything in a package (i.e. everything associated with a particular
+/// Cargo.toml file), for all variants.
+#[derive(Clone, Default, Deserialize, Eq, PartialEq, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct PackageConfig {
+    /// File with content to append to the end of the generated Android.bp.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub add_toplevel_block: Option<PathBuf>,
+    /// Patch file to apply after Android.bp is generated.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub patch: Option<PathBuf>,
 }
 
 /// Options that apply to everything in a package (i.e. everything associated with a particular
-/// Cargo.toml file).
+/// Cargo.toml file), for a particular variant.
 #[derive(Clone, Deserialize, Eq, PartialEq, Serialize)]
 #[serde(deny_unknown_fields)]
-pub struct PackageConfig {
+pub struct PackageVariantConfig {
     /// Link against `alloc`. Only valid if `no_std` is also true.
     #[serde(default, skip_serializing_if = "is_false")]
     pub alloc: bool,
@@ -164,9 +186,6 @@ pub struct PackageConfig {
     // integration tests.
     #[serde(default, skip_serializing_if = "is_false")]
     pub no_presubmit: bool,
-    /// File with content to append to the end of the generated Android.bp.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub add_toplevel_block: Option<PathBuf>,
     /// File with content to append to the end of each generated module.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub add_module_block: Option<PathBuf>,
@@ -176,9 +195,6 @@ pub struct PackageConfig {
     /// Don't link against `std`, only `core`.
     #[serde(default, skip_serializing_if = "is_false")]
     pub no_std: bool,
-    /// Patch file to apply after Android.bp is generated.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub patch: Option<PathBuf>,
     /// Copy build.rs output to ./out/* and add a genrule to copy ./out/* to genrule output.
     /// For crates with code pattern:
     ///     include!(concat!(env!("OUT_DIR"), "/<some_file>.rs"))
@@ -190,7 +206,7 @@ pub struct PackageConfig {
     pub test_data: BTreeMap<String, Vec<String>>,
 }
 
-impl Default for PackageConfig {
+impl Default for PackageVariantConfig {
     fn default() -> Self {
         Self {
             alloc: false,
@@ -199,11 +215,9 @@ impl Default for PackageConfig {
             host_first_multilib: false,
             force_rlib: false,
             no_presubmit: false,
-            add_toplevel_block: None,
             add_module_block: None,
             dep_blocklist: Default::default(),
             no_std: false,
-            patch: None,
             copy_out: false,
             test_data: Default::default(),
         }
