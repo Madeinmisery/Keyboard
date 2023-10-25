@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "409705b7_4e539cd1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-25T20:17:24Z",
+      "side": 1,
+      "message": "it is also fine to keep if you like, i\u0027m just sending a CL because i\u0027m cleaning up the other cases that matter more and this was easy",
+      "revId": "dfe8db9d72cb9bae786b74e45111967d981217c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
