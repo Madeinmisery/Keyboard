@@ -75,6 +75,7 @@ impl CrateType {
 pub struct Crate {
     pub name: String,
     pub package_name: String,
+    pub output_filename: String, // usually crate name + hash, e.g. hypervisor-659eaf3d33eb0c3f
     pub version: Option<String>,
     pub types: Vec<CrateType>,
     pub target: Option<String>, // --target
