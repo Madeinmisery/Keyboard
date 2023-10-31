@@ -16,6 +16,24 @@
       "message": "I\u0027m not so keen on adding more fields to `Crate` that we can\u0027t get from metadata, though I guess the whole skipping empty tests logic can\u0027t work from metadata anyway.",
       "revId": "a146267b3364b952453d9df00e96dede1d3e044c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d9baebf_7cb52263",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-10-31T18:49:55Z",
+      "side": 1,
+      "message": "Good point, maybe we can put the non-metadata compatible fields into a sub-struct or something so it is easier to tell what will be available? `output_filename` and `empty_test` probably aren\u0027t the only ones in the list",
+      "parentUuid": "091d7279_7787cdfd",
+      "revId": "a146267b3364b952453d9df00e96dede1d3e044c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
