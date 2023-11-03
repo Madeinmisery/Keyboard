@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14c5ac17_bb9f00ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-03T15:46:01Z",
+      "side": 1,
+      "message": "This is more complicated than I\u0027d like, but we do need variants for a bunch of crates. Any ideas for a simpler approach are welcome.",
+      "revId": "05272c950a32394ddb58a16c738a7aeb82cb9fa7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
