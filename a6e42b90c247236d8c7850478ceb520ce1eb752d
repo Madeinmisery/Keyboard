@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "450fdd84_cbf8654e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1933736
+      },
+      "writtenOn": "2023-11-06T17:14:24Z",
+      "side": 1,
+      "message": "--\u003e development/tools/cargo_embargo/src/main.rs:607:40\n|\n607 |         m.props.set(\"name\", module_name.clone());\n|                                        ^^^^^^^^ help: remove this redundant call\n|\n\u003d note: the type `str` does not implement `Clone`, so calling `clone` on `\u0026str` copies the reference, which does not do anything and can be removed\n\u003d note: `-D noop-method-call` implied by `-D warnings`",
+      "revId": "a6e42b90c247236d8c7850478ceb520ce1eb752d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
