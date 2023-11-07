@@ -16,6 +16,46 @@
       "message": "This is more complicated than I\u0027d like, but we do need variants for a bunch of crates. Any ideas for a simpler approach are welcome.",
       "revId": "05272c950a32394ddb58a16c738a7aeb82cb9fa7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7dce32d_8886a63c",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-07T03:54:24Z",
+      "side": 1,
+      "message": "can you define \"variant\" somewhere? i got pretty far before i realized it was for different sets of feature flags (i was thinking of different build targets, which i guess is a whole different set of work)",
+      "revId": "05272c950a32394ddb58a16c738a7aeb82cb9fa7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "591a62f6_a72d7575",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-07T03:54:24Z",
+      "side": 1,
+      "message": "maybe we could avoid this cumbersome extra layer of fixed sized `Vec`s if we put the variant index/id as a field of `Crate`, then you can do a group by operation later on where it actually matters\n\nhaven\u0027t read the whole patch series yet, so not sure if it is feasible",
+      "range": {
+        "startLine": 194,
+        "startChar": 56,
+        "endLine": 194,
+        "endChar": 71
+      },
+      "revId": "05272c950a32394ddb58a16c738a7aeb82cb9fa7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

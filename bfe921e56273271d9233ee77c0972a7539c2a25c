@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93e03aa6_9792db60",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-07T03:54:24Z",
+      "side": 0,
+      "message": "if all the modules are blocklisted, this might be empty for all the variants of a package and ideally the Android.bp should be skipped instead of writing just the header and license",
+      "range": {
+        "startLine": 474,
+        "startChar": 0,
+        "endLine": 476,
+        "endChar": 5
+      },
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2397836d_794bdbbe",
+        "filename": "tools/cargo_embargo/testdata/aho-corasick/expected_Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-07T03:54:24Z",
+      "side": 0,
+      "message": "intentional?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 19
+      },
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
