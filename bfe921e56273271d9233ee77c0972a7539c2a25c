@@ -16,6 +16,24 @@
       "message": "it seems error prone to have a type that implements the serde traits and also has its own custom serialization methods",
       "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67d12529_c778f0ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-07T11:15:18Z",
+      "side": 1,
+      "message": "Fair point, do you have an idea of a better approach?",
+      "parentUuid": "eb9b5b5d_35d8c71a",
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
