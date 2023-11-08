@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "92190d46_d0b37e02",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-08T23:49:19Z",
+      "side": 0,
+      "message": "That\u0027s a good point. Also, in the workspace case, if a crate gets deleted, then we leave an obsolete Android.bp file around, which isn\u0027t great. Maybe should delete the file if there are no modules.",
+      "parentUuid": "9c375ff2_97e9ffab",
+      "range": {
+        "startLine": 474,
+        "startChar": 0,
+        "endLine": 476,
+        "endChar": 5
+      },
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2397836d_794bdbbe",
