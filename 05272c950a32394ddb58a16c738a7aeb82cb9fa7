@@ -52,6 +52,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc4e0f14_89a07610",
+        "filename": "tools/cargo_embargo/src/config.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-08T14:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7dce32d_8886a63c",
+      "revId": "05272c950a32394ddb58a16c738a7aeb82cb9fa7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "591a62f6_a72d7575",

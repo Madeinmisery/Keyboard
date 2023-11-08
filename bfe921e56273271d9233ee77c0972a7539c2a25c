@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c375ff2_97e9ffab",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-08T14:04:08Z",
+      "side": 0,
+      "message": "The downside of this is that it\u0027s not obvious that `cargo_embargo` failed because it just leaves the existing `Android.bp` however it was, but done (in `write_android_bp`).",
+      "parentUuid": "93e03aa6_9792db60",
+      "range": {
+        "startLine": 474,
+        "startChar": 0,
+        "endLine": 476,
+        "endChar": 5
+      },
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2397836d_794bdbbe",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-11-07T03:54:24Z",
       "side": 0,
       "message": "intentional?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 19
+      },
+      "revId": "bfe921e56273271d9233ee77c0972a7539c2a25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7028cdf_0dfde895",
+        "filename": "tools/cargo_embargo/testdata/aho-corasick/expected_Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-08T14:04:08Z",
+      "side": 0,
+      "message": "Yes, the refactoring moved the bit that adds this header outside of the part covered by the test.",
+      "parentUuid": "2397836d_794bdbbe",
       "range": {
         "startLine": 1,
         "startChar": 0,
