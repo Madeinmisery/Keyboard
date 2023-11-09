@@ -45,6 +45,30 @@
       },
       "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b4e0dcf_2e83344c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-09T22:25:11Z",
+      "side": 1,
+      "message": "(duplicate message. gerrit bug?)",
+      "parentUuid": "6acdcdd3_bf0d477a",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 47
+      },
+      "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
