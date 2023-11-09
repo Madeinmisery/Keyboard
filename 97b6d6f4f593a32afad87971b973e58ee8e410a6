@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6acdcdd3_bf0d477a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-09T20:58:11Z",
+      "side": 1,
+      "message": "what if the `module_name_overrides` changes it to something that doesn\u0027t match?",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 47
+      },
+      "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbd2e5e8_052acb19",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-09T20:58:11Z",
+      "side": 1,
+      "message": "what if the `module_name_overrides` changes it to something that doesn\u0027t match? i suppose we could disallow that",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 47
+      },
+      "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
