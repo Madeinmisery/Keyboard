@@ -16,6 +16,23 @@
       "message": "nice",
       "revId": "677c53e0893c0b2718e37c0437bf59d041f65fbd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81f4175e_cdb72ce9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-09T01:12:08Z",
+      "side": 1,
+      "message": "might be interesting to see if we can do this at the serde layer instead so that we can support, e.g. toml instead of json (looks like someone imported a toml crate recently). not important ofc",
+      "revId": "677c53e0893c0b2718e37c0437bf59d041f65fbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
