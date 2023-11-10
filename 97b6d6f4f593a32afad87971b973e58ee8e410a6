@@ -69,6 +69,30 @@
       },
       "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "795924b4_8a0afa7d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-10T11:42:50Z",
+      "side": 1,
+      "message": "The build should catch that, but I\u0027ve added a check here as well to catch it earlier.",
+      "parentUuid": "dbd2e5e8_052acb19",
+      "range": {
+        "startLine": 11,
+        "startChar": 13,
+        "endLine": 11,
+        "endChar": 47
+      },
+      "revId": "97b6d6f4f593a32afad87971b973e58ee8e410a6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
