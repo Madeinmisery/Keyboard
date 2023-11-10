@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69ff3cd4_cad1e449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-11-10T01:13:31Z",
+      "side": 1,
+      "message": "Thanks for the patch, but multitree is obsolete and I don\u0027t think we still use this script. I\u0027ll",
+      "revId": "19c05c341c64cf718887ebb40b25799351feb48a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
