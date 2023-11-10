@@ -33,6 +33,24 @@
       "message": "multitree is obsolete, so we need to remove this entire directory.\n\nBut anyway thanks for the patch!",
       "revId": "19c05c341c64cf718887ebb40b25799351feb48a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7076d6f8_9dacc251",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1096713
+      },
+      "writtenOn": "2023-11-10T01:17:17Z",
+      "side": 1,
+      "message": "I saw this usage from https://source.corp.google.com/piper///depot/google3/configs/wireless/android/busytown/platform/git_main/git_main-cuttlefish-vendor-dev.gcl which maybe should also be turned down?",
+      "parentUuid": "782f9313_465459f4",
+      "revId": "19c05c341c64cf718887ebb40b25799351feb48a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
