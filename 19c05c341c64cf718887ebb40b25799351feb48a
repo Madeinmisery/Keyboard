@@ -16,6 +16,23 @@
       "message": "Thanks for the patch, but multitree is obsolete and I don\u0027t think we still use this script. I\u0027ll",
       "revId": "19c05c341c64cf718887ebb40b25799351feb48a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "782f9313_465459f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2023-11-10T01:14:29Z",
+      "side": 1,
+      "message": "multitree is obsolete, so we need to remove this entire directory.\n\nBut anyway thanks for the patch!",
+      "revId": "19c05c341c64cf718887ebb40b25799351feb48a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
