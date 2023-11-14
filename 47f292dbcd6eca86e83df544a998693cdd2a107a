@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5065aa3f_5c080586",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:40:52Z",
+      "side": 1,
+      "message": "oh, nevermind, i mixed up the key and value of the map",
+      "parentUuid": "45af1e14_3eff7c87",
+      "range": {
+        "startLine": 295,
+        "startChar": 45,
+        "endLine": 295,
+        "endChar": 76
+      },
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b323ff2_809d09e9",
@@ -77,6 +101,24 @@
       "writtenOn": "2023-11-14T20:35:36Z",
       "side": 1,
       "message": "should we also add `format(\"dep:{dependency_package}\")` since that is what we check in `DependencyMetadata::enabled`?",
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25af4744_b7a5092b",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:40:52Z",
+      "side": 1,
+      "message": "nevermind, that is handled by the entry added to the map in `resolve_features`",
+      "parentUuid": "d043ce20_75cb57c4",
       "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
