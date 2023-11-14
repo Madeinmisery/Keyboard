@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45af1e14_3eff7c87",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:35:36Z",
+      "side": 1,
+      "message": "does this mean we see a \"dep:foo\" feature when the metadata did not contain a \"foo\" dependency? (because, if a \"foo\" dep was in the metadata, then the new code in `resolve_features` would have added \"dep:foo\" and the first part of this if-condition would have been true)",
+      "range": {
+        "startLine": 295,
+        "startChar": 45,
+        "endLine": 295,
+        "endChar": 76
+      },
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d5b74f2_e2c2fdd6",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:35:36Z",
+      "side": 1,
+      "message": "what is a case where this if-condition fails?\n\nsome feature was enabled explicitly as in the chosen features or in the crate defaults, but we chose to not to treat it as enabled. that seems odd",
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b323ff2_809d09e9",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:35:36Z",
+      "side": 1,
+      "message": "FYI: looks like this could end with a `?`, which means that it shouldn\u0027t be enabled automatically. up to you whether it is worth handling at this point\n\nhttps://doc.rust-lang.org/cargo/reference/features.html#dependency-features",
+      "range": {
+        "startLine": 301,
+        "startChar": 25,
+        "endLine": 301,
+        "endChar": 43
+      },
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d043ce20_75cb57c4",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-14T20:35:36Z",
+      "side": 1,
+      "message": "should we also add `format(\"dep:{dependency_package}\")` since that is what we check in `DependencyMetadata::enabled`?",
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
