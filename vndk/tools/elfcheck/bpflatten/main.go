@@ -25,6 +25,8 @@ import (
 	"github.com/google/blueprint/parser"
 )
 
+var evalEnv = &parser.EvalEnvironment{}
+
 type FlatModule struct {
 	Type        string
 	Name        string
@@ -48,13 +50,13 @@ func populatePropertyMap(propMap map[string]interface{}, prefix string, m *parse
 		if prefix != "" {
 			name = prefix + "." + name
 		}
-		value := prop.Value.Eval()
+		value := prop.Value.Eval(evalEnv)
 		if s, isScalar := expandScalarTypeExpression(value); isScalar {
 			propMap[name] = s
 		} else if list, ok := value.(*parser.List); ok {
 			var l []interface{}
 			for _, v := range list.Values {
-				if s, isScalar := expandScalarTypeExpression(v.Eval()); isScalar {
+				if s, isScalar := expandScalarTypeExpression(v.Eval(evalEnv)); isScalar {
 					l = append(l, s)
 				}
 			}
@@ -70,7 +72,7 @@ var anonymousModuleCount int
 func flattenModule(module *parser.Module) (flattened FlatModule) {
 	flattened.Type = module.Type
 	if prop, found := module.GetProperty("name"); found {
-		if value, ok := prop.Value.Eval().(*parser.String); ok {
+		if value, ok := prop.Value.Eval(evalEnv).(*parser.String); ok {
 			flattened.Name = value.Value
 		}
 	} else {
@@ -92,7 +94,7 @@ func processFile(filename string, in io.Reader) ([]FlatModule, error) {
 		}
 	}
 
-	ast, errs := parser.ParseAndEval(filename, in, &parser.Scope{})
+	ast, errs := parser.ParseAndEval(filename, in, nil, &parser.Scope{})
 	if len(errs) > 0 {
 		for _, err := range errs {
 			fmt.Fprintln(os.Stderr, err)
