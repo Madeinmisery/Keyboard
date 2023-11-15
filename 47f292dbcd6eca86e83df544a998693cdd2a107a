@@ -85,6 +85,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0d851326_aaa849ef",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-15T19:47:12Z",
+      "side": 1,
+      "message": "I see. My main objection is that `add_feature_and_dependencies` says \"Adds the given feature ...\" but now it will be much less intuitive.\n\nMaybe something like the following would work instead then? When this check fails, `add_feature_and_dependencies` is a noop, so instead just try to avoid calling `add_feature_and_dependencies` in the first place for non-optional deps.\n\n```\n    \n    features.push(feature.to_owned());\n\n    if let Some(dependencies) \u003d package_features.get(feature) {\n        for dependency in dependencies {\n            if let Some((dependency_package, _)) \u003d dependency.split_once(\u0027/\u0027) {\n                // Features for another package implicitly enable optional\n                // dependencies on that package.\n                if package_features.contains_key(feature)\n                   || feature.starts_with(\"dep:\") {\n                    add_feature_and_dependencies(features, dependency_package, package_features);\n                }\n            } else {\n                add_feature_and_dependencies(features, dependency, package_features);\n            }\n        }\n    }\n```",
+      "parentUuid": "784edd06_a70c276c",
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9b323ff2_809d09e9",
         "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
         "patchSetId": 1
