@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a4a3e3e_0ed6cb55",
+        "filename": "tools/cargo_embargo/src/config/legacy.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-15T19:53:46Z",
+      "side": 1,
+      "message": "looks like c2a prepends \"lib\" to these strings: https://cs.android.com/android/platform/superproject/main/+/main:development/scripts/cargo2android.py;l\u003d794;drc\u003da18bd3c1ca792d39bc52d42808af29ea669377e9\n\nshould we do the same here, or where it is used in main.rs?",
+      "revId": "19955a362a8334f4171cbed4589080792e3b2922",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
