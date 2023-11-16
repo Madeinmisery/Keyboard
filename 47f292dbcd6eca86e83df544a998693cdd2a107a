@@ -101,6 +101,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4bfc9c1_23cd8b83",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-16T11:42:27Z",
+      "side": 1,
+      "message": "That doesn\u0027t quite work, because it will still end up enabling features which don\u0027t exist if they are in `chosen_features` or \"default\", which doesn\u0027t match the behaviour of cargo. I\u0027ve updated the Rustdoc comment for `add_features_and_dependencies` instead.",
+      "parentUuid": "0d851326_aaa849ef",
+      "revId": "47f292dbcd6eca86e83df544a998693cdd2a107a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b323ff2_809d09e9",
