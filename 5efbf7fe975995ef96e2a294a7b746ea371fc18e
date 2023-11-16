@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3fc18d2_d7b4d082",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-11-16T17:00:48Z",
+      "side": 1,
+      "message": "bruce: you\u0027ll need to talk to someone on the qcom side to get the qcom approval bit flipped before this can go in...",
+      "revId": "5efbf7fe975995ef96e2a294a7b746ea371fc18e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
