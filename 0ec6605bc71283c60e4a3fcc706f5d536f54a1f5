@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b16d823_5ff5ab71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-17T15:53:42Z",
+      "side": 1,
+      "message": "This is a bit of a hack, but I think it\u0027s probably worth it to support 13 more crates without running a cargo build.",
+      "revId": "0ec6605bc71283c60e4a3fcc706f5d536f54a1f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
