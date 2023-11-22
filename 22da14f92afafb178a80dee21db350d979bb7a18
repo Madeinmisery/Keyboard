@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0ce2b22d_dc26d13a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1311067
+      },
+      "writtenOn": "2023-11-22T07:33:35Z",
+      "side": 1,
+      "message": "This change abandons cancatenating lists in \"srcs\" and \"resource_dirs\" and using strings to each attribute to increase readability.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 56
+      },
+      "revId": "22da14f92afafb178a80dee21db350d979bb7a18",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "01a4579c_acf7434c",
         "filename": "samples/ShortcutDemo/Android.bp",
         "patchSetId": 1
