@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "717f4da2_08675e78",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-22T19:19:50Z",
+      "side": 1,
+      "message": "not a blocker:\n\nmaybe we could move this into a `RustcExtras` type and have `Crate::from_rustc_invocation` return `(Crate, RustcExtra)` to make this more intuitive\n\nalternatively, i can\u0027t remember why there is this thin layer of business logic here. maybe we could calculate `Crate::empty_test` inside `Crate::from_rustc_invocation` and then `output_filename` could be a local variable in that function",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 33
+      },
+      "revId": "c6c8b35ea76541c1bcfd233f29afad1136b2ca68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1947f33_d75b4833",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-22T19:19:50Z",
+      "side": 1,
+      "message": "what\u0027s the advantage of trim `tests: true` from the config?\n\nthere might be no tests initial, then we update the crate and now it has tests, but we probably won\u0027t regen the config. IMO `tests: false` should be more of an escape hatch for when it is too much work to run them in AOSP (e.g. lots more deps required or incompatible with the android test infra)",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 196,
+        "endChar": 5
+      },
+      "revId": "c6c8b35ea76541c1bcfd233f29afad1136b2ca68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
