@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e790f2e0_1190a973",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-22T19:34:57Z",
+      "side": 1,
+      "message": "this can be done when it is in a file too",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 39
+      },
+      "revId": "608c58a6447baf048b58ad957dcb90fee9513d6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ab37a01_6624c76f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-22T19:34:57Z",
+      "side": 1,
+      "message": "is that a useful goal? seems like we could never hit zero since cargo itself needs temp files",
+      "range": {
+        "startLine": 9,
+        "startChar": 45,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "608c58a6447baf048b58ad957dcb90fee9513d6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e39f4f8b_0e2b263c",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-11-22T19:34:57Z",
+      "side": 1,
+      "message": "splitting up the stdout and stderr (which has the side effect of losing the temporal relationship between their lines) and then throwing away one half is probably going to hurt debugging more than help it\n\ni know it isn\u0027t completely normal, e.g. if you want to parse the metadata json, you\u0027d normally not want to include the stderr because if a warning or something is printed it will break the json parsing. probably no one will ever notice the warning though, so it it seems like an advantage to me unless we run into some warning that isn\u0027t possible to silence",
+      "range": {
+        "startLine": 385,
+        "startChar": 0,
+        "endLine": 386,
+        "endChar": 51
+      },
+      "revId": "608c58a6447baf048b58ad957dcb90fee9513d6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
