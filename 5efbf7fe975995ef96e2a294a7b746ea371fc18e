@@ -51,6 +51,24 @@
       "message": "lack of code owners review, can you review?",
       "revId": "5efbf7fe975995ef96e2a294a7b746ea371fc18e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3dd62c17_fb69acdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3003642
+      },
+      "writtenOn": "2023-11-22T09:08:33Z",
+      "side": 1,
+      "message": "OK, done it.",
+      "parentUuid": "dcdadc20_846befd0",
+      "revId": "5efbf7fe975995ef96e2a294a7b746ea371fc18e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
