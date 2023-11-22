@@ -40,7 +40,7 @@ use anyhow::Context;
 use anyhow::Result;
 use bp::*;
 use cargo::{
-    cargo_out::parse_cargo_out, metadata::parse_cargo_metadata_file, Crate, CrateType, ExternType,
+    cargo_out::parse_cargo_out, metadata::parse_cargo_metadata_str, Crate, CrateType, ExternType,
 };
 use clap::Parser;
 use clap::Subcommand;
@@ -49,7 +49,7 @@ use once_cell::sync::Lazy;
 use std::collections::BTreeMap;
 use std::collections::VecDeque;
 use std::env;
-use std::fs::{write, File};
+use std::fs::{read_to_string, write, File};
 use std::io::Write;
 use std::path::Path;
 use std::path::PathBuf;
@@ -276,15 +276,22 @@ fn make_crates(args: &Args, cfg: &VariantConfig) -> Result<Vec<Crate>> {
 
     let cargo_out_path = "cargo.out";
     let cargo_metadata_path = "cargo.metadata";
-    if !args.reuse_cargo_out || !Path::new(cargo_out_path).exists() {
-        generate_cargo_out(cfg, cargo_out_path, cargo_metadata_path)
-            .context("generate_cargo_out failed")?;
-    }
+    let cargo_output = if args.reuse_cargo_out && Path::new(cargo_out_path).exists() {
+        CargoOutput {
+            cargo_out: read_to_string(cargo_out_path)?,
+            cargo_metadata: read_to_string(cargo_metadata_path)?,
+        }
+    } else {
+        let cargo_output = generate_cargo_out(cfg).context("generate_cargo_out failed")?;
+        write(cargo_out_path, &cargo_output.cargo_out)?;
+        write(cargo_metadata_path, &cargo_output.cargo_metadata)?;
+        cargo_output
+    };
 
     if cfg.run_cargo {
-        parse_cargo_out(cargo_out_path, cargo_metadata_path).context("parse_cargo_out failed")
+        parse_cargo_out(&cargo_output).context("parse_cargo_out failed")
     } else {
-        parse_cargo_metadata_file(cargo_metadata_path, cfg)
+        parse_cargo_metadata_str(&cargo_output.cargo_metadata, cfg)
     }
 }
 
@@ -365,32 +372,45 @@ fn write_all_bp(
     Ok(())
 }
 
-fn run_cargo(cargo_out: &mut File, cmd: &mut Command) -> Result<()> {
-    use std::os::unix::io::OwnedFd;
-    use std::process::Stdio;
-    let fd: OwnedFd = cargo_out.try_clone()?.into();
-    debug!("Running: {:?}\n", cmd);
-    let output = cmd.stdout(Stdio::from(fd.try_clone()?)).stderr(Stdio::from(fd)).output()?;
-    if !output.status.success() {
-        bail!("cargo command failed with exit status: {:?}", output.status);
-    }
-    Ok(())
+#[derive(Clone, Debug, Eq, PartialEq)]
+struct CommandOutput {
+    stdout: String,
+    stderr: String,
 }
 
-/// Run various cargo commands and save the output to `cargo_out_path`.
-fn generate_cargo_out(
-    cfg: &VariantConfig,
-    cargo_out_path: &str,
-    cargo_metadata_path: &str,
-) -> Result<()> {
-    let mut cargo_out_file = std::fs::File::create(cargo_out_path)?;
-    let mut cargo_metadata_file = std::fs::File::create(cargo_metadata_path)?;
+/// Runs the given command, and returns its standard output and standard error as strings.
+fn run_cargo(cmd: &mut Command) -> Result<CommandOutput> {
+    debug!("Running: {:?}\n", cmd);
+    let output = cmd.output()?;
+    let stdout = String::from_utf8(output.stdout)?;
+    let stderr = String::from_utf8(output.stderr)?;
+    if !output.status.success() {
+        bail!(
+            "cargo command `{:?}` failed with exit status: {:?}.\nOutput: \n------\n{}\n------\nError output:\n------\n{}\n------",
+            cmd,
+            output.status,
+            stdout,
+            stderr,
+        );
+    }
 
+    Ok(CommandOutput { stdout, stderr })
+}
+
+/// The raw output from running `cargo metadata`, `cargo build` and other commands.
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct CargoOutput {
+    cargo_metadata: String,
+    cargo_out: String,
+}
+
+/// Run various cargo commands and returns the output.
+fn generate_cargo_out(cfg: &VariantConfig) -> Result<CargoOutput> {
     let verbose_args = ["-v"];
     let target_dir_args = ["--target-dir", "target.tmp"];
 
     // cargo clean
-    run_cargo(&mut cargo_out_file, Command::new("cargo").arg("clean").args(target_dir_args))
+    run_cargo(Command::new("cargo").arg("clean").args(target_dir_args))
         .context("Running cargo clean")?;
 
     let default_target = "x86_64-unknown-linux-gnu";
@@ -418,8 +438,7 @@ fn generate_cargo_out(
     };
 
     // cargo metadata
-    run_cargo(
-        &mut cargo_metadata_file,
+    let cargo_metadata = run_cargo(
         Command::new("cargo")
             .arg("metadata")
             .arg("-q") // don't output warnings to stderr
@@ -427,45 +446,47 @@ fn generate_cargo_out(
             .arg("1")
             .args(&feature_args),
     )
-    .context("Running cargo metadata")?;
+    .context("Running cargo metadata")?
+    .stdout;
 
+    let mut cargo_out = String::new();
     if cfg.run_cargo {
         // cargo build
-        run_cargo(
-            &mut cargo_out_file,
+        cargo_out += &run_cargo(
             Command::new("cargo")
                 .args(["build", "--target", default_target])
                 .args(verbose_args)
                 .args(target_dir_args)
                 .args(&workspace_args)
                 .args(&feature_args),
-        )?;
+        )?
+        .stderr;
 
         if cfg.tests {
             // cargo build --tests
-            run_cargo(
-                &mut cargo_out_file,
+            cargo_out += &run_cargo(
                 Command::new("cargo")
                     .args(["build", "--target", default_target, "--tests"])
                     .args(verbose_args)
                     .args(target_dir_args)
                     .args(&workspace_args)
                     .args(&feature_args),
-            )?;
+            )?
+            .stderr;
             // cargo test -- --list
-            run_cargo(
-                &mut cargo_out_file,
+            cargo_out += &run_cargo(
                 Command::new("cargo")
                     .args(["test", "--target", default_target])
                     .args(target_dir_args)
                     .args(&workspace_args)
                     .args(&feature_args)
                     .args(["--", "--list"]),
-            )?;
+            )?
+            .stderr;
         }
     }
 
-    Ok(())
+    Ok(CargoOutput { cargo_metadata, cargo_out })
 }
 
 /// Create the Android.bp file for `package_dir`.
