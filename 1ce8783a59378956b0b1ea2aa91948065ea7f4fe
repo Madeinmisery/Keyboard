@@ -52,6 +52,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb4751bb_5ae3609a",
+        "filename": "tools/cargo_embargo/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-23T11:32:26Z",
+      "side": 1,
+      "message": "If `min_sdk_version` is not set in `cargo_embargo.json` then the `min_sdk_version` is not set in the generated `Android.bp`.",
+      "parentUuid": "78c35d91_193129fd",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb467449_f37a13b1",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-11-23T10:42:54Z",
       "side": 1,
       "message": "It is not clear to me if the file named `_` (underscore) is a mistake? I would suggest marking up the filename as literal text in any case:\n\n```suggestion\n| `copy_out`              | boolean                   | `false` | yes         | Copy `build.rs` output to `./out/_` and add a genrule to copy `./out/_` to genrule output.                               |\n```",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fcd85f6_099499bf",
+        "filename": "tools/cargo_embargo/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-23T11:32:26Z",
+      "side": 1,
+      "message": "Aha, this was the Markdown autoformatter being overly enthusiastic. Fixed.",
+      "parentUuid": "eb467449_f37a13b1",
       "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
