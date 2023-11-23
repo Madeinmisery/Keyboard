@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "331e6f03_a18a0f30",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-23T17:44:46Z",
+      "side": 1,
+      "message": "Good idea. I\u0027ll send a separate change to do the latter.",
+      "parentUuid": "717f4da2_08675e78",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 33
+      },
+      "revId": "c6c8b35ea76541c1bcfd233f29afad1136b2ca68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f1947f33_d75b4833",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-11-22T19:19:50Z",
       "side": 1,
       "message": "what\u0027s the advantage of trim `tests: true` from the config?\n\nthere might be no tests initial, then we update the crate and now it has tests, but we probably won\u0027t regen the config. IMO `tests: false` should be more of an escape hatch for when it is too much work to run them in AOSP (e.g. lots more deps required or incompatible with the android test infra)",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 196,
+        "endChar": 5
+      },
+      "revId": "c6c8b35ea76541c1bcfd233f29afad1136b2ca68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1823b430_d7d91c3c",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-23T17:44:46Z",
+      "side": 1,
+      "message": "It saves a bit of time on cargo invocations, but the bigger reason is for comparison with metadata-only mode. That is unable to detect when there aren\u0027t actually any tests for a crate, and so may end up generating empty test modules. By setting `tests` to false in the config then the cargo mode and the metadata mode are more likely to generate the same output.",
+      "parentUuid": "f1947f33_d75b4833",
       "range": {
         "startLine": 191,
         "startChar": 0,
