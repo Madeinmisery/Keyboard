@@ -70,6 +70,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "136f7107_25202764",
+        "filename": "tools/cargo_embargo/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2023-11-23T13:55:31Z",
+      "side": 1,
+      "message": "Ah, of course 😊",
+      "parentUuid": "bb4751bb_5ae3609a",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb467449_f37a13b1",
