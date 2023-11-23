@@ -16,6 +16,57 @@
       "message": "thanks!",
       "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef5d1fa0_ebf759d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2023-11-23T10:42:54Z",
+      "side": 1,
+      "message": "Thanks, this is a great step forward.",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78c35d91_193129fd",
+        "filename": "tools/cargo_embargo/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2023-11-23T10:42:54Z",
+      "side": 1,
+      "message": "What happens if this is not set, i.e., what is the meaning of `-` for the default?",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb467449_f37a13b1",
+        "filename": "tools/cargo_embargo/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2023-11-23T10:42:54Z",
+      "side": 1,
+      "message": "It is not clear to me if the file named `_` (underscore) is a mistake? I would suggest marking up the filename as literal text in any case:\n\n```suggestion\n| `copy_out`              | boolean                   | `false` | yes         | Copy `build.rs` output to `./out/_` and add a genrule to copy `./out/_` to genrule output.                               |\n```",
+      "revId": "1ce8783a59378956b0b1ea2aa91948065ea7f4fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
