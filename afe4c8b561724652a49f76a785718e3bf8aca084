@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd6256a4_3397f545",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 476,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-28T17:01:41Z",
+      "side": 1,
+      "message": "It turns out the test list (to detect empty tests) does rely on interleaved stderr and stdout. I\u0027ll rethink this.",
+      "revId": "afe4c8b561724652a49f76a785718e3bf8aca084",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
