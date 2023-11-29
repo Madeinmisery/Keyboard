@@ -22,6 +22,30 @@
       },
       "revId": "e68a06dc13e91813e5cf29bbd073e2712121041b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fc9a0e0_9e5cbe2f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-11-29T10:29:29Z",
+      "side": 1,
+      "message": "True. They can still do that though, they just need to use the un-renamed name.",
+      "parentUuid": "2e653f03_6db23ba4",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 63
+      },
+      "revId": "e68a06dc13e91813e5cf29bbd073e2712121041b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
