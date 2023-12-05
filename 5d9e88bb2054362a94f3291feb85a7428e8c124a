@@ -16,6 +16,24 @@
       "message": "seems like this needs to be an error or we need to infer the lib name from the pkg name as a fallback",
       "revId": "5d9e88bb2054362a94f3291feb85a7428e8c124a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54245d46_3234d9d2",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-12-05T11:31:41Z",
+      "side": 1,
+      "message": "Whoops, I had some local changes which didn\u0027t make it into this commit. Fixed.",
+      "parentUuid": "eccc6a3d_b962a059",
+      "revId": "5d9e88bb2054362a94f3291feb85a7428e8c124a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
