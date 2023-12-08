@@ -16,6 +16,24 @@
       "message": "nit: we can just pass `args.ignore_abi` into the method.",
       "revId": "327c1032dcee0dec073e78719ff5413565d4f9ec",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2788ada_e5a44a38",
+        "filename": "tools/compare_cts_reports/compare_cts_reports.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1966697
+      },
+      "writtenOn": "2023-12-08T07:52:47Z",
+      "side": 1,
+      "message": "The reason why I didn\u0027t use `args.ignore_abi` directly at line#296 is to prevent from this line for being longer than 80 characters.",
+      "parentUuid": "ac3ae1ce_c1f03658",
+      "revId": "327c1032dcee0dec073e78719ff5413565d4f9ec",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
