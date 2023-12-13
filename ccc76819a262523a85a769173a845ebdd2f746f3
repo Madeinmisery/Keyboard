@@ -16,6 +16,23 @@
       "message": "Thanks, the piping shenanigans look good to me.",
       "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8e32af9_b7132f49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1892347
+      },
+      "writtenOn": "2023-12-13T14:32:41Z",
+      "side": 1,
+      "message": "Unsafe Rust LGTM.",
+      "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
