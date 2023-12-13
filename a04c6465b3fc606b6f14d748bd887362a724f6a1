@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88bd87c1_737fbc96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-12-13T20:20:20Z",
+      "side": 1,
+      "message": "I\u0027m still interested in helping to review CLs :)",
+      "revId": "a04c6465b3fc606b6f14d748bd887362a724f6a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
