@@ -33,6 +33,29 @@
       "message": "Unsafe Rust LGTM.",
       "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e293382_dd5cfb90",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 6
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2023-12-13T23:04:40Z",
+      "side": 1,
+      "message": "not a blocker, just an idea:\n\nif you don\u0027t care about making this linux specific, you could use a memfd (`nix::sys::memfd::memfd_create`) instead of a pipe and then it becomes a bit simpler (and avoid the unsafe i think)\n\n(didn\u0027t test)\n\n```\nlet memfd \u003d nix::sys::memfd::memfd_create(...);\ncmd.stdout(memfd.try_clone()?).stderr(memfd).stdin(Stdio::null());\ndebug!(\"Running: {:?}\\n\", cmd);\nlet status \u003d cmd.status();\nif !status.success() {\n    ...\n}\nlet mut output \u003d String::new();\nFile::from(memfd).read_to_string(\u0026mut output)?;\n```",
+      "range": {
+        "startLine": 390,
+        "startChar": 0,
+        "endLine": 391,
+        "endChar": 80
+      },
+      "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
