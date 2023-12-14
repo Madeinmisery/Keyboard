@@ -56,6 +56,30 @@
       },
       "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29d2248f_44d331d3",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 6
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-12-14T11:51:27Z",
+      "side": 1,
+      "message": "Interesting idea! But I think I\u0027d prefer to stick with a pipe because it\u0027s more consistent with the approach we use elsewhere in AOSP. The unsafe block should go away with a future version of nix once they complete their transition to `OwnedFd` everywhere.",
+      "parentUuid": "6e293382_dd5cfb90",
+      "range": {
+        "startLine": 390,
+        "startChar": 0,
+        "endLine": 391,
+        "endChar": 80
+      },
+      "revId": "ccc76819a262523a85a769173a845ebdd2f746f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
