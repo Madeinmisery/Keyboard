@@ -1,5 +1,29 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d632158_bf525f65",
+        "filename": "samples/ShortcutDemo/Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1318142
+      },
+      "writtenOn": "2023-12-18T23:54:49Z",
+      "side": 1,
+      "message": "This should be from Android.mk, 2016.",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "b7051c4dbb1dfc4e0b1dc0a5c98dceca3266313f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
