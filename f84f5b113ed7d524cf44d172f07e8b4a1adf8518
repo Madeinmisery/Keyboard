@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d0246e0f_236bce1b",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2023-12-20T00:44:45Z",
+      "side": 1,
+      "message": "The condition was effectively negated in I1e5d46b4de3129770ab87ebc5e58563010ae6605, and that seems incorrect to me. It at least does not handle the case of disabled features disabling the dependency.",
+      "parentUuid": "c8d3b9d1_a88f3cc1",
+      "revId": "f84f5b113ed7d524cf44d172f07e8b4a1adf8518",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "51fba96f_e68dc8fe",
         "filename": "scripts/cargo2rulesmk.py",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2023-12-20T00:18:50Z",
       "side": 1,
       "message": "Do we need to check for the internal `dep:` features, or are they covered? See https://doc.rust-lang.org/cargo/reference/features.html#optional-dependencies.",
+      "revId": "f84f5b113ed7d524cf44d172f07e8b4a1adf8518",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1a99ae6_2203f638",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2023-12-20T00:44:45Z",
+      "side": 1,
+      "message": "I just tested it with x509-cert and this handles internal `dep:` features fine.",
+      "parentUuid": "51fba96f_e68dc8fe",
       "revId": "f84f5b113ed7d524cf44d172f07e8b4a1adf8518",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
