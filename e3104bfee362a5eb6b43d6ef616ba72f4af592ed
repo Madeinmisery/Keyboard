@@ -16,6 +16,24 @@
       "message": "\\o/",
       "revId": "e3104bfee362a5eb6b43d6ef616ba72f4af592ed",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b764ce7_8dec987e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2023-12-20T14:53:46Z",
+      "side": 1,
+      "message": "So can I get owner approval?",
+      "parentUuid": "859c542b_55a0dedc",
+      "revId": "e3104bfee362a5eb6b43d6ef616ba72f4af592ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
