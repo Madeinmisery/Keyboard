@@ -16,6 +16,24 @@
       "message": "go/android3p indicates that you need to escalate anything with 0-BSD for approval before using it. I\u0027d advise against making it easier to automatically slip these things in. If a manual escalation is needed to use the library, then surely manually creating the license file is not a ton of extra effort in that case.",
       "revId": "38d199e4c8318c6540b3dbb5ff1e402f77b9e14f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6061a465_ad17db35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2023-12-20T23:48:20Z",
+      "side": 1,
+      "message": "Sorry, misread docs.",
+      "parentUuid": "63d1caee_5edcfad6",
+      "revId": "38d199e4c8318c6540b3dbb5ff1e402f77b9e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
