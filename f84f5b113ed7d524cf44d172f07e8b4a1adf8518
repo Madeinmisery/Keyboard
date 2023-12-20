@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00bb6eb1_06fd67d9",
+        "filename": "scripts/cargo2rulesmk.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2023-12-20T00:46:36Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "d0246e0f_236bce1b",
+      "revId": "f84f5b113ed7d524cf44d172f07e8b4a1adf8518",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "51fba96f_e68dc8fe",
