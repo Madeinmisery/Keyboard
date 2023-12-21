@@ -34,6 +34,23 @@
       "parentUuid": "63d1caee_5edcfad6",
       "revId": "38d199e4c8318c6540b3dbb5ff1e402f77b9e14f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc981648_b860fbee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2001322
+      },
+      "writtenOn": "2023-12-21T13:54:10Z",
+      "side": 1,
+      "message": "Overriding false positive for detection of BSD license",
+      "revId": "38d199e4c8318c6540b3dbb5ff1e402f77b9e14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
