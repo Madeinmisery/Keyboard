@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a5e0d68_13c4fc53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2001322
+      },
+      "writtenOn": "2023-12-21T18:58:37Z",
+      "side": 1,
+      "message": "Overridding false positive for detection of Unlicensed code.",
+      "revId": "b4fa3db019f17015f48541e51330cfa1e601ae70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
