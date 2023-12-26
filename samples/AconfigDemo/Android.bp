@@ -28,6 +28,7 @@ android_app {
 aconfig_declarations {
     name: "aconfig_demo_flags",
     package: "com.example.android.aconfig.demo.flags",
+    container: "system",
     srcs: ["aconfig_demo_flags.aconfig"],
 }
 
