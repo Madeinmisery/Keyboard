@@ -22,6 +22,30 @@
       },
       "revId": "b7051c4dbb1dfc4e0b1dc0a5c98dceca3266313f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30b43948_2564ce18",
+        "filename": "samples/ShortcutDemo/Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1318142
+      },
+      "writtenOn": "2024-01-04T06:21:47Z",
+      "side": 1,
+      "message": "Fixed in aosp/2896980.",
+      "parentUuid": "5d632158_bf525f65",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "b7051c4dbb1dfc4e0b1dc0a5c98dceca3266313f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
