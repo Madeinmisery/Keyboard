@@ -22,6 +22,30 @@
       },
       "revId": "1396c86e239efe999d900658063e1010e0e282ed",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b2b7b30_9e809441",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2024-01-08T13:51:00Z",
+      "side": 1,
+      "message": "Yes, pleas feel free to delete it. There\u0027s no point in keeping the version name in the dir name.",
+      "parentUuid": "660ac77a_71709414",
+      "range": {
+        "startLine": 208,
+        "startChar": 32,
+        "endLine": 208,
+        "endChar": 46
+      },
+      "revId": "1396c86e239efe999d900658063e1010e0e282ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
