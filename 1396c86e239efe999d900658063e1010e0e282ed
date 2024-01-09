@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ede07072_8191222e",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-01-09T07:06:14Z",
+      "side": 1,
+      "message": "It\u0027s passed into _get_module_variant_dir_name in utils.py. The function returns the dir name for the library variant that the user requests to dump.\nI synced the source and rebuilt a vendor library. The directory name still contains the version name.",
+      "parentUuid": "e9760c82_dea7bff0",
+      "range": {
+        "startLine": 133,
+        "startChar": 38,
+        "endLine": 133,
+        "endChar": 59
+      },
+      "revId": "1396c86e239efe999d900658063e1010e0e282ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "660ac77a_71709414",
