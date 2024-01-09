@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9760c82_dea7bff0",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2024-01-09T03:33:52Z",
+      "side": 1,
+      "message": "Why do we still need `platform_vndk_version` here? `platform_vndk_version` is the version of vndk that is built from the source tree.",
+      "range": {
+        "startLine": 133,
+        "startChar": 38,
+        "endLine": 133,
+        "endChar": 59
+      },
+      "revId": "1396c86e239efe999d900658063e1010e0e282ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "660ac77a_71709414",
@@ -38,6 +61,30 @@
       "side": 1,
       "message": "Yes, pleas feel free to delete it. There\u0027s no point in keeping the version name in the dir name.",
       "parentUuid": "660ac77a_71709414",
+      "range": {
+        "startLine": 208,
+        "startChar": 32,
+        "endLine": 208,
+        "endChar": 46
+      },
+      "revId": "1396c86e239efe999d900658063e1010e0e282ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7ae8af3_60531e1c",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2024-01-09T03:33:52Z",
+      "side": 1,
+      "message": "This is already done with aosp/2894623.",
+      "parentUuid": "1b2b7b30_9e809441",
       "range": {
         "startLine": 208,
         "startChar": 32,
