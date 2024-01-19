@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ca9d07c_1e309ceb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2001322
+      },
+      "writtenOn": "2024-01-19T21:20:00Z",
+      "side": 1,
+      "message": "Overriding Open-Source-Licensing -1 vote\n\nThis change does not introduce any other licensed code other than Apache2 to platform/development. The linter is detecting the Boost license detection code.",
+      "revId": "67924d1dd02f91a6775f7c1f3d8f8c26decb833c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
