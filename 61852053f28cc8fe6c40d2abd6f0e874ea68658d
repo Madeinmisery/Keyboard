@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c880fe9_18f254f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-01-19T20:22:30Z",
+      "side": 1,
+      "message": "You probably need to get some additional approvals from the 3p licensing folks for adding this (per the linter), but the code otherwise looks great.",
+      "revId": "61852053f28cc8fe6c40d2abd6f0e874ea68658d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
