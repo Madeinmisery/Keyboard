@@ -49,3 +49,14 @@ flag {
   bug: "298754733"
   is_fixed_read_only: true
 }
+
+flag {
+ name: "supprort_bugfix_templates_demo_flag"
+ namespace: "core_experiments_team_internal"
+ description: "A server-side flag for bugfix workflow demo"
+ bug: "311226181"
+ metadata {
+   purpose: PURPOSE_BUGFIX
+ }
+}
+
