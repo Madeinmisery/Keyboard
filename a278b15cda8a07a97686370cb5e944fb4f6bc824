@@ -52,6 +52,24 @@
       "parentUuid": "b0b65206_e9c78880",
       "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "112ecd78_bb5af33b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2024-01-24T15:06:31Z",
+      "side": 1,
+      "message": "I guess that\u0027s not a perfect example, because that\u0027s from before the `crates.io` type was being used, but here: https://cs.android.com/android/platform/superproject/main/+/main:external/rust/crates/vhost/METADATA;l\u003d10?q\u003dfilepath:%20METADATA%20%22type:%20%5C%22crates.io%5C%22%22\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain:external%2Frust%2Fcrates%2F\n\nThis one shows a file that matches this change - the `crates.io` section would be different, but that URL doesn\u0027t match the regex. The Archive section would remain, and does match the regex.",
+      "parentUuid": "8dd3439a_44126c0d",
+      "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
