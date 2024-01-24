@@ -16,6 +16,24 @@
       "message": "@sadafebrahimi@google.com - Will this work fine with external-updater? https://cs.android.com/android/platform/superproject/main/+/main:tools/external_updater/crates_updater.py;l\u003d44 has a pattern that relies on the URL, so I suspect that this is about to break for any newly imported crates (or crates that get updated METADATA). Should I file a bug/FR for handling this? I can also take a look at implementing the functionality if you\u0027re too busy.",
       "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0b65206_e9c78880",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2001322
+      },
+      "writtenOn": "2024-01-24T05:24:16Z",
+      "side": 1,
+      "message": "Whoops, sorry about that!\n\nWe can also revert this change if we need to!",
+      "parentUuid": "41402825_fd84aadf",
+      "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
