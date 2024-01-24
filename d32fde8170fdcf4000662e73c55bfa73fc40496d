@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f381bec0_0dfb61f0",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-01-24T22:08:35Z",
+      "side": 1,
+      "message": "if the flag is specified as `--deny FOO`, then this will ignore `--deny` but not `FOO`\n\ni think you want\n\n```\n                \"--deny\" \u003d\u003e {\n                    arg_iter.next().unwrap();\n                }\n```\n\nand/or\n\n```\n                _ if arg.starts_with(\"--deny\u003d\") \u003d\u003e {}\n```",
+      "revId": "d32fde8170fdcf4000662e73c55bfa73fc40496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54dd6835_05c8d3a0",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-01-24T22:08:35Z",
+      "side": 1,
+      "message": "same here",
+      "revId": "d32fde8170fdcf4000662e73c55bfa73fc40496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
