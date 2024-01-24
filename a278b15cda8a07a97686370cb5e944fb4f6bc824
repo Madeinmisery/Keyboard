@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41402825_fd84aadf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-01-24T03:06:05Z",
+      "side": 1,
+      "message": "@sadafebrahimi@google.com - Will this work fine with external-updater? https://cs.android.com/android/platform/superproject/main/+/main:tools/external_updater/crates_updater.py;l\u003d44 has a pattern that relies on the URL, so I suspect that this is about to break for any newly imported crates (or crates that get updated METADATA). Should I file a bug/FR for handling this? I can also take a look at implementing the functionality if you\u0027re too busy.",
+      "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
