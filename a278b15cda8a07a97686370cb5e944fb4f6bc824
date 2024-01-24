@@ -34,6 +34,24 @@
       "parentUuid": "41402825_fd84aadf",
       "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8dd3439a_44126c0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2024-01-24T15:03:01Z",
+      "side": 1,
+      "message": "I believe that should be fine - if you look at the regex, it\u0027s looking for `static.crates.io` - it\u0027s looking for the archive URL\n\nIf you look at a sample `METADATA`, https://cs.android.com/android/platform/superproject/main/+/main:external/rust/crates/aarch64-paging/METADATA;l\u003d14 shows that the url he changed to an identifier is not one that would have matched that regex in the first place.",
+      "parentUuid": "b0b65206_e9c78880",
+      "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
