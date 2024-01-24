@@ -70,6 +70,24 @@
       "parentUuid": "8dd3439a_44126c0d",
       "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fb174fc_4681c963",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1949106
+      },
+      "writtenOn": "2024-01-24T18:42:38Z",
+      "side": 1,
+      "message": "This will work fine with external_updater because as @mmaurer@google.com mentioned, it matches the value of the identifier with “Archive” as its type against a pattern. Just in case something goes wrong, external_updater\u0027s component ID is 1389560.",
+      "parentUuid": "112ecd78_bb5af33b",
+      "revId": "a278b15cda8a07a97686370cb5e944fb4f6bc824",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
