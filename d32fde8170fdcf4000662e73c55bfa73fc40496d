@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccf7f4e2_437c7a6e",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-01-25T15:16:47Z",
+      "side": 1,
+      "message": "The latter was what I was seeing, so changed to that.",
+      "parentUuid": "f381bec0_0dfb61f0",
+      "revId": "d32fde8170fdcf4000662e73c55bfa73fc40496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54dd6835_05c8d3a0",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-01-24T22:08:35Z",
       "side": 1,
       "message": "same here",
+      "revId": "d32fde8170fdcf4000662e73c55bfa73fc40496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "978267cb_20e96240",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-01-25T15:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54dd6835_05c8d3a0",
       "revId": "d32fde8170fdcf4000662e73c55bfa73fc40496d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
