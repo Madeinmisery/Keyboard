@@ -13,6 +13,7 @@
 // limitations under the License.
 
 package {
+    default_team: "trendy_team_foundation_security_rust_pkvm_",
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
