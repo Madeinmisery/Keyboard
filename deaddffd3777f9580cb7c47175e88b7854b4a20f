@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2aa360a_bf315338",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-02-02T20:02:08Z",
+      "side": 1,
+      "message": "maybe eprintln is more appropriate",
+      "range": {
+        "startLine": 330,
+        "startChar": 12,
+        "endLine": 330,
+        "endChar": 19
+      },
+      "revId": "deaddffd3777f9580cb7c47175e88b7854b4a20f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
