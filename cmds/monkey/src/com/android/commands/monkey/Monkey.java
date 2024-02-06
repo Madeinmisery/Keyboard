@@ -526,6 +526,14 @@ public class Monkey {
         } catch (Exception e) {
             Logger.err.println("// Exception from " + reportName + ":");
             Logger.err.println(e.toString());
+        } finally {
+            if (logOutput != null) {
+                try {
+                   logOutput.close();
+                } catch (IOException e) {
+                    Logger.err.println(e.toString());
+                }
+            }
         }
     }
 
