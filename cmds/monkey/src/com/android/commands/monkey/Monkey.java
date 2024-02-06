@@ -519,13 +519,17 @@ public class Monkey {
 
             int status = p.waitFor();
             Logger.err.println("// " + reportName + " status was " + status);
-
-            if (logOutput != null) {
-                logOutput.close();
-            }
         } catch (Exception e) {
             Logger.err.println("// Exception from " + reportName + ":");
             Logger.err.println(e.toString());
+        } finally {
+            if (logOutput != null) {
+                try {
+                   logOutput.close();
+                } catch (IOException e) {
+                    Logger.err.println(e.toString());
+                }
+            }
         }
     }
 
