@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c169f4f_c9aba086",
+        "filename": "cmds/monkey/src/com/android/commands/monkey/Monkey.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 1938785
+      },
+      "writtenOn": "2024-02-06T17:54:17Z",
+      "side": 1,
+      "message": "This part can be deleted. Other parts look good to me.\n\nBy the way I have no ownership of this file and no context of the bug. Maybe I\u0027m not the right person to review this?",
+      "range": {
+        "startLine": 523,
+        "startChar": 0,
+        "endLine": 525,
+        "endChar": 13
+      },
+      "revId": "6e642fbd138eb820b2654c0c99dcdb652324c941",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
