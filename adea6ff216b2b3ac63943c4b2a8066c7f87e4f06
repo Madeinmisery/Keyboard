@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25f61361_1df0d692",
+        "filename": "tools/cargo_embargo/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-02-13T11:04:04Z",
+      "side": 1,
+      "message": "cargo_embargo isn\u0027t anything to do with pKVM. This should be `trendy_team_android_rust` I guess.",
+      "revId": "adea6ff216b2b3ac63943c4b2a8066c7f87e4f06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
