@@ -33,6 +33,7 @@ in_array () {
 
 LINUX_SOONG_BINARIES=(
     "bindgen"
+    "ide_query_cc_analyzer"
     "cxx_extractor"
     "header-abi-linker"
     "header-abi-dumper"
