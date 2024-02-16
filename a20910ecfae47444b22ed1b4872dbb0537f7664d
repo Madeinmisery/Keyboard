@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d89e67f_92f53e59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-16T17:44:12Z",
+      "side": 1,
+      "message": "Topics can be set by \"Show All\" on the left side of a gerrit CL.  Set the same topic string for this CL and aosp/2966444.",
+      "parentUuid": "747bb459_032210c6",
+      "revId": "a20910ecfae47444b22ed1b4872dbb0537f7664d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab091364_b3838023",
