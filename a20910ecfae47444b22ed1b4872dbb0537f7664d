@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "747bb459_032210c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-16T17:42:57Z",
+      "side": 1,
+      "message": "Add this in the same topic as aosp/2966444 to get presubmit to pass.",
+      "revId": "a20910ecfae47444b22ed1b4872dbb0537f7664d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab091364_b3838023",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-16T17:42:57Z",
+      "side": 1,
+      "message": "Keep this sorted alphabetically:\n```suggestion\nLINUX_SOONG_BINARIES\u003d(\n    \"bindgen\"\n    \"cxx_extractor\"\n    \"header-abi-linker\"\n    \"header-abi-dumper\"\n    \"header-abi-diff\"\n    \"ide_query_cc_analyzer\"\n    \"proto_metadata_plugin\"\n    \"protoc_extractor\"\n    \"versioner\"\n)\n```",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "a20910ecfae47444b22ed1b4872dbb0537f7664d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
