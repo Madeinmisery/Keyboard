@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fb3edb5_acb5ba54",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-02-17T08:47:55Z",
+      "side": 1,
+      "message": "I think the directory could still be \"vendor.{version}\" if the build target KEEP_VNDK is true. Maybe add a check at the start of the script for this, something like `assert getvar(KEEP_VNDK) \u003d\u003d false`",
+      "revId": "931d9287ef078905f929e494d98721422922af3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
