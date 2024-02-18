@@ -16,6 +16,24 @@
       "message": "Thanks for your bug report and contribution! Since `logOutput` is a `Writer` which is a `Closeable`, could you please change the try block to try with resources? This can make the code block less verbose.",
       "revId": "1bbaf7fbdea0c25ea540da82d7c61dfd538f9661",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5beb77f_47164b3b",
+        "filename": "cmds/monkey/src/com/android/commands/monkey/Monkey.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 1881587
+      },
+      "writtenOn": "2024-02-18T05:59:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f85f4669_0e6c46f0",
+      "revId": "1bbaf7fbdea0c25ea540da82d7c61dfd538f9661",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
