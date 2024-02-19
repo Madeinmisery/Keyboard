@@ -34,6 +34,24 @@
       "parentUuid": "9fb3edb5_acb5ba54",
       "revId": "931d9287ef078905f929e494d98721422922af3d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc87b03e_9e32c276",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1413436
+      },
+      "writtenOn": "2024-02-19T00:54:36Z",
+      "side": 1,
+      "message": "I expect KEEP_VNDK variable works until 24Q2 is fully released, for just in case. KEEP_VNDK and RELEASE_DEPRECATE_VNDK will be removed after 24Q2 release.",
+      "parentUuid": "9fd13d8c_98e50451",
+      "revId": "931d9287ef078905f929e494d98721422922af3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
