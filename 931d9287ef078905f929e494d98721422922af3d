@@ -16,6 +16,24 @@
       "message": "I think the directory could still be \"vendor.{version}\" if the build target KEEP_VNDK is true. Maybe add a check at the start of the script for this, something like `assert getvar(KEEP_VNDK) \u003d\u003d false`",
       "revId": "931d9287ef078905f929e494d98721422922af3d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fd13d8c_98e50451",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2024-02-19T00:26:13Z",
+      "side": 1,
+      "message": "Now, all build configurations have `RELEASE_DEPRECATE_VNDK :\u003d true`. So we must not have targets with `KEEP_VNDK \u003d\u003d true`.\nI think these VNDK deprecation variables are ready to be removed, soon.\nSo it is okay without the assertion. @kiyoungkim@google.com",
+      "parentUuid": "9fb3edb5_acb5ba54",
+      "revId": "931d9287ef078905f929e494d98721422922af3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
