@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5f61ab9_43ff9e75",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-02-19T10:23:56Z",
+      "side": 1,
+      "message": "s//exclude_filter ?\n\nas we use this parameter to filter OUT unwanted entries.\n```suggestion\ndef _read_lsdump_paths(lsdump_paths_file_path, arches, exclude_filter):\n```",
+      "range": {
+        "startLine": 209,
+        "startChar": 55,
+        "endLine": 209,
+        "endChar": 68
+      },
+      "revId": "3833dfc7ba808a3cf8bbd22cbfa263572c042bb6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
