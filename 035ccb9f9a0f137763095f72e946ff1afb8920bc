@@ -22,6 +22,30 @@
       },
       "revId": "035ccb9f9a0f137763095f72e946ff1afb8920bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "069c8142_7149db8d",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-02-19T11:06:19Z",
+      "side": 0,
+      "message": "The condition was added when lsdump_paths.txt did not contain the tags and possibly contained empty lines.",
+      "parentUuid": "52ffa7d1_2cfd5836",
+      "range": {
+        "startLine": 235,
+        "startChar": 12,
+        "endLine": 235,
+        "endChar": 23
+      },
+      "revId": "035ccb9f9a0f137763095f72e946ff1afb8920bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

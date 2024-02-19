@@ -22,6 +22,30 @@
       },
       "revId": "3833dfc7ba808a3cf8bbd22cbfa263572c042bb6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "231185ff_8933031e",
+        "filename": "vndk/tools/header-checker/utils/utils.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-02-19T11:06:19Z",
+      "side": 1,
+      "message": "On the other hand, it includes the wanted entries. It consists of two include filters and one exclude filter.",
+      "parentUuid": "b5f61ab9_43ff9e75",
+      "range": {
+        "startLine": 209,
+        "startChar": 55,
+        "endLine": 209,
+        "endChar": 68
+      },
+      "revId": "3833dfc7ba808a3cf8bbd22cbfa263572c042bb6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
