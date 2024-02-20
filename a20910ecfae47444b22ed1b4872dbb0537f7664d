@@ -57,6 +57,30 @@
       },
       "revId": "a20910ecfae47444b22ed1b4872dbb0537f7664d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fb8a412_0376c8d0",
+        "filename": "vndk/tools/header-checker/android/build-prebuilts.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3276774
+      },
+      "writtenOn": "2024-02-20T08:18:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ab091364_b3838023",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "a20910ecfae47444b22ed1b4872dbb0537f7664d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
