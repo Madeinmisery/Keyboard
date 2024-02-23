@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1340a32_cd987a37",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-23T23:52:07Z",
+      "side": 1,
+      "message": "nit: already mentioned in go/android-llvm-update-process#step-7-switch-everything-else-to-the-new-compiler.  Look at https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/README.md for things that need to be switched over.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 55
+      },
+      "revId": "6fe343a67fc581a3c39dfea76f31a68a08ce7ac7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
