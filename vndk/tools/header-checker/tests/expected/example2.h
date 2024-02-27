@@ -13,12 +13,14 @@ record_types {
     field_offset: 0
     field_name: "hide"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIf"
     field_offset: 32
     field_name: "seek"
     access: private_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -38,12 +40,14 @@ record_types {
     field_offset: 64
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 256
     field_name: "bar_again"
     access: public_access
+    bit_width: 0
   }
   vtable_layout {
     vtable_components {
@@ -95,6 +99,7 @@ record_types {
     field_offset: 0
     field_name: "b"
     access: private_access
+    bit_width: 0
   }
   access: private_access
   record_kind: class_kind
@@ -114,6 +119,7 @@ record_types {
     field_offset: 0
     field_name: "a"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -133,12 +139,14 @@ record_types {
     field_offset: 0
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 64
     field_name: "bar_again"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {
@@ -163,12 +171,14 @@ record_types {
     field_offset: 0
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIf"
     field_offset: 32
     field_name: "bar_Again"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {

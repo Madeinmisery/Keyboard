@@ -1,0 +1,90 @@
+{
+ "array_types" : [],
+ "builtin_types" :
+ [
+  {
+   "alignment" : 1,
+   "is_integral" : true,
+   "is_unsigned" : true,
+   "linker_set_key" : "_ZTIc",
+   "name" : "char",
+   "size" : 1
+  },
+  {
+   "linker_set_key" : "_ZTIv",
+   "name" : "void"
+  }
+ ],
+ "elf_functions" :
+ [
+  {
+   "name" : "function"
+  }
+ ],
+ "elf_objects" : [],
+ "enum_types" : [],
+ "function_types" : [],
+ "functions" :
+ [
+  {
+   "function_name" : "function",
+   "linker_set_key" : "function",
+   "parameters" :
+   [
+    {
+     "referenced_type" : "_ZTIP6Struct"
+    }
+   ],
+   "return_type" : "_ZTIv",
+   "source_file" : "development/vndk/tools/header-checker/tests/integration/bit_field/include/base.h"
+  }
+ ],
+ "global_vars" : [],
+ "lvalue_reference_types" : [],
+ "pointer_types" :
+ [
+  {
+   "alignment" : 8,
+   "linker_set_key" : "_ZTIP6Struct",
+   "name" : "Struct *",
+   "referenced_type" : "_ZTI6Struct",
+   "size" : 8,
+   "source_file" : "development/vndk/tools/header-checker/tests/integration/bit_field/include/base.h"
+  }
+ ],
+ "qualified_types" : [],
+ "record_types" :
+ [
+  {
+   "alignment" : 1,
+   "fields" :
+   [
+    {
+     "bit_width" : 2,
+     "referenced_type" : "_ZTIc"
+    },
+    {
+     "bit_width" : 1,
+     "field_name" : "a",
+     "field_offset" : 2,
+     "referenced_type" : "_ZTIc"
+    },
+    {
+     "field_offset" : 8,
+     "referenced_type" : "_ZTIc"
+    },
+    {
+     "bit_width" : 1,
+     "field_name" : "b",
+     "field_offset" : 8,
+     "referenced_type" : "_ZTIc"
+    }
+   ],
+   "linker_set_key" : "_ZTI6Struct",
+   "name" : "Struct",
+   "size" : 2,
+   "source_file" : "development/vndk/tools/header-checker/tests/integration/bit_field/include/base.h"
+  }
+ ],
+ "rvalue_reference_types" : []
+}
