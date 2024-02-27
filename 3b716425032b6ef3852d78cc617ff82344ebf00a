@@ -22,6 +22,30 @@
       },
       "revId": "3b716425032b6ef3852d78cc617ff82344ebf00a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "127bc4c1_320ac034",
+        "filename": "vndk/tools/header-checker/src/repr/json/ir_reader.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-02-27T07:14:00Z",
+      "side": 1,
+      "message": "https://cs.android.com/android/platform/superproject/main/+/main:development/vndk/tools/header-checker/src/repr/json/ir_reader.cpp;l\u003d91",
+      "parentUuid": "27ed4e20_78ddb0ca",
+      "range": {
+        "startLine": 218,
+        "startChar": 2,
+        "endLine": 219,
+        "endChar": 74
+      },
+      "revId": "3b716425032b6ef3852d78cc617ff82344ebf00a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
