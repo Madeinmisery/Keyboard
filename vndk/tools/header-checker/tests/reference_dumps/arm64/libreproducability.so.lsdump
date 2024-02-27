@@ -13,6 +13,7 @@ record_types {
     field_offset: 0
     field_name: "a"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: struct_kind

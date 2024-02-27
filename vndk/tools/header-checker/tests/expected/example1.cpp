@@ -13,12 +13,14 @@ record_types {
     field_offset: 0
     field_name: "hide"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIf"
     field_offset: 32
     field_name: "seek"
     access: private_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -38,6 +40,7 @@ record_types {
     field_offset: 0
     field_name: "middle"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {
@@ -62,6 +65,7 @@ record_types {
     field_offset: 0
     field_name: "middle"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {
@@ -86,36 +90,42 @@ record_types {
     field_offset: 0
     field_name: "foo"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 32
     field_name: "bar"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIw"
     field_offset: 64
     field_name: "d"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIN5Hello2$AE"
     field_offset: 96
     field_name: "enum_field"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIN5Hello2$CE"
     field_offset: 128
     field_name: "enum_field2"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIN5HelloUt1_E"
     field_offset: 160
     field_name: ""
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: struct_kind
@@ -135,12 +145,14 @@ record_types {
     field_offset: 352
     field_name: "cpp_foo"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIKf"
     field_offset: 384
     field_name: "cpp_bar"
     access: public_access
+    bit_width: 0
   }
   base_specifiers {
     referenced_type: "_ZTIN5test210HelloAgainE"
@@ -202,18 +214,21 @@ record_types {
     field_offset: 0
     field_name: "mVal"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIPN4ListIfE5_NodeE"
     field_offset: 64
     field_name: "mpPrev"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIPN4ListIfE5_NodeE"
     field_offset: 128
     field_name: "mpNext"
     access: private_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -233,18 +248,21 @@ record_types {
     field_offset: 0
     field_name: "a"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 32
     field_name: "b"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIN5HelloUt1_Ut_E"
     field_offset: 64
     field_name: ""
     access: public_access
+    bit_width: 0
   }
   access: public_access
   is_anonymous: true
@@ -265,6 +283,7 @@ record_types {
     field_offset: 0
     field_name: "c"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   is_anonymous: true
@@ -285,12 +304,14 @@ record_types {
     field_offset: 64
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 256
     field_name: "bar_again"
     access: public_access
+    bit_width: 0
   }
   vtable_layout {
     vtable_components {
@@ -342,6 +363,7 @@ record_types {
     field_offset: 0
     field_name: "b"
     access: private_access
+    bit_width: 0
   }
   access: private_access
   record_kind: class_kind
@@ -361,6 +383,7 @@ record_types {
     field_offset: 0
     field_name: "a"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -380,12 +403,14 @@ record_types {
     field_offset: 0
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIi"
     field_offset: 64
     field_name: "bar_again"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {
@@ -410,12 +435,14 @@ record_types {
     field_offset: 0
     field_name: "foo_again"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIf"
     field_offset: 32
     field_name: "bar_Again"
     access: public_access
+    bit_width: 0
   }
   template_info {
     elements {

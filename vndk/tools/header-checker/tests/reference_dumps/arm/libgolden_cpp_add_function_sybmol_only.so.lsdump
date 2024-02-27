@@ -13,6 +13,7 @@ record_types {
     field_offset: 32
     field_name: "mSpeakderId"
     access: private_access
+    bit_width: 0
   }
   vtable_layout {
     vtable_components {
@@ -70,12 +71,14 @@ record_types {
     field_offset: 64
     field_name: "speaker_uint_t"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIPf"
     field_offset: 96
     field_name: "speaker_float_star"
     access: public_access
+    bit_width: 0
   }
   base_specifiers {
     referenced_type: "_ZTI12SuperSpeaker"
