@@ -13,6 +13,7 @@ record_types {
     field_offset: 0
     field_name: "mUnusedMember"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: struct_kind
@@ -32,12 +33,14 @@ record_types {
     field_offset: 0
     field_name: "a_"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIPi"
     field_offset: 32
     field_name: "b_"
     access: private_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
@@ -57,6 +60,7 @@ record_types {
     field_offset: 0
     field_name: "c"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: struct_kind
@@ -76,12 +80,14 @@ record_types {
     field_offset: 0
     field_name: "a"
     access: public_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIP6Cinner"
     field_offset: 32
     field_name: "b"
     access: public_access
+    bit_width: 0
   }
   access: public_access
   record_kind: struct_kind

@@ -330,9 +330,12 @@ class TemplatedArtifactIR {
 class RecordFieldIR : public ReferencesOtherType {
  public:
   RecordFieldIR(const std::string &name, const std::string &type,
-                uint64_t offset, AccessSpecifierIR access)
-      : ReferencesOtherType(type), name_(name), offset_(offset),
-        access_(access) {}
+                uint64_t offset, AccessSpecifierIR access, uint64_t bit_width)
+      : ReferencesOtherType(type),
+        name_(name),
+        offset_(offset),
+        access_(access),
+        bit_width_(bit_width) {}
 
   RecordFieldIR() {}
 
@@ -348,10 +351,13 @@ class RecordFieldIR : public ReferencesOtherType {
     return access_;
   }
 
+  uint64_t GetBitWidth() const { return bit_width_; }
+
  protected:
   std::string name_;
   uint64_t offset_ = 0;
   AccessSpecifierIR access_ = AccessSpecifierIR::PublicAccess;
+  uint64_t bit_width_ = 0;
 };
 
 class RecordTypeIR : public TypeIR, public TemplatedArtifactIR {

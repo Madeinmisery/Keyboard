@@ -13,12 +13,14 @@ record_types {
     field_offset: 0
     field_name: "hide"
     access: private_access
+    bit_width: 0
   }
   fields {
     referenced_type: "_ZTIf"
     field_offset: 32
     field_name: "seek"
     access: private_access
+    bit_width: 0
   }
   access: public_access
   record_kind: class_kind
