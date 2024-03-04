@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e87a5117_ca8770fb",
+        "filename": "tools/cargo_embargo/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1980115
+      },
+      "writtenOn": "2024-03-04T20:16:30Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "25f61361_1df0d692",
+      "revId": "adea6ff216b2b3ac63943c4b2a8066c7f87e4f06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9c19a6b4_a3455a67",
@@ -48,6 +66,30 @@
       "writtenOn": "2024-02-17T03:18:51Z",
       "side": 1,
       "message": "```suggestion\n    default_team: \"trendy_team_treble\",\n```",
+      "range": {
+        "startLine": 18,
+        "startChar": 19,
+        "endLine": 18,
+        "endChar": 45
+      },
+      "revId": "adea6ff216b2b3ac63943c4b2a8066c7f87e4f06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db39f41b_f47b2b04",
+        "filename": "vndk/tools/header-checker/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1980115
+      },
+      "writtenOn": "2024-03-04T20:16:30Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "9c19a6b4_a3455a67",
       "range": {
         "startLine": 18,
         "startChar": 19,
