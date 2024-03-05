@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ed33ac3_20a90756",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1579231
+      },
+      "writtenOn": "2024-03-05T03:31:18Z",
+      "side": 1,
+      "message": "Linaro downloaded 35.0.0 without release notes, so I\"m adding an OWNERS so we can have closer coordination w.r.t versioning.",
+      "revId": "1779e50cc13fdb9b2ad5e6876de740ccb8b1e92c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
