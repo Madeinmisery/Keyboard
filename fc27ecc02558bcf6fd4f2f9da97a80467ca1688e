@@ -16,6 +16,23 @@
       "message": "un desarrollador para aplicaciones de celular en uno solo.",
       "revId": "fc27ecc02558bcf6fd4f2f9da97a80467ca1688e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d98f29a_a8226ef0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3319194
+      },
+      "writtenOn": "2024-03-06T10:27:08Z",
+      "side": 1,
+      "message": "🥰🥰🥰🥰🥰",
+      "revId": "fc27ecc02558bcf6fd4f2f9da97a80467ca1688e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
