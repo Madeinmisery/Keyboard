@@ -34,6 +34,24 @@
       "parentUuid": "47c3ab5e_20d7fbd1",
       "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c089eced_fae43ffb",
+        "filename": "vndk/tools/header-checker/src/dumper/abi_wrappers.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-03-08T06:15:22Z",
+      "side": 1,
+      "message": "The logic was wrong. It should be:\nIf RecordFieldIR::bit_width !\u003d 0 -\u003e bit field\nIf bit_width \u003d 0 and name \u003d \"\" -\u003e bit field\nIf bit_width \u003d 0 and name !\u003d \"\" -\u003e not bit field\nIf the field is declared like `int name : 0;` -\u003e compile error",
+      "parentUuid": "bcbc31ad_294fd8a9",
+      "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
