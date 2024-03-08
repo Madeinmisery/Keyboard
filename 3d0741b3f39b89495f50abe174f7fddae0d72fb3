@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a7f4115_b45d33e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-08T20:59:12Z",
+      "side": 1,
+      "message": "Open-Source-Licensing +2 because it is overtriggering on the string literal",
+      "revId": "3d0741b3f39b89495f50abe174f7fddae0d72fb3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
