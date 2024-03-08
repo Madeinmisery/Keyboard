@@ -52,6 +52,24 @@
       "parentUuid": "bcbc31ad_294fd8a9",
       "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12fd5707_c8a9497f",
+        "filename": "vndk/tools/header-checker/src/dumper/abi_wrappers.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-03-08T08:51:49Z",
+      "side": 1,
+      "message": "The logic doesn\u0027t work for unnamed nested struct.\nI added an new field.",
+      "parentUuid": "c089eced_fae43ffb",
+      "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
