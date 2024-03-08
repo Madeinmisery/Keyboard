@@ -1,0 +1,7 @@
+libattribute {
+  global:
+    func;
+    ignored_func;
+    var;
+    ignored_var;
+};

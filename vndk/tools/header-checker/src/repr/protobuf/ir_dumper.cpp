@@ -121,6 +121,7 @@ abi_dump::RecordType IRToProtobufConverter::ConvertRecordTypeIR(
     llvm::errs() << "Template information could not be added\n";
     ::exit(1);
   }
+  AddAnnotateAttrs(&added_record_type, recordp);
   return added_record_type;
 }
 
@@ -191,6 +192,7 @@ abi_dump::FunctionDecl IRToProtobufConverter::ConvertFunctionIR(
     llvm::errs() << "Template information could not be added\n";
     ::exit(1);
   }
+  AddAnnotateAttrs(&added_function, functionp);
   return added_function;
 }
 
@@ -216,6 +218,7 @@ abi_dump::EnumType IRToProtobufConverter::ConvertEnumTypeIR(
     llvm::errs() << "EnumTypeIR could not be converted\n";
     ::exit(1);
   }
+  AddAnnotateAttrs(&added_enum_type, enump);
   return added_enum_type;
 }
 
@@ -228,6 +231,7 @@ abi_dump::GlobalVarDecl IRToProtobufConverter::ConvertGlobalVarIR(
   added_global_var.set_linker_set_key(global_varp->GetLinkerSetKey());
   added_global_var.set_access(
       AccessIRToProtobuf(global_varp->GetAccess()));
+  AddAnnotateAttrs(&added_global_var, global_varp);
   return added_global_var;
 }
 

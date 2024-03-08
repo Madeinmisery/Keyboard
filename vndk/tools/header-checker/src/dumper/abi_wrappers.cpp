@@ -50,6 +50,14 @@ static repr::AccessSpecifierIR AccessClangToIR(
   }
 }
 
+static repr::AnnotateAttrs GetAnnotateAttrs(const clang::Decl *decl) {
+  repr::AnnotateAttrs attr_ir_list;
+  for (const clang::AnnotateAttr *attr :
+       decl->specific_attrs<clang::AnnotateAttr>()) {
+    attr_ir_list.emplace_back(attr->getAnnotation().str());
+  }
+  return attr_ir_list;
+}
 
 //------------------------------------------------------------------------------
 // ABI Wrapper
@@ -543,6 +551,7 @@ bool FunctionDeclWrapper::SetupFunction(repr::FunctionIR *functionp,
 
   functionp->SetReturnType(GetTypeUniqueId(return_type));
   functionp->SetAccess(AccessClangToIR(function_decl_->getAccess()));
+  functionp->SetAnnotateAttrs(GetAnnotateAttrs(function_decl_));
   return CreateBasicNamedAndTypedDecl(return_type, source_file) &&
       SetupFunctionParameters(functionp, source_file) &&
       SetupTemplateInfo(functionp, source_file);
@@ -609,7 +618,8 @@ bool RecordDeclWrapper::SetupRecordFields(repr::RecordTypeIR *recordp,
         field->isBitField() ? field->getBitWidthValue(*ast_contextp_) : 0;
     recordp->AddRecordField(repr::RecordFieldIR(
         field_name, GetTypeUniqueId(field_type), field_offset,
-        AccessClangToIR(field->getAccess()), field->isBitField(), bit_width));
+        AccessClangToIR(field->getAccess()), field->isBitField(), bit_width,
+        GetAnnotateAttrs(*field)));
     field++;
     field_index++;
   }
@@ -819,6 +829,7 @@ bool RecordDeclWrapper::SetupRecordInfo(repr::RecordTypeIR *record_declp,
     record_declp->SetAnonymity(true);
   }
   record_declp->SetAccess(AccessClangToIR(record_decl_->getAccess()));
+  record_declp->SetAnnotateAttrs(GetAnnotateAttrs(record_decl_));
   return SetupRecordFields(record_declp, source_file) &&
       SetupCXXRecordInfo(record_declp, source_file);
 }
@@ -885,10 +896,13 @@ bool EnumDeclWrapper::SetupEnumFields(repr::EnumTypeIR *enump) {
   while (enum_it != enum_decl_->enumerator_end()) {
     std::string name = enum_it->getQualifiedNameAsString();
     const llvm::APSInt &value = enum_it->getInitVal();
+    repr::AnnotateAttrs annotate_attrs = GetAnnotateAttrs(*enum_it);
     if (value.isUnsigned()) {
-      enump->AddEnumField(repr::EnumFieldIR(name, value.getZExtValue()));
+      enump->AddEnumField(repr::EnumFieldIR(name, value.getZExtValue(),
+                                            std::move(annotate_attrs)));
     } else {
-      enump->AddEnumField(repr::EnumFieldIR(name, value.getSExtValue()));
+      enump->AddEnumField(repr::EnumFieldIR(name, value.getSExtValue(),
+                                            std::move(annotate_attrs)));
     }
     enum_it++;
   }
@@ -905,6 +919,7 @@ bool EnumDeclWrapper::SetupEnum(repr::EnumTypeIR *enum_type,
   enum_type->SetSourceFile(source_file);
   enum_type->SetUnderlyingType(GetTypeUniqueId(enum_decl_->getIntegerType()));
   enum_type->SetAccess(AccessClangToIR(enum_decl_->getAccess()));
+  enum_type->SetAnnotateAttrs(GetAnnotateAttrs(enum_decl_));
   return SetupEnumFields(enum_type) &&
       CreateBasicNamedAndTypedDecl(enum_decl_->getIntegerType(), "");
 }
@@ -949,6 +964,7 @@ bool GlobalVarDeclWrapper::SetupGlobalVar(repr::GlobalVarIR *global_varp,
   global_varp->SetLinkerSetKey(mangled_name);
   global_varp->SetAccess(AccessClangToIR(global_var_decl_->getAccess()));
   global_varp->SetReferencedType(GetTypeUniqueId(global_var_decl_->getType()));
+  global_varp->SetAnnotateAttrs(GetAnnotateAttrs(global_var_decl_));
   return true;
 }
 

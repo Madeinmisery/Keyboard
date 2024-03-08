@@ -143,6 +143,14 @@ GetRecordKind(const JsonObjectRef &record_type) {
                    "Failed to convert JSON to RecordKind");
 }
 
+static repr::AnnotateAttrs GetAnnotateAttrs(const JsonObjectRef &object) {
+  repr::AnnotateAttrs attr_ir_list;
+  for (auto &&attr : object.GetObjects("annotate_attrs")) {
+    attr_ir_list.emplace_back(attr.GetString("annotation"));
+  }
+  return attr_ir_list;
+}
+
 static VTableComponentIR::Kind
 GetVTableComponentKind(const JsonObjectRef &vtable_component) {
   std::string kind(vtable_component.GetString("kind"));
@@ -233,7 +241,8 @@ void JsonIRReader::ReadRecordFields(const JsonObjectRef &record_type,
     RecordFieldIR record_field_ir(
         field.GetString("field_name"), field.GetString("referenced_type"),
         field.GetUint("field_offset"), GetAccess(field),
-        field.GetBool("is_bit_field"), field.GetUint("bit_width"));
+        field.GetBool("is_bit_field"), field.GetUint("bit_width"),
+        GetAnnotateAttrs(field));
     record_ir->AddRecordField(std::move(record_field_ir));
   }
 }
@@ -268,9 +277,11 @@ void JsonIRReader::ReadEnumFields(const JsonObjectRef &enum_type,
     std::string name = field.GetString("name");
     const Json::Value &value = field.GetIntegralValue("enum_field_value");
     if (value.isUInt64()) {
-      enum_ir->AddEnumField(EnumFieldIR(name, value.asUInt64()));
+      enum_ir->AddEnumField(
+          EnumFieldIR(name, value.asUInt64(), GetAnnotateAttrs(field)));
     } else {
-      enum_ir->AddEnumField(EnumFieldIR(name, value.asInt64()));
+      enum_ir->AddEnumField(
+          EnumFieldIR(name, value.asInt64(), GetAnnotateAttrs(field)));
     }
   }
 }
@@ -294,6 +305,7 @@ FunctionIR JsonIRReader::FunctionJsonToIR(const JsonObjectRef &function) {
   function_ir.SetSourceFile(function.GetString("source_file"));
   ReadFunctionParametersAndReturnType(function, &function_ir);
   ReadTemplateInfo(function, &function_ir);
+  function_ir.SetAnnotateAttrs(GetAnnotateAttrs(function));
   return function_ir;
 }
 
@@ -316,6 +328,7 @@ JsonIRReader::RecordTypeJsonToIR(const JsonObjectRef &record_type) {
   ReadBaseSpecifiers(record_type, &record_type_ir);
   record_type_ir.SetRecordKind(GetRecordKind(record_type));
   record_type_ir.SetAnonymity(record_type.GetBool("is_anonymous"));
+  record_type_ir.SetAnnotateAttrs(GetAnnotateAttrs(record_type));
   return record_type_ir;
 }
 
@@ -325,6 +338,7 @@ EnumTypeIR JsonIRReader::EnumTypeJsonToIR(const JsonObjectRef &enum_type) {
   enum_type_ir.SetUnderlyingType(enum_type.GetString("underlying_type"));
   enum_type_ir.SetAccess(GetAccess(enum_type));
   ReadEnumFields(enum_type, &enum_type_ir);
+  enum_type_ir.SetAnnotateAttrs(GetAnnotateAttrs(enum_type));
   return enum_type_ir;
 }
 
@@ -341,6 +355,8 @@ void JsonIRReader::ReadGlobalVariables(const JsonObjectRef &tu) {
     // ReferencesOtherType
     global_variable_ir.SetReferencedType(global_variable.GetString(
         "referenced_type", global_variable_ir.GetLinkerSetKey()));
+    // HasAnnotateAttrs
+    global_variable_ir.SetAnnotateAttrs(GetAnnotateAttrs(global_variable));
     module_->AddGlobalVariable(std::move(global_variable_ir));
   }
 }

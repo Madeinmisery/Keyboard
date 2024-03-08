@@ -155,6 +155,32 @@ class ReferencesOtherType {
   std::string referenced_type_;
 };
 
+class AnnotateAttrIR {
+ public:
+  AnnotateAttrIR(std::string annotation) : annotation_(std::move(annotation)) {}
+
+  const std::string &GetAnnotation() const { return annotation_; }
+
+ private:
+  std::string annotation_;
+};
+
+using AnnotateAttrs = std::vector<AnnotateAttrIR>;
+
+class HasAnnotateAttrs {
+ public:
+  HasAnnotateAttrs(AnnotateAttrs &&attrs) : attrs_(std::move(attrs)) {}
+
+  HasAnnotateAttrs() {}
+
+  void SetAnnotateAttrs(AnnotateAttrs &&attrs) { attrs_ = std::move(attrs); }
+
+  const AnnotateAttrs &GetAnnotateAttrs() const { return attrs_; }
+
+ private:
+  AnnotateAttrs attrs_;
+};
+
 // TODO: Break this up into types with sizes and those without types?
 class TypeIR : public LinkableMessageIR, public ReferencesOtherType {
  public:
@@ -294,7 +320,7 @@ class TemplateElementIR : public ReferencesOtherType {
 class TemplateInfoIR {
  public:
   void AddTemplateElement(TemplateElementIR &&element) {
-    template_elements_.emplace_back(element);
+    template_elements_.emplace_back(std::move(element));
   }
 
   const std::vector<TemplateElementIR> &GetTemplateElements() const {
@@ -327,12 +353,13 @@ class TemplatedArtifactIR {
   TemplateInfoIR template_info_;
 };
 
-class RecordFieldIR : public ReferencesOtherType {
+class RecordFieldIR : public ReferencesOtherType, public HasAnnotateAttrs {
  public:
   RecordFieldIR(const std::string &name, const std::string &type,
                 uint64_t offset, AccessSpecifierIR access, bool is_bit_field,
-                uint64_t bit_width)
+                uint64_t bit_width, AnnotateAttrs &&annotate_attrs)
       : ReferencesOtherType(type),
+        HasAnnotateAttrs(std::move(annotate_attrs)),
         name_(name),
         offset_(offset),
         access_(access),
@@ -365,7 +392,9 @@ class RecordFieldIR : public ReferencesOtherType {
   uint64_t bit_width_ = 0;
 };
 
-class RecordTypeIR : public TypeIR, public TemplatedArtifactIR {
+class RecordTypeIR : public TypeIR,
+                     public TemplatedArtifactIR,
+                     public HasAnnotateAttrs {
  public:
   enum RecordKind {
     struct_kind,
@@ -452,13 +481,21 @@ class RecordTypeIR : public TypeIR, public TemplatedArtifactIR {
   RecordKind record_kind_;
 };
 
-class EnumFieldIR {
+class EnumFieldIR : public HasAnnotateAttrs {
  public:
-  EnumFieldIR(const std::string &name, int64_t value)
-      : name_(name), signed_value_(value), is_signed_(true) {}
+  EnumFieldIR(const std::string &name, int64_t value,
+              AnnotateAttrs &&annotate_attrs)
+      : HasAnnotateAttrs(std::move(annotate_attrs)),
+        name_(name),
+        signed_value_(value),
+        is_signed_(true) {}
 
-  EnumFieldIR(const std::string &name, uint64_t value)
-      : name_(name), unsigned_value_(value), is_signed_(false) {}
+  EnumFieldIR(const std::string &name, uint64_t value,
+              AnnotateAttrs &&annotate_attrs)
+      : HasAnnotateAttrs(std::move(annotate_attrs)),
+        name_(name),
+        unsigned_value_(value),
+        is_signed_(false) {}
 
   const std::string &GetName() const {
     return name_;
@@ -479,7 +516,7 @@ class EnumFieldIR {
   bool is_signed_;
 };
 
-class EnumTypeIR : public TypeIR {
+class EnumTypeIR : public TypeIR, public HasAnnotateAttrs {
  public:
   // Add Methods to get information from the IR.
   void AddEnumField(EnumFieldIR &&field) {
@@ -624,7 +661,9 @@ class QualifiedTypeIR : public TypeIR {
   bool is_volatile_;
 };
 
-class GlobalVarIR : public LinkableMessageIR , public ReferencesOtherType {
+class GlobalVarIR : public LinkableMessageIR,
+                    public ReferencesOtherType,
+                    public HasAnnotateAttrs {
  public:
   // Add Methods to get information from the IR.
   void SetName(std::string &&name) {
@@ -709,8 +748,10 @@ class FunctionTypeIR : public TypeIR, public CFunctionLikeIR {
   }
 };
 
-class FunctionIR : public LinkableMessageIR, public TemplatedArtifactIR,
-                   public CFunctionLikeIR {
+class FunctionIR : public LinkableMessageIR,
+                   public TemplatedArtifactIR,
+                   public CFunctionLikeIR,
+                   public HasAnnotateAttrs {
  public:
   void SetAccess(AccessSpecifierIR access) {
     access_ = access;

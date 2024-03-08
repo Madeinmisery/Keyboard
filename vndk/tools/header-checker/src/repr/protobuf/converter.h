@@ -190,6 +190,15 @@ inline VTableComponentIR::Kind VTableComponentKindProtobufToIR(
   assert(false);
 }
 
+template <typename HasAnnotateAttrsMessage>
+void AddAnnotateAttrs(HasAnnotateAttrsMessage *decl_protobuf,
+                      const HasAnnotateAttrs *has_annotate_attrs) {
+  for (const AnnotateAttrIR &attr : has_annotate_attrs->GetAnnotateAttrs()) {
+    abi_dump::AnnotateAttr *attr_protobuf = decl_protobuf->add_annotate_attrs();
+    attr_protobuf->set_annotation(attr.GetAnnotation());
+  }
+}
+
 class IRToProtobufConverter {
  private:
   static bool AddTemplateInformation(
@@ -311,6 +320,7 @@ inline void SetIRToProtobufRecordField(
     record_field_protobuf->set_is_bit_field(true);
     record_field_protobuf->set_bit_width(record_field_ir->GetBitWidth());
   }
+  AddAnnotateAttrs(record_field_protobuf, record_field_ir);
 }
 
 inline bool SetIRToProtobufBaseSpecifier(
@@ -365,6 +375,7 @@ inline bool SetIRToProtobufEnumField(
   // dump file. Despite the wrong representation, the diff result isn't affected
   // because every integer has a unique representation.
   enum_field_protobuf->set_enum_field_value(enum_field_ir->GetSignedValue());
+  AddAnnotateAttrs(enum_field_protobuf, enum_field_ir);
   return true;
 }
 
