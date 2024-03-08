@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7940954_4d24c27f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-08T19:58:47Z",
+      "side": 1,
+      "message": "thanks!",
+      "revId": "4c9648d78d41f0b61a1749003f044b94b25f5c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "085a5983_e9685460",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-08T19:58:47Z",
+      "side": 1,
+      "message": "does this block submit? maybe we can do \"DO NOT SUBMIT\" instead",
+      "range": {
+        "startLine": 524,
+        "startChar": 16,
+        "endLine": 524,
+        "endChar": 21
+      },
+      "revId": "4c9648d78d41f0b61a1749003f044b94b25f5c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0f2a413_bd150f34",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 568,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-08T19:58:47Z",
+      "side": 1,
+      "message": "we could be more explicit and say something like \"Content before the first \"rust_*\" or \"genrule\" module is preserved\". up to you",
+      "revId": "4c9648d78d41f0b61a1749003f044b94b25f5c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
