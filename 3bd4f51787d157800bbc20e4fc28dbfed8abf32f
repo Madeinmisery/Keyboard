@@ -16,6 +16,24 @@
       "message": "For not bit members, can we keep the `bit_width` property empty?\n\nbit field -\u003e `bit_width` value \u003e\u003d 0\nnot bit field -\u003e `bit_width` is empty/undefined in proto/json",
       "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcbc31ad_294fd8a9",
+        "filename": "vndk/tools/header-checker/src/dumper/abi_wrappers.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 609,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-03-08T05:00:27Z",
+      "side": 1,
+      "message": "bit_width\u003d0 is omitted in json. Do you want to omit it in protobuf?\n\nTo do so, we need RecordFieldIR::IsBitField . The logic is:\nIf bit width !\u003d 0 -\u003e bit field\nIf bit width \u003d 0 and name \u003d \"\" -\u003e not bit field\nIf bit width \u003d 0 and name !\u003d \"\" -\u003e compile error",
+      "parentUuid": "47c3ab5e_20d7fbd1",
+      "revId": "3bd4f51787d157800bbc20e4fc28dbfed8abf32f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
