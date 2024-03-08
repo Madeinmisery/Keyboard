@@ -65,6 +65,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "95ac45fa_61411593",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-08T20:53:19Z",
+      "side": 1,
+      "message": "That\u0027s a shame, maybe they have that lint check off for external code",
+      "parentUuid": "1771872c_7fbb0102",
+      "range": {
+        "startLine": 524,
+        "startChar": 16,
+        "endLine": 524,
+        "endChar": 21
+      },
+      "revId": "4c9648d78d41f0b61a1749003f044b94b25f5c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0f2a413_bd150f34",
