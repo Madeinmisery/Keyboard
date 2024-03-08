@@ -52,6 +52,17 @@ static void AddRecordKind(JsonObject &record_type,
   }
 }
 
+static void AddAnnotateAttrs(JsonObject &decl,
+                             const HasAnnotateAttrs *has_annotate_attrs) {
+  JsonArray attrs;
+  for (auto &&attr_ir : has_annotate_attrs->GetAnnotateAttrs()) {
+    JsonObject attr;
+    attr.Set("annotation", attr_ir.GetAnnotation());
+    attrs.append(attr);
+  }
+  decl.Set("annotate_attrs", attrs);
+}
+
 static void AddVtableComponentKind(JsonObject &vtable_component,
                                    VTableComponentIR::Kind value) {
   if (value != default_vtable_component_kind_ir) {
@@ -108,6 +119,7 @@ static JsonObject ConvertRecordFieldIR(const RecordFieldIR *record_field_ir) {
   record_field.Set("field_offset", (uint64_t)record_field_ir->GetOffset());
   record_field.Set("is_bit_field", record_field_ir->IsBitField());
   record_field.Set("bit_width", (uint64_t)record_field_ir->GetBitWidth());
+  AddAnnotateAttrs(record_field, record_field_ir);
   return record_field;
 }
 
@@ -170,6 +182,7 @@ JsonObject IRToJsonConverter::ConvertRecordTypeIR(const RecordTypeIR *recordp) {
   AddBaseSpecifiers(record_type, recordp);
   AddVTableLayout(record_type, recordp);
   AddTemplateInfo(record_type, recordp);
+  AddAnnotateAttrs(record_type, recordp);
   return record_type;
 }
 
@@ -208,6 +221,7 @@ JsonObject IRToJsonConverter::ConvertFunctionIR(const FunctionIR *functionp) {
   function.Set("function_name", functionp->GetName());
   AddFunctionParametersAndSetReturnType(function, functionp);
   AddTemplateInfo(function, functionp);
+  AddAnnotateAttrs(function, functionp);
   return function;
 }
 
@@ -221,6 +235,7 @@ static JsonObject ConvertEnumFieldIR(const EnumFieldIR *enum_field_ir) {
   } else {
     enum_field_value = Json::UInt64(enum_field_ir->GetUnsignedValue());
   }
+  AddAnnotateAttrs(enum_field, enum_field_ir);
   return enum_field;
 }
 
@@ -239,6 +254,7 @@ JsonObject IRToJsonConverter::ConvertEnumTypeIR(const EnumTypeIR *enump) {
   enum_type.Set("underlying_type", enump->GetUnderlyingType());
   AddTypeInfo(enum_type, enump);
   AddEnumFields(enum_type, enump);
+  AddAnnotateAttrs(enum_type, enump);
   return enum_type;
 }
 
@@ -257,6 +273,7 @@ IRToJsonConverter::ConvertGlobalVarIR(const GlobalVarIR *global_varp) {
   if (linker_set_key != referenced_type) {
     global_var.Set("referenced_type", referenced_type);
   }
+  AddAnnotateAttrs(global_var, global_varp);
   return global_var;
 }
 
