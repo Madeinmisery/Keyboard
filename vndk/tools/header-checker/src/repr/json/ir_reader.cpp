@@ -14,20 +14,17 @@
 
 #include "repr/json/ir_reader.h"
 
-#include "repr/ir_dumper.h"
 #include "repr/ir_reader.h"
 #include "repr/ir_representation_internal.h"
 #include "repr/json/api.h"
 #include "repr/json/converter.h"
 
 #include <json/reader.h>
-#include <json/writer.h>
 
 #include <llvm/Support/raw_ostream.h>
 
-#include <cstdlib>
 #include <fstream>
-#include <sstream>
+#include <memory>
 #include <string>
 
 
@@ -357,7 +354,7 @@ void JsonIRReader::ReadGlobalVariables(const JsonObjectRef &tu) {
         "referenced_type", global_variable_ir.GetLinkerSetKey()));
     // HasAnnotateAttrs
     global_variable_ir.SetAnnotateAttrs(GetAnnotateAttrs(global_variable));
-    module_->AddGlobalVariable(std::move(global_variable_ir));
+    module_.AddGlobalVariable(std::move(global_variable_ir));
   }
 }
 
@@ -365,7 +362,7 @@ void JsonIRReader::ReadPointerTypes(const JsonObjectRef &tu) {
   for (auto &&pointer_type : tu.GetObjects("pointer_types")) {
     PointerTypeIR pointer_type_ir;
     ReadTypeInfo(pointer_type, &pointer_type_ir);
-    module_->AddPointerType(std::move(pointer_type_ir));
+    module_.AddPointerType(std::move(pointer_type_ir));
   }
 }
 
@@ -375,7 +372,7 @@ void JsonIRReader::ReadBuiltinTypes(const JsonObjectRef &tu) {
     ReadTypeInfo(builtin_type, &builtin_type_ir);
     builtin_type_ir.SetSignedness(builtin_type.GetBool("is_unsigned"));
     builtin_type_ir.SetIntegralType(builtin_type.GetBool("is_integral"));
-    module_->AddBuiltinType(std::move(builtin_type_ir));
+    module_.AddBuiltinType(std::move(builtin_type_ir));
   }
 }
 
@@ -387,7 +384,7 @@ void JsonIRReader::ReadQualifiedTypes(const JsonObjectRef &tu) {
     qualified_type_ir.SetVolatility(qualified_type.GetBool("is_volatile"));
     qualified_type_ir.SetRestrictedness(
         qualified_type.GetBool("is_restricted"));
-    module_->AddQualifiedType(std::move(qualified_type_ir));
+    module_.AddQualifiedType(std::move(qualified_type_ir));
   }
 }
 
@@ -396,7 +393,7 @@ void JsonIRReader::ReadArrayTypes(const JsonObjectRef &tu) {
     ArrayTypeIR array_type_ir;
     ReadTypeInfo(array_type, &array_type_ir);
     array_type_ir.SetUnknownBound(array_type.GetBool("is_of_unknown_bound"));
-    module_->AddArrayType(std::move(array_type_ir));
+    module_.AddArrayType(std::move(array_type_ir));
   }
 }
 
@@ -404,7 +401,7 @@ void JsonIRReader::ReadLvalueReferenceTypes(const JsonObjectRef &tu) {
   for (auto &&lvalue_reference_type : tu.GetObjects("lvalue_reference_types")) {
     LvalueReferenceTypeIR lvalue_reference_type_ir;
     ReadTypeInfo(lvalue_reference_type, &lvalue_reference_type_ir);
-    module_->AddLvalueReferenceType(std::move(lvalue_reference_type_ir));
+    module_.AddLvalueReferenceType(std::move(lvalue_reference_type_ir));
   }
 }
 
@@ -412,35 +409,35 @@ void JsonIRReader::ReadRvalueReferenceTypes(const JsonObjectRef &tu) {
   for (auto &&rvalue_reference_type : tu.GetObjects("rvalue_reference_types")) {
     RvalueReferenceTypeIR rvalue_reference_type_ir;
     ReadTypeInfo(rvalue_reference_type, &rvalue_reference_type_ir);
-    module_->AddRvalueReferenceType(std::move(rvalue_reference_type_ir));
+    module_.AddRvalueReferenceType(std::move(rvalue_reference_type_ir));
   }
 }
 
 void JsonIRReader::ReadFunctions(const JsonObjectRef &tu) {
   for (auto &&function : tu.GetObjects("functions")) {
     FunctionIR function_ir = FunctionJsonToIR(function);
-    module_->AddFunction(std::move(function_ir));
+    module_.AddFunction(std::move(function_ir));
   }
 }
 
 void JsonIRReader::ReadRecordTypes(const JsonObjectRef &tu) {
   for (auto &&record_type : tu.GetObjects("record_types")) {
     RecordTypeIR record_type_ir = RecordTypeJsonToIR(record_type);
-    module_->AddRecordType(std::move(record_type_ir));
+    module_.AddRecordType(std::move(record_type_ir));
   }
 }
 
 void JsonIRReader::ReadFunctionTypes(const JsonObjectRef &tu) {
   for (auto &&function_type : tu.GetObjects("function_types")) {
     FunctionTypeIR function_type_ir = FunctionTypeJsonToIR(function_type);
-    module_->AddFunctionType(std::move(function_type_ir));
+    module_.AddFunctionType(std::move(function_type_ir));
   }
 }
 
 void JsonIRReader::ReadEnumTypes(const JsonObjectRef &tu) {
   for (auto &&enum_type : tu.GetObjects("enum_types")) {
     EnumTypeIR enum_type_ir = EnumTypeJsonToIR(enum_type);
-    module_->AddEnumType(std::move(enum_type_ir));
+    module_.AddEnumType(std::move(enum_type_ir));
   }
 }
 
@@ -448,7 +445,7 @@ void JsonIRReader::ReadElfFunctions(const JsonObjectRef &tu) {
   for (auto &&elf_function : tu.GetObjects("elf_functions")) {
     ElfFunctionIR elf_function_ir(elf_function.GetString("name"),
                                   GetElfSymbolBinding(elf_function));
-    module_->AddElfFunction(std::move(elf_function_ir));
+    module_.AddElfFunction(std::move(elf_function_ir));
   }
 }
 
@@ -456,13 +453,12 @@ void JsonIRReader::ReadElfObjects(const JsonObjectRef &tu) {
   for (auto &&elf_object : tu.GetObjects("elf_objects")) {
     ElfObjectIR elf_object_ir(elf_object.GetString("name"),
                               GetElfSymbolBinding(elf_object));
-    module_->AddElfObject(std::move(elf_object_ir));
+    module_.AddElfObject(std::move(elf_object_ir));
   }
 }
 
-std::unique_ptr<IRReader> CreateJsonIRReader(
-    const std::set<std::string> *exported_headers) {
-  return std::make_unique<JsonIRReader>(exported_headers);
+std::unique_ptr<IRReader> CreateJsonIRReader(ModuleIR &module) {
+  return std::make_unique<JsonIRReader>(module);
 }
 
 

@@ -20,7 +20,7 @@ namespace linker {
 
 
 class MergeStatus {
-public:
+ public:
   MergeStatus(bool was_newly_added, const std::string &type_id)
       : was_newly_added_(was_newly_added), type_id_(type_id) {}
 
@@ -39,17 +39,15 @@ public:
 
 
 class ModuleMerger {
-public:
-  ModuleMerger(const std::set<std::string> *exported_headers)
-      : module_(new repr::ModuleIR(exported_headers)) {}
+ public:
+  ModuleMerger(std::unique_ptr<repr::ModuleIR> module)
+      : module_(std::move(module)) {}
 
-  const repr::ModuleIR &GetModule() {
-    return *module_;
-  }
+  const repr::ModuleIR &GetModule() { return *module_; }
 
   void MergeGraphs(const repr::ModuleIR &addend);
 
-private:
+ private:
   void MergeCFunctionLikeDeps(
       const repr::ModuleIR &addend, repr::CFunctionLikeIR *cfunction_like_ir,
       repr::AbiElementMap<MergeStatus> *local_to_global_type_id_map);
@@ -147,7 +145,7 @@ private:
                         const repr::ModuleIR &addend,
                         repr::AbiElementMap<MergeStatus> *merged_types_cache);
 
-private:
+ private:
   std::unique_ptr<repr::ModuleIR> module_;
 };
 

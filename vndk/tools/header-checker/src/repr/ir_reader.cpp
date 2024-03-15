@@ -18,9 +18,7 @@
 #include "repr/json/api.h"
 #include "repr/protobuf/api.h"
 
-#include <list>
 #include <memory>
-#include <set>
 #include <string>
 
 #include <llvm/Support/raw_ostream.h>
@@ -30,23 +28,21 @@ namespace header_checker {
 namespace repr {
 
 
-std::unique_ptr<IRReader>
-IRReader::CreateIRReader(
-    TextFormatIR text_format, const std::set<std::string> *exported_headers) {
+std::unique_ptr<IRReader> IRReader::CreateIRReader(TextFormatIR text_format,
+                                                   ModuleIR &module) {
   switch (text_format) {
     case TextFormatIR::ProtobufTextFormat:
-      return CreateProtobufIRReader(exported_headers);
+      return CreateProtobufIRReader(module);
     case TextFormatIR::Json:
-      return CreateJsonIRReader(exported_headers);
+      return CreateJsonIRReader(module);
     default:
       llvm::errs() << "Text format not supported yet\n";
       return nullptr;
   }
 }
 
-
 bool IRReader::ReadDump(const std::string &dump_file) {
-  module_->SetCompilationUnitPath(dump_file);
+  module_.SetCompilationUnitPath(dump_file);
   return ReadDumpImpl(dump_file);
 }
 

@@ -26,12 +26,12 @@ namespace repr {
 
 class IRDumper;
 class IRReader;
+class ModuleIR;
 
 
 std::unique_ptr<IRDumper> CreateJsonIRDumper(const std::string &dump_path);
 
-std::unique_ptr<IRReader> CreateJsonIRReader(
-    const std::set<std::string> *exported_headers);
+std::unique_ptr<IRReader> CreateJsonIRReader(ModuleIR &module);
 
 
 }  // namespace repr
