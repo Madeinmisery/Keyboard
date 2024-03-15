@@ -47,16 +47,6 @@
    "enum_fields" :
    [
     {
-     "annotate_attrs" :
-     [
-      {
-       "annotation" : "introduced_in_llndk=202504"
-      }
-     ],
-     "enum_field_value" : 0,
-     "name" : "IGNORED"
-    },
-    {
      "enum_field_value" : 1,
      "name" : "FIELD"
     }
@@ -86,42 +76,15 @@
      "referenced_type" : "_ZTIP6Struct"
     },
     {
-     "referenced_type" : "_ZTIP7Ignored"
-    },
-    {
      "referenced_type" : "_ZTI4Enum"
     }
    ],
-   "return_type" : "_ZTIi",
-   "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
-  },
-  {
-   "annotate_attrs" :
-   [
-    {
-     "annotation" : "introduced_in_llndk=202504"
-    }
-   ],
-   "function_name" : "ignored_func",
-   "linker_set_key" : "ignored_func",
    "return_type" : "_ZTIi",
    "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
   }
  ],
  "global_vars" :
  [
-  {
-   "annotate_attrs" :
-   [
-    {
-     "annotation" : "introduced_in_llndk=202504"
-    }
-   ],
-   "linker_set_key" : "ignored_var",
-   "name" : "ignored_var",
-   "referenced_type" : "_ZTIi",
-   "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
-  },
   {
    "annotate_attrs" :
    [
@@ -140,17 +103,25 @@
  [
   {
    "alignment" : 8,
-   "linker_set_key" : "_ZTIP6Struct",
-   "name" : "Struct *",
-   "referenced_type" : "_ZTI6Struct",
+   "linker_set_key" : "_ZTIP11IgnoredEnum",
+   "name" : "IgnoredEnum *",
+   "referenced_type" : "_ZTI11IgnoredEnum",
    "size" : 8,
    "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
   },
   {
    "alignment" : 8,
-   "linker_set_key" : "_ZTIP7Ignored",
-   "name" : "Ignored *",
-   "referenced_type" : "_ZTI7Ignored",
+   "linker_set_key" : "_ZTIP13IgnoredStruct",
+   "name" : "IgnoredStruct *",
+   "referenced_type" : "_ZTI13IgnoredStruct",
+   "size" : 8,
+   "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
+  },
+  {
+   "alignment" : 8,
+   "linker_set_key" : "_ZTIP6Struct",
+   "name" : "Struct *",
+   "referenced_type" : "_ZTI6Struct",
    "size" : 8,
    "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
   }
@@ -177,42 +148,11 @@
      ],
      "field_name" : "field",
      "referenced_type" : "_ZTIi"
-    },
-    {
-     "annotate_attrs" :
-     [
-      {
-       "annotation" : "introduced_in_llndk=202504"
-      }
-     ],
-     "field_name" : "ignored",
-     "field_offset" : 32,
-     "referenced_type" : "_ZTIi"
     }
    ],
    "linker_set_key" : "_ZTI6Struct",
    "name" : "Struct",
    "size" : 8,
-   "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
-  },
-  {
-   "alignment" : 4,
-   "annotate_attrs" :
-   [
-    {
-     "annotation" : "introduced_in_llndk=202504"
-    }
-   ],
-   "fields" :
-   [
-    {
-     "field_name" : "ignored",
-     "referenced_type" : "_ZTIi"
-    }
-   ],
-   "linker_set_key" : "_ZTI7Ignored",
-   "name" : "Ignored",
-   "size" : 4,
    "source_file" : "development/vndk/tools/header-checker/tests/integration/attribute/include/base.h"
   }
  ],

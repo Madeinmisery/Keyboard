@@ -553,6 +553,8 @@ class EnumTypeIR : public TypeIR, public HasAnnotateAttrs {
     return fields_;
   }
 
+  std::vector<EnumFieldIR> &GetFields() { return fields_; }
+
  protected:
   std::vector<EnumFieldIR> fields_;
   std::string underlying_type_;
@@ -847,10 +849,33 @@ class TypeDefinition {
   const std::string &compilation_unit_path_;
 };
 
+using ParsedAnnotateAttr = std::pair<std::string_view, int>;
+
+std::optional<ParsedAnnotateAttr> ParseAnnotateAttr(std::string_view annotation,
+                                                    std::string_view delimiter);
+
+class AnnotateAttrFilter {
+ public:
+  AnnotateAttrFilter(std::string_view version, int upper_bound)
+      : version_(version), upper_bound_(upper_bound) {}
+
+  bool ShouldExclude(std::string_view version, int number) const {
+    return version_ == version && number > upper_bound_;
+  }
+
+ private:
+  const std::string version_;
+  const int upper_bound_;
+};
+
 class ModuleIR {
  public:
-  ModuleIR(const std::set<std::string> *exported_headers)
-      : exported_headers_(exported_headers) {}
+  ModuleIR();
+
+  ModuleIR(const std::set<std::string> *exported_headers,
+           const std::list<AnnotateAttrFilter> &annotate_attr_filters)
+      : exported_headers_(exported_headers),
+        annotate_attr_filters_(annotate_attr_filters) {}
 
   const std::string &GetCompilationUnitPath() const {
     return compilation_unit_path_;
@@ -975,6 +1000,11 @@ class ModuleIR {
   bool IsLinkableMessageInExportedHeaders(
       const LinkableMessageIR *linkable_message) const;
 
+  bool ShouldExcludeAnnotateAttr(
+      const HasAnnotateAttrs &has_annotate_attrs) const;
+
+  template <typename FieldIR>
+  void FilterRecordOrEnumFields(std::vector<FieldIR> &type_ir) const;
 
  public:
   // File path to the compilation unit (*.sdump)
@@ -1008,6 +1038,7 @@ class ModuleIR {
   // The compilation unit paths referenced by odr_list_map_;
   std::set<std::string> compilation_unit_paths_;
   const std::set<std::string> *exported_headers_;
+  const std::list<AnnotateAttrFilter> &annotate_attr_filters_;
 };
 
 

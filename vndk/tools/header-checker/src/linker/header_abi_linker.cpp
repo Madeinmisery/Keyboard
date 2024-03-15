@@ -81,6 +81,15 @@ static llvm::cl::list<std::string> excluded_symbol_tags(
     "exclude-symbol-tag", llvm::cl::Optional,
     llvm::cl::cat(header_linker_category));
 
+static llvm::cl::list<std::string> exclude_annotate_attrs(
+    "exclude-annotate-attr",
+    llvm::cl::desc("Filter the declarations annotated with "
+                   "__attribute__((annotate(\"{version}={number}\"))). The "
+                   "argument format is {version}>{number}. The declarations "
+                   "whose version numbers are larger than the argument are "
+                   "excluded from the output."),
+    llvm::cl::ZeroOrMore, llvm::cl::cat(header_linker_category));
+
 static llvm::cl::opt<std::string> api(
     "api", llvm::cl::desc("<api>"), llvm::cl::Optional,
     llvm::cl::init("current"),
@@ -138,13 +147,19 @@ class HeaderAbiLinker {
       const std::string &api,
       const utils::ApiLevelMap &api_level_map,
       const std::vector<std::string> &excluded_symbol_versions,
-      const std::vector<std::string> &excluded_symbol_tags)
-      : dump_files_(dump_files), exported_header_dirs_(exported_header_dirs),
-        version_script_(version_script), so_file_(so_file),
+      const std::vector<std::string> &excluded_symbol_tags,
+      const std::list<repr::AnnotateAttrFilter> &annotate_attr_filters)
+      : dump_files_(dump_files),
+        exported_header_dirs_(exported_header_dirs),
+        version_script_(version_script),
+        so_file_(so_file),
         out_dump_name_(linked_dump),
-        arch_(arch), api_(api), api_level_map_(api_level_map),
+        arch_(arch),
+        api_(api),
+        api_level_map_(api_level_map),
         excluded_symbol_versions_(excluded_symbol_versions),
-        excluded_symbol_tags_(excluded_symbol_tags) {}
+        excluded_symbol_tags_(excluded_symbol_tags),
+        annotate_attr_filters_(annotate_attr_filters) {}
 
   bool LinkAndDump();
 
@@ -196,6 +211,7 @@ class HeaderAbiLinker {
   const std::vector<std::string> &excluded_symbol_versions_;
   const std::vector<std::string> &excluded_symbol_tags_;
 
+  const std::list<repr::AnnotateAttrFilter> &annotate_attr_filters_;
   std::set<std::string> exported_headers_;
 
   // Exported symbols
@@ -208,9 +224,10 @@ static void DeDuplicateAbiElementsThread(
     std::vector<std::string>::const_iterator dump_files_begin,
     std::vector<std::string>::const_iterator dump_files_end,
     const std::set<std::string> *exported_headers,
+    const std::list<repr::AnnotateAttrFilter> &annotate_attr_filters,
     linker::ModuleMerger *merger) {
   for (auto it = dump_files_begin; it != dump_files_end; it++) {
-    repr::ModuleIR module(exported_headers);
+    repr::ModuleIR module(exported_headers, annotate_attr_filters);
     std::unique_ptr<repr::IRReader> reader =
         repr::IRReader::CreateIRReader(input_format, module);
     assert(reader != nullptr);
@@ -223,8 +240,9 @@ static void DeDuplicateAbiElementsThread(
 }
 
 std::unique_ptr<linker::ModuleMerger> HeaderAbiLinker::ReadInputDumpFiles() {
-  auto merger(std::make_unique<linker::ModuleMerger>(
-      std::make_unique<repr::ModuleIR>(&exported_headers_)));
+  auto merger(
+      std::make_unique<linker::ModuleMerger>(std::make_unique<repr::ModuleIR>(
+          &exported_headers_, annotate_attr_filters_)));
   std::size_t max_threads = std::thread::hardware_concurrency();
   std::size_t num_threads = std::max<std::size_t>(
       std::min(dump_files_.size() / sources_per_thread, max_threads), 1);
@@ -240,12 +258,14 @@ std::unique_ptr<linker::ModuleMerger> HeaderAbiLinker::ReadInputDumpFiles() {
     if (i == 0) {
       first_end_index = cnt;
     } else {
-      thread_mergers.emplace_back(
-          std::make_unique<repr::ModuleIR>(&exported_headers_));
+      thread_mergers.emplace_back(std::make_unique<repr::ModuleIR>(
+          &exported_headers_, annotate_attr_filters_));
       threads.emplace_back(DeDuplicateAbiElementsThread,
                            dump_files_.begin() + dump_files_index,
                            dump_files_.begin() + dump_files_index + cnt,
-                           &exported_headers_, &thread_mergers.back());
+                           &exported_headers_,
+                           annotate_attr_filters_,
+                           &thread_mergers.back());
     }
     dump_files_index += cnt;
   }
@@ -253,7 +273,9 @@ std::unique_ptr<linker::ModuleMerger> HeaderAbiLinker::ReadInputDumpFiles() {
 
   DeDuplicateAbiElementsThread(dump_files_.begin(),
                                dump_files_.begin() + first_end_index,
-                               &exported_headers_, merger.get());
+                               &exported_headers_,
+                               annotate_attr_filters_,
+                               merger.get());
 
   for (std::size_t i = 0; i < threads.size(); i++) {
     threads[i].join();
@@ -280,16 +302,15 @@ bool HeaderAbiLinker::LinkAndDump() {
   const repr::ModuleIR &module = merger->GetModule();
 
   // Link input ABI dumps.
-  std::unique_ptr<repr::ModuleIR> linked_module(
-      new repr::ModuleIR(&exported_headers_));
+  repr::ModuleIR linked_module(&exported_headers_, annotate_attr_filters_);
 
-  if (!LinkExportedSymbols(linked_module.get())) {
+  if (!LinkExportedSymbols(&linked_module)) {
     return false;
   }
 
-  if (!LinkTypes(module, linked_module.get()) ||
-      !LinkFunctions(module, linked_module.get()) ||
-      !LinkGlobalVars(module, linked_module.get())) {
+  if (!LinkTypes(module, &linked_module) ||
+      !LinkFunctions(module, &linked_module) ||
+      !LinkGlobalVars(module, &linked_module)) {
     llvm::errs() << "Failed to link elements\n";
     return false;
   }
@@ -298,7 +319,7 @@ bool HeaderAbiLinker::LinkAndDump() {
   std::unique_ptr<repr::IRDumper> ir_dumper =
       repr::IRDumper::CreateIRDumper(output_format, out_dump_name_);
   assert(ir_dumper != nullptr);
-  if (!ir_dumper->Dump(*linked_module)) {
+  if (!ir_dumper->Dump(linked_module)) {
     llvm::errs() << "Failed to serialize the linked output to ostream\n";
     return false;
   }
@@ -501,13 +522,27 @@ int main(int argc, const char **argv) {
     }
   }
 
+  std::list<repr::AnnotateAttrFilter> annotate_attr_filters;
+  for (const std::string &annotation : exclude_annotate_attrs) {
+    std::optional<std::pair<std::string_view, int>> parsed_annotation =
+        repr::ParseAnnotateAttr(annotation, ">");
+    if (!parsed_annotation.has_value()) {
+      llvm::errs() << "Failed to parse exclude-annotate-attr " << annotation
+                   << ". The format is version>number\n";
+      return -1;
+    }
+    annotate_attr_filters.emplace_back(parsed_annotation->first,
+                                       parsed_annotation->second);
+  }
+
   if (no_filter) {
     static_cast<std::vector<std::string> &>(exported_header_dirs).clear();
   }
 
   HeaderAbiLinker Linker(dump_files, exported_header_dirs, version_script,
                          so_file, linked_dump, arch, api, api_level_map,
-                         excluded_symbol_versions, excluded_symbol_tags);
+                         excluded_symbol_versions, excluded_symbol_tags,
+                         annotate_attr_filters);
 
   if (!Linker.LinkAndDump()) {
     llvm::errs() << "Failed to link and dump elements\n";

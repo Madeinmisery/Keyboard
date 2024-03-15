@@ -31,7 +31,7 @@ namespace diff {
 
 
 repr::CompatibilityStatusIR HeaderAbiDiff::GenerateCompatibilityReport() {
-  repr::ModuleIR old_module(nullptr);
+  repr::ModuleIR old_module;
   std::unique_ptr<repr::IRReader> old_reader =
       repr::IRReader::CreateIRReader(text_format_old_, old_module);
   if (!old_reader || !old_reader->ReadDump(old_dump_)) {
@@ -39,7 +39,7 @@ repr::CompatibilityStatusIR HeaderAbiDiff::GenerateCompatibilityReport() {
     ::exit(1);
   }
 
-  repr::ModuleIR new_module(nullptr);
+  repr::ModuleIR new_module;
   std::unique_ptr<repr::IRReader> new_reader =
       repr::IRReader::CreateIRReader(text_format_new_, new_module);
   if (!new_reader || !new_reader->ReadDump(new_dump_)) {
