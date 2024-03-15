@@ -16,6 +16,7 @@
 
 #include "repr/ir_reader.h"
 #include "repr/ir_representation_internal.h"
+#include "utils/string_utils.h"
 
 #include <utility>
 
@@ -31,6 +32,11 @@ static inline T CreateTemp(const U &lm) {
   return static_cast<const T &>(lm);
 }
 
+static const std::list<AnnotateAttrFilter> no_annotate_attr_filters;
+
+ModuleIR::ModuleIR()
+    : exported_headers_(nullptr),
+      annotate_attr_filters_(no_annotate_attr_filters) {}
 
 bool ModuleIR::AddLinkableMessage(const LinkableMessageIR &lm) {
   switch (lm.GetKind()) {
@@ -89,12 +95,18 @@ void ModuleIR::AddFunction(FunctionIR &&function) {
   if (!IsLinkableMessageInExportedHeaders(&function)) {
     return;
   }
+  if (ShouldExcludeAnnotateAttr(function)) {
+    return;
+  }
   functions_.insert({function.GetLinkerSetKey(), std::move(function)});
 }
 
 
 void ModuleIR::AddGlobalVariable(GlobalVarIR &&global_var) {
   if (!IsLinkableMessageInExportedHeaders(&global_var)) {
+    return;
+  }
+  if (ShouldExcludeAnnotateAttr(global_var)) {
     return;
   }
   global_variables_.insert(
@@ -106,6 +118,10 @@ void ModuleIR::AddRecordType(RecordTypeIR &&record_type) {
   if (!IsLinkableMessageInExportedHeaders(&record_type)) {
     return;
   }
+  if (ShouldExcludeAnnotateAttr(record_type)) {
+    return;
+  }
+  FilterRecordOrEnumFields(record_type.GetFields());
   auto it = AddToMapAndTypeGraph(
       std::move(record_type), &record_types_, &type_graph_);
   const std::string &key = GetODRListMapKey(&(it->second));
@@ -128,6 +144,10 @@ void ModuleIR::AddEnumType(EnumTypeIR &&enum_type) {
   if (!IsLinkableMessageInExportedHeaders(&enum_type)) {
     return;
   }
+  if (ShouldExcludeAnnotateAttr(enum_type)) {
+    return;
+  }
+  FilterRecordOrEnumFields(enum_type.GetFields());
   auto it = AddToMapAndTypeGraph(
       std::move(enum_type), &enum_types_, &type_graph_);
   const std::string &key = GetODRListMapKey(&(it->second));
@@ -232,6 +252,55 @@ bool ModuleIR::IsLinkableMessageInExportedHeaders(
   }
   return exported_headers_->find(linkable_message->GetSourceFile()) !=
          exported_headers_->end();
+}
+
+std::optional<ParsedAnnotateAttr> ParseAnnotateAttr(
+    std::string_view annotation, std::string_view delimiter) {
+  std::vector<std::string_view> split_annotation =
+      utils::Split(annotation, delimiter);
+  if (split_annotation.size() != 2) {
+    return {};
+  }
+  std::optional<int> number = utils::ParseInt(std::string(split_annotation[1]));
+  if (!number.has_value()) {
+    return {};
+  }
+  return std::make_pair(split_annotation[0], number.value());
+}
+
+bool ModuleIR::ShouldExcludeAnnotateAttr(
+    const HasAnnotateAttrs &has_annotate_attr) const {
+  for (const AnnotateAttrIR &attr : has_annotate_attr.GetAnnotateAttrs()) {
+    const std::string &annotation = attr.GetAnnotation();
+    std::optional<ParsedAnnotateAttr> parsed_annotation =
+        ParseAnnotateAttr(annotation, "=");
+    if (!parsed_annotation.has_value()) {
+      continue;
+    }
+    for (const AnnotateAttrFilter &filter : annotate_attr_filters_) {
+      if (filter.ShouldExclude(parsed_annotation->first,
+                               parsed_annotation->second)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+template <typename FieldIR>
+void ModuleIR::FilterRecordOrEnumFields(std::vector<FieldIR> &fields) const {
+  // Filter the fields in place.
+  auto new_it = fields.begin();
+  for (auto old_it = fields.begin(); old_it != fields.end(); old_it++) {
+    if (ShouldExcludeAnnotateAttr(*old_it)) {
+      continue;
+    }
+    if (new_it != old_it) {
+      *new_it = std::move(*old_it);
+    }
+    new_it++;
+  }
+  fields.erase(new_it, fields.end());
 }
 
 

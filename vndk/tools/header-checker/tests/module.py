@@ -847,7 +847,8 @@ TEST_MODULES = [
         version_script='integration/attribute/map.txt',
         export_include_dirs=['integration/attribute/include'],
         dumper_flags=['-output-format', 'Json'],
-        linker_flags=['-input-format', 'Json', '-output-format', 'Json'],
+        linker_flags=['-input-format', 'Json', '-output-format', 'Json',
+                      '-exclude-annotate-attr', 'introduced_in_llndk>202404'],
         has_reference_dump=True,
     ),
 ]
