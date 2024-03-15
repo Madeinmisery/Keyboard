@@ -210,20 +210,21 @@ static void DeDuplicateAbiElementsThread(
     const std::set<std::string> *exported_headers,
     linker::ModuleMerger *merger) {
   for (auto it = dump_files_begin; it != dump_files_end; it++) {
+    repr::ModuleIR module(exported_headers);
     std::unique_ptr<repr::IRReader> reader =
-        repr::IRReader::CreateIRReader(input_format, exported_headers);
+        repr::IRReader::CreateIRReader(input_format, module);
     assert(reader != nullptr);
     if (!reader->ReadDump(*it)) {
       llvm::errs() << "ReadDump failed\n";
       ::exit(1);
     }
-    merger->MergeGraphs(reader->GetModule());
+    merger->MergeGraphs(module);
   }
 }
 
 std::unique_ptr<linker::ModuleMerger> HeaderAbiLinker::ReadInputDumpFiles() {
-  std::unique_ptr<linker::ModuleMerger> merger(
-      new linker::ModuleMerger(&exported_headers_));
+  auto merger(std::make_unique<linker::ModuleMerger>(
+      std::make_unique<repr::ModuleIR>(&exported_headers_)));
   std::size_t max_threads = std::thread::hardware_concurrency();
   std::size_t num_threads = std::max<std::size_t>(
       std::min(dump_files_.size() / sources_per_thread, max_threads), 1);
@@ -239,7 +240,8 @@ std::unique_ptr<linker::ModuleMerger> HeaderAbiLinker::ReadInputDumpFiles() {
     if (i == 0) {
       first_end_index = cnt;
     } else {
-      thread_mergers.emplace_back(&exported_headers_);
+      thread_mergers.emplace_back(
+          std::make_unique<repr::ModuleIR>(&exported_headers_));
       threads.emplace_back(DeDuplicateAbiElementsThread,
                            dump_files_.begin() + dump_files_index,
                            dump_files_.begin() + dump_files_index + cnt,

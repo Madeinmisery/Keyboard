@@ -27,12 +27,11 @@ namespace repr {
 class IRDiffDumper;
 class IRDumper;
 class IRReader;
-
+class ModuleIR;
 
 std::unique_ptr<IRDumper> CreateProtobufIRDumper(const std::string &dump_path);
 
-std::unique_ptr<IRReader> CreateProtobufIRReader(
-    const std::set<std::string> *exported_headers);
+std::unique_ptr<IRReader> CreateProtobufIRReader(ModuleIR &module);
 
 std::unique_ptr<IRDiffDumper> CreateProtobufIRDiffDumper(
     const std::string &dump_path);
