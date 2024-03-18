@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81c7a741_1f1b5c4d",
+        "filename": "tools/cargo_embargo/testdata/either_renamed/expected_Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-18T23:11:50Z",
+      "side": 1,
+      "message": "note that the test module uses the package name, so the crate name override doesn\u0027t affect it. i figure that is OK, but didn\u0027t put a ton of thought into it. this is probably a very niche feature",
+      "revId": "5f4d02d64fffbbd9513af2a0a55a549ccfaf4ad8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
