@@ -1,0 +1,8 @@
+{
+  "tests": true,
+  "package": {
+    "either": {
+      "crate_name_override": "neither"
+    }
+  }
+}
