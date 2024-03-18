@@ -695,30 +695,32 @@ fn crate_to_bp_modules(
     package_cfg: &PackageVariantConfig,
     extra_srcs: &[String],
 ) -> Result<Vec<BpModule>> {
+    let crate_name = package_cfg.crate_name_override.as_ref().unwrap_or(&crate_.name).clone();
+
     let mut modules = Vec::new();
     for crate_type in &crate_.types {
         let host = if package_cfg.device_supported { "" } else { "_host" };
         let rlib = if package_cfg.force_rlib { "_rlib" } else { "" };
         let (module_type, module_name) = match crate_type {
-            CrateType::Bin => ("rust_binary".to_string() + host, crate_.name.clone()),
+            CrateType::Bin => ("rust_binary".to_string() + host, crate_name.clone()),
             CrateType::Lib | CrateType::RLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = "lib".to_string() + &crate_name;
                 ("rust_library".to_string() + host + rlib, stem)
             }
             CrateType::DyLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = "lib".to_string() + &crate_name;
                 ("rust_library".to_string() + host + "_dylib", stem + "_dylib")
             }
             CrateType::CDyLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = "lib".to_string() + &crate_name;
                 ("rust_ffi".to_string() + host + "_shared", stem + "_shared")
             }
             CrateType::StaticLib => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = "lib".to_string() + &crate_name;
                 ("rust_ffi".to_string() + host + "_static", stem + "_static")
             }
             CrateType::ProcMacro => {
-                let stem = "lib".to_string() + &crate_.name;
+                let stem = "lib".to_string() + &crate_name;
                 ("rust_proc_macro".to_string(), stem)
             }
             CrateType::Test | CrateType::TestNoHarness => {
@@ -752,9 +754,9 @@ fn crate_to_bp_modules(
                 | CrateType::DyLib
                 | CrateType::CDyLib
                 | CrateType::StaticLib
-        ) && !module_name.starts_with(&format!("lib{}", crate_.name))
+        ) && !module_name.starts_with(&format!("lib{}", crate_name))
         {
-            bail!("Module name must start with lib{} but was {}", crate_.name, module_name);
+            bail!("Module name must start with lib{} but was {}", crate_name, module_name);
         }
         m.props.set("name", module_name.clone());
 
@@ -776,7 +778,7 @@ fn crate_to_bp_modules(
             m.props.set_if_nonempty("include_dirs", package_cfg.exported_c_header_dir.clone());
         }
 
-        m.props.set("crate_name", crate_.name.clone());
+        m.props.set("crate_name", crate_name.clone());
         m.props.set("cargo_env_compat", true);
 
         if let Some(version) = &crate_.version {

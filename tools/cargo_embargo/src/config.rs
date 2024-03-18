@@ -421,6 +421,14 @@ pub struct PackageVariantConfig {
     /// Directories with headers to export for C usage.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub exported_c_header_dir: Vec<PathBuf>,
+    /// Customize the crate name.
+    ///
+    /// One use case: Cargo allows dependencies to be viewed with custom crates. Package "A" can
+    /// depend on package "B" and locally refer to it as "C" instead of "B". Soong doesn't support
+    /// this directly, but we can workaround simple cases by generating modules with the custom
+    /// crate name.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub crate_name_override: Option<String>,
 }
 
 impl Default for PackageVariantConfig {
@@ -439,6 +447,7 @@ impl Default for PackageVariantConfig {
             test_data: Default::default(),
             whole_static_libs: Default::default(),
             exported_c_header_dir: Default::default(),
+            crate_name_override: None,
         }
     }
 }
