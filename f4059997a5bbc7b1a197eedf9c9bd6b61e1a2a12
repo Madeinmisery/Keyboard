@@ -34,6 +34,24 @@
       "parentUuid": "fb9c1fc1_dfb6a8fc",
       "revId": "f4059997a5bbc7b1a197eedf9c9bd6b61e1a2a12",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82a1b433_4a78684a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-03-19T16:26:52Z",
+      "side": 1,
+      "message": "I have https://r.android.com/3006527 out for review to add the `aliases` property, and will send you a cargo_embargo change shortly to use it.",
+      "parentUuid": "c2740b44_ba9caa7a",
+      "revId": "f4059997a5bbc7b1a197eedf9c9bd6b61e1a2a12",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
