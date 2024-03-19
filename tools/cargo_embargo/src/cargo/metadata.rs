@@ -58,6 +58,7 @@ pub struct DependencyMetadata {
     pub kind: Option<String>,
     pub optional: bool,
     pub target: Option<String>,
+    pub rename: Option<String>,
 }
 
 impl DependencyMetadata {
@@ -118,8 +119,11 @@ fn parse_cargo_metadata(
         }
 
         let features = resolve_features(features, &package.features, &package.dependencies);
-        let features_without_deps: Vec<String> =
-            features.clone().into_iter().filter(|feature| !feature.starts_with("dep:")).collect();
+        let features_without_deps: Vec<String> = features
+            .clone()
+            .into_iter()
+            .filter(|feature| !feature.starts_with("dep:"))
+            .collect();
         let package_dir = package_dir_from_id(&package.id)?;
 
         for target in &package.targets {
@@ -216,7 +220,7 @@ fn get_externs(
                 && dependency.kind.as_deref() != Some("build")
                 && (dependency.kind.is_none() || test)
             {
-                Some(make_extern(packages, &dependency.name))
+                Some(make_extern(packages, dependency))
             } else {
                 None
             }
@@ -243,26 +247,41 @@ fn get_externs(
     Ok(externs)
 }
 
-fn make_extern(packages: &[PackageMetadata], package_name: &str) -> Result<Extern> {
-    let Some(package) = packages.iter().find(|package| package.name == package_name) else {
-        bail!("package {} not found in metadata", package_name);
+fn make_extern(packages: &[PackageMetadata], dependency: &DependencyMetadata) -> Result<Extern> {
+    let Some(package) = packages.iter().find(|package| package.name == dependency.name) else {
+        bail!("package {} not found in metadata", dependency.name);
     };
     let Some(target) = package.targets.iter().find(|target| {
         target.kind.contains(&TargetKind::Lib) || target.kind.contains(&TargetKind::ProcMacro)
     }) else {
-        bail!("Package {} didn't have any library or proc-macro targets", package_name);
+        bail!(
+            "Package {} didn't have any library or proc-macro targets",
+            dependency.name
+        );
     };
     let lib_name = target.name.replace('-', "_");
+    let name = if let Some(rename) = &dependency.rename {
+        rename.clone()
+    } else {
+        lib_name.clone()
+    };
 
     // Check whether the package is a proc macro.
-    let extern_type =
-        if package.targets.iter().any(|target| target.kind.contains(&TargetKind::ProcMacro)) {
-            ExternType::ProcMacro
-        } else {
-            ExternType::Rust
-        };
+    let extern_type = if package
+        .targets
+        .iter()
+        .any(|target| target.kind.contains(&TargetKind::ProcMacro))
+    {
+        ExternType::ProcMacro
+    } else {
+        ExternType::Rust
+    };
 
-    Ok(Extern { name: lib_name.clone(), lib_name, extern_type })
+    Ok(Extern {
+        name,
+        lib_name,
+        extern_type,
+    })
 }
 
 /// Given a package ID like
@@ -271,8 +290,12 @@ fn make_extern(packages: &[PackageMetadata], package_name: &str) -> Result<Exter
 /// `"/usr/local/google/home/qwandor/aosp/external/rust/crates/either"`.
 fn package_dir_from_id(id: &str) -> Result<PathBuf> {
     const URI_MARKER: &str = "(path+file://";
-    let uri_start = id.find(URI_MARKER).ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
-    Ok(PathBuf::from(id[uri_start + URI_MARKER.len()..id.len() - 1].to_string()))
+    let uri_start = id
+        .find(URI_MARKER)
+        .ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
+    Ok(PathBuf::from(
+        id[uri_start + URI_MARKER.len()..id.len() - 1].to_string(),
+    ))
 }
 
 fn split_src_path<'a>(src_path: &'a Path, package_dir: &Path) -> &'a Path {
@@ -294,8 +317,10 @@ fn resolve_features(
     // Add implicit features for optional dependencies.
     for dependency in dependencies {
         if dependency.optional && !package_features.contains_key(&dependency.name) {
-            package_features
-                .insert(dependency.name.to_owned(), vec![format!("dep:{}", dependency.name)]);
+            package_features.insert(
+                dependency.name.to_owned(),
+                vec![format!("dep:{}", dependency.name)],
+            );
         }
     }
 
@@ -345,11 +370,19 @@ mod tests {
 
     #[test]
     fn resolve_multi_level_feature_dependencies() {
-        let chosen = vec!["default".to_string(), "extra".to_string(), "on_by_default".to_string()];
+        let chosen = vec![
+            "default".to_string(),
+            "extra".to_string(),
+            "on_by_default".to_string(),
+        ];
         let package_features = [
             (
                 "default".to_string(),
-                vec!["std".to_string(), "other".to_string(), "on_by_default".to_string()],
+                vec![
+                    "std".to_string(),
+                    "other".to_string(),
+                    "on_by_default".to_string(),
+                ],
             ),
             ("std".to_string(), vec!["alloc".to_string()]),
             ("not_enabled".to_string(), vec![]),
@@ -391,23 +424,30 @@ mod tests {
                 kind: None,
                 optional: true,
                 target: None,
+                rename: None,
             },
             DependencyMetadata {
                 name: "optionaldep2".to_string(),
                 kind: None,
                 optional: true,
                 target: None,
+                rename: None,
             },
             DependencyMetadata {
                 name: "requireddep".to_string(),
                 kind: None,
                 optional: false,
                 target: None,
+                rename: None,
             },
         ];
         assert_eq!(
             resolve_features(&None, &package_features, &dependencies),
-            vec!["default".to_string(), "dep:optionaldep".to_string(), "optionaldep".to_string()]
+            vec![
+                "default".to_string(),
+                "dep:optionaldep".to_string(),
+                "optionaldep".to_string()
+            ]
         );
     }
 
