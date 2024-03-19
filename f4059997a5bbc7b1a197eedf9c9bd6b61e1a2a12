@@ -16,6 +16,24 @@
       "message": "Would b/308790322 be a better solution?",
       "revId": "f4059997a5bbc7b1a197eedf9c9bd6b61e1a2a12",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2740b44_ba9caa7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-03-19T16:11:30Z",
+      "side": 1,
+      "message": "Yeah, that would definitely be better, then we can handle these cases without any manual tweaking.\n\nStill interested in this CL. Can delete the new option once b/308790322 is available",
+      "parentUuid": "fb9c1fc1_dfb6a8fc",
+      "revId": "f4059997a5bbc7b1a197eedf9c9bd6b61e1a2a12",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
