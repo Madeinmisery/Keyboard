@@ -38,6 +38,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5035e9c2_a7eaa3a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:36:20Z",
+      "side": 1,
+      "message": "Please also address all the autoformatter complaints",
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e164ea2_741cf103",
         "filename": "tools/acrash/src/main.rs",
         "patchSetId": 1
