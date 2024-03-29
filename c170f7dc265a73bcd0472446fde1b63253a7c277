@@ -34,6 +34,213 @@
       "parentUuid": "b5a4164f_59969322",
       "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e164ea2_741cf103",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "nit",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a171071_cb1c59db",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "the implementation doesn\u0027t use this as a default, but appends it even if you set something yourself",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 55
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "711a1892_a64a2446",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "this should default to `ANDROID_SERIAL`",
+      "range": {
+        "startLine": 58,
+        "startChar": 4,
+        "endLine": 58,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c492a0e5_bdae8bae",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "maybe? but also mind the comment i had above\n\n```\nenv::var(\"ANDROID_PRODUCT_OUT\").inspect(|out| ac.debug_file_directory.push(PathBuf::from(out).join(\"symbols\"))\n```",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edf2d015_1c573156",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "Check sounds like it would crash if it fails.",
+      "range": {
+        "startLine": 112,
+        "startChar": 7,
+        "endLine": 112,
+        "endChar": 17
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa668228_a43bb726",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "Is this needed? The `host_txt_file` should be moved as far as I understand",
+      "range": {
+        "startLine": 175,
+        "startChar": 7,
+        "endLine": 175,
+        "endChar": 9
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8e812d3_5bcc5558",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "why does write need a mut?",
+      "range": {
+        "startLine": 177,
+        "startChar": 32,
+        "endLine": 177,
+        "endChar": 45
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d422941d_b6f8efec",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "why do we unwrap here and `?` error handle elsewhere?",
+      "range": {
+        "startLine": 178,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 22
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5812f2f7_64f5f339",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T17:34:34Z",
+      "side": 1,
+      "message": "would be nice to tell apart these two cases.",
+      "range": {
+        "startLine": 215,
+        "startChar": 51,
+        "endLine": 215,
+        "endChar": 74
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
