@@ -55,6 +55,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c0eece3b_65dc8266",
+        "filename": "tools/acrash/OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-03-29T18:04:44Z",
+      "side": 1,
+      "message": "add someone else, a single owner isn\u0027t a good idea.",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e164ea2_741cf103",
         "filename": "tools/acrash/src/main.rs",
         "patchSetId": 1
