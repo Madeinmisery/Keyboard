@@ -53,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9c30e6e_b2af2c5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Done. I ran rustfmt before sending the change but it wasn\u0027t using the correct style; aosp/3019832 should fix that for everyone.",
+      "parentUuid": "5035e9c2_a7eaa3a5",
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c0eece3b_65dc8266",
@@ -99,6 +117,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e98abcfe_7f7e3774",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e164ea2_741cf103",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8a171071_cb1c59db",
@@ -112,6 +154,30 @@
       "writtenOn": "2024-03-29T17:34:34Z",
       "side": 1,
       "message": "the implementation doesn\u0027t use this as a default, but appends it even if you set something yourself",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 55
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b90fd18c_56d05de7",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Updated the comment. I think it\u0027s the right behavior because if you\u0027re debugging two builds together (e.g. the platform and an app, or the platform and a locally built mainline module), you should just be able to pass one argument (for the other symbols tree) to get the behavior you want.",
+      "parentUuid": "8a171071_cb1c59db",
       "range": {
         "startLine": 35,
         "startChar": 0,
@@ -145,6 +211,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d750ee4d_bc84c6c7",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "That\u0027s done automatically when we call out to `adb`, but I\u0027ve documented it.",
+      "parentUuid": "711a1892_a64a2446",
+      "range": {
+        "startLine": 58,
+        "startChar": 4,
+        "endLine": 58,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c492a0e5_bdae8bae",
@@ -158,6 +248,30 @@
       "writtenOn": "2024-03-29T17:34:34Z",
       "side": 1,
       "message": "maybe? but also mind the comment i had above\n\n```\nenv::var(\"ANDROID_PRODUCT_OUT\").inspect(|out| ac.debug_file_directory.push(PathBuf::from(out).join(\"symbols\"))\n```",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc0ff10b_2e39bf03",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c492a0e5_bdae8bae",
       "range": {
         "startLine": 84,
         "startChar": 0,
@@ -191,6 +305,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "676de407_fa19a4ad",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Renamed to `call`.",
+      "parentUuid": "edf2d015_1c573156",
+      "range": {
+        "startLine": 112,
+        "startChar": 7,
+        "endLine": 112,
+        "endChar": 17
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa668228_a43bb726",
@@ -204,6 +342,30 @@
       "writtenOn": "2024-03-29T17:34:34Z",
       "side": 1,
       "message": "Is this needed? The `host_txt_file` should be moved as far as I understand",
+      "range": {
+        "startLine": 175,
+        "startChar": 7,
+        "endLine": 175,
+        "endChar": 9
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ba3324c_3233dcf3",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Yes, it\u0027s moved. I removed it.",
+      "parentUuid": "aa668228_a43bb726",
       "range": {
         "startLine": 175,
         "startChar": 7,
@@ -237,6 +399,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89b1dbbd_3cf3f8d0",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Because I didn\u0027t notice that there was an `as_os_str` -- fixed.",
+      "parentUuid": "c8e812d3_5bcc5558",
+      "range": {
+        "startLine": 177,
+        "startChar": 32,
+        "endLine": 177,
+        "endChar": 45
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d422941d_b6f8efec",
@@ -250,6 +436,30 @@
       "writtenOn": "2024-03-29T17:34:34Z",
       "side": 1,
       "message": "why do we unwrap here and `?` error handle elsewhere?",
+      "range": {
+        "startLine": 178,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 22
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55606b05_15c07fa1",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "The `?` error handling is for things that are assumed to be user error, like `adb` invocations, which can fail if the selected device is not connected. User errors should not trigger panics, because a panic represents a program bug.\n\nFor things like failure to parse the output of another program or failure to write to stdout, these are more like program bugs if they occur so we trigger a panic (well, I guess e.g. redirecting stdout to `/dev/full` could be considered a kind of user error, but in general writes to stdout are expected to work; that\u0027s why e.g. `println!` will panic if it fails to write).",
+      "parentUuid": "d422941d_b6f8efec",
       "range": {
         "startLine": 178,
         "startChar": 0,
@@ -283,6 +493,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6b404ed_35ed332b",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Looks like it\u0027s possible. `adb ls` *succeeds* if it\u0027s passed an inaccessible directory (looks like that\u0027s because of the protocol, which provides no trivial way to indicate failure), but we can tell apart inaccessible directories from empty ones by checking for the presence of `.` in the listing.",
+      "parentUuid": "5812f2f7_64f5f339",
+      "range": {
+        "startLine": 215,
+        "startChar": 51,
+        "endLine": 215,
+        "endChar": 74
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0a2a7c9_03fb95bf",
@@ -296,6 +530,30 @@
       "writtenOn": "2024-03-29T17:57:08Z",
       "side": 1,
       "message": "`let name \u003d line.split().nth(2).unwrap()`",
+      "range": {
+        "startLine": 240,
+        "startChar": 16,
+        "endLine": 240,
+        "endChar": 49
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fac63881_bf4701ce",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-03-30T01:13:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0a2a7c9_03fb95bf",
       "range": {
         "startLine": 240,
         "startChar": 16,
