@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af8f9052_b80d1d53",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-04-01T23:03:56Z",
+      "side": 1,
+      "message": "does something complain without the `let _`?",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 84,
+        "endChar": 13
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55acd622_762afe92",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-04-01T23:03:56Z",
+      "side": 1,
+      "message": "optional: `parts.skip(2) // mode and size`",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 37
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38211767_36e57b55",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-04-01T23:03:56Z",
+      "side": 1,
+      "message": "optional, for your consideration: `ecode.then_some(())`;",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 13
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
