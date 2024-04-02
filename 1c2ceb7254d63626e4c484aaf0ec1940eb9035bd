@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f824263_ff78bdf1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-04-02T02:17:55Z",
+      "side": 1,
+      "message": "Please run Android.bp formatter.",
+      "revId": "1c2ceb7254d63626e4c484aaf0ec1940eb9035bd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
