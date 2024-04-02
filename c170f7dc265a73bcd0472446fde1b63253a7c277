@@ -96,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "38fd44d8_5c722fca",
+        "filename": "tools/acrash/OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-04-02T01:35:28Z",
+      "side": 1,
+      "message": "enh, WDYT about being the other owner here?",
+      "parentUuid": "c0eece3b_65dc8266",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 10
+      },
+      "revId": "c170f7dc265a73bcd0472446fde1b63253a7c277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e164ea2_741cf103",
         "filename": "tools/acrash/src/main.rs",
         "patchSetId": 1

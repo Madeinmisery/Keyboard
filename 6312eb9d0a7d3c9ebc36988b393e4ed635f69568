@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d23d256e_012fa1a8",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-04-02T01:35:28Z",
+      "side": 1,
+      "message": "Yes, clippy warns and this turns into an error in the soong build.\n```\n    Checking acrash v0.0.0 (/mnt/disk2/pcc/aosp/development/tools/acrash)\nwarning: unused `std::result::Result` that must be used\n  --\u003e src/main.rs:84:9\n   |\n84 | /         env::var(\"ANDROID_PRODUCT_OUT\")\n85 | |             .inspect(|out| ac.debug_file_directory.push(PathBuf::from(out).join(\"symbols\")));\n   | |____________________________________________________________________________________________^\n   |\n   \u003d note: this `Result` may be an `Err` variant, which should be handled\n   \u003d note: `#[warn(unused_must_use)]` on by default\nhelp: use `let _ \u003d ...` to ignore the resulting value\n   |\n84 |         let _ \u003d env::var(\"ANDROID_PRODUCT_OUT\")\n   |         +++++++\n\n```\nWDYT about just going back to a plain if statement here?",
+      "parentUuid": "af8f9052_b80d1d53",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 84,
+        "endChar": 13
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "55acd622_762afe92",
         "filename": "tools/acrash/src/main.rs",
         "patchSetId": 2
@@ -47,6 +71,47 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "344a86c5_74fa1246",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-04-02T01:35:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "55acd622_762afe92",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 37
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfa0e7cd_f9415ebb",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-04-02T01:35:28Z",
+      "side": 1,
+      "message": "(Removed this line; no tombstones being present isn\u0027t an error, just like `ls` in an empty directory isn\u0027t an error.)",
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38211767_36e57b55",
@@ -60,6 +125,30 @@
       "writtenOn": "2024-04-01T23:03:56Z",
       "side": 1,
       "message": "optional, for your consideration: `ecode.then_some(())`;",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 13
+      },
+      "revId": "6312eb9d0a7d3c9ebc36988b393e4ed635f69568",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3305aa82_02035ef2",
+        "filename": "tools/acrash/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2024-04-02T01:35:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38211767_36e57b55",
       "range": {
         "startLine": 232,
         "startChar": 0,
