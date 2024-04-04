@@ -20,7 +20,8 @@
 #include "utils/api_level.h"
 
 #include <functional>
-#include <set>
+#include <map>
+#include <list>
 #include <string>
 
 
@@ -28,25 +29,33 @@ namespace header_checker {
 namespace repr {
 
 
+constexpr utils::ApiLevel MIN_MODE_TAG_LEVEL = 0;
+constexpr utils::ApiLevel MAX_MODE_TAG_LEVEL = 1000000;
+
+
 class VersionScriptParser {
  private:
+  // This comparison function allows finding elements by string_view.
+  using ModeTagLevelMap = std::map<std::string, utils::ApiLevel, std::less<>>;
+
   enum class LineScope {
     GLOBAL,
     LOCAL,
   };
-
 
   struct ParsedTags {
    public:
     unsigned has_arch_tags_ : 1;
     unsigned has_current_arch_tag_ : 1;
     unsigned has_introduced_tags_ : 1;
+    unsigned has_introduced_arch_tags_ : 1;
     unsigned has_excluded_tags_ : 1;
     unsigned has_future_tag_ : 1;
     unsigned has_var_tag_ : 1;
     unsigned has_weak_tag_ : 1;
     utils::ApiLevel introduced_;
-
+    utils::ApiLevel introduced_arch_;
+    ModeTagLevelMap mode_tags_;
 
    public:
     ParsedTags()
@@ -84,21 +93,29 @@ class VersionScriptParser {
     excluded_symbol_tags_.insert(tag);
   }
 
+  // Returns whether the argument is valid.
+  bool AddModeTag(std::string_view mode_tag);
+
   void SetErrorHandler(std::unique_ptr<ErrorHandler> error_handler) {
     error_handler_ = std::move(error_handler);
   }
 
   std::unique_ptr<ExportedSymbolSet> Parse(std::istream &version_script_stream);
 
-
  private:
   bool ReadLine(std::string &line);
 
-  bool ParseVersionBlock(bool ignore_symbols);
+  bool ParseVersionBlock(bool ignore_symbols, const ParsedTags &tags);
 
-  bool ParseSymbolLine(const std::string &line, bool is_cpp_symbol);
+  bool ParseSymbolLine(const std::string &line, bool is_cpp_symbol,
+                       const ParsedTags &version_block_tags);
 
-  ParsedTags ParseSymbolTags(const std::string &line);
+  ParsedTags ParseSymbolTags(const std::string &line,
+                             const ParsedTags &version_block_tags);
+
+  bool MatchModeTags(const ParsedTags &tags);
+
+  bool MatchIntroducedTags(const ParsedTags &tags);
 
   bool IsSymbolExported(const ParsedTags &tags);
 
@@ -121,6 +138,7 @@ class VersionScriptParser {
 
   utils::StringSet excluded_symbol_versions_;
   utils::StringSet excluded_symbol_tags_;
+  ModeTagLevelMap included_mode_tags_;
 
   std::istream *stream_;
   int line_no_;
