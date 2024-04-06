@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baf29f85_d21b81cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-04-06T02:52:32Z",
+      "side": 1,
+      "message": "Fixes paper cut discovered while working on aosp/3028935.",
+      "revId": "de979840b967c8e3af9445dc4536093e4dd3af50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
