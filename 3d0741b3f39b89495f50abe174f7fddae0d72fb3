@@ -33,6 +33,24 @@
       "message": "Hi all, just a note that I found the comments here slightly confusing when I ran into them today: http://b/333524428. I know very little about Android.bp files, so it wasn\u0027t super clear what the `DO NOT SUBMIT: Add license before submitting` comment wanted me to do.\n\nIn particular, I don\u0027t really know the details of the `license { .. }` module and would need some clear examples to copy from to write a new one.",
       "revId": "3d0741b3f39b89495f50abe174f7fddae0d72fb3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12fc212b_2cf14d2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1644679
+      },
+      "writtenOn": "2024-04-09T16:29:00Z",
+      "side": 1,
+      "message": "https://b.corp.google.com/issues/333524428#comment2",
+      "parentUuid": "aa19517e_cbd3e4f3",
+      "revId": "3d0741b3f39b89495f50abe174f7fddae0d72fb3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
