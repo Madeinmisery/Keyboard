@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe9352fd_b6039d42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-04-09T06:59:02Z",
+      "side": 1,
+      "message": "Please disable darwin_mac on https://ci.android.com/builds/branches/aosp-clang-tools/grid",
+      "revId": "7f36c3219c9fdbf7b232d759fb12887bf92f33fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
