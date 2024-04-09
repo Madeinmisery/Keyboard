@@ -16,6 +16,24 @@
       "message": "Please disable darwin_mac on https://ci.android.com/builds/branches/aosp-clang-tools/grid",
       "revId": "7f36c3219c9fdbf7b232d759fb12887bf92f33fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2974e01_046abef0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-04-09T07:01:37Z",
+      "side": 1,
+      "message": "http://cl/623055760 disables that build. I think I wasn\u0027t sure who needed to approve it.",
+      "parentUuid": "fe9352fd_b6039d42",
+      "revId": "7f36c3219c9fdbf7b232d759fb12887bf92f33fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
