@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81b73fef_8b4139a4",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-11T14:03:21Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this append to a string rather than returning immediately? What if there are multiple library crates?",
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec4a2576_2caff73b",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-11T14:03:21Z",
+      "side": 1,
+      "message": "Nit: this is not specific to rules.mk, so maybe call it `patch_file`.",
+      "range": {
+        "startLine": 719,
+        "startChar": 3,
+        "endLine": 719,
+        "endChar": 19
+      },
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
