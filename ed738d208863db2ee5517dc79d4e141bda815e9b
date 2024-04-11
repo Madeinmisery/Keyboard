@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2bcdbd78_6087c9f4",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-11T18:40:56Z",
+      "side": 1,
+      "message": "this is getting vague. maybe `write_all_build_files`?",
+      "range": {
+        "startLine": 356,
+        "startChar": 3,
+        "endLine": 356,
+        "endChar": 12
+      },
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "81b73fef_8b4139a4",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 4
@@ -20,6 +43,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d93208c7_a1e686fa",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-11T18:40:56Z",
+      "side": 1,
+      "message": "if only one is supported, maybe something like\n\n```\nlet crates \u003d crates.iter().filter(|c| {\n        if c.types.contains(\u0026CrateType::Bin) {\n            eprintln!(\"WARNING: skipped generation of rules.mk for binary crate: {}\", c.name);\n            return false;\n        }\n        if c.types.iter().any(|t| t.is_test()) {\n            // Test build file generation is not yet implemented\n            eprintln!(\"WARNING: skipped generation of rules.mk for test crate: {}\", c.name);\n            return false;\n        }\n        true\n  }).collect();\n \nlet [crate] \u003d \u0026crates[..] else {\n    bail!(\"need exactly one lib crate, but got: {crates:?}\");\n};\n// put crate_to_rulesmk impl directly here\n```",
+      "parentUuid": "81b73fef_8b4139a4",
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ec4a2576_2caff73b",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 4
@@ -31,6 +72,30 @@
       "writtenOn": "2024-04-11T14:03:21Z",
       "side": 1,
       "message": "Nit: this is not specific to rules.mk, so maybe call it `patch_file`.",
+      "range": {
+        "startLine": 719,
+        "startChar": 3,
+        "endLine": 719,
+        "endChar": 19
+      },
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84d69842_95b35080",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-11T18:40:56Z",
+      "side": 1,
+      "message": "`apply_patch_file`?",
+      "parentUuid": "ec4a2576_2caff73b",
       "range": {
         "startLine": 719,
         "startChar": 3,
