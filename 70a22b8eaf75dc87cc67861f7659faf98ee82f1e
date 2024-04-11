@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d17dd79a_db94e2b5",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1027,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-11T19:54:06Z",
+      "side": 1,
+      "message": "this mixes the business logic and the output file format code. if it gets too messy, maybe we can insert an intermediary representation in the middle.",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c798d48c_fd74b880",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1045,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-11T19:54:06Z",
+      "side": 1,
+      "message": "FWIW, i think `CrateType::Bin` is filtered out before this point",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
