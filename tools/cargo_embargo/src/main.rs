@@ -89,18 +89,41 @@ pub static RENAME_MAP: Lazy<BTreeMap<&str, &str>> = Lazy::new(|| {
     .collect()
 });
 
+/// This map tracks Rust crates that have special rules.mk modules that were not
+/// generated automatically by this script. Examples include compiler builtins
+/// and other foundational libraries. It also tracks the location of rules.mk
+/// build files for crates that are not under external/rust/crates.
+pub static RULESMK_RENAME_MAP: Lazy<BTreeMap<&str, &str>> = Lazy::new(|| {
+    [
+        ("liballoc", "trusty/user/base/lib/liballoc-rust"),
+        (
+            "libcompiler_builtins",
+            "trusty/user/base/lib/libcompiler_builtins-rust",
+        ),
+        ("libcore", "trusty/user/base/lib/libcore-rust"),
+        ("libhashbrown", "trusty/user/base/lib/libhashbrown-rust"),
+        ("libpanic_abort", "trusty/user/base/lib/libpanic_abort-rust"),
+        ("libstd", "trusty/user/base/lib/libstd-rust"),
+        ("libstd_detect", "trusty/user/base/lib/libstd_detect-rust"),
+        ("libunwind", "trusty/user/base/lib/libunwind-rust"),
+    ]
+    .into_iter()
+    .collect()
+});
+
 /// Given a proposed module name, returns `None` if it is blocked by the given config, or
 /// else apply any name overrides and returns the name to use.
 fn override_module_name(
     module_name: &str,
     blocklist: &[String],
     module_name_overrides: &BTreeMap<String, String>,
+    rename_map: &BTreeMap<&str, &str>,
 ) -> Option<String> {
     if blocklist.iter().any(|blocked_name| blocked_name == module_name) {
         None
     } else if let Some(overridden_name) = module_name_overrides.get(module_name) {
         Some(overridden_name.to_string())
-    } else if let Some(renamed) = RENAME_MAP.get(module_name) {
+    } else if let Some(renamed) = rename_map.get(module_name) {
         Some(renamed.to_string())
     } else {
         Some(module_name.to_string())
@@ -649,6 +672,7 @@ fn generate_android_bp(
             &format!("copy_{}_build_out", package_name),
             &cfg.module_blocklist,
             &cfg.module_name_overrides,
+            &RENAME_MAP,
         ) {
             m.props.set("name", module_name.clone());
             m.props.set("srcs", vec!["out/*"]);
@@ -835,9 +859,12 @@ fn crate_to_bp_modules(
         };
 
         let mut m = BpModule::new(module_type.clone());
-        let Some(module_name) =
-            override_module_name(&module_name, &cfg.module_blocklist, &cfg.module_name_overrides)
-        else {
+        let Some(module_name) = override_module_name(
+            &module_name,
+            &cfg.module_blocklist,
+            &cfg.module_name_overrides,
+            &RENAME_MAP,
+        ) else {
             continue;
         };
         if matches!(
@@ -932,6 +959,7 @@ fn crate_to_bp_modules(
                     &module_name,
                     &package_cfg.dep_blocklist,
                     &cfg.module_name_overrides,
+                    &RENAME_MAP,
                 ) {
                     result.push(module_name);
                 }
@@ -1014,13 +1042,116 @@ fn crate_to_bp_modules(
 ///
 /// If messy business logic is necessary, prefer putting it here.
 fn crate_to_rulesmk(
-    _crate_: &Crate,
-    _cfg: &VariantConfig,
-    _package_cfg: &PackageVariantConfig,
-    _extra_srcs: &[String],
+    crate_: &Crate,
+    cfg: &VariantConfig,
+    package_cfg: &PackageVariantConfig,
+    extra_srcs: &[String],
 ) -> Result<String> {
-    // TODO: Implement rules generation
-    Ok(String::new())
+    let mut contents = String::new();
+
+    contents += "LOCAL_DIR := $(GET_LOCAL_DIR)\n";
+    contents += "MODULE := $(LOCAL_DIR)\n";
+    contents += &format!("MODULE_CRATE_NAME := {}\n", crate_.name);
+    contents += &format!(
+        "MODULE_SRCS := $(LOCAL_DIR)/{}\n",
+        crate_.main_src.display()
+    );
+
+    if !crate_.types.is_empty() {
+        contents += "MODULE_RUST_CRATE_TYPES :=";
+        for crate_type in &crate_.types {
+            contents += match crate_type {
+                CrateType::Bin => " bin",
+                CrateType::Lib => " rlib",
+                CrateType::StaticLib => " staticlib",
+                CrateType::ProcMacro => " proc-macro",
+                _ => bail!("Cannot generate rules.mk for crate type {crate_type:?}"),
+            };
+        }
+        contents += "\n";
+    }
+
+    contents += &format!("MODULE_RUST_EDITION := {}\n", crate_.edition);
+
+    // crate dependencies without lib- prefix
+    let mut library_deps: Vec<_> = crate_
+        .externs
+        .iter()
+        .map(|dep| dep.lib_name.clone())
+        .collect();
+    if package_cfg.no_std {
+        contents += "MODULE_ADD_IMPLICIT_DEPS := false\n";
+        library_deps.push("compiler_builtins".to_string());
+        library_deps.push("core".to_string());
+        if package_cfg.alloc {
+            library_deps.push("alloc".to_string());
+        }
+    }
+
+    let mut flags = Vec::new();
+    if !crate_.cap_lints.is_empty() {
+        flags.push(crate_.cap_lints.clone());
+    }
+    flags.extend(
+        crate_
+            .codegens
+            .iter()
+            .map(|codegen| format!("-C {}", codegen)),
+    );
+    flags.extend(
+        crate_
+            .features
+            .iter()
+            .map(|feat| format!("--cfg 'feature={feat}'")),
+    );
+    flags.extend(
+        crate_
+            .cfgs
+            .iter()
+            .filter(|crate_cfg| !cfg.cfg_blocklist.contains(crate_cfg))
+            .chain(cfg.extra_cfg.iter())
+            .map(|cfg| format!("--cfg '{cfg}'")),
+    );
+    if !flags.is_empty() {
+        contents += "MODULE_RUSTFLAGS += \\\n\t";
+        contents += &flags.join(" \\\n\t");
+        contents += "\n\n";
+    }
+
+    let mut library_deps: Vec<String> = library_deps
+        .into_iter()
+        .flat_map(|dep| {
+            override_module_name(
+                &format!("lib{dep}"),
+                &package_cfg.dep_blocklist,
+                &cfg.module_name_overrides,
+                &RULESMK_RENAME_MAP,
+            )
+        })
+        .collect();
+    library_deps.sort();
+    library_deps.dedup();
+    contents += "MODULE_LIBRARY_DEPS := \\\n\t";
+    contents += &library_deps.join(" \\\n\t");
+    contents += "\n\n";
+
+    if !extra_srcs.is_empty() {
+        contents += &format!("OUT_FILES := {}\n", extra_srcs.join(" "));
+        contents += "BUILD_OUT_FILES := $(addprefix $(call TOBUILDDIR,$(MODULE))/,$(OUT_FILES))\n";
+        contents += "$(BUILD_OUT_FILES): OUT_DIR := $(call TOBUILDDIR,$(MODULE))\n";
+        contents += "$(BUILD_OUT_FILES): $(addprefix $(MODULE)/out/,$(OUT_FILES))\n";
+        contents += "\t@echo copying $^ to $(OUT_DIR)\n";
+        contents += "\t@$(MKDIR)\n";
+        contents += "\t@cp $^ $(OUT_DIR)/\n\n";
+        contents += "MODULE_RUST_ENV += \"OUT_DIR=$(call TOBUILDDIR,$(MODULE))\"\n\n";
+        contents += "MODULE_SRCDEPS += $(BUILD_OUT_FILES)\n\n";
+        contents += "OUT_FILES :=\n";
+        contents += "BUILD_OUT_FILES :=\n";
+        contents += "\n";
+    }
+
+    contents += "include make/library.mk\n";
+    Ok(contents)
 }
 
 #[cfg(test)]
