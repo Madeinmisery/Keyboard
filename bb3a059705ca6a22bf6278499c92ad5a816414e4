@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8037984f_bcdc8390",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-04-11T04:53:59Z",
+      "side": 1,
+      "message": "Please take another look.\n\nPS3 and PS4 are basically the same, but this Darwin code was removed by Id341479c3fe4978021761fcc8dad76f5b2f68fe0, which caused a merge conflict:\n\n```\nlibs\u003d()\nif [ \"${OS}\" \u003d \"darwin\" ]; then\n    libs+\u003d(\"${SOONG_HOST_OUT}/lib64/libc++abi_host.dylib\")\nfi\n```",
+      "revId": "bb3a059705ca6a22bf6278499c92ad5a816414e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
