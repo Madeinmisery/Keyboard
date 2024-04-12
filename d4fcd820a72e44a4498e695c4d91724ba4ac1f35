@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3959b29e_7d9b89c9",
+        "filename": "vndk/tools/header-checker/src/linker/header_abi_linker.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-04-12T13:16:43Z",
+      "side": 1,
+      "message": "I agree. I haven\u0027t found a good way to let the core variant load the vendor variant\u0027s stub. Perhaps the core variant needs to call ndkstubgen with vendor\u0027s parameters.",
+      "parentUuid": "6de7d58f_8120efbd",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 50
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "066a155f_b0bb32c6",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0f57e67_37ec6126",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-04-12T13:16:43Z",
+      "side": 1,
+      "message": "Yes.\n`error: no matching constructor for initialization of \u0027std::optional\u003cModeT\nagLevel\u003e\u0027`",
+      "parentUuid": "066a155f_b0bb32c6",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 42
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b45e47f2_b5088f80",
@@ -60,6 +108,30 @@
       "writtenOn": "2024-04-12T07:48:35Z",
       "side": 1,
       "message": "should just use the square bracket accesser to modify the map, just in case there are duplicated tags. (emplace does not replace an existing key)",
+      "range": {
+        "startLine": 83,
+        "startChar": 24,
+        "endLine": 83,
+        "endChar": 31
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5804d66b_8574d52e",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-04-12T13:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b45e47f2_b5088f80",
       "range": {
         "startLine": 83,
         "startChar": 24,
