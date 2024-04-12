@@ -216,11 +216,18 @@ bool VersionScriptParser::IsSymbolExported(const ParsedTags &tags) {
     return false;
   }
 
-  if (!included_mode_tags_.empty() && !tags.mode_tags_.empty()) {
-    return MatchModeTags(tags);
+  if (tags.mode_tags_.empty() || included_mode_tags_.empty()) {
+    return MatchIntroducedTags(tags);
   }
 
-  return MatchIntroducedTags(tags);
+  switch (mode_tag_policy_) {
+    case MatchTagAndApi:
+      return MatchModeTags(tags) && MatchIntroducedTags(tags);
+    case MatchTagOnly:
+      return MatchModeTags(tags);
+  }
+  // Unreachable
+  return false;
 }
 
 
