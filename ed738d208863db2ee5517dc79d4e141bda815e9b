@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "058041c1_d087cc58",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2024-04-12T23:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2bcdbd78_6087c9f4",
+      "range": {
+        "startLine": 356,
+        "startChar": 3,
+        "endLine": 356,
+        "endChar": 12
+      },
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "81b73fef_8b4139a4",
@@ -55,6 +79,24 @@
       "side": 1,
       "message": "if only one is supported, maybe something like\n\n```\nlet crates \u003d crates.iter().filter(|c| {\n        if c.types.contains(\u0026CrateType::Bin) {\n            eprintln!(\"WARNING: skipped generation of rules.mk for binary crate: {}\", c.name);\n            return false;\n        }\n        if c.types.iter().any(|t| t.is_test()) {\n            // Test build file generation is not yet implemented\n            eprintln!(\"WARNING: skipped generation of rules.mk for test crate: {}\", c.name);\n            return false;\n        }\n        true\n  }).collect();\n \nlet [crate] \u003d \u0026crates[..] else {\n    bail!(\"need exactly one lib crate, but got: {crates:?}\");\n};\n// put crate_to_rulesmk impl directly here\n```",
       "parentUuid": "81b73fef_8b4139a4",
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "573f825c_7aa03a1f",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2024-04-12T23:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d93208c7_a1e686fa",
       "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -96,6 +138,30 @@
       "side": 1,
       "message": "`apply_patch_file`?",
       "parentUuid": "ec4a2576_2caff73b",
+      "range": {
+        "startLine": 719,
+        "startChar": 3,
+        "endLine": 719,
+        "endChar": 19
+      },
+      "revId": "ed738d208863db2ee5517dc79d4e141bda815e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d344dbb_c411f80a",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2024-04-12T23:14:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84d69842_95b35080",
       "range": {
         "startLine": 719,
         "startChar": 3,
