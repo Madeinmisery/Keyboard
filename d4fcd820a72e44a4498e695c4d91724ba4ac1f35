@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6de7d58f_8120efbd",
+        "filename": "vndk/tools/header-checker/src/linker/header_abi_linker.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-12T07:48:35Z",
+      "side": 1,
+      "message": "this works for now. but I think for the long run we shouldn\u0027t be re-doing the logic of ndkstubgen.py in CPP, we should just forward these flags to and call ndkstubgen.py directly. We can then use the symbol_list.txt output by ndkstubgen.py to filter the ELF symbols.",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 50
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "066a155f_b0bb32c6",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-12T07:48:35Z",
+      "side": 1,
+      "message": "Is the additional curly brace really needed here?\n```suggestion\n    return {split_tag[0], default_level};\n```",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 42
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b45e47f2_b5088f80",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-12T07:48:35Z",
+      "side": 1,
+      "message": "should just use the square bracket accesser to modify the map, just in case there are duplicated tags. (emplace does not replace an existing key)",
+      "range": {
+        "startLine": 83,
+        "startChar": 24,
+        "endLine": 83,
+        "endChar": 31
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

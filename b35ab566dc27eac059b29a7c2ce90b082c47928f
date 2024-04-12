@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46f4d4a6_04df829e",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-12T07:48:35Z",
+      "side": 0,
+      "message": "why remove this?\nThis should still be useful for skip parsing uninteresting lines right?",
+      "range": {
+        "startLine": 289,
+        "startChar": 49,
+        "endLine": 289,
+        "endChar": 76
+      },
+      "revId": "b35ab566dc27eac059b29a7c2ce90b082c47928f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
