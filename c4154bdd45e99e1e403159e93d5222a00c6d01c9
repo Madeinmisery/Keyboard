@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2025f2e6_f7d36b9f",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T23:22:26Z",
+      "side": 1,
+      "message": "Do the extra sources have that `$(MODULE)/out/` prefix? Where is that coming from?",
+      "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
