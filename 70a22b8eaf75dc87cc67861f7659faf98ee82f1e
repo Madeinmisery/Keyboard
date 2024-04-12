@@ -101,6 +101,41 @@
       "message": "Should this be a pattern rule? Is there a 1:1 mapping between each output file and the input?\n\nAlternatively,you might want to use `\u0026:` to produce multiple outputs from one recipe.",
       "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66e5be03_b473b3e5",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1109,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T22:27:31Z",
+      "side": 1,
+      "message": "This has an extra `/out/` subdirectory, is that intentional?",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33ab8880_551552ff",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1109,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T22:27:31Z",
+      "side": 1,
+      "message": "A static pattern rule would look something like:\n```\n$(BUILD_OUT_FILES): $(BUILDDIR)/$(MODULE)/%: %\n        @echo ...\n```",
+      "parentUuid": "3d6a187a_163f6bc0",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
