@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "d54058bc_a9e1ad36",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1039,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T04:20:29Z",
+      "side": 1,
+      "message": "Should we keep the order from the current files? `cargo2rulesmk.py` prints them like this:\n```\nLOCAL_DIR\nMODULE\nMODULE_CRATE_NAME\nMODULE_RUST_CRATE_TYPES\nMODULE_SRCS\nMODULE_SRCDEPS (+build.rs)\nMODULE_ADD_IMPLICIT_DEPS\nMODULE_RUST_EDITION\nMODULE_RUSTFLAGS (features)\nMODULE_RUSTFLAGS (cfgs)\nMODULE_LIBRARY_DEPS\n```\n\nMight make updating the existing ones easier.",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "c798d48c_fd74b880",
@@ -31,6 +48,57 @@
       "writtenOn": "2024-04-11T19:54:06Z",
       "side": 1,
       "message": "FWIW, i think `CrateType::Bin` is filtered out before this point",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3037dc5_19a24fe7",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1106,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T04:20:29Z",
+      "side": 1,
+      "message": "Is there always 1 file here? That was the case in the old code, if it still is then maybe we should have an assertion.",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f23587a1_10703561",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1108,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T04:20:29Z",
+      "side": 1,
+      "message": "Since `OUT_DIR` repeats, maybe it should be a separate Make variable?",
+      "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d6a187a_163f6bc0",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1109,
+      "author": {
+        "id": 1809582
+      },
+      "writtenOn": "2024-04-12T04:20:29Z",
+      "side": 1,
+      "message": "Should this be a pattern rule? Is there a 1:1 mapping between each output file and the input?\n\nAlternatively,you might want to use `\u0026:` to produce multiple outputs from one recipe.",
       "revId": "70a22b8eaf75dc87cc67861f7659faf98ee82f1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
