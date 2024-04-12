@@ -22,6 +22,30 @@
       },
       "revId": "b35ab566dc27eac059b29a7c2ce90b082c47928f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e7c4248_afd3d9fa",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-12T08:13:41Z",
+      "side": 0,
+      "message": "Acknowledged\n\nWe need to parse the entire block \u0026 line to infer the complete set of tags of a symbol, only then can we get correct `IsSymbolExported` result",
+      "parentUuid": "46f4d4a6_04df829e",
+      "range": {
+        "startLine": 289,
+        "startChar": 49,
+        "endLine": 289,
+        "endChar": 76
+      },
+      "revId": "b35ab566dc27eac059b29a7c2ce90b082c47928f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
