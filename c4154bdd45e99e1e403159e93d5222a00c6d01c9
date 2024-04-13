@@ -16,6 +16,24 @@
       "message": "Do the extra sources have that `$(MODULE)/out/` prefix? Where is that coming from?",
       "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d51850a5_f4594da4",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2024-04-13T00:01:48Z",
+      "side": 1,
+      "message": "Android.bp does the same, not sure this is enforced in any other way though. E.g.\n\n```\ngenrule {\n    name: \"copy_protobuf_deprecated_build_out\",\n    srcs: [\"out/*\"],\n    cmd: \"cp $(in) $(genDir)\",\n    out: [\"version.rs\"],\n}\n```",
+      "parentUuid": "2025f2e6_f7d36b9f",
+      "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
