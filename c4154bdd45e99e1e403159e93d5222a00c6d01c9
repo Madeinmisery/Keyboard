@@ -34,6 +34,24 @@
       "parentUuid": "2025f2e6_f7d36b9f",
       "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a1f6661_517e53ea",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-04-13T01:04:38Z",
+      "side": 1,
+      "message": "You might want to rename `extra_srcs` here to `out_files` or something to make it obvious we only expect the files output by build.rs (if that is an important detail for the makefiles).\n\nWe could probably get rid of the glob for the android.bp genrules. I think I was just trying to match the output as closely to cargo2android.py as possible originally.",
+      "parentUuid": "d51850a5_f4594da4",
+      "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
