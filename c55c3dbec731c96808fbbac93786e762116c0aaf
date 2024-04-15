@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb7bd29f_edbc5b68",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-15T03:09:23Z",
+      "side": 1,
+      "message": "this too change to `[]`-assign\n```suggestion\n      result.mode_tags_[mode_tag-\u003efirst] \u003d mode_tag-\u003esecond;\n```",
+      "revId": "c55c3dbec731c96808fbbac93786e762116c0aaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
