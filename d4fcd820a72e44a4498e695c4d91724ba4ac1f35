@@ -95,6 +95,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "47b85110_7645dc5d",
+        "filename": "vndk/tools/header-checker/src/repr/symbol/version_script_parser.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-04-15T03:07:18Z",
+      "side": 1,
+      "message": "I see. I thought cpp is smart enough to deduce the the type of `{split_tag[0], default_level}` to be pair\u003c\u003e and invoke constructor(8)\n\nhttps://en.cppreference.com/w/cpp/utility/optional/optional\n\nI was wrong",
+      "parentUuid": "e0f57e67_37ec6126",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 42
+      },
+      "revId": "d4fcd820a72e44a4498e695c4d91724ba4ac1f35",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b45e47f2_b5088f80",
