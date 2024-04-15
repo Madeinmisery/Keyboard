@@ -52,6 +52,24 @@
       "parentUuid": "d51850a5_f4594da4",
       "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41d4e68d_041fe9be",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 5
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 1809421
+      },
+      "writtenOn": "2024-04-15T22:30:55Z",
+      "side": 1,
+      "message": "Renamed, just need a fresh +2 now.",
+      "parentUuid": "9a1f6661_517e53ea",
+      "revId": "c4154bdd45e99e1e403159e93d5222a00c6d01c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
