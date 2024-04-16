@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90341c15_02b4ab9a",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-16T14:02:24Z",
+      "side": 1,
+      "message": "Good idea, thanks!",
+      "parentUuid": "c16e02a3_2f9000f9",
+      "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b68768f_5b3cdc9c",
@@ -48,6 +66,24 @@
       "writtenOn": "2024-04-16T13:46:19Z",
       "side": 1,
       "message": "Why convert to strings before comparing here?",
+      "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4f13870_5b7c6cab",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-16T14:02:24Z",
+      "side": 1,
+      "message": "Ah, good question 😊 The multi-line strings will generate a diff when they don\u0027t match. Before using Googletest I had to attempt to compare the output using two very long lines, which wasn\u0027t much fun.",
+      "parentUuid": "0b68768f_5b3cdc9c",
       "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
