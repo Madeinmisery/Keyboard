@@ -16,6 +16,40 @@
       "message": "Hey Andrew, I hope I\u0027ve updated the test files in more or less the expected way.",
       "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c16e02a3_2f9000f9",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-16T13:46:19Z",
+      "side": 1,
+      "message": "Please update this comment with an example in the new format.",
+      "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b68768f_5b3cdc9c",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-16T13:46:19Z",
+      "side": 1,
+      "message": "Why convert to strings before comparing here?",
+      "revId": "564a7a91f2c6dff33923ed7d6ada00a28e5f5c9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
