@@ -3,7 +3,7 @@
     {
       "name": "rustc-demangle",
       "version": "0.1.23",
-      "id": "rustc-demangle 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
+      "id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.23",
       "license": "MIT/Apache-2.0",
       "license_file": null,
       "description": "Rust compiler symbol demangling.\n",
@@ -43,7 +43,7 @@
             "lib"
           ],
           "name": "rustc-demangle",
-          "src_path": "/usr/local/google/home/qwandor/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustc-demangle-0.1.23/src/lib.rs",
+          "src_path": "/usr/local/google/home/mgeisler/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustc-demangle-0.1.23/src/lib.rs",
           "edition": "2015",
           "doc": true,
           "doctest": true,
@@ -63,7 +63,7 @@
         ],
         "std": []
       },
-      "manifest_path": "/usr/local/google/home/qwandor/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustc-demangle-0.1.23/Cargo.toml",
+      "manifest_path": "/usr/local/google/home/mgeisler/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustc-demangle-0.1.23/Cargo.toml",
       "metadata": {
         "docs": {
           "rs": {
@@ -95,7 +95,7 @@
     {
       "name": "rustc-demangle-capi",
       "version": "0.1.0",
-      "id": "rustc-demangle-capi 0.1.0 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi)",
+      "id": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi#0.1.0",
       "license": "MIT/Apache-2.0",
       "license_file": null,
       "description": "C API for the `rustc-demangle` crate\n",
@@ -123,7 +123,7 @@
             "staticlib"
           ],
           "name": "rustc_demangle",
-          "src_path": "/usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi/src/lib.rs",
+          "src_path": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi/src/lib.rs",
           "edition": "2015",
           "doc": true,
           "doctest": false,
@@ -131,7 +131,7 @@
         }
       ],
       "features": {},
-      "manifest_path": "/usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi/Cargo.toml",
+      "manifest_path": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi/Cargo.toml",
       "metadata": null,
       "publish": null,
       "authors": [
@@ -150,28 +150,28 @@
     }
   ],
   "workspace_members": [
-    "rustc-demangle-capi 0.1.0 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi)"
+    "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi#0.1.0"
   ],
   "workspace_default_members": [
-    "rustc-demangle-capi 0.1.0 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi)"
+    "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi#0.1.0"
   ],
   "resolve": {
     "nodes": [
       {
-        "id": "rustc-demangle 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
+        "id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.23",
         "dependencies": [],
         "deps": [],
         "features": []
       },
       {
-        "id": "rustc-demangle-capi 0.1.0 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi)",
+        "id": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi#0.1.0",
         "dependencies": [
-          "rustc-demangle 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)"
+          "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.23"
         ],
         "deps": [
           {
             "name": "rustc_demangle",
-            "pkg": "rustc-demangle 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
+            "pkg": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.23",
             "dep_kinds": [
               {
                 "kind": null,
@@ -183,10 +183,10 @@
         "features": []
       }
     ],
-    "root": "rustc-demangle-capi 0.1.0 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi)"
+    "root": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi#0.1.0"
   },
-  "target_directory": "/usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi/target",
+  "target_directory": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi/target",
   "version": 1,
-  "workspace_root": "/usr/local/google/home/qwandor/aosp/external/rust/crates/rustc-demangle-capi",
+  "workspace_root": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/rustc-demangle-capi",
   "metadata": null
 }

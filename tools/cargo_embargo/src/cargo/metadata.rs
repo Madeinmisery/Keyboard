@@ -16,7 +16,7 @@
 
 use super::{Crate, CrateType, Extern, ExternType};
 use crate::config::VariantConfig;
-use anyhow::{anyhow, bail, Context, Result};
+use anyhow::{bail, Context, Result};
 use serde::Deserialize;
 use std::collections::BTreeMap;
 use std::ops::Deref;
@@ -273,9 +273,15 @@ fn make_extern(packages: &[PackageMetadata], dependency: &DependencyMetadata) ->
 /// returns the path to the package, e.g.
 /// `"/usr/local/google/home/qwandor/aosp/external/rust/crates/either"`.
 fn package_dir_from_id(id: &str) -> Result<PathBuf> {
-    const URI_MARKER: &str = "(path+file://";
-    let uri_start = id.find(URI_MARKER).ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
-    Ok(PathBuf::from(id[uri_start + URI_MARKER.len()..id.len() - 1].to_string()))
+    const PREFIX: &str = "path+file://";
+    const SEPARATOR: char = '#';
+    let Some(stripped) = id.strip_prefix(PREFIX) else {
+        bail!("Invalid package ID {id:?}, expected it to start with {PREFIX:?}");
+    };
+    let Some(idx) = stripped.rfind(SEPARATOR) else {
+        bail!("Invalid package ID {id:?}, expected it to contain {SEPARATOR:?}");
+    };
+    Ok(PathBuf::from(stripped[..idx].to_string()))
 }
 
 fn split_src_path<'a>(src_path: &'a Path, package_dir: &Path) -> &'a Path {
@@ -344,6 +350,8 @@ mod tests {
     use super::*;
     use crate::config::Config;
     use crate::tests::testdata_directories;
+    use googletest::matchers::eq;
+    use googletest::prelude::assert_that;
     use std::fs::{read_to_string, File};
 
     #[test]
@@ -419,6 +427,20 @@ mod tests {
 
     #[test]
     fn parse_metadata() {
+        /// Remove anything before "external/rust/crates/" from the
+        /// `package_dir` field. This makes the test robust since you
+        /// can use `cargo metadata` to regenerate the test files and
+        /// you don't have to care about where your AOSP checkout
+        /// lives.
+        fn normalize_package_dir(mut c: Crate) -> Crate {
+            const EXTERNAL_RUST_CRATES: &str = "external/rust/crates/";
+            let package_dir = c.package_dir.to_str().unwrap();
+            if let Some(idx) = package_dir.find(EXTERNAL_RUST_CRATES) {
+                c.package_dir = PathBuf::from(format!(".../{}", &package_dir[idx..]));
+            }
+            c
+        }
+
         for testdata_directory_path in testdata_directories() {
             let cfg = Config::from_json_str(
                 &read_to_string(testdata_directory_path.join("cargo_embargo.json"))
@@ -432,10 +454,13 @@ mod tests {
             )
             .unwrap();
             let cargo_metadata_path = testdata_directory_path.join("cargo.metadata");
-            let expected_crates: Vec<Vec<Crate>> = serde_json::from_reader(
+            let expected_crates: Vec<Vec<Crate>> = serde_json::from_reader::<_, Vec<Vec<Crate>>>(
                 File::open(testdata_directory_path.join("crates.json")).unwrap(),
             )
-            .unwrap();
+            .unwrap()
+            .into_iter()
+            .map(|crates: Vec<Crate>| crates.into_iter().map(normalize_package_dir).collect())
+            .collect();
 
             let crates = cfg
                 .variants
@@ -448,9 +473,12 @@ mod tests {
                         variant_cfg,
                     )
                     .unwrap()
+                    .into_iter()
+                    .map(normalize_package_dir)
+                    .collect::<Vec<Crate>>()
                 })
-                .collect::<Vec<_>>();
-            assert_eq!(crates, expected_crates);
+                .collect::<Vec<Vec<Crate>>>();
+            assert_that!(format!("{crates:#?}"), eq(format!("{expected_crates:#?}")));
         }
     }
 }

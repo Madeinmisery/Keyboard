@@ -3,7 +3,7 @@
     {
       "name": "aho-corasick",
       "version": "0.7.20",
-      "id": "aho-corasick 0.7.20 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick)",
+      "id": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick#0.7.20",
       "license": "Unlicense OR MIT",
       "license_file": null,
       "description": "Fast multiple substring searching.",
@@ -31,7 +31,7 @@
             "lib"
           ],
           "name": "aho_corasick",
-          "src_path": "/usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick/src/lib.rs",
+          "src_path": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick/src/lib.rs",
           "edition": "2018",
           "doc": true,
           "doctest": true,
@@ -46,7 +46,7 @@
           "memchr/std"
         ]
       },
-      "manifest_path": "/usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick/Cargo.toml",
+      "manifest_path": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick/Cargo.toml",
       "metadata": null,
       "publish": null,
       "authors": [
@@ -73,11 +73,11 @@
     },
     {
       "name": "memchr",
-      "version": "2.6.3",
-      "id": "memchr 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
+      "version": "2.7.2",
+      "id": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.2",
       "license": "Unlicense OR MIT",
       "license_file": null,
-      "description": "Safe interface to memchr.",
+      "description": "Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for\n1, 2 or 3 byte search and single substring search.\n",
       "source": "registry+https://github.com/rust-lang/crates.io-index",
       "dependencies": [
         {
@@ -138,7 +138,7 @@
             "lib"
           ],
           "name": "memchr",
-          "src_path": "/usr/local/google/home/qwandor/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memchr-2.6.3/src/lib.rs",
+          "src_path": "/usr/local/google/home/mgeisler/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memchr-2.7.2/src/lib.rs",
           "edition": "2021",
           "doc": true,
           "doctest": true,
@@ -171,7 +171,7 @@
           "std"
         ]
       },
-      "manifest_path": "/usr/local/google/home/qwandor/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memchr-2.6.3/Cargo.toml",
+      "manifest_path": "/usr/local/google/home/mgeisler/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memchr-2.7.2/Cargo.toml",
       "metadata": {
         "docs": {
           "rs": {
@@ -189,10 +189,10 @@
       "categories": [],
       "keywords": [
         "memchr",
-        "char",
-        "scan",
-        "strchr",
-        "string"
+        "memmem",
+        "substring",
+        "find",
+        "search"
       ],
       "readme": "README.md",
       "repository": "https://github.com/BurntSushi/memchr",
@@ -205,19 +205,22 @@
     }
   ],
   "workspace_members": [
-    "aho-corasick 0.7.20 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick)"
+    "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick#0.7.20"
+  ],
+  "workspace_default_members": [
+    "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick#0.7.20"
   ],
   "resolve": {
     "nodes": [
       {
-        "id": "aho-corasick 0.7.20 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick)",
+        "id": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick#0.7.20",
         "dependencies": [
-          "memchr 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)"
+          "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.2"
         ],
         "deps": [
           {
             "name": "memchr",
-            "pkg": "memchr 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
+            "pkg": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.2",
             "dep_kinds": [
               {
                 "kind": null,
@@ -232,7 +235,7 @@
         ]
       },
       {
-        "id": "memchr 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
+        "id": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.2",
         "dependencies": [],
         "deps": [],
         "features": [
@@ -241,10 +244,10 @@
         ]
       }
     ],
-    "root": "aho-corasick 0.7.20 (path+file:///usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick)"
+    "root": "path+file:///usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick#0.7.20"
   },
-  "target_directory": "/usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick/target",
+  "target_directory": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick/target",
   "version": 1,
-  "workspace_root": "/usr/local/google/home/qwandor/aosp/external/rust/crates/aho-corasick",
+  "workspace_root": "/usr/local/google/home/mgeisler/src/aosp/external/rust/crates/aho-corasick",
   "metadata": null
 }
