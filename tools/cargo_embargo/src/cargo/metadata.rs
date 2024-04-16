@@ -16,7 +16,7 @@
 
 use super::{Crate, CrateType, Extern, ExternType};
 use crate::config::VariantConfig;
-use anyhow::{anyhow, bail, Context, Result};
+use anyhow::{bail, Context, Result};
 use serde::Deserialize;
 use std::collections::BTreeMap;
 use std::ops::Deref;
@@ -273,9 +273,15 @@ fn make_extern(packages: &[PackageMetadata], dependency: &DependencyMetadata) ->
 /// returns the path to the package, e.g.
 /// `"/usr/local/google/home/qwandor/aosp/external/rust/crates/either"`.
 fn package_dir_from_id(id: &str) -> Result<PathBuf> {
-    const URI_MARKER: &str = "(path+file://";
-    let uri_start = id.find(URI_MARKER).ok_or_else(|| anyhow!("Invalid package ID {}", id))?;
-    Ok(PathBuf::from(id[uri_start + URI_MARKER.len()..id.len() - 1].to_string()))
+    const PREFIX: &str = "path+file://";
+    const SEPARATOR: char = '#';
+    let Some(stripped) = id.strip_prefix(PREFIX) else {
+        bail!("Invalid package ID {id:?}, expected it to start with {PREFIX:?}");
+    };
+    let Some(idx) = stripped.rfind(SEPARATOR) else {
+        bail!("Invalid package ID {id:?}, expected it to contain {SEPARATOR:?}");
+    };
+    Ok(PathBuf::from(stripped[..idx].to_string()))
 }
 
 fn split_src_path<'a>(src_path: &'a Path, package_dir: &Path) -> &'a Path {
