@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49642641_9477d0ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-18T08:43:25Z",
+      "side": 1,
+      "message": "\u003e This seems to happen for libmls_rs_uniffi, no idea why.\n\nCould this be because it sets the library name explicitly: https://github.com/awslabs/mls-rs/blob/main/mls-rs-uniffi/Cargo.toml#L15 ?",
+      "revId": "4ceb4aacf52a831aa7fa28bbd74d69dbe0612a3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
