@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52708ef8_9e7f3247",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1414712
+      },
+      "writtenOn": "2024-04-23T08:01:35Z",
+      "side": 1,
+      "message": "We add CubeLiveWallpaper in our product.\nBut fail to see avaliable Live Wallpapers, \"Cube\" and \"Cube - resource\" when choosing wallpaper from Live Wallpapers since android S.\nPlease help review this change. Detail info see Bug:b/336399259\nThanks!",
+      "revId": "971c5bdc92ff1a1c8ffb8bb848acb43878f6c257",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
