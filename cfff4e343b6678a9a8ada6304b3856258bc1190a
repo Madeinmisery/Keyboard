@@ -16,6 +16,24 @@
       "message": "(strictly, coreutils chroot has a `--skip-chdir` that we could add to toybox chroot, but (a) your YAGNI argument seems reasonable to me and (b) that wouldn\u0027t help old devices anyway.)",
       "revId": "cfff4e343b6678a9a8ada6304b3856258bc1190a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d21e5db_c7a13b2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2009465
+      },
+      "writtenOn": "2024-04-23T08:52:49Z",
+      "side": 1,
+      "message": "Yep I wanted to use the flag originally and found out that it\u0027s not preseint in the toybox impl but adding it seemed like too much compared to a simple way like here",
+      "parentUuid": "4625f549_b9282fed",
+      "revId": "cfff4e343b6678a9a8ada6304b3856258bc1190a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
