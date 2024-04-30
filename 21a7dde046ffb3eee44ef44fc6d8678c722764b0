@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45b18017_8c77e466",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-30T15:09:50Z",
+      "side": 1,
+      "message": "As it stands this breaks running `cargo_embargo` on `external/rust/crates/ring` and maybe other crates that set `\"extra_cfg\": [\"soong\"]`, so it\u0027s not a viable option.",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
