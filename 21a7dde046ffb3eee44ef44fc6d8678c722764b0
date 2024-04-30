@@ -69,6 +69,24 @@
       "parentUuid": "ee8213a6_c207c9c2",
       "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36d98b2f_573d50eb",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-30T16:56:59Z",
+      "side": 1,
+      "message": "I see, thanks for explaining!",
+      "parentUuid": "7a316e91_08f8d29d",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
