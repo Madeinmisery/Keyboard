@@ -33,6 +33,24 @@
       "message": "I assume you\u0027ve tried with `\u0026envs`? I see that the `envs` method takes a very flexible type (https://doc.rust-lang.org/stable/std/process/struct.Command.html#method.envs), but perhaps not flexible enough 😊",
       "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a316e91_08f8d29d",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-04-30T16:44:28Z",
+      "side": 1,
+      "message": "Yeah, that doesn\u0027t work because `IntoIter` on a slice gives an iterator of references to pairs rather than the pair themselves.",
+      "parentUuid": "ee8213a6_c207c9c2",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
