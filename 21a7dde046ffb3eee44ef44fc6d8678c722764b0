@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d3bc7540_69fe7171",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-30T16:56:20Z",
+      "side": 1,
+      "message": "I guess it just needs to be submitted after the corresponding change in Soong — and then one has to clear the `extra_cfg` field?",
+      "parentUuid": "45b18017_8c77e466",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ee8213a6_c207c9c2",
         "filename": "tools/cargo_embargo/src/main.rs",
         "patchSetId": 1
