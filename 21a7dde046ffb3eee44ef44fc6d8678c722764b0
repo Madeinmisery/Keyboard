@@ -16,6 +16,23 @@
       "message": "As it stands this breaks running `cargo_embargo` on `external/rust/crates/ring` and maybe other crates that set `\"extra_cfg\": [\"soong\"]`, so it\u0027s not a viable option.",
       "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee8213a6_c207c9c2",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1943701
+      },
+      "writtenOn": "2024-04-30T16:34:12Z",
+      "side": 1,
+      "message": "I assume you\u0027ve tried with `\u0026envs`? I see that the `envs` method takes a very flexible type (https://doc.rust-lang.org/stable/std/process/struct.Command.html#method.envs), but perhaps not flexible enough 😊",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
