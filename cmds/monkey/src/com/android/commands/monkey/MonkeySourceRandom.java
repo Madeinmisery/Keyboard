@@ -51,7 +51,7 @@ public class MonkeySourceRandom implements MonkeyEventSource {
     private static final int[] SYS_KEYS = {
         KeyEvent.KEYCODE_HOME, KeyEvent.KEYCODE_BACK,
         KeyEvent.KEYCODE_CALL, KeyEvent.KEYCODE_ENDCALL,
-        KeyEvent.KEYCODE_VOLUME_UP, KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_MUTE,
+        KeyEvent.KEYCODE_VOLUME_MUTE,
         KeyEvent.KEYCODE_MUTE,
     };
     /** If a physical key exists? */

@@ -468,6 +468,52 @@ public class Monkey {
         commandLineReport("meminfo", "dumpsys meminfo");
     }
 
+  /**
+   * Run sanitizer by checking current intent
+   * <p>
+   * NOTE: You cannot perform a dumpsys call from the ActivityController callback, as it will
+   * deadlock. This should only be called from the main loop of the monkey.
+   */
+  private void runSanitizer() throws MonkeyFuzzingException {
+    String reportName = "intentinfo";
+    String command = "dumpsys activity activities";
+    Logger.err.println(reportName + ":");
+    Runtime rt = Runtime.getRuntime();
+
+    try {
+      // Process must be fully qualified here because android.os.Process
+      // is used elsewhere
+      java.lang.Process p = Runtime.getRuntime().exec(command);
+
+      // pipe everything from process stdout -> System.err
+      InputStream inStream = p.getInputStream();
+      InputStreamReader inReader = new InputStreamReader(inStream);
+      BufferedReader inBuffer = new BufferedReader(inReader);
+      String s;
+      while ((s = inBuffer.readLine()) != null) {
+        if (s.contains("Intent")) {
+          Logger.err.println(s);
+          // The following intents are found in the FRP SUP.
+          if (s.contains("setupwizard")
+              || s.contains("TARGET_DEVICE_SETUP")
+              || s.contains("WIFI_DIALOG")
+              || s.contains("ConfirmLockPassword")) {
+            throw new MonkeyFuzzingException(String.format("SUP Bypass at intent: %s", s));
+          }
+        return;
+        }
+      }
+
+      int status = p.waitFor();
+      Logger.err.println("// " + reportName + " status was " + status);
+
+    } catch (Exception e) {
+      Logger.err.println("// Exception from " + reportName + ":");
+      Logger.err.println(e.toString());
+    }
+  }
+
+
     /**
      * Print report from a single command line.
      * <p>
@@ -1260,6 +1306,15 @@ public class Monkey {
                         break;
                     }
                 }
+                try {
+                  runSanitizer();
+                } catch (MonkeyFuzzingException e) {
+                  Logger.err.println(e.getMessage());
+                  mAbort = true;
+                }
+
+
+
             }
         } catch (RuntimeException e) {
             Logger.error("** Error: A RuntimeException occurred:", e);
