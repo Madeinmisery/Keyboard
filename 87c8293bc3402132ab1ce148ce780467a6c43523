@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0063c70_da40be05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1039338
+      },
+      "writtenOn": "2024-05-02T16:51:13Z",
+      "side": 1,
+      "message": "Just attempting to clarify what API artifacts are being dist.",
+      "revId": "87c8293bc3402132ab1ce148ce780467a6c43523",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
