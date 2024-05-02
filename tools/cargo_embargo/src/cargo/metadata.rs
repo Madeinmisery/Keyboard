@@ -233,9 +233,15 @@ fn get_externs(
         for target in &package.targets {
             if target.kind.contains(&TargetKind::Lib) {
                 let lib_name = target.name.replace('-', "_");
+                let raw_name = if target.name != lib_name {
+                    Some(target.name.clone())
+                } else {
+                    None
+                };
                 externs.push(Extern {
                     name: lib_name.clone(),
                     lib_name,
+                    raw_name,
                     extern_type: ExternType::Rust,
                 });
             }
@@ -257,8 +263,14 @@ fn make_extern(packages: &[PackageMetadata], dependency: &DependencyMetadata) ->
         bail!("Package {} didn't have any library or proc-macro targets", dependency.name);
     };
     let lib_name = target.name.replace('-', "_");
+    let raw_name = if target.name != lib_name {
+        Some(target.name.clone())
+    } else {
+        None
+    };
     let name =
         if let Some(rename) = &dependency.rename { rename.clone() } else { lib_name.clone() };
+
 
     // Check whether the package is a proc macro.
     let extern_type =
@@ -268,7 +280,7 @@ fn make_extern(packages: &[PackageMetadata], dependency: &DependencyMetadata) ->
             ExternType::Rust
         };
 
-    Ok(Extern { name, lib_name, extern_type })
+    Ok(Extern { name, lib_name, raw_name, extern_type })
 }
 
 /// Given a Cargo package ID, returns the path.
