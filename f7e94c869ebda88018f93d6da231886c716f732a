@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e553ea2_880f1cf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-02T09:11:31Z",
+      "side": 1,
+      "message": "I can into a papercut where `cargo_embargo` does not generate the same paths for library dependencies as `cargo2rulesmk.py`. See aosp/3070054 for an example.\n\nI don\u0027t know if keeping the package name reported by cargo metadata around if it is different than the library name is acceptable, very happy to consider a more elegant if you can think of one.",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
