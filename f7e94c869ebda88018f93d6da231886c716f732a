@@ -16,6 +16,86 @@
       "message": "I can into a papercut where `cargo_embargo` does not generate the same paths for library dependencies as `cargo2rulesmk.py`. See aosp/3070054 for an example.\n\nI don\u0027t know if keeping the package name reported by cargo metadata around if it is different than the library name is acceptable, very happy to consider a more elegant if you can think of one.",
       "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08896717_8d1af82d",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-02T10:22:38Z",
+      "side": 1,
+      "message": "Why is this always `None` when using cargo build mode? We should take care not to make it less capable than metadata-only mode, as crates may need to switch back if a version update adds more complications.",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fdadba6_d4b0de55",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-02T10:22:38Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by RustFormatter: Please reformat the following line(s) to:\n\nAnalyzer Description: Offers Rust formatting Suggestions\nOwner: chiw@google.com\n\nPlease reformat the following line(s) to:\n\n            for target in \u0026package.targets {\n                if target.kind.contains(\u0026TargetKind::Lib) {\n                    let lib_name \u003d target.name.replace(\u0027-\u0027, \"_\");\n                    let raw_name \u003d\n                        if target.name !\u003d lib_name { Some(target.name.clone()) } else { None };\n                    externs.push(Extern {\n                        name: lib_name.clone(),\n                        lib_name,",
+      "range": {
+        "startLine": 233,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 0
+      },
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c94d403_0d96ad98",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-02T10:22:38Z",
+      "side": 1,
+      "message": "Why does this need to be conditional, rather than just always keeping the target name?",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b34b73a3_a655ba38",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-02T10:22:38Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by RustFormatter: Please reformat the following line(s) to:\n\nAnalyzer Description: Offers Rust formatting Suggestions\nOwner: chiw@google.com\n\nPlease reformat the following line(s) to:\n\n            bail!(\"Package {} didn\u0027t have any library or proc-macro targets\", dependency.name);\n        };\n        let lib_name \u003d target.name.replace(\u0027-\u0027, \"_\");\n        let raw_name \u003d if target.name !\u003d lib_name { Some(target.name.clone()) } else { None };\n        let name \u003d\n            if let Some(rename) \u003d \u0026dependency.rename { rename.clone() } else { lib_name.clone() };\n\n        // Check whether the package is a proc macro.\n        let extern_type \u003d",
+      "range": {
+        "startLine": 263,
+        "startChar": 0,
+        "endLine": 276,
+        "endChar": 0
+      },
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
