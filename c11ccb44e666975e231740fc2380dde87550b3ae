@@ -16,6 +16,24 @@
       "message": "I already couldn\u0027t use pore with the internal goog/main because there\u0027s some random thing broken I don\u0027t understand, and a recent change to aosp-main-with-phones, ag/27035072, created a huge number of clone-depth\u003d\"1\" prebuilt repos for vendor stuff, so when I ran `pore sync` on my main aosp checkout, it exhausted my disk space. So, I\u0027m looking at switching from pore to repo, but `repo status` is really slow.\n\nI did study `repo status` to see why it\u0027s so slow. I think it comes down to two things:\n\n * Each time a job (really, a batch of 32 jobs, see WORKER_BATCH_SIZE) is dispatched to a worker process, it pickles the repo Project object for the directory to scan. Each Project object has a link to an XmlManifest object, which has a table containing all ~2500 Project objects. I believe this means that the entire repo manifest config, deserialized from XML to Python at startup, is pickled and then unpickled for every 32 git projects. (I believe this also explains why `repo forall` takes 4-5 seconds to run `/bin/true` on all projects.)\n\n * The per-project status scanning (Project.PrintWorkTreeStatus) looks inefficient, but I don\u0027t really know why it does what it does. It executes these commands:\n\n       git update-index -q --unmerged --ignore-missing --refresh\n       git diff-index -z --ignore-submodules -M --cached HEAD\n       git diff-files -z --ignore-submodules\n       git ls-files -z --others --exclude-standard\n\n   My script, OTOH, runs only `git status --short`.\n   \n   https://github.com/GerritCodeReview/git-repo/blob/73356f1d5ccbebf5a33e5e9aa1ba06c5f5437fed/project.py#L906-L912",
       "revId": "c11ccb44e666975e231740fc2380dde87550b3ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54f6ef54_6bdbd37b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1076798
+      },
+      "writtenOn": "2024-05-03T23:47:13Z",
+      "side": 1,
+      "message": "\u003e I already couldn\u0027t use pore with the internal goog/main because there\u0027s some random thing broken I don\u0027t understand\n\nAnything you can share?\n\n\u003e a recent change to aosp-main-with-phones, ag/27035072, created a huge number of clone-depth\u003d\"1\" prebuilt repos for vendor stuff, so when I ran pore sync on my main aosp checkout, it exhausted my disk space\n\nI should probably get around to implementing clone-depth at some point...",
+      "parentUuid": "1f5b5370_8c347b50",
+      "revId": "c11ccb44e666975e231740fc2380dde87550b3ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
