@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "48bf0270_3e61342e",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-03T09:02:06Z",
+      "side": 1,
+      "message": "Good point. AFAICT, we can use `lib_name` here since hyphens are not replaced with underscores.",
+      "parentUuid": "08896717_8d1af82d",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6fdadba6_d4b0de55",
@@ -48,6 +66,30 @@
       "writtenOn": "2024-05-02T10:22:38Z",
       "side": 1,
       "message": "Please fix this WARNING reported by RustFormatter: Please reformat the following line(s) to:\n\nAnalyzer Description: Offers Rust formatting Suggestions\nOwner: chiw@google.com\n\nPlease reformat the following line(s) to:\n\n            for target in \u0026package.targets {\n                if target.kind.contains(\u0026TargetKind::Lib) {\n                    let lib_name \u003d target.name.replace(\u0027-\u0027, \"_\");\n                    let raw_name \u003d\n                        if target.name !\u003d lib_name { Some(target.name.clone()) } else { None };\n                    externs.push(Extern {\n                        name: lib_name.clone(),\n                        lib_name,",
+      "range": {
+        "startLine": 233,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 0
+      },
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11abed3a_345162de",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-03T09:02:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fdadba6_d4b0de55",
       "range": {
         "startLine": 233,
         "startChar": 0,
@@ -93,6 +135,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9c17ae2_4c20f723",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-03T09:02:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f7bdcc0_ab9ce2a7",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b34b73a3_a655ba38",
@@ -106,6 +166,30 @@
       "writtenOn": "2024-05-02T10:22:38Z",
       "side": 1,
       "message": "Please fix this WARNING reported by RustFormatter: Please reformat the following line(s) to:\n\nAnalyzer Description: Offers Rust formatting Suggestions\nOwner: chiw@google.com\n\nPlease reformat the following line(s) to:\n\n            bail!(\"Package {} didn\u0027t have any library or proc-macro targets\", dependency.name);\n        };\n        let lib_name \u003d target.name.replace(\u0027-\u0027, \"_\");\n        let raw_name \u003d if target.name !\u003d lib_name { Some(target.name.clone()) } else { None };\n        let name \u003d\n            if let Some(rename) \u003d \u0026dependency.rename { rename.clone() } else { lib_name.clone() };\n\n        // Check whether the package is a proc macro.\n        let extern_type \u003d",
+      "range": {
+        "startLine": 263,
+        "startChar": 0,
+        "endLine": 276,
+        "endChar": 0
+      },
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cce267d7_b7875164",
+        "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-03T09:02:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b34b73a3_a655ba38",
       "range": {
         "startLine": 263,
         "startChar": 0,
