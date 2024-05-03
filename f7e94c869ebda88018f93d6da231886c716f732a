@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "767712a1_bbb602ca",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-03T14:12:25Z",
+      "side": 1,
+      "message": "It looks to me like it does appear, in this line:\n\n```\nRunning `rustc --crate-name proc_macro2 --edition\u003d2021 /usr/local/google/home/qwandor/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.81/src/lib.rs --error-format\u003djson --json\u003ddiagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit\u003ddep-info,metadata,link -C embed-bitcode\u003dno -C debuginfo\u003d2 --cfg \u0027feature\u003d\"default\"\u0027 --cfg \u0027feature\u003d\"proc-macro\"\u0027 -C metadata\u003d1f05d84533c092ef -C extra-filename\u003d-1f05d84533c092ef --out-dir /usr/local/google/home/qwandor/aosp/external/rust/crates/num-derive/target.tmp/debug/deps -L dependency\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/num-derive/target.tmp/debug/deps --extern unicode_ident\u003d/usr/local/google/home/qwandor/aosp/external/rust/crates/num-derive/target.tmp/debug/deps/libunicode_ident-f588424968c456dd.rmeta --cap-lints allow --cfg no_literal_byte_character --cfg no_literal_c_string --cfg wrap_proc_macro --cfg proc_macro_span`\n```\n\nMaybe you can parse that and look it up to resolve the raw name?\n\nI think the issue with `cargo.out` being empty was caused by https://r.android.com/2945327.  I\u0027ve sent https://r.android.com/3073727 to fix that.",
+      "parentUuid": "f9e6b150_08ab0438",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6fdadba6_d4b0de55",
         "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
         "patchSetId": 1
