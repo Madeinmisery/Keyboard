@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f9e6b150_08ab0438",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1807569
+      },
+      "writtenOn": "2024-05-03T13:14:00Z",
+      "side": 1,
+      "message": "I tried setting `num-derive` to build mode. It does not generate the expected `rules.mk` (path to `proc-macro2` crate is wrong) because the `rustc` invocation used to construct the `Extern` structs looks like this:\n\n```\nrustc --crate-name num_derive [...]\n--extern proc_macro2\u003d/usr/local/google/home/perlarsen/Work/aosp/external/rust/crates/num-\nderive/target.tmp/debug/deps/libproc_macro2-1f05d84533c092ef.rlib [...] \n``` \n\nSince `proc-macro2` never appears in the `rustc` invocation, I don\u0027t see a way we can get the desired name from `cargo.out`. Would it make sense to parse the \"raw\" crate names out of metadata even in build mode?\n\nNOTE: `cargo.out` was empty in build mode (and I did not pass `reuse_cargo_out`) which seems odd given that `main.rs` does this `write(cargo_out_path, \u0026cargo_output.cargo_out)?;`.",
+      "parentUuid": "7ae4add3_5fa7c8a2",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6fdadba6_d4b0de55",
         "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
         "patchSetId": 1
