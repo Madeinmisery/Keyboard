@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ae4add3_5fa7c8a2",
+        "filename": "tools/cargo_embargo/src/cargo/cargo_out.rs",
+        "patchSetId": 1
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-03T10:54:21Z",
+      "side": 1,
+      "message": "It doesn\u0027t seem right that they should always be the same here, if they are sometimes different in metadata-only mode. What happens when you try running `cargo_embargo` in build mode on some crate that has different values in metadata-only mode?",
+      "parentUuid": "48bf0270_3e61342e",
+      "revId": "f7e94c869ebda88018f93d6da231886c716f732a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6fdadba6_d4b0de55",
         "filename": "tools/cargo_embargo/src/cargo/metadata.rs",
         "patchSetId": 1
