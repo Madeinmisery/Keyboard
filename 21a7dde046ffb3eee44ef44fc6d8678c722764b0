@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf37e296_28b2f491",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1380243
+      },
+      "writtenOn": "2024-05-03T15:20:53Z",
+      "side": 1,
+      "message": "https://r.android.com/3066423 has been submitted and the changes to remove `\"extra_cfg\": [\"soong\"]` are out for review, so I\u0027m submitting this now.",
+      "parentUuid": "d3bc7540_69fe7171",
+      "revId": "21a7dde046ffb3eee44ef44fc6d8678c722764b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ee8213a6_c207c9c2",
