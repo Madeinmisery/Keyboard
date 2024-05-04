@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1375199_51384663",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3427022
+      },
+      "writtenOn": "2024-05-04T03:52:13Z",
+      "side": 1,
+      "message": "sand money",
+      "revId": "0a0259d1ba2303845550f161025a03f21200a490",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
