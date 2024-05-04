@@ -34,6 +34,24 @@
       "parentUuid": "1f5b5370_8c347b50",
       "revId": "c11ccb44e666975e231740fc2380dde87550b3ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47ff34dd_483a35fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-05-04T03:37:43Z",
+      "side": 1,
+      "message": "I didn\u0027t debug it at the time, and I deleted my pore goog/main checkout a long time ago. I remember some of the relevant project names but that\u0027s probably not useful/shareable. I think the project may have had a remote, a dest-branch, and a revision, maybe? AFAIK, I think pore\u0027s supposed to be able to handle that, though. Plausibly, I could make another checkout, but I\u0027m not sure I have the disk space to check out all the git objects.\n\n\u003e I should probably get around to implementing clone-depth at some point...\n\nIt seems that repo is migrating away from clone-depth to partial clones. e.g. The repo init commands I see recommended internally are currently:\n\n * Set `REPO_ALLOW_SHALLOW\u003d0`, which seems to convert `clone-depth` into partial clones (with a blob:none partialclonefilter, I think).\n\n * Pass the repo options: `--use-superproject --partial-clone --partial-clone-exclude\u003dplatform/frameworks/base --clone-filter\u003dblob:limit\u003d10M`\n\nThe trouble is that libgit2 doesn\u0027t support partial clones, and it sounded like adding it could have annoying implications for the API, https://github.com/libgit2/libgit2/issues/5564#issuecomment-1114343375.\n\nFrom the standpoint of checking out the Android tree at Google, I think I\u0027d be happy to switch pore to using `git` invocations, but I\u0027m sure that gives up some performance.\n\nBut maybe clone-depth is close enough to partial clones performance-wise? I\u0027m guessing only the latest HEAD revision is fetched on sync. I wonder if all the files in a project are refetched whenever there\u0027s a new commit? I think the rebasing would have been a pain for me for the (still pending) aosp/2675705 patch, which touches a clone-depth\u003d1 project.",
+      "parentUuid": "54f6ef54_6bdbd37b",
+      "revId": "c11ccb44e666975e231740fc2380dde87550b3ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
