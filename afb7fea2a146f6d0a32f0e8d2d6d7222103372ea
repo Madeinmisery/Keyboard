@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "92e7bf25_005771f7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-05-09T06:04:22Z",
+      "side": 1,
+      "message": "borrowed",
+      "range": {
+        "startLine": 9,
+        "startChar": 37,
+        "endLine": 9,
+        "endChar": 45
+      },
+      "revId": "afb7fea2a146f6d0a32f0e8d2d6d7222103372ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a218a231_b87a2452",
         "filename": "tools/repo_pull/gerrit.py",
         "patchSetId": 1
