@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa7c9239_5e560be5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-05-09T07:05:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92e7bf25_005771f7",
+      "range": {
+        "startLine": 9,
+        "startChar": 37,
+        "endLine": 9,
+        "endChar": 45
+      },
+      "revId": "afb7fea2a146f6d0a32f0e8d2d6d7222103372ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a218a231_b87a2452",
@@ -75,6 +99,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3371b19a_892c70f0",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 642,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-05-09T07:05:04Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "a218a231_b87a2452",
+      "range": {
+        "startLine": 640,
+        "startChar": 25,
+        "endLine": 642,
+        "endChar": 32
+      },
+      "revId": "afb7fea2a146f6d0a32f0e8d2d6d7222103372ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b129a97_9bb13469",
@@ -88,6 +136,30 @@
       "writtenOn": "2024-05-09T06:02:15Z",
       "side": 1,
       "message": "Remove this space.",
+      "range": {
+        "startLine": 649,
+        "startChar": 36,
+        "endLine": 649,
+        "endChar": 37
+      },
+      "revId": "afb7fea2a146f6d0a32f0e8d2d6d7222103372ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c4a00f2_eb8ded54",
+        "filename": "tools/repo_pull/gerrit.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-05-09T07:05:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b129a97_9bb13469",
       "range": {
         "startLine": 649,
         "startChar": 36,
