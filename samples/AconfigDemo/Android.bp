@@ -18,7 +18,6 @@ android_app {
     jni_libs: [
         "libexample_cpp_lib",
     ],
-    required: ["libexample_rust_jni"],
     plugins: ["dagger2-compiler"],
     optimize: {
         proguard_flags_files: ["proguard.flags"],
