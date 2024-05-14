@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6b46c45_046401ca",
+        "filename": "vndk/tools/header-checker/utils/create_reference_dumps.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-05-14T04:29:01Z",
+      "side": 1,
+      "message": "how about just make these arguments aliases\n```suggestion\n    parser.add_argument(\u0027--lib\u0027, \u0027-libs\u0027, dest\u003d\u0027libs\u0027, metavar\u003d\u0027LIB\u0027, action\u003d\u0027append\u0027,\n                        help\u003d\u0027libs to create references for\u0027)\n```",
+      "range": {
+        "startLine": 182,
+        "startChar": 4,
+        "endLine": 183,
+        "endChar": 61
+      },
+      "revId": "c7d5aa18634d33358ebbf5584814c6af13ecf62c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
