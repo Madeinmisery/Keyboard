@@ -16,6 +16,29 @@
       "message": "PTAL.",
       "revId": "90b25531a0157762c5e7ec59928e07475fd99dbb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6e70b86_618d3964",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2024-05-17T21:17:02Z",
+      "side": 1,
+      "message": "Tiny nit, the variables in this file use snake case so this should be json_result and functionName should be function_name.",
+      "range": {
+        "startLine": 304,
+        "startChar": 6,
+        "endLine": 304,
+        "endChar": 16
+      },
+      "revId": "90b25531a0157762c5e7ec59928e07475fd99dbb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
