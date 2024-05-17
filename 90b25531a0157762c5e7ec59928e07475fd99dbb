@@ -39,6 +39,30 @@
       },
       "revId": "90b25531a0157762c5e7ec59928e07475fd99dbb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a11686a_4d2ce4de",
+        "filename": "scripts/symbol.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1109308
+      },
+      "writtenOn": "2024-05-17T21:22:56Z",
+      "side": 1,
+      "message": "Done. Also changed to use double quotes for consistenty.",
+      "parentUuid": "b6e70b86_618d3964",
+      "range": {
+        "startLine": 304,
+        "startChar": 6,
+        "endLine": 304,
+        "endChar": 16
+      },
+      "revId": "90b25531a0157762c5e7ec59928e07475fd99dbb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
