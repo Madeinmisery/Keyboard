@@ -85,6 +85,24 @@
       "message": "Hi Romain/Xavier,\nCould you please help review this CL.\nVery appreciate for your time.\nThanks",
       "revId": "971c5bdc92ff1a1c8ffb8bb848acb43878f6c257",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52e3b89c_940ec56e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1871036
+      },
+      "writtenOn": "2024-05-21T07:19:29Z",
+      "side": 1,
+      "message": "Hi Hsin,\nThanks for your info. I\u0027ve added Romain and Xavier to the review.",
+      "parentUuid": "57f6736e_4bda530e",
+      "revId": "971c5bdc92ff1a1c8ffb8bb848acb43878f6c257",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
