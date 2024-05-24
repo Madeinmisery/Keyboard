@@ -239,6 +239,34 @@ def SymbolInformationForSet(lib, unique_addrs):
 
   return result
 
+def GetStackRecordsForSet(lib, unique_addrs):
+  symbols = SYMBOLS_DIR + lib
+  if not os.path.exists(symbols):
+    symbols = lib
+    if not os.path.exists(symbols):
+      return None
+  cmd = [ToolPath("llvm-symbolizer"), "--obj=" + symbols]
+  child = _PIPE_ADDR2LINE_CACHE.GetProcess(cmd)
+  records = []
+  for addr in unique_addrs:
+    child.stdin.write("FRAME 0x%x\n" % addr)
+    child.stdin.flush()
+    records = []
+    first = True
+    while True:
+      function_name = child.stdout.readline().strip()
+      # Blank line signals end of response
+      if not function_name:
+        break
+      local_name = child.stdout.readline().strip()
+      file_line = child.stdout.readline().strip()
+      extra = child.stdout.readline().strip().split()
+      frame_offset = None if extra[0] == '??' else int(extra[0])
+      size = None if extra[1] == '??' else int(extra[1])
+      tag_offset = None if extra[2] == '??' else int(extra[2])
+      records.append((addr, function_name, local_name, file_line, frame_offset, size, tag_offset))
+  return records
+
 
 def CallLlvmSymbolizerForSet(lib, unique_addrs):
   """Look up line and symbol information for a set of addresses.
