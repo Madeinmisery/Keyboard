@@ -15,10 +15,10 @@ from utils import SOURCE_ABI_DUMP_EXT
 
 SCRIPT_DIR = os.path.abspath(os.path.dirname(__file__))
 ARCH_TARGET_CFLAGS = {
-    'arm': ('-target', 'arm-linux-androideabi'),
-    'arm64': ('-target', 'aarch64-linux-android'),
-    'x86': ('-target', 'i386-linux-androideabi'),
-    'x86_64': ('-target', 'x86_64-linux-android'),
+    'arm': ('-target', 'arm-linux-androideabi35'),
+    'arm64': ('-target', 'aarch64-linux-android35'),
+    'x86': ('-target', 'i386-linux-androideabi35'),
+    'x86_64': ('-target', 'x86_64-linux-android35'),
 }
 TARGET_ARCHES = ['arm', 'arm64', 'x86', 'x86_64']
 
@@ -839,6 +839,16 @@ TEST_MODULES = [
         export_include_dirs=['integration/bit_field/include'],
         dumper_flags=['-output-format', 'Json'],
         linker_flags=['-input-format', 'Json', '-output-format', 'Json'],
+    ),
+    LsdumpModule(
+        name='libattribute',
+        arch='arm64',
+        srcs=['integration/attribute/include/base.h'],
+        version_script='integration/attribute/map.txt',
+        export_include_dirs=['integration/attribute/include'],
+        dumper_flags=['-output-format', 'Json'],
+        linker_flags=['-input-format', 'Json', '-output-format', 'Json'],
+        has_reference_dump=True,
     ),
 ]
 

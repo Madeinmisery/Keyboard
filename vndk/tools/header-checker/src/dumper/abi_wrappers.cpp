@@ -250,10 +250,13 @@ static std::string GetAnonymousEnumUniqueId(llvm::StringRef mangled_name,
 
   // Find the smallest enumerator name.
   std::string smallest_enum_name;
-  for (auto enum_it : enum_decl->enumerators()) {
-    std::string enum_name = enum_it->getNameAsString();
+  for (const clang::EnumConstantDecl *enumerator : enum_decl->enumerators()) {
+    if (!IsAvailable(enumerator)) {
+      continue;
+    }
+    std::string enum_name = enumerator->getNameAsString();
     if (smallest_enum_name.empty() || smallest_enum_name > enum_name) {
-      smallest_enum_name = enum_name;
+      smallest_enum_name = std::move(enum_name);
     }
   }
   smallest_enum_name = "$" + smallest_enum_name;
@@ -593,25 +596,25 @@ RecordDeclWrapper::RecordDeclWrapper(
 
 bool RecordDeclWrapper::SetupRecordFields(repr::RecordTypeIR *recordp,
                                           const std::string &source_file) {
-  clang::RecordDecl::field_iterator field = record_decl_->field_begin();
-  uint32_t field_index = 0;
   const clang::ASTRecordLayout &record_layout =
       ast_contextp_->getASTRecordLayout(record_decl_);
-  while (field != record_decl_->field_end()) {
+  for (const clang::FieldDecl *field : record_decl_->fields()) {
+    if (!IsAvailable(field)) {
+      continue;
+    }
     clang::QualType field_type = field->getType();
     if (!CreateBasicNamedAndTypedDecl(field_type, source_file)) {
       llvm::errs() << "Creation of Type failed\n";
       return false;
     }
     std::string field_name(field->getName());
-    uint64_t field_offset = record_layout.getFieldOffset(field_index);
+    uint64_t field_offset =
+        record_layout.getFieldOffset(field->getFieldIndex());
     uint64_t bit_width =
         field->isBitField() ? field->getBitWidthValue(*ast_contextp_) : 0;
     recordp->AddRecordField(repr::RecordFieldIR(
         field_name, GetTypeUniqueId(field_type), field_offset,
         AccessClangToIR(field->getAccess()), field->isBitField(), bit_width));
-    field++;
-    field_index++;
   }
   return true;
 }
@@ -881,16 +884,17 @@ bool EnumDeclWrapper::SetupEnumFields(repr::EnumTypeIR *enump) {
   if (!enump) {
     return false;
   }
-  clang::EnumDecl::enumerator_iterator enum_it = enum_decl_->enumerator_begin();
-  while (enum_it != enum_decl_->enumerator_end()) {
-    std::string name = enum_it->getQualifiedNameAsString();
-    const llvm::APSInt &value = enum_it->getInitVal();
+  for (const clang::EnumConstantDecl *enumerator : enum_decl_->enumerators()) {
+    if (!IsAvailable(enumerator)) {
+      continue;
+    }
+    std::string name = enumerator->getQualifiedNameAsString();
+    const llvm::APSInt &value = enumerator->getInitVal();
     if (value.isUnsigned()) {
       enump->AddEnumField(repr::EnumFieldIR(name, value.getZExtValue()));
     } else {
       enump->AddEnumField(repr::EnumFieldIR(name, value.getSExtValue()));
     }
-    enum_it++;
   }
   return true;
 }

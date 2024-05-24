@@ -194,6 +194,9 @@ bool HeaderASTVisitor::TraverseDecl(clang::Decl *decl) {
       !decl->isFunctionOrFunctionTemplate()) {
     return true;
   }
+  if (!IsAvailable(decl)) {
+    return true;
+  }
   return RecursiveASTVisitor<HeaderASTVisitor>::TraverseDecl(decl);
 }
 

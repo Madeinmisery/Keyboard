@@ -38,6 +38,13 @@ struct TypeAndCreationStatus {
 };
 
 
+static inline bool IsAvailable(const clang::Decl *decl) {
+  clang::AvailabilityResult availability = decl->getAvailability();
+  return availability == clang::AR_Available ||
+         availability == clang::AR_Deprecated;
+}
+
+
 class ABIWrapper {
  public:
   ABIWrapper(clang::MangleContext *mangle_contextp,
