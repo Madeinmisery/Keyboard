@@ -26,8 +26,21 @@ use crate::{
     CrateCollection, Migratable, NameAndVersionMap, VersionMatch,
 };
 
-static CUSTOMIZATIONS: &'static [&'static str] =
-    &["*.bp", "cargo_embargo.json", "patches", "METADATA"];
+static CUSTOMIZATIONS: &'static [&'static str] = &[
+    "*.bp",
+    "cargo_embargo.json",
+    "patches",
+    "METADATA",
+    "TEST_MAPPING",
+    "MODULE_LICENSE_0BSD",
+    "MODULE_LICENSE_APACHE",
+    "MODULE_LICENSE_APACHE2",
+    "MODULE_LICENSE_BSD",
+    "MODULE_LICENSE_BSD_LIKE",
+    "MODULE_LICENSE_ISC",
+    "MODULE_LICENSE_MIT",
+    "MODULE_LICENSE_MPL",
+];
 
 impl<'a> CompatibleVersionPair<'a, Crate> {
     pub fn copy_customizations(&self) -> Result<()> {
