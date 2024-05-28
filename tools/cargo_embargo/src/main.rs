@@ -764,7 +764,7 @@ fn apply_patch_file(output_path: &Path, patch_path: &Path) -> Result<()> {
         .output()
         .context("Running patch")?;
     if !patch_output.status.success() {
-        eprintln!("WARNING: failed to apply patch {:?}", patch_path);
+        eprintln!("ERROR: failed to apply patch {:?}", patch_path);
     }
     Ok(())
 }
