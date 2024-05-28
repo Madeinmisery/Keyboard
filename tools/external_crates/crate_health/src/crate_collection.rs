@@ -38,7 +38,10 @@ pub struct CrateCollection {
 
 impl CrateCollection {
     pub fn new<P: Into<PathBuf>>(repo_root: P) -> CrateCollection {
-        CrateCollection { crates: BTreeMap::new(), repo_root: repo_root.into() }
+        CrateCollection {
+            crates: BTreeMap::new(),
+            repo_root: repo_root.into(),
+        }
     }
     pub fn add_from(
         &mut self,
@@ -85,7 +88,11 @@ impl CrateCollection {
         for (nv, output) in generate_android_bps(self.crates.values())?.into_iter() {
             self.crates
                 .get_mut(&nv)
-                .ok_or(anyhow!("Failed to get crate {} {}", nv.name(), nv.version()))?
+                .ok_or(anyhow!(
+                    "Failed to get crate {} {}",
+                    nv.name(),
+                    nv.version()
+                ))?
                 .set_generate_android_bp_output(output.0, output.1);
         }
         Ok(())

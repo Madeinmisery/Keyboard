@@ -35,7 +35,10 @@ pub struct CompatibleVersionPair<'a, T> {
 
 impl<'a, T> VersionPair<'a, T> {
     pub fn to_compatible(self) -> Option<CompatibleVersionPair<'a, T>> {
-        self.dest.map(|dest| CompatibleVersionPair { source: self.source, dest })
+        self.dest.map(|dest| CompatibleVersionPair {
+            source: self.source,
+            dest,
+        })
     }
 }
 
@@ -47,7 +50,11 @@ pub struct VersionMatch<CollectionType: NameAndVersionMap> {
 
 impl<CollectionType: NameAndVersionMap> VersionMatch<CollectionType> {
     pub fn new(source: CollectionType, dest: CollectionType) -> Result<Self> {
-        let mut vm = VersionMatch { source, dest, compatibility: BTreeMap::new() };
+        let mut vm = VersionMatch {
+            source,
+            dest,
+            compatibility: BTreeMap::new(),
+        };
 
         for nv in vm.dest.map_field().keys() {
             vm.compatibility.insert_or_error(nv.to_owned(), None)?;
@@ -55,35 +62,45 @@ impl<CollectionType: NameAndVersionMap> VersionMatch<CollectionType> {
 
         for nv in vm.source.map_field().keys() {
             let compatibility = if let Some(dest_nv) = vm.dest.get_version_upgradable_from(nv) {
-                vm.compatibility.map_field_mut().remove(dest_nv).ok_or(anyhow!(
-                    "Destination crate version {} {} expected but not found",
-                    dest_nv.name(),
-                    dest_nv.version()
-                ))?;
+                vm.compatibility
+                    .map_field_mut()
+                    .remove(dest_nv)
+                    .ok_or(anyhow!(
+                        "Destination crate version {} {} expected but not found",
+                        dest_nv.name(),
+                        dest_nv.version()
+                    ))?;
                 Some(dest_nv.clone())
             } else {
                 None
             };
-            vm.compatibility.insert_or_error(nv.to_owned(), compatibility)?;
+            vm.compatibility
+                .insert_or_error(nv.to_owned(), compatibility)?;
         }
 
         Ok(vm)
     }
     pub fn is_superfluous(&self, dest: &dyn NamedAndVersioned) -> bool {
         self.dest.map_field().contains_key(dest)
-            && self.compatibility.get(dest).is_some_and(|compatibility| compatibility.is_none())
+            && self
+                .compatibility
+                .get(dest)
+                .is_some_and(|compatibility| compatibility.is_none())
     }
     pub fn get_compatible_version(
         &self,
         source: &dyn NamedAndVersioned,
     ) -> Option<&NameAndVersion> {
-        self.compatibility.get(source).and_then(|compatibility| compatibility.as_ref())
+        self.compatibility
+            .get(source)
+            .and_then(|compatibility| compatibility.as_ref())
     }
     pub fn get_compatible_item(
         &self,
         source: &dyn NamedAndVersioned,
     ) -> Option<&CollectionType::Value> {
-        self.get_compatible_version(source).map(|nv| self.dest.map_field().get(nv).unwrap())
+        self.get_compatible_version(source)
+            .map(|nv| self.dest.map_field().get(nv).unwrap())
     }
     pub fn get_compatible_item_mut(
         &mut self,
@@ -95,14 +112,19 @@ impl<CollectionType: NameAndVersionMap> VersionMatch<CollectionType> {
 
     pub fn superfluous(&self) -> impl Iterator<Item = (&NameAndVersion, &CollectionType::Value)> {
         self.dest.map_field().iter().filter(|(nv, _val)| {
-            self.compatibility.get(*nv).is_some_and(|compatibility| compatibility.is_none())
+            self.compatibility
+                .get(*nv)
+                .is_some_and(|compatibility| compatibility.is_none())
         })
     }
     pub fn pairs<'a>(&'a self) -> impl Iterator<Item = VersionPair<'a, CollectionType::Value>> {
         self.source
             .map_field()
             .iter()
-            .map(|(nv, source)| VersionPair { source, dest: self.get_compatible_item(nv) })
+            .map(|(nv, source)| VersionPair {
+                source,
+                dest: self.get_compatible_item(nv),
+            })
     }
     pub fn compatible_pairs<'a>(
         &'a self,
@@ -117,7 +139,12 @@ impl<CollectionType: NameAndVersionMap> VersionMatch<CollectionType> {
         for (nv, compatibility) in self.compatibility.iter() {
             match compatibility {
                 Some(dest) => {
-                    println!("{} old {} -> new {}", nv.name(), nv.version(), dest.version())
+                    println!(
+                        "{} old {} -> new {}",
+                        nv.name(),
+                        nv.version(),
+                        dest.version()
+                    )
                 }
                 None => {
                     if self.dest.contains_name(nv.name()) {
@@ -139,7 +166,10 @@ where
     CollectionType::Value: Migratable,
 {
     pub fn ineligible(&self) -> impl Iterator<Item = &CollectionType::Value> {
-        self.source.map_field().values().filter(|val| !val.is_migration_eligible())
+        self.source
+            .map_field()
+            .values()
+            .filter(|val| !val.is_migration_eligible())
     }
     pub fn eligible_but_not_migratable<'a>(
         &'a self,
@@ -152,7 +182,8 @@ where
     pub fn compatible_and_eligible<'a>(
         &'a self,
     ) -> impl Iterator<Item = CompatibleVersionPair<'a, CollectionType::Value>> {
-        self.compatible_pairs().filter(|crate_pair| crate_pair.source.is_migration_eligible())
+        self.compatible_pairs()
+            .filter(|crate_pair| crate_pair.source.is_migration_eligible())
     }
     pub fn migratable<'a>(
         &'a self,
@@ -184,7 +215,9 @@ impl VersionMatch<CrateCollection> {
         for (source_key, source_crate) in s.map_field() {
             if source_crate.is_migration_eligible() {
                 if let Some(dest_crate) = c.get(source_key).and_then(|compatibility| {
-                    compatibility.as_ref().and_then(|dest_key| d.map_field_mut().get_mut(dest_key))
+                    compatibility
+                        .as_ref()
+                        .and_then(|dest_key| d.map_field_mut().get_mut(dest_key))
                 }) {
                     dest_crate.apply_patches()?
                 }
@@ -199,7 +232,11 @@ impl VersionMatch<CrateCollection> {
             self.dest
                 .map_field_mut()
                 .get_mut(&nv)
-                .ok_or(anyhow!("Failed to get crate {} {}", nv.name(), nv.version()))?
+                .ok_or(anyhow!(
+                    "Failed to get crate {} {}",
+                    nv.name(),
+                    nv.version()
+                ))?
                 .set_generate_android_bp_output(output.0, output.1);
         }
         Ok(())
@@ -260,7 +297,10 @@ mod tests {
 
         // assert!(version_match.has_compatible(&equal));
         assert_eq!(version_match.get_compatible_version(&equal), Some(&equal));
-        assert_eq!(version_match.get_compatible_item(&equal), Some(&"equal dest".to_string()));
+        assert_eq!(
+            version_match.get_compatible_item(&equal),
+            Some(&"equal dest".to_string())
+        );
         assert_eq!(
             version_match.get_compatible_item_mut(&equal),
             Some(&mut "equal dest".to_string())
@@ -268,7 +308,10 @@ mod tests {
         assert!(!version_match.is_superfluous(&equal));
 
         // assert!(version_match.has_compatible(&compatible_old));
-        assert_eq!(version_match.get_compatible_version(&compatible_old), Some(&compatible_new));
+        assert_eq!(
+            version_match.get_compatible_version(&compatible_old),
+            Some(&compatible_new)
+        );
         assert_eq!(
             version_match.get_compatible_item(&compatible_old),
             Some(&"compatible dest".to_string())
@@ -281,16 +324,26 @@ mod tests {
         assert!(!version_match.is_superfluous(&compatible_new));
 
         // assert!(!version_match.has_compatible(&incompatible_old));
-        assert!(version_match.get_compatible_version(&incompatible_old).is_none());
-        assert!(version_match.get_compatible_item(&incompatible_old).is_none());
-        assert!(version_match.get_compatible_item_mut(&incompatible_old).is_none());
+        assert!(version_match
+            .get_compatible_version(&incompatible_old)
+            .is_none());
+        assert!(version_match
+            .get_compatible_item(&incompatible_old)
+            .is_none());
+        assert!(version_match
+            .get_compatible_item_mut(&incompatible_old)
+            .is_none());
         assert!(!version_match.is_superfluous(&incompatible_old));
         assert!(version_match.is_superfluous(&incompatible_new));
 
         // assert!(!version_match.has_compatible(&downgrade_old));
-        assert!(version_match.get_compatible_version(&downgrade_old).is_none());
+        assert!(version_match
+            .get_compatible_version(&downgrade_old)
+            .is_none());
         assert!(version_match.get_compatible_item(&downgrade_old).is_none());
-        assert!(version_match.get_compatible_item_mut(&downgrade_old).is_none());
+        assert!(version_match
+            .get_compatible_item_mut(&downgrade_old)
+            .is_none());
         assert!(!version_match.is_superfluous(&downgrade_old));
         assert!(version_match.is_superfluous(&downgrade_new));
 
@@ -303,7 +356,9 @@ mod tests {
         // assert!(!version_match.has_compatible(&superfluous));
         assert!(version_match.get_compatible_version(&superfluous).is_none());
         assert!(version_match.get_compatible_item(&superfluous).is_none());
-        assert!(version_match.get_compatible_item_mut(&superfluous).is_none());
+        assert!(version_match
+            .get_compatible_item_mut(&superfluous)
+            .is_none());
         assert!(version_match.is_superfluous(&superfluous));
 
         assert_equal(
@@ -313,7 +368,13 @@ mod tests {
 
         assert_equal(
             version_match.pairs().map(|x| x.source),
-            ["compatible src", "downgrade src", "equal src", "incompatible src", "missing src"],
+            [
+                "compatible src",
+                "downgrade src",
+                "equal src",
+                "incompatible src",
+                "missing src",
+            ],
         );
         assert_equal(
             version_match.pairs().map(|x| x.dest),
@@ -348,10 +409,20 @@ mod tests {
 
     impl FakeMigratable {
         pub fn source(name: &str, eligible: bool) -> FakeMigratable {
-            FakeMigratable { name: name.to_string(), source: true, eligible, migratable: false }
+            FakeMigratable {
+                name: name.to_string(),
+                source: true,
+                eligible,
+                migratable: false,
+            }
         }
         pub fn dest(migratable: bool) -> FakeMigratable {
-            FakeMigratable { name: "".to_string(), source: false, eligible: false, migratable }
+            FakeMigratable {
+                name: "".to_string(),
+                source: false,
+                eligible: false,
+                migratable,
+            }
         }
     }
 
@@ -374,14 +445,26 @@ mod tests {
     #[test]
     fn test_migratability() -> Result<()> {
         let source = try_name_version_map_from_iter([
-            ("ineligible", "1.2.3", FakeMigratable::source("ineligible", false)),
+            (
+                "ineligible",
+                "1.2.3",
+                FakeMigratable::source("ineligible", false),
+            ),
             (
                 "eligible incompatible",
                 "1.2.3",
                 FakeMigratable::source("eligible incompatible", true),
             ),
-            ("eligible compatible", "1.2.3", FakeMigratable::source("eligible compatible", true)),
-            ("migratable", "1.2.3", FakeMigratable::source("migratable", true)),
+            (
+                "eligible compatible",
+                "1.2.3",
+                FakeMigratable::source("eligible compatible", true),
+            ),
+            (
+                "migratable",
+                "1.2.3",
+                FakeMigratable::source("migratable", true),
+            ),
             (
                 "migratable incompatible",
                 "1.2.3",
@@ -393,22 +476,39 @@ mod tests {
             ("eligible incompatible", "2.0.0", FakeMigratable::dest(true)),
             ("eligible compatible", "1.2.3", FakeMigratable::dest(false)),
             ("migratable", "1.2.3", FakeMigratable::dest(true)),
-            ("migratable incompatible", "2.0.0", FakeMigratable::dest(true)),
+            (
+                "migratable incompatible",
+                "2.0.0",
+                FakeMigratable::dest(true),
+            ),
         ])?;
 
         let version_match = VersionMatch::new(source, dest)?;
 
-        assert_equal(version_match.ineligible().map(|m| m.name.as_str()), ["ineligible"]);
         assert_equal(
-            version_match.eligible_but_not_migratable().map(|pair| pair.source.name.as_str()),
-            ["eligible compatible", "eligible incompatible", "migratable incompatible"],
+            version_match.ineligible().map(|m| m.name.as_str()),
+            ["ineligible"],
         );
         assert_equal(
-            version_match.compatible_and_eligible().map(|pair| pair.source.name.as_str()),
+            version_match
+                .eligible_but_not_migratable()
+                .map(|pair| pair.source.name.as_str()),
+            [
+                "eligible compatible",
+                "eligible incompatible",
+                "migratable incompatible",
+            ],
+        );
+        assert_equal(
+            version_match
+                .compatible_and_eligible()
+                .map(|pair| pair.source.name.as_str()),
             ["eligible compatible", "migratable"],
         );
         assert_equal(
-            version_match.migratable().map(|pair| pair.source.name.as_str()),
+            version_match
+                .migratable()
+                .map(|pair| pair.source.name.as_str()),
             ["migratable"],
         );
 

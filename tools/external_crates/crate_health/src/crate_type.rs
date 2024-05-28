@@ -96,9 +96,9 @@ impl Crate {
             read_manifest(cargo_toml.as_ref(), source_id, &Config::default()?)?;
         match manifest {
             cargo::core::EitherManifest::Real(r) => Ok(Crate::new(r, root, relpath, pseudo_crate)),
-            cargo::core::EitherManifest::Virtual(_) => {
-                Err(anyhow!(CrateError::VirtualCrate(cargo_toml.as_ref().to_path_buf())))
-            }
+            cargo::core::EitherManifest::Virtual(_) => Err(anyhow!(CrateError::VirtualCrate(
+                cargo_toml.as_ref().to_path_buf()
+            ))),
         }
     }
 
@@ -130,7 +130,9 @@ impl Crate {
     }
     pub fn customization_dir(&self) -> Option<PathBuf> {
         self.pseudo_crate.as_ref().map(|pseudo_crate| {
-            pseudo_crate.join("android/customizations").join(self.staging_dir_name())
+            pseudo_crate
+                .join("android/customizations")
+                .join(self.staging_dir_name())
         })
     }
     pub fn patch_dir(&self) -> Option<PathBuf> {
@@ -180,14 +182,18 @@ impl Crate {
             "external/rust/cxx/third-party/",           // Internal/example code
             "external/rust/cxx/demo/",                  // Internal/example code
         ];
-        !NOT_CRATES_IO.iter().any(|prefix| self.relpath.starts_with(prefix))
+        !NOT_CRATES_IO
+            .iter()
+            .any(|prefix| self.relpath.starts_with(prefix))
     }
     pub fn is_migration_denied(&self) -> bool {
         const MIGRATION_DENYLIST: &'static [&'static str] = &[
             "external/rust/crates/openssl/", // It's complicated.
             "external/rust/cxx/",            // It's REALLY complicated.
         ];
-        MIGRATION_DENYLIST.iter().any(|prefix| self.relpath.starts_with(prefix))
+        MIGRATION_DENYLIST
+            .iter()
+            .any(|prefix| self.relpath.starts_with(prefix))
     }
     pub fn is_android_bp_healthy(&self) -> bool {
         !self.is_migration_denied()
@@ -197,17 +203,28 @@ impl Crate {
             && self.android_bp_unchanged()
     }
     pub fn patch_success(&self) -> bool {
-        self.patch_output.iter().all(|output| output.status.success())
+        self.patch_output
+            .iter()
+            .all(|output| output.status.success())
     }
     pub fn generate_android_bp_success(&self) -> bool {
-        self.generate_android_bp_output.as_ref().is_some_and(|output| output.status.success())
+        self.generate_android_bp_output
+            .as_ref()
+            .is_some_and(|output| output.status.success())
     }
     pub fn android_bp_unchanged(&self) -> bool {
-        self.android_bp_diff.as_ref().is_some_and(|output| output.status.success())
+        self.android_bp_diff
+            .as_ref()
+            .is_some_and(|output| output.status.success())
     }
 
     pub fn print(&self) -> Result<()> {
-        println!("{} {} {}", self.name(), self.version(), self.relpath.display());
+        println!(
+            "{} {} {}",
+            self.name(),
+            self.version(),
+            self.relpath.display()
+        );
         if let Some(output) = &self.generate_android_bp_output {
             println!("generate Android.bp exit status: {}", output.status);
             println!("{}", from_utf8(&output.stdout)?);
@@ -225,8 +242,10 @@ impl Crate {
     pub fn stage_crate(&self) -> Result<()> {
         let staging_path_absolute = self.root().join(self.staging_path());
         ensure_exists_and_empty(&staging_path_absolute)?;
-        remove_dir_all(&staging_path_absolute)
-            .context(format!("Failed to remove {}", staging_path_absolute.display()))?;
+        remove_dir_all(&staging_path_absolute).context(format!(
+            "Failed to remove {}",
+            staging_path_absolute.display()
+        ))?;
         copy_dir(self.path(), &staging_path_absolute).context(format!(
             "Failed to copy {} to {}",
             self.path().display(),
@@ -242,9 +261,10 @@ impl Crate {
         if let Some(customization_dir) = self.customization_dir() {
             let customization_dir_absolute = self.root().join(customization_dir);
             let staging_path_absolute = self.root().join(self.staging_path());
-            for entry in read_dir(&customization_dir_absolute)
-                .context(format!("Failed to read_dir {}", customization_dir_absolute.display()))?
-            {
+            for entry in read_dir(&customization_dir_absolute).context(format!(
+                "Failed to read_dir {}",
+                customization_dir_absolute.display()
+            ))? {
                 let entry = entry?;
                 let entry_path = entry.path();
                 let mut filename = entry.file_name().to_os_string();
@@ -286,19 +306,21 @@ impl Crate {
             let patch_dir_absolute = self.root().join(patch_dir);
             if patch_dir_absolute.exists() {
                 println!("Patching {}", self.path().display());
-                for entry in read_dir(&patch_dir_absolute)
-                    .context(format!("Failed to read_dir {}", patch_dir_absolute.display()))?
-                {
+                for entry in read_dir(&patch_dir_absolute).context(format!(
+                    "Failed to read_dir {}",
+                    patch_dir_absolute.display()
+                ))? {
                     let entry = entry?;
                     if entry.file_name() == "Android.bp.patch"
                         || entry.file_name() == "Android.bp.diff"
+                        || entry.file_name() == "rules.mk.diff"
                     {
                         continue;
                     }
                     let entry_path = entry.path();
                     println!("  applying {}", entry_path.display());
                     let output = Command::new("patch")
-                        .args(["-p1", "-l"])
+                        .args(["-p1", "-l", "--no-backup-if-mismatch", "-i"])
                         .arg(&entry_path)
                         .current_dir(self.root().join(self.staging_path()))
                         .output()?;
@@ -361,7 +383,10 @@ mod tests {
         let cargo_toml: PathBuf = [temp_crate_dir, &Path::new("Cargo.toml")].iter().collect();
         write(
             cargo_toml.as_path(),
-            format!("[package]\nname = \"{}\"\nversion = \"{}\"\n", name, version),
+            format!(
+                "[package]\nname = \"{}\"\nversion = \"{}\"\n",
+                name, version
+            ),
         )?;
         let lib_rs: PathBuf = [temp_crate_dir, &Path::new("src/lib.rs")].iter().collect();
         create_dir(lib_rs.parent().ok_or(anyhow!("Failed to get parent"))?)?;
@@ -378,7 +403,10 @@ mod tests {
         assert_eq!(krate.version().to_string(), "1.2.0");
         assert!(krate.is_crates_io());
         assert_eq!(krate.android_bp(), temp_crate_dir.path().join("Android.bp"));
-        assert_eq!(krate.cargo_embargo_json(), temp_crate_dir.path().join("cargo_embargo.json"));
+        assert_eq!(
+            krate.cargo_embargo_json(),
+            temp_crate_dir.path().join("cargo_embargo.json")
+        );
         Ok(())
     }
 

@@ -23,8 +23,13 @@ use anyhow::Result;
 
 use semver::{BuildMetadata, Prerelease, Version, VersionReq};
 
-static MIN_VERSION: Version =
-    Version { major: 0, minor: 0, patch: 0, pre: Prerelease::EMPTY, build: BuildMetadata::EMPTY };
+static MIN_VERSION: Version = Version {
+    major: 0,
+    minor: 0,
+    patch: 0,
+    pre: Prerelease::EMPTY,
+    build: BuildMetadata::EMPTY,
+};
 
 pub trait NamedAndVersioned {
     fn name(&self) -> &str;
@@ -49,14 +54,23 @@ impl NameAndVersion {
         NameAndVersion { name, version }
     }
     pub fn from(nv: &impl NamedAndVersioned) -> Self {
-        NameAndVersion { name: nv.name().to_string(), version: nv.version().clone() }
+        NameAndVersion {
+            name: nv.name().to_string(),
+            version: nv.version().clone(),
+        }
     }
     pub fn min_version(name: String) -> Self {
-        NameAndVersion { name, version: MIN_VERSION.clone() }
+        NameAndVersion {
+            name,
+            version: MIN_VERSION.clone(),
+        }
     }
     #[cfg(test)]
     pub fn try_from_str(name: &str, version: &str) -> Result<Self> {
-        Ok(NameAndVersion::new(name.to_string(), Version::parse(version)?))
+        Ok(NameAndVersion::new(
+            name.to_string(),
+            Version::parse(version)?,
+        ))
     }
 }
 
@@ -149,7 +163,10 @@ mod tests {
         let nvp = NameAndVersionRef::new("foo", &version);
         assert_eq!(nvp.name(), "foo");
         assert_eq!(nvp.version().to_string(), "2.3.4");
-        assert!(nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat1)), "Patch update");
+        assert!(
+            nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat1)),
+            "Patch update"
+        );
         assert!(
             nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat2)),
             "Minor version update"
@@ -158,8 +175,14 @@ mod tests {
             !nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &incompat)),
             "Incompatible (major version) update"
         );
-        assert!(!nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &older)), "Downgrade");
-        assert!(!nvp.is_upgradable_to(&NameAndVersionRef::new("bar", &compat1)), "Different name");
+        assert!(
+            !nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &older)),
+            "Downgrade"
+        );
+        assert!(
+            !nvp.is_upgradable_to(&NameAndVersionRef::new("bar", &compat1)),
+            "Different name"
+        );
         Ok(())
     }
 
@@ -173,7 +196,10 @@ mod tests {
         let nvp = NameAndVersion::new("foo".to_string(), version);
         assert_eq!(nvp.name(), "foo");
         assert_eq!(nvp.version().to_string(), "2.3.4");
-        assert!(nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat1)), "Patch update");
+        assert!(
+            nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat1)),
+            "Patch update"
+        );
         assert!(
             nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &compat2)),
             "Minor version update"
@@ -182,8 +208,14 @@ mod tests {
             !nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &incompat)),
             "Incompatible (major version) update"
         );
-        assert!(!nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &older)), "Downgrade");
-        assert!(!nvp.is_upgradable_to(&NameAndVersionRef::new("bar", &compat1)), "Different name");
+        assert!(
+            !nvp.is_upgradable_to(&NameAndVersionRef::new("foo", &older)),
+            "Downgrade"
+        );
+        assert!(
+            !nvp.is_upgradable_to(&NameAndVersionRef::new("bar", &compat1)),
+            "Different name"
+        );
         Ok(())
     }
 }

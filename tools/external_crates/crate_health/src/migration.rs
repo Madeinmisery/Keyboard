@@ -26,24 +26,38 @@ use crate::{
     CrateCollection, Migratable, NameAndVersionMap, VersionMatch,
 };
 
-static CUSTOMIZATIONS: &'static [&'static str] =
-    &["*.bp", "cargo_embargo.json", "patches", "METADATA"];
+static CUSTOMIZATIONS: &'static [&'static str] = &[
+    "*.bp",
+    "cargo_embargo.json",
+    "patches",
+    "METADATA",
+    "TEST_MAPPING",
+    "MODULE_LICENSE_0BSD",
+    "MODULE_LICENSE_APACHE",
+    "MODULE_LICENSE_APACHE2",
+    "MODULE_LICENSE_BSD",
+    "MODULE_LICENSE_BSD_LIKE",
+    "MODULE_LICENSE_ISC",
+    "MODULE_LICENSE_MIT",
+    "MODULE_LICENSE_MPL",
+];
 
 impl<'a> CompatibleVersionPair<'a, Crate> {
     pub fn copy_customizations(&self) -> Result<()> {
-        let dest_dir_absolute = self.dest.root().join(
+        let dest_dir_absolute =
             self.dest
-                .customization_dir()
-                .ok_or(anyhow!("No customization dir for {}", self.dest.path().display()))?,
-        );
+                .root()
+                .join(self.dest.customization_dir().ok_or(anyhow!(
+                    "No customization dir for {}",
+                    self.dest.path().display()
+                ))?);
         ensure_exists_and_empty(&dest_dir_absolute)?;
         for pattern in CUSTOMIZATIONS {
             let full_pattern = self.source.path().join(pattern);
-            for entry in glob(
-                full_pattern
-                    .to_str()
-                    .ok_or(anyhow!("Failed to convert path {} to str", full_pattern.display()))?,
-            )? {
+            for entry in glob(full_pattern.to_str().ok_or(anyhow!(
+                "Failed to convert path {} to str",
+                full_pattern.display()
+            ))?)? {
                 let entry = entry?;
                 let mut filename = entry
                     .file_name()
@@ -80,7 +94,9 @@ pub fn migrate<P: Into<PathBuf>>(
 ) -> Result<VersionMatch<CrateCollection>> {
     let mut source = CrateCollection::new(repo_root);
     source.add_from(source_dir, None::<&&str>)?;
-    source.map_field_mut().retain(|_nv, krate| krate.is_crates_io());
+    source
+        .map_field_mut()
+        .retain(|_nv, krate| krate.is_crates_io());
 
     let pseudo_crate_dir_absolute = source.repo_root().join(pseudo_crate_dir);
     write_pseudo_crate(
@@ -92,7 +108,10 @@ pub fn migrate<P: Into<PathBuf>>(
     )?;
 
     let mut dest = CrateCollection::new(source.repo_root());
-    dest.add_from(&pseudo_crate_dir.as_ref().join("android/vendor"), Some(pseudo_crate_dir))?;
+    dest.add_from(
+        &pseudo_crate_dir.as_ref().join("android/vendor"),
+        Some(pseudo_crate_dir),
+    )?;
 
     let mut version_match = VersionMatch::new(source, dest)?;
 

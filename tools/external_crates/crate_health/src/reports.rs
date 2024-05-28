@@ -80,9 +80,11 @@ impl<'template> ReportEngine<'template> {
             table.add_row(&[
                 &linkify(&krate.name(), &krate.crates_io_url()),
                 &krate.version().to_string(),
-                &krate.aosp_url().map_or(format!("{}", krate.relpath().display()), |url| {
-                    linkify(&krate.relpath().display(), &url)
-                }),
+                &krate
+                    .aosp_url()
+                    .map_or(format!("{}", krate.relpath().display()), |url| {
+                        linkify(&krate.relpath().display(), &url)
+                    }),
             ]);
         }
         Ok(self.tt.render("table", &table)?)
@@ -103,9 +105,11 @@ impl<'template> ReportEngine<'template> {
             table.add_row(&[
                 &linkify(&krate.name(), &krate.crates_io_url()),
                 &krate.version().to_string(),
-                &krate.aosp_url().map_or(format!("{}", krate.relpath().display()), |url| {
-                    linkify(&krate.relpath().display(), &url)
-                }),
+                &krate
+                    .aosp_url()
+                    .map_or(format!("{}", krate.relpath().display()), |url| {
+                        linkify(&krate.relpath().display(), &url)
+                    }),
                 &prefer_yes(krate.android_bp().exists()),
                 &prefer_yes_or_summarize(
                     krate.generate_android_bp_success(),
@@ -150,9 +154,11 @@ impl<'template> ReportEngine<'template> {
             table.add_row(&[
                 &linkify(&krate.name(), &krate.crates_io_url()),
                 &krate.version().to_string(),
-                &krate.aosp_url().map_or(format!("{}", krate.relpath().display()), |url| {
-                    linkify(&krate.relpath().display(), &url)
-                }),
+                &krate
+                    .aosp_url()
+                    .map_or(format!("{}", krate.relpath().display()), |url| {
+                        linkify(&krate.relpath().display(), &url)
+                    }),
                 &prefer_yes(krate.is_crates_io()),
                 &prefer_no(krate.is_migration_denied()),
                 &prefer_yes(krate.android_bp().exists()),
@@ -181,9 +187,11 @@ impl<'template> ReportEngine<'template> {
             table.add_row(&[
                 &linkify(&source.name(), &source.crates_io_url()),
                 &source.version().to_string(),
-                &source.aosp_url().map_or(format!("{}", source.relpath().display()), |url| {
-                    linkify(&source.relpath().display(), &url)
-                }),
+                &source
+                    .aosp_url()
+                    .map_or(format!("{}", source.relpath().display()), |url| {
+                        linkify(&source.relpath().display(), &url)
+                    }),
                 maybe_dest.map_or(&"None", |dest| {
                     if dest.version() != source.version() {
                         dest.version()
@@ -196,13 +204,14 @@ impl<'template> ReportEngine<'template> {
                     !maybe_dest.is_some_and(|dest| !dest.generate_android_bp_success()),
                     maybe_dest
                         .map_or("Error".to_string(), |dest| {
-                            dest.generate_android_bp_output().map_or("Error".to_string(), |o| {
-                                format!(
-                                    "STDOUT:\n{}\n\nSTDERR:\n{}",
-                                    from_utf8(&o.stdout).unwrap_or("Error"),
-                                    from_utf8(&o.stderr).unwrap_or("Error")
-                                )
-                            })
+                            dest.generate_android_bp_output()
+                                .map_or("Error".to_string(), |o| {
+                                    format!(
+                                        "STDOUT:\n{}\n\nSTDERR:\n{}",
+                                        from_utf8(&o.stdout).unwrap_or("Error"),
+                                        from_utf8(&o.stderr).unwrap_or("Error")
+                                    )
+                                })
                         })
                         .as_str(),
                 ),
@@ -225,7 +234,8 @@ impl<'template> ReportEngine<'template> {
         let chr = CrateHealthReport {
             crate_count: self.size_report(cc)?,
             crate_multiversion: self.table(
-                cc.filter_versions(&crates_with_multiple_versions).map(|(_nv, krate)| krate),
+                cc.filter_versions(&crates_with_multiple_versions)
+                    .map(|(_nv, krate)| krate),
             )?,
             healthy: self.table(
                 cc.map_field()
@@ -268,7 +278,10 @@ pub fn prefer_yes_or_summarize(p: bool, details: &str) -> String {
     if p {
         "".to_string()
     } else {
-        format!("<details><summary>No</summary><pre>{}</pre></details>", details)
+        format!(
+            "<details><summary>No</summary><pre>{}</pre></details>",
+            details
+        )
     }
 }
 pub fn prefer_no(p: bool) -> &'static str {
@@ -297,13 +310,20 @@ pub struct Table {
 impl Table {
     pub fn new(header: &[&dyn Display]) -> Table {
         Table {
-            header: header.iter().map(|cell| format!("{}", cell)).collect::<Vec<_>>(),
+            header: header
+                .iter()
+                .map(|cell| format!("{}", cell))
+                .collect::<Vec<_>>(),
             rows: Vec::new(),
             vertical: false,
         }
     }
     pub fn add_row(&mut self, row: &[&dyn Display]) {
-        self.rows.push(row.iter().map(|cell| format!("{}", cell)).collect::<Vec<_>>());
+        self.rows.push(
+            row.iter()
+                .map(|cell| format!("{}", cell))
+                .collect::<Vec<_>>(),
+        );
     }
     pub fn set_vertical_headers(&mut self) {
         self.vertical = true;

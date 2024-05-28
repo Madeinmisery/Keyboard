@@ -75,7 +75,10 @@ impl<ValueType> NameAndVersionMap for BTreeMap<NameAndVersion, ValueType> {
 
     fn insert_or_error(&mut self, key: NameAndVersion, val: Self::Value) -> Result<(), CrateError> {
         if self.contains_key(&key) {
-            Err(CrateError::DuplicateCrateVersion(key.name().to_string(), key.version().clone()))
+            Err(CrateError::DuplicateCrateVersion(
+                key.name().to_string(),
+                key.version().clone(),
+            ))
         } else {
             self.insert(key, val);
             Ok(())
@@ -99,7 +102,13 @@ impl<ValueType> NameAndVersionMap for BTreeMap<NameAndVersion, ValueType> {
             self.range(std::ops::RangeFrom {
                 start: NameAndVersion::min_version(name.to_string()),
             })
-            .map_while(move |x| if x.0.name() == owned_name { Some(x) } else { None }),
+            .map_while(move |x| {
+                if x.0.name() == owned_name {
+                    Some(x)
+                } else {
+                    None
+                }
+            }),
         )
     }
 
@@ -112,7 +121,13 @@ impl<ValueType> NameAndVersionMap for BTreeMap<NameAndVersion, ValueType> {
             self.range_mut(std::ops::RangeFrom {
                 start: NameAndVersion::min_version(name.to_string()),
             })
-            .map_while(move |x| if x.0.name() == owned_name { Some(x) } else { None }),
+            .map_while(move |x| {
+                if x.0.name() == owned_name {
+                    Some(x)
+                } else {
+                    None
+                }
+            }),
         )
     }
 
@@ -128,10 +143,15 @@ impl<ValueType> NameAndVersionMap for BTreeMap<NameAndVersion, ValueType> {
         let mut kept_keys: HashSet<NameAndVersion> = HashSet::new();
         for (key, mut group) in self.iter().group_by(|item| item.0.name()).into_iter() {
             kept_keys.extend(
-                f(&mut group).into_iter().map(move |v| NameAndVersion::new(key.to_string(), v)),
+                f(&mut group)
+                    .into_iter()
+                    .map(move |v| NameAndVersion::new(key.to_string(), v)),
             );
         }
-        Box::new(self.iter().filter(move |(nv, _krate)| kept_keys.contains(*nv)))
+        Box::new(
+            self.iter()
+                .filter(move |(nv, _krate)| kept_keys.contains(*nv)),
+        )
     }
 }
 
@@ -139,7 +159,10 @@ pub fn crates_with_single_version<'a, ValueType>(
     versions: &mut dyn Iterator<Item = (&'a NameAndVersion, &'a ValueType)>,
 ) -> HashSet<Version> {
     let mut vset = HashSet::new();
-    versions.into_iter().map(|(nv, _crate)| vset.insert(nv.version().clone())).count();
+    versions
+        .into_iter()
+        .map(|(nv, _crate)| vset.insert(nv.version().clone()))
+        .count();
     if vset.len() != 1 {
         vset.clear()
     }
@@ -150,7 +173,10 @@ pub fn crates_with_multiple_versions<'a, ValueType>(
     versions: &mut dyn Iterator<Item = (&'a NameAndVersion, &'a ValueType)>,
 ) -> HashSet<Version> {
     let mut vset = HashSet::new();
-    versions.into_iter().map(|(nv, _crate)| vset.insert(nv.version().clone())).count();
+    versions
+        .into_iter()
+        .map(|(nv, _crate)| vset.insert(nv.version().clone()))
+        .count();
     if vset.len() == 1 {
         vset.clear()
     }
@@ -250,7 +276,10 @@ mod tests {
         assert_equal(test_map.values_mut(), ["bar", "foo v1", "foo v2"]);
 
         assert_equal(
-            test_map.iter().filter(|(_nv, x)| x.starts_with("foo")).map(|(_nv, val)| val),
+            test_map
+                .iter()
+                .filter(|(_nv, x)| x.starts_with("foo"))
+                .map(|(_nv, val)| val),
             ["foo v1", "foo v2"],
         );
 
@@ -272,15 +301,21 @@ mod tests {
         let bar = NameAndVersion::try_from_str("bar", "1.0.0")?;
 
         assert_equal(
-            test_map.filter_versions(crates_with_single_version).map(|(nv, _)| nv),
+            test_map
+                .filter_versions(crates_with_single_version)
+                .map(|(nv, _)| nv),
             [&bar],
         );
         assert_equal(
-            test_map.filter_versions(crates_with_multiple_versions).map(|(nv, _)| nv),
+            test_map
+                .filter_versions(crates_with_multiple_versions)
+                .map(|(nv, _)| nv),
             [&foo1, &foo2],
         );
         assert_equal(
-            test_map.filter_versions(most_recent_version).map(|(nv, _)| nv),
+            test_map
+                .filter_versions(most_recent_version)
+                .map(|(nv, _)| nv),
             [&bar, &foo2],
         );
 
