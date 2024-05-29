@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9ced657_95508a3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-05-29T23:26:34Z",
+      "side": 1,
+      "message": "thanks!",
+      "revId": "dd7d69f18f145f1204b023b2455d6757c04052e6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f98aba5_f44f4b4c",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 1944400
+      },
+      "writtenOn": "2024-05-29T23:26:34Z",
+      "side": 1,
+      "message": "use `{:#}` so that more info gets printed\n\n`anyhow::Result` can have nested errors and the default formatter only prints the outer most one",
+      "range": {
+        "startLine": 399,
+        "startChar": 30,
+        "endLine": 399,
+        "endChar": 32
+      },
+      "revId": "dd7d69f18f145f1204b023b2455d6757c04052e6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
