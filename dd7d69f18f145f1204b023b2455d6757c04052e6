@@ -39,6 +39,30 @@
       },
       "revId": "dd7d69f18f145f1204b023b2455d6757c04052e6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "651dbe83_9b8c268d",
+        "filename": "tools/cargo_embargo/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 1644679
+      },
+      "writtenOn": "2024-05-29T23:56:09Z",
+      "side": 1,
+      "message": "Done. Good to know, thanks!",
+      "parentUuid": "4f98aba5_f44f4b4c",
+      "range": {
+        "startLine": 399,
+        "startChar": 30,
+        "endLine": 399,
+        "endChar": 32
+      },
+      "revId": "dd7d69f18f145f1204b023b2455d6757c04052e6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
