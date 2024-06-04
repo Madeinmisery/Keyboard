@@ -1,0 +1,66 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d099b16_4da711f6",
+        "filename": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-06-04T08:39:57Z",
+      "side": 1,
+      "message": "what\u0027s the point of this class if it has zero member fields and methods?\n\nShould just make this a namespace?",
+      "revId": "7a2760351d69a02f5d05934ef17d3ccfb82b4295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5f5e543_c559c292",
+        "filename": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1337669
+      },
+      "writtenOn": "2024-06-04T08:39:57Z",
+      "side": 1,
+      "message": "this \"class\" also has no members. This should be a namespace.",
+      "fixSuggestions": [
+        {
+          "fixId": "2b0b289d_01cc3807",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+              "range": {
+                "startLine": 193,
+                "startChar": 0,
+                "endLine": 212,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+              "range": {
+                "startLine": 276,
+                "startChar": 0,
+                "endLine": 302,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "7a2760351d69a02f5d05934ef17d3ccfb82b4295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
