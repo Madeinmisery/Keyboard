@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c7b2d4b_e469f39f",
+        "filename": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-06-04T09:13:15Z",
+      "side": 1,
+      "message": "I agree. Let me make another patch.",
+      "parentUuid": "7d099b16_4da711f6",
+      "revId": "7a2760351d69a02f5d05934ef17d3ccfb82b4295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5f5e543_c559c292",
@@ -59,6 +77,24 @@
           ]
         }
       ],
+      "revId": "7a2760351d69a02f5d05934ef17d3ccfb82b4295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9bcdae9_95c2a0ea",
+        "filename": "vndk/tools/header-checker/src/repr/protobuf/converter.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-06-04T09:13:15Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "a5f5e543_c559c292",
       "revId": "7a2760351d69a02f5d05934ef17d3ccfb82b4295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
