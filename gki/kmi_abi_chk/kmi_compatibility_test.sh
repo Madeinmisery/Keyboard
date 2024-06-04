@@ -16,13 +16,13 @@
 
 # Usage:
 #   development/gki/kmi_abi_chk/kmi_static_chk.sh \
-#     <current_symbol_info> <previous_symbol_info> (abi_symbollist.report)
+#     <current_symbol_info> <previous_symbol_info> (abi_symbollist)
 #
-#   abi_symbollist.report is from the previous/old GKI and optional.
+#   abi_symbollist is from the previous/old GKI and optional.
 #   If it's not on the command line, all symbols from the previous/old GKI
 #   are considered KMI and will be checked.
 if [[ "$#" -lt 2 ]]; then
-  echo "Usage: $0 <current_symbol_info> <previous_symbol_info> (abi_symbollist.report)"
+  echo "Usage: $0 <current_symbol_info> <previous_symbol_info> (abi_symbollist)"
   exit 1
 fi
 
@@ -77,7 +77,7 @@ shift
 grep "EXPORT_SYMBOL" $curr | sed 's/[ \t]*$//' > $tmp_symvers_new
 
 if [[ -v abi_list ]]; then
-  awk '{print $1}' $abi_list > $tmp_abi_lst_old
+  sed -r -e 's/#.*//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e '/^\[/d' -e '/^$/d' $abi_list > $tmp_abi_lst_old
   echo "ABI list: $abi_list"
 fi
 
