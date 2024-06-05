@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1aa8cb67_a431788c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-06-05T23:39:34Z",
+      "side": 1,
+      "message": "Weren\u0027t we planning on also using crate_root as a signal that the crate should be built with sandboxing? If we start checking in a bunch of unsandboxable modules with crate_root set, we\u0027d have to come up with a different flag to enable sandboxing.",
+      "revId": "e33eee63a57eff8d67a0ae29200971eec4ca685d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
