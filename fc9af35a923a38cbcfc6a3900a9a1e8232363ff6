@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7e22850_24bb62be",
+        "filename": "tools/external_crates/crate_health/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2024-06-06T22:35:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ffc30bdd_f4078f1e",
+      "revId": "fc9af35a923a38cbcfc6a3900a9a1e8232363ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67471e9a_fc321d74",
