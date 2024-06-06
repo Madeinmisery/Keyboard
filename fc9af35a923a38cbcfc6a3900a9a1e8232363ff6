@@ -33,6 +33,24 @@
       "message": "Should we just copy these files over? I think that it might be preferable than just ignoring them. In many cases, there\u0027s also a `patches/` subdir. Alternately, do we just want to do a second pass to scoop up the `rules.mk` and `BUILD` changes later? That might be more complicated than just copying them to begin with.",
       "revId": "fc9af35a923a38cbcfc6a3900a9a1e8232363ff6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64f5ebb6_94948467",
+        "filename": "tools/external_crates/crate_health/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1903830
+      },
+      "writtenOn": "2024-06-06T22:31:27Z",
+      "side": 1,
+      "message": "These are just the things we are going to ignore for the purpose of diffing, and as far as I can tell are cargo-culted because they are not part of what\u0027s in crates.io, nor are they files that we have any use for.\n\nThe list of what we are going to preserve is in migration.rs. If you think that list is incomplete, then let\u0027s add to it.\n\nFor rules.mk and BUILD, I am not going to include them for now. If we migrate them later, it should be to a separate crate repo with a different build system.",
+      "parentUuid": "67471e9a_fc321d74",
+      "revId": "fc9af35a923a38cbcfc6a3900a9a1e8232363ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
