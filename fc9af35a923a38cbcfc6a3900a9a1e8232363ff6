@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ffc30bdd_f4078f1e",
+        "filename": "tools/external_crates/crate_health/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-06-06T22:17:44Z",
+      "side": 1,
+      "message": "Needs a copyright header.",
+      "revId": "fc9af35a923a38cbcfc6a3900a9a1e8232363ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67471e9a_fc321d74",
+        "filename": "tools/external_crates/crate_health/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-06-06T22:17:44Z",
+      "side": 1,
+      "message": "Should we just copy these files over? I think that it might be preferable than just ignoring them. In many cases, there\u0027s also a `patches/` subdir. Alternately, do we just want to do a second pass to scoop up the `rules.mk` and `BUILD` changes later? That might be more complicated than just copying them to begin with.",
+      "revId": "fc9af35a923a38cbcfc6a3900a9a1e8232363ff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
