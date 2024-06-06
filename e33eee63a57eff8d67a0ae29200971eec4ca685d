@@ -34,6 +34,24 @@
       "parentUuid": "1aa8cb67_a431788c",
       "revId": "e33eee63a57eff8d67a0ae29200971eec4ca685d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "843031ab_87c8db24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2024-06-06T01:12:20Z",
+      "side": 1,
+      "message": "Thanks Cole -- adding this early was my idea, so apologies for any complications it may incur. We can add any other properties we need when sandboxing is ready.",
+      "parentUuid": "1aa8cb67_a431788c",
+      "revId": "e33eee63a57eff8d67a0ae29200971eec4ca685d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
